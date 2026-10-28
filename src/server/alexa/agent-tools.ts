@@ -5,7 +5,7 @@ import {resolveDocumentDraftInputs} from "./document-draft";
 import {mergeDraftVariableChanges} from "./document-draft-update";
 import {groundDraftFieldChanges,groundStopReason,groundTreatmentChanges,resolveTreatmentTarget} from "./clinical-write-validation";
 import {prepareInternalMessage} from "./internal-message";
-import {prepareIssuedDocumentPrint} from "./action-proposal";
+import {prepareActionProposal,prepareIssuedDocumentPrint} from "./action-proposal";
 import {alexaActions} from "@/i18n/alexa-actions";
 import {knowledgeSynthesisCopy} from "@/i18n/alexa-knowledge";
 import {applicationReadCopy} from "@/i18n/alexa-application";
@@ -14,7 +14,7 @@ import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
-import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
+import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
@@ -36,6 +36,14 @@ import { agentCopy, missingPatientFieldParagraph, patientListParagraph, patientL
 import { resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
+/** Narrow a two-visit read to its verified second-most-recent visit. */
+export function isolatePreviousClinicalConsultation(context:ClinicalContext):ClinicalContext|null {
+ const visits=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>b.startedAt.localeCompare(a.startedAt)||b.id.localeCompare(a.id));
+ const selected=visits[1];if(!selected)return null;
+ const {currentConsultation:_current,...withoutCurrent}=context;
+ const scoped:ClinicalContext={...withoutCurrent,consultations:selected.endedAt?[selected]:[],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},coverage:{requested:1,returned:1,complete:true,hasMore:false}};
+ return selected.endedAt===null?{...scoped,currentConsultation:selected}:scoped;
+}
 import { localResponse } from "./local-response";
 import {planKnowledgeQuery} from "./knowledge-query";
 import { readKnowledge } from "./knowledge-adapter";
@@ -53,6 +61,49 @@ const patientRow = z.object({id:z.uuid(),first_name:z.string().max(200),last_nam
 const patientResult = z.object({total:count,rows:z.array(patientRow).max(20),metrics:z.record(z.string(),count),unknownAge:count,revision:z.string().regex(/^[a-f0-9]{32}$/),asOf:z.string(),conditions:z.array(agentSchemas.declare_request.shape.parts.element.shape.conditions.element),complete:z.literal(true),offset:count,appliedSpec:z.record(z.string(),z.unknown()).optional()}).strict();
 const recordRow = z.object({id:z.uuid(),patientId:z.uuid().nullable(),label:z.string().max(500),at:z.string().nullable(),status:z.string().max(50),amount:count.nullable()}).strict();
 const recordResult = z.object({total:count,rows:z.array(recordRow).max(20),totals:z.record(z.string(),count),complete:z.literal(true),offset:count}).strict();
+const actionChargeRow=z.object({id:z.uuid(),intitule:z.string().trim().min(2).max(160),categorie:z.enum(["local","personnel","outils","assurance","autre"]),montant:z.number().int().positive(),type:z.enum(["recurrente","ponctuelle"]),frequence:z.enum(["mensuelle","trimestrielle","annuelle"]).nullable(),date_charge:z.iso.date(),date_prochaine_echeance:z.iso.date().nullable(),updated_at:z.iso.datetime({offset:true})}).strict();
+const actionCharges=z.object({lignes:z.array(actionChargeRow),total_recurrent_mensuel:count,total_ponctuel_periode:count}).passthrough();
+function foldActionText(value:string):string{return value.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase("fr").replace(/\s+/gu," ").trim();}
+function exactNamedPatientSearch(requestText:string,spec:{mode:string;query?:string|undefined;population?:string|undefined}):boolean {
+ const mention=parsePatientMention(requestText);
+ if(spec.mode!=='list'||spec.population!=='all'||mention.status!=='named'||!spec.query)return false;
+ const direct=/^\s*(?:alexa[, :]+)?(?:cherche|recherche|trouve|retrouve)\s+(?:plut[oô]t\s+)?(?:(?:le|la)\s+)?(?:(?:patient|patiente)\s+)?[\p{L}][\p{L}\p{M}'’-]*(?:\s+[\p{L}][\p{L}\p{M}'’-]*){1,2}\s*[.!?]*\s*$/iu.test(requestText);
+ return direct&&foldActionText(spec.query)===foldActionText(mention.name);
+}
+function requestedChargeAmount(text:string):number|undefined{
+ const match=/\b(\d[\d \u00a0\u202f.,]*\d|\d+)\s*(?:dzd|dinars?|da)\b/u.exec(foldActionText(text));
+ if(!match)return undefined;
+ const token=match[1]!.replace(/[ \u00a0\u202f]/gu,"");
+ if(/[.,]/u.test(token)&&! /^\d{1,3}(?:[.,]\d{3})+$/u.test(token))return undefined;
+ const amount=Number(token.replace(/[.,]/gu,""));
+ return Number.isSafeInteger(amount)&&amount>0?amount:undefined;
+}
+function requestedChargeDate(text:string):string|undefined{
+ const match=/\b(\d{4}-\d{2}-\d{2}|\d{1,2}[/.]\d{1,2}[/.]\d{4})\b/u.exec(foldActionText(text));
+ if(!match)return undefined;
+ const raw=match[1]!;
+ const iso=/^\d{4}-/u.test(raw)?raw:(()=>{const [day,month,year]=raw.split(/[/.]/u);return String(year)+"-"+String(month).padStart(2,"0")+"-"+String(day).padStart(2,"0");})();
+ return z.iso.date().safeParse(iso).success?iso:undefined;
+}
+function requestedChargeCategory(text:string):"local"|"personnel"|"outils"|"assurance"|"autre"|undefined{
+ const match=/\bcategorie\s+(?:est\s+)?(local|locaux|personnel|outils|materiel|equipement|assurance|autre)\b/u.exec(foldActionText(text));
+ if(!match)return undefined;
+ return match[1]==="locaux"?"local":match[1]==="materiel"||match[1]==="equipement"?"outils":match[1] as "local"|"personnel"|"outils"|"assurance"|"autre";
+}
+function requestedChargeType(text:string):"recurrente"|"ponctuelle"|undefined{
+ const plain=foldActionText(text);
+ if(/\bponctuell\w*\b/u.test(plain))return "ponctuelle";
+ if(/\brecurrent\w*\b/u.test(plain))return "recurrente";
+ return undefined;
+}
+function requestedChargeFrequency(text:string):"mensuelle"|"trimestrielle"|"annuelle"|undefined{
+ const plain=foldActionText(text);
+ if(/\bmensuell\w*\b|\bchaque mois\b/u.test(plain))return "mensuelle";
+ if(/\btrimestriell\w*\b|\bchaque trimestre\b/u.test(plain))return "trimestrielle";
+ if(/\bannuell\w*\b|\bchaque annee\b/u.test(plain))return "annuelle";
+ return undefined;
+}
+function containsLiteralActionValue(text:string,value:string):boolean{return foldActionText(text).includes(foldActionText(value));}
 function requestedAgendaPageSize(text:string):number|undefined {
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),match=/\b(?:les?\s+)?(\d{1,2}|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix)\s+premier(?:s|es)?\b/u.exec(plain);
  if(!match)return;
@@ -67,6 +118,10 @@ function requestsDocumentOpen(text:string):boolean {
  const patientLinked=parsePatientMention(text).status==='named'||/\b(?:pour|de|du|concernant)\s+[\p{L}]/u.test(plain);
  const namedWorkspace=patientLinked&&!/\b(?:liste|cherche|recherche|trouve|combien|nombre|quel(?:le)?s?|est-ce|y a-t-il)\b/u.test(plain);
  return directOpen||namedWorkspace;
+}
+function requestsCurrentDocument(text:string):boolean {
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ return /\b(?:document|ordonnance|certificat|justificatif)\b/u.test(plain)&&/\b(?:actuellement|en ce moment|ouvert)\b/u.test(plain);
 }
 
 /** Only this closed catalogue reaches server-side, actor-bound SQL doors. No browser service imports. */
@@ -99,12 +154,18 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(!schema||!schema.safeParse(call.args).success)return failure(call,"error",copy.unavailable,"invalid");
   const a={...call.args};
   const requestText=requestedGoal??original??input.text;
+  const currentDocumentRequest=call.name==='query_documents'&&requestsCurrentDocument(requestText);
+  if(currentDocumentRequest&&!a['documentId']&&!a['draftId']){
+   if(input.appContext.documentId)a['documentId']=input.appContext.documentId;
+   else if(input.appContext.draftId)a['draftId']=input.appContext.draftId;
+   else return failure(call,'needs_input','Aucun document ouvert n’est identifié dans l’espace actuel. Précisez le document à consulter.','current-document-not-selected');
+  }
   if(call.name==='query_finance'&&!cabinetFinanceModes.some(mode=>mode===a['mode'])){
    const state=frenchFinanceRecordState(requestText);
-   const plain=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),unpricedConsultations=a['mode']==='totals'&&a['consultationStatus']==='closed'&&/\bconsult\w*\b/u.test(plain)&&/\b(?:sans tarif|pas de tarif|aucun tarif|non tarife\w*|sans prix)\b/u.test(plain);
+   const plain=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),unpricedConsultations=a['mode']==='totals'&&a['consultationStatus']==='closed'&&/\bconsult\w*\b/u.test(plain)&&/\b(?:sans tarif|pas de tarif|aucun tarif|non tarife\w*|sans prix)\b/u.test(plain),allTimeBalance=a['mode']==='totals'&&a['state']==='all'&&/\b(?:solde|impayes?|a encaisser|reste a encaisser)\b[^.!?]*\b(?:toutes? dates?|toutes? periodes?|depuis toujours|confondue?s?|(?:ensemble|totalite) du cabinet|tout le cabinet|cabinet entier)\b/u.test(plain);
    if(!state&&!unpricedConsultations)return failure(call,'needs_input',copy.unsupported,'unresolved-payment-state');
-   if(state&&a['state']!==undefined&&a['state']!==state)return failure(call,'needs_input',copy.unsupported,'unrequested-payment-state');
-   if(state&&state!=='all')a['state']=state;
+   if(state&&a['state']!==undefined&&a['state']!==state&&!allTimeBalance)return failure(call,'needs_input',copy.unsupported,'unrequested-payment-state');
+   if(state&&state!=='all'&&!allTimeBalance)a['state']=state;
   }
   if(call.name==='query_consultations'&&!a['consultationId']){
    const text=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
@@ -145,13 +206,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const timelineText=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
    if(!a['reusePrevious']&&/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|depuis|avant|apres|entre|hier|demain|aujourd.hui|semaine|mois|annee|ancien\w*|croissant\w*)\b|\b(?:19|20)\d{2}\b|\b\d{1,2}[/-]\d{1,2}\b/u.test(timelineText))return failure(call,'unsupported',applicationReadCopy.timelineRestriction,'unsupported-timeline-restriction');
    if(a['beforeAt']!==undefined||a['beforeId']!==undefined)return failure(call,'unsupported',copy.unsupported,'unrequested-timeline-cursor');
-   if(a['reusePrevious']){
-    const previous=[...prior].reverse().find(r=>r.status==='partial'&&r.data&&typeof r.data==='object'&&'timelineNext' in r.data)?.data;
-    const stored=z.object({timelineQuery:timelineQuerySchema,timelineNext:timelineCursorSchema}).safeParse(previous);
-    if(!stored.success)return failure(call,'needs_input',copy.noContinuation,'timeline-cursor-unavailable');
-    if(input.appContext.patientId&&input.appContext.patientId!==stored.data.timelineQuery.patientId)return failure(call,'needs_input',copy.patient,'timeline-patient-changed');
-    Object.assign(a,stored.data.timelineQuery,stored.data.timelineNext);
-   }
+   if(!a['reusePrevious']&&(a['beforeAt']!==undefined||a['beforeId']!==undefined))return failure(call,'unsupported',copy.unsupported,'unrequested-timeline-cursor');
   }
   const result:AgentResult={callId:call.id,status:"ok",complete:true,text:"",evidence:[],conditionKeys:[]};
   if(call.name==="query_patients"){
@@ -180,8 +235,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    const contract=patientQueryContract(requestText,asOf);
    if(!reusePrevious&&!implicitList){
-    if(spec.population&&spec.population!==contract.population)return failure(call,'unsupported',copy.unsupported,'unrequested-patient-population');
-    spec.population=contract.population;
+    if(spec.population&&spec.population!==contract.population&&!exactNamedPatientSearch(requestText,spec))return failure(call,'unsupported',copy.unsupported,'unrequested-patient-population');
+    if(!exactNamedPatientSearch(requestText,spec))spec.population=contract.population;
     if(contract.unsupported.length)return failure(call,'unsupported',copy.unsupported,'unresolved-patient-constraint');
     if(contract.extended){
      if(spec.mode==='metrics'||spec.mode==='review')return failure(call,'unsupported',copy.unsupported,'compound-query-mode');
@@ -253,13 +308,13 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    return readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,false,name==='search_medications'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
   }
   let patientId:string|undefined;
-  const cabinetWideDocumentScope=call.name==='query_documents'&&requestsCabinetWideScope(identityText),patientMentionText=cabinetWideDocumentScope?withoutCabinetWideScope(identityText):identityText;
-  const humanMention=parsePatientMention(patientMentionText),humanPatient=humanMention.status!=='none'||!!input.patientName&&!cabinetWideDocumentScope;
-  if(cabinetWideDocumentScope&&humanMention.status==='none'){delete a['patientId'];delete a['patientName'];}
+  const cabinetWideScope=requestsCabinetWideScope(identityText),cabinetWideDocumentScope=call.name==='query_documents'&&cabinetWideScope,patientMentionText=cabinetWideScope?withoutCabinetWideScope(identityText):identityText;
+  const humanMention=parsePatientMention(patientMentionText),humanPatient=humanMention.status!=='none'||!!input.patientName&&!cabinetWideScope;
+  if(cabinetWideScope&&humanMention.status==='none'&&['query_documents','query_finance'].includes(call.name)){delete a['patientId'];delete a['patientName'];}
   const selectedDocumentScope=call.name==='query_documents'&&!!input.appContext.patientId&&!cabinetWideDocumentScope;
   const namedRecordScope=(humanPatient||requestsPatientScope(identityText)||selectedDocumentScope)&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
   if(call.name==='query_finance'&&namedRecordScope&&cabinetFinanceModes.some(mode=>mode===a['mode']))return failure(call,'unsupported',copy.unsupported,'CabinetOverviewCannotIgnoreNamedPatient');
-  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||(call.name==="prepare_action"&&a["action"]!=="send_internal_message")||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
+  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||(call.name==="prepare_action"&&!["send_internal_message","create_charge","update_charge","deactivate_charge"].includes(String(a["action"])))||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
    const mention=parsePatientMention(patientMentionText);
    if(mention.status==="ambiguous")return failure(call,"needs_input",copy.patient,"patient-ambiguous");
    const explicitName=mention.status==="named"?mention.name:input.patientName;
@@ -290,11 +345,23 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(a['section']==='timeline'){
     const timelineDate=z.union([z.string(),z.date()]).transform(value=>value instanceof Date?value.toISOString():value);
     const schema=z.array(z.object({occurred_at:timelineDate,event_id:z.string().max(200),event_type:z.string(),label_key:z.string(),practitioner_name:z.string().nullable(),detail:z.record(z.string(),z.unknown())})).max(21);
-    const limit=typeof a['count']==='number'?a['count']:20;
+    let limit=typeof a['count']==='number'?a['count']:20;
+    let expectedRevision:string|undefined;
+    if(a['reusePrevious']){
+     const previous=[...prior].reverse().find(r=>r.status==='partial'&&r.data&&typeof r.data==='object'&&'timelineNext' in r.data)?.data;
+     const stored=z.object({timelineQuery:timelineQuerySchema,timelineNext:timelineCursorSchema,revision:z.string().regex(/^[a-f0-9]{32}$/u)}).safeParse(previous);
+     if(!stored.success)return failure(call,'needs_input',copy.noContinuation,'timeline-cursor-unavailable');
+     if(stored.data.timelineQuery.patientId!==patientId)return failure(call,'needs_input',copy.patient,'timeline-patient-changed');
+     expectedRevision=stored.data.revision;Object.assign(a,stored.data.timelineQuery,stored.data.timelineNext);limit=stored.data.timelineQuery.count;
+    }
+     const revisionResult=z.object({revision:z.string().regex(/^[a-f0-9]{32}$/u),total:z.number().int().nonnegative()}).parse(await rpc('get_patient_timeline_revision',{p_id:patientId!},signal));
+    if(expectedRevision&&revisionResult.revision!==expectedRevision)throw new AgentReadError('changed');
     const rows=schema.parse(await rpc('list_patient_timeline',{p_id:patientId!,p_before_at:typeof a['beforeAt']==='string'?a['beforeAt']:null,p_before_id:typeof a['beforeId']==='string'?a['beforeId']:null,p_limit:limit+1},signal,false,true));
+     const revisionAfter=z.object({revision:z.string().regex(/^[a-f0-9]{32}$/u),total:z.number().int().nonnegative()}).parse(await rpc('get_patient_timeline_revision',{p_id:patientId!},signal));
+    if(revisionResult.revision!==revisionAfter.revision||revisionResult.total!==revisionAfter.total)throw new AgentReadError('changed');
     const page=rows.slice(0,limit),more=rows.length>limit,last=page.at(-1),chronologicalRows=[...page].reverse();
-    result.data={rows:chronologicalRows,hasMore:more,timelineQuery:{patientId:patientId!,count:limit},...(more&&last?{timelineNext:{beforeAt:last.occurred_at,beforeId:last.event_id}}:{})};
-    result.evidence=[patientSource(patientId!),{id:call.id,type:'query',label:applicationReadCopy.extended.timeline,provenance:{gate:'list_patient_timeline',patientId:patientId!}}];
+    result.data={rows:chronologicalRows,hasMore:more,timelineQuery:{patientId:patientId!,count:limit},revision:revisionResult.revision,...(more&&last?{timelineNext:{beforeAt:last.occurred_at,beforeId:last.event_id}}:{})};
+    result.evidence=[patientSource(patientId!),{id:call.id,type:'query',label:applicationReadCopy.extended.timeline,version:revisionResult.revision,provenance:{gate:'list_patient_timeline',revisionGate:'get_patient_timeline_revision',patientId:patientId!}}];
     if(!chronologicalRows.length)result.text=applicationReadCopy.extended.empty;
     else{
      const counts=new Map<string,number>();for(const row of chronologicalRows)counts.set(row.event_type,(counts.get(row.event_type)??0)+1);
@@ -346,16 +413,31 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     const normalizedRequest=requestText.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase();
     const recurringThemeRequest=/\b(?:theme|motif|element) recurrent\b/u.test(normalizedRequest);
     const chronologicalSummary=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(normalizedRequest)&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(normalizedRequest);
-    const requestedSummaryCount=requestedCounts[0];
+    const requestedSummaryCount=requestedCounts[0],previousConsultationRequest=section==='summary'&&/\b(?:avant[- ]derniere|precedente consultation|consultation qui precede la derniere)\b/u.test(normalizedRequest);
+    const latestConsultationComparison=section==='summary'&&requestedSummaryCount===2&&/\b(?:entre\b.*\b(?:deux|2)\b|compar\w*|difference)\b/u.test(normalizedRequest)&&/\b(?:chang\w*|evolu\w*|compar\w*|difference)\b/u.test(normalizedRequest);
     const requestedSummaryScope=rangedSummary||requestedSummaryCount!==undefined;
     const defaultChronology=section==='summary'&&chronologicalSummary&&!requestedSummaryScope;
     const summaryReadCount=section==='summary'
-      ? requestedSummaryCount??(defaultChronology?6:typeof a['count']==='number'?a['count']:100)
+      ? previousConsultationRequest?2:requestedSummaryCount??(defaultChronology?6:typeof a['count']==='number'?a['count']:100)
       : typeof a['count']==='number'?a['count']:5;
-    const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:summaryReadCount,all:section==='summary'&&!rangedSummary&&!chronologicalSummary&&requestedSummaryCount===undefined,...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
+    let authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:summaryReadCount,all:section==='summary'&&!rangedSummary&&!chronologicalSummary&&!previousConsultationRequest&&requestedSummaryCount===undefined,...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
+    if(previousConsultationRequest){
+     const scoped=isolatePreviousClinicalConsultation(authorizedContext);
+     if(!scoped)return {...result,status:'empty',complete:true,text:narrativeCopy.olderSessionMissing,evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:authorizedContext.sourceRevision,provenance:{gate:'get_alexa_clinical_context',consultationsRead:authorizedContext.coverage.returned}}]};
+     authorizedContext=scoped;
+    }
    // These complete recorded arrays are already authorized by the clinical gate. This projection changes no permissions.
    const {currentConsultation:_currentConsultation,...withoutCurrent}=authorizedContext;
-   const context:ClinicalContext=rangedSummary?{...withoutCurrent,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true}}:{...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
+   const scopedVisitIds=new Set(rangedSummary?withoutCurrent.consultations.map(visit=>visit.id):[...withoutCurrent.consultations.map(visit=>visit.id),...(authorizedContext.currentConsultation?[authorizedContext.currentConsultation.id]:[])]);
+   const summaryScales=requestedSummaryCount!==undefined||rangedSummary?authorizedContext.scales.filter(scale=>!!scale.consultationId&&scopedVisitIds.has(scale.consultationId)):authorizedContext.scales;
+   const context:ClinicalContext=rangedSummary?{...withoutCurrent,diagnoses:[],scales:summaryScales,treatments:{current:[],history:[],historyComplete:true}}:{...authorizedContext,scales:summaryScales,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
+   const comparisonContext:ClinicalContext=latestConsultationComparison?(()=>{
+     const visits=context.consultations.filter(visit=>visit.endedAt!==null).sort((left,right)=>right.startedAt.localeCompare(left.startedAt)||right.id.localeCompare(left.id)).slice(0,2);
+     const {currentConsultation:_current,...withoutUnrelatedSections}=context;
+    const visitIds=new Set(visits.map(visit=>visit.id));
+     return {...withoutUnrelatedSections,consultations:visits,diagnoses:[],scales:context.scales.filter(scale=>!!scale.consultationId&&visitIds.has(scale.consultationId)),treatments:{current:[],history:[],historyComplete:true}};
+   })():context;
+   if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-summary-debug]',JSON.stringify({section,requestedSummaryCount,summaryReadCount,requestedSummaryScope,chronologicalSummary,comparison:latestConsultationComparison,received:authorizedContext.coverage.returned,consultations:context.consultations.length,current:!!context.currentConsultation,comparisonVisits:comparisonContext.consultations.length+Number(!!comparisonContext.currentConsultation)}));
    if(a['treatmentState']&&a['treatmentState']!=='all'){const ids=new Set(context.treatments.current.map(t=>t.id));context.treatments.history=context.treatments.history.filter(h=>ids.has(h.treatmentId));}
    const intent=section==="treatments"?"treatments":section==="diagnoses"?"diagnoses":section==="scales"?"scales":section==="current"?"current_consultation":"history";
    const intents=section==="summary"?["diagnoses","treatments","scales","current_consultation","history"] as const:[intent] as const;
@@ -376,8 +458,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      result.status="partial";result.complete=false;result.error={code:"requested-period-count-mismatch",retryable:false};return result;
     }
     const boundedSummary=section==='summary'&&!rangedSummary&&requestedSummaryCount!==undefined;
-    const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
-       ?? (chronologicalSummary?await summarizeClinicalContext(context,signal,!requestedSummaryScope,true,{chronological:true,includeDates:false}):rangedSummary?await summarizeClinicalConsultations(context,signal):boundedSummary?await summarizeClinicalContext(context,signal,false,true,{includeDates:false}):!requestedSummaryScope?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
+      const singleVisitFocus:'concerns'|'visit_summary'|undefined=requestedSummaryCount===1?(requestsCurrentVisitConcern(requestText)?'concerns':'visit_summary'):undefined;
+      const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
+        ?? (chronologicalSummary||latestConsultationComparison?await summarizeClinicalContext(comparisonContext,signal,!requestedSummaryScope,true,{chronological:true,includeDates:latestConsultationComparison,...(latestConsultationComparison?{comparison:true}:{})}):rangedSummary?await summarizeClinicalConsultations(context,signal):boundedSummary?await summarizeClinicalContext(context,signal,false,true,{includeDates:false,...(singleVisitFocus?{focus:singleVisitFocus}:{})}):!requestedSummaryScope?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
     summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
     if (!narrative.generated) return {...result,status:"error",complete:false,text:narrative.text,error:{code:"clinical-synthesis-unavailable",retryable:false}};
@@ -418,16 +501,36 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   }
   if(call.name==="prepare_action"){
    const {action,...slots}=agentSchemas.prepare_action.parse(a); const args:AlexaProposal["args"]={};
+   const admission=frenchRequestAdmission(requestText,false,undefined,input.appContext.documentId);
+   if(admission.preparationAction!==action)return failure(call,"needs_input",copy.missing,"action-not-explicitly-requested");
+   const deterministicActions=["create_appointment","reschedule_appointment","cancel_appointment","mark_patient_arrived","set_consultation_price","record_payment_collected","close_consultation","create_editable_document_draft","print_issued_document","send_internal_message"];
+   if(deterministicActions.includes(action)){
+    const prepared=await prepareActionProposal(input,db,knowledge,signal);
+    if(prepared.state==="unavailable")return failure(call,"error",copy.unavailable,"action-preparation-unavailable");
+    if(prepared.state==="missing")return failure(call,"needs_input",prepared.message??copy.missing,"action-input-missing");
+    if(prepared.state==="print"){
+     result.status="ok";result.complete=true;result.text=alexaActions.printOpening(prepared.label);
+     result.data={patientId:prepared.patientId,documentId:prepared.documentId,documentLabel:prepared.label};
+     result.evidence=[patientSource(prepared.patientId),{id:prepared.documentId,type:"document",label:prepared.label,provenance:{gate:"list_patient_documents",status:"issued"}}];
+     result.navigation={target:"document",patientId:prepared.patientId,documentId:prepared.documentId,print:true};
+     return result;
+    }
+    if(prepared.proposal.tool!==action)return failure(call,"needs_input",copy.missing,"action-classification-changed");
+    result.proposal={...prepared.proposal,actionId:input.clientTurnId};
+    if(prepared.patientId)result.patientId=prepared.patientId;
+    result.text="";
+    return result;
+   }
    if(action==="print_issued_document"){
-    const admission=frenchRequestAdmission(requestText,false),kind=admission.preparationDocumentType;
-    if(admission.preparationAction!=="print_issued_document"||!kind)return failure(call,"unsupported",copy.unsupported,"print-request-not-grounded");
-    if(slots.documentType!==kind)return failure(call,"needs_input",copy.missing,"print-document-kind-mismatch");
-    const prepared=await prepareIssuedDocumentPrint(db,patientId!,kind,signal);
+    const kind=admission.preparationDocumentType;
+    if(!kind&&!input.appContext.documentId)return failure(call,"needs_input",copy.missing,"print-document-target-not-selected");
+    if(kind&&slots.documentType!==kind)return failure(call,"needs_input",copy.missing,"print-document-kind-mismatch");
+    const prepared=await prepareIssuedDocumentPrint(db,patientId!,kind??null,signal,input.appContext.documentId??undefined,input.appContext.documentRevision??undefined);
     if(prepared.state==="unavailable")return failure(call,"error",alexaActions.printUnavailable,"print-document-read-unavailable");
     if(prepared.state==="missing")return failure(call,"needs_input",prepared.message??alexaActions.printUnavailable,"print-document-target-missing");
     result.status="ok";result.complete=true;result.text=alexaActions.printOpening(prepared.label);
     result.data={patientId:prepared.patientId,documentId:prepared.documentId,documentLabel:prepared.label};
-    result.evidence=[patientSource(prepared.patientId),{id:prepared.documentId,type:"document",label:prepared.label,provenance:{gate:"list_patient_documents",status:"issued",kind}}];
+    result.evidence=[patientSource(prepared.patientId),{id:prepared.documentId,type:"document",label:prepared.label,provenance:{gate:"list_patient_documents",status:"issued",...(kind?{kind}:{})}}];
     result.navigation={target:"document",patientId:prepared.patientId,documentId:prepared.documentId,print:true};
     return result;
    }
@@ -439,7 +542,37 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(resolved.state==="unavailable")return failure(call,"error",copy.unavailable,"document-inputs-unavailable");
     Object.assign(args,{patientId:patientId!,documentType:resolved.kind,variables:JSON.stringify(resolved.variables),content:JSON.stringify(resolved.content)});
    }
-   else if(action==="update_treatment"||action==="stop_treatment") {
+   else if(action==="create_charge"||action==="update_charge"||action==="deactivate_charge"){
+    const actionDate=new Intl.DateTimeFormat("en-CA",{timeZone:"Africa/Algiers",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(asOf));
+    const listed=actionCharges.parse(await rpc("get_charges_list",{p_period_start:actionDate,p_period_end:actionDate},signal));
+    const targetName=typeof slots.chargeTargetName==="string"?slots.chargeTargetName:undefined;
+    if(action!=="create_charge"&&(!targetName||!containsLiteralActionValue(requestText,targetName)))return failure(call,"needs_input",alexaActions.chargeTargetMissing,"charge-target-not-in-request");
+    const matching=targetName?listed.lignes.filter(row=>foldActionText(row.intitule)===foldActionText(targetName)):[];
+    if(action!=="create_charge"&&matching.length===0)return failure(call,"needs_input",alexaActions.chargeTargetMissing,"charge-target-not-found");
+    if(action!=="create_charge"&&matching.length>1)return failure(call,"needs_input",alexaActions.chargeTargetAmbiguous+" "+matching.map(row=>row.intitule+" — "+row.montant+" DZD").join(", "),"charge-target-ambiguous");
+    const row=matching[0];
+    if(action==="deactivate_charge"){
+     if(!row)return failure(call,"needs_input",alexaActions.chargeTargetMissing,"charge-target-not-found");
+     Object.assign(args,{chargeId:row.id,expectedCharge:{id:row.id,intitule:row.intitule,montant_dzd:row.montant,categorie:row.categorie,type:row.type,frequence:row.frequence,date_charge:row.date_charge,date_prochaine_echeance:row.date_prochaine_echeance,updated_at:row.updated_at}});
+    }else{
+     const suppliedName=typeof slots.chargeName==="string"?slots.chargeName:undefined;
+     const amount=requestedChargeAmount(requestText),category=requestedChargeCategory(requestText),requestedType=requestedChargeType(requestText),frequency=requestedChargeFrequency(requestText),date=requestedChargeDate(requestText);
+     if(suppliedName&&!containsLiteralActionValue(requestText,suppliedName)||slots.chargeAmountDzd!==undefined&&amount!==slots.chargeAmountDzd||slots.chargeCategory!==undefined&&category!==slots.chargeCategory||slots.chargeType!==undefined&&requestedType!==slots.chargeType||slots.chargeFrequency!==undefined&&frequency!==slots.chargeFrequency||slots.chargeDate!==undefined&&date!==slots.chargeDate)return failure(call,"needs_input",alexaActions.chargeValuesNotGrounded,"charge-values-not-in-request");
+     const name=action==="create_charge"?suppliedName:row?.intitule;
+     const montant=amount??(action==="update_charge"?row?.montant:undefined);
+     const categorie=category??(action==="update_charge"?row?.categorie:undefined);
+     const type=requestedType??(action==="update_charge"?row?.type:undefined);
+     const frequence=type==="ponctuelle"?null:frequency??(action==="update_charge"?row?.frequence:undefined);
+     const dateCharge=date??(action==="update_charge"?row?.date_charge:undefined);
+     if(!name||action==="update_charge"&&suppliedName&&!containsLiteralActionValue(requestText,suppliedName)||montant===undefined||!categorie||!type||!dateCharge||type==="recurrente"&&!frequence)return failure(call,"needs_input",alexaActions.chargeInputsMissing,"charge-inputs-missing");
+     if(action==="create_charge")Object.assign(args,{intitule:name,montantDzd:montant,categorie,type,frequence:frequence??null,dateCharge});
+     else{
+      if(!row)return failure(call,"needs_input",alexaActions.chargeTargetMissing,"charge-target-not-found");
+      Object.assign(args,{chargeId:row.id,expectedCharge:{id:row.id,intitule:row.intitule,montant_dzd:row.montant,categorie:row.categorie,type:row.type,frequence:row.frequence,date_charge:row.date_charge,date_prochaine_echeance:row.date_prochaine_echeance,updated_at:row.updated_at},intitule:name,montantDzd:montant,categorie,type,frequence:frequence??null,dateCharge});
+     }
+    }
+   }
+   else if(action==="update_treatment"||action==="pause_treatment"||action==="resume_treatment"||action==="stop_treatment") {
     const clinical=await buildClinicalContext(db,{patientId:patientId!},{count:1,purpose:"preparation"},signal);
     const target=resolveTreatmentTarget(clinical.treatments.current,slots.treatmentName,requestText);
     if(target.state==="missing")return failure(call,"needs_input",alexaActions.treatmentMissing,"treatment-target-missing");
@@ -450,7 +583,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      if(current.id!==clinical.currentConsultation.id||current.patient_id!==patientId||current.status!=="open")return failure(call,"needs_input",alexaActions.treatmentConsultationChanged,"treatment-consultation-changed");
      consultationId=current.id;
     }
-    if(action==="update_treatment"){
+    if(action==="pause_treatment"&&target.treatment.status!=="active")return failure(call,"needs_input",alexaActions.treatmentStateConflict,"treatment-not-active");
+    if(action==="resume_treatment"&&target.treatment.status!=="paused")return failure(call,"needs_input",alexaActions.treatmentStateConflict,"treatment-not-paused");
+    if(action==="pause_treatment"||action==="resume_treatment"){
+     Object.assign(args,{patientId:patientId!,treatmentId:target.treatment.id,expectedVersion:target.treatment.version,consultationId});
+    }else if(action==="update_treatment"){
      let changes:Readonly<Record<string,unknown>>;
      try{changes=groundTreatmentChanges(slots.changes??{},requestText);}catch{return failure(call,"needs_input",alexaActions.treatmentChangeMissing,"treatment-change-not-grounded");}
      const currentValues:Readonly<Record<string,unknown>>={dose:target.treatment.dose,dose_unit:target.treatment.doseUnit,frequency:target.treatment.frequency,timing:target.treatment.timing,instructions:target.treatment.instructions,start_date:target.treatment.startDate,end_date:target.treatment.endDate};
@@ -503,10 +640,17 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(!slots.consultationId)return failure(call,"needs_input",copy.missing,"slots");
     const c=z.object({id:z.uuid(),patient_id:z.uuid()}).parse(await rpc("get_consultation",{p_id:slots.consultationId},signal));
     if(c.patient_id!==patientId)throw new Error("ScopeChanged");args["consultationId"]=c.id;
-    if(action==="set_consultation_price"){if(slots.amountDzd===undefined)return failure(call,"needs_input",copy.missing,"slots");args["amountDzd"]=slots.amountDzd;}
+    if(action==="set_consultation_price"){
+     const requestedAmount=requestedChargeAmount(requestText);
+     if(slots.amountDzd===undefined||requestedAmount===undefined||slots.amountDzd!==requestedAmount)return failure(call,"needs_input",alexaActions.chargeValuesNotGrounded,"consultation-price-not-grounded");
+     args["amountDzd"]=requestedAmount;
+    }
     else{const p=z.object({payment_id:z.uuid()}).parse(await rpc("get_consultation_payment",{p_consultation_id:c.id},signal));if(slots.paymentId&&slots.paymentId!==p.payment_id)throw new Error("ScopeChanged");args["paymentId"]=p.payment_id;}
    }
-   result.proposal={tool:action,args,actionId:input.clientTurnId};if(patientId)result.patientId=patientId;result.text=copy.confirmation;return result;
+   result.proposal={tool:action,args,actionId:input.clientTurnId};if(patientId)result.patientId=patientId;
+   // The server-bound authenticated command authorizes the audited write; the
+   // client will publish only the post-write verified result.
+   result.text="";return result;
   }
   if(call.name==="query_consultations"&&a["view"]){
    const spec=agentSchemas.query_consultations.parse(a);
@@ -519,7 +663,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    if(!spec.consultationId)return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
    const id=spec.consultationId;
-   if(!input.text.includes(id)&&!input.appContext.page.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===id)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
+   if(!input.text.includes(id)&&input.appContext.consultationId!==id&&!input.appContext.page.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===id)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
    const result=await readConsultation(call.id,id,spec.view!,patientId??input.appContext.patientId??undefined,spec.textOffset??0,spec.revision,rpc,signal);
    if(result.data&&typeof result.data==="object")result.data={...result.data,asOf};return result;
   }
@@ -533,6 +677,22 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(call.name==="query_agenda"&&typeof a["appointmentId"]==="string"){
    const id=a["appointmentId"];if(!input.text.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="appointment"&&e.id===id)))return failure(call,"needs_input",copy.missing,"appointment-reference-not-verified");
    return readAppointment(call.id,id,patientId,rpc,signal);
+  }
+  if(currentDocumentRequest){
+   if(!patientId||!input.appContext.patientId)return failure(call,'needs_input','Sélectionnez le dossier du patient associé au document ouvert.','current-document-patient-required');
+   if(typeof a['documentId']==='string'){
+    const document=z.object({document_id:z.uuid(),patient_id:z.uuid(),doc_number:z.string().max(120),content_hash:z.string().nullable().optional()}).parse(await rpc('get_document',{p_id:a['documentId']},signal));
+    if(document.patient_id!==patientId)return failure(call,'needs_input',copy.patient,'current-document-patient-mismatch');
+    if(input.appContext.documentId===document.document_id&&input.appContext.documentRevision&&document.content_hash!==input.appContext.documentRevision)return failure(call,'needs_input','Le document ouvert a changé. Actualisez-le avant de poursuivre.','current-document-revision-changed');
+    result.patientId=patientId;result.text=`Le document ouvert porte le numéro ${document.doc_number}.`;result.evidence=[patientSource(patientId),{id:document.document_id,type:'document',label:'Document ouvert',...(document.content_hash?{version:document.content_hash}:{})}];result.data={documentId:document.document_id,documentNumber:document.doc_number,revision:document.content_hash??null};return result;
+   }
+   if(typeof a['draftId']==='string'){
+    const draft=z.object({id:z.uuid(),patientId:z.uuid(),revision:z.number().int().nonnegative()}).passthrough().parse(await rpc('get_editable_document_draft',{p_id:a['draftId']},signal));
+    if(draft.patientId!==patientId)return failure(call,'needs_input',copy.patient,'current-draft-patient-mismatch');
+    if(input.appContext.draftId===draft.id&&input.appContext.documentRevision&&String(draft.revision)!==input.appContext.documentRevision)return failure(call,'needs_input','Le brouillon ouvert a changé. Actualisez-le avant de poursuivre.','current-draft-revision-changed');
+    result.patientId=patientId;result.text='Le document ouvert est un brouillon. Il n’a pas encore de numéro d’émission.';result.evidence=[patientSource(patientId),{id:draft.id,type:'document',label:'Brouillon ouvert',version:String(draft.revision),provenance:{draftId:draft.id}}];result.data={draftId:draft.id,revision:draft.revision};return result;
+   }
+   return failure(call,'needs_input','Aucun document ouvert n’est identifié dans l’espace actuel. Précisez le document à consulter.','current-document-not-selected');
   }
   if(["query_agenda","query_consultations","query_finance","query_documents"].includes(call.name)){
    const {partIds:_parts,patientName:_name,patientId:_patient,...spec}=a;

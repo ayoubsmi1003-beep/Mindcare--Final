@@ -44,6 +44,7 @@ import { getConsultation } from "./consultations";
 import { getPatientTreatments, getTreatmentHistory, type PatientTreatments, type StoppedReason, type Treatment } from "./patient-treatments";
 import { db } from "./db";
 import { formaterDzd, getConsultationPayment } from "./finance";
+import { getChargesList, type LigneCharge, type SaisieCharge } from "./finance-cash";
 import type { CarteIdentite } from "./jarvis-identite";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
@@ -597,17 +598,16 @@ const preparerBrouillonDocument: CapaciteEcriture<ArgsBrouillon> = {
 // ═══════════════════════════════════════════════════════════════════════════
 
 /**
- * LES SEPT ECRITURES, alignees sur l'allowlist de `063_jarvis_capacites.sql`.
+ * Les capacités sont alignées sur l'allowlist SQL correspondante.
  *
  * LA CONTRAINTE SQL RESTE L'AUTORITE. Ce registre borne ce qui est OFFERT ; la
  * contrainte en base borne ce qui est POSSIBLE. Ajouter un nom ici sans
  * l'ajouter la ne donne aucun pouvoir nouveau -- la porte refusera. C'est le
  * bon sens de la dependance, et il ne s'inverse jamais.
  *
- * AUCUNE SUPPRESSION, ET CE N'EST PAS UN OUBLI. Le depot SAIT supprimer
- * (`deleteCharge`, `app.delete_charge`) ; cette absence est donc une decision,
- * pas une lacune. `scripts/eval-registre-sans-suppression.mjs` echoue si un nom
- * de suppression apparait ici.
+ * Aucune suppression destructive n'est exposée. `deactivate_charge` utilise
+ * l'opération historique `app.delete_charge`, qui fait uniquement
+ * `UPDATE charges SET actif = false` et conserve l'historique financier.
  */
 
 interface ArgsBrouillonEditable {
@@ -718,6 +718,144 @@ const arreterTraitement:CapaciteEcriture<ArgsTraitementStop>={
  }
 };
 
+interface ArgsTraitementEtat {readonly patientId:string;readonly treatmentId:string;readonly expectedVersion:number;readonly consultationId:string|null}
+function traitementEtatAction(action:"pause_treatment"|"resume_treatment",before:"active"|"paused",after:"paused"|"active",title:string):CapaciteEcriture<ArgsTraitementEtat>{
+ return {
+  nom:action,
+  description:(action==="pause_treatment"?"Met en pause":"Reprend")+" un traitement explicitement désigné. La version et l’état courant sont relus avant l’écriture puis l’effet est vérifié.",
+  entree:z.object({patientId:Guid,treatmentId:Guid,expectedVersion:z.number().int().positive(),consultationId:Guid.nullable()}).strict(),
+  critique:true,
+  precondition:async args=>{
+   const patient=await getPatient(args.patientId);if(!patient.ok||!patient.data)return err({code:"introuvable",message:fr.erreurs.introuvable});
+   const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+   const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+   if(!treatment||treatment.status!==before||treatment.currentVersion!==args.expectedVersion)return err({code:"regle-metier",message:alexaActions.treatmentStateConflict});
+   if(args.consultationId){const consultation=await getConsultation(args.consultationId);if(!consultation.ok||!consultation.data||consultation.data.patientId!==args.patientId||consultation.data.status!=="open")return err({code:"regle-metier",message:alexaActions.treatmentConsultationChanged});}
+   return ok(undefined);
+  },
+  carte:(args,carte)=>({titre:title,champs:[
+   {libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},
+   {libelle:alexaActions.treatmentName,valeur:carte.rendre(args.treatmentId)},
+  ]}),
+  verifier:async(args,id)=>{
+   if(id!==args.treatmentId)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+   const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+   const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+   if(!treatment||treatment.currentVersion!==args.expectedVersion+1||treatment.status!==after)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+   const history=await getTreatmentHistory(args.treatmentId,null,1);if(!history.ok)return err(history.error);
+   const last=history.data.entries[0],expectedAction=action==="pause_treatment"?"paused":"resumed";
+   if(!last||last.version!==args.expectedVersion+1||last.action!==expectedAction)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+   return ok(undefined);
+  },
+ };
+}
+const mettreTraitementEnPause=traitementEtatAction("pause_treatment","active","paused",alexaActions.treatmentPauseTitle);
+const reprendreTraitement=traitementEtatAction("resume_treatment","paused","active",alexaActions.treatmentResumeTitle);
+
+const CATEGORIE_CHARGE=z.enum(["local","personnel","outils","assurance","autre"]);
+const TYPE_CHARGE=z.enum(["recurrente","ponctuelle"]);
+const FREQUENCE_CHARGE=z.enum(["mensuelle","trimestrielle","annuelle"]);
+const DATE_CHARGE=z.iso.date();
+const CHARGE_SAISIE=z.object({
+ intitule:z.string().trim().min(2).max(160),
+ montantDzd:z.number().int().min(1).max(1_000_000),
+ categorie:CATEGORIE_CHARGE,
+ type:TYPE_CHARGE,
+ frequence:FREQUENCE_CHARGE.nullable(),
+ dateCharge:DATE_CHARGE,
+}).strict().refine(value=>value.type==="recurrente"?value.frequence!==null:value.frequence===null,"ChargeFrequencyMustMatchType");
+const chargeSnapshotSchema=z.object({
+ id:Guid,intitule:z.string().trim().min(2).max(160),montant_dzd:z.number().int().positive(),
+ categorie:CATEGORIE_CHARGE,type:TYPE_CHARGE,frequence:FREQUENCE_CHARGE.nullable(),
+ date_charge:DATE_CHARGE,date_prochaine_echeance:DATE_CHARGE.nullable(),updated_at:z.iso.datetime({offset:true}),
+}).strict();
+type ChargeSnapshot=z.infer<typeof chargeSnapshotSchema>;
+function chargeSnapshot(row:LigneCharge):ChargeSnapshot{
+ return chargeSnapshotSchema.parse({id:row.id,intitule:row.intitule,montant_dzd:row.montant,categorie:row.categorie,type:row.type,frequence:row.frequence,date_charge:row.date_charge,date_prochaine_echeance:row.date_prochaine_echeance,updated_at:row.updated_at});
+}
+function chargeValuesMatch(row:LigneCharge,args:SaisieCharge):boolean{
+ return row.intitule===args.intitule&&row.montant===args.montantDzd&&row.categorie===args.categorie&&row.type===args.type&&row.frequence===args.frequence&&row.date_charge===args.dateCharge;
+}
+function normaliserIntituleCharge(value:string):string{return value.normalize("NFKD").replace(/\p{M}/gu,"").replace(/\s+/gu," ").trim().toLocaleLowerCase("fr");}
+function dateCabinetAujourdhui():string{
+ const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Africa/Algiers",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+ const values=Object.fromEntries(parts.map(part=>[part.type,part.value]));
+ return String(values.year)+"-"+String(values.month)+"-"+String(values.day);
+}
+async function lireChargesActives():Promise<Result<readonly LigneCharge[]>>{
+ const today=dateCabinetAujourdhui(),listed=await getChargesList(today,today);
+ if(!listed.ok)return err(listed.error);
+ if(!listed.data)return err({code:"indisponible",message:alexaActions.chargeReadUnavailable});
+ return ok(listed.data.lignes);
+}
+function sameChargeSnapshot(row:LigneCharge,expected:ChargeSnapshot):boolean{
+ const current=chargeSnapshot(row);
+ return current.id===expected.id&&current.intitule===expected.intitule&&current.montant_dzd===expected.montant_dzd&&current.categorie===expected.categorie&&current.type===expected.type&&current.frequence===expected.frequence&&current.date_charge===expected.date_charge&&current.date_prochaine_echeance===expected.date_prochaine_echeance&&current.updated_at===expected.updated_at;
+}
+
+interface ArgsCreerCharge extends SaisieCharge{}
+const creerChargeAlexa:CapaciteEcriture<ArgsCreerCharge>={
+ nom:"create_charge",description:"Crée une charge avec le nom, le montant entier en DZD, la catégorie, le type, la date et, pour une charge récurrente, la fréquence explicitement fournis.",
+ entree:CHARGE_SAISIE,critique:true,
+ precondition:async args=>{
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  const duplicate=listed.data.some(row=>normaliserIntituleCharge(row.intitule)===normaliserIntituleCharge(args.intitule)&&chargeValuesMatch(row,args));
+  return duplicate?err({code:"regle-metier",message:alexaActions.chargeAlreadyExists}):ok(undefined);
+ },
+ carte:args=>({titre:alexaActions.chargeCreateTitle,champs:[
+  {libelle:alexaActions.chargeName,valeur:args.intitule},{libelle:alexaActions.chargeAmount,valeur:formaterDzd(args.montantDzd)},
+  {libelle:alexaActions.chargeCategory,valeur:args.categorie},{libelle:alexaActions.chargeType,valeur:args.type},
+  {libelle:alexaActions.chargeDate,valeur:args.dateCharge},...(args.frequence?[{libelle:alexaActions.chargeFrequency,valeur:args.frequence}]:[]),
+ ]}),
+ verifier:async(args,id)=>{
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  const row=listed.data.find(item=>item.id===id);
+  return row&&chargeValuesMatch(row,args)?ok(undefined):err({code:"regle-metier",message:alexaActions.chargeNotVerified});
+ },
+};
+
+interface ArgsModifierCharge extends SaisieCharge {readonly chargeId:string;readonly expectedCharge:ChargeSnapshot}
+const modifierChargeAlexa:CapaciteEcriture<ArgsModifierCharge>={
+ nom:"update_charge",description:"Modifie une charge active identifiée par la lecture courante. Chaque champ absent est conservé; les champs lus sont revérifiés par la porte SQL.",
+ entree:z.object({...CHARGE_SAISIE.shape,chargeId:Guid,expectedCharge:chargeSnapshotSchema}).strict(),
+ critique:true,
+ precondition:async args=>{
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  const row=listed.data.find(item=>item.id===args.chargeId);
+  if(!row||!sameChargeSnapshot(row,args.expectedCharge))return err({code:"regle-metier",message:alexaActions.chargeSnapshotChanged});
+  if(chargeValuesMatch(row,args))return err({code:"regle-metier",message:alexaActions.chargeNoChange});
+  return ok(undefined);
+ },
+ carte:args=>({titre:alexaActions.chargeUpdateTitle,champs:[
+  {libelle:alexaActions.chargeName,valeur:args.intitule},{libelle:alexaActions.chargeAmount,valeur:formaterDzd(args.montantDzd)},
+  {libelle:alexaActions.chargeCategory,valeur:args.categorie},{libelle:alexaActions.chargeType,valeur:args.type},
+  {libelle:alexaActions.chargeDate,valeur:args.dateCharge},...(args.frequence?[{libelle:alexaActions.chargeFrequency,valeur:args.frequence}]:[]),
+ ]}),
+ verifier:async(args,id)=>{
+  if(id!==args.chargeId)return err({code:"regle-metier",message:alexaActions.chargeNotVerified});
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  const row=listed.data.find(item=>item.id===args.chargeId);
+  return row&&chargeValuesMatch(row,args)?ok(undefined):err({code:"regle-metier",message:alexaActions.chargeNotVerified});
+ },
+};
+
+interface ArgsDesactiverCharge {readonly chargeId:string;readonly expectedCharge:ChargeSnapshot}
+const desactiverChargeAlexa:CapaciteEcriture<ArgsDesactiverCharge>={
+ nom:"deactivate_charge",description:"Désactive une charge active explicitement désignée sans supprimer son historique. Les champs lus sont revérifiés par la porte SQL.",
+ entree:z.object({chargeId:Guid,expectedCharge:chargeSnapshotSchema}).strict(),critique:true,
+ precondition:async args=>{
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  const row=listed.data.find(item=>item.id===args.chargeId);
+  return row&&sameChargeSnapshot(row,args.expectedCharge)?ok(undefined):err({code:"regle-metier",message:alexaActions.chargeSnapshotChanged});
+ },
+ carte:args=>({titre:alexaActions.chargeDeactivateTitle,champs:[{libelle:alexaActions.chargeName,valeur:args.expectedCharge.intitule},{libelle:alexaActions.chargeAmount,valeur:formaterDzd(args.expectedCharge.montant_dzd)}]}),
+ verifier:async(args,id)=>{
+  if(id!==args.chargeId)return err({code:"regle-metier",message:alexaActions.chargeNotVerified});
+  const listed=await lireChargesActives();if(!listed.ok)return err(listed.error);
+  return listed.data.some(row=>row.id===args.chargeId)?err({code:"regle-metier",message:alexaActions.chargeNotVerified}):ok(undefined);
+ },
+};
+
 interface ArgsBrouillonEditableMaj {readonly patientId:string;readonly draftId:string;readonly documentType:DocumentKind;readonly expectedRevision:number;readonly changes:string;readonly variables:string;readonly content:string;readonly documentDate:string}
 const modifierBrouillonEditable:CapaciteEcriture<ArgsBrouillonEditableMaj>={
  nom:"update_editable_document_draft",description:"Modifie uniquement les champs explicitement demandés d'un brouillon non émis. La révision est vérifiée à la proposition et par la porte SQL. La prévisualisation puis la confirmation du médecin restent nécessaires pour émettre.",critique:true,
@@ -766,7 +904,12 @@ const envoyerMessageInterne:CapaciteEcriture<ArgsMessageInterne>={
 const ECRITURES: readonly CapaciteEcritureEnregistree[] = [
   enregistrer(editableDraft),
   enregistrer(modifierTraitement),
+  enregistrer(mettreTraitementEnPause),
+  enregistrer(reprendreTraitement),
   enregistrer(arreterTraitement),
+  enregistrer(creerChargeAlexa),
+  enregistrer(modifierChargeAlexa),
+  enregistrer(desactiverChargeAlexa),
   enregistrer(modifierBrouillonEditable),
   enregistrer(creerRendezVous),
   enregistrer(decalerRendezVous),

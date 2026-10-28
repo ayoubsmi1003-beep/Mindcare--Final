@@ -180,6 +180,7 @@ const LIGNE_CHARGE = z.object({
   frequence: z.string().nullable(),
   date_charge: z.string(),
   date_prochaine_echeance: z.string().nullable(),
+  updated_at: z.iso.datetime({offset:true}).optional(),
 });
 
 const LISTE_CHARGES = z.object({

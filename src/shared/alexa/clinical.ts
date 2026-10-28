@@ -39,7 +39,7 @@ export const clinicalContextSchema = z.object({
     historyComplete: z.boolean(),
   }).strict(),
   diagnoses: z.array(z.object({ id, label: z.string(), code: nullableText, primary: z.boolean(), onsetDate: nullableText, resolvedAt: nullableText }).strict()),
-  scales: z.array(z.object({ id, name: z.string(), administeredAt: z.string(), score: z.number().nullable(), interpretation: nullableText }).strict()),
+  scales: z.array(z.object({ id, scaleId: id.nullable().optional(), name: z.string(), consultationId: id.nullable().optional(), consultationStartedAt: z.string().nullable().optional(), administeredAt: z.string(), score: z.number().nullable(), interpretation: nullableText }).strict()),
   sourceRevision: z.string().regex(/^[a-f0-9]{64}$/),
   coverage: z.object({ requested: z.number().int().positive(), returned: z.number().int().nonnegative(), complete: z.boolean(), hasMore: z.boolean(),
     next: consultationCursorSchema.optional() }).strict(),

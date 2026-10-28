@@ -18,6 +18,21 @@ describe('whole-case sentence selection',()=>{
     expect(result.text.split(/\s+/u).length).toBeLessThanOrEqual(70);
     expect(clinicalNarrativeReferences(ctx,result.sourceIds).map(source=>source.id)).toEqual([ctx.consultations[0]!.id,ctx.consultations[2]!.id]);
   });
+  it('retains a documented medication and plan when summarizing the latest consultation',async()=>{
+    vi.mocked(inferLocalText).mockImplementation(async(_messages,options)=>{
+      const schema=options!.jsonSchema as {properties:{selection:{enum:string[]}}};
+      return JSON.stringify({selection:schema.properties.selection.enum[0]});
+    });
+    const ctx=context(1);
+    ctx.consultations[0]!.notes[0]!.subjective='La personne décrit une baisse de l’élan et souhaite reprendre une activité courte.';
+    ctx.consultations[0]!.notes[0]!.plan='Le traitement par SERTRALINE ALMUS à 50 mg par jour est maintenu. La reprise du rangement sera progressive.';
+    const result=await summarizeClinicalCaseContext(ctx,new AbortController().signal);
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text.toLowerCase()).toContain('la personne décrit une baisse de l’élan');
+    expect(result.text).toContain('SERTRALINE ALMUS à 50 mg par jour');
+    expect((result.text.match(/consultation du/gu)??[])).toHaveLength(1);
+    expect(result.text.split(/\s+/u).length).toBeLessThanOrEqual(70);
+  });
   it('keeps sentence provenance through hidden batches without citing the entire selected batch',async()=>{
     const read=new Set<string>();
     vi.mocked(inferLocalText).mockImplementation(async messages=>{

@@ -6,8 +6,8 @@ import type { DbPort, RpcArgs } from "@/services/db/port";
 const consultationId="a4000000-0000-4000-8000-000000000001",patientId="a3000000-0000-4000-8000-000000000001",noteId="a5000000-0000-4000-8000-000000000001",analysisId="b3000000-0000-4000-8000-000000000001";
 const row={id:consultationId,patient_id:patientId,started_at:"2026-10-01T08:00:00Z",ended_at:null,raw_notes:null,note_id:noteId,note_status:"draft",subjective:"Difficultés avec les parents.",objective:"Contact préservé.",assessment:"Humeur triste rapportée.",plan:"Revoir la situation familiale."};
 beforeEach(()=>{vi.clearAllMocks();vi.mocked(synthesizeClinicalNarrative).mockResolvedValue({text:"Le patient rapporte une humeur triste et des difficultés avec ses parents.",complete:true,generated:true,sourceIds:[]});});
-function fixture(options:{changed?:boolean;denied?:boolean;failedSave?:boolean;empty?:boolean;previous?:boolean;medicationChange?:boolean;timingChange?:boolean}={}){
- const calls:{name:string;args:Record<string,unknown>}[]=[];let reads=0,content:unknown;
+function fixture(options:{changed?:boolean;denied?:boolean;failedSave?:boolean;empty?:boolean;previous?:boolean;medicationChange?:boolean;timingChange?:boolean;consultationScales?:boolean;scaleReadUnavailable?:boolean;changedScales?:boolean;changedScaleDefinition?:boolean}={}){
+ const calls:{name:string;args:Record<string,unknown>}[]=[];let reads=0,scaleReads=0,content:unknown;
  const rpc:DbPort["rpc"]=async<T>(name:string,args:RpcArgs)=>{
   calls.push({name,args});
   let data:readonly unknown[]=[];
@@ -15,7 +15,19 @@ function fixture(options:{changed?:boolean;denied?:boolean;failedSave?:boolean;e
   else if(name==="get_patient")data=options.denied?[]:[{id:patientId}];
   else if(name==="list_amendments")data=[];
   else if(name==="get_scale_history")data=[];
-  else if(name==="list_scales")data=[];
+  else if(name==="get_alexa_consultation_scales"&&options.scaleReadUnavailable)return {ok:false,error:{code:"indisponible",message:"Unavailable"}};
+  else if(name==="get_alexa_consultation_scales"){scaleReads++;data=options.consultationScales?[
+   {id:'e1000000-0000-4000-8000-000000000001',scale_code:'PHQ9',scale_name:'PHQ-9',consultation_id:consultationId,total:16,interpretation:'modérément sévère',administered_at:'2026-10-01T08:30:00Z',responses:{q9:1},definition:{code:'PHQ9',name_fr:'PHQ-9',items:[{id:'q9',texte:'Pensées de mort',options:[{valeur:0,libelle:'Jamais'},{valeur:1,libelle:'Plusieurs jours'}],risque:true,alerte:'Explorer ce signal.'}],scoring:{methode:'somme',consigne:'Fréquence sur les deux dernières semaines.',min:0,max:27,bandes:[],source:'instrument validé',note:'Aide à l’évaluation.'}}},
+   {id:'e1000000-0000-4000-8000-000000000002',scale_code:'GAD7',scale_name:'GAD-7',consultation_id:consultationId,total:12,interpretation:'modéré',administered_at:'2026-10-01T08:35:00Z',responses:{g1:2},definition:{code:'GAD7',name_fr:'GAD-7',items:[{id:'g1',texte:'Nervosité',options:[{valeur:0,libelle:'Jamais'},{valeur:1,libelle:'Plusieurs jours'}]}],scoring:{methode:'somme',consigne:'Fréquence sur les deux dernières semaines.',min:0,max:21,bandes:[],source:'instrument validé',note:'Aide à l’évaluation.'}}},
+  ].map((scale,index)=>{
+   const changed=options.changedScales&&scaleReads>1&&index===0?{...scale,total:17}:scale;
+   if(!options.changedScaleDefinition||scaleReads<=1||index!==0)return changed;
+   return {...changed,definition:{...changed.definition,items:changed.definition.items.map(item=>({...item,options:item.options?.map(option=>({...option,libelle:option.valeur===1?'Plusieurs jours — version modifiée':option.libelle}))}))}};
+  }):[];}
+  else if(name==="list_scales")data=options.consultationScales?[
+   {code:'PHQ9',name_fr:'PHQ-9',items:[{id:'q9',texte:'Pensées de mort',risque:true,alerte:'Explorer ce signal.'}],scoring:{max:27}},
+   {code:'GAD7',name_fr:'GAD-7',items:[{id:'g1',texte:'Nervosité'}],scoring:{max:21}},
+  ]:[];
   else if(name==='get_session_details')data=[null];
   else if(name==='get_alexa_clinical_context'){
    const state={status:'active',dose:'50',doseUnit:'mg',frequency:'quotidienne',timing:options.timingChange?['soir']:[],instructions:options.timingChange?'Avec le repas.':null,startDate:'2026-08-01',endDate:null},treatmentId='c3000000-0000-4000-8000-000000000001';
@@ -50,6 +62,32 @@ it('preserves actual timing and instruction changes when the dose remains unchan
  const transition=vi.mocked(synthesizeClinicalNarrative).mock.calls[0]![0].find(source=>source.scope==='change')?.originalText;
  expect(transition).toContain('matin');expect(transition).toContain('soir');
  expect(transition).toContain('Avant le repas.');expect(transition).toContain('Avec le repas.');
+});
+it('reads and summarizes every scale linked to the exact consultation',async()=>{
+ const f=fixture({consultationScales:true}),result=await generateSessionSummary(f.db,consultationId,new AbortController().signal);
+ const read=f.calls.find(call=>call.name==='get_alexa_consultation_scales');
+ expect(read?.args).toMatchObject({p_patient_id:patientId,p_consultation_id:consultationId});
+ expect(f.calls.some(call=>call.name==='get_scale_history')).toBe(false);
+ expect(result.resume).toContain('PHQ-9 16/27 (modérément sévère)');
+ expect(result.resume).toContain('GAD-7 12/21 (modéré)');
+ expect(result.resume).toMatch(/pensées de mort/iu);
+});
+it('does not save a consultation summary when its scale read is unavailable',async()=>{
+ const f=fixture({scaleReadUnavailable:true});
+ await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'unavailable'});
+ expect(f.calls.some(call=>call.name==='save_session_analysis')).toBe(false);
+});
+it('does not persist a consultation summary if an attached scale changes during inference',async()=>{
+ const f=fixture({consultationScales:true,changedScales:true});
+ await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'changed'});
+ expect(f.calls.filter(call=>call.name==='get_alexa_consultation_scales')).toHaveLength(2);
+ expect(f.calls.some(call=>call.name==='save_session_analysis')).toBe(false);
+});
+it('does not persist a consultation summary if a scale definition changes during inference',async()=>{
+ const f=fixture({consultationScales:true,changedScaleDefinition:true});
+ await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'changed'});
+ expect(f.calls.filter(call=>call.name==='get_alexa_consultation_scales')).toHaveLength(2);
+ expect(f.calls.some(call=>call.name==='save_session_analysis')).toBe(false);
 });
 it("stops before inference on an unauthorized patient",async()=>{const f=fixture({denied:true});await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:"unavailable"});expect(synthesizeClinicalNarrative).not.toHaveBeenCalled();});
 it('does not persist a source selection in place of the requested reformulated paragraph',async()=>{

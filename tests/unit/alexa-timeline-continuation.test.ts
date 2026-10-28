@@ -29,25 +29,44 @@ it.each([
 });
 it('resumes only the verified timeline cursor and retains its patient',async()=>{
  const observed:unknown[]=[];
+ let revisions=0;
  const db:Pick<DbPort,'rpc'>={rpc:async <T>(name:string,args:unknown)=>{
   if(name==='get_patient')return {ok:true,data:[{id:patient,first_name:'Patient',last_name:'Synthétique',record_number:'SYN-1'}] as T[]};
-  observed.push(args);return {ok:true,data:[]};
+  if(name==='get_patient_timeline_revision'){revisions++;return {ok:true,data:[{revision:'a'.repeat(32),total:22}] as T[]};}
+  if(name==='list_patient_timeline')observed.push(args);return {ok:true,data:[]};
  }};
  const input={text:'La suite.',conversationId:'timeline',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/jarvis'}};
  const run=agentExecutor(input,db,{rpc:async()=>({data:null,error:null})});
- const previous:AgentResult={callId:'first',status:'partial',complete:false,text:'Page 1',conditionKeys:[],patientId:patient,evidence:[],data:{timelineQuery:{patientId:patient,count:20},timelineNext:{beforeAt:'2026-09-30T12:00:00Z',beforeId:event}}};
+ const previous:AgentResult={callId:'first',status:'partial',complete:false,text:'Page 1',conditionKeys:[],patientId:patient,evidence:[],data:{timelineQuery:{patientId:patient,count:20},timelineNext:{beforeAt:'2026-09-30T12:00:00Z',beforeId:event},revision:'a'.repeat(32)}};
  const result=await run({id:'next',name:'get_patient_context',args:{partIds:['p'],section:'timeline',reusePrevious:true}},asOf,[previous],new AbortController().signal);
  expect(observed).toEqual([{p_id:patient,p_before_at:'2026-09-30T12:00:00Z',p_before_id:event,p_limit:21}]);
+ expect(revisions).toBe(2);
  expect(result.status).toBe('empty');
 });
 it('normalizes PostgreSQL timestamp values before validating timeline rows',async()=>{
+ let revisionReads=0;
  const db:Pick<DbPort,'rpc'>={rpc:async <T>(name:string)=>{
   if(name==='get_patient')return {ok:true,data:[{id:patient,first_name:'Patient',last_name:'Synthétique',record_number:'SYN-1'}] as T[]};
+  if(name==='get_patient_timeline_revision'){revisionReads++;return {ok:true,data:[{revision:'b'.repeat(32),total:1}] as T[]};}
   return {ok:true,data:[{occurred_at:new Date('2026-10-22T10:00:00.000Z'),event_id:event,event_type:'consultation',label_key:'alexa.timeline.consultation',practitioner_name:null,detail:{}}] as T[]};
  }};
  const run=agentExecutor({text:'Affiche la chronologie du dossier courant.',conversationId:'timeline-postgres-date',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},db,{rpc:async()=>({data:null,error:null})});
  const result=await run({id:'timeline-date',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
- expect(result.status).toBe('ok');expect(result.text).toMatch(/consultation/iu);
+ expect(result.status).toBe('ok');expect(result.text).toMatch(/consultation/iu);expect(revisionReads).toBe(2);
+});
+it('stops a resumed timeline before reading when its source revision changed',async()=>{
+ let timelineReads=0;
+ const db:Pick<DbPort,'rpc'>={rpc:async <T>(name:string)=>{
+  if(name==='get_patient')return {ok:true,data:[{id:patient,first_name:'Patient',last_name:'Synthétique',record_number:'SYN-1'}] as T[]};
+  if(name==='get_patient_timeline_revision')return {ok:true,data:[{revision:'b'.repeat(32),total:22}] as T[]};
+  if(name==='list_patient_timeline')timelineReads++;
+  return {ok:true,data:[] as T[]};
+ }};
+ const input={text:'La suite chronologie',conversationId:'timeline-stale',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/jarvis'}};
+ const run=agentExecutor(input,db,{rpc:async()=>({data:null,error:null})});
+ const previous:AgentResult={callId:'first-stale',status:'partial',complete:false,text:'Page 1',conditionKeys:[],patientId:patient,evidence:[],data:{timelineQuery:{patientId:patient,count:20},timelineNext:{beforeAt:'2026-09-30T12:00:00Z',beforeId:event},revision:'a'.repeat(32)}};
+ await expect(run({id:'next-stale',name:'get_patient_context',args:{partIds:['p'],section:'timeline',reusePrevious:true}},asOf,[previous],new AbortController().signal)).rejects.toThrow();
+ expect(timelineReads).toBe(0);
 });
 it('does not accept a model supplied timeline cursor',async()=>{
  let reads=0;
@@ -58,7 +77,7 @@ it('does not accept a model supplied timeline cursor',async()=>{
 });
 it('restores a timeline continuation without retaining event contents',async()=>{
  const actor='timeline-resume';
- const data={timelineQuery:{patientId:patient,count:20},timelineNext:{beforeAt:'2026-09-30T12:00:00Z',beforeId:event},rows:[{detail:'CLINICAL_BODY'}]};
+  const data={timelineQuery:{patientId:patient,count:20},timelineNext:{beforeAt:'2026-09-30T12:00:00Z',beforeId:event},revision:'a'.repeat(32),rows:[{detail:'CLINICAL_BODY'}]};
  restoreAgentTask(actor,actor,{original:'Chronologie du dossier.',parts:[{id:'p',goal:'Chronologie',tools:['get_patient_context'],conditions:[],dependsOn:[],status:'budget_limited',resultRefs:['first']}],results:[{callId:'first',status:'partial',complete:false,text:'Page',conditionKeys:[],evidence:[],patientId:patient,data}],at:Date.now(),patientId:patient,page:'/jarvis'});
  expect(JSON.stringify(savedAgentTask(actor,actor))).not.toContain('CLINICAL_BODY');
  let dispatched:unknown;

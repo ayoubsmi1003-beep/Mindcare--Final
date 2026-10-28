@@ -31,6 +31,15 @@ it('recognizes a single total over the explicitly requested active and archived 
  expect(contract?.clauses).toEqual(['Combien de patients au total, actifs et archivés ?']);
  expect(countContractParts(contract!)).toMatchObject([{population:'all',conditions:[],tools:['query_patients']}]);
 });
+it.each([
+ ['Combien de dossiers, actifs et archivés réunis ?','all',[]],
+ ['Combien de patients actifs possèdent un téléphone ?','active',[{field:'phone',op:'present',value:null}]],
+ ['Combien de dossiers actifs possèdent un numéro de carte d’identité ?','active',[{field:'identity_card',op:'present',value:null}]],
+] as const)('binds the complete requested patient population and positive filter for %s',(text,population,conditions)=>{
+ const contract=frenchPatientCountContract(text);
+ expect(contract).not.toBeNull();
+ expect(countContractParts(contract!)).toMatchObject([{population,conditions,tools:['query_patients']}]);
+});
 it('keeps separate missing-identity and missing-phone counts as two typed clauses',()=>{
  const contract=frenchPatientCountContract('Compte les patients sans carte d’identité et ceux sans téléphone, séparément.');
  expect(contract?.clauses).toHaveLength(2);
@@ -65,6 +74,9 @@ it('binds a selected-patient pending-payment month to payment creation dates',()
 it('routes appointment requests awaiting treatment to the reception queue',()=>{
  expect(frenchRequestAdmission('Combien de demandes de rendez-vous restent à traiter ?',false)).toMatchObject({tools:['query_app'],applicationView:'reception'});
 });
+it('keeps a pause-state treatment follow-up on the selected patient treatment read',()=>{
+ expect(frenchRequestAdmission('Quels traitements sont en pause pour le patient sélectionné ?',false)).toMatchObject({tools:['get_patient_context'],patientSection:'treatments',treatmentState:'paused'});
+});
 it('preserves an explicit single-day range and issued status in a patient document read',()=>{
  const text='Quels documents émis concernent le dossier courant le 1 janvier 1900 ?';
  const admission=frenchRequestAdmission(text,false);
@@ -76,6 +88,18 @@ it('routes a daily finance calendar request to its bounded calendar mode',()=>{
  const admission=frenchRequestAdmission(text,false,'2026-10-25T12:00:00+01:00');
  expect(admission).toMatchObject({tools:['query_finance'],financeMode:'calendar',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
  expect(frenchReadArgumentBindings(admission,'query_finance')).toMatchObject({mode:'calendar',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+});
+it.each([
+ ['Quel est le montant encaissé ce mois-ci ?','totals','collected'],
+ ['Quel est le chiffre d’affaires du mois en cours ?','overview',undefined],
+ ['Quel résultat net le cabinet a-t-il réalisé ce mois-ci ?','overview',undefined],
+] as const)('binds a current-month finance read to the cabinet calendar for %s',(text,financeMode,financeState)=>{
+ const admission=frenchRequestAdmission(text,false,'2026-10-27T09:00:00+01:00');
+ expect(admission).toMatchObject({tools:['query_finance'],financeMode,from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+ if(financeState)expect(admission.financeState).toBe(financeState);
+});
+it.each(['Quels patients sont attendus demain matin ?','Quels patients sont attendus demain après-midi ?'])('routes patient-attendee wording to the agenda read gate: %s',text=>{
+ expect(frenchRequestAdmission(text,false,'2026-10-27T09:00:00+01:00')).toMatchObject({tools:['query_agenda']});
 });
 it.each([
  ['Comment les charges sont-elles réparties par catégorie en octobre 2026 ?',{tools:['query_finance'],financeMode:'composition',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
@@ -91,6 +115,10 @@ it.each([
 });
 it('routes a named last-consultation summary to exactly the latest visit',()=>{
  const admission=frenchRequestAdmission('Résume la dernière consultation de Amel Bensaid.',false);
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
+});
+it('routes principal problems in the current consultation to a one-visit clinical summary',()=>{
+ const admission=frenchRequestAdmission('Quels problèmes principaux sont documentés dans la consultation actuelle de islam adjina ?',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
 });
 it('reads the requested note sections from a named patient latest consultation without asking about signature state',()=>{
@@ -136,6 +164,33 @@ it.each([
  'Quels scores sont disponibles dans le dossier courant ?',
 ])('routes named or current-patient scale questions to recorded scale data: %s',text=>{
  expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'scales'});
+});
+it('recognizes a patient named after the clinical preposition « à » in an administered-scales question',()=>{
+ const text='Quelles échelles ont été administrées à islam adjina ?';
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'islam adjina'});
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'scales'});
+});
+it('keeps an administered-scale history question on the scale reader when it also names consultations',()=>{
+ const text='Quelles échelles ont été administrées à said doumer et dans quelles consultations ?';
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'scales'});
+});
+it('keeps a consultation count attached to the patient named after « a eues »',()=>{
+ const text='Combien de consultations a eues islam adjina ?';
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'islam adjina'});
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_consultations'],consultationMode:'count'});
+});
+it('routes a direct full-name patient search to the patient query tool',()=>{
+ const text='Cherche islam adjina.';
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'islam adjina'});
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_patients']});
+});
+it('treats « cherche plutôt » as a correction to the patient search',()=>{
+ const text='Cherche plutôt samiha ferhat.';
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'samiha ferhat'});
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_patients']});
+});
+it('treats an all-cabinet amount to collect as a cabinet-wide pending balance',()=>{
+ expect(frenchRequestAdmission('Quel reste à encaisser pour l’ensemble du cabinet ?',false)).toMatchObject({tools:['query_finance'],financeMode:'totals',financeState:'all'});
 });
 it('uses the close date only when the question explicitly names that date axis',()=>{
  const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant à la date de clôture en septembre 2026 ?',false,'2026-10-25T12:00:00+01:00');

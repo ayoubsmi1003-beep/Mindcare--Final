@@ -19,7 +19,12 @@ function financeParagraph(result:AgentResult,question:string,detailed:boolean):s
   const explicitPaymentList=/\b(?:liste\w*|affich\w*|montre\w*)\b|\bquels?\s+(?:(?:sont|sont-ils)\s+)?(?:les\s+)?paiements?\b|\bquelle\s+liste\s+(?:des?\s+)?paiements?\b/u.test(plain);
   if(data.total===0&&Array.isArray(data.rows)&&data.rows.length===0&&/\bpaiements?\b/u.test(plain)&&explicitPaymentList)return /\b(?:en attente|impaye\w*|a encaisser|non encaisse\w*)\b/u.test(plain)?'Aucun paiement en attente ne correspond à cette demande.':'Aucun paiement ne correspond à cette demande.';
   if(detailed)return;
+ if(pulse&&/\bchiffre d['’]affaires\b/u.test(plain)&&typeof pulse.revenu_periode==='number')return `${financePeriod(data)}les recettes encaissées du cabinet sont de ${frNumber(pulse.revenu_periode)} DZD.`;
  if(pulse&&/\b(?:resultat net|solde net)\b/u.test(plain)&&typeof pulse.resultat_net_periode==='number')return `${financePeriod(data)}${financePeriod(data)?'le':'Le'} résultat net du cabinet est de ${frNumber(pulse.resultat_net_periode)} DZD.`;
+ const recurring=data.total_recurrent_mensuel,oneOff=data.total_ponctuel_periode,from=typeof data.du==='string'?data.du:undefined,to=typeof data.au==='string'?data.au:undefined;
+ const monthStart=from?new Date(`${from}T12:00:00Z`):null,monthEnd=to?new Date(`${to}T12:00:00Z`):null;
+ const oneMonth=!!monthStart&&!!monthEnd&&!Number.isNaN(monthStart.getTime())&&!Number.isNaN(monthEnd.getTime())&&monthStart.getUTCDate()===1&&monthStart.getUTCFullYear()===monthEnd.getUTCFullYear()&&monthStart.getUTCMonth()===monthEnd.getUTCMonth()&&monthEnd.getUTCDate()===new Date(Date.UTC(monthEnd.getUTCFullYear(),monthEnd.getUTCMonth()+1,0)).getUTCDate();
+ if(oneMonth&&typeof recurring==='number'&&typeof oneOff==='number'&&/\b(?:total|combien|montant)\b/u.test(plain)&&/\bcharges?\b/u.test(plain))return `${financePeriod(data)}le total des charges est de ${frNumber(recurring+oneOff)} DZD, dont ${frNumber(recurring)} DZD récurrentes et ${frNumber(oneOff)} DZD ponctuelles.`;
  const composition=isRecord(data.composition)?data.composition:null;
  if(composition&&/\bcharges?\b/u.test(plain)&&/\b(?:repartition|reparti\w*|categories?)\b/u.test(plain)){
   const rows=Array.isArray(composition.charges_par_categorie)?composition.charges_par_categorie.filter(isRecord):[];

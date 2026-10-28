@@ -43,9 +43,45 @@ export function localResponse(context: ClinicalContext, plan: RequestPlan, token
   }
   if (plan.intent === "scales") {
     if (!context.scales.length) push(copy.emptyScales);
-    for (const scale of [...context.scales].sort((a, b) => b.administeredAt.localeCompare(a.administeredAt) || b.id.localeCompare(a.id))) {
-      const date = Number.isFinite(Date.parse(scale.administeredAt)) ? new Intl.DateTimeFormat(plan.language === "fr" ? "fr-DZ" : "ar-DZ", { timeZone: "Africa/Algiers", dateStyle: "medium" }).format(new Date(scale.administeredAt)) : copy.unspecified;
-      push(copy.recordedScale(date, scale.name, scale.score, scale.interpretation), all.filter(source => source.id === scale.id));
+    const groups = new Map<string, { date: string; sortAt: string; linked: boolean; scales: typeof context.scales[number][] }>();
+    const formatDate=(value:string)=>{
+      const at=Date.parse(value);
+      return Number.isFinite(at)?new Intl.DateTimeFormat(plan.language === "fr" ? "fr-DZ" : "ar-DZ", { timeZone: "Africa/Algiers", dateStyle: "medium" }).format(new Date(at)):copy.unspecified;
+    };
+    for (const scale of context.scales) {
+      const visitAt=scale.consultationStartedAt??scale.administeredAt;
+      const parsedAt = Date.parse(visitAt);
+      const date = formatDate(visitAt);
+      const localDay = Number.isFinite(parsedAt) ? new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Algiers", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(parsedAt)) : scale.id;
+      const linked = !!scale.consultationId;
+      const key = linked ? `consultation:${scale.consultationId}` : `date:${localDay}`;
+      const group = groups.get(key) ?? { date, sortAt:visitAt, linked, scales: [] };
+      group.scales.push(scale);
+      if (visitAt > group.sortAt) { group.sortAt = visitAt; group.date = date; }
+      groups.set(key, group);
+    }
+    const administrationsByScale=new Map<string,Map<string,typeof context.scales[number][]>>();
+    for(const scale of context.scales){
+      if(!scale.scaleId||!scale.consultationId)continue;
+      const visits=administrationsByScale.get(scale.scaleId)??new Map<string,typeof context.scales[number][]>();
+      const administrations=visits.get(scale.consultationId)??[];administrations.push(scale);visits.set(scale.consultationId,administrations);administrationsByScale.set(scale.scaleId,visits);
+    }
+    const trajectories=[...administrationsByScale.entries()].flatMap(([scaleId,visits])=>{
+      if(visits.size<2||[...visits.values()].some(administrations=>administrations.length!==1))return [];
+      const ordered=[...visits.values()].map(([administration])=>administration!).sort((a,b)=>(a.consultationStartedAt??a.administeredAt).localeCompare(b.consultationStartedAt??b.administeredAt));
+      const name=ordered[0]!.name;
+      return [{scaleId,text:copy.recordedScaleTrajectory(name,ordered.map(scale=>copy.recordedScalePoint(formatDate(scale.consultationStartedAt??scale.administeredAt),scale.score,scale.interpretation)))}];
+    });
+    const comparedAdministrations=new Set<string>();
+    if(trajectories.length){
+      const comparedScaleIds=new Set(trajectories.map(trajectory=>trajectory.scaleId));
+      for(const scale of context.scales)if(scale.scaleId&&comparedScaleIds.has(scale.scaleId))comparedAdministrations.add(scale.id);
+      push(copy.recordedScaleTrajectories(trajectories.map(trajectory=>trajectory.text)),all.filter(source=>source.type==="scale"&&comparedAdministrations.has(source.id)));
+    }
+    for (const group of [...groups.values()].sort((a, b) => b.sortAt.localeCompare(a.sortAt))) {
+      const ordered = group.scales.filter(scale=>!comparedAdministrations.has(scale.id)).sort((a, b) => a.name.localeCompare(b.name, "fr") || a.administeredAt.localeCompare(b.administeredAt) || a.id.localeCompare(b.id));
+      if(!ordered.length)continue;
+      push(copy.recordedScaleGroup(group.date, ordered.map(scale => copy.recordedScaleEntry(scale.name, scale.score, scale.interpretation)), group.linked), all.filter(source => ordered.some(scale => scale.id === source.id)));
     }
     return result;
   }

@@ -25,6 +25,18 @@ const diagnosisCases=evalCases.filter(testCase=>testCase.family==="diagnostics_f
 const agendaCases=evalCases.filter(testCase=>testCase.family==="agenda");
 
 it.each([
+ ['Combien de dossiers, actifs et archivés réunis ?',{mode:'count',population:'all',filters:[]}],
+ ['Combien de patients actifs possèdent un téléphone ?',{mode:'count',population:'active',filters:[{field:'phone',op:'present',value:null}]}],
+ ['Combien de dossiers actifs possèdent un numéro de carte d’identité ?',{mode:'count',population:'active',filters:[{field:'identity_card',op:'present',value:null}]}],
+] as const)('runs exact patient count %s through one typed database read without model tool selection',async(text,expected)=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'exact-patient-count-'+text.slice(0,16),appContext:{patientId:null,page:'/patients'}},{actor:'exact-patient-count',asOf:'2026-10-27T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw Error('Exact patient counts must use the deterministic typed read');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Lecture directe terminée.',evidence:[{id:call.id,type:'query',label:'Count gate'}],conditionKeys:(expected.filters as readonly {field:string;op:string;value:null}[]).map(condition=>`${condition.field}:${condition.op}:null`)})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_patients',args:expect.objectContaining({partIds:['requested_1'],...expected})}]);
+ expect(result.status).toBe('completed');
+});
+
+it.each([
  ['Dans le dossier d’Ayoub Salmi, ajoute uniquement une date de fin au traitement ZOLOFT 25 mg : 27/10/2026.','update_treatment',{treatmentName:'ZOLOFT 25 mg',changes:{endDate:'2026-10-27'}}],
  ['Pour Amel Bensaid, retire la date de fin du traitement Sertraline.','update_treatment',{treatmentName:'Sertraline',changes:{endDate:null}}],
  ['Le traitement de Lina Ziani : fixe la fréquence de Sertraline à une fois par jour.','update_treatment',{treatmentName:'Sertraline',changes:{frequency:'une fois par jour'}}],
@@ -48,7 +60,7 @@ it.each([
  const execute=vi.fn(async(call:{id:string;name:string;args:Record<string,unknown>})=>({callId:call.id,status:'needs_input' as const,complete:false,patientId:id,text:'Question de vérification avant la proposition.',evidence:[],conditionKeys:[]}));
  const result=await runAgentLoop({...input,text,conversationId:'single-treatment-tool-'+text.slice(0,14),appContext:{patientId:null,page:'/jarvis'}},{actor:'single-treatment-tool',infer,execute},new AbortController().signal);
  expect(infer).toHaveBeenCalledTimes(1);
- expect(systemPrompt).toContain('appelle immédiatement prepare_action');expect(systemPrompt).toContain('aucune écriture');expect(systemPrompt).not.toContain('declare_request');
+ expect(systemPrompt).toMatch(/appelle immédiatement prepare_action/iu);expect(systemPrompt).toContain('suggestion du modele ne donne jamais cette autorisation');expect(systemPrompt).not.toContain('declare_request');
  expect(offered).toContain('prepare_action');expect(offered).toContain('ask_doctor');expect(offered).not.toContain('declare_request');
  expect(execute).toHaveBeenCalledTimes(1);
  expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'prepare_action',args:{partIds:['requested_1'],action,...slots}});
@@ -142,6 +154,7 @@ it.each([
  ['Quel est le résultat net du cabinet pour octobre 2026 ?',1,{mode:'overview',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
  ['Quel montant représentent les paiements encaissés du 1 octobre 2026 au 31 octobre 2026 ?',1,{mode:'totals',state:'collected',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
  ['Quel solde reste à encaisser, toutes dates confondues ?',1,{mode:'totals',state:'pending'}],
+ ['Quel reste à encaisser pour l’ensemble du cabinet ?',1,{mode:'totals',state:'pending'}],
  ['Quelle différence entre recettes encaissées et paiements créés en octobre 2026 ?',2,{mode:'totals',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
  ['Combien de consultations terminées n’ont pas de tarif ?',1,{mode:'totals',state:'all',consultationStatus:'closed'}],
 ])('reads the finance view required by %s through the existing read gate',async(text,callCount,expectedArgs)=>{
@@ -151,6 +164,27 @@ it.each([
  expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(callCount);
  expect(execute.mock.calls.every(([call])=>call.name==='query_finance')).toBe(true);
  expect(execute.mock.calls[0]?.[0].args).toMatchObject(expectedArgs);
+});
+it.each([
+ ['Quel est le montant encaissé ce mois-ci ?',{mode:'totals',state:'collected',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel est le chiffre d’affaires du mois en cours ?',{mode:'overview',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel résultat net le cabinet a-t-il réalisé ce mois-ci ?',{mode:'overview',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+] as const)('answers a current-month finance request with one exact read for %s',async(text,expectedArgs)=>{
+ const infer=vi.fn(async()=>{throw new Error('Current-month finance scope should be deterministic');});
+ const execute=vi.fn(async(call:{id:string;name:string;args:Record<string,unknown>})=>({callId:call.id,status:'ok' as const,complete:true,text:'Lecture financière vérifiée.',data:{totals:{collectedDzd:0,pendingDzd:0,unpriced:0}},evidence:[],conditionKeys:[]}));
+ await runAgentLoop({...input,text,conversationId:'finance-current-month-'+text.slice(0,10)},{actor:'finance-current-month',asOf:'2026-10-27T09:00:00+01:00',infer,execute},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);
+ expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'query_finance',args:expectedArgs});
+});
+it.each([
+ ['Quels patients sont attendus demain matin ?','2026-10-28T08:00:00+01:00','2026-10-28T12:00:00+01:00'],
+ ['Quels patients sont attendus demain après-midi ?','2026-10-28T12:00:00+01:00','2026-10-28T18:00:00+01:00'],
+] as const)('reads patient attendees for the requested daypart directly: %s',async(text,from,to)=>{
+ const infer=vi.fn(async()=>{throw new Error('The requested appointment daypart should be deterministic');});
+ const execute=vi.fn(async(call:{id:string;name:string;args:Record<string,unknown>})=>({callId:call.id,status:'ok' as const,complete:true,text:'Rendez-vous vérifiés.',evidence:[],conditionKeys:[]}));
+ const result=await runAgentLoop({...input,text,conversationId:'attendees-daypart-'+text.slice(-12)},{actor:'attendees-daypart',asOf:'2026-10-27T09:00:00+01:00',infer,execute},new AbortController().signal);
+ expect(result.status).toBe('completed');expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);
+ expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'query_agenda',args:{from,to}});
 });
 it('answers a created-versus-collected comparison from both verified totals in one paragraph',async()=>{
  const text='Quelle différence entre recettes encaissées et paiements créés en octobre 2026 ?';
@@ -166,6 +200,53 @@ it('routes a comparison of the two latest consultations to the concise clinical 
  const result=await runAgentLoop({...input,text,conversationId:'latest-consultations-change-summary',appContext:{patientId:id,page:'/patients/'+id}},{actor:'latest-consultations-change-summary',infer:async()=>{inferenceCalls++;throw Error('A closed latest-visit comparison should use the clinical summary reader');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'Entre les deux dernières séances, le sommeil s’est stabilisé et la reprise des activités a progressé.',evidence:[{id:call.id,type:'query',label:'Synthèse vérifiée des deux dernières consultations'}],conditionKeys:[]})},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary',count:2,patientId:id}}]);
  expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toMatch(/sommeil.*stabilis.*activit.*progress/iu);
+});
+it('routes a named two-consultation comparison directly without spending a planner inference',async()=>{
+ const text='Compare les deux dernières consultations terminées de said doumer. Explique ce qui a changé dans les difficultés, l’évolution rapportée et le plan de suivi, puis ce qui reste identique.';
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ expect(parsePatientMention(text)).toMatchObject({status:'named',name:'said doumer'});
+ expect(frenchRequestAdmission(text,false,'2026-10-27T12:00:00+01:00')).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:2});
+ const result=await runAgentLoop({...input,text,conversationId:'named-latest-consultations-comparison',appContext:{patientId:null,page:'/jarvis'}},{actor:'named-latest-consultations-comparison',infer:async()=>{inferenceCalls++;throw Error('A named two-visit comparison should route to its scoped clinical read');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'À la consultation précédente : les difficultés concernent les échanges familiaux et la promenade. À la plus récente : les échanges familiaux persistent, tandis que le plan prévoit un repas partagé.',evidence:[{id:call.id,type:'query',label:'Synthèse vérifiée des deux dernières consultations'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary',count:2,patientName:'said doumer'}}]);
+ expect(result.status).toBe('completed');
+ expect(result.sentences.join(' ')).toContain('les difficultés concernent les échanges familiaux');
+});
+it.each(['said doumer','islam adjina','amel bensaid'])('routes a named scale history lookup for %s directly to the complete structured scales reader',async name=>{
+ const text=`Quelles échelles ont été administrées à ${name} et dans quelles consultations ?`;
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ expect(frenchRequestAdmission(text,false,'2026-10-27T12:00:00+01:00')).toMatchObject({tools:['get_patient_context'],patientSection:'scales'});
+ const result=await runAgentLoop({...input,text,conversationId:`named-scale-history-${name.replace(/\s+/gu,'-')}`,appContext:{patientId:null,page:'/jarvis'}},{actor:`named-scale-history-${name}`,infer:async()=>{inferenceCalls++;throw Error('An exact scale-history read should not need model tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'Échelles administrées : PHQ-9 et GAD-7, associées aux consultations des 5 octobre 2023 et 2 novembre 2025.',evidence:[{id:call.id,type:'query',label:'Lecture vérifiée des échelles'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'scales',patientName:name}}]);
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('PHQ-9 et GAD-7');
+});
+it.each([
+ 'Ne compare pas les deux dernières consultations de said doumer.',
+ 'Si je te demande de comparer les deux dernières consultations de said doumer, que répondrais-tu ?',
+ '« Compare les deux dernières consultations de said doumer. »',
+])('does not force a clinical read for quoted, hypothetical, or negated wording: %s',async text=>{
+ const execute=vi.fn();const infer=vi.fn(async()=>({kind:'answer' as const,text:'Je peux comparer ces consultations si vous me le demandez explicitement.',tokensIn:12,tokensOut:12}));
+ await runAgentLoop({...input,text,conversationId:'non-command-comparison-'+text.slice(0,12)},{actor:'non-command-comparison',infer,execute},new AbortController().signal);
+ expect(infer).toHaveBeenCalled();expect(execute).not.toHaveBeenCalled();
+});
+it.each([
+ 'Ne liste pas les échelles de said doumer.',
+ 'Si je te demande de lister les échelles de said doumer, que répondrais-tu ?',
+ '« Quelles échelles ont été administrées à said doumer ? »',
+])('does not force a scale read for quoted, hypothetical, or negated wording: %s',async text=>{
+ const execute=vi.fn();const infer=vi.fn(async()=>({kind:'answer' as const,text:'Je peux lire les échelles si vous me le demandez explicitement.',tokensIn:12,tokensOut:12}));
+ await runAgentLoop({...input,text,conversationId:'non-command-scale-'+text.slice(0,12)},{actor:'non-command-scale',infer,execute},new AbortController().signal);
+ expect(infer).toHaveBeenCalled();expect(execute).not.toHaveBeenCalled();
+});
+it('reads principal problems in a named current consultation through the one-visit clinical summary',async()=>{
+ const text='Quels problèmes principaux sont documentés dans la consultation actuelle de islam adjina ?';
+ let inferenceCalls=0;
+ const execute=vi.fn(async(call:AgentCall)=>({callId:call.id,status:'ok' as const,complete:true,patientId:id,text:'La consultation décrit une baisse de l’élan et un retrait des activités habituelles.',evidence:[{id:'consultation-current',type:'consultation' as const,label:'Consultation vérifiée'}],conditionKeys:[]}));
+ const result=await runAgentLoop({...input,text,conversationId:'current-consultation-concerns',appContext:{patientId:id,page:'/patients/'+id}},{actor:'current-consultation-concerns',infer:async()=>{inferenceCalls++;throw Error('A specific current-visit question should use the bounded clinical summary');},observeCall:call=>undefined,execute},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(execute).toHaveBeenCalledTimes(1);
+ expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'get_patient_context',args:{partIds:['requested_1'],section:'summary',count:1,patientName:'islam adjina'}});
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('baisse de l’élan');
 });
 it.each([
  ['Pour les rendez-vous de demain, indique le total et les cinq premiers patients par leur nom.',['query_agenda'],[{from:'2026-10-29T00:00:00+01:00',to:'2026-10-30T00:00:00+01:00',limit:5}]],
@@ -754,15 +835,25 @@ it('does not expose or execute a patient search term for a count that names no p
  expect(executedQuery).toBeUndefined();
  expect(result.status).toBe('completed');
 });
+it('compte directement les patients actifs quand le médecin demande combien figurent au cabinet',async()=>{
+ const text='Combien de patients actifs figurent dans le cabinet ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'active-patient-cabinet-count'},{actor:'active-patient-cabinet-count',infer:async()=>{inferenceCalls++;throw Error('A verified cabinet count must not need model planning');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'42 patients actifs.',data:{total:42},conditionKeys:[],evidence:[{id:call.id,type:'query',label:'Patients actifs du cabinet'}]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[],population:'active'}}]);
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('42 patients actifs');
+});
+it('compte directement les dossiers archivés sans recours au modèle',async()=>{
+ const text='Quel est le nombre de dossiers archivés ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'archived-record-count'},{actor:'archived-record-count',infer:async()=>{inferenceCalls++;throw Error('An exact archived-record count must not need model planning');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'12 dossiers archivés.',data:{total:12},conditionKeys:[],evidence:[{id:call.id,type:'query',label:'Dossiers archivés'}]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[],population:'archived'}}]);
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('12 dossiers archivés');
+});
 it('limits a patient-name search to the exact grounded French name',async()=>{
- let i=0,querySchema:Record<string,unknown>|undefined;
- const result=await runAgentLoop({...input,text:'Recherche le patient Nadia Test.',conversationId:'named-patient-query'},{actor:'named-patient-query',infer:async(_messages,options)=>{
-  if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'patient',goal:'Recherche le patient Nadia Test',tools:['query_patients'],literalQuery:'Nadia Test',conditions:[],dependsOn:[]}]}}]);
-  const parameters=options.tools?.find(t=>t.function.name==='query_patients')?.function.parameters as {properties?:Record<string,{enum?:string[]}>};
-  querySchema=parameters.properties?.query;
-  return calls([{name:'query_patients',args:{partIds:['patient'],mode:'list',query:'Nadia Test'}}]);
- },execute:async call=>({callId:call.id,status:'ok',complete:true,text:'1 patient',conditionKeys:[],evidence:[]})},new AbortController().signal);
- expect(querySchema?.enum).toEqual(['Nadia Test']);
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text:'Recherche le patient Nadia Test.',conversationId:'named-patient-query'},{actor:'named-patient-query',infer:async()=>{inferenceCalls++;throw Error('A simple exact-name patient search must use the existing typed read directly');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'1 patient',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'list',population:'all',query:'Nadia Test'}}]);
  expect(result.status).toBe('completed');
 });
 it('carries a verified query into a short list continuation before native domain selection',async()=>{
@@ -826,12 +917,16 @@ it('rejects an extra model filter that narrows the registered population',async(
  await runAgentLoop({...input,conversationId:'extra-filter'},{actor:'extra-filter',infer:async()=>steps[i++]!,execute:async call=>{executed++;return {callId:call.id,status:'ok',complete:true,text:'2',evidence:[],conditionKeys:['identity_card:missing:null']};}},new AbortController().signal);
  expect(executed).toBe(0);
 });
-it('retains the original task when the client adopts the patient resolved during clarification',async()=>{
+it('retains the request when an application patient is selected during clarification',async()=>{
  const patient='11111111-1111-4111-8111-111111111111',conversationId='adopt-resolved';let i=0;
  const declaration=calls([{name:'declare_request',args:{parts:[{id:'rdv',goal:'Préparer le rendez-vous',tools:['prepare_action'],conditions:[],dependsOn:[]}]}}]);
  const steps=[declaration,calls([{name:'prepare_action',args:{partIds:['rdv'],action:'create_appointment',patientId:patient}}])];
  const first={...input,text:'Prépare un rendez-vous pour le patient sélectionné.',conversationId};
- await runAgentLoop(first,{actor:'scope-adoption',infer:async()=>steps[i++]!,execute:async call=>({callId:call.id,status:'needs_input',complete:false,patientId:patient,text:'Quelle heure ?',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(frenchRequestAdmission(first.text,false).preparationAction).toBe('create_appointment');
+ const infer=vi.fn(async()=>steps[i++]!);
+ const firstOutcome=await runAgentLoop(first,{actor:'scope-adoption',infer,execute:async call=>({callId:call.id,status:'needs_input',complete:false,patientId:patient,text:'Quelle heure ?',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(firstOutcome.status).toBe('needs_input');
+ expect(savedAgentTask('scope-adoption',conversationId)).toMatchObject({patientId:null,parts:[{status:'needs_input'}]});
  let metadata='';await runAgentLoop({...first,text:'Demain à 10 heures',appContext:{patientId:patient,page:'/jarvis'}},{actor:'scope-adoption',infer:async messages=>{metadata=messages[1]?.content??'';return {kind:'answer',text:'',tokensIn:0,tokensOut:0};},execute:async()=>{throw Error('Unexpected');}},new AbortController().signal);
  expect(metadata).toContain(first.text);
 });
@@ -930,6 +1025,32 @@ it('routes a selected-patient phone read directly through the patient-context ga
   expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'profile',patientId:patient}}]);expect(result.status).toBe('completed');
 });
 
+it('reads a selected patient treatment-state follow-up through the treatment gate',async()=>{
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Quels traitements sont en pause pour le patient sélectionné ?',conversationId:'selected-patient-paused-treatments',appContext:{patientId:id,page:'/patients/'+id}},{actor:'selected-patient-paused-treatments',infer:async()=>{inferenceCalls++;throw Error('Treatment-state lookup is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'Aucun traitement en pause.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'treatments',patientId:id,treatmentState:'paused'}}]);expect(result.status).toBe('completed');
+});
+it('reads administered scales for a name after « à » through the patient gate without MiniCPM selection',async()=>{
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Quelles échelles ont été administrées à islam adjina ?',conversationId:'administered-scales-named-recipient'},{actor:'administered-scales-named-recipient',infer:async()=>{inferenceCalls++;throw Error('A named scale lookup is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'Aucune échelle enregistrée.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'scales',patientName:'islam adjina'}}]);expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('Aucune échelle enregistrée.');
+});
+it('binds a patient named after « a eues » to the deterministic consultation count',async()=>{
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Combien de consultations a eues islam adjina ?',conversationId:'named-patient-consultation-count'},{actor:'named-patient-consultation-count',infer:async()=>{inferenceCalls++;throw Error('Exact consultation count is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'7 consultations enregistrées.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],mode:'count',status:'all',patientName:'islam adjina'}}]);expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('7 consultations');
+});
+it('resolves a simple full-name patient search with one deterministic list query',async()=>{
+ const patient='22222222-2222-4222-8222-222222222222',observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Cherche islam adjina.',conversationId:'deterministic-full-name-search'},{actor:'deterministic-full-name-search',infer:async()=>{inferenceCalls++;throw Error('Exact patient search is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Islam Adjina.',data:{patientQuery:{mode:'list',population:'all',query:'islam adjina'},rows:[{id:patient,first_name:'islam',last_name:'adjina'}]},evidence:[{id:patient,type:'patient',label:'islam adjina'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'list',population:'all',query:'islam adjina'}}]);expect(result.status).toBe('completed');
+ const saved=savedAgentTask('deterministic-full-name-search','deterministic-full-name-search');expect(saved?.results[0]?.data).toMatchObject({patientQuery:{query:'islam adjina'},rows:[{id:patient}]});
+});
+it('resolves a corrected « cherche plutôt » full-name search directly',async()=>{
+ const observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Cherche plutôt samiha ferhat.',conversationId:'corrected-full-name-search'},{actor:'corrected-full-name-search',infer:async()=>{inferenceCalls++;throw Error('An exact corrected patient search is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Samiha Ferhat.',data:{patientQuery:{mode:'list',population:'all',query:'samiha ferhat'},total:1,rows:[{id:'33333333-3333-4333-8333-333333333333',first_name:'samiha',last_name:'ferhat'}]},evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'list',population:'all',query:'samiha ferhat'}}]);expect(result.status).toBe('completed');
+});
 it('answers a selected-patient name and completed-consultation count with grounded reads',async()=>{
  const patient='33333333-3333-4333-8333-333333333333',observed:Record<string,unknown>[]=[];let inferenceCalls=0;
  const result=await runAgentLoop({...input,text:'Pour le patient sélectionné, indique son nom et le nombre de consultations terminées.',conversationId:'selected-name-and-count',appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'selected-name-and-count',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:patient,text:call.name==='get_patient_context'?'Nom vérifié.':'3 consultations terminées.',evidence:[],conditionKeys:[]})},new AbortController().signal);

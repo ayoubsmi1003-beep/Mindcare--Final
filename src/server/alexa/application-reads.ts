@@ -70,7 +70,7 @@ export async function readFinanceView(callId:string,mode:string,from:string,to:s
  const value=z.object({lignes:z.array(z.object({id:z.uuid(),intitule:z.string(),categorie:z.string(),montant:amount,type:z.enum(["recurrente","ponctuelle"]),frequence:text,date_charge:z.iso.date(),date_prochaine_echeance:text})),total_recurrent_mensuel:amount,total_ponctuel_periode:amount}).parse(raw);
  const matching=value.lignes.filter(row=>row.type==="recurrente"||(row.date_charge>=du&&row.date_charge<=au));
  const rows=matching.slice(offset,offset+20),complete=offset+rows.length>=matching.length;
- const r=result(callId,{...value,lignes:rows,total:matching.length,offset,hasMore:!complete},[
+ const r=result(callId,{...value,du,au,lignes:rows,total:matching.length,offset,hasMore:!complete},[
   copy.period(du,au),copy.chargePopulation,`${labels.total_recurrent_mensuel} : ${value.total_recurrent_mensuel} DZD`,`${labels.total_ponctuel_periode} : ${value.total_ponctuel_periode} DZD`,
   ...rows.map(row=>`${row.intitule} — ${row.categorie} — ${row.montant} DZD — ${row.type}${row.frequence?' / '+row.frequence:''} — ${row.date_charge}${row.date_prochaine_echeance?copy.finance.deadline+row.date_prochaine_echeance:''}`),
   ...(!complete?[copy.page(offset+1,offset+rows.length,matching.length)]:[])],gate);

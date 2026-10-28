@@ -8,7 +8,7 @@ const visits=[visit(latest,'20',4),visit(previous,'10',7)];
 const snapshot={status:'active',dose:'50',doseUnit:'mg',frequency:'une prise par jour',timing:['matin'],instructions:null,startDate:'2026-01-01',endDate:null};
 const treatment={...snapshot,id:'55555555-5555-4555-8555-555555555555',medication:'Sertraline',version:2};
 const change={id:'66666666-6666-4666-8666-666666666666',treatmentId:treatment.id,version:1,action:'update',occurredAt:'2026-10-10T09:00:00Z',previous:{...snapshot,dose:'25'},next:snapshot,reason:'Modification consignée.',notes:null};
-function fixture(text:string,options:{oneVisit?:boolean;nextAppointment?:boolean;scales?:{id:string;name:string;administeredAt:string;score:number|null;interpretation:string|null}[]}={}){
+function fixture(text:string,options:{oneVisit?:boolean;nextAppointment?:boolean;scales?:{id:string;name:string;administeredAt:string;score:number|null;interpretation:string|null;consultationId?:string|null}[]}={}){
  const rpc=scriptedAlexaRpc(async(name,args)=>{
   if(name==='get_patient')return {ok:true as const,data:[{id:patient}]};
   if(name==='get_alexa_clinical_context'){const rows=options.oneVisit?visits.slice(0,1):visits;return {ok:true as const,data:[{patientId:patient,consultations:rows,treatments:{current:[treatment],history:[change],historyComplete:true},diagnoses:[],scales:options.scales??[],sourceRevision:'a'.repeat(64),coverage:{requested:args.p_limit,returned:rows.length,hasMore:false,complete:true}}]};}
@@ -50,12 +50,14 @@ it('anchors explicitly requested full notes from the last consultation without a
 });
 it('answers scale questions with the recorded values and interpretation',async()=>{
  const f=fixture('Quelles échelles sont enregistrées dans le dossier courant ?',{scales:[
-  {id:'77777777-7777-4777-8777-777777777777',name:'MADRS',administeredAt:'2026-10-20T09:00:00Z',score:14,interpretation:'Valeur enregistrée.'},
-  {id:'88888888-8888-4888-8888-888888888888',name:'HAM-D',administeredAt:'2026-10-10T09:00:00Z',score:9,interpretation:null},
+  {id:'77777777-7777-4777-8777-777777777777',name:'MADRS',administeredAt:'2026-10-20T09:00:00Z',score:14,interpretation:'Valeur enregistrée.',consultationId:latest},
+  {id:'99999999-9999-4999-8999-999999999999',name:'GAD-7',administeredAt:'2026-10-20T09:05:00Z',score:8,interpretation:'légère',consultationId:latest},
+  {id:'88888888-8888-4888-8888-888888888888',name:'HAM-D',administeredAt:'2026-10-10T09:00:00Z',score:9,interpretation:null,consultationId:previous},
  ]});
  const result=await f.execute({id:'scales',name:'get_patient_context',args:{partIds:['scales'],section:'scales'}},'2026-10-22T12:00:00Z',[],new AbortController().signal);
- expect(result.complete).toBe(true);expect(result.text).toContain('MADRS');expect(result.text).toContain('14');expect(result.text).toContain('HAM-D');expect(result.text).toContain('9');
- expect(result.evidence.filter(e=>e.type==='scale')).toHaveLength(2);
+ expect(result.complete).toBe(true);expect(result.text).toContain('MADRS');expect(result.text).toContain('14');expect(result.text).toContain('GAD-7');expect(result.text).toContain('8');expect(result.text).toContain('HAM-D');expect(result.text).toContain('9');
+ expect(result.text.match(/Consultation du/gu)).toHaveLength(2);
+ expect(result.evidence.filter(e=>e.type==='scale')).toHaveLength(3);
 });
 it('reports a genuinely missing next appointment from the authorized workspace instead of asking for a date',async()=>{
  const f=fixture('Quand est son prochain rendez-vous ?');

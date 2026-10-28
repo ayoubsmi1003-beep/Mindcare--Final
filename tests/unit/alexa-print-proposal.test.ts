@@ -26,14 +26,14 @@ describe("impression d'un document existant",()=>{
   "Pour Nadia Test, pourrais-tu imprimer son ordonnance ?",
   "Alexa, imprime l'ordonnance pour Nadia Test.",
  ])("admet les formulations polies et centrées sur le patient: %s",async text=>{
-  expect(deterministicActionRequest(text)).toBe(false);
+  expect(deterministicActionRequest(text)).toBe(true);
   const result=await prepareActionProposal({...input,text},dbWith([{document_id:documentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued"}]),unusedSql,signal);
   expect(result).toMatchObject({state:"print",patientId,documentId});
  });
 
- it("conserve le raccourci uniquement pour l'impératif direct",()=>{
+ it("reconnaît les demandes d'impression explicites, y compris formulées poliment",()=>{
   expect(deterministicActionRequest("Imprime l'ordonnance de Nadia Test.")).toBe(true);
-  expect(deterministicActionRequest("Peux-tu imprimer l'ordonnance de Nadia Test ?")).toBe(false);
+  expect(deterministicActionRequest("Peux-tu imprimer l'ordonnance de Nadia Test ?")).toBe(true);
  });
 
  it("ne traite pas une impression niée comme une demande d'action",()=>{

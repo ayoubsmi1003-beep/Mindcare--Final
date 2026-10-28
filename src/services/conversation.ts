@@ -89,22 +89,7 @@ import { err, ok, type Result } from "./result";
 import type { AppError } from "./errors";
 import type { PatientActif } from "./patient-actif";
 import type { AlexaSource } from "@/shared/alexa/turn";
-
-// Ces actions sont explicites depuis la surface Alexa authentifiée.
-// Elles gardent le cycle audité ; la commande vocale remplace seulement le clic.
-const ACTIONS_ALEXA_SANS_CLIC_CONFIRMATION = new Set([
-  "create_appointment",
-  "reschedule_appointment",
-  "cancel_appointment",
-  "mark_patient_arrived",
-  "set_consultation_price",
-  "record_payment_collected",
-  "close_consultation",
-  "create_document_draft",
-  "create_editable_document_draft",
-  "update_editable_document_draft",
-  "send_internal_message",
-]);
+import { alexaActionsAuthorizedByExplicitCommand } from "@/shared/alexa/action-authorization";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ÉTAT PUBLIC
@@ -862,7 +847,7 @@ async function proposerEcritureRegistre(
   // M09 reliquat · liaison tour→approbation : l'empreinte seule (jamais le
   // runId brut), purgée avec la carte. `null` = carte sans tour d'origine.
   empreinteRunCarte = runId === null ? null : hacherFnv1a(`m09-live-v1:${runId}`);
-  if(confirmerParCommandeVocale&&ACTIONS_ALEXA_SANS_CLIC_CONFIRMATION.has(nom)){
+  if(confirmerParCommandeVocale&&alexaActionsAuthorizedByExplicitCommand(nom)){
     await accepterCarte();
     return true;
   }
@@ -1052,6 +1037,7 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
         publier();
       },
       onStage: stage => { if (!ownsTurn() || controller.signal.aborted) return; interne.etapeEnCours = stageLabels[stage as keyof typeof stageLabels] ?? null; publier(); },
+      onProgress: (progress,complete) => { if (!ownsTurn() || controller.signal.aborted) return; interne.etapeEnCours=complete?null:`Lecture en cours · étape ${progress.completedBatches}`; publier(); },
     });
     if (!ownsTurn()) return;
     controller.signal.throwIfAborted();

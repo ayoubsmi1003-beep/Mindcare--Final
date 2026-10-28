@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { ConversationState } from "@/server/alexa/conversation-state";
 import { planRequest } from "@/server/alexa/request-plan";
+import { requestedConsultationCount } from "@/shared/alexa/request-plan";
 import { executeRead } from "@/server/alexa/tool-executor";
 
 describe("Alexa scoped conversation", () => {
@@ -23,6 +24,14 @@ describe("Alexa scoped conversation", () => {
     expect(state.finish(a, { intent: "treatments", count: 1 }, 900_004)).toBe(false);
     expect(state.isCurrent(b)).toBe(true);
   });
+  it("restores a validated reference only under the exact selected consultation and document revision", () => {
+    const state = new ConversationState();
+    const reference = { intent: "documents" as const, count: 1, selectedPatientId: "11111111-1111-4111-8111-111111111111", lastRequest: "Quel document est ouvert ?" };
+    expect(state.restore("actor", "conversation", null, "/jarvis", reference, "{\"documentId\":\"doc-a\",\"revision\":\"rev-1\"}", 10)).toBe(true);
+    expect(state.read("actor", "conversation", null, "/jarvis", 11, "{\"documentId\":\"doc-a\",\"revision\":\"rev-1\"}")).toMatchObject(reference);
+    expect(state.read("actor", "conversation", null, "/jarvis", 12, "{\"documentId\":\"doc-a\",\"revision\":\"rev-2\"}")).toBeNull();
+    expect(state.restore("actor", "other", null, "/jarvis", { ...reference, selectedPatientId: "not-a-uuid" }, "same", 13)).toBe(false);
+  });
 });
 
 describe("Alexa local request planning", () => {
@@ -33,6 +42,12 @@ describe("Alexa local request planning", () => {
     ["dernière consultation du 15/09/2026", 1],
   ])("extracts only a consultation quantity in %s", (text, count) => {
     expect(planRequest(text, null).count).toBe(count);
+  });
+  it("does not treat an ordinal earlier-visit request as the latest consultation",()=>{
+    expect(requestedConsultationCount("Résume l’avant-dernière consultation du patient sélectionné.")).toBeNull();
+  });
+  it("binds a principal-problems question about the current visit to one consultation",()=>{
+    expect(requestedConsultationCount("Quels problèmes principaux sont documentés dans la consultation actuelle ?")).toBe(1);
   });
   it.each([
     ["les cinq dernières consultations", "history", 5, "fr"],

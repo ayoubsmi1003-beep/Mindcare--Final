@@ -1,0 +1,4670 @@
+{
+  "version": 1,
+  "status": "FROZEN",
+  "fixtureAsOf": "2026-10-27T12:00:00+01:00",
+  "source": "verified disposable synthetic snapshot",
+  "cases": [
+    {
+      "id": "v8-001",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs figurent dans le cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-001",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_count",
+            "value": 1558
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-002",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quel est le nombre de dossiers archivés ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "archived_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-002",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "archived_count",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-003",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers, actifs et archivés réunis ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "all_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-003",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "all_count",
+            "value": 1558
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-004",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs n'ont pas de téléphone renseigné ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_missing_phone_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-004",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_missing_phone_count",
+            "value": 206
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-005",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs possèdent un téléphone ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_present_phone_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-005",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_present_phone_count",
+            "value": 1352
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-006",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers actifs n'ont pas de numéro de carte d'identité ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_missing_identity_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-006",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_missing_identity_count",
+            "value": 308
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-007",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers actifs possèdent un numéro de carte d'identité ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_present_identity_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-007",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_present_identity_count",
+            "value": 1250
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-008",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers actifs n'ont pas de date de naissance ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "active_missing_birth_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-008",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_missing_birth_count",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-009",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs sont des enfants ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_child_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-009",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_child_count",
+            "value": 82
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-010",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs sont majeurs ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_adult_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-010",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_adult_count",
+            "value": 1476
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-011",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers actifs sont incomplets sur le plan administratif ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_incomplete_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-011",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_incomplete_count",
+            "value": 453
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-012",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Liste les dossiers actifs sans numéro de téléphone."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_missing_phone_list",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-012",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "e60d8fcc1033978e10c2e51a0c9933df782c3745d7615f7ededd824d0207fe22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-013",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Liste les patients actifs sans numéro de carte d'identité."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_missing_identity_list",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-013",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "e38590edf34cb78c339ef7e746aee71266ca5d523275987a95609eb25f51a927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-014",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Liste les dossiers archivés du cabinet."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "archived_list",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-014",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f04889fe771f53b5b5dce9f72f4ca2aefe957b532788be48068ebc6bf3f3672e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-015",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quel numéro de téléphone est enregistré pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_phone",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-015",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "d956b0b70303ddc1a200313f99bdb69a5c9c0a6be531b6ce5009de472a663ff7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-016",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quelle est la date de naissance enregistrée pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_birth",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-016",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "e0b88ef5ead109f30d3cca9c4e91a86f3d662fda78dd285ce3e3d652288af1d4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-017",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quel numéro de dossier est associé à [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_record_number",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-017",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "8adbfdfcf48e665d50c6b83467708030a75948d5f50a0c31ce4e390459a703ce"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-018",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quels champs administratifs manquent au dossier de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_missing_fields",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-018",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "c9e42e4ad0aaa1851fbf03e9348e29dcc45f7cc886f81e4d6dc14cbcfed5e752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-019",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Cherche le dossier de [PATIENT_A] avec son nom complet."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "exact_patient_a",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-019",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "a8a40f87e14c5b4dc09fec793b452f97162cea121ae2543708e5d72560f8b53a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-020",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Lesquels des patients actifs n'ont ni téléphone ni numéro de carte d'identité ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_missing_phone_and_identity",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-020",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "b2733d8ef3013d9e1bc1ef6db879866d520c5ebfc8d509be0375cdab7b15eda1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-021",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien d'adultes actifs n'ont pas de numéro de téléphone ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_adult_missing_phone_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-021",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_adult_missing_phone_count",
+            "value": 190
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-022",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien d'enfants actifs n'ont pas de carte d'identité ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "active_child_missing_identity_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-022",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_child_missing_identity_count",
+            "value": 66
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-023",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quel est le téléphone de [PATIENT_B], puis celui de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "two_patient_phones",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-023",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "cf71f2778cb942028885dc60acc515dc0e87c3a265e9b0ad7ae13ed3c799385a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-024",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quelle adresse figure dans le dossier de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_address",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-024",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "030580514ceedb341dd56a5917ad44abd7cc9fc0fa7f396ffd4a685b227d6788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-025",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "La date de naissance de [PATIENT_B] est-elle renseignée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_b_birth_presence",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-025",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "ae609f6323ff20b31de669f3d4e3b5e25c863f45983e0163a8826968a194571b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-026",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs ont au moins trois consultations terminées ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "active_three_closed_visits",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-026",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_three_closed_visits",
+            "value": 1340
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-027",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs n'ont jamais eu de consultation terminée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "active_no_closed_visit",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-027",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_no_closed_visit",
+            "value": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-028",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Y a-t-il des patients actifs dont l'âge est inconnu ? Combien ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "active_unknown_age_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-028",
+        "assertions": [
+          {
+            "kind": "exact_count",
+            "subject": "active_unknown_age_count",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-029",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Quel est le nom complet associé au dossier actuellement ouvert ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "current_patient_full_name",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-029",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "a413f826244121448e79320b657aada01888e65b03a219a10420beed960fbbbd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-030",
+      "category": "patients",
+      "language": "fr",
+      "turns": [
+        "Donne le nombre de dossiers actifs avec et sans téléphone."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "active_phone_partition",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-030",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f2ffbb2b6b0e2cc54e65eee5306b755397b00ec076987163d8fd7d76693c3984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-031",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Résume la dernière consultation terminée de [PATIENT_A] en quelques phrases."
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "latest_closed_summary",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-031",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "527fe01f7d17ed09452ca1ba1d6bf9ec2d75dadbd93aa7e4d1847b1c15772487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-032",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels problèmes principaux sont documentés dans la consultation actuelle de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_consultation_concerns",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-032",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "527fe01f7d17ed09452ca1ba1d6bf9ec2d75dadbd93aa7e4d1847b1c15772487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-033",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Qu'est-ce qui a changé entre les deux dernières consultations de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "latest_two_comparison",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-033",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "cff3ed0452c3df1ec1dcd80fbde8ffae07740cf3fbca260623b7197bf0c1a52f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-034",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels traitements actifs sont enregistrés pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_active_treatments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-034",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "3186b4183c4eb85de42c9252d7e5a8515d283a06b5aff24443ea9d84a2bf7a9f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-035",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels traitements de [PATIENT_A] sont actuellement en pause ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_paused_treatments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-035",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-036",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels traitements de [PATIENT_A] ont été arrêtés ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_stopped_treatments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-036",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-037",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels diagnostics actifs figurent dans le dossier de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_active_diagnoses",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-037",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-038",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels diagnostics résolus figurent dans le dossier de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_resolved_diagnoses",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-038",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-039",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles échelles ont été administrées à [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_scales",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-039",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-040",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quel est le dernier score enregistré pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_latest_scale_score",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-040",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-041",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelle a été l'évolution des mesures de difficulté de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_difficulty_trend",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-041",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "527fe01f7d17ed09452ca1ba1d6bf9ec2d75dadbd93aa7e4d1847b1c15772487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-042",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels éléments de focus ont été enregistrés pour la dernière séance de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_latest_focus",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-042",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "527fe01f7d17ed09452ca1ba1d6bf9ec2d75dadbd93aa7e4d1847b1c15772487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-043",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations terminées [PATIENT_A] a-t-il eues ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_closed_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-043",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "520b70c788ea555b2343549b80f4b7150646ae5a38fa762473bc6c1f1d060d43"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-044",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations ouvertes possède [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_open_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-044",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "bef1d63c31726668d14d04d5a54805c6f1418aa8c61687ebebe0a507dc93f53b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-045",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles consultations de [PATIENT_A] ont eu lieu en octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_october_visits",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-045",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-046",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quel était le motif rapporté lors de la consultation la plus ancienne de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_oldest_visit",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-046",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "3cfb2e7683d0093c81f4b53c62f313e4b27f57a0f213372c26eeddb1b24e1e35"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-047",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Prépare ma prochaine consultation avec [PATIENT_A] à partir du dossier."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_preparation",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-047",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "a0ba31a3746547695f2ad84f72c902d3b9d684385edfca55d66ad6b1f743b320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-048",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Résume l'ensemble de l'historique de [PATIENT_LONG_1]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "long_1_complete_history",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-048",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "dd3f3820cd5a189d23819530855c54c3e381ffd72002156a4039175e6b6e82af"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-049",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Résume l'ensemble de l'historique de [PATIENT_LONG_2]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "long_2_complete_history",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-049",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "33643537164d15112a879238b1ac41485a09bb32e450472125bcdbc828ace073"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-050",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Résume l'ensemble de l'historique de [PATIENT_LONG_3]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "long_3_complete_history",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-050",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "98b642fcb09cccc674b913ab596d5e30e8977363f12a2a282cebcae254b2c4ad"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-051",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelle évolution clinique est documentée sur les six dernières consultations de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_six_visit_evolution",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-051",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 7,
+            "sha256": "3c5979eb74771f646d3c8c88934e8f374e86fbce64aef17ee7817a322c107ed2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-052",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelle est la dernière modification de traitement documentée pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_latest_treatment_change",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-052",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "69511f438e5cd129e54fb8ef51ce5c3c7f805d0f984ee42b916299d37adba6a5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-053",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels projets de suivi sont notés à la dernière consultation de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_latest_followup_plan",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-053",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "0f31a88eed11b893b9d377d735fba3f350d4384d55494f86a9aecd54d23a78b9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-054",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles informations rapportées par le patient restent à explorer pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_missing_assessments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-054",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "527fe01f7d17ed09452ca1ba1d6bf9ec2d75dadbd93aa7e4d1847b1c15772487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-055",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Qu'a observé la praticienne lors de la dernière consultation de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_latest_observations",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-055",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "397ea745830f86ef04d00ebf2f5dc6b1bc5e56ffc24099ebe15d2df9a7aba130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-056",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels types de consultation sont enregistrés pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_consultation_kinds",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-056",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "49e9aae9d8bb368c80c350caf9591eee6e06a37aee0708bc4f7c210c06fea2a6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-057",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations ont commencé aujourd'hui au cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_today_started_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-057",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "e941bbcf81b3221d3b24baeb71af9b28d9ed5fe5f8de391ce5bc85a2e311298e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-058",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations se sont terminées ce mois-ci au cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_month_ended_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-058",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "7b22705ff2e80192322561f277c347feb1f4b98b7eb7e710befa52ebbc6bf28f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-059",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Compare le nombre de consultations terminées en septembre et en octobre 2026."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_monthly_closed_comparison",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-059",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "1745a1d2c145ccc6eb1e188c0e41f8460dc944ae5b70bc60ff3bbbe8f5da8e20"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-060",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles notes de travail sont enregistrées pour la consultation sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_working_note",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-060",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "c2d6eff029c8724d08d9f3a339f213a3c9ab570d02b3c7300ef9ae0916916f4a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-061",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels éléments sont enregistrés dans la rubrique subjective de la séance sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_subjective",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-061",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "c1725a4f46469c6942dc2b223d023f64fe286d4e3c0ed3ff45bd3a57a8f80e6a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-062",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels éléments sont enregistrés dans la rubrique objective de la séance sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_objective",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-062",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "397ea745830f86ef04d00ebf2f5dc6b1bc5e56ffc24099ebe15d2df9a7aba130"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-063",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels éléments sont enregistrés dans l'évaluation de la séance sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_assessment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-063",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "622b86d374f20ab40f2ce19cdb7ccd3c417b5b21e6e40a2668492a1159d1cefa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-064",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quel plan est enregistré dans la séance sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_plan",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-064",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "0f31a88eed11b893b9d377d735fba3f350d4384d55494f86a9aecd54d23a78b9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-065",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "La dernière séance de [PATIENT_A] comporte-t-elle une note de travail ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_latest_working_note_presence",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-065",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f9114ad1e295d9b1207633be94afa7d9319c7394f2f6f3438f3e7cd70a7ea6e9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-066",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quel changement de dose est documenté entre les dernières séances de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_dose_comparison",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-066",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "cff3ed0452c3df1ec1dcd80fbde8ffae07740cf3fbca260623b7197bf0c1a52f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-067",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles difficultés documentées reviennent au fil des consultations de [PATIENT_A] ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_a_recurring_theme",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-067",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "8ed7ccece2ce7d85d51abece7c7138e1a6a25de4ee5ca2b3aca43a9f0db771a3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-068",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels éléments sont nouveaux lors de la dernière séance de [PATIENT_A] ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_a_new_last_visit_facts",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-068",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4683236cf4e09786ee3176da8b4289e99d4953f59953c9a18dc5810ec32940a3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-069",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelles informations manquent pour comparer les deux dernières séances de [PATIENT_B] ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_b_comparison_missing",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-069",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "6a3b62f4fb61b4a234a0a217822b05550fbedba4e530122e55214aa3162f82a7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-070",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "La consultation actuelle et la dernière consultation terminée de [PATIENT_A] sont-elles la même ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_a_current_vs_closed",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-070",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "61e023b9e43f89d795037d398b695009e3b0ea72fb91a6bc019d488b04766d29"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-071",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quand a eu lieu la dernière consultation terminée de [PATIENT_A] ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_a_last_closed_date",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-071",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "2d40ffaab9c1cc41cf66ae8bbec7856f8e5deb7343fc8e01f0fd25a1329b7229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-072",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "À quelle date a commencé la première consultation de [PATIENT_A] ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_a_first_visit_date",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-072",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4b81e6585d87b6f59d8ce642dfaf3492ef4fe840f04844811858785453e09917"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-073",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quel praticien est associé à la consultation sélectionnée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "current_consultation_practitioner",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-073",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "29ad7f4b122722dee7c849e56cef6577cb51934086092120b60d82f471c899ed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-074",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quelle durée est enregistrée pour la consultation sélectionnée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "current_consultation_duration",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-074",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "1593e91fbab9c06fb960c57a74b7f32064fc2946d89742c29597c63148afb3ab"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-075",
+      "category": "consultations",
+      "language": "fr",
+      "turns": [
+        "Quels résultats de mesures sont effectivement enregistrés dans la séance sélectionnée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "current_session_measures",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-075",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "69d58d072b3863e7dcb20bd2c4684ede342557fdbea54e7fcf2ae0ae37b8d28b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-076",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche [PATIENT_A].",
+        "Quel est son numéro de téléphone ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "named_then_phone",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-076",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "530c9c14137b133287a314e64c2f934a8a683ea72b43ea531f8facd8ec6da2a5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-077",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Résume la dernière consultation de [PATIENT_A].",
+        "Et celle d'avant ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "last_then_previous",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-077",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "3d7de4cdbcba50ca3a86a9d367fea0497707796833b23e5af1decd32e71b029a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-078",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations a eues [PATIENT_A] ?",
+        "Et [PATIENT_B] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "count_two_patients",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-078",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "28cdf6741a1db83420c7d649be6dcbcedaa7f46d33f6693fb94241a89d98d43d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-079",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche [PATIENT_A].",
+        "Cherche plutôt [PATIENT_B].",
+        "Résume sa dernière séance."
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "replace_patient_context",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-079",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "400679f650b78b1f44c5730bb0766a04301e09212ee0c76ea8f897432d2359c3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-080",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Liste les patients actifs sans téléphone.",
+        "Montre le deuxième."
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "list_then_second",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-080",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "d476aa390275e7440edc826e8f16fd7ac476ebf82acfb9145c508019000a1a95"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-081",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Liste les rendez-vous de demain.",
+        "Combien sont confirmés ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "agenda_then_status_filter",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-081",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "28be4406f7d9c18991446a2a9cd18af5e2a36dc63b060e9182d7ad3b99db0784"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-082",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Montre les traitements actifs de [PATIENT_A].",
+        "Quels sont ceux en pause ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "treatments_status_followup",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-082",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "377bb39edf8fdf583237ed7f17bd8acef626fde2a285dd0b44dea4dc2caab405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-083",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le montant encaissé ce mois-ci ?",
+        "Et le mois précédent ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "finance_previous_month",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-083",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "3f30de4d2c3f7771e4ff4193a0ba10770aeea1b8ed4314149263a5521367f263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-084",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Résume les deux dernières consultations de [PATIENT_A].",
+        "Qu'est-ce qui s'est amélioré ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "clinical_comparison_followup",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-084",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "c0c73d8eda0250a4b15aff3a212b9b12180c214ee33d43ce2c5cb148702cb2f1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-085",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche [PATIENT_A].",
+        "Quel est son téléphone et combien de séances terminées a-t-il ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "profile_and_visits",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-085",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "e76573997ae4b118e0e968c8de039212de06abaf7d98ef7f726ccae2f0256811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-086",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Combien de dossiers actifs sans téléphone ?",
+        "Combien sont mineurs parmi eux ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "compound_filter_followup",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-086",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "0787ee44a4b086cd1ffffb1657cb8f45b380809d15470d81e5eada0322befe7b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-087",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le résultat net de ce mois ?",
+        "Quelles charges expliquent ce résultat ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "finance_net_to_charges",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-087",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "c19be0de72635289b9977777dbc652793c8a7779493c79429ecd6b4fee271178"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-088",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quels sont les rendez-vous de demain ?",
+        "Et ceux d'après-demain ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "agenda_tomorrow_to_next_day",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-088",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "d90cdbc52d490881529351de32bc8e4889d333e028368f1e13728aaf7c900c62"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-089",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel traitement prend [PATIENT_A] ?",
+        "Quelle est sa fréquence enregistrée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "treatment_frequency_followup",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-089",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "137a2a5e524b660095233f7544809d32eb00a36e8d1e7ce5582866706ac873cb"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-090",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche [PATIENT_A].",
+        "Non, je voulais [PATIENT_B].",
+        "Donne sa date de naissance."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "corrected_patient_then_birth",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-090",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "624582dcc527856d1349020cfc48a12482ea99c2f2e915ea8ef441596786315f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-091",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le nombre de patients actifs ?",
+        "Quelle heure est-il et combien de rendez-vous demain ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "count_time_agenda",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-091",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "bb8ac79694df36fed1155e9dd8f1b52d75e0e794cb8cea483a7995abdc61d502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-092",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le téléphone de [PATIENT_A] et celui de [PATIENT_B] ?",
+        "Quel est le premier ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "two_patients_ordinal",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-092",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "a7ca012b6491533808e1d5a1f8f5bf89dba4582429341be37e13ee4b81338b54"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-093",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Résume la consultation actuelle de [PATIENT_A].",
+        "Compare-la à la dernière terminée."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_to_closed_comparison",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-093",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "3ead8d6e2561373d94c51eef8d0e41296587b2204ba0d8f12d8ea6b78087fa25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-094",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Liste les charges récurrentes.",
+        "Quel est leur montant mensuel total ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "recurring_charges_total",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-094",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "6e89345b01f224a5b3f0c4eedf8b0e2e6c196b18776f3d6ca213410a851d8967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-095",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Montre les documents de [PATIENT_A].",
+        "Y a-t-il une ordonnance ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "documents_to_prescription",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-095",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "29f4096a2a2b36b58c41ee270aca4773584df0f33e14ff815846a3f7bc41f753"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-096",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est l'agenda de demain ?",
+        "Finalement, montre celui d'aujourd'hui."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "agenda_period_correction",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-096",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "454b63f39078f05d0ba3b47a5b6f223c49eb9e86d683b8d320b6e6cfb59343b6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-097",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Combien de patients actifs n'ont pas de carte d'identité ?",
+        "Et parmi les archivés ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "population_switch",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-097",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "b79d7ccd9da21b90b92cda48e28b92999c8ee81ca7774e87b48d75cde189c971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-098",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Prépare la prochaine consultation de [PATIENT_A].",
+        "Quelles questions restent à poser ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "preparation_missing_questions",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-098",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "b9a79c9701e8d80b4d6c61d39f94887c3c2eef13e05e6e5edc3f3859481a0ad2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-099",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations terminées ce mois ?",
+        "Combien n'ont pas de tarif ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "closed_to_unpriced",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-099",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "096dff659c1eed8f626634a4c1a43aaf6334a52a9be6b4e7b1e9d4d9071f66f5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-100",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quels diagnostics actifs a [PATIENT_A] ?",
+        "Et les diagnostics résolus ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "diagnosis_status_switch",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-100",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "1401ad9dc0da0ed1c7fddf1d26ca2205c3ae227c9559bc1a4771864352dd8503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-101",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Montre les résultats d'échelles de [PATIENT_A].",
+        "Quel était le précédent ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "scale_previous_result",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-101",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "30e76de81308afc0cc9fb3ed46a0dc7d558801bc7ddd5f4a8a7261508a8b0b1a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-102",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quels paiements sont en attente pour [PATIENT_A] ?",
+        "Quel est leur total ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_pending_payment_total",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-102",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "8c4aefee22b75f647debb315ced865caaa3bac51235b79c7aad5c8c9096ba8f7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-103",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Donne les coordonnées de [PATIENT_A].",
+        "Sans son adresse, seulement son téléphone."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "explicit_output_correction",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-103",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "70197ffcb183a99813b66ecb13c634e39e343426a69ba2d238bfcbd7626c10a0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-104",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche les consultations de [PATIENT_A] en septembre 2026.",
+        "Combien en octobre ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_month_switch",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-104",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "d0175687455183a9e2cca2e64bf679f2cd1f1225bd509082271fa37a9ad6dfa0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-105",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le nombre de patients actifs ?",
+        "Pourquoi les ombres changent-elles de longueur au cours de la journée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "app_to_general",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-105",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "44dff5f7c143476425a1cbfac016219022059f25d71b35b73b72d2044575ee55"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-106",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "À quoi sert une sauvegarde informatique ?",
+        "Combien de patients actifs au cabinet ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "general_to_app",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-106",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "a87a1347d0c937c38aaa03147a6601cc3cd0938a2727fe75351506412d295fc1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-107",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Résume [PATIENT_A], compare ses deux dernières séances et donne son prochain rendez-vous."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "clinical_and_agenda_compound",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-107",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "71a369bf3cf27f1e1c8e4e0890b001cb94f743359f54cd307d5c9dc21187918f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-108",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Quel est le téléphone de [PATIENT_A], combien de consultations terminées et quel solde reste à encaisser ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "profile_visits_finance_compound",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-108",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "802470e0ec3106884dba5bd11f58608bf1096db5b63f4bfa3cc0651dfde9f541"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-109",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Affiche les dossiers sans téléphone.",
+        "Continue la liste."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_list_continuation",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-109",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "c21ba8eacc675701961460647778b13e39c28348115d9132bddcbb049679427e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-110",
+      "category": "followups",
+      "language": "fr",
+      "turns": [
+        "Cherche [PATIENT_AMBIGUOUS].",
+        "[PATIENT_A_FULL_NAME]"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "ambiguous_patient_resolution",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-110",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 2,
+            "sha256": "a267719765e57780fe09410d8ed6abbeb38e73a962c16aaaf730017353065051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-111",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Combien de rendez-vous sont prévus aujourd'hui ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "today_appointment_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-111",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "fe00f25fef803a08fef311b36f38e8dce6fac682a814f4be843c6f57cfb559f2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-112",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Combien de rendez-vous sont prévus demain ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "tomorrow_appointment_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-112",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "5d3efa3f1cfcb8da7f085587b8da2cf5f309d7f60b01bae82a8eef1fcc3e574f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-113",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quels patients sont attendus demain matin ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "tomorrow_morning_appointments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-113",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "7189f358c201a0f00aa7ffccbcf5ec1b565a2e518fc21603ec332978ceddf61f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-114",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quels patients sont attendus demain après-midi ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "tomorrow_afternoon_appointments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-114",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "83c8e411b8677699e7f6d3bfd8b6d9d83e71c5a82f185ca1e781c0aaa5d6bcfd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-115",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quel est le prochain rendez-vous de [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_next_appointment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-115",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-116",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "À quelle heure commence le prochain rendez-vous du cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_next_appointment_time",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-116",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "74908c9ece5315222b53d6de5684e37547d8c54927cfb961c3800e642dc79a04"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-117",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quels rendez-vous sont annulés aujourd'hui ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "today_cancelled_appointments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-117",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-118",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Combien de patients sont déjà arrivés aujourd'hui ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "today_arrived_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-118",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "5c8913fb0fd3993826e9d3eac855ce8e091c5fb0444e12b314f4e1209dbe8b92"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-119",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quels rendez-vous sont confirmés pour demain ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "tomorrow_confirmed_appointments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-119",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "859041f61eb12bee7902b816ac5cbdc2799b91990adc81cc6d20719a2ddca005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-120",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Y a-t-il un rendez-vous pour [PATIENT_B] cette semaine ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_b_this_week_appointments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-120",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-121",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quel est le premier rendez-vous du 30 octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "first_appointment_october_30",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-121",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-122",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Combien de rendez-vous ont eu lieu en septembre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "september_appointments_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-122",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "bea95543d2695d6515828897ab4766e137b9928c8572a7870f423907b8b18fd1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-123",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quelle heure est-il actuellement au cabinet ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "local_time_algiers",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-123",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4829cd6fd427c0ad7e09c574f0240e80cac074d6cd5520aca431291a16676575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-124",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Quelle est la date d'aujourd'hui à Alger ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "local_date_algiers",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-124",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f6939b397914268141a0d8fe6104ef74dc93274c6f641e5bcde5af46d3888df7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-125",
+      "category": "agenda",
+      "language": "fr",
+      "turns": [
+        "Combien de rendez-vous sont prévus entre le 2 et le 6 novembre 2026 inclus ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "explicit_appointment_range",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-125",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "3844854591701e26ca200732ed3503f6f0e42a45da79bac068de6c42d1700c0a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-126",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel est le chiffre d'affaires de ce mois-ci ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_month_revenue",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-126",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-127",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel montant a été effectivement encaissé ce mois-ci ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_month_collected",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-127",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-128",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel reste à encaisser pour l'ensemble du cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "cabinet_all_time_pending",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-128",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-129",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel résultat net le cabinet a-t-il réalisé ce mois-ci ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_month_net",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-129",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-130",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel est le total des charges de ce mois-ci ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_month_charges",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-130",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-131",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Comment se répartissent les charges par catégorie ce mois-ci ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_month_charge_categories",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-131",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-132",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel est le montant mensuel des charges récurrentes ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "recurring_monthly_total",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-132",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "683652a3d280687c37989c47193705dd8bb8341c04c8b7484d3927067d29d475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-133",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quelles charges ponctuelles ont été enregistrées en octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "october_one_time_charges",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-133",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-134",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quels paiements de [PATIENT_A] sont en attente ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_pending_payments",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-134",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-135",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel montant [PATIENT_A] a-t-il réglé en octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "patient_a_october_collected",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-135",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-136",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel tarif est enregistré pour la consultation sélectionnée ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_consultation_price",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-136",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-137",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Le paiement de la consultation sélectionnée est-il encaissé ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_consultation_payment_status",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-137",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-138",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Combien de consultations terminées n'ont pas de tarif ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "all_unpriced_closed_consultations",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-138",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "49707a847d82d4e0223df0a8389f3ccb920881f182463cda55b445e74addc7d4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-139",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Compare les encaissements de septembre et octobre 2026."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "collected_september_october",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-139",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "38c39e648f0277125ecfc422c7d45393371bdb245daa6bd3d362f01b4b457b44"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-140",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel est le total des paiements créés en octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "october_created_payment_total",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-140",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-141",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Combien de paiements ont été encaissés en octobre 2026 ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "october_collected_payment_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-141",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "9a534e229548a3b26d0ac738593cbd0fdfe1b53ae5bdd8fef69e907a3bbe0632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-142",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Y a-t-il des charges en retard ce mois-ci ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "current_month_charge_attention",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-142",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-143",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Montre le calendrier financier du mois de septembre 2026."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "september_finance_calendar",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-143",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "37e7bd40913b5965d0b5835bbae492a49e661ef66dd9f432d08ca448a5970056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-144",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quel est le solde restant pour [PATIENT_B] toutes dates confondues ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "patient_b_all_time_pending",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-144",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "19463b9cd7afa65ea31f32de545c6c5b4bc460e00c03757fee68136bc238c3c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-145",
+      "category": "finance",
+      "language": "fr",
+      "turns": [
+        "Quelle catégorie de charges représente le montant le plus élevé en octobre 2026 ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "october_largest_charge_category",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-145",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "3cbf1bb30db0a6b91502bc4ee90e094de564d38a37164bb5e7d83a7b3ee987d8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-146",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quelles ordonnances existent pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_prescriptions",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-146",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-147",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quels certificats médicaux existent pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_medical_certificates",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-147",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-148",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quels documents de suivi médical existent pour [PATIENT_B] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_b_followup_documents",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-148",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-149",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Combien de brouillons de documents sont enregistrés pour [PATIENT_A] ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "patient_a_document_draft_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-149",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "5a02d5b562ddecce1770288a3e8decf62bb298d03f36f1984949fc4a8576c16f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-150",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quel est le numéro du document actuellement ouvert ?"
+      ],
+      "partition": "development",
+      "baseline": true,
+      "oracleKey": "current_document_number",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-150",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "692abc5a23cf6dec090e817118b0f724a9e64d6ae6754a0028ee8168fc2604d4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-151",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Que contient le document actuellement sélectionné ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_document_content",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-151",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "c4c33a7e0b0c14d34fea8f3759e73306bbe1639d53d9f67e5a309a56de368f42"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-152",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Recherche toutes les variantes disponibles de Zoloft dans le catalogue."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "catalog_zoloft_variants",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-152",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "d4c51976aef3ed330ffb346865de4513b7684fddd6d4d9012ef51a2997e804c7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-153",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quelles présentations de sertraline existent dans le catalogue ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "catalog_sertraline_forms",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-153",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "41925d2b33b7ab45b40c0968ccfa1395f933f0121b25ba107a7818fa69801736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-154",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quels patients sont en salle d'attente aujourd'hui ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "reception_today_waiting",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-154",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4ee59e08f0d8c6a4b173c9dd13ca8b81837f96433a52ec2e0ea2e30c21827478"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-155",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Combien de demandes de rendez-vous sont en attente à l'accueil aujourd'hui ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "reception_today_requests",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-155",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "ca31578d52a49d61091c667de1e04db2aa2b821456a9b12721cacd9411a11f33"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-156",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quel est le numéro de téléphone du cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_phone",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-156",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "30f8a0350ccfa6281080ba44b29035a1c8f9baec536d90f825605296561490a2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-157",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quelle adresse professionnelle est enregistrée pour le cabinet ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cabinet_address",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-157",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "cfa5e3a3edd486d3d510192640cc446c6cc05724abe4ff1bcc4cdb32874d24e1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-158",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Quel est le nom professionnel de la praticienne connectée ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "practitioner_name",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-158",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "94dd3025ed917918902ca74ccc37bd59abbf06018b76ae4ff835e1e1fed9e707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-159",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Combien de notifications visibles ai-je ?"
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "visible_notifications_count",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-159",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "12e90b4d41a831c403618961289380f7df7890b116a5d0aa9c54f4b2e8d03069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-160",
+      "category": "application",
+      "language": "fr",
+      "turns": [
+        "Ouvre le dossier de [PATIENT_A]."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "navigate_patient_a",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-160",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "a8a40f87e14c5b4dc09fec793b452f97162cea121ae2543708e5d72560f8b53a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-161",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Crée un rendez-vous pour [PATIENT_A] le 4 novembre 2026 à 10 h pour 30 minutes."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "create_appointment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-161",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "b13575e453ee0c3a737b8535c6b5efcfda6cee63f0c59f32763bc87b49a0ae7e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-162",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Déplace le rendez-vous sélectionné de [PATIENT_A] au 5 novembre 2026 à 11 h."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "reschedule_appointment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-162",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "9f11347be2637386b01ebd71fcaf8f0b4247f19291376a13babdbcdfef829af8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-163",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Annule le rendez-vous sélectionné de [PATIENT_A], motif absence annoncée."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "cancel_appointment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-163",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "27ee4b3001dbc4c3a7667c04ced4b8b2ce4b990c3d38812d78c3c3bfcaa5496a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-164",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Marque le patient du rendez-vous sélectionné comme arrivé."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "mark_arrived",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-164",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "1d3292aa1f32cb1949a78e95249f711639bb16270857bb731e3d45519d2fbc22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-165",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Crée un rendez-vous pour [PATIENT_B] le 6 novembre 2026.",
+        "À 14 h pour 30 minutes."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "appointment_missing_time_followup",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-165",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "eee18455858763dccd4e5ebd0ee0c007e6b78e89848162903797b8ca21d40ef8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-166",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Crée un rendez-vous pour [PATIENT_A] sur le créneau occupé sélectionné."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "appointment_overlap",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-166",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "5865fcd90076b4bd21374bce9f254e1c0ba0ab503ca55c20ff35421f4bb0ea15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-167",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Crée un rendez-vous pour [PATIENT_A] le 7 novembre 2026 à 10 h pour 30 minutes.",
+        "Répète exactement la dernière commande."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "appointment_duplicate",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-167",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "7c3a0f4e4734028785742fca75fe569a02ceb365b31101d9b8eec6bb6230e685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-168",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Que se passerait-il si j'annulais le rendez-vous sélectionné ?"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "hypothetical_appointment_no_write",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-168",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "ff9386e0dca820299b7bc90bc8d072ed472244f5ffea5aee36323872b3293de2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-169",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Crée un rendez-vous pour [PATIENT_AMBIGUOUS] le 8 novembre 2026 à 10 h pour 30 minutes.",
+        "[PATIENT_A_FULL_NAME]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "appointment_patient_clarification",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-169",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "4b36c81b780eb21739817b41ce65868136a1aa47f8981276f54b0abe5696a045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-170",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Déplace le rendez-vous sélectionné.",
+        "Le 9 novembre 2026 à 10 h pour 30 minutes."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "reschedule_missing_inputs",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-170",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "fbd8692dee8b924f732d2f26c75f610b9aa2e7fdabb22d53d5e04766920d74e4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-171",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ordonnance.",
+        "Imprime-la."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_prescription_print",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-171",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "014fdb0c0ff0f4f9440310474a0b94b87be4b15e84a0021937d1e0ea44dfe7c6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-172",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Certificat médical.",
+        "Imprime-le."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "current_medical_certificate_print",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-172",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "218b672910458239d5c5e39bb69a5a61c470c236536e09501dbbaac3eb1fd4b7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-173",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ouvre le certificat de suivi médical de [PATIENT_A]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "open_followup_certificate",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-173",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "90c6766f44e23a41bb71bef9fd3d29aec9948b2170d811c46ba6aa25a43b0819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-174",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ouvre le certificat de bonne santé mentale de [PATIENT_A]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "open_mental_health_certificate",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-174",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "310ed0d14b4d5ada42551001cb3e2126114cf2a8ac97a926643a551ac4beb945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-175",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ouvre le justificatif de [PATIENT_A]."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "open_justification",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-175",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "727bdd66c65c716b3d348820d299d66edbd71b6538e09672479c7e5d1b179c90"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-176",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Prépare une ordonnance pour [PATIENT_A] avec les éléments explicitement fournis."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "prepare_prescription",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-176",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "023c50f3d947297a4406b8b41eb08b709269f2091ab361f05951e6fa5cbe397c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-177",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Enregistre le brouillon de document actuellement ouvert."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "save_document_draft",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-177",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "0378d2d464551fd4a1fa81f3b905702db21ebc903fcf15b38a849d62bd49678d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-178",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Imprime le document déjà émis actuellement sélectionné."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "reprint_selected_document",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-178",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "fbd183a32014fd40d030d6599cbb1ee17c997ca204441df539e8b302d073146c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-179",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Imprime l'ordonnance sélectionnée de [PATIENT_A].",
+        "Imprime-la encore."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "print_same_snapshot_twice",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-179",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "0a6052a37c4d63d47b530c1ab8eef43c9c3ffcd6b07f345aa5847085893f4d51"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-180",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Imprime le certificat sélectionné dont la révision a changé."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "print_stale_document",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-180",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f38427371c15ac9472bb3a6c226308b49306c9f52e3c4639552f154229a1d763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-181",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Augmente la dose de Zoloft de [PATIENT_A] à 75 mg par jour.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_increase_exact_identity",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-181",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "bfb9ed1aa15968f8a496b769cf32f05dafaddc348ea3db78a540222f35de49f8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-182",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Pour [PATIENT_A], passe [MEDICATION_A] à deux prises par jour.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_twice_daily",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-182",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "a9ef9b13a1196d635eef26d42e3389d3b68f630dea18c9d94df1327afdd276bc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-183",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Pour [PATIENT_A], passe [MEDICATION_A] à une prise par jour.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_once_daily",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-183",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "8610ea9eee8c74e61257449835d0059bc43001a43b6ac9c8dabc786565d7e7fa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-184",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Pour [PATIENT_A], passe [MEDICATION_A] à trois prises par jour.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_three_times_daily",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-184",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "0ec121b0b5cc595c8eb252e63fee9ed32cefe7f399d43a294075ad7c1ba40115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-185",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Mets [MEDICATION_A] de [PATIENT_A] en pause.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_pause",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-185",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "1f0e3162c8d15590991724d2b7bf4b56225be02f76f6409e1bc749d4f8eace0e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-186",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Mets [MEDICATION_A] de [PATIENT_A] en pause.",
+        "[EXACT_MEDICATION]",
+        "Reprends-le.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_resume",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-186",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 5,
+            "sha256": "87a051e1f2b5d28d324874dd618970bf77a90e6f7ed2c4173aee80243923f708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-187",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Arrête [MEDICATION_A] de [PATIENT_A].",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_stop",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-187",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "843914c26933cfa725090c29d696dc7d72025d0080f69629558e2587be0b74f9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-188",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Augmente le Zoloft de [PATIENT_A].",
+        "[EXACT_MEDICATION]",
+        "À 100 mg par jour."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_missing_dose",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-188",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 4,
+            "sha256": "463ec3395d58bbbfa2f336be1892a02191d51c8411ff4c57eb0f45ecb8c24abc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-189",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Modifie la consigne de [MEDICATION_A] pour [PATIENT_A] : à prendre après le repas.",
+        "[EXACT_MEDICATION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_instructions",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-189",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "981ef62a15eab0e4c10dd2d9ec530c62520211b56c1ec66e6286a25f16fdd99f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-190",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Modifie la dose de [MEDICATION_A] de [PATIENT_A] à 50 mg.",
+        "[STALE_MEDICATION_SELECTION]"
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "medication_stale_selection",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-190",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "6107cad319d5977699e8beaf74130f06120b9246c7c6d64c8815874998b4f24a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-191",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Fixe le tarif de la consultation sélectionnée à 4 000 dinars."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "finance_set_price",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-191",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "4b587014e928f6c5ed98e087dc9f2ef3a93faa7aa94ce756b037f141bdfabb54"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-192",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Fixe le tarif de la consultation sélectionnée à 4 000 dinars.",
+        "Enregistre l'encaissement du paiement sélectionné."
+      ],
+      "partition": "development",
+      "baseline": false,
+      "oracleKey": "finance_collect_payment",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-192",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "31c21582a4cbfc0de3a8fab51a4abe89aa407050a8bf6741fa402eae85941015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-193",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ajoute une charge ponctuelle de 5 000 dinars pour internet le 10 octobre 2026, catégorie télécommunications."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_create_one_time_charge",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-193",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "74643095211c2a47c2329d6a1d4406f7996f47a1ca160b63bb37ca0d57f37cd5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-194",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ajoute un loyer récurrent mensuel de 30 000 dinars à partir du 1 novembre 2026."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_create_recurring_charge",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-194",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "fe7645a290f29182cfa230865217be9dbed6ab5c0d139cdf79b8b544261a734d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-195",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Modifie la charge sélectionnée pour la porter à 6 000 dinars."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_update_charge",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-195",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "f8e6248e6a4beccd701827788979ad3a41b27a4e0e954a108ff025ffc1ce894b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-196",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Désactive la charge sélectionnée."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_deactivate_charge",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-196",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "65457ff993a949f3b82c9c266e7c612cd18331aee49707e8724175ccd350a6ed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-197",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Ajoute une charge de 5 000 dinars.",
+        "Internet, ponctuelle, le 10 octobre 2026, catégorie télécommunications."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_missing_charge_inputs",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-197",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "d0fe6aed88d5f461b7669b3ce1404998c8c2b93aee3e1f36e5ce5a39a5f541dd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-198",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Fixe le tarif de la consultation sélectionnée à 4 000 dinars.",
+        "Enregistre l'encaissement du paiement sélectionné.",
+        "Répète la même opération."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "finance_duplicate_collection",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-198",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 4,
+            "sha256": "70d66f547ec879bd0155d4c81072d7d5c1cf5eb950cf05319c85ae27c65f6b9e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-199",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Envoie à l'accueil : le prochain rendez-vous doit être préparé."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "send_internal_message",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-199",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 1,
+            "sha256": "6707e42b5631fb4364611662d765f4e6399b96c66ac6a4f6b059959172a35383"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v8-200",
+      "category": "actions",
+      "language": "fr",
+      "turns": [
+        "Envoie un message à l'accueil.",
+        "Le document demandé est prêt."
+      ],
+      "partition": "holdout",
+      "baseline": false,
+      "oracleKey": "internal_message_missing_body",
+      "oracleStatus": "FROZEN",
+      "oracle": {
+        "sourceSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+        "privateRef": "v8-200",
+        "assertions": [
+          {
+            "kind": "private_oracle_reference",
+            "assertionCount": 3,
+            "sha256": "4085dd3dbb07a14c9025a2e07613eda7fd3daa906810bb1f4620c6b15f8c1756"
+          }
+        ]
+      }
+    }
+  ],
+  "oracleSnapshotSha256": "54d5140d73012c1ca53520743b54b3cbcaa1f2ef8045111a645e97ed7ea536c6",
+  "oracleMethod": "repeatable-read synthetic database snapshot with independent row projections and explicit action effects"
+}

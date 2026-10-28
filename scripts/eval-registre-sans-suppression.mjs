@@ -1,13 +1,11 @@
 /**
- * eval-registre-sans-suppression — JARVIS NE PEUT RIEN SUPPRIMER. JAMAIS.
+ * eval-registre-sans-suppression — JARVIS ne fait aucune suppression destructive.
  *
  * ═══ POURQUOI CE CONTRÔLE EXISTE ═══
  *
- * L'absence de capacité de suppression n'est pas une propriété qu'on constate
- * une fois : c'est une propriété qu'on GARDE. Elle tient aujourd'hui parce que
- * personne n'a ajouté l'outil ; elle tombera le jour où quelqu'un ajoutera
- * `archive_patient` en pensant bien faire, ou câblera `delete_charge` — qui
- * existe déjà dans le domaine finance — parce qu'un écran en avait besoin.
+ * L'assistant peut désactiver une charge via l'opération existante, dont la
+ * définition met actif à false et conserve l'historique. Toute suppression
+ * destructive reste interdite.
  *
  * ⚠️ CACHER UN BOUTON NE SUFFIT PAS. La capacité ne doit pas EXISTER dans la
  * surface exécutable de l'assistant. Un outil présent au registre mais masqué à
@@ -65,6 +63,7 @@ console.log("\nD1 — les capacités de LECTURE");
   const noms = nomsDeLecture();
   const fautifs = noms.filter((n) => INTERDITS.test(n));
   verdict("le registre n'est pas vide", noms.length > 0, `${noms.length} capacité(s)`);
+  verdict("la désactivation des charges est disponible", noms.includes("deactivate_charge"), "deactivate_charge");
   verdict("aucune capacité de suppression", fautifs.length === 0, fautifs.join(", ") || "aucune");
 }
 
@@ -93,14 +92,16 @@ console.log("\nD3 — l'allowlist historique");
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// D4 · LE DOMAINE SAIT SUPPRIMER — ET L'ASSISTANT N'Y ACCÈDE PAS
+// D4 · LES CHARGES SONT DÉSACTIVÉES — LEUR HISTORIQUE EST CONSERVÉ
 // ═══════════════════════════════════════════════════════════════════════════
-console.log("\nD4 — `deleteCharge` existe, mais hors de portée de l'assistant");
+console.log("\nD4 — `delete_charge` désactive la charge et conserve son historique");
 {
-  // La suppression existe RÉELLEMENT dans le dépôt (`finance-cash.ts`,
-  // `app.delete_charge`). C'est justement pourquoi ce contrôle est nécessaire :
-  // il ne garde pas contre une capacité absente, il garde contre une capacité
-  // PRÉSENTE qu'il ne faut pas câbler.
+  const migration = readFileSync(join(process.cwd(), "supabase/migrations/038_charges.sql"), "utf8");
+  const fonction = migration.match(/CREATE OR REPLACE FUNCTION app\.delete_charge\([\s\S]*?AS \$\$([\s\S]*?)\$\$;/i)?.[1] ?? "";
+  const desactivationConservee = /UPDATE app\.charges SET actif = false[\s\S]*?RETURN p_id/i.test(fonction)
+    && !/\bDELETE\s+FROM\s+app\.charges\b/i.test(fonction);
+  verdict("delete_charge est une désactivation non destructive", desactivationConservee, desactivationConservee ? "actif = false, historique conservé" : "fonction SQL non conforme");
+
   const sources = ["jarvis-capacites.ts", "jarvis-ecritures.ts", "jarvis-tools.ts", "jarvis-boucle.ts"];
   const fautifs = [];
   for (const f of sources) {
@@ -110,17 +111,13 @@ console.log("\nD4 — `deleteCharge` existe, mais hors de portée de l'assistant
     } catch {
       continue;
     }
-    // ⚠️ ON CHERCHE UN APPEL, PAS UNE MENTION. Les DEUX formes de commentaire
-    // doivent tomber : la documentation de ce dépôt NOMME volontiers ce qu'elle
-    // interdit — c'est même sa qualité — et un contrôle qui confondrait une
-    // mise en garde écrite avec le geste qu'elle proscrit crierait au loup
-    // exactement là où quelqu'un a pris la peine d'expliquer le danger.
+    // Cherche des écritures destructives, pas l'appel métier `deactivate_charge`.
     const code = texte.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/[^\n]*/g, "");
-    if (/\bdeleteCharge\s*\(|\bdelete_charge\b/.test(code)) {
+    if (/\bdeleteCharge\s*\(|\bDELETE\s+FROM\s+(?:app\.)?(?:charges|patients|consultations|documents)\b/i.test(code)) {
       fautifs.push(f);
     }
   }
-  verdict("aucun module Jarvis n'appelle une suppression", fautifs.length === 0, fautifs.join(", ") || "aucun");
+  verdict("aucun module Jarvis n'effectue de suppression destructive", fautifs.length === 0, fautifs.join(", ") || "aucun");
 }
 
 console.log(

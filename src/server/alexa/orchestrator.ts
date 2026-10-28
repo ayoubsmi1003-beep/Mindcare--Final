@@ -2,6 +2,7 @@ import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
 import type { AlexaEvent, AlexaNavigation, TurnInput } from "@/shared/alexa/turn";
+import { agentContinuationText, type AgentContinuationKind } from "./agent-continuation";
 import {validAlexaSources} from '@/shared/alexa/turn';
 import {validAnswerLinks} from '@/shared/alexa/answer-links';
 import type { ClinicalContext } from "@/shared/alexa/clinical";
@@ -13,7 +14,7 @@ import { conversationState, resolveListedReference, type TurnLease } from "./con
 import { splitAlexaQuestions } from "@/shared/alexa/questions";
 import { questionCopy } from "@/i18n/alexa-questions";
 import { agendaSelection } from "@/shared/alexa/agenda-plan";
-import { planRequest, requestsPatientScope } from "./request-plan";
+import { planRequest, requestsCabinetWideScope, requestsPatientScope, type WorkingReference } from "./request-plan";
 import { parsePatientMention } from "./patient-mention";
 import { executeRead } from "./tool-executor";
 import { contextSources, localDisplay, localResponse } from "./local-response";
@@ -34,6 +35,8 @@ import { deterministicActionRequest, prepareActionProposal } from "./action-prop
 import {readPatientFinance,patientFinanceSentence} from "./patient-finance";
 import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
+import { explicitFrenchCurrentMonthRange, frenchRequestAdmission } from "@/shared/alexa/request-contract";
+import { z } from "zod";
 
 export interface OrchestratorDependencies {
   db: Pick<DbPort, "rpc">;
@@ -44,9 +47,93 @@ export interface OrchestratorDependencies {
   agentObserve?: AgentLoopDependencies["observeCall"];
   agentObserveResult?: AgentLoopDependencies["observeResult"];
   agentAsOf?:string;
+  contextKey?:string;
+  resumeCursor?:{cursorId:string;kind:AgentContinuationKind;patientId:string|null};
   build?: typeof buildClinicalContext;
   infer?: typeof inferAlexa;
   general?: typeof inferGeneralAlexa;
+}
+
+function continuesPatientReference(text:string,previous:WorkingReference|null):boolean {
+  if(!previous?.selectedPatientId||parsePatientMention(text).status!=='none'||requestsCabinetWideScope(text))return false;
+  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").trim();
+  return requestsPatientScope(text)
+    || /^(?:et\s+)?(?:celle|celui|ceux|celles|avant|le\s+precedent|la\s+precedente|le\s+deuxieme|la\s+deuxieme|le\s+second|la\s+seconde|idem|pareil|pareille|la\s+meme\s+chose|imprime[- ]le|ouvre[- ]le|montre[- ]le\s+deuxieme)\b/u.test(plain)
+    || previous.intent==='agenda'&&/^combien\s+(?:sont|sont-ils|restent)\b/u.test(plain)
+    || ['treatments','treatment_changes'].includes(previous.intent)&&/\b(?:frequence|dose|horaire|moment|consigne|pause|reprends?|arrete)\b/u.test(plain);
+}
+function agendaStatusFollowup(text:string,previous:WorkingReference|null):string|null {
+ if(previous?.intent!=='agenda'||!previous.agendaDay||requestsCabinetWideScope(text)||parsePatientMention(text).status!=='none')return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").trim();
+ if(!/^(?:et\s+)?combien\s+(?:(?:sont|restent)\s+)?(?:sont-ils\s+)?(?:confirmes?|en attente|annules?|arrives?|termines?)\s*[?!.]*$/u.test(plain))return null;
+ return `${text.trim().replace(/[?!.]+$/u,'')} pour les rendez-vous du ${previous.agendaDay}.`;
+}
+function treatmentPauseFollowup(text:string,previous:WorkingReference|null):string|null {
+ if(!previous?.selectedPatientId||!['treatments','treatment_changes'].includes(previous.intent))return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").trim();
+ if(!/^(?:(?:et|alors)\s+)?(?:quels?\s+sont\s+(?:ceux|celles)(?:\s+qui)?|lesquels|lesquelles)\s+(?:sont\s+)?en pause\s*[?!.]*$/u.test(plain))return null;
+ return 'Quels traitements sont en pause pour le patient sélectionné ?';
+}
+function previousMonthFollowup(text:string,previous:WorkingReference|null,asOf:string):string|null {
+ if(!previous?.lastRequest)return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").trim();
+ if(!/^(?:et\s+)?(?:le\s+)?mois\s+(?:precedent|dernier)\s*[?!.]*$/u.test(plain))return null;
+ const admission=frenchRequestAdmission(previous.lastRequest,false,asOf);
+ if(admission.tools?.length!==1||admission.tools[0]!=='query_finance'||!explicitFrenchCurrentMonthRange(previous.lastRequest,asOf))return null;
+ const start=explicitFrenchCurrentMonthRange(previous.lastRequest,asOf)!.from,parts=/^(\d{4})-(\d{2})-01/u.exec(start);
+ if(!parts)return null;
+ const priorMonth=new Date(Date.UTC(Number(parts[1]),Number(parts[2])-2,15,12));
+ const month=new Intl.DateTimeFormat('fr-FR',{month:'long',timeZone:'UTC'}).format(priorMonth),year=priorMonth.getUTCFullYear();
+ return previous.lastRequest.replace(/\b(?:ce mois(?:-ci)?|mois courant|mois en cours)\b/iu,`en ${month} ${year}`);
+}
+function replacedPatientCountFollowup(text:string,previous:WorkingReference|null,asOf:string):string|null {
+ if(!previous?.lastRequest)return null;
+ const admission=frenchRequestAdmission(previous.lastRequest,false,asOf);
+ if(admission.tools?.length!==1||admission.tools[0]!=='query_consultations'||admission.consultationMode!=='count')return null;
+ const priorMention=parsePatientMention(previous.lastRequest);if(priorMention.status!=='named')return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').trim();
+ if(!/^et\s+/u.test(plain)||/[;!?].*\S/u.test(plain.replace(/[?.!]+$/u,'')))return null;
+ const name=text.trim().replace(/^(?:et)\s+/iu,'').replace(/[?!.]+$/u,'').trim();
+ const words=name.split(/\s+/u);
+ if(words.length<2||words.length>3||!words.every(word=>/^[\p{L}][\p{L}\p{M}'’-]*$/u.test(word)))return null;
+ if(parsePatientMention(text).status==='ambiguous')return null;
+ return previous.lastRequest.replace(priorMention.name,name);
+}
+function previousConsultationFollowup(text:string,previous:WorkingReference|null,asOf:string):string|null {
+ if(!previous?.selectedPatientId||!previous.lastRequest)return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").trim();
+ if(!/^(?:et\s+)?(?:celle\s+d'avant|la\s+consultation\s+precedente|la\s+precedente)\s*[?!.]*$/u.test(plain))return null;
+ const prior=previous.lastRequest.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr');
+ if(!/\b(?:resum\w*|synthes\w*)\b/u.test(prior)||! /\b(?:derniere|plus recente)\s+(?:consultation|seance)\b/u.test(prior))return null;
+ const admission=frenchRequestAdmission(previous.lastRequest,false,asOf);
+ if(admission.tools?.length!==1||admission.tools[0]!=='get_patient_context'||admission.patientSection!=='summary')return null;
+ return 'Résume l’avant-dernière consultation du patient sélectionné.';
+}
+const patientListResultSchema=z.object({
+ patientQuery:z.object({mode:z.literal('list')}).passthrough(),
+ rows:z.array(z.object({id:z.uuid(),first_name:z.string().min(1).max(100),last_name:z.string().min(1).max(100)}).passthrough()).max(20),
+}).passthrough();
+function listedPatients(results:readonly {status:string;data?:unknown}[]):{patientId:string;label:string}[]|null {
+ for(const result of [...results].reverse()){
+  if(result.status!=='ok')continue;
+  const parsed=patientListResultSchema.safeParse(result.data);if(!parsed.success)continue;
+  return parsed.data.rows.map(row=>({patientId:row.id,label:`${row.first_name} ${row.last_name}`}));
+ }
+ return null;
+}
+function uniqueExactPatientSearchResult(results:readonly {status:string;data?:unknown}[],text:string):string|null {
+ const mention=parsePatientMention(text);
+ if(mention.status!=='named'||!/^\s*(?:alexa[, :]+)?(?:cherche|recherche|trouve|retrouve)\s+(?:plut[oô]t\s+)?(?:(?:le|la)\s+)?(?:(?:patient|patiente)\s+)?[\p{L}][\p{L}\p{M}'’-]*(?:\s+[\p{L}][\p{L}\p{M}'’-]*){1,2}\s*[.!?]*\s*$/iu.test(text))return null;
+ const normalize=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/[’‘]/gu,"'").replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+ const schema=z.object({patientQuery:z.object({mode:z.literal('list'),query:z.string().min(2).max(160)}).passthrough(),total:z.number().int().min(0),rows:z.array(z.object({id:z.uuid(),first_name:z.string().min(1).max(100),last_name:z.string().min(1).max(100)}).passthrough()).max(20)}).passthrough();
+ for(const result of [...results].reverse()){
+  if(result.status!=='ok')continue;
+  const parsed=schema.safeParse(result.data);if(!parsed.success)continue;
+  if(parsed.data.total!==1||parsed.data.rows.length!==1||normalize(parsed.data.patientQuery.query)!==normalize(mention.name))return null;
+  const row=parsed.data.rows[0]!;
+  return normalize(`${row.first_name} ${row.last_name}`)===normalize(mention.name)?row.id:null;
+ }
+ return null;
 }
 
 /** Native tool selection remains subject to server validation, identity and scope gates. */
@@ -54,12 +141,20 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
   if (dependencies.native) {
     // Courtesies use the same closed dialogue grammar as the established UI.
     // A greeting never needs patient lookup or a model inference slot.
-    if (planRequest(input.text, null).intent === 'dialogue') return runAlexaSingle(input, dependencies, emit, signal);
+    if (!dependencies.resumeCursor&&planRequest(input.text, null).intent === 'dialogue') return runAlexaSingle(input, dependencies, emit, signal);
     // Explicit document and internal-message requests remain reachable without
     // the local model. The model path still handles paraphrases and compounds.
-    if (deterministicActionRequest(input.text)) return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: { intent: "proposal", count: 1, language: "fr" } });
-    const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page);
-    const result=await runAgentLoop(input,{actor:dependencies.actor,...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{}),...(dependencies.agentInfer?{infer:dependencies.agentInfer}:{}),...(dependencies.agentObserve?{observeCall:dependencies.agentObserve}:{}),...(dependencies.agentObserveResult?{observeResult:dependencies.agentObserveResult}:{}),execute:agentExecutor(input,dependencies.db,dependencies.knowledge),onStage:()=>emit({type:"stage",stage:"analysis"})},signal);
+    if (!dependencies.resumeCursor&&deterministicActionRequest(input.text,input.appContext.documentId)) return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: { intent: "proposal", count: 1, language: "fr" } });
+    const contextKey=dependencies.contextKey??JSON.stringify(input.appContext),asOf=dependencies.agentAsOf??new Date().toISOString();
+    const previous=conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
+    const agentInput=dependencies.resumeCursor?{...input,text:agentContinuationText(dependencies.resumeCursor.kind)}:input;
+    const listedReferenceText=agentInput.text.replace(/^\s*(?:montre|affiche|ouvre|présente|presente|sélectionne|selectionne)\s+/iu,'');
+    const selectedListedPatient=previous?.patients?resolveListedReference(listedReferenceText,previous.patients):null;
+    const inheritedAgendaText=dependencies.resumeCursor?null:agendaStatusFollowup(agentInput.text,previous),inheritedTreatmentText=inheritedAgendaText||dependencies.resumeCursor?null:treatmentPauseFollowup(agentInput.text,previous),inheritedFinanceText=inheritedAgendaText||inheritedTreatmentText||dependencies.resumeCursor?null:previousMonthFollowup(agentInput.text,previous,asOf),inheritedPatientCountText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||dependencies.resumeCursor?null:replacedPatientCountFollowup(agentInput.text,previous,asOf),inheritedPreviousConsultationText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||dependencies.resumeCursor?null:previousConsultationFollowup(agentInput.text,previous,asOf),inheritedText=inheritedAgendaText??inheritedTreatmentText??inheritedFinanceText??inheritedPatientCountText??inheritedPreviousConsultationText,turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:agentInput;
+    const reusePatient=continuesPatientReference(turnInput.text,previous);
+    const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
+    const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
+    const result=await runAgentLoop(scopedInput,{actor:dependencies.actor,...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{}),...(dependencies.agentInfer?{infer:dependencies.agentInfer}:{}),...(dependencies.agentObserve?{observeCall:dependencies.agentObserve}:{}),...(dependencies.agentObserveResult?{observeResult:dependencies.agentObserveResult}:{}),...(dependencies.resumeCursor?{resumeCursor:dependencies.resumeCursor}:{}),execute:agentExecutor(scopedInput,dependencies.db,dependencies.knowledge),onStage:()=>emit({type:"stage",stage:"analysis"})},signal);
     if(!conversationState.isCurrent(lease)) {emit({type:"error",code:"stale",message:dialogue("fr").stale});return;}
     const responses=result.results.filter(r=>r.text);
     if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
@@ -70,6 +165,15 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
       emit({type:"sentence",text,kind:response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact",sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
     if(result.proposal)emit({type:"proposal",...result.proposal});
+    const nextPlan=dependencies.resumeCursor&&previous?previous:inheritedAgendaText&&previous?.agendaDay?{intent:'agenda' as const,count:previous.count,agendaDay:previous.agendaDay,...(previous.agendaRequestedOnly!==undefined?{agendaRequestedOnly:previous.agendaRequestedOnly}:{})}:planRequest(turnInput.text,previous,asOf);
+    const explicitMention=parsePatientMention(input.text);
+    const exactSearchPatientId=uniqueExactPatientSearchResult(result.results,input.text);
+    const selectedPatientId=result.patientId??exactSearchPatientId??(explicitMention.status==='none'&&!requestsCabinetWideScope(input.text)?(reusePatient?previous?.selectedPatientId:input.appContext.patientId):undefined);
+    const reference:WorkingReference={...(previous??{}),...nextPlan,lastRequest:dependencies.resumeCursor?previous?.lastRequest??input.text:turnInput.text};
+    const newPatients=listedPatients(result.results);
+    if(newPatients)reference.patients=newPatients;else if(selectedListedPatient&&previous?.patients)reference.patients=previous.patients;else if(!inheritedText)delete reference.patients;
+    if(selectedPatientId)reference.selectedPatientId=selectedPatientId;else delete reference.selectedPatientId;
+    conversationState.finish(lease,reference);
     emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed: result.status === "completed",...(result.navigation?{navigation:result.navigation}:{})});
     return;
   }

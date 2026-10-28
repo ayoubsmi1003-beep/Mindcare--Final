@@ -4,7 +4,8 @@ export const turnInput = z.object({
   text: z.string().trim().min(1).max(4000),
   conversationId: z.string().min(1).max(100),
   clientTurnId: z.uuid(),
-  appContext: z.object({ patientId: z.uuid().nullable(), page: z.string().max(200) }).strict(),
+  continuationToken: z.string().regex(/^[A-Za-z0-9_-]{40,64}$/u).optional(),
+  appContext: z.object({ patientId: z.uuid().nullable(), page: z.string().max(200), consultationId:z.uuid().nullable().optional(), documentId:z.uuid().nullable().optional(), draftId:z.uuid().nullable().optional(), documentRevision:z.string().max(128).nullable().optional() }).strict(),
   patientName: z.string().trim().min(2).max(80).optional(),
 }).strict();
 export type TurnInput = z.infer<typeof turnInput>;
@@ -39,5 +40,5 @@ export type AlexaEvent =
   | ({ type: "proposal" } & AlexaProposal)
   | { type: "stage"; stage: "identity" | "context" | "knowledge" | "analysis" | "validation" }
   | { type: "sentence"; text: string; kind: "fact" | "inference" | "knowledge"; sources: AlexaSource[]; links?: import('./answer-links').AlexaAnswerLink[] }
-  | { type: "done"; patientId: string | null; patientScope?: "preserve" | "replace"; sourceRevision: string | null; coverage: { requested: number; returned: number; complete: boolean; hasMore: boolean } | null; limited: boolean; status?: import("./agent").AgentTerminal; parts?: import("./agent").RequestPart[]; tokensIn?: number; tokensOut?: number; speechAllowed?: boolean; persiste?: boolean; navigation?: AlexaNavigation }
+  | { type: "done"; patientId: string | null; patientScope?: "preserve" | "replace"; sourceRevision: string | null; coverage: { requested: number; returned: number; complete: boolean; hasMore: boolean } | null; limited: boolean; status?: import("./agent").AgentTerminal; parts?: import("./agent").RequestPart[]; tokensIn?: number; tokensOut?: number; speechAllowed?: boolean; persiste?: boolean; navigation?: AlexaNavigation; continuation?: { token: string; progress: { kind: "application" | "analysis" | "document" | "notes" | "calendar" | "timeline"; completedBatches: number; position: number } }; progress?: { completedBatches: number; complete: boolean } }
   | { type: "error"; code: "unavailable" | "cancelled" | "stale" | "invalid"; message: string; partial?: boolean };

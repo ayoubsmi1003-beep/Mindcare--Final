@@ -9,6 +9,16 @@ it('answers a net-result question in one concise French paragraph',()=>{
  expect(answer).toHaveLength(1);expect(answer[0]).toContain('résultat net');expect(answer[0]).toContain('3 500 DZD');expect(answer[0]).not.toContain('raw structured');expect(answer[0]).not.toContain('\n');
 });
 
+it('answers a current-month revenue request with only its verified period total',()=>{
+ const answer=presentAgentResults([financeResult({du:'2026-10-01',au:'2026-10-31',pulse:{revenu_periode:0,charges_periode:106500,resultat_net_periode:-106500}})],"Quel est le chiffre d'affaires de ce mois-ci ?");
+ expect(answer).toHaveLength(1);expect(answer[0]).toMatch(/octobre 2026/iu);expect(answer[0]).toMatch(/recettes encaissées.*0\s*DZD/iu);expect(answer[0]).not.toMatch(/charges|résultat net|paiements encaissés de la période/iu);
+});
+
+it('answers a one-month charge total concisely while keeping recurring and one-off components distinct',()=>{
+ const answer=presentAgentResults([financeResult({du:'2026-10-01',au:'2026-10-31',total_recurrent_mensuel:106500,total_ponctuel_periode:0,lignes:[]})],'Quel est le total des charges de ce mois-ci ?');
+ expect(answer).toHaveLength(1);expect(answer[0]).toMatch(/octobre 2026/iu);expect(answer[0]).toMatch(/total des charges.*106\s*500\s*DZD/iu);expect(answer[0]).toMatch(/récurrentes/iu);expect(answer[0]).not.toContain('raw structured');
+});
+
 it('summarizes the verified charge categories without dropping their amounts',()=>{
  const answer=presentAgentResults([financeResult({du:'2026-10-01',au:'2026-10-31',composition:{charges_par_categorie:[{cle:'loyer',montant:30000,part_pct:75},{cle:'internet',montant:10000,part_pct:25}]}})],'Comment les charges sont-elles réparties par catégorie en octobre 2026 ?');
  expect(answer).toHaveLength(1);expect(answer[0]).toContain('loyer');expect(answer[0]).toContain('30 000 DZD');expect(answer[0]).toContain('internet');expect(answer[0]).toContain('10 000 DZD');expect(answer[0]).not.toContain('raw structured');

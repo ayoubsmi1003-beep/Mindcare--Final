@@ -20,13 +20,25 @@ const scaleHistorySchema = z.object({
   id: z.string(), scale_code: z.string(), scale_name: z.string(), consultation_id: z.string().nullable(),
   total: z.number().nullable(), interpretation: z.string().nullable(), administered_at: z.string(),
   responses: z.record(z.string(), z.unknown()),
+  definition: z.object({
+    code: z.string(), name_fr: z.string(),
+    items: z.array(z.object({
+      id: z.string(), texte: z.string(),
+      options: z.array(z.object({ valeur: z.number().int().min(0).max(9), libelle: z.string().min(1) }).strict()).optional(),
+      risque: z.boolean().optional(), alerte: z.string().optional(),
+    }).strict()),
+    scoring: z.object({ max: z.number() }).loose(),
+  }).strict(),
 }).strict();
 const scaleDefinitionSchema = z.object({
   code: z.string(), name_fr: z.string(),
-  items: z.array(z.object({ id: z.string(), texte: z.string(), risque: z.boolean().optional(), alerte: z.string().optional() }).strict()),
+  items: z.array(z.object({
+    id: z.string(), texte: z.string(),
+    options: z.array(z.object({ valeur: z.number().int().min(0).max(9), libelle: z.string().min(1) }).strict()).optional(),
+    risque: z.boolean().optional(), alerte: z.string().optional(),
+  }).strict()),
   scoring: z.object({ max: z.number() }).loose(),
 }).strict();
-
 export interface SessionEvaluation {
   readonly scaleCode: string;
   readonly scaleName: string;
@@ -35,6 +47,7 @@ export interface SessionEvaluation {
   readonly interpretation: string | null;
   readonly administeredAt: string;
   readonly risk: { readonly itemId: string; readonly itemText: string; readonly value: number; readonly message: string } | null;
+  readonly risks: readonly { readonly itemId: string; readonly itemText: string; readonly value: number; readonly message: string }[];
 }
 
 /** Deterministic scale paragraph. Scale responses never reach the model. */
@@ -49,7 +62,12 @@ export function buildSessionScaleFindings(
     .sort((a, b) => a.administered_at.localeCompare(b.administered_at) || a.id.localeCompare(b.id));
   const evaluations: SessionEvaluation[] = rows.map((row) => {
     const definition = byCode.get(row.scale_code);
-    const riskItem = definition?.items.find((item) => item.risque === true && typeof row.responses[item.id] === "number" && Number(row.responses[item.id]) > 0);
+    const risks = definition?.items.filter((item) => item.risque === true && typeof row.responses[item.id] === "number" && Number(row.responses[item.id]) > 0).map((item) => ({
+      itemId: item.id,
+      itemText: item.texte,
+      value: Number(row.responses[item.id]),
+      message: item.alerte ?? `Réponse positive à « ${item.texte} » — à explorer cliniquement.`,
+    })) ?? [];
     return {
       scaleCode: row.scale_code,
       scaleName: row.scale_name,
@@ -57,12 +75,8 @@ export function buildSessionScaleFindings(
       max: definition?.scoring.max ?? null,
       interpretation: row.interpretation,
       administeredAt: row.administered_at,
-      risk: riskItem === undefined ? null : {
-        itemId: riskItem.id,
-        itemText: riskItem.texte,
-        value: Number(row.responses[riskItem.id]),
-        message: riskItem.alerte ?? `Réponse positive à « ${riskItem.texte} » — à explorer cliniquement.`,
-      },
+      risk: risks[0] ?? null,
+      risks,
     };
   });
   const scored = evaluations.filter((evaluation) => evaluation.score !== null).map((evaluation) => {
@@ -74,9 +88,12 @@ export function buildSessionScaleFindings(
   if (scored.length > 0) {
     sentences.push(`${scored.length === 1 ? "L'évaluation réalisée pendant la séance montre" : "Les évaluations réalisées pendant la séance montrent"} ${scored.join(" ; ")}.`);
   }
-  const risk = evaluations.find((evaluation) => evaluation.risk !== null)?.risk ?? null;
-  if (risk !== null) {
-    sentences.push(`Un item de risque positif a été relevé (${risk.itemText.toLocaleLowerCase("fr")}) ; il appelle une exploration clinique.`);
+  const risks = evaluations.flatMap((evaluation) => evaluation.risks);
+  if (risks.length === 1) {
+    sentences.push(`Un item de risque positif a été relevé (${risks[0]!.itemText.toLocaleLowerCase("fr")}) ; il appelle une exploration clinique.`);
+  } else if (risks.length > 1) {
+    const items = risks.map((risk) => `« ${risk.itemText} »`).join(" ; ");
+    sentences.push(`Des réponses positives ont été relevées à plusieurs items de risque (${items}) ; elles appellent une exploration clinique.`);
   }
   return { evaluations, paragraph: sentences.length === 0 ? null : sentences.join(" ") };
 }
@@ -85,14 +102,13 @@ async function readSessionScales(
   db: Pick<DbPort, "rpc">,
   patientId: string,
   consultationId: string,
-): Promise<{ evaluations: readonly SessionEvaluation[]; paragraph: string | null }> {
-  const history = await db.rpc("get_scale_history", { p_patient_id: patientId, p_scale_code: null });
-  if (!history.ok) return { evaluations: [], paragraph: null };
+): Promise<{ evaluations: readonly SessionEvaluation[]; paragraph: string | null; sourceDigest: string }> {
+  const history = await db.rpc("get_alexa_consultation_scales", { p_patient_id: patientId, p_consultation_id: consultationId });
+  if (!history.ok) throw new SessionSummaryError("unavailable");
   const parsedHistory = z.array(scaleHistorySchema).safeParse(history.data);
-  if (!parsedHistory.success) return { evaluations: [], paragraph: null };
-  const definitions = await db.rpc("list_scales", {});
-  const parsedDefinitions = definitions.ok ? z.array(scaleDefinitionSchema).safeParse(definitions.data) : null;
-  return buildSessionScaleFindings(consultationId, parsedHistory.data, parsedDefinitions?.success === true ? parsedDefinitions.data : []);
+  if (!parsedHistory.success) throw new SessionSummaryError("unavailable");
+  const definitions = [...new Map(parsedHistory.data.map(row => [row.definition.code, row.definition])).values()];
+  return { ...buildSessionScaleFindings(consultationId, parsedHistory.data, definitions), sourceDigest: createHash("sha256").update(JSON.stringify(parsedHistory.data)).digest("hex") };
 }
 function diagnostic(stage:string,details:Record<string,unknown>={}):void {
   if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[session-summary]',JSON.stringify({stage,...details}));
@@ -146,6 +162,7 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   const patientId=identity.ok?identity.data[0]?.patient_id:undefined;
   if(!patientId)throw new SessionSummaryError('unavailable');
   const scaleData = await readSessionScales(db, patientId, consultationId);
+  const scaleDigest = scaleData.sourceDigest;
   if (!input.sources.length && scaleData.evaluations.length === 0) throw new SessionSummaryError("empty");
   diagnostic('read-comparison');
   const context=await buildClinicalContext(db,{patientId},{count:1,before:{startedAt:consultation.startedAt,id:consultation.id}},signal);
@@ -170,7 +187,7 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
       :`Changement documenté de ${medication} : état précédent ${changedTreatmentState(before,changed.length?changed:treatmentFields)} ; nouvel état ${changedTreatmentState(after,changed.length?changed:treatmentFields)}.`;
     return {id:h.id,originalText:transition,text:`${transition}${h.reason?` Motif consigné : ${h.reason}`:''}${h.notes?` Notes : ${h.notes}`:''}`};
   });
-  const contextDigest=createHash('sha256').update(JSON.stringify({previous:previous?consultationNotesSnapshot(previous):null,medications,changes,prompt:NARRATIVE_HASH})).digest('hex');
+  const contextDigest=createHash('sha256').update(JSON.stringify({previous:previous?consultationNotesSnapshot(previous):null,medications,changes,scaleDigest,prompt:NARRATIVE_HASH})).digest('hex');
   // Put historical context before the current visit, with explicit temporal scope.
   input.sources=[...comparison.map(s=>({...s,scope:'previous' as const})),...input.sources.map(s=>({...s,scope:'current' as const})),...trends.map(s=>({...s,scope:'change' as const})),...medications.map(s=>({...s,scope:'current' as const})),...changes.map(s=>({...s,scope:'change' as const}))];
   input.complete&&=context.treatments.historyComplete;
@@ -182,6 +199,9 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   const digest = consultationNotesDigest(consultation);
   diagnostic('verify-notes');
   if (consultationNotesDigest(await readSession(db, consultationId, signal)) !== digest) throw new SessionSummaryError("changed");
+  diagnostic('verify-scales');
+  const currentScales=await readSessionScales(db,patientId,consultationId);
+  if(currentScales.sourceDigest!==scaleDigest)throw new SessionSummaryError('changed');
   diagnostic('verify-context');
   if((await buildClinicalContext(db,{patientId},{count:1},signal)).sourceRevision!==context.sourceRevision)throw new SessionSummaryError('changed');
   const soap = consultation.notes[0];
@@ -192,7 +212,7 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   diagnostic('persist');
   const saved = await db.rpc<{ id: string; version: number; content: unknown }>("save_session_analysis", {
     p_consultation_id: consultationId, p_content: JSON.stringify(content),
-    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete, scale_results: scaleData.evaluations.length }),
+    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,scale_digest:scaleDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete, scale_results: scaleData.evaluations.length }),
     p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: NARRATIVE_HASH,
   });
   const row = saved.ok ? saved.data[0] : undefined;

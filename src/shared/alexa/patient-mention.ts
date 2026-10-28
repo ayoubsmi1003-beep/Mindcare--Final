@@ -97,13 +97,30 @@ export function parsePatientMention(text: string): PatientMention {
     if (candidate && isMedicationName(candidate) && /^(?:traitements?|m[eé]dicaments?)\s/iu.test(match[0])) continue;
     add(candidate, start);
   }
+  // Clinical recipients are sometimes named after "à" (for example,
+  // "quelles échelles ont été administrées à Islam Adjina"). Keep this
+  // identity form tied to an explicit clinical action and a full name so
+  // ordinary destinations such as "à l'accueil" do not become patients.
+  for (const match of text.matchAll(/\b(?:administr[eé]e?s?|pass[eé]e?s?|mesur[eé]e?s?|enregistr[eé]e?s?|consign[eé]e?s?)\s+à\s+/giu)) {
+    const start = match.index + match[0].length;
+    const candidate = candidateName(text.slice(start, start + 100));
+    if (candidate?.includes(" ")) add(candidate, start);
+  }
   // In a French count question the patient can be the subject after the verb:
   // « Combien de consultations terminées compte Nadia Test ? ».
-  const namedCountSubject = text.matchAll(/\b(?:combien|nombre|total)\b[^.!?]{0,80}\b(?:consultations?|s[eé]ances?)\b[^.!?]{0,80}\bcompte\s+/giu);
+  const namedCountSubject = text.matchAll(/\b(?:combien|nombre|total)\b[^.!?]{0,80}\b(?:consultations?|s[eé]ances?)\b[^.!?]{0,80}(?:\bcompte\s+|\b(?:a|ont)\s+(?:eu|eue|eus|eues|fait|suivi)\s+)/giu);
   for (const match of namedCountSubject) {
     const start = match.index + match[0].length;
     const candidate = candidateName(text.slice(start, start + 100));
     if (candidate) add(candidate, start);
+  }
+  // A short imperative lookup can name the patient without repeating the
+  // noun "patient": "Cherche Islam Adjina". Require a multiword name so
+  // ordinary searches such as "cherche un médicament" remain topics.
+  for (const match of text.matchAll(/^\s*(?:(?:alexa|assistant)[, :]+)?(?:cherche|recherche|trouve|retrouve)\s+(?:plut[oô]t\s+)?(?:(?:le|la)\s+)?(?:(?:patient|patiente)\s+)?/giu)) {
+    const start = match.index + match[0].length;
+    const candidate = candidateName(text.slice(start, start + 100));
+    if (candidate?.includes(" ")) add(candidate, start);
   }
   // Appointment requests sometimes put the patient's name after "à". Keep
   // this narrow: require a multiword identity and an explicit date plus time

@@ -8,6 +8,7 @@ import {documentsEditor as t,documentLabels,documentReasons,documentFilters} fro
 import type {Draft,DraftPreview,PageManifest,IssuedSnapshot,DocumentKind,Variables,DocumentNode} from "@/shared/documents/types";
 
 import {createDraft,saveDraft,listDrafts,previewDraft,issueDraft,duplicateDraft,archiveDraft,getSnapshot,reviseIssuedDocument} from "@/services/document-drafts";
+import {setAlexaDocumentContext} from "@/services/alexa-turn";
 
 import {getDocument,listDocuments,listPatientDocuments,markDocumentPrinted,voidDocument,type Document} from "@/services/documents";
 
@@ -65,10 +66,10 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const [preview,setPreview]=useState<DraftPreview|null>(null),[manifest,setManifest]=useState<PageManifest|null>(null),[opened,setOpened]=useState<Document|null>(null),[snapshot,setSnapshot]=useState<IssuedSnapshot|null>(null);
 
- const [error,setError]=useState<string|null>(null),[busy,setBusy]=useState(false),[confirm,setConfirm]=useState(false),[voidReason,setVoidReason]=useState(""),[showVoid,setShowVoid]=useState(false),[issuedZoom,setIssuedZoom]=useState<IssuedZoom>(100);
+ const [error,setError]=useState<string|null>(null),[busy,setBusy]=useState(false),[voidReason,setVoidReason]=useState(""),[showVoid,setShowVoid]=useState(false),[issuedZoom,setIssuedZoom]=useState<IssuedZoom>(100);
 
  const [libraryTab,setLibraryTab]=useState<"drafts"|"issued">("drafts"),[view,setView]=useState<"edit"|"preview">("preview");
- const editing=useDocumentDraft(draftId),initialOpened=useRef<string|null>(null),initialPrintDone=useRef(false),root=useRef<HTMLDivElement>(null),issuedManualZoom=useRef(false);
+ const editing=useDocumentDraft(draftId),initialOpened=useRef<string|null>(null),initialPrintDone=useRef(false),draftPrintInFlight=useRef(false),root=useRef<HTMLDivElement>(null),issuedManualZoom=useRef(false);
 
  useEffect(()=>{const fit=()=>{if(!issuedManualZoom.current)setIssuedZoom(fitIssuedZoom());};fit();window.addEventListener("resize",fit);return()=>window.removeEventListener("resize",fit);},[]);
 
@@ -87,17 +88,17 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  useEffect(()=>{if(root.current)void documentAssetsReady(root.current.ownerDocument).catch(()=>setError(t.printFailed));},[]);
 
- useEffect(()=>{if(editing.dirty){setManifest(null);setConfirm(false);}},[editing.dirty,editing.draft?.content,editing.draft?.variables,editing.draft?.documentDate]);
+ useEffect(()=>{if(editing.dirty)setManifest(null);},[editing.dirty,editing.draft?.content,editing.draft?.variables,editing.draft?.documentDate]);
 
  useEffect(()=>{const draft=editing.draft;if(!draft||draft.id!==draftId||editing.dirty||draft.issuedDocumentId||draft.archivedAt)return;let active=true;const timer=setTimeout(()=>{void previewDraft(draft.id,draft.revision).then(r=>{if(active&&isCurrent(draft.id,draft.revision)){if(r.ok)acceptPreview(r.data);else setError(r.error.message);}});},250);return()=>{active=false;clearTimeout(timer);};},[draftId,editing.draft,editing.dirty,acceptPreview,isCurrent]);
 
- const openDocument=useCallback(async(id:string)=>{setBusy(true);try{if(editing.dirty&&!await editing.flush())return;const [a,b]=await Promise.all([getDocument(id),getSnapshot(id)]);if(!b.ok){setError(b.error.message);return;}if(a.ok&&a.data){setOpened(a.data);setSnapshot(b.data);setDraftId(null);setPreview(null);}else if(!a.ok)setError(a.error.message);}finally{setBusy(false);}},[editing]);
+ const openDocument=useCallback(async(id:string)=>{setBusy(true);try{if(editing.dirty&&!await editing.flush())return;const [a,b]=await Promise.all([getDocument(id),getSnapshot(id)]);if(!b.ok){setError(b.error.message);return;}if(a.ok&&a.data){setOpened(a.data);setSnapshot(b.data);setDraftId(null);setPreview(null);setAlexaDocumentContext({documentId:a.data.id,draftId:null,revision:a.data.contentHash,patientId:a.data.patientId});}else if(!a.ok)setError(a.error.message);}finally{setBusy(false);}},[editing]);
 
  useEffect(()=>{if(initialDocumentId&&initialOpened.current!==initialDocumentId){initialOpened.current=initialDocumentId;void openDocument(initialDocumentId);}},[initialDocumentId,openDocument]);
 
  useEffect(()=>{const guard=(event:MouseEvent)=>{const link=event.target instanceof Element?event.target.closest("a[href]"):null;if(!editing.dirty||!link||event.ctrlKey||event.metaKey)return;event.preventDefault();event.stopPropagation();void editing.flush().then(saved=>{if(saved)window.location.assign(link.getAttribute("href")!);});};document.addEventListener("click",guard,true);return()=>document.removeEventListener("click",guard,true);},[editing]);
 
- const chooseDraft=async(draft:Draft)=>{if(draft.issuedDocumentId){await openDocument(draft.issuedDocumentId);setLibraryTab("issued");return;}if(editing.dirty&&!await editing.flush())return;setOpened(null);setSnapshot(null);setPreview(null);setManifest(null);setView("preview");setLibraryTab("drafts");setHeaderHtml("");setFieldValues({});setDraftId(draft.id);setPatientId(draft.patientId);setPatientName(draft.patientName);setKind(draft.kind);setError(null);};
+ const chooseDraft=async(draft:Draft)=>{if(draft.issuedDocumentId){await openDocument(draft.issuedDocumentId);setLibraryTab("issued");return;}if(editing.dirty&&!await editing.flush())return;setOpened(null);setSnapshot(null);setPreview(null);setManifest(null);setView("preview");setLibraryTab("drafts");setHeaderHtml("");setFieldValues({});setDraftId(draft.id);setAlexaDocumentContext({documentId:null,draftId:draft.id,revision:String(draft.revision),patientId:draft.patientId});setPatientId(draft.patientId);setPatientName(draft.patientName);setKind(draft.kind);setError(null);};
 
  const newDocument=async()=>{if(!patientId)return;if(editing.dirty&&!await editing.flush())return;setBusy(true);setError(null);let warning:string|null=null;try{
   const [pResult,wResult]=await Promise.allSettled([getPatient(patientId),getPatientWorkspace(patientId)]);
@@ -123,7 +124,26 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const prepare=async()=>{setBusy(true);setError(null);const saved=await editing.flush();if(saved){const r=await previewDraft(saved.id,saved.revision);if(r.ok){if(editing.isCurrent(saved.id,saved.revision))acceptPreview(r.data);}else setError(r.error.message);}setBusy(false);};
 
- const issue=async()=>{if(!preview||!manifest||editing.dirty)return;setBusy(true);setError(null);const r=await issueDraft(preview,manifest);setBusy(false);if(r.ok){setSnapshot(r.data);setConfirm(false);setLibraryTab("issued");await openDocument(r.data.documentId);await refresh();}else{setError(r.error.message);setConfirm(false);if(r.error.context==="preview-stale")setPreview(null);}};
+ const printDraft=async()=>{
+  const draft=editing.draft;
+  if(draftPrintInFlight.current||!draft||!preview||!manifest||editing.dirty||!preview.readiness.canIssue||draft.issuedDocumentId||draft.archivedAt)return;
+  draftPrintInFlight.current=true;
+  setBusy(true);setError(null);
+  try{
+   const issued=await issueDraft(preview,manifest);
+   if(!issued.ok){setError(issued.error.message);if(issued.error.context==="preview-stale")setPreview(null);return;}
+   setSnapshot(issued.data);setLibraryTab("issued");
+   await openDocument(issued.data.documentId);
+   try{
+    await printDocument(issued.data);
+    const marked=await markDocumentPrinted(issued.data.documentId);
+    if(!marked.ok){setError(t.printAuditFailed);setAuditPending(issued.data.documentId);}
+    else{setAuditPending(null);await openDocument(issued.data.documentId);}
+   }catch{setError(t.printFailed);}
+   await refresh();
+  }catch{setError(t.printFailed);}
+  finally{draftPrintInFlight.current=false;setBusy(false);}
+ };
 
  const duplicate=async()=>{const id=editing.draft?.id??snapshot?.draftId;if(!id&&!opened)return;if(editing.dirty&&!await editing.flush())return;const r=id?await duplicateDraft(id):await reviseIssuedDocument(opened!.id);if(r.ok&&r.data){await chooseDraft(r.data);await refresh();}else if(!r.ok)setError(r.error.message);};
 
@@ -132,7 +152,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
  // reste le dialogue du navigateur : aucun succès d'imprimante n'est supposé.
  useEffect(()=>{if(!initialPrint||!initialDocumentId||initialPrintDone.current||opened?.id!==initialDocumentId||!snapshot)return;initialPrintDone.current=true;void print();},[initialPrint,initialDocumentId,opened,snapshot,print]);
 
- const changePatient=(p:{id:string;firstName:string;lastName:string;recordNumber:string})=>{if(busy)return;void(async()=>{if(editing.dirty&&!await editing.flush())return;setPatientId(p.id);setPatientName(p.lastName+" "+p.firstName);setPatientRecord(p.recordNumber);setDraftId(null);setOpened(null);setSnapshot(null);setPreview(null);setHeaderHtml("");setFieldValues({});setError(null);})();};
+ const changePatient=(p:{id:string;firstName:string;lastName:string;recordNumber:string})=>{if(busy)return;void(async()=>{if(editing.dirty&&!await editing.flush())return;setAlexaDocumentContext(null);setPatientId(p.id);setPatientName(p.lastName+" "+p.firstName);setPatientRecord(p.recordNumber);setDraftId(null);setOpened(null);setSnapshot(null);setPreview(null);setHeaderHtml("");setFieldValues({});setError(null);})();};
 
  const filteredDrafts=drafts.filter(d=>(!filterKind||d.kind===filterKind)&&(!query||(d.title+" "+d.patientName).toLowerCase().includes(query.toLowerCase())));
  const filteredDocuments=documents.filter(d=>(!filterKind||d.docType===filterKind)&&(!filterStatus||d.status===filterStatus)&&(query===""||(d.docNumber+" "+documentLabels[d.docType]+" "+(d.patientNom??"")+" "+(d.patientPrenom??"")).toLowerCase().includes(query.toLowerCase())));
@@ -169,7 +189,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
    <main className="doc2-main">
     {editing.draft&&editing.draft.id===draftId?<>
-     <header className="doc2-document-head"><div className="doc2-document-title"><div className="doc2-title-line"><h2>{documentLabels[editing.draft.kind]}</h2><Badge ton="neutre">{t.draft}</Badge></div><span role="status" className="doc2-save-status">{editing.saveLabel}</span><small className="doc2-number-note">{t.draftNumberPending}</small></div><div className="doc2-actions">{editing.dirty||editing.error?<Bouton rang="secondaire" taille="compact" disabled={busy||editing.state.conflict} onClick={()=>{void editing.flush().then(refresh);}}>{t.save}</Bouton>:null}<details className="doc2-action-menu"><summary>{t.more}<Icone nom="chevron" taille={16}/></summary><div><button type="button" disabled={busy} onClick={()=>{void duplicate();}}>{t.duplicate}</button><button type="button" disabled={busy} onClick={()=>{void(async()=>{if(editing.dirty&&!await editing.flush())return;const r=await archiveDraft(editing.draft!.id,!editing.draft!.archivedAt);if(r.ok){setDraftId(null);await refresh();}else setError(r.error.message);})();}}>{editing.draft.archivedAt?t.restore:t.archive}</button><button type="button" disabled={busy||editing.dirty} onClick={()=>setRegenerate(true)}>{t.regenerate}</button><DocumentHistory id={editing.draft.id} onRestore={busy||editing.draft.issuedDocumentId||editing.draft.archivedAt?null:(content,variables,date)=>{editing.setContent(content);editing.setVariables(variables);editing.setDate(date);}}/></div></details><Bouton rang="principal" taille="compact" disabled={busy||!manifest||!preview?.readiness.canIssue||editing.dirty||Boolean(editing.draft.issuedDocumentId)||Boolean(editing.draft.archivedAt)} onClick={()=>{setView("preview");setConfirm(true);}}>{t.issueForPrint}</Bouton></div></header>
+     <header className="doc2-document-head"><div className="doc2-document-title"><div className="doc2-title-line"><h2>{documentLabels[editing.draft.kind]}</h2><Badge ton="neutre">{t.draft}</Badge></div><span role="status" className="doc2-save-status">{editing.saveLabel}</span><small className="doc2-number-note">{t.draftNumberPending}</small></div><div className="doc2-actions"><Bouton rang="secondaire" taille="compact" disabled={busy||!editing.dirty||editing.state.conflict} onClick={()=>{void editing.flush().then(saved=>{if(saved)void refresh();});}}>{t.save}</Bouton><details className="doc2-action-menu"><summary>{t.more}<Icone nom="chevron" taille={16}/></summary><div><button type="button" disabled={busy} onClick={()=>{void duplicate();}}>{t.duplicate}</button><button type="button" disabled={busy} onClick={()=>{void(async()=>{if(editing.dirty&&!await editing.flush())return;const r=await archiveDraft(editing.draft!.id,!editing.draft!.archivedAt);if(r.ok){setDraftId(null);await refresh();}else setError(r.error.message);})();}}>{editing.draft.archivedAt?t.restore:t.archive}</button><button type="button" disabled={busy||editing.dirty} onClick={()=>setRegenerate(true)}>{t.regenerate}</button><DocumentHistory id={editing.draft.id} onRestore={busy||editing.draft.issuedDocumentId||editing.draft.archivedAt?null:(content,variables,date)=>{editing.setContent(content);editing.setVariables(variables);editing.setDate(date);}}/></div></details><Bouton rang="principal" taille="compact" disabled={busy||!manifest||!preview?.readiness.canIssue||editing.dirty||Boolean(editing.draft.issuedDocumentId)||Boolean(editing.draft.archivedAt)} onClick={()=>{void printDraft();}}>{t.print}</Bouton></div></header>
      {!editing.draft.issuedDocumentId&&!editing.draft.archivedAt?<div className="doc2-compose" inert={busy}><aside className="doc2-fields">{editing.draft.kind==="ordonnance"?<MedicationRows content={editing.draft.content} onChange={editing.setContent}/>:<DocumentFields draft={editing.draft} onChange={editing.setVariables} onDate={editing.setDate} onTreatmentChange={editing.draft.kind==="certificat_medical"?editing.setContentAndVariables:null}/>}</aside><section className="doc2-paper-area"><div className="doc2-compose-bar">{editing.draft.kind!=="ordonnance"?<div className="doc2-view-switch"><button type="button" aria-pressed={view==="preview"} onClick={()=>{setView("preview");if(!preview)void prepare();}}>{t.preview}</button><button type="button" aria-pressed={view==="edit"} onClick={()=>setView("edit")}>{t.edit}</button></div>:<span className="doc2-eyebrow">{t.prescription}</span>}{manifest!==null?<span className="doc2-page-count">{manifest.pages.length} {t.page.toLowerCase()}</span>:null}</div>
       {editing.draft.kind!=="ordonnance"?<div className={view==="edit"?undefined:"doc2-offscreen"}><DocumentEditor key={editing.draft.id} invalid={editing.invalidContent} headerHtml={headerHtml} fieldValues={{...fieldValues,...Object.fromEntries(Object.entries(editing.draft.variables).filter(([key])=>key!=="jours_lettres").map(([key,value])=>["vars_"+key,value]))}} content={editing.draft.content} onChange={editing.setContent} onError={editing.rejectContent}/></div>:null}
       <div className={view==="preview"||editing.draft.kind==="ordonnance"?undefined:"doc2-offscreen"}>{editing.dirty?<p className="doc2-hint" role="status">{t.previewStale}</p>:null}{preview?<DocumentPreview preview={preview} onLayout={setManifest}/>:<p className="doc2-hint">{editing.dirty?t.previewStale:t.previewLoading}</p>}</div></section></div>:null}
@@ -190,8 +210,6 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
   </div>
 
   {regenerate?<DocumentDialog title={t.regenerate} onDismiss={()=>setRegenerate(false)}><p>{t.regenerateConfirmation}</p><div className="doc2-dialog-actions"><button className="doc2-secondary" type="button" autoFocus onClick={()=>setRegenerate(false)}>{t.close}</button><button className="doc2-primary" type="button" onClick={()=>{setRegenerate(false);void newDocument();}}>{t.regenerate}</button></div></DocumentDialog>:null}
-
-  {confirm?<DocumentDialog title={t.confirmIssue} busy={busy} onDismiss={()=>setConfirm(false)}><p>{t.confirmBody}</p><p className="doc2-dialog-hint">{t.printAfterIssue}</p><div className="doc2-dialog-actions"><button className="doc2-secondary" type="button" autoFocus disabled={busy} onClick={()=>setConfirm(false)}>{t.close}</button><button className="doc2-primary" type="button" disabled={busy} onClick={()=>{void issue();}}>{busy?t.issuing:t.confirmIssue}</button></div></DocumentDialog>:null}
 
   {showVoid?<DocumentDialog title={t.voidDocument} busy={busy} onDismiss={()=>setShowVoid(false)}><p>{t.voidConfirmation}</p><label>{t.voidReason}<textarea value={voidReason} onChange={e=>setVoidReason(e.target.value)}/></label><div className="doc2-dialog-actions"><button className="doc2-secondary" type="button" autoFocus disabled={busy} onClick={()=>setShowVoid(false)}>{t.close}</button><button className="doc2-primary" type="button" disabled={!voidReason.trim()||busy} onClick={()=>{void(async()=>{if(!opened)return;setBusy(true);const r=await voidDocument(opened.id,voidReason);setBusy(false);if(r.ok){setShowVoid(false);await openDocument(opened.id);await refresh();}else setError(r.error.message);})();}}>{t.voidDocument}</button></div></DocumentDialog>:null}
  </div>;

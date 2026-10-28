@@ -43,6 +43,266 @@ describe("French concise grounded clinical paragraphs", () => {
     expect(result.text).toContain('La personne décrit une évolution documentée au temps 3.');
     expect(result.text).not.toMatch(/2026|consultation du/iu);
   });
+  it('keeps cross-visit comparison choices available when the latest visit also records a treatment',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc300000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc400000-0000-4000-8000-000000000001',subjective:'La personne rapporte peu de changement depuis le dernier entretien.',objective:null,assessment:null,plan:'Le traitement par SERTRALINE ALMUS à 50 mg par jour est maintenu.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc300000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc400000-0000-4000-8000-000000000002',subjective:'La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Le traitement par SERTRALINE ALMUS à 50 mg par jour est maintenu.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    let choices:{id:string;text:string}[]=[];
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      choices=JSON.parse(String(messages[1]!.content)).choices;
+      return JSON.stringify({selections:choices.filter(choice=>/peu de changement|un mieux/iu.test(choice.text)).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,true,true,{chronological:true,includeDates:false,comparison:true});
+    expect(inferLocalText).toHaveBeenCalledTimes(1);
+    expect(String(vi.mocked(inferLocalText).mock.calls[0]![0][0]!.content)).toBe(narrativeCopy.comparisonCandidatePrompt);
+    expect(narrativeCopy.comparisonCandidatePrompt).toContain('changement concret du plan');
+    expect(choices.filter(choice=>/peu de changement|un mieux/iu.test(choice.text))).toHaveLength(2);
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.sourceIds?.some(id=>id.startsWith(older.id+':'))).toBe(true);
+    expect(result.sourceIds?.some(id=>id.startsWith(latest.id+':'))).toBe(true);
+    expect(result.text).toContain('La personne rapportait');
+    expect(result.text).toContain('peu de changement');
+    expect(result.text).toContain('un mieux');
+    expect(result.text).not.toMatch(/2025|2026|consultation du/iu);
+  });
+  it('explains comparison results by visit when symptom change and the plan both differ',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc350000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc360000-0000-4000-8000-000000000001',subjective:'La personne rapporte peu de changement depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une activité manuelle.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc350000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc360000-0000-4000-8000-000000000002',subjective:'La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une courte sortie accompagnée.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      const schema=options!.jsonSchema as {properties:Record<string,{enum?:string[]}>};
+      if(schema.properties.selection){
+        const ids=schema.properties.selection.enum??[];
+        const pair=ids.find(id=>{const texts=id.split('+').map(choiceId=>body.choices.find(choice=>choice.id===choiceId)?.text??'');return texts.some(text=>text.includes('peu de changement'))&&texts.some(text=>text.includes('un mieux'));});
+        return JSON.stringify({selection:pair??ids[0]});
+      }
+      const wanted=['peu de changement','un mieux','courte sortie accompagnée'].map(fragment=>body.choices.find(choice=>choice.text.includes(fragment))?.id).filter((id):id is string=>id!==undefined);
+      return JSON.stringify({selections:wanted.slice(0,3)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,true,true,{chronological:true,includeDates:false,comparison:true});
+    expect(result.text).toMatch(/^La personne rapportait/u);
+    expect(result.text).not.toContain('Comparaison :');
+    expect(result.text).toContain('La personne rapportait');
+    expect(result.text).toContain('Le suivi passe de');
+    expect(result.text.indexOf('peu de changement')).toBeLessThan(result.text.indexOf('un mieux'));
+    expect(result.text).toContain('activité manuelle');
+    expect(result.text).toContain('courte sortie accompagnée');
+    expect(result.text.indexOf('La personne rapportait')).toBeLessThan(result.text.indexOf('Le suivi passe de'));
+    expect(result.sourceIds?.some(id=>id.startsWith(older.id+':'))).toBe(true);
+    expect(result.sourceIds?.some(id=>id.startsWith(latest.id+':'))).toBe(true);
+  });
+  it('keeps difficulty, shared evolution, and each consultation-specific follow-up in a comparison',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc370000-0000-4000-8000-000000000001',startedAt:'2023-10-05T10:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc380000-0000-4000-8000-000000000001',subjective:'La personne décrit des échanges tendus au sein de la famille. La gêne est surtout présente après un échange difficile. La personne rapporte une reprise des difficultés depuis le dernier entretien. La personne décrit avoir repris les repères travaillés à la séance précédente.',objective:null,assessment:null,plan:'Le travail de séance a porté sur la préparation d’une conversation avec un proche. Il est convenu de prévoir une promenade courte, puis de noter ce qui facilite cette démarche et ce qui la freine, notamment la crainte de décevoir.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc370000-0000-4000-8000-000000000002',startedAt:'2025-11-02T14:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc380000-0000-4000-8000-000000000002',subjective:'La personne décrit des échanges tendus au sein de la famille. La gêne est surtout présente durant les périodes moins structurées. La personne rapporte un mieux depuis le dernier entretien. La personne décrit avoir repris les repères travaillés à la séance précédente.',objective:null,assessment:null,plan:'Le travail de séance a porté sur la préparation d’une conversation avec un proche. Il est convenu de prévoir un repas partagé, puis de noter ce qui facilite cette démarche et ce qui la freine, notamment les imprévus de la semaine.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    let offeredChoices:string[]=[];
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      offeredChoices=body.choices.map(choice=>choice.text);
+      const repeatedEvolution=body.choices.filter(choice=>choice.text.includes('rapporte un mieux depuis le dernier entretien')).map(choice=>choice.id);
+      const genericPreviousPlan=body.choices.find(choice=>choice.text.includes('préparation d’une conversation'))?.id;
+      return JSON.stringify({selections:[...repeatedEvolution,...(genericPreviousPlan?[genericPreviousPlan]:[])]});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,true,true,{chronological:true,includeDates:true,comparison:true});
+    expect(offeredChoices.some(text=>text.includes('promenade courte'))).toBe(true);
+    expect(offeredChoices.some(text=>text.includes('repas partagé'))).toBe(true);
+    expect(result.text).toContain('après un échange difficile');
+    expect(result.text).toContain('durant les périodes moins structurées');
+    expect(result.text).toContain('promenade courte');
+    expect(result.text).toContain('repas partagé');
+    expect(result.text).toContain('Le 5 oct. 2023, la personne rapportait une reprise des difficultés depuis le dernier entretien ; le 2 nov. 2025, elle rapporte un mieux depuis le dernier entretien.');
+    expect(result.text).toMatch(/^La difficulté principale reste/u);
+    expect(result.text).not.toContain('Comparaison :');
+    expect(result.text).toContain('Le contexte de la gêne change : d’abord après un échange difficile, puis durant les périodes moins structurées.');
+    expect(result.text).toContain('La difficulté principale reste');
+    expect(result.text.indexOf('après un échange difficile')).toBeLessThan(result.text.indexOf('durant les périodes moins structurées'));
+    expect(result.text).not.toMatch(/«[^»]*[.!?] »/u);
+    expect(result.text).toContain('Le suivi passe de');
+    expect(result.text).toContain('promenade courte');
+    expect(result.text).toContain('repas partagé');
+    expect(result.sourceIds?.some(id=>id.startsWith(older.id+':'))).toBe(true);
+    expect(result.sourceIds?.some(id=>id.startsWith(latest.id+':'))).toBe(true);
+  });
+  it('keeps an unpaired latest outcome in natural prose without repeating the comparison date',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc372000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc472000-0000-4000-8000-000000000001',subjective:'La personne décrit des difficultés de sommeil.',objective:null,assessment:null,plan:'Il est convenu de prévoir un temps calme avant le coucher.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc372000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc472000-0000-4000-8000-000000000002',subjective:'La personne décrit des difficultés de sommeil. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir un réveil à heure régulière.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      const outcome=body.choices.find(choice=>choice.text.includes('rapporte un mieux'))?.id;
+      return JSON.stringify({selections:outcome?[outcome]:body.choices.slice(0,1).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:true,comparison:true});
+    expect(result.text).toContain('À la consultation la plus récente, la personne rapporte un mieux depuis le dernier entretien.');
+    expect(result.text).not.toContain('Dernière consultation,');
+    expect(result.text).not.toContain('Évolution :');
+    expect(result.text.match(/26 avr\. 2026/gu)).toHaveLength(1);
+  });
+  it('explains repeated improvement as a report made at both consultations',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc373000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc473000-0000-4000-8000-000000000001',subjective:'La personne décrit des difficultés de sommeil. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:null}]};
+    const latest:ClinicalConsultation={...c,id:'bc373000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc473000-0000-4000-8000-000000000002',subjective:'La personne décrit des difficultés de sommeil. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:null}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      return JSON.stringify({selections:body.choices.filter(choice=>choice.text.includes('rapporte un mieux')).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:true,comparison:true});
+    expect(result.text).toContain('Aux consultations du 31 août 2025 et du 26 avr. 2026, la personne rapporte « un mieux depuis le dernier entretien ».');
+    expect(result.text).not.toContain('La même évolution est rapportée');
+  });
+  it('compares scale results against the consultation that recorded each administration',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc330000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,subjective:'La personne décrit les difficultés suivies pendant la consultation.',objective:null,assessment:null,plan:null}]};
+    const latest:ClinicalConsultation={...c,id:'bc330000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,subjective:'La personne décrit les difficultés suivies pendant la consultation.',objective:null,assessment:null,plan:null}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[
+      {id:'bc340000-0000-4000-8000-000000000001',name:'PHQ-9',administeredAt:older.startedAt,score:16,interpretation:'modérément sévère',consultationId:older.id},
+      {id:'bc340000-0000-4000-8000-000000000002',name:'GAD-7',administeredAt:older.startedAt,score:12,interpretation:'modéré',consultationId:older.id},
+      {id:'bc340000-0000-4000-8000-000000000003',name:'PHQ-9',administeredAt:latest.startedAt,score:7,interpretation:'léger',consultationId:latest.id},
+      {id:'bc340000-0000-4000-8000-000000000004',name:'GAD-7',administeredAt:latest.startedAt,score:4,interpretation:'minime',consultationId:latest.id},
+      {id:'bc340000-0000-4000-8000-000000000005',name:'HAM-A',administeredAt:'2026-05-01T13:30:00Z',score:40,interpretation:'non lié à ces consultations',consultationId:'bc330000-0000-4000-8000-000000000003'},
+    ],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    let modelInput='';
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      modelInput=String(messages[1]!.content);
+      const body=JSON.parse(modelInput) as {choices:{id:string;text:string}[]};
+      return JSON.stringify({selections:body.choices.slice(0,1).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:false,comparison:true});
+    expect(modelInput).not.toContain('score 16');
+    expect(modelInput).not.toContain('score 7');
+    expect(modelInput).not.toContain('score 12');
+    expect(modelInput).not.toContain('score 4');
+    expect(result.text).toContain('Échelles enregistrées — consultation précédente du 31 août 2025');
+    expect(result.text).toContain('consultation la plus récente du 26 avr. 2026');
+    expect(result.text).toContain('score 16');
+    expect(result.text).toContain('score 12');
+    expect(result.text).toContain('score 7');
+    expect(result.text).toContain('score 4');
+    expect(result.text).not.toContain('score 40');
+    expect(result.text).toContain('modérément sévère');
+    expect(result.text).toContain('léger');
+    expect(result.sourceIds).toContain(context.scales[0]!.id);
+    expect(result.sourceIds).toContain(context.scales[1]!.id);
+    expect(result.sourceIds).toContain(context.scales[2]!.id);
+    expect(result.sourceIds).toContain(context.scales[3]!.id);
+    expect(result.sourceIds).not.toContain(context.scales[4]!.id);
+  });
+  it('compares the two visits instead of short-circuiting to a structured progression',async()=>{
+    const visits=Array.from({length:2},(_,index)=>({...c,id:`bc310000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,startedAt:`2026-0${index+4}-10T09:00:00Z`,rawNotes:null,notes:[{...c.notes[0]!,id:`bc410000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,subjective:`Thème récurrent : « anxiété ». Étape observée : ${index===0?'évitement des sorties':'reprise progressive des sorties'}.`,objective:null,assessment:null,plan:null}]}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      const pairedChange=body.choices.filter(choice=>choice.text.includes('évitement des sorties')||choice.text.includes('reprise progressive des sorties')).map(choice=>choice.id);
+      return JSON.stringify({selections:pairedChange});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:false,comparison:true});
+    expect(inferLocalText).toHaveBeenCalledTimes(1);
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text).toContain('La difficulté principale reste « anxiété ».');
+    expect(result.text).not.toMatch(/Thème récurrent|Étape observée/u);
+    expect(result.text).toContain('évitement des sorties');
+    expect(result.text).toContain('reprise progressive des sorties');
+  });
+  it('keeps both plans and all required visit facts when two oversized consultation batches are combined',async()=>{
+    const filler=Array.from({length:70},()=>"Un repère concret reste inscrit dans la note de cette consultation.").join(' ');
+    const visits=Array.from({length:2},(_,index)=>({...c,id:`bc325000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,startedAt:`2026-0${index+4}-10T09:00:00Z`,rawNotes:null,notes:[{...c.notes[0]!,id:`bc425000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,subjective:`La personne décrit une baisse de l’élan et un retrait des activités habituelles. La personne rapporte ${index===0?'peu de changement':'un mieux'} depuis le dernier entretien. ${filler}`,objective:null,assessment:null,plan:index===0?'Il est convenu de prévoir une activité manuelle.':'Il est convenu de prévoir une courte sortie accompagnée.'}]}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+      const prompt=String(messages[0]!.content),body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      if(prompt===narrativeCopy.comparisonCandidatePrompt)return JSON.stringify({selections:body.choices.slice(0,1).map(choice=>choice.id)});
+      const selections=(options!.jsonSchema as {properties:{selection:{enum:string[]}}}).properties.selection.enum;
+      const changedPair=selections.find(selection=>selection.includes('+')&&selection.split('+').map(id=>body.choices.find(choice=>choice.id===id)?.text??'').join(' ').includes('peu de changement')&&selection.split('+').map(id=>body.choices.find(choice=>choice.id===id)?.text??'').join(' ').includes('un mieux'));
+      return JSON.stringify({selection:changedPair});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:false,comparison:true});
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text).toContain('Le suivi passe de');
+    expect(result.text).toContain('prévoir une activité manuelle');
+    expect(result.text).toContain('prévoir une courte sortie accompagnée');
+    expect(result.text).toContain('La personne rapportait');
+    expect(result.text).toContain('peu de changement');
+    expect(result.text).toContain('un mieux');
+  });
+  it('keeps long two-visit comparisons available within the concise answer limit',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc327000-0000-4000-8000-000000000001',startedAt:'2022-09-01T09:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc427000-0000-4000-8000-000000000001',subjective:'La personne décrit des difficultés d’organisation et un sentiment de découragement qui se renforcent lorsque plusieurs demandes familiales arrivent simultanément au domicile. La gêne est surtout présente après les journées très chargées, quand la personne peine à reprendre les activités ordinaires. La personne rapporte peu de changement depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une activité manuelle courte à heure fixe, puis de noter ce qui la freine avant le prochain rendez-vous.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc327000-0000-4000-8000-000000000002',startedAt:'2026-06-15T08:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc427000-0000-4000-8000-000000000002',subjective:'La personne décrit des difficultés d’organisation et un sentiment de découragement qui se renforcent lorsque plusieurs demandes familiales arrivent simultanément au domicile. La gêne est surtout présente en fin de journée, lorsque la fatigue complique la reprise des activités ordinaires. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une promenade accompagnée en fin de journée, puis de noter les obstacles avant le prochain rendez-vous.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const choices=JSON.parse(String(messages[1]!.content)).choices as {id:string}[];
+      return JSON.stringify({selections:choices.slice(0,4).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:true,comparison:true});
+    const wordCount=result.text.trim().split(/\s+/u).length;
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(wordCount).toBeLessThanOrEqual(120);
+    expect(result.text).toContain('1 sept. 2022');
+    expect(result.text).toContain('15 juin 2026');
+    expect(result.text).toContain('difficultés d’organisation');
+    expect(result.text).toContain('journées très chargées');
+    expect(result.text).toContain('fin de journée');
+    expect(result.text).toContain('peu de changement');
+    expect(result.text).toContain('un mieux');
+    expect(result.text).toContain('activité manuelle');
+    expect(result.text).toContain('promenade accompagnée');
+  });
+  it('keeps recorded two-visit comparison details when the shared difficulty has long source wording',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc328000-0000-4000-8000-000000000001',startedAt:'2022-09-01T09:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc428000-0000-4000-8000-000000000001',subjective:'La personne décrit une tristesse liée à la perte d’un proche. La gêne est surtout présente lorsque plusieurs demandes arrivent en même temps. La première rencontre précise les difficultés et les attentes.',objective:null,assessment:null,plan:'Le travail de séance a porté sur la mise en mots des souvenirs et le maintien des liens de soutien. Il est convenu de prévoir une activité manuelle, puis de noter ce qui facilite cette démarche et ce qui la freine, notamment la fatigue en cours de journée. Le prochain rendez-vous permettra de faire le point.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc328000-0000-4000-8000-000000000002',startedAt:'2026-06-15T08:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc428000-0000-4000-8000-000000000002',subjective:'La personne décrit une tristesse liée à la perte d’un proche. La gêne est surtout présente en fin de journée. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Le travail de séance a porté sur la mise en mots des souvenirs et le maintien des liens de soutien. Il est convenu de prévoir une pause sans écran, puis de noter ce qui facilite cette démarche et ce qui la freine, notamment la difficulté à commencer. Le prochain rendez-vous permettra de faire le point.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async(messages)=>{
+      const choices=JSON.parse(String(messages[1]!.content)).choices as {id:string}[];
+      return JSON.stringify({selections:choices.slice(0,2).map(choice=>choice.id)});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:true,comparison:true});
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text.trim().split(/\s+/u).length).toBeLessThanOrEqual(120);
+    expect(result.text).toContain('La difficulté principale reste');
+    expect(result.text).toContain('Le contexte de la gêne change : d’abord lorsque plusieurs demandes arrivent en même temps, puis en fin de journée.');
+    expect(result.text).toContain('Le suivi passe de');
+    expect(result.text).toContain('1 sept. 2022');
+    expect(result.text).toContain('15 juin 2026');
+    expect(result.text).toContain('plusieurs demandes arrivent en même temps');
+    expect(result.text).toContain('fin de journée');
+    expect(result.text).toContain('un mieux');
+    expect(result.text).toContain('activité manuelle');
+    expect(result.text).toContain('pause sans écran');
+    expect(result.text).not.toContain('Traitement :');
+  });
+  it('keeps a grounded comparison available when MiniCPM candidate selection times out',async()=>{
+    const older:ClinicalConsultation={...c,id:'bc326000-0000-4000-8000-000000000001',startedAt:'2025-08-31T13:00:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc426000-0000-4000-8000-000000000001',subjective:'La personne décrit des tensions familiales, surtout après un échange difficile. La personne rapporte peu de changement depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une activité manuelle.'}]};
+    const latest:ClinicalConsultation={...c,id:'bc326000-0000-4000-8000-000000000002',startedAt:'2026-04-26T13:30:00Z',rawNotes:null,notes:[{...c.notes[0]!,id:'bc426000-0000-4000-8000-000000000002',subjective:'La personne décrit des tensions familiales, surtout durant les périodes moins structurées. La personne rapporte un mieux depuis le dernier entretien.',objective:null,assessment:null,plan:'Il est convenu de prévoir une courte sortie accompagnée.'}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[latest,older],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    const timeout=new Error('Local model response timed out');timeout.name='TimeoutError';vi.mocked(inferLocalText).mockRejectedValue(timeout);
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:true,comparison:true});
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text).toContain('après un échange difficile');
+    expect(result.text).toContain('durant les périodes moins structurées');
+    expect(result.text).toContain('peu de changement');
+    expect(result.text).toContain('un mieux');
+    expect(result.text).toContain('prévoir une activité manuelle');
+    expect(result.text).toContain('prévoir une courte sortie accompagnée');
+    expect(result.sourceIds?.some(id=>id.startsWith(older.id+':'))).toBe(true);
+    expect(result.sourceIds?.some(id=>id.startsWith(latest.id+':'))).toBe(true);
+  });
+  it('retains comparison alternatives when oversized visits are selected in separate batches',async()=>{
+    const filler=Array.from({length:70},()=>"Un repère concret reste inscrit dans la note de cette consultation.").join(' ');
+    const visits=Array.from({length:2},(_,index)=>({...c,id:`bc320000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,startedAt:`2026-0${index+4}-10T09:00:00Z`,rawNotes:null,notes:[{...c.notes[0]!,id:`bc420000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,subjective:`La personne décrit une baisse de l’élan et un retrait des activités habituelles. La personne rapporte ${index===0?'peu de changement':'un mieux'} depuis le dernier entretien. ${filler}`,objective:null,assessment:'Le cadre de travail reste adapté.',plan:null}]}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+    const prompts:string[]=[];
+    vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+      const prompt=String(messages[0]!.content),body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};prompts.push(prompt);
+      if(prompt===narrativeCopy.comparisonCandidatePrompt)return JSON.stringify({selections:body.choices.slice(0,1).map(choice=>choice.id)});
+      const selections=(options!.jsonSchema as {properties:{selection:{enum:string[]}}}).properties.selection.enum;
+      const changedPair=selections.find(selection=>selection.includes('+')&&selection.split('+').map(id=>body.choices.find(choice=>choice.id===id)?.text??'').join(' ').includes('peu de changement')&&selection.split('+').map(id=>body.choices.find(choice=>choice.id===id)?.text??'').join(' ').includes('un mieux'));
+      return JSON.stringify({selection:changedPair});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,false,true,{chronological:true,includeDates:false,comparison:true});
+    expect(prompts).toContain(narrativeCopy.comparisonCandidatePrompt);
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text).toContain('La personne rapportait');
+    expect(result.text).toContain('peu de changement');
+    expect(result.text).toContain('un mieux');
+  });
   it('keeps note signature status out of a clinical summary',async()=>{
     const visit:ClinicalConsultation={...c,rawNotes:null,notes:[{...c.notes[0]!,status:'draft',subjective:'La personne décrit une évolution documentée au dernier entretien.',objective:null,assessment:null,plan:null}]};
     const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[visit],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};

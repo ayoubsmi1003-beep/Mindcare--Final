@@ -27,6 +27,58 @@ function transport(bodies: Record<string, unknown>[]) {
   });
 }
 
+function memorySessionStorage() {
+  const values = new Map<string,string>();
+  return {
+    get length() { return values.size; },
+    key(index:number) { return [...values.keys()][index]??null; },
+    getItem(key:string) { return values.get(key)??null; },
+    setItem(key:string,value:string) { values.set(key,String(value)); },
+    removeItem(key:string) { values.delete(key); },
+    clear() { values.clear(); },
+  };
+}
+
+it("continues revision-bound read batches automatically and persists only the opaque resume token", async () => {
+  const storage=memorySessionStorage(),bodies:Record<string,unknown>[]=[];
+  vi.stubGlobal("window",{location:{pathname:"/jarvis"},sessionStorage:storage});
+  const token="A".repeat(43);
+  vi.stubGlobal("fetch",async (_url:unknown,init:RequestInit)=>{
+    const body=JSON.parse(String(init.body)) as Record<string,unknown>;bodies.push(body);
+    const event=bodies.length===1
+      ?{type:"done",patientId:null,limited:true,status:"partial",persiste:true,progress:{completedBatches:1,complete:false},continuation:{token,progress:{kind:"notes",completedBatches:1,position:5}}}
+      :{type:"done",patientId:null,limited:false,status:"completed",persiste:true,progress:{completedBatches:2,complete:true}};
+    return new Response(`data: ${JSON.stringify({type:"sentence",text:`Batch ${bodies.length}`,kind:"fact",sources:[]})}\n\ndata: ${JSON.stringify(event)}\n\n`);
+  });
+  const sentences:string[]=[],progress:number[]=[];
+  const result=await envoyerTourAlexa("Lis toutes les notes",undefined,{onSentence:text=>sentences.push(text),onProgress:value=>progress.push(value.completedBatches)});
+  expect(bodies).toHaveLength(2);
+  expect(bodies[1]).toMatchObject({text:"Lis toutes les notes",continuationToken:token});
+  expect(sentences).toEqual(["Batch 1\n\nBatch 2"]);
+  expect(result.texte).toBe("Batch 1\n\nBatch 2");
+  expect(result.progress).toEqual({completedBatches:2,complete:true});
+  expect(progress).toEqual([1]);
+  expect(storage.length).toBe(0);
+});
+
+it("resumes the latest stored opaque token after a reload-like transport interruption", async () => {
+  const storage=memorySessionStorage(),bodies:Record<string,unknown>[]=[];
+  vi.stubGlobal("window",{location:{pathname:"/jarvis"},sessionStorage:storage});
+  let calls=0;const token="B".repeat(43);
+  vi.stubGlobal("fetch",async (_url:unknown,init:RequestInit)=>{
+    const body=JSON.parse(String(init.body)) as Record<string,unknown>;bodies.push(body);calls++;
+    if(calls===2)throw new Error("simulated disconnect after first resumable batch");
+    if(calls===1)return new Response(`data: ${JSON.stringify({type:"done",patientId:null,limited:true,status:"partial",continuation:{token,progress:{kind:"analysis",completedBatches:1,position:1200}}})}\n\n`);
+    return new Response(`data: ${JSON.stringify({type:"sentence",text:"Suite terminée.",kind:"fact",sources:[]})}\n\ndata: ${JSON.stringify({type:"done",patientId:null,limited:false,status:"completed",persiste:true,progress:{completedBatches:2,complete:true}})}\n\n`);
+  });
+  await expect(envoyerTourAlexa("Résume toutes les analyses")).rejects.toThrow();
+  expect(storage.length).toBe(1);
+  const result=await envoyerTourAlexa("Résume toutes les analyses");
+  expect(bodies[2]).toMatchObject({text:"Résume toutes les analyses",continuationToken:token});
+  expect(result.texte).toBe("Suite terminée.");
+  expect(storage.length).toBe(0);
+});
+
 it("clears patient A after active dossier becomes null on the same page", async () => {
   const bodies: Record<string, unknown>[] = []; transport(bodies);
   definirPatientActif({ id: "a", nom: "synthetic", numero: "test" });

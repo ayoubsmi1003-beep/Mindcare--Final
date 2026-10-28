@@ -228,14 +228,14 @@ done
 echo
 echo "── Garde-fous de règle ─────────────────────────────────────────────────"
 
-# ⚠️ RÈGLE 3 — JARVIS NE SUPPRIME RIEN, ET CE CONTRÔLE EST CE QUI LE MAINTIENT.
-# L'absence de capacité de suppression tient aujourd'hui parce que personne ne
-# l'a ajoutée. Elle tombera le jour où quelqu'un câblera `delete_charge` — qui
-# existe déjà dans le domaine finance — parce qu'un écran en avait besoin.
+# ⚠️ RÈGLE 3 — JARVIS N'EFFACE AUCUNE DONNÉE. Les charges peuvent être
+# désactivées par l'opération historique app.delete_charge, qui conserve leur
+# historique et met actif à false. Les suppressions destructives restent
+# interdites.
 if node scripts/eval-registre-sans-suppression.mjs "$(pwd)/.eval-out/services" >/dev/null 2>&1; then
-  vert "aucune capacité de suppression pour Jarvis" "registres lecture + écriture"
+  vert "aucune suppression destructive pour Jarvis" "désactivation des charges conservée"
 else
-  rouge "aucune capacité de suppression pour Jarvis" "UNE CAPACITÉ DE SUPPRESSION EST EXPOSÉE"
+  rouge "aucune suppression destructive pour Jarvis" "UNE CAPACITÉ DE SUPPRESSION EST EXPOSÉE"
 fi
 # Phase 4 Alexa — la surface 22+7, le TTL, la clarification, l'amorce.
 if node scripts/eval-jarvis-registre.mjs "$(pwd)/.eval-out/services" >/dev/null 2>&1; then

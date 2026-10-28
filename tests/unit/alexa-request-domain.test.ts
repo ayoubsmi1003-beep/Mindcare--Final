@@ -10,9 +10,12 @@ it('recognizes every supported predicate in the approved French compound-patient
 });
 const call=(id:string,name:string,args:Record<string,unknown>):LocalCompletion=>({kind:'calls',calls:[{id,name,args}],message:{role:'assistant',content:null,tool_calls:[{id,type:'function',function:{name,arguments:JSON.stringify(args)}}]},tokensIn:1,tokensOut:1});
 it.each(['Quel est le chiffre d’affaires de ce mois ?','Donne les recettes de la semaine.','Quel est le total des dépenses ?','Affiche la répartition des charges.'])('blocks a patient-count substitution for the explicit financial request: %s',async text=>{
- let step=0;const execute=vi.fn(async()=>({callId:'bad',status:'ok' as const,complete:true,text:'32 patients',data:{total:32},evidence:[],conditionKeys:[]}));
- const r=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'domain',execute,infer:async()=>step++===0?call('decl','declare_request',{parts:[{id:'p',goal:'Patients',tool:'query_patients',conditions:[],dependsOn:[]}]}):call('bad','query_patients',{partIds:['p'],mode:'count'})},new AbortController().signal);
- expect(execute).not.toHaveBeenCalled();expect(r.status).not.toBe('completed');expect(r.sentences.join(' ')).not.toContain('32 patients');
+ let step=0;const execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:c.name==='query_finance'?'Recettes vérifiées : 12 500 DZD':'32 patients',data:{total:12500},evidence:[],conditionKeys:[]}));
+ const infer=vi.fn(async()=>step++===0?call('decl','declare_request',{parts:[{id:'p',goal:'Patients',tool:'query_patients',conditions:[],dependsOn:[]}]}):call('bad','query_patients',{partIds:['p'],mode:'count'}));
+ const r=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'domain',execute,infer},new AbortController().signal);
+ if(text==='Quel est le chiffre d’affaires de ce mois ?'){expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'query_finance'});expect(r.status).toBe('completed');}
+ else{expect(execute).not.toHaveBeenCalled();expect(r.status).not.toBe('completed');}
+ expect(r.sentences.join(' ')).not.toContain('32 patients');
 });
 it('dispatches an admitted public question through the local-answer gate without a database read',async()=>{
  const text='Pourquoi les objets tombent-ils vers le sol ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[{id:c.id,type:'query' as const,label:'Réponse générale',provenance:{gate:'local_model',provider:'local'}}],conditionKeys:[]})),infer=vi.fn();
@@ -98,9 +101,10 @@ it.each(['Quel est le téléphone du patient sélectionné ?','Pourquoi les pati
 it('keeps irrelevant patient-tool instructions out of a positively admitted public request',async()=>{
  const text='Pourquoi le ciel est bleu ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'context',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general'});expect(execute.mock.calls[0]?.[0].name).not.toBe('query_patients');
 });
-it('does not offer no-tool metadata for an explicit supported finance request',async()=>{
- let options:LocalTextOptions|undefined;await runAgentLoop({...input,conversationId:crypto.randomUUID()},{actor:'context',execute:vi.fn(),infer:async(_m,o)=>{options=o;throw Error('Capture only');}},new AbortController().signal);
- const raw=JSON.stringify(options?.tools);expect(raw).toContain('query_finance');expect(raw).not.toContain('"none"');
+it('uses the deterministic finance read for a complete supported finance request',async()=>{
+ const execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Recettes vérifiées : 12 500 DZD',data:{total:12500},evidence:[],conditionKeys:[]})),infer=vi.fn();
+ await runAgentLoop({...input,conversationId:crypto.randomUUID()},{actor:'context',execute,infer},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'query_finance',args:{mode:'overview'}});
 });
 
 it('does not offer a clarification escape for an already admitted complete public question',async()=>{

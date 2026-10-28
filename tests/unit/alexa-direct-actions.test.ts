@@ -94,7 +94,7 @@ it("confirme puis exécute un rendez-vous demandé sans afficher de carte de con
  }finally{h.stop();}
 });
 
-it("garde la confirmation clinique pour un changement de médicament",async()=>{
+it("exécute la modification explicitement demandée sur le traitement identifié sans seconde confirmation",async()=>{
  const held=heldTurn(completed({
   tool:"update_treatment",
   args:{patientId:PATIENT_ID,treatmentId:"d1000000-0000-4000-8000-000000000001",expectedVersion:2,changes:"{\"dose\":\"50 mg\"}"},
@@ -106,8 +106,9 @@ it("garde la confirmation clinique pour un changement de médicament",async()=>{
   await flush();
   held.finish();
   await sending;
-  expect(boundary.confirm).not.toHaveBeenCalled();
-  expect(boundary.execute).not.toHaveBeenCalled();
-  expect(h.state?.carteEcriture).toMatchObject({actionId:ACTION_ID,outil:"update_treatment"});
+  expect(boundary.confirm).toHaveBeenCalledWith(ACTION_ID);
+  expect(boundary.execute).toHaveBeenCalledWith(expect.objectContaining({actionId:ACTION_ID,outil:"update_treatment"}));
+  expect(h.state?.carteEcriture).toBeNull();
+  expect(h.state?.tours.at(-1)?.role).toBe("jarvis");
  }finally{h.stop();}
 });

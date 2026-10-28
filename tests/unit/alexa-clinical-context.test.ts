@@ -38,6 +38,24 @@ describe("ClinicalContextEngine scoped audited reads", () => {
     const context=await buildClinicalContext(f.db,{patientId},{count:100,purpose:'summary',all:true});
     expect(context.consultations).toHaveLength(107);expect(context.coverage).toMatchObject({complete:true,hasMore:false,returned:107});
   });
+  it('retains every consultation-linked scale while the clinical history is read in pages',async()=>{
+    const rows=Array.from({length:21},(_,i)=>({...consultation(i+1),startedAt:new Date(Date.UTC(2026,8,30)-i*86400000).toISOString(),endedAt:new Date(Date.UTC(2026,8,30,1)-i*86400000).toISOString()}));
+    const scaleRows=[
+      {id:'11111111-1111-4111-8111-111111111111',scaleId:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',name:'PHQ-9',consultationId:rows[0]!.id,consultationStartedAt:rows[0]!.startedAt,administeredAt:rows[0]!.startedAt,score:16,interpretation:'modérément sévère'},
+      {id:'22222222-2222-4222-8222-222222222222',scaleId:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',name:'GAD-7',consultationId:rows[4]!.id,consultationStartedAt:rows[4]!.startedAt,administeredAt:rows[4]!.startedAt,score:12,interpretation:'modéré'},
+      {id:'33333333-3333-4333-8333-333333333333',scaleId:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',name:'PHQ-9',consultationId:rows[20]!.id,consultationStartedAt:rows[20]!.startedAt,administeredAt:rows[20]!.startedAt,score:7,interpretation:'léger'},
+    ];
+    let offset=0;
+    const f=port((name,args)=>{
+      if(name==='get_patient')return [{id:patientId}];
+      const page=rows.slice(offset,offset+Number(args.p_limit));offset+=page.length;
+      return [payload({consultations:page,scales:scaleRows,coverage:{requested:args.p_limit,returned:page.length,complete:true,hasMore:offset<rows.length,...(offset<rows.length?{next:{startedAt:page.at(-1)!.startedAt,id:page.at(-1)!.id}}:{})}})];
+    });
+    const context=await buildClinicalContext(f.db,{patientId},{count:100,all:true});
+    expect(context.consultations).toHaveLength(21);
+    expect(context.scales).toEqual(scaleRows);
+    expect(context.scales.map(scale=>scale.consultationStartedAt)).toEqual([rows[0]!.startedAt,rows[4]!.startedAt,rows[20]!.startedAt]);
+  });
   it("reads through the lower boundary of a closed month range and excludes outside consultations", async () => {
     const visit=(index:number,startedAt:string)=>({...consultation(index),startedAt,endedAt:new Date(Date.parse(startedAt)+3600000).toISOString()});
     const pages=[

@@ -19,6 +19,7 @@ import { fr } from "@/i18n/fr";
 import {
   abonnerConversation,
   accepterCarte,
+  chargerHistorique,
   changerSaisie,
   definirContextePatient,
   effacerErreur,
@@ -70,6 +71,9 @@ export function PanneauJarvis({
   }, [ouvert]);
 
   useEffect(() => abonnerConversation(setEtat), []);
+  useEffect(() => {
+    if (ouvert) void chargerHistorique();
+  }, [ouvert]);
   // Phase 3 : l'écran ALIMENTE la cible — `definirContextePatient` n'avait
   // aucun appelant, la cible restait vide et « son dossier » ne résolvait
   // jamais vers le dossier ouvert. L'effacement se propage de même (null).

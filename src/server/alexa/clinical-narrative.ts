@@ -18,6 +18,7 @@ const NARRATIVE_BATCH_CHARACTER_LIMIT=12000;
 const NARRATIVE_SOURCE_COUNT_LIMIT=48;
 const EXTRACTIVE_BATCH_CHARACTER_LIMIT=4500;
 const NARRATIVE_SOURCE_CHARACTER_LIMIT=5500;
+type ClinicalSummaryFocus='concerns'|'visit_summary';
 export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; consultationId?: string; originalText?: string; attribution?: "correction" | "plan"; scope?: "previous" | "current" | "change" }
 export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "extractive" | "source_selection" | "structured"; selectedSentences?: {id:string;quote:string}[] }
 function requiredSessionSource(source:NarrativeSource):boolean {
@@ -138,6 +139,8 @@ function multiVisitAnswerSchemaFor(aliases: readonly string[],chosenQuotes:Reado
 }
 const fold = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/gu, " ").trim();
 const quoteFold = (value:string)=>fold(value).replace(/[’‘`]/gu,"'").replace(/[\p{P}\p{S}]/gu," ").replace(/\s+/gu," ").trim();
+const comparisonStopWords=new Set('avec cela ceci cette comme dans depuis elle elles entre est fait faire fois ici il ils la le les leur leurs mais même ne nos notre nous par pas pour que qui sa ses son sous sur toute toutes tout un une vers'.split(' '));
+const comparisonContentTerms=(value:string)=>new Set(quoteFold(value).split(' ').filter(term=>term.length>=4&&!comparisonStopWords.has(term)));
 const unsafe = /ignore.{0,40}(?:instruction|consigne)|(?:system|assistant|developer)\s*:|(?:execute|appelle).{0,30}(?:outil|tool)|<\/?[a-z][^>]*>|\/api\//iu;
 const negative = /\b(?:pas|sans|aucun|aucune|nie|absence|jamais|ni)\b/u;
 function qualifiedQuotation(value:string):boolean{
@@ -583,7 +586,7 @@ function describeChangeValue(value: unknown, depth = 0): string {
     return `${label} ${value}`;
   }).join(", ") : "non renseigné";
 }
-interface CaseSentence {id:string;text:string;sourceIds:string[];at?:string;fact:string;visitId:string}
+interface CaseSentence {id:string;text:string;quote:string;sourceIds:string[];at?:string;fact:string;visitId:string;kind:'clinical'|'difficulty'|'outcome'|'plan'|'treatment'|'other'}
 function chronologicalSentenceUnits(text:string):string[]{
   const segments=[...new Intl.Segmenter('fr',{granularity:'sentence'}).segment(text)].map(item=>item.segment.trim()).filter(Boolean);
   const units:string[]=[];
@@ -594,8 +597,49 @@ function chronologicalSentenceUnits(text:string):string[]{
   }
   return units;
 }
+function hasTreatmentDetail(text:string):boolean {
+  return /\b(?:traitement|medicament|medication|posologie|dose|frequence|mg|mcg|microgrammes?|grammes?|ml|comprime|gelule)\b/u.test(fold(text));
+}
+function hasReportedComparisonOutcome(text:string):boolean{
+  const normalized=fold(text);
+  return /\b(?:peu de changement|aucun(?:e)? changement|pas de changement|aucun(?:e)? evolution|peu d['’]evolution|un mieux|mieux|ameliore\w*|amelioration|aggrave\w*|aggravation|evolution positive|evolution negative|stabilise\w*|stable)\b/u.test(normalized)
+    ||/\b(?:reprise|retour|recrudescence)\s+(?:(?:de|des|du)\s+)?(?:difficultes|symptomes?|troubles?)\b/u.test(normalized);
+}
+function hasExplicitComparisonChange(text:string):boolean{
+  return hasReportedComparisonOutcome(text)||/\b(?:repris|reprise|progression|regression)\b/u.test(fold(text));
+}
+function hasConcreteFollowUp(text:string):boolean{
+  return /\b(?:convenu|convient|prevoir|prevu|planifie|propose|poursuivre|maintenir|reprendre|arreter|suspendre|pause|noter)\b/u.test(fold(text));
+}
+function conciseFollowUp(quote:string):string{
+  return quote.match(/\b(?:prévoir|prévoit|prévu|proposer|propose|poursuivre|maintenir|reprendre|arrêter|suspendre|noter)\b[^,.;!?]*/iu)?.[0]?.trim()??quote;
+}
+function conciseComparisonFact(quote:string,kind:'difficulty'|'context'|'outcome'|'treatment'):string{
+  const prefixes:Record<typeof kind,RegExp>={
+    difficulty:/^(?:(?:la personne décrit|le patient décrit|la patiente décrit|la séance porte sur)\s+|th[èe]me r[ée]current\s*:\s*)/iu,
+    context:/^(?:(?:la gêne est surtout présente|la difficulté est surtout présente|les difficultés sont surtout présentes)\s+|[ée]tape observ[ée]e\s*:\s*)/iu,
+    outcome:/^(?:la personne rapporte|le patient rapporte|la patiente rapporte)\s+/iu,
+    treatment:/^(?:le traitement par|la prise de|le médicament)\s+/iu,
+  };
+  const stripped=quote.replace(prefixes[kind],'');
+  const compact=kind==='context'?stripped.replace(/,\s*(?:quand|lorsque|au moment où)\b[^.!?]*$/iu,''):stripped;
+  return compact.replace(/^[\s«“"']+/u,'').replace(/[.!?]+$/u,'').replace(/[\s»”"']+$/u,'').replace(/[.!?]+$/u,'').trim();
+}
+function comparisonUnpairedOutcome(quote:string,location:string):string{
+  const sentence=quote.trim().replace(/^(?:évolution|résultat|bilan)\s*:\s*/iu,'').replace(/[.!?]+$/u,'').trim();
+  if(/^(?:la personne|le patient|la patiente)\s+(?:rapporte|indique|décrit|signale)\b/iu.test(sentence)){
+    return copy.comparisonOutcomeUnpairedReported(location,sentence[0]!.toLocaleLowerCase('fr')+sentence.slice(1));
+  }
+  return copy.comparisonOutcomeUnpaired(location,conciseComparisonFact(sentence,'outcome'));
+}
+function comparisonDifficultyParts(quote:string):{main:string;context:string|null}{
+  const fact=conciseComparisonFact(quote,'difficulty');
+  const split=fact.match(/^(.+?),\s*(?:surtout|notamment|en particulier)\s+(.+)$/iu);
+  const clean=(value:string)=>value.replace(/[.!?]+$/u,'').trim();
+  return split?.[1]&&split[2]?{main:clean(split[1]),context:clean(split[2])}:{main:fact,context:null};
+}
 /** Native selection retains exact sentence provenance at every hidden level. */
-async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal:AbortSignal,options:{chronological?:boolean;includeDates?:boolean}={}):Promise<ClinicalNarrative>{
+async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal:AbortSignal,options:{chronological?:boolean;includeDates?:boolean;comparison?:boolean;focus?:ClinicalSummaryFocus}={}):Promise<ClinicalNarrative>{
   const unavailable:ClinicalNarrative={text:copy.unavailable,generated:false,complete:false,sourceIds:[]};
   if(!sources.length)return unavailable;
   let sequence=0;
@@ -606,6 +650,7 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     if(unsafe.test(source.text))return unavailable;
     const key=source.consultationId??source.id,list=groups.get(key)??[];list.push(source);groups.set(key,list);
   }
+  const latestConsultationId=[...sources].filter(source=>source.consultationId&&source.at).sort((a,b)=>Date.parse(a.at!)-Date.parse(b.at!)).at(-1)?.consultationId;
   const candidatesFor=(entries:readonly NarrativeSource[]):CaseSentence[]=>{
     const byVisit=new Map<string,NarrativeSource[]>();
     for(const source of entries){const key=source.consultationId??source.id,list=byVisit.get(key)??[];list.push(source);byVisit.set(key,list);}
@@ -619,7 +664,7 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
         // A following sentence may qualify a diagnosis, identify its subject,
         // or withdraw the preceding claim. Never detach it from its field.
         const sourceText=(source.originalText??source.text).trim();
-        const sentences=(options.chronological?chronologicalSentenceUnits(sourceText):[sourceText]).filter(text=>text.length>0&&!unsafe.test(text)&&!/(?:séance|consultation) précédente/iu.test(text));
+        const sentences=chronologicalSentenceUnits(sourceText).filter(text=>text.length>0&&!unsafe.test(text)&&!/(?:séance|consultation) précédente/iu.test(text));
         for(const quote of sentences){
           const sourceContext=fold(source.originalText??source.text);
           const attribution=sourceContext.match(/\b(?:cela|ceci|cette information|cette idee|ce fait)\s+(?:concerne|se rapporte a|est attribue a)\s+[^.!?;]*/u)??sourceContext.match(/\b(?:le|la) patient(?:e)?\s+n['’]a\s+pas\s+ete\s+interroge[^.!?;]*/u);
@@ -629,11 +674,14 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
           let text=prefix?copy.caseQuotation(prefix,quote):prose?quote:copy.caseQuotation(copy.recordedAuthor,quote);
            if(options.includeDates!==false&&source.at&&source.consultationId)text=copy.caseDatedSentence(date.format(new Date(source.at)),text);
           if(words(text)>70||seen.has(text))continue;
-          seen.add(text);choices.push({id:`c${++sequence}`,text,sourceIds:[source.id],...(source.at?{at:source.at}:{}),fact:quoteFold(quote),visitId:source.consultationId??source.id});
-          // Each choice keeps its entire recorded field and qualifications.
-          if(ordered.length>1||choices.length>=3)break;
+          seen.add(text);
+           const subjective=source.text.includes(`${copy.noteAreas.subjective} : `),clinicalArea=[copy.noteAreas.subjective,copy.noteAreas.objective,copy.noteAreas.assessment].some(area=>source.text.includes(`${area} : `));
+           const kind:CaseSentence['kind']=source.attribution==='plan'?(hasTreatmentDetail(quote)?'treatment':'plan'):subjective?(hasReportedComparisonOutcome(quote)?'outcome':'difficulty'):clinicalArea?'clinical':'other';
+           choices.push({id:`c${++sequence}`,text,quote,sourceIds:[source.id],...(source.at?{at:source.at}:{}),fact:quoteFold(quote),visitId:source.consultationId??source.id,kind});
+          const maxPerSource=options.comparison||options.focus==='concerns'&&source.text.includes(`${copy.noteAreas.subjective} : `)?3:source.attribution==='plan'&&source.consultationId===latestConsultationId?4:ordered.length>1?1:3;
+          if(choices.filter(choice=>choice.sourceIds.includes(source.id)).length>=maxPerSource)break;
         }
-        if(choices.length>=3)break;
+        if(choices.length>=12)break;
       }
       return choices;
     });
@@ -642,24 +690,100 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     if(!choices.length)throw Error('CaseSentenceUnavailable');
     const latest=choices.flatMap(choice=>choice.at?[choice.at]:[]).sort().at(-1);
     const current=(choice:CaseSentence)=>!latest||choice.at===latest;
-    const combinations=new Map(choices.filter(current).map(choice=>[choice.id,[choice]]));
-    for(let i=0;i<choices.length;i++)for(let j=i+1;j<choices.length;j++){
-      const pair=[choices[i]!,choices[j]!];
-      if(pair[0]!.fact!==pair[1]!.fact&&(!options.chronological||pair[0]!.visitId!==pair[1]!.visitId)&&pair.some(current)&&words(pair.map(choice=>choice.text).join(' '))<=70)combinations.set(pair.map(choice=>choice.id).join('+'),pair);
+    const latestVisitChoices=choices.filter(choice=>choice.visitId===latestConsultationId),hasDifficulty=latestVisitChoices.some(choice=>choice.kind==='difficulty'),focusKind=hasDifficulty?'difficulty':'clinical';
+    const promptedChoices=options.focus==='concerns'
+      ?choices.filter(choice=>choice.visitId===latestConsultationId&&choice.kind===focusKind)
+      :options.focus==='visit_summary'
+        ?choices.filter(choice=>choice.visitId===latestConsultationId&&(choice.kind===focusKind||choice.kind==='plan'||choice.kind==='treatment'))
+        :choices;
+    const combinations=new Map(promptedChoices.filter(current).map(choice=>[choice.id,[choice]]));
+    for(let i=0;i<promptedChoices.length;i++)for(let j=i+1;j<promptedChoices.length;j++){
+      const pair=[promptedChoices[i]!,promptedChoices[j]!];
+      const eligiblePair=options.comparison?pair[0]!.visitId!==pair[1]!.visitId:pair[0]!.fact!==pair[1]!.fact&&(!options.chronological||pair[0]!.visitId!==pair[1]!.visitId);
+      if(eligiblePair&&pair.some(current)&&words(pair.map(choice=>choice.text).join(' '))<=70)combinations.set(pair.map(choice=>choice.id).join('+'),pair);
     }
-    const pairs=[...combinations].filter(([,selection])=>selection.length===2);
-    const selectable=options.chronological&&pairs.length?new Map(pairs):combinations;
+    const latestTreatment=latestVisitChoices.some(choice=>choice.kind==='treatment'),latestPlan=latestVisitChoices.some(choice=>choice.kind==='plan');
+    const requiredKind=options.comparison||options.focus==='concerns'?null:latestTreatment?'treatment':latestPlan?'plan':null;
+    const hasCurrentClinicalFact=latestVisitChoices.some(choice=>choice.kind==='difficulty'||choice.kind==='clinical'||choice.kind==='outcome');
+    const requiresClinical=requiredKind!==null&&hasCurrentClinicalFact&&!options.focus;
+    const twoConcernsAvailable=options.focus==='concerns'&&[...combinations.values()].some(selection=>selection.length===2&&selection.every(choice=>choice.kind===focusKind));
+    const requiredConcernCount=options.focus==='concerns'&&twoConcernsAvailable?2:options.focus?1:0;
+    const compliant=new Map([...combinations].filter(([,selection])=>
+      (requiredKind===null||selection.some(choice=>choice.visitId===latestConsultationId&&choice.kind===requiredKind))
+      &&(!requiresClinical||selection.some(choice=>choice.visitId===latestConsultationId&&(choice.kind==='difficulty'||choice.kind==='clinical'||choice.kind==='outcome')))
+      &&(!options.focus||selection.filter(choice=>choice.visitId===latestConsultationId&&choice.kind===focusKind).length>=requiredConcernCount)
+    ));
+    if(!compliant.size)throw Error('CaseSummaryEvidenceUnavailable');
+    const pairs=[...compliant].filter(([,selection])=>selection.length===2);
+    const outcomePairs=pairs.filter(([,selection])=>selection.every(choice=>hasReportedComparisonOutcome(choice.text)));
+    const explicitlyChangedPairs=outcomePairs.length?outcomePairs:pairs.filter(([,selection])=>selection.every(choice=>hasExplicitComparisonChange(choice.text)));
+    const materiallyChangedPairs=explicitlyChangedPairs.length?explicitlyChangedPairs:pairs.filter(([,selection])=>selection.some(choice=>hasExplicitComparisonChange(choice.text)));
+    const preferredComparisonPairs=materiallyChangedPairs.length?materiallyChangedPairs:pairs;
+    const selectable=options.comparison?new Map(preferredComparisonPairs):options.chronological&&pairs.length?new Map(pairs):compliant;
+    if(!selectable.size)throw Error('CaseSummaryEvidenceUnavailable');
     const schema=z.object({selection:z.enum([...selectable.keys()] as [string,...string[]])}).strict();
-    const raw=await inferLocalText([{role:'system',content:options.chronological?copy.chronologySelectionPrompt:copy.caseSelectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
+    const selectionPrompt=options.comparison?copy.comparisonSelectionPrompt:options.chronological?copy.chronologySelectionPrompt:copy.caseSelectionPrompt;
+    const raw=await inferLocalText([{role:'system',content:selectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:promptedChoices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
     signal.throwIfAborted();
-    return selectable.get(schema.parse(JSON.parse(raw)).selection)!;
+    const selected=selectable.get(schema.parse(JSON.parse(raw)).selection)!;
+    if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-case-selection]',JSON.stringify({comparison:!!options.comparison,choices:choices.length,pairs:pairs.length,selectable:selectable.size,selected:selected.length,visits:new Set(selected.map(choice=>choice.visitId)).size}));
+    return selected;
+  };
+  const selectComparisonCandidates=async(choices:readonly CaseSentence[],entries:readonly NarrativeSource[]):Promise<CaseSentence[]>=>{
+    if(!choices.length)throw Error('CaseSentenceUnavailable');
+    const ids=choices.map(choice=>choice.id) as [string,...string[]],schema=z.object({selections:z.array(z.enum(ids)).min(1).max(Math.min(4,choices.length)).refine(values=>new Set(values).size===values.length)}).strict();
+    const orderedVisits=[...new Map(choices.map(choice=>[choice.visitId,choice])).values()].sort((a,b)=>Date.parse(a.at??'')-Date.parse(b.at??'')||a.visitId.localeCompare(b.visitId));
+    const visitOrder=new Map(orderedVisits.map((choice,index)=>[choice.visitId,index+1]));
+    const assemble=(selected:readonly CaseSentence[]):CaseSentence[]=>{
+      const result:CaseSentence[]=[];
+      for(const visit of orderedVisits){
+        const visitChoices=choices.filter(choice=>choice.visitId===visit.visitId);
+        const difficulties=visitChoices.filter(choice=>choice.kind==='difficulty');
+        const clinicalDifficulty=visitChoices.find(choice=>choice.kind==='clinical');
+        const outcome=visitChoices.find(choice=>choice.kind==='outcome')??visitChoices.find(choice=>hasReportedComparisonOutcome(choice.text));
+        const plans=visitChoices.filter(choice=>choice.kind==='plan');
+        const plan=plans.find(choice=>hasConcreteFollowUp(choice.fact))??plans[0];
+        const treatment=visitChoices.find(choice=>choice.kind==='treatment');
+        const desired=[
+          ...(difficulties.length?difficulties.slice(0,2):clinicalDifficulty?[clinicalDifficulty]:[]),
+          outcome,
+          plan,
+          treatment,
+          ...selected.filter(choice=>choice.visitId===visit.visitId),
+        ].filter((choice):choice is CaseSentence=>choice!==undefined);
+        const unique=[...new Map(desired.map(choice=>[choice.id,choice])).values()];
+        result.push(...(unique.length?unique:visitChoices.slice(0,1)).slice(0,5));
+      }
+      return result;
+    };
+    try{
+      const raw=await inferLocalText([{role:'system',content:copy.comparisonCandidatePrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text,visitId})=>({id,text,consultationOrder:visitOrder.get(visitId)}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:128,timeoutMs:900000,signal});
+      signal.throwIfAborted();
+      const selected=schema.parse(JSON.parse(raw)).selections.map(id=>choices.find(choice=>choice.id===id)!);
+      if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-case-candidates]',JSON.stringify({choices:choices.length,selected:selected.length,visits:orderedVisits.length}));
+      return assemble(selected);
+    }catch(error){
+      signal.throwIfAborted();
+      console.warn('[alexa-case-candidates] deterministic-fallback',localModelFailureCode(error));
+      return assemble([]);
+    }
   };
   const readBatch=async(entries:readonly NarrativeSource[]):Promise<CaseSentence[]>=>{
     try{return await select(candidatesFor(entries),entries);}
     catch(error){
       if(error instanceof Error&&error.message==='LocalModelContext'&&entries.length>1){
-        const middle=Math.ceil(entries.length/2),left=await readBatch(entries.slice(0,middle)),right=await readBatch(entries.slice(middle));
+        const middle=Math.ceil(entries.length/2),left=options.comparison?await readComparisonCandidates(entries.slice(0,middle)):await readBatch(entries.slice(0,middle)),right=options.comparison?await readComparisonCandidates(entries.slice(middle)):await readBatch(entries.slice(middle));
         return select([...left,...right],[]);
+      }
+      throw error;
+    }
+  };
+  const readComparisonCandidates=async(entries:readonly NarrativeSource[]):Promise<CaseSentence[]>=>{
+    try{return await selectComparisonCandidates(candidatesFor(entries),entries);}
+    catch(error){
+      if(error instanceof Error&&error.message==='LocalModelContext'&&entries.length>1){
+        const middle=Math.ceil(entries.length/2),left=await readComparisonCandidates(entries.slice(0,middle)),right=await readComparisonCandidates(entries.slice(middle));
+        return [...left,...right];
       }
       throw error;
     }
@@ -675,26 +799,172 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     let selected:CaseSentence[]=[];
     let completed=0;
     for(const group of chunks){
-      signal.throwIfAborted();selected.push(...await readBatch(group));completed++;
+      signal.throwIfAborted();selected.push(...(options.comparison?await readComparisonCandidates(group):await readBatch(group)));completed++;
       if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-case] progress',JSON.stringify({completed,total:chunks.length}));
     }
+    if(options.comparison&&new Set(selected.map(choice=>choice.visitId)).size<2)return unavailable;
     if(chunks.length>1){
-      while(selected.length>12){const next:CaseSentence[]=[];for(let start=0;start<selected.length;start+=12)next.push(...await select(selected.slice(start,start+12),[]));selected=next;}
-      selected=await select(selected,[]);
+      if(options.comparison){
+        selected=[...new Map(selected.map(choice=>[choice.id,choice])).values()];
+      }else{
+        while(selected.length>12){const next:CaseSentence[]=[];for(let start=0;start<selected.length;start+=12)next.push(...await select(selected.slice(start,start+12),[]));selected=next;}
+        selected=await select(selected,[]);
+      }
     }
-    const text=[...new Set(selected.map(choice=>choice.text))].join(' ');
-    if(!text||words(text)>70)return unavailable;
+    const datedVisits=new Set<string>();
+    const selectedText=(options.comparison?selected:[...new Map(selected.map(choice=>[choice.text,choice])).values()]).map(choice=>{
+      const day=choice.at?date.format(new Date(choice.at)):null,prefix=day?`Pour la consultation du ${day}, `:null;
+      if(prefix&&datedVisits.has(choice.visitId)&&choice.text.startsWith(prefix))return choice.text.slice(prefix.length);
+      if(prefix)datedVisits.add(choice.visitId);
+      return choice.text;
+    });
+    const orderedSelected=options.comparison?[...selected].sort((a,b)=>Date.parse(a.at??'')-Date.parse(b.at??'')||a.visitId.localeCompare(b.visitId)||a.id.localeCompare(b.id)):selected;
+    const text=options.comparison
+      ?(()=>{
+        const visits=[...new Map(orderedSelected.map(choice=>[choice.visitId,choice])).values()].sort((a,b)=>Date.parse(a.at??'')-Date.parse(b.at??'')||a.visitId.localeCompare(b.visitId));
+        const previous=visits[0],latest=visits.at(-1);
+        if(!previous||!latest||previous.visitId===latest.visitId)return selectedText.join(' ');
+        const date=new Intl.DateTimeFormat('fr-DZ',{timeZone:'Africa/Algiers',dateStyle:'medium'});
+        const factsFor=(visitId:string)=>{
+          const visitChoices=orderedSelected.filter(choice=>choice.visitId===visitId);
+          const difficulties=visitChoices.filter(choice=>choice.kind==='difficulty').slice(0,2);
+          const clinicalDifficulty=visitChoices.find(choice=>choice.kind==='clinical');
+          const outcome=visitChoices.find(choice=>choice.kind==='outcome')??visitChoices.find(choice=>hasReportedComparisonOutcome(choice.text));
+          const plans=visitChoices.filter(choice=>choice.kind==='plan');
+          const plan=plans.find(choice=>hasConcreteFollowUp(choice.fact))??plans[0];
+          const treatment=visitChoices.find(choice=>choice.kind==='treatment');
+          return {
+            difficulty:difficulties.length?difficulties:clinicalDifficulty?[clinicalDifficulty]:[],
+            outcome,
+            plan,
+            treatment,
+          };
+        };
+        const olderFacts=factsFor(previous.visitId),latestFacts=factsFor(latest.visitId);
+        const olderMainDifficulty=olderFacts.difficulty[0],latestMainDifficulty=latestFacts.difficulty[0];
+        const olderContext=olderFacts.difficulty[1],latestContext=latestFacts.difficulty[1];
+        const olderDifficultyParts=olderMainDifficulty?comparisonDifficultyParts(olderMainDifficulty.quote):null;
+        const latestDifficultyParts=latestMainDifficulty?comparisonDifficultyParts(latestMainDifficulty.quote):null;
+        const olderContextFact=olderDifficultyParts?.context??(olderContext?conciseComparisonFact(olderContext.quote,'context'):null);
+        const latestContextFact=latestDifficultyParts?.context??(latestContext?conciseComparisonFact(latestContext.quote,'context'):null);
+        const sameMainDifficulty=!!olderMainDifficulty&&!!latestMainDifficulty&&(olderMainDifficulty.fact===latestMainDifficulty.fact||olderDifficultyParts?.main===latestDifficultyParts?.main);
+        const sameContext=!!olderContextFact&&!!latestContextFact&&olderContextFact===latestContextFact;
+        const formatComparisonDate=options.includeDates!==false;
+        const paired={
+          difficulty:!!olderMainDifficulty&&!!latestMainDifficulty,
+          context:!!olderContextFact&&!!latestContextFact,
+          outcome:!!olderFacts.outcome&&!!latestFacts.outcome,
+          plan:!!olderFacts.plan&&!!latestFacts.plan,
+          treatment:!!olderFacts.treatment&&!!latestFacts.treatment,
+        };
+        const changeSentences:string[]=[];
+        if(olderMainDifficulty&&latestMainDifficulty){
+          changeSentences.push(sameMainDifficulty
+            ?copy.comparisonDifficultyPersistent(olderDifficultyParts?.main??conciseComparisonFact(olderMainDifficulty.quote,'difficulty'))
+            :copy.comparisonDifficultyTransition(conciseComparisonFact(olderMainDifficulty.quote,'difficulty'),conciseComparisonFact(latestMainDifficulty.quote,'difficulty')));
+        }
+        if(paired.context&&olderContextFact&&latestContextFact){
+          changeSentences.push(sameContext?copy.comparisonContextPersistent:copy.comparisonContextTransition(olderContextFact,latestContextFact));
+        }
+        if(olderFacts.outcome&&latestFacts.outcome){
+          const previousDate=formatComparisonDate&&previous.at?date.format(new Date(previous.at)):undefined;
+          const latestDate=formatComparisonDate&&latest.at?date.format(new Date(latest.at)):undefined;
+          changeSentences.push(olderFacts.outcome.fact===latestFacts.outcome.fact
+            ?copy.comparisonOutcomePersistent(conciseComparisonFact(olderFacts.outcome.quote,'outcome'),previousDate,latestDate)
+            :copy.comparisonOutcomeTransition(conciseComparisonFact(olderFacts.outcome.quote,'outcome'),conciseComparisonFact(latestFacts.outcome.quote,'outcome'),previousDate,latestDate));
+        }
+        if(olderFacts.plan&&latestFacts.plan){
+          changeSentences.push(olderFacts.plan.fact===latestFacts.plan.fact
+            ?copy.comparisonPlanPersistent
+            :copy.comparisonPlanTransition(conciseFollowUp(olderFacts.plan.quote),conciseFollowUp(latestFacts.plan.quote)));
+        }
+        if(olderFacts.treatment&&latestFacts.treatment){
+          changeSentences.push(olderFacts.treatment.fact===latestFacts.treatment.fact
+            ?copy.comparisonTreatmentPersistent
+            :copy.comparisonTreatmentTransition(conciseComparisonFact(olderFacts.treatment.quote,'treatment'),conciseComparisonFact(latestFacts.treatment.quote,'treatment')));
+        }
+        const outcomeDates=formatComparisonDate&&paired.outcome&&previous.at&&latest.at;
+        const pairedSummary=changeSentences.length
+          ?`${outcomeDates?copy.comparisonSummaryIntro:formatComparisonDate&&previous.at&&latest.at?copy.comparisonPeriod(date.format(new Date(previous.at)),date.format(new Date(latest.at))):copy.comparisonBetweenUndated} ${changeSentences.join(' ')}`
+          :'';
+        const visitText=(visit:CaseSentence,fields:ReturnType<typeof factsFor>,position:'previous'|'latest')=>{
+          const at=visit.at?date.format(new Date(visit.at)):null;
+          const location=pairedSummary
+            ?position==='previous'?'À la consultation précédente':'À la consultation la plus récente'
+            :at&&formatComparisonDate?`Pour la consultation du ${at}`:position==='previous'?'À la consultation précédente':'À la consultation la plus récente';
+          const details=[
+            fields.difficulty[0]&&!paired.difficulty?copy.comparisonDifficultyUnpaired(location,conciseComparisonFact(fields.difficulty[0].quote,'difficulty')):'',
+            fields.difficulty[1]&&!paired.context?copy.comparisonContextUnpaired(location,conciseComparisonFact(fields.difficulty[1].quote,'context')):'',
+            fields.outcome&&!paired.outcome?comparisonUnpairedOutcome(fields.outcome.quote,location):'',
+            fields.plan&&!paired.plan?copy.comparisonPlanUnpaired(location,conciseFollowUp(fields.plan.quote)):'',
+            fields.treatment&&!paired.treatment?copy.comparisonTreatmentUnpaired(location,conciseComparisonFact(fields.treatment.quote,'treatment')):'',
+          ].filter(Boolean);
+          return details.join(' ');
+        };
+        const conclusions:string[]=[];
+        const oldDifficulty=olderFacts.difficulty[0],newDifficulty=latestFacts.difficulty[0];
+        if(oldDifficulty&&newDifficulty){
+          const sameTheme=oldDifficulty.fact===newDifficulty.fact;
+          const oldContext=olderFacts.difficulty[1],newContext=latestFacts.difficulty[1];
+          conclusions.push(sameTheme&&oldContext&&newContext&&oldContext.fact!==newContext.fact
+            ?copy.comparisonDifficultySameContextChanged
+            :sameTheme?copy.comparisonDifficultySame:copy.comparisonDifficultyChanged);
+        }
+        if(olderFacts.outcome&&latestFacts.outcome)conclusions.push(olderFacts.outcome.fact===latestFacts.outcome.fact?copy.comparisonOutcomeSame:copy.comparisonOutcomeChanged);
+        if(olderFacts.plan&&latestFacts.plan)conclusions.push(olderFacts.plan.fact===latestFacts.plan.fact?copy.comparisonPlanSame:copy.comparisonPlanChanged);
+        if(olderFacts.treatment&&latestFacts.treatment)conclusions.push(olderFacts.treatment.fact===latestFacts.treatment.fact?copy.comparisonTreatmentSame:copy.comparisonTreatmentChanged);
+        const visitDetails=[visitText(previous,olderFacts,'previous'),visitText(latest,latestFacts,'latest')].filter(Boolean).join(' ');
+        return `${pairedSummary||`${copy.comparisonSummaryIntro} ${sameMainDifficulty&&olderMainDifficulty?`${copy.comparisonCommonDifficulty} ${conciseComparisonFact(olderMainDifficulty.quote,'difficulty')}. `:''}`}${visitDetails?`${pairedSummary?' ':''}${visitDetails}`:''} ${conclusions.length&&!pairedSummary?`${copy.comparisonBetween} ${conclusions.join(' ')}`:''}`.trim();
+      })()
+      :selectedText.join(' ');
+    const wordLimit=options.comparison?120:70;
+    if(process.env.ALEXA_DEBUG_NARRATIVE==='1'&&options.comparison)console.warn('[alexa-case-comparison]',JSON.stringify({wordCount:words(text),limit:wordLimit,kinds:[...new Set(orderedSelected.map(choice=>choice.kind))],visits:new Set(orderedSelected.map(choice=>choice.visitId)).size}));
+    if(!text||words(text)>wordLimit)return unavailable;
     return {text,generated:true,complete:true,method:'extractive',sourceIds:[...new Set(selected.flatMap(choice=>choice.sourceIds))]};
   }catch(error){signal.throwIfAborted();console.warn('[alexa-case] failure',localModelFailureCode(error));return unavailable;}
 }
 
 export async function summarizeClinicalCaseContext(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{return summarizeClinicalContext(context,signal,true,true);}
 
-export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true,caseSelection=false,selectionOptions:{chronological?:boolean;includeDates?:boolean}={}): Promise<ClinicalNarrative> {
+function clinicalScaleDetails(scales:readonly ClinicalContext["scales"][number][]):string{
+  return scales.map(scale=>`${scale.name} : score ${scale.score===null?"non renseigné":scale.score}${scale.interpretation?` ; interprétation enregistrée : ${scale.interpretation}`:""}`).join(" ; ");
+}
+
+function appendClinicalScaleSummary(result:ClinicalNarrative,scales:ClinicalContext["scales"],visits:readonly ClinicalConsultation[],comparison:boolean):ClinicalNarrative{
+  if(!result.generated)return result;
+  const visitIds=new Set(visits.map(visit=>visit.id));
+  const linked=scales.filter(scale=>scale.consultationId&&visitIds.has(scale.consultationId));
+  if(!linked.length)return result;
+  let summary:string;
+  let included=linked;
+  if(comparison){
+    const ordered=[...visits].sort((a,b)=>Date.parse(a.startedAt)-Date.parse(b.startedAt)||a.id.localeCompare(b.id));
+    const previous=ordered[0],latest=ordered.at(-1);
+    if(!previous||!latest||previous.id===latest.id)return result;
+    const previousScales=linked.filter(scale=>scale.consultationId===previous.id),latestScales=linked.filter(scale=>scale.consultationId===latest.id);
+    const date=new Intl.DateTimeFormat("fr-DZ",{timeZone:"Africa/Algiers",dateStyle:"medium"});
+    summary=`Échelles enregistrées — consultation précédente du ${date.format(new Date(previous.startedAt))} : ${previousScales.length?clinicalScaleDetails(previousScales):"aucune échelle enregistrée"} ; consultation la plus récente du ${date.format(new Date(latest.startedAt))} : ${latestScales.length?clinicalScaleDetails(latestScales):"aucune échelle enregistrée"}.`;
+  }else{
+    const byName=new Map<string,ClinicalContext["scales"]>();
+    for(const scale of linked){const group=byName.get(scale.name)??[];group.push(scale);byName.set(scale.name,group);}
+    const recent:ClinicalContext["scales"][number][]=[];
+    for(const group of byName.values()){
+      const byVisit=new Map<string,ClinicalContext["scales"][number]>();
+      for(const scale of [...group].sort((a,b)=>b.administeredAt.localeCompare(a.administeredAt)||b.id.localeCompare(a.id)))if(scale.consultationId&&!byVisit.has(scale.consultationId))byVisit.set(scale.consultationId,scale);
+      recent.push(...[...byVisit.values()].slice(0,2));
+    }
+    included=recent.sort((a,b)=>b.administeredAt.localeCompare(a.administeredAt)||a.name.localeCompare(b.name,"fr"));
+    summary=`Échelles récentes : ${clinicalScaleDetails(included)}.`;
+  }
+  return {...result,text:[result.text,summary].filter(Boolean).join(" "),sourceIds:[...new Set([...result.sourceIds,...included.map(scale=>scale.id)])]};
+}
+
+export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true,caseSelection=false,selectionOptions:{chronological?:boolean;includeDates?:boolean;comparison?:boolean;focus?:ClinicalSummaryFocus}={}): Promise<ClinicalNarrative> {
   let complete = context.coverage.complete && (!wholeRecord || !context.coverage.hasMore);
   // Same deterministic progression as a ranged summary: no model call, no drift.
   const structured = extractStructuredClinicalProgression(context);
-  if (structured && !wholeRecord) return { ...structured, complete: complete && structured.complete };
+  if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-summary-mode]',JSON.stringify({comparison:!!selectionOptions.comparison,wholeRecord,caseSelection,structured:!!structured,consultations:context.consultations.length,current:!!context.currentConsultation}));
+  if (structured && !wholeRecord && !selectionOptions.comparison) return { ...appendClinicalScaleSummary(structured,context.scales,context.consultations,false), complete: complete && structured.complete };
   const sources: NarrativeSource[] = [];
   const visits=[...(context.currentConsultation ? [context.currentConsultation] : []), ...context.consultations]
     .filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index)
@@ -715,7 +985,8 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
   if(caseSelection&&!sources.length)return {text:complete?copy.caseEmpty:copy.unavailable,complete,generated:false,sourceIds:[]};
   const result = caseSelection?await synthesizeCaseSentences(sources,signal,selectionOptions):await synthesizeClinicalNarrative(sources, signal);
   if(wholeRecord&&result.method==='source_selection')return {text:copy.unavailable,complete:false,generated:false,sourceIds:[]};
-  return { ...result, complete: complete && result.complete };
+  const withScales=appendClinicalScaleSummary(result,context.scales,visits,!!selectionOptions.comparison);
+  return { ...withScales, complete: complete && result.complete };
 }
 
 /** Summarizes only consultations already selected by an authorized, bounded read. */
@@ -723,7 +994,7 @@ export async function summarizeClinicalConsultations(context:ClinicalContext,sig
  const visits=[...context.consultations].filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
  let complete=context.coverage.complete&&(!context.coverage.hasMore||context.coverage.returned>=context.coverage.requested);
  if(!visits.length)return {text:complete?"Aucune consultation terminée n’est enregistrée pendant cette période.":copy.limited,complete,generated:false,sourceIds:[]};
- const structured=extractStructuredClinicalProgression(context);if(structured)return {...structured,complete:complete&&structured.complete};
+ const structured=extractStructuredClinicalProgression(context);if(structured)return {...appendClinicalScaleSummary(structured,context.scales,visits,false),complete:complete&&structured.complete};
  const sources:NarrativeSource[]=[];
  for(const visit of visits){
   const saved=z.object({resume:z.string().min(1).max(1500),notesDigest:z.string(),complete:z.boolean(),generated:z.literal(true)}).safeParse(visit.analysis?.content);
@@ -731,5 +1002,6 @@ export async function summarizeClinicalConsultations(context:ClinicalContext,sig
   else{const raw=consultationNarrativeSources(visit);sources.push(...raw.sources);complete&&=raw.complete;}
  }
  const result=await synthesizeClinicalNarrative(sources,signal);
- return {...result,complete:complete&&result.complete};
+ const withScales=appendClinicalScaleSummary(result,context.scales,visits,false);
+ return {...withScales,complete:complete&&result.complete};
 }

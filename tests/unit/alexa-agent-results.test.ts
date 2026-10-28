@@ -1,9 +1,15 @@
 import { expect, it, vi } from 'vitest';
 vi.mock("@/server/alexa/local-model",async importOriginal=>({...await importOriginal<typeof import("@/server/alexa/local-model")>(),inferLocalText:vi.fn()}));
-import { agentExecutor } from '@/server/alexa/agent-tools';
+import { agentExecutor, isolatePreviousClinicalConsultation } from '@/server/alexa/agent-tools';
 import {queryPatientsSchema} from '@/shared/alexa/agent';
 import {inferLocalText} from '@/server/alexa/local-model';
 import type {ClinicalContext} from '@/shared/alexa/clinical';
+it('isolates only the verified second-most-recent consultation for an earlier-visit summary',()=>{
+ const first={id:'33333333-3333-4333-8333-333333333333',startedAt:'2026-10-20T10:00:00+01:00',endedAt:'2026-10-20T11:00:00+01:00',notes:[]},second={id:'44444444-4444-4444-8444-444444444444',startedAt:'2026-10-10T10:00:00+01:00',endedAt:'2026-10-10T11:00:00+01:00',notes:[]};
+  const context:ClinicalContext={patientId:'22222222-2222-4222-8222-222222222222',consultations:[second,first],treatments:{current:[],history:[],historyComplete:true},diagnoses:[{id:'55555555-5555-4555-8555-555555555555',label:'Diagnostic',code:null,primary:true,onsetDate:null,resolvedAt:null}],scales:[],sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:false,hasMore:true}};
+ expect(isolatePreviousClinicalConsultation(context)).toMatchObject({consultations:[second],diagnoses:[],scales:[],treatments:{current:[],history:[]},coverage:{requested:1,returned:1,complete:true,hasMore:false},sourceRevision:'a'.repeat(64)});
+ expect(isolatePreviousClinicalConsultation({...context,consultations:[first]})).toBeNull();
+});
 it.each([
  ['2026-10-20T11:00:00Z','2026-10-21T08:00:00Z','demain à 9 h'],
  ['2026-10-20T23:30:00Z','2026-10-21T08:30:00Z',"aujourd’hui à 9 h 30"],
@@ -47,21 +53,23 @@ it('answers a chronological patient timeline as one concise paragraph without re
   {occurred_at:'2026-10-02T08:00:00Z',event_id:'timeline-consultation',event_type:'consultation',label_key:'consultation',practitioner_name:null,detail:{}},
   {occurred_at:'2026-10-01T08:00:00Z',event_id:'timeline-scale',event_type:'echelle',label_key:'scale',practitioner_name:null,detail:{}},
  ];
- const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Amel',last_name:'Bensaid'}]}:name==='list_patient_timeline'?{ok:true,data:rows}:{ok:false,error:{technical:'unexpected'}});
+  const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Amel',last_name:'Bensaid'}]}:name==='get_patient_timeline_revision'?{ok:true,data:[{revision:'c'.repeat(32),total:rows.length}]}:name==='list_patient_timeline'?{ok:true,data:rows}:{ok:false,error:{technical:'unexpected'}});
  const execute=agentExecutor({text:'Présente les événements cliniques dans leur ordre chronologique pour le dossier sélectionné.',conversationId:'concise-patient-timeline',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
  const result=await execute({id:'timeline',name:'get_patient_context',args:{partIds:['timeline'],section:'timeline'}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('ok');expect(result.complete).toBe(true);expect(result.text.length).toBeLessThan(300);expect(result.text).not.toContain('\n');
  expect(result.text.match(/\b\d{1,2} octobre 2026\b/gu)?.length).toBeLessThanOrEqual(2);
  expect((result.data as {rows:{event_type:string}[]}).rows.map(row=>row.event_type)).toEqual(['echelle','consultation','note']);
  expect(rpc.mock.calls.find(call=>call[0]==='list_patient_timeline')?.[1]).toMatchObject({p_id:patientId,p_limit:21});
+  expect(rpc.mock.calls.filter(call=>call[0]==='get_patient_timeline_revision')).toHaveLength(2);
 });
 it('marks a concise timeline summary partial and exposes its continuation when older events exist',async()=>{
  const patientId='22222222-2222-4222-8222-222222222222',asOf='2026-10-15T12:00:00.000Z';
  const rows=Array.from({length:21},(_,index)=>({occurred_at:new Date(Date.UTC(2026,9,15-index)).toISOString(),event_id:`timeline-${index}`,event_type:index%2?'consultation':'note',label_key:'event',practitioner_name:null,detail:{}}));
- const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Amel',last_name:'Bensaid'}]}:name==='list_patient_timeline'?{ok:true,data:rows}:{ok:false,error:{technical:'unexpected'}});
+  const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Amel',last_name:'Bensaid'}]}:name==='get_patient_timeline_revision'?{ok:true,data:[{revision:'d'.repeat(32),total:rows.length}]}:name==='list_patient_timeline'?{ok:true,data:rows}:{ok:false,error:{technical:'unexpected'}});
  const execute=agentExecutor({text:'Résume la chronologie du dossier sélectionné.',conversationId:'partial-concise-patient-timeline',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
  const result=await execute({id:'timeline',name:'get_patient_context',args:{partIds:['timeline'],section:'timeline'}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('partial');expect(result.complete).toBe(false);expect(result.data).toMatchObject({hasMore:true,timelineNext:{beforeId:'timeline-19'}});expect(result.text).toContain('suite');expect(result.text.length).toBeLessThan(400);
+  expect(rpc.mock.calls.filter(call=>call[0]==='get_patient_timeline_revision')).toHaveLength(2);
 });
 it('answers an empty tomorrow agenda in natural French and preserves the one-day window',async()=>{
  const asOf='2026-10-25T12:00:00.000Z',from='2026-10-26T00:00:00+01:00',to='2026-10-27T00:00:00+01:00';
@@ -83,6 +91,23 @@ it.each([[1558,'Le cabinet compte 1 558 patients au total, actifs et archivés
  const result=await execute({id:'all-count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[],population:'all'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
  expect(result.text).toBe(expected);expect(result.text).not.toMatch(/visibles|valeur nulle|âge au jour/u);
  expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'count',population:'all'});
+});
+it('allows an exact named search across active and archived patients',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',asOf='2026-10-27T12:00:00+01:00';
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:1,rows:[{id:patientId,first_name:'islam',last_name:'adjina',missing:[],completed_consultations:7,outstanding_balance:0}],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf,conditions:[],complete:true,offset:0,appliedSpec:{mode:'list',population:'all',query:'islam adjina'}}]});
+ const text='Cherche islam adjina.',execute=agentExecutor({text,conversationId:'exact-name-search-all-populations',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'search',name:'query_patients',args:{partIds:['search'],mode:'list',population:'all',query:'islam adjina'}},asOf,[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.text).toContain('islam adjina');expect(result.data).toMatchObject({total:1,rows:[{id:patientId}]});
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'list',population:'all',query:'islam adjina'});
+});
+it('keeps an all-cabinet pending-balance request out of patient scope',async()=>{
+ const asOf='2026-10-27T12:00:00+01:00',rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:4,rows:[],totals:{pendingDzd:25000},complete:true,offset:0}]});
+ const text='Quel reste à encaisser pour l’ensemble du cabinet ?',execute=agentExecutor({text,conversationId:'cabinet-pending-balance',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/finances'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'balance',name:'query_finance',args:{partIds:['balance'],mode:'totals',state:'all',patientName:'ensemble du cabinet'}},asOf,[],new AbortController().signal);
+ expect(result.status,result.text).toBe('ok');expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'totals',state:'all'});
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).not.toHaveProperty('patientId');
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).not.toHaveProperty('patientName');
 });
 it('uses a bounded, date-free source selection for the six most recent consultation summary',async()=>{
  const patientId='22222222-2222-4222-8222-222222222222';
@@ -107,6 +132,50 @@ it('uses a bounded, date-free source selection for the six most recent consultat
  expect(result.text).toContain('évolution documentée au suivi');
  expect(result.text).not.toMatch(/2026|octobre|non sign[ée]|brouillon/iu);
  expect(vi.mocked(inferLocalText).mock.calls.some(([messages])=>JSON.parse(String(messages[1]!.content)).choices!==undefined)).toBe(true);
+});
+it('answers a current-consultation problem question from the documented concern before plan commentary',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',consultationId='33333333-3333-4333-8333-333333333333';
+ const concern='La personne décrit une baisse de l’élan et un retrait des activités habituelles.';
+ const context:ClinicalContext={patientId,consultations:[{id:consultationId,startedAt:'2026-10-20T08:00:00Z',endedAt:'2026-10-20T09:00:00Z',rawNotes:null,notes:[{id:'44444444-4444-4444-8444-444444444444',version:'1',status:'signed',subjective:concern,objective:'L’échange reste suivi.',assessment:'Le travail vise à reprendre progressivement une activité appréciée.',plan:'Le traitement par SERTRALINE ALMUS à 50 mg par jour est maintenu.',amendments:[]}]}],treatments:{current:[],history:[],historyComplete:true},diagnoses:[],scales:[],sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>name==='search_patients'?{ok:true,data:[{id:patientId,first_name:'islam',last_name:'adjina',total_count:1}]}:name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'islam',last_name:'adjina'}]}:name==='get_alexa_clinical_context'?{ok:true,data:[context]}:{ok:false,error:{code:'unavailable',message:'Unavailable',technical:'XX000'}});
+ let selectionCall=0;
+ vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+  const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+  selectionCall++;
+  expect(body.choices.some(choice=>choice.text.includes(concern))).toBe(true);
+  expect(body.choices.some(choice=>choice.text.includes('reprendre progressivement'))).toBe(false);
+  expect(body.choices.some(choice=>choice.text.includes('SERTRALINE'))).toBe(selectionCall===2);
+  const ids=(options!.jsonSchema as {properties:{selection:{enum:string[]}}}).properties.selection.enum;
+  return JSON.stringify({selection:ids[0]});
+ });
+ const text='Quels problèmes principaux sont documentés dans la consultation actuelle de islam adjina ?';
+ const execute=agentExecutor({text,conversationId:'current-consultation-concern-read',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'concern',name:'get_patient_context',args:{partIds:['concern'],patientId,section:'summary',count:1}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.status).toBe('ok');
+ expect(result.text).toContain('décrit une baisse de l’élan et un retrait des activités habituelles');
+ expect(result.text).not.toContain('SERTRALINE');
+ const summaryText='Résume la dernière consultation de islam adjina.';
+ const summaryExecute=agentExecutor({text:summaryText,conversationId:'last-consultation-summary-concern',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ const summary=await summaryExecute({id:'summary',name:'get_patient_context',args:{partIds:['summary'],patientId,section:'summary',count:1}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(summary.status).toBe('ok');expect(summary.text).toContain('décrit une baisse de l’élan et un retrait des activités habituelles');expect(summary.text).toContain('SERTRALINE');
+ expect(summary.text).not.toContain('reprendre progressivement');
+});
+it('returns every stored scale administration even when the consultation page is limited to five',async()=>{
+ vi.mocked(inferLocalText).mockClear();
+ const patientId='22222222-2222-4222-8222-222222222222',scales=Array.from({length:101},(_,index)=>{
+  const day=new Date(Date.UTC(2020,0,1+index)).toISOString();
+  return {id:'55555555-5555-4555-8555-'+String(index+1).padStart(12,'0'),scaleId:null,name:`Échelle ${String(index+1).padStart(3,'0')}`,consultationId:'33333333-3333-4333-8333-'+String(index+1).padStart(12,'0'),consultationStartedAt:day,administeredAt:day,score:index,interpretation:`Interprétation ${index+1}`};
+ });
+ const context:ClinicalContext={patientId,consultations:[],treatments:{current:[],history:[],historyComplete:true},diagnoses:[],scales,sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false}};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Patiente',last_name:'Fictive'}]}:name==='get_alexa_clinical_context'?{ok:true,data:[context]}:{ok:false,error:{code:'unavailable',message:'Unavailable',technical:'XX000'}});
+ const text='Quelles échelles ont été enregistrées pour le patient sélectionné, dans quelles consultations ?';
+ const execute=agentExecutor({text,conversationId:'all-consultation-scales',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'scales',name:'get_patient_context',args:{partIds:['scales'],patientId,section:'scales'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect((result.data as {scales:{id:string}[]}).scales).toHaveLength(101);
+ expect(result.text).toContain('Échelle 001');expect(result.text).toContain('Échelle 101');
+ expect(result.text).toContain('Interprétation 101');
+ expect(rpc.mock.calls.find(call=>call[0]==='get_alexa_clinical_context')?.[1]).toMatchObject({p_limit:5});
+ expect(inferLocalText).not.toHaveBeenCalled();
 });
 it.each(['Affiche son profil.','Affiche son profil. ملاحظة'])('reads the full profile with French framing: %s',async text=>{
  const patientId='22222222-2222-4222-8222-222222222222';
@@ -238,6 +307,27 @@ it('opens the sole issued ordonnance for the explicitly named patient',async()=>
  const query=rpc.mock.calls.find(c=>c[0]==='query_alexa_records');
  expect(JSON.parse(query?.[1].p_spec)).toMatchObject({patientId,kind:'ordonnance',status:'issued'});
  expect(result.patientId).toBe(patientId);expect(result.navigation).toEqual({target:'document',patientId,documentId});
+});
+it('does not treat the first database document as the currently open document',async()=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:1,rows:[{id:'44444444-4444-4444-8444-444444444444',patientId:null,label:'DOC-2026-001',at:null,status:'issued',amount:null}],totals:{},complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Quel est le numéro du document actuellement ouvert ?',conversationId:'no-selected-document',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'document-context',name:'query_documents',args:{partIds:['document-context'],status:'issued'}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
+ expect(result.status).toBe('needs_input');expect(rpc).not.toHaveBeenCalled();expect(result.text).toMatch(/document.*ouvert|quel document/iu);
+});
+it('reads the selected document number only after checking its patient and revision',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',documentId='44444444-4444-4444-8444-444444444444',revision='a'.repeat(64),asOf='2026-10-15T12:00:00Z';
+ const profile={id:patientId,record_number:'P-001',first_name:'Nadia',last_name:'Test',birth_date:null,phone:null,phone_alt:null,id_document_number:null,id_document_issuer:null,sex:null,marital_status:null,address:null,emergency_contact:null,notes_admin:null,is_active:true};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[profile]}:name==='get_document'?{ok:true,data:[{document_id:documentId,patient_id:patientId,doc_number:'DOC-2026-014',content_hash:revision}]}:{ok:false,error:{technical:'unexpected'}});
+ const execute=agentExecutor({text:'Quel est le numéro du document actuellement ouvert ?',conversationId:'selected-document-number',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/documents',documentId,documentRevision:revision}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'document-context',name:'query_documents',args:{partIds:['document-context'],status:'issued'}},asOf,[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.patientId).toBe(patientId);expect(result.text).toContain('DOC-2026-014');expect(rpc.mock.calls.map(call=>call[0])).toEqual(['get_patient','get_document']);
+});
+it('refuses a selected document whose revision changed since the UI selected it',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',documentId='44444444-4444-4444-8444-444444444444',profile={id:patientId,record_number:'P-001',first_name:'Nadia',last_name:'Test',birth_date:null,phone:null,phone_alt:null,id_document_number:null,id_document_issuer:null,sex:null,marital_status:null,address:null,emergency_contact:null,notes_admin:null,is_active:true};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[profile]}:name==='get_document'?{ok:true,data:[{document_id:documentId,patient_id:patientId,doc_number:'DOC-2026-014',content_hash:'b'.repeat(64)}]}:{ok:false,error:{technical:'unexpected'}});
+ const execute=agentExecutor({text:'Quel est le numéro du document actuellement ouvert ?',conversationId:'stale-selected-document',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/documents',documentId,documentRevision:'a'.repeat(64)}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'document-context',name:'query_documents',args:{partIds:['document-context'],status:'issued'}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
+ expect(result.status).toBe('needs_input');expect(result.error?.code).toBe('current-document-revision-changed');expect(result.text).not.toContain('DOC-2026-014');
 });
 it('opens an ordonnance only for a unique explicit open request',async()=>{
  const patientId='22222222-2222-4222-8222-222222222222',asOf='2026-10-15T12:00:00.000Z';

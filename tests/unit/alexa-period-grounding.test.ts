@@ -10,7 +10,9 @@ it.each([
  ['Rendez-vous demain entre 9h30 et 11h15','2026-10-16T09:30:00+01:00','2026-10-16T11:15:00+01:00'],
  ['Rendez-vous le 16 octobre 2026 de 09:30 à 11:15','2026-10-16T09:30:00+01:00','2026-10-16T11:15:00+01:00'],
  ['Rendez-vous demain entre 23h et 24h','2026-10-16T23:00:00+01:00','2026-10-17T00:00:00+01:00'],
-])('grounds one explicit clock interval on its source civil day: %s',(text,from,to)=>{const window=explicitAgendaClockWindow(text,clock);expect(window).toMatchObject({from,to});expect(window?.matchedText).toMatch(/^(?:entre|de)\s/u);});
+ ['Rendez-vous demain matin','2026-10-16T08:00:00+01:00','2026-10-16T12:00:00+01:00'],
+ ['Rendez-vous demain après-midi','2026-10-16T12:00:00+01:00','2026-10-16T18:00:00+01:00'],
+])('grounds the requested agenda bounds on its source civil day: %s',(text,from,to)=>{const window=explicitAgendaClockWindow(text,clock);expect(window).toMatchObject({from,to});expect(window?.matchedText).toMatch(/^(?:(?:entre|de)\s|matin|apres-midi)/u);});
 it.each(['Rendez-vous demain entre 25h et 27h','Rendez-vous demain entre 9h60 et 11h','Rendez-vous demain entre 11h et 9h','Rendez-vous demain entre 9h et 11h puis entre 14h et 16h','Rendez-vous du 16 au 17 octobre 2026 entre 9h et 11h'])('does not guess an invalid or repeated clock interval: %s',text=>{expect(explicitAgendaClockWindow(text,clock)).toBe(null);});
 it('resolves the single whole relative day from source text and the frozen cabinet clock',()=>{expect(explicitAgentPeriod(input.text,clock)).toEqual({period:'demain',from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'});expect(explicitAgentPeriod('Quel est le chiffre d’affaires de ce mois ?','2028-02-29T12:00:00Z')).toMatchObject({from:'2028-02-01T00:00:00+01:00',to:'2028-03-01T00:00:00+01:00'});});
 it.each(['Demain entre 9h et 11h','Demain matin','Compare demain et aujourd’hui','Du 2026-10-16 au 2026-10-20','Demain à l’ouverture','Les recettes de ce mois à ce jour'])('does not constrain material ranges/windows/comparisons to a whole day: %s',text=>{expect(explicitAgentPeriod(text,clock)).toBeNull();});

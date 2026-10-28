@@ -54,6 +54,11 @@ it('uses authoritative finance period totals and keeps monthly recurring charges
  expect(rpc.mock.calls[0]).toEqual(['get_finance_overview',{p_period_start:'2026-10-01',p_period_end:'2026-10-31'}]);
  expect(rpc.mock.calls[1]?.[0]).toBe('get_charges_list');
 });
+it('retains the verified charge period and recurring totals for concise presentation',async()=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{lignes:[],total_recurrent_mensuel:106500,total_ponctuel_periode:0}]});
+ const result=await agentExecutor({...input,text:'Quel est le total des charges de ce mois-ci ?',appContext:{patientId:null,page:'/finances'}},{rpc},{rpc:vi.fn()})({id:'charges-summary',name:'query_finance',args:{partIds:['charges-summary'],mode:'charges',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}},asOf,[],new AbortController().signal);
+ expect(result.data).toMatchObject({du:'2026-10-01',au:'2026-10-31',total_recurrent_mensuel:106500,total_ponctuel_periode:0});
+});
 it('does not silently broaden a patient-filtered finance overview to the whole cabinet',()=>{
  expect(agentSchemas.query_finance.safeParse({partIds:['a'],mode:'overview',patientId:patient,period:'ce mois'}).success).toBe(false);
 });
@@ -81,12 +86,12 @@ it('blocks reversed finance periods and refuses ignored note count arguments',()
 
 it('retains authorized diagnoses, treatments, scales, current consultation and history while delegating the concise paragraph',async()=>{
  vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Le patient rapporte des difficultés familiales.',complete:true,generated:true,sourceIds:[]});
- const context={patientId:patient,consultations:[{id:record,startedAt:'2026-10-01T09:00:00Z',endedAt:'2026-10-01T09:30:00Z',rawNotes:'Fait historique fictif',rawNotesVersion:'b'.repeat(64),notes:[]}],currentConsultation:{id:'44444444-4444-4444-8444-444444444444',startedAt:'2026-10-15T09:00:00Z',endedAt:null,rawNotes:'Séance courante fictive',rawNotesVersion:'c'.repeat(64),notes:[]},treatments:{current:[{id:'55555555-5555-4555-8555-555555555555',medication:'Traitement fictif',version:1,status:'active',dose:'25',doseUnit:'mg',frequency:'matin',timing:[],instructions:null,startDate:'2026-10-01',endDate:null}],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false},diagnoses:[{id:'66666666-6666-4666-8666-666666666666',label:'Diagnostic fictif consigné',code:'F-TEST',primary:true,onsetDate:null,resolvedAt:null}],scales:[{id:'77777777-7777-4777-8777-777777777777',name:'Échelle fictive',administeredAt:asOf,score:8,interpretation:'Résultat fictif'}]};
+ const context={patientId:patient,consultations:[{id:record,startedAt:'2026-10-01T09:00:00Z',endedAt:'2026-10-01T09:30:00Z',rawNotes:'Fait historique fictif',rawNotesVersion:'b'.repeat(64),notes:[]}],currentConsultation:{id:'44444444-4444-4444-8444-444444444444',startedAt:'2026-10-15T09:00:00Z',endedAt:null,rawNotes:'Séance courante fictive',rawNotesVersion:'c'.repeat(64),notes:[]},treatments:{current:[{id:'55555555-5555-4555-8555-555555555555',medication:'Traitement fictif',version:1,status:'active',dose:'25',doseUnit:'mg',frequency:'matin',timing:[],instructions:null,startDate:'2026-10-01',endDate:null}],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false},diagnoses:[{id:'66666666-6666-4666-8666-666666666666',label:'Diagnostic fictif consigné',code:'F-TEST',primary:true,onsetDate:null,resolvedAt:null}],scales:[{id:'77777777-7777-4777-8777-777777777777',name:'Échelle fictive',consultationId:record,administeredAt:asOf,score:8,interpretation:'Résultat fictif'}]};
   const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
  const r=await agentExecutor({...input,text:'Résume la dernière consultation de ce dossier.'},{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary',count:1}},asOf,[],new AbortController().signal);
  expect(r.text).toContain('Le patient rapporte des difficultés familiales.');
  expect(r.data).toMatchObject({summary:{diagnoses:context.diagnoses,treatments:context.treatments,scales:context.scales,currentConsultation:context.currentConsultation,consultations:context.consultations}});
-  expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({patientId:patient,consultations:context.consultations}),expect.any(AbortSignal),false,true,{includeDates:false});
+  expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({patientId:patient,consultations:context.consultations}),expect.any(AbortSignal),false,true,{includeDates:false,focus:'visit_summary'});
  for(const type of ['diagnostic','treatment','scale','consultation'])expect(r.evidence.some(e=>e.type===type)).toBe(true);
  expect(r.data).toHaveProperty('summary');expect(r.complete).toBe(true);
 });
@@ -135,6 +140,36 @@ it('honors an explicit number in a chronological summary instead of the default 
  expect(clinicalRead?.[1]).toMatchObject({p_patient_id:patient,p_limit:3,p_before_at:null,p_before_id:null});
   expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({consultations:visits}),expect.any(AbortSignal),false,true,{includeDates:false});
  expect(result).toMatchObject({status:'ok',complete:true});
+});
+it.each([
+ 'Qu’est-ce qui a changé entre les deux dernières consultations de ce patient ?',
+ 'Compare les deux dernières consultations terminées de said doumer. Explique ce qui a changé dans les difficultés, l’évolution rapportée et le plan de suivi, puis ce qui reste identique.',
+])('synthesizes a two-consultation comparison across both visits instead of selecting only the latest visit: %s',async text=>{
+ const visits=Array.from({length:2},(_,i)=>({id:`88888888-8888-4888-8888-${String(i+1).padStart(12,'0')}`,startedAt:`2026-10-${String(15-i).padStart(2,'0')}T09:00:00Z`,endedAt:`2026-10-${String(15-i).padStart(2,'0')}T09:30:00Z`,notes:[{id:`99999999-9999-4999-8999-${String(i+1).padStart(12,'0')}`,version:'1',subjective:i===0?'Le sommeil est fragmenté et les sorties sont rares.':'Le sommeil est plus régulier, mais les sorties restent rares.',objective:null,assessment:null,plan:null,amendments:[]}]}));
+ const scales=[{id:'66666666-6666-4666-8666-666666666666',name:'PHQ-9',administeredAt:visits[1]!.startedAt,score:16,interpretation:'modérément sévère',consultationId:visits[1]!.id},{id:'67666666-6666-4666-8666-666666666666',name:'PHQ-9',administeredAt:visits[0]!.startedAt,score:7,interpretation:'léger',consultationId:visits[0]!.id}];
+ const context={patientId:patient,consultations:visits,diagnoses:[{id:'77777777-7777-4777-8777-777777777777',label:'Diagnostic historique',code:null,primary:true,onsetDate:null,resolvedAt:null}],scales,treatments:{current:[{id:'55555555-5555-4555-8555-555555555555',medication:'SERTRALINE ALMUS',version:2,status:'active',dose:'50',doseUnit:'mg',frequency:'une prise par jour',timing:['matin'],instructions:null,startDate:'2023-01-19',endDate:null}],history:[{id:'44444444-4444-4444-8444-444444444444',treatmentId:'55555555-5555-4555-8555-555555555555',version:1,action:'updated',occurredAt:'2023-01-19T08:00:00Z',previous:null,next:{status:'active',dose:'25',doseUnit:'mg',frequency:'une prise par jour',timing:['matin'],instructions:null,startDate:'2023-01-19',endDate:null},reason:'Mise en route documentée pendant la séance.',notes:null}],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Entre les deux consultations, le sommeil est devenu plus régulier, tandis que les sorties restent rares.',complete:true,generated:true,sourceIds:visits.map(visit=>visit.id)});
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='search_patients'?{id:patient,first_name:'said',last_name:'doumer',total_count:1}:name==='get_patient'?{id:patient,first_name:'said',last_name:'doumer'}:context]}));
+ const result=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'compare-two',name:'get_patient_context',args:{partIds:['compare-two'],section:'summary',count:2,patientName:text.includes('said doumer')?'said doumer':undefined}},asOf,[],new AbortController().signal);
+ expect(result).toMatchObject({status:'ok',complete:true});
+ const read=rpc.mock.calls.find(([name])=>name==='get_alexa_clinical_context');
+ expect(read?.[1]).toMatchObject({p_patient_id:patient,p_limit:2});
+ expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({consultations:visits,diagnoses:[],scales,treatments:{current:[],history:[],historyComplete:true}}),expect.any(AbortSignal),false,true,{chronological:true,includeDates:true,comparison:true});
+ expect(result.text).toContain('le sommeil est devenu plus régulier');expect([...new Set(result.evidence.filter(e=>e.type==='consultation').map(e=>e.id))].sort()).toEqual(visits.map(visit=>visit.id).sort());
+});
+
+it('compares the two most recent completed consultations and excludes a newer open consultation',async()=>{
+ const visits=Array.from({length:2},(_,i)=>({id:`88888888-8888-4888-8888-${String(i+1).padStart(12,'0')}`,startedAt:`2026-10-${String(15-i).padStart(2,'0')}T09:00:00Z`,endedAt:`2026-10-${String(15-i).padStart(2,'0')}T09:30:00Z`,notes:[{id:`99999999-9999-4999-8999-${String(i+1).padStart(12,'0')}`,version:'1',subjective:i===0?'Le sommeil reste difficile.':'Le sommeil est plus régulier.',objective:null,assessment:null,plan:null,amendments:[]}]}));
+ const open={id:'88888888-8888-4888-8888-000000000003',startedAt:'2026-10-16T09:00:00Z',endedAt:null,rawNotes:'Consultation en cours.',notes:[]};
+ const scales=[{id:'66666666-6666-4666-8666-666666666666',name:'PHQ-9',administeredAt:visits[1]!.startedAt,score:16,interpretation:'modérément sévère',consultationId:visits[1]!.id},{id:'67666666-6666-4666-8666-666666666666',name:'PHQ-9',administeredAt:open.startedAt,score:7,interpretation:'léger',consultationId:open.id}];
+ const context={patientId:patient,consultations:visits,currentConsultation:open,diagnoses:[],scales,treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Entre les deux consultations, le sommeil est devenu plus régulier.',complete:true,generated:true,sourceIds:visits.map(visit=>visit.id)});
+ const text='Compare les deux dernières consultations terminées de ce patient. Explique ce qui a changé dans le sommeil.';
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
+ const result=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'compare-completed-only',name:'get_patient_context',args:{partIds:['compare-completed-only'],section:'summary',count:2}},asOf,[],new AbortController().signal);
+ expect(result).toMatchObject({status:'ok',complete:true});
+ expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({consultations:visits,diagnoses:[],scales:[scales[0]],treatments:{current:[],history:[],historyComplete:true}}),expect.any(AbortSignal),false,true,{chronological:true,includeDates:true,comparison:true});
+ expect(vi.mocked(summarizeClinicalContext).mock.calls[0]?.[0].currentConsultation).toBeUndefined();
 });
 
 it('rejects an empty OR-status filter rather than presenting an accidental empty agenda',()=>{expect(agentSchemas.query_agenda.safeParse({partIds:['p'],period:'demain',statuses:[]}).success).toBe(false);});

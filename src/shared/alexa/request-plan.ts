@@ -23,6 +23,8 @@ export interface WorkingReference {
   listTotal?: number;
   pendingPlan?: RequestPlan;
   selectedPatientId?: string;
+  /** Last completed user request, used only to resolve short, scoped follow-ups. */
+  lastRequest?: string;
 }
 export interface RequestPlan extends WorkingReference {
   helpTopic?: string;
@@ -37,8 +39,16 @@ export interface RequestPlan extends WorkingReference {
   clarification?: "agenda-period" | "next-patient-period" | "patient" | "content" | "destination" | "date" | "operation" | "local-unavailable";
 }
 
+export function requestsCurrentVisitConcern(text: string): boolean {
+  const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+  return /\b(?:consultations?|seances?)\s+(?:actuelles?|courantes?|en cours)\b/u.test(normalized)
+    && /\b(?:problemes?|difficultes?|symptomes?|points?)\b/u.test(normalized);
+}
+
 export function requestedConsultationCount(text: string): number | null {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+  if (/\bavant[-\s]+derniere?\s+(?:consultation|seance|visite)\b/u.test(normalized)) return null;
+  if (requestsCurrentVisitConcern(text)) return 1;
   const explicit = requestedCount(normalized);
   if (explicit !== null) return explicit;
   const latestVisit = /\b(?:(?:la|le|sa|son|une)\s+)?(?:toute\s+)?(?:derniere?|premiere?)\s+(?:consultation|seance|visite|rendez[- ]?vous|rdv)\b|\b(?:(?:consultation|seance|visite|rendez[- ]?vous|rdv)\s+(?:la\s+)?plus\s+recente|(?:la|le|sa|son)\s+plus\s+recente\s+(?:consultation|seance|visite|rendez[- ]?vous|rdv))\b/u;
@@ -255,7 +265,7 @@ function clinicalFocus(text: string): ClinicalFocus | undefined {
 }
 
 /** An explicit book request alone must not read the currently open patient's record. */
-export function planRequest(text: string, previous: WorkingReference | null): RequestPlan {
+export function planRequest(text: string, previous: WorkingReference | null, asOf = new Date().toISOString()): RequestPlan {
   const shortcut=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().trim();
   const language=/\p{Script=Arabic}/u.test(text)?"ar" as const:"fr" as const;
   if(/^(?:quelle heure est[- ]il(?: a alger)?|il est quelle heure|شحال الساعة|كم الساعة)[?!.؟\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
@@ -281,8 +291,8 @@ export function planRequest(text: string, previous: WorkingReference | null): Re
   if (plan.intent === "proposal") return plan;
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
   if (plan.intent === "agenda") {
-    const selection = agendaSelection(text, !requestsNextPatient(text) && previous?.intent === "agenda" ? previous.agendaDay : undefined);
-    const today = agendaSelection("today")?.day;
+    const selection = agendaSelection(text, !requestsNextPatient(text) && previous?.intent === "agenda" ? previous.agendaDay : undefined, asOf);
+    const today = agendaSelection("today", undefined, asOf)?.day;
     if (!selection) return { intent: "clarify", count: 1, language: plan.language, clarification: "agenda-period" };
     if (requestsNextPatient(text) && (selection.day !== today || selection.requestedOnly)) return { intent: "clarify", count: 1, language: plan.language, clarification: "next-patient-period" };
     return { ...plan, agendaDay: selection.day, agendaRequestedOnly: selection.requestedOnly };

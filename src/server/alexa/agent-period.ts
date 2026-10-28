@@ -8,6 +8,16 @@ export function explicitAgendaClockWindow(text:string,asOf:string):{from:string;
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase();
  const time='(\\d{1,2})(?:\\s*h(?:\\s*(\\d{1,2}))?|:(\\d{2}))';
  const matches=[...plain.matchAll(new RegExp(`\\b(?:entre|de)\\s+${time}\\s*(?:et|a)\\s*${time}(?!\\d)`,'gu'))];
+ if(matches.length===0){
+  const dayparts=[...plain.matchAll(/\b(?:matin(?:ee)?|apres[- ]?midi|aprem)\b/gu)];
+  if(dayparts.length!==1)return null;
+  const daypart=dayparts[0]!,rest=plain.slice(0,daypart.index)+plain.slice(daypart.index+daypart[0].length);
+  if(hasExplicitClockRestriction(rest))return null;
+  const day=patientQueryPeriod(rest,asOf)??explicitAgentPeriod(rest,asOf);
+  if(!day||Date.parse(day.to)-Date.parse(day.from)!==86400000)return null;
+  const civil=day.from.slice(0,10),fromHour=/\b(?:matin(?:ee)?)\b/u.test(daypart[0])?8:12,toHour=fromHour===8?12:18;
+  return {from:`${civil}T${String(fromHour).padStart(2,'0')}:00:00+01:00`,to:`${civil}T${String(toHour).padStart(2,'0')}:00:00+01:00`,matchedText:daypart[0]};
+ }
  if(matches.length!==1)return null;
  const match=matches[0]!,rest=plain.slice(0,match.index)+plain.slice(match.index+match[0].length);
  if(hasExplicitClockRestriction(rest))return null;

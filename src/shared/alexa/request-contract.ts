@@ -1,4 +1,4 @@
-import {requestedConsultationCount,requestsOldestConsultations} from "./request-plan";
+import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations} from "./request-plan";
 import {parsePatientMention} from "./patient-mention";
 import {mentionsMedication} from "./medications";
 import type {RequestPart,SupportedCondition} from './agent';
@@ -111,6 +111,13 @@ export function explicitFrenchSingleMonthRange(text:string,asOf?:string):{from:s
  const next=month===12?{year:year+1,month:1}:{year,month:month+1};
  return {from:`${year}-${String(month).padStart(2,'0')}-01T00:00:00+01:00`,to:`${next.year}-${String(next.month).padStart(2,'0')}-01T00:00:00+01:00`};
 }
+/** The current cabinet month is an explicit period even without its French month name. */
+export function explicitFrenchCurrentMonthRange(text:string,asOf?:string):{from:string;to:string}|null{
+ const plain=fold(text),matches=[...plain.matchAll(/\b(?:ce mois(?:-ci)?|mois courant|mois en cours)\b/gu)];
+ if(matches.length!==1||!asOf||!Number.isFinite(Date.parse(asOf)))return null;
+ const cabinetDate=new Date(Date.parse(asOf)+3_600_000),year=cabinetDate.getUTCFullYear(),month=cabinetDate.getUTCMonth()+1,next=month===12?{year:year+1,month:1}:{year,month:month+1};
+ return {from:`${year}-${String(month).padStart(2,'0')}-01T00:00:00+01:00`,to:`${next.year}-${String(next.month).padStart(2,'0')}-01T00:00:00+01:00`};
+}
 /** Two named consultation months in a comparison stay separate half-open periods. */
 export function explicitFrenchComparedMonthRanges(text:string,asOf?:string):{month:typeof frenchMonths[number];year:number;from:string;to:string}[]|null{
  const plain=fold(text);
@@ -126,6 +133,11 @@ export function explicitFrenchComparedMonthRanges(text:string,asOf?:string):{mon
  });
 }
 export interface FrenchCountContract {clauses:readonly string[];}
+/** A combined total includes active and archived records only when both are explicit. */
+export function explicitCombinedPatientPopulationCount(text:string):boolean {
+ const plain=fold(text);
+ return /^\s*combien de (?:patients?|dossiers?)\s*,?\s*(?:au total\s*,?\s*)?actifs?\s*(?:,?\s+et\s+|,\s*)archives?(?:\s+(?:reunis|ensemble|au total|en tout))?\s*[?!.]*\s*$/u.test(plain);
+}
 function closedMetricFragment(text:string,field?:SupportedCondition['field']):boolean{
  const header='compte comptes comptez combien nombre total effectif patients patient dossiers dossier patientele actif actifs active actives tous toutes tout toute la le les de du des sont est';
  const prefix='puis separement les le la de du des actifs active actives sont combien n ont pas sans eu et ceux celles';
@@ -164,7 +176,7 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
  if(/\b(?:et|puis|aussi)\s+(?:quels?|quelles?|qui|comment|pourquoi|est-ce)\b|\b(?:rendez-vous|agenda|recettes?|revenus?|charges?)\b|(?:combien|compte(?:r|z)?|nombre(?:\s+total)?|total)\s+(?:(?:de|du|des|ses|les|toutes|tous)\s+)*consult\w*\b/u.test(plain)||savedDocumentIntent)return null;
  // A single interrogative with comma-separated categories may mean several outputs.
  // Leave that ambiguous form to native interpretation instead of forcing one output.
- const explicitCombinedPopulationCount=/^\s*combien de patients? au total,\s*actifs?\s+et\s+archives?\s*[?!.]*\s*$/u.test(fold(text));
+ const explicitCombinedPopulationCount=explicitCombinedPatientPopulationCount(text);
  if(starts.length===1&&text.slice(starts[0]).includes(',')&&!explicitCombinedPopulationCount&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
  const clauses=starts.length===1?[text.trim()]:starts.map((at,i)=>text.slice(at,starts[i+1]??text.length).replace(/[,;\s]+(?:et\s*)?$/iu,'').trim());
  return clauses.length<=12?{clauses}:null;
@@ -216,7 +228,7 @@ export function patientConditionsGrounded(conditions:readonly SupportedCondition
 /** Conservative checks for the explicit count vocabulary already in the capability contract. */
 function explicitConditions(text:string):SupportedCondition[]|null {
  const numbers:Record<string,string>={zero:'0',un:'1',une:'1',deux:'2',trois:'3',quatre:'4',cinq:'5',six:'6',sept:'7',huit:'8',neuf:'9',dix:'10',onze:'11',douze:'12',treize:'13',quatorze:'14',quinze:'15',seize:'16','dix-sept':'17','dix-huit':'18','dix-huitieme':'18','dix-neuf':'19',vingt:'20'};
- const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value),documented=!missing&&/\b(?:avec|ayant|dont|qui\s+(?:a|ont)|possed\w*|dispos\w*)\b/u.test(value)&&/\b(?:renseigne\w*|enregistre\w*|presen\w*|indique\w*)\b/u.test(value);
+  const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value),documented=!missing&&(/\b(?:poss[eè]d\w*|dispos\w*)\b/u.test(value)||(/\b(?:avec|ayant|dont|qui\s+(?:a|ont))\b/u.test(value)&&/\b(?:renseigne\w*|enregistre\w*|presen\w*|indique\w*)\b/u.test(value)));
  const add=(field:SupportedCondition['field'],op:SupportedCondition['op'],n:SupportedCondition['value'])=>{const condition={field,op,value:n};if(!conditions.some(existing=>key(existing)===key(condition)))conditions.push(condition);};
  if(missing&&/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u.test(value))add('identity_card','missing',null);
  if(documented&&/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u.test(value))add('identity_card','present',null);
@@ -295,7 +307,8 @@ export function constrainCountDeclaration(parts:RequestPart[],contract:FrenchCou
 
 export type FrenchReadTool='query_agenda'|'query_patients'|'query_consultations'|'get_patient_context'|'query_documents'|'query_finance'|'query_app'|'search_knowledge'|'prepare_action'|'navigate';
 export interface FrenchReadTarget {tool:FrenchReadTool;navigationTarget?:'patient'|'patients'|'agenda'|'dashboard'|'documents'|'finances'|'parametres'|'jarvis';consultationCount?:number;messageKind?:'rappel_rendez_vous'|'document_pret';applicationView?:'cabinet'|'practitioner'|'notifications'|'system'|'message_draft'|'reception'|'medication_catalog';financeMode?:'charges'|'overview'|'calendar'|'totals'|'composition';financeState?:'all'|'pending'|'collected';financeConsultationStatus?:'closed';patientSection?:'summary'|'history'|'treatments'|'profile'|'diagnoses'|'scales'|'current'|'notes'|'timeline';consultationMode?:'count'|'list';consultationStatus?:'all'|'open'|'closed'|'unsigned';dateAxis?:'started_at'|'ended_at';unboundedPeriod?:boolean;from?:string;to?:string;noteArea?:'working'|'subjective'|'objective'|'assessment'|'plan'|'amendment'|'structured';noteQuery?:string;diagnosisState?:'all'|'active'|'resolved';diagnosisRole?:'all'|'primary'|'secondary';treatmentState?:'all'|'active'|'paused'|'stopped';documentKind?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance';documentStatus?:'issued'|'draft';documentAllKinds?:boolean;}
-export type FrenchRequestAdmission=Omit<FrenchReadTarget,'tool'>&{tools?:readonly string[];profileOnly:boolean;preparationAction?:'create_editable_document_draft'|'update_editable_document_draft'|'create_appointment'|'update_treatment'|'stop_treatment'|'print_issued_document'|'send_internal_message';preparationDocumentType?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance'};
+export type FrenchRequestAdmission=Omit<FrenchReadTarget,'tool'>&{tools?:readonly string[];profileOnly:boolean;preparationAction?:'create_appointment'|'reschedule_appointment'|'cancel_appointment'|'mark_patient_arrived'|'set_consultation_price'|'record_payment_collected'|'close_consultation'|'create_editable_document_draft'|'update_editable_document_draft'|'print_issued_document'|'update_treatment'|'pause_treatment'|'resume_treatment'|'stop_treatment'|'create_charge'|'update_charge'|'deactivate_charge'|'send_internal_message';preparationDocumentType?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance'};
+const PREPARATION_ACTIONS=new Set<NonNullable<FrenchRequestAdmission['preparationAction']>>(['create_appointment','reschedule_appointment','cancel_appointment','mark_patient_arrived','set_consultation_price','record_payment_collected','close_consultation','create_editable_document_draft','update_editable_document_draft','print_issued_document','update_treatment','pause_treatment','resume_treatment','stop_treatment','create_charge','update_charge','deactivate_charge','send_internal_message']);
 const patientAnchor=(plain:string,text:string)=>{
  if(/\b(?:patients?|dossiers?|personnes?|selectionn\w*|son|sa|ses)\b/u.test(plain)||/\b[A-ZÀ-Ö][a-zà-ö]+\s+[A-ZÀ-Ö][a-zà-ö]+\b/u.test(text))return true;
  if(/\b(?:combien|nombre|total|effectif|compte\w*|liste\w*)\b/u.test(plain))return false;
@@ -307,6 +320,12 @@ function messageDraftTarget(text:string):'rappel_rendez_vous'|'document_pret'|un
  const plain=fold(text);
  if(!/\b(?:prepare\w*|redige\w*|brouillon)\b/u.test(plain)||! /\b(?:message|sms|rappel)\b/u.test(plain))return;
  return /\brendez[- ]vous|\brdv\b/u.test(plain)?'rappel_rendez_vous':/\bdocument\b/u.test(plain)&&/\bpret|disponib|mise a disposition/u.test(plain)?'document_pret':undefined;
+}
+export function isFrenchNamedLatestConsultationComparison(text:string):boolean{
+ const plain=fold(text),mention=parsePatientMention(text);
+ const explicitCommand=/^\s*(?:alexa[, :]+\s*)?(?:(?:s.il te plait|s.il vous plait|svp|stp)\s*,?\s*)?(?:(?:peux[- ]tu|pourrais[- ]tu)\s+(?:me\s+)?)?(?:compare\w*|comparaison|explique\w*|indique\w*|qu['’]?est[- ]ce qui a change\w*|quels? changements?|quelles? differences?)\b/u.test(plain);
+ const latestPair=/\b(?:les?\s+)?(?:deux|2)\s+dernieres?\s+(?:consultations?|seances?)\b/u.test(plain);
+ return mention.status==='named'&&explicitCommand&&latestPair&&/\b(?:compar\w*|differenc\w*|chang\w*|evolu\w*)\b/u.test(plain);
 }
 function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const plain=fold(text),anchor=patientAnchor(plain,text),targets:FrenchReadTarget[]=[];
@@ -332,9 +351,11 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  if(knowledge)add({tool:'search_knowledge'});
  const storedMedicalScope=/\b(?:dossiers?|ce patient|cette patiente|patients? selectionne\w*|patient courant|notes?|consultations?|quels? patients|combien de patients|liste les patients)\b/u.test(plain)||mention.status==='named'&&/\bpatient(?:e)?\b/u.test(plain);
  if(knowledge&&!storedMedicalScope)return [{tool:'search_knowledge'}];
- if(/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&(/\b(?:montre\w*|affich\w*|liste\w*|donne\w*|combien|nombre|quel(?:s|les)?|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|confirme\w*|annule\w*|termine\w*|ouvert\w*|disponible\w*|libre\w*|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain)||!!dateRange||!!monthRange||!!dayRange))add({tool:'query_agenda'});
+ const patientAttendeesQuestion=/\bpatients?\b[^.!?]{0,35}\b(?:attendus?|prevus?)\b/u.test(plain)&&/\b(?:demain|aujourd.hui|matin\w*|apres[- ]?midi|aprem|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain);
+ if((/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&(/\b(?:montre\w*|affich\w*|liste\w*|donne\w*|combien|nombre|quel(?:s|les)?|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|confirme\w*|annule\w*|termine\w*|ouvert\w*|disponible\w*|libre\w*|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain)||!!dateRange||!!monthRange||!!dayRange))||patientAttendeesQuestion)add({tool:'query_agenda'});
  const latestNarrativeVerb=requestedConsultationCount(text)===1&&/\b(?:decris\w*|expliqu\w*|ressort\w*|retiens\w*|compte rendu)\b/u.test(plain);
- const summaryStyle=(/\b(?:resum\w*|synthes\w*|raconte\w*|chang\w*|compar\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)||latestNarrativeVerb)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
+ const currentVisitConcern=requestsCurrentVisitConcern(text);
+ const summaryStyle=(/\b(?:resum\w*|synthes\w*|raconte\w*|chang\w*|compar\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)||latestNarrativeVerb||currentVisitConcern)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
  const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
  const notes=olderDifficulty||/\b(?:notes?|focus|mesures|subjecti(?:f|fs|ve|ves)|objecti(?:f|fs|ve|ves)|conduites? a tenir|texte integral|soap|amendements?|rectificatifs?)\b/u.test(plain)||(/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(plain))||(/\bevaluations?\b/u.test(plain)&&/\bconsult\w*/u.test(plain)&&!/psychometri/u.test(plain));
  const areas=[['working',/\b(?:travail|brut|brute|bruts|brutes)\b/u],['subjective',/\bsubjecti(?:f|fs|ve|ves)\b/u],['objective',/\bobjecti(?:f|fs|ve|ves)\b/u],['assessment',/\bevaluations?\b/u],['plan',/\bconduites? a tenir\b|\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u],['amendment',/\b(?:amendements?|rectificatifs?)\b/u],['structured',/\b(?:structurees?|focus|mesures)\b/u]] as const;
@@ -358,7 +379,8 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const requestedConsultationStatus=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*)\b/u.test(consultationText)?'closed' as const:/\b(?:ouvert\w*|en cours)\b/u.test(consultationText)?'open' as const:undefined;
  const unpricedQuestion=/\bconsult\w*\b/u.test(plain)&&/\b(?:sans tarif|non tarife\w*|sans prix|(?:pas|aucun) de tarif)\b/u.test(plain);
  const consultation=/\b(?:consultations?|seances?)\b/u.test(plain);
- if(consultation&&!unpricedQuestion&&!notes&&!knowledge&&!summaryRequested){
+ const explicitScaleHistory=consultation&&/\b(?:echelles?|scores?)\b/u.test(plain)&&/\b(?:administ\w*|enregistr\w*|effectu\w*|pass\w*)\b/u.test(plain);
+ if(consultation&&!explicitScaleHistory&&!unpricedQuestion&&!notes&&!knowledge&&!summaryRequested){
   const detail=/\b(?:details?|duree|analys\w*)\b/u.test(plain);
   const consultationMode:FrenchReadTarget['consultationMode']=detail?undefined:monthlyComparison?'count':/\b(?:liste\w*|historique)\b/u.test(plain)?'list':/\b(?:combien|nombre|total|compte|comptabilise)\b/u.test(plain)?'count':'list';
   const consultationStatus:FrenchReadTarget['consultationStatus']=detail?undefined:/\b(?:non signe\w*|sans signature)\b/u.test(plain)?'unsigned':requestedConsultationStatus??'all';
@@ -371,12 +393,12 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const financialCharges=/\bcharges?\b/u.test(plain)&&/\b(?:enregistr\w*|depenses?|du mois|de ce mois|ce mois|cette periode|total|repartition|reparti\w*|compositi\w*|categorie\w*|financ\w*|factures?)\b/u.test(plain)&&! /\belectriqu\w*|electrostat\w*\b/u.test(plain);
  if((financeCore||financialCharges)&&!knowledge){
   const createdCollectedComparison=/\b(?:difference|compar\w*)\b/u.test(plain)&&/\brecettes? encaisse\w*\b/u.test(plain)&&/\bpaiements? cree\w*\b/u.test(plain);
-  const allTimeBalance=/\b(?:solde|impayes?|a encaisser|reste a encaisser)\b[^.!?]*\b(?:toutes? dates?|toutes? periodes?|depuis toujours|confondue?s?)\b/u.test(plain);
+  const allTimeBalance=/\b(?:solde|impayes?|a encaisser|reste a encaisser)\b[^.!?]*\b(?:toutes? dates?|toutes? periodes?|depuis toujours|confondue?s?|(?:ensemble|totalite) du cabinet|tout le cabinet|cabinet entier)\b/u.test(plain);
   const chargeComposition=/\bcharges?\b/u.test(plain)&&/\b(?:repartition|reparti\w*|compositi\w*|categories?)\b/u.test(plain);
   const financeMode:FrenchReadTarget['financeMode']=/\bcalendrier financier\b/u.test(plain)?'calendar':createdCollectedComparison||unpricedQuestion||paymentAmountQuestion||allTimeBalance?'totals':chargeComposition?'composition':anchor?undefined:/\b(?:charges?|depenses?)\b/u.test(plain)?'charges':/\b(?:chiffre d.affaires|resultat net|bilan financier|recettes?|revenus?|indicateurs? financiers?|synthese de caisse)\b/u.test(plain)?'overview':undefined;
   const financeState=financeMode==='totals'?(createdCollectedComparison||unpricedQuestion||allTimeBalance?'all':frenchFinanceRecordState(text)??'all'):financeMode?null:frenchFinanceRecordState(text);
   const financeMonthText=createdCollectedComparison?periodText.replace(/\bentre\b/u,' '):periodText;
-  const financePeriod=dateRange??dayRange??explicitFrenchMonthRange(financeMonthText)??explicitFrenchSingleMonthRange(financeMonthText,asOf);
+  const financePeriod=dateRange??dayRange??explicitFrenchMonthRange(financeMonthText)??explicitFrenchSingleMonthRange(financeMonthText,asOf)??explicitFrenchCurrentMonthRange(financeMonthText,asOf);
   add({tool:'query_finance',...(financeMode?{financeMode}:{}),...(financeState?{financeState}:{}),...(unpricedQuestion?{financeConsultationStatus:'closed' as const}:{}),...(financePeriod??{})});
  }
  if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
@@ -393,7 +415,8 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
   if(patientSection)add({tool:'get_patient_context',patientSection,unboundedPeriod,...(patientSection==='summary'&&monthRange?monthRange:{}),...(patientSection==='notes'&&dayRange?dayRange:{}),...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&requestedConsultationStatus?{consultationStatus:requestedConsultationStatus}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
  }
- const patientQuery=/\b(?:patients|dossiers|patientele)\b/u.test(plain)&&(/\b(?:combien|nombre|total|compt\w*|liste\w*|lesquels|lesquelles|trouve\w*|recherch\w*|identifi\w*|actifs?|inactifs?|archives?|mineurs?|adultes?|enfants?|sans|aucun\w*|manquant\w*|impayes?|soldes?|dettes?)\b/u.test(plain));
+ const namedPatientSearch=mention.status==='named'&&/^\s*(?:alexa[, :]+)?(?:cherche|recherche|trouve|retrouve)\s+(?:(?:le|la)\s+)?(?:(?:patient|patiente)\s+)?[\p{L}][\p{L}\p{M}'’-]*(?:\s+[\p{L}][\p{L}\p{M}'’-]*){1,2}\s*[.!?]*\s*$/iu.test(text);
+ const patientQuery=namedPatientSearch||(/\b(?:patients|dossiers|patientele)\b/u.test(plain)&&/\b(?:combien|nombre|total|compt\w*|liste\w*|lesquels|lesquelles|trouve\w*|recherch\w*|identifi\w*|actifs?|inactifs?|archives?|mineurs?|adultes?|enfants?|sans|aucun\w*|manquant\w*|impayes?|soldes?|dettes?)\b/u.test(plain));
  if(patientQuery)add({tool:'query_patients'});
  return targets;
 }
@@ -407,7 +430,7 @@ function internalMessageTarget(text:string):Pick<FrenchRequestAdmission,'prepara
 }
 
 /** A requested draft/proposal is an outcome, never authority to execute the business action. */
-function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparationAction'|'preparationDocumentType'>|null{
+function preparationTarget(text:string,selectedDocumentId?:string|null):Pick<FrenchRequestAdmission,'preparationAction'|'preparationDocumentType'>|null{
  const plain=fold(text),command=plain
   .replace(/^(?:alexa|assistant)[, :]+/u,'')
   .replace(/^(?:dans|sur)\s+(?:le\s+)?dossier\s+(?:(?:du|de)\s+|d')/u,'')
@@ -415,20 +438,38 @@ function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparation
   .replace(/^(?:(?:pour|concernant)\s+)?(?:patiente?\s+)?[\p{L}][\p{L}'’-]*(?:\s+[\p{L}][\p{L}'’-]*){1,2}\s*,\s*/u,'')
   .replace(/^(?:(?:s.il te plait|s.il vous plait|svp),?\s*)?(?:(?:est[- ]ce que\s+)?(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais|je souhaite|je veux)\s+(?:(?:me|nous)\s+|(?:que\s+)?(?:tu|vous)\s+)?)/u,'')
   .trim();
- if(/\b(?:ne|pas|annule|signe|emets|delivre)\b/u.test(plain))return null;
+ if(/^\s*(?:alexa[, :]+\s*)?(?:prepar\w*|cre\w*|redig\w*|gener\w*)\b[^.!?]{0,100}\b(?:pas|jamais|plus|aucun\w*|aucune\w*)\b[^.!?]{0,100}\b(?:ordonn\w*|certific\w*|justific\w*|suivi\s+medic\w*|bonne\s+sante)\b/u.test(plain))return null;
+ if(/\b(?:ne|n)\b[^.!?]{0,100}\b(?:pas|plus|jamais|aucun|aucune)\b/u.test(plain)||/\b(?:si je|si on|si l.on|imaginons|hypothetiquement|a titre d.exemple|que ferais[- ]tu|je cite)\b/u.test(plain))return null;
+ if(/[«“"][^»”"]{0,400}\b(?:cree|ajoute|enregistre|modifie|change|ajuste|arrete|cesse|suspends?|reprends?|annule|deplace|reporte|decale|imprime|fixe|encaisse|signe|cloture)\b[^»”"]*[»”"]/u.test(plain))return null;
  const requestedDocumentType=/\bbonne sante(?: mentale)?\b/u.test(plain)?'bonne_sante_mentale':/\bsuivis?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'suivi_medical':/\bcertificats?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|ons|f|fs)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
- if(requestedDocumentType&&/^(?:imprim\w*|lance\w*\s+l.impression)\b/u.test(command))return {preparationAction:'print_issued_document',preparationDocumentType:requestedDocumentType};
+ const printCommand=/^(?:imprim\w*|lance\w*\s+l.impression)\b/u.test(command);
+ if(requestedDocumentType&&printCommand)return {preparationAction:'print_issued_document',preparationDocumentType:requestedDocumentType};
+ if(selectedDocumentId&&printCommand)return {preparationAction:'print_issued_document'};
  const politeDocumentRequest=/^(?:je voudrais|j.aimerais|je souhaite|je veux)\b/u.test(plain)&&!/^\s*(?:consulte\w*|voir\b|lire\b|affiche\w*|ouvre\w*|cherche\w*|liste\w*|retrouve\w*)\b/u.test(command);
  const treatmentField=/\b(?:dose|posologie|frequence|moment de prise|consignes?|instructions?|date de (?:debut|fin))\b/u.test(plain);
  const treatmentTarget=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)||mentionsMedication(plain)||(treatmentField&&/\b\d+(?:[.,]\d+)?\s*(?:mg|g|mcg|µg|ml|l)\b/u.test(plain));
+ if(treatmentTarget&&/^(?:mets?\s+en\s+pause|mettre\s+en\s+pause|suspends?|suspendre|pause)\b/u.test(command))return {preparationAction:'pause_treatment'};
+ if(treatmentTarget&&/^(?:reprend(?:s|re)?|reprenez|relance\w*)\b/u.test(command))return {preparationAction:'resume_treatment'};
  if(treatmentTarget&&/^(?:arrete\w*|cesse\w*|interromp\w*|stoppe\w*)\b/u.test(command))return {preparationAction:'stop_treatment'};
  if(treatmentTarget&&(/^(?:modifi\w*|change\w*|ajust\w*|augment\w*|diminu\w*|passe\w*|baisse\w*|reduit\w*|fix\w*|met(?:s)?\s+a\s+jour|mettre\s+a\s+jour|retir\w*|enlev\w*|supprim\w*)\b/u.test(command)||(treatmentField&&/^ajout\w*/u.test(command))))return {preparationAction:'update_treatment'};
- if(/\b(?:aucun|supprime)\b/u.test(plain))return null;
+ const chargeTarget=/\bcharges?\b/u.test(plain);
+ if(chargeTarget&&/^(?:cre\w*|ajout\w*|enregistr\w*|engag\w*)\b/u.test(command))return {preparationAction:'create_charge'};
+ if(chargeTarget&&/^(?:desactiv\w*|supprim\w*|annul\w*|retir\w*)\b/u.test(command))return {preparationAction:'deactivate_charge'};
+ if(chargeTarget&&/^(?:modifi\w*|chang\w*|ajust\w*|corrig\w*|rectifi\w*)\b/u.test(command))return {preparationAction:'update_charge'};
+ const appointment=/\b(?:rendez[- ]vous|rdv)\b/u.test(plain);
+ if(appointment&&/^(?:annul\w*|supprim\w*)\b/u.test(command))return {preparationAction:'cancel_appointment'};
+ if(appointment&&/^(?:deplac\w*|report\w*|decal\w*|reprogram\w*)\b/u.test(command))return {preparationAction:'reschedule_appointment'};
+ if(/^(?:marqu\w*|not\w*|signa\w*)\b/u.test(command)&&/\b(?:arrive\w*|accueil|salle d.attente)\b/u.test(plain))return {preparationAction:'mark_patient_arrived'};
+ const consultation=/\b(?:consultations?|seances?)\b/u.test(plain);
+ if(consultation&&/\b(?:tarif|prix)\b/u.test(plain)&&/^(?:fix\w*|defin\w*|etabl\w*|modifi\w*|chang\w*|ajust\w*|met(?:s)?\s+a\s+jour|mettre\s+a\s+jour)\b/u.test(command))return {preparationAction:'set_consultation_price'};
+ if(/\b(?:paiements?|reglements?|encaissements?)\b/u.test(plain)&&/\b(?:recu|encaisse|paye)\w*\b/u.test(plain)&&/^(?:enregistr\w*|not\w*|marqu\w*|confirm\w*|declar\w*|encaisse\w*)\b/u.test(command))return {preparationAction:'record_payment_collected'};
+ if(consultation&&/^(?:signe\w*|clotur\w*|ferme\w*)\b/u.test(command))return {preparationAction:'close_consultation'};
+ if(appointment&&/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*)\b/u.test(command))return {preparationAction:'create_appointment'};
  if(/^(?:modifi\w*|change\w*|corrige\w*|rectifi\w*|mets?\s+a\s+jour|mettre\s+a\s+jour)\b/u.test(command)&&/\bbrouillon\b/u.test(plain)&&/\b(?:documents?|certificats?|justifications?|justificatifs?|ordonn?ances?|suivis?\s+medic(?:al|ale|aux|ales)|bonne sante)\b/u.test(plain)){
   const type=requestedDocumentType;
   return {preparationAction:'update_editable_document_draft',...(type?{preparationDocumentType:type}:{})};
  }
- if(/\b(?:rendez[- ]vous|rdv)\b/u.test(plain)&&/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*)\b/u.test(command))return {preparationAction:'create_appointment'};
+ if(/\b(?:aucun|supprime)\b/u.test(plain))return null;
  if(!/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*|redig\w*|fais?\b)/u.test(command)&&!(requestedDocumentType&&politeDocumentRequest))return null;
  if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivis?\s+medic(?:al|ale|aux|ales)|ordonn?ances?)\b/u.test(plain))return null;
  const preparationDocumentType=requestedDocumentType;
@@ -436,16 +477,19 @@ function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparation
 }
 
 /** Positive vocabulary narrows only a single supported domain; mixed requests retain the full native interpretation path. */
-export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:string):FrenchRequestAdmission{
+export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:string,selectedDocumentId?:string|null):FrenchRequestAdmission{
  const plain=fold(text),chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain)&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(plain),chronologicalOrder=/\b(?:ordre chronologique|chronologiquement|du plus ancien au plus recent)\b/u.test(plain);
+ const messageKind=messageDraftTarget(text);
+ if(messageKind&&!/\b(?:et|puis|ainsi que|mais|ou)\b|[;\n]/u.test(plain))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
  const compoundChronology=/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(plain);
  if(chronology)return compoundChronology?{profileOnly:false}:{tools:['get_patient_context'],profileOnly:false,patientSection:chronologicalOrder?'timeline':'summary',unboundedPeriod:true};
- const requestedOutputs=frenchRequestedOutputs(text),preparation=preparationTarget(text);
+ if(isFrenchNamedLatestConsultationComparison(text))return {tools:['get_patient_context'],profileOnly:false,patientSection:'summary',consultationCount:2};
+ const requestedOutputs=frenchRequestedOutputs(text),preparation=preparationTarget(text,selectedDocumentId);
  if(requestedOutputs){
-  if(requestedOutputs.length===1&&preparation?.preparationAction&&['update_treatment','stop_treatment'].includes(preparation.preparationAction))return {tools:['prepare_action'],profileOnly:false,...preparation};
+  if(requestedOutputs.length===1&&preparation?.preparationAction)return {tools:['prepare_action'],profileOnly:false,...preparation};
   return {profileOnly:false};
  }
- const messageKind=messageDraftTarget(text);if(messageKind&&!frenchRequestedOutputs(text))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
+ if(messageKind&&!frenchRequestedOutputs(text))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
  const internalMessage=internalMessageTarget(text);if(internalMessage)return {tools:['prepare_action'],profileOnly:false,...internalMessage};
  if(preparation)return {tools:['prepare_action'],profileOnly:false,...preparation};
  const receivableRead=/\b(?:reste|restant|solde|impayes?)\s+a\s+encaisser\b/u.test(plain);
@@ -537,7 +581,7 @@ export function frenchRequestedOutputs(text:string):string[]|null{
   const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand|le\s+(?:nombre|total|effectif|rep[èe]re)|l['’]effectif|la\s+référence)\b)/giu)];
  if(!separators.length||separators.length>5){
   const action=preparationTarget(text),targets=frenchReadTargets(text);
-  if(action?.preparationAction&&['update_treatment','stop_treatment'].includes(action.preparationAction)&&targets.length<=1&&!/\b(?:et|puis|ensuite|ou|mais)\b|[;\n]/iu.test(text))return [text.trim()];
+ if(action?.preparationAction&&PREPARATION_ACTIONS.has(action.preparationAction)&&targets.length<=1&&!/\b(?:et|puis|ensuite|ou|mais)\b|[;\n]/iu.test(text))return [text.trim()];
   return null;
  }
  const clauses:string[]=[];let start=0;

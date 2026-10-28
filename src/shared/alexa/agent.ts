@@ -86,7 +86,9 @@ const actionSlots:Readonly<Record<string,readonly string[]>>={
  cancel_appointment:['appointmentId','reason'],mark_patient_arrived:['appointmentId'],
  set_consultation_price:['consultationId','amountDzd'],record_payment_collected:['consultationId','paymentId'],close_consultation:['consultationId'],
  create_editable_document_draft:['documentType','variables'],print_issued_document:['documentType'],
- update_treatment:['treatmentName','changes'],stop_treatment:['treatmentName','stopReason','notes'],
+ update_treatment:['treatmentName','changes'],pause_treatment:['treatmentName'],resume_treatment:['treatmentName'],stop_treatment:['treatmentName','stopReason','notes'],
+ create_charge:['chargeName','chargeAmountDzd','chargeCategory','chargeType','chargeFrequency','chargeDate'],
+ update_charge:['chargeTargetName','chargeName','chargeAmountDzd','chargeCategory','chargeType','chargeFrequency','chargeDate'],deactivate_charge:['chargeTargetName'],
  update_editable_document_draft:['draftId','documentType','variables'],
  send_internal_message:['body'],
 };
@@ -114,7 +116,7 @@ export const agentSchemas = {
   query_finance: z.object({ partIds, ...patient, ...period, state: z.enum(["all", "pending", "collected"]).describe("Filtre des lignes de paiement seulement ; omettre pour overview et les autres vues du cabinet.").optional(), consultationStatus:z.enum(["closed"]).optional(), mode: z.enum([...cabinetFinanceModes, "list", "totals", "group"]).describe("overview : chiffre d’affaires, recettes encaissées et bilan du cabinet sur la période ; charges/composition/evolution/calendar/attention : panneaux financiers ; list/totals/group : lignes de paiement selon leur date et état, pas le chiffre d’affaires du cabinet."), reusePrevious:z.boolean().optional(), revision:z.string().regex(/^[a-f0-9]{64}$/).optional(), offset: z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!!v.from===!!v.to&&(!v.from||Date.parse(v.from)<Date.parse(v.to!)),"InvalidPeriod").refine(v=>!v.consultationStatus||(v.mode==='totals'&&v.state==='all'),"UnpricedConsultationFilterRequiresAllTotals").refine(v=>!cabinetFinanceModes.some(mode=>mode===v.mode)||[v.patientId,v.patientName,v.state].every(x=>x===undefined),"CabinetOverviewCannotIgnorePatientOrState").refine(v=>!["composition","evolution","attention","overview"].includes(v.mode??"")||!v.offset,"ViewCannotIgnoreOffset").refine(v=>v.mode==="calendar"||[v.reusePrevious,v.revision].every(x=>x===undefined),"CalendarCursorOnly").refine(v=>!v.reusePrevious||[v.period,v.from,v.to,v.offset,v.revision].every(x=>x===undefined),"ContinuationUsesSavedQuery"),
   answer_general: z.object({partIds,question:z.string().trim().min(2).max(1000)}).strict(),
   search_knowledge: z.object({ partIds, query: z.string().trim().min(2).max(500) }).strict(),
-  prepare_action: z.object({ partIds, ...patient, action: z.enum(["create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived", "set_consultation_price", "record_payment_collected", "close_consultation", "create_editable_document_draft", "print_issued_document", "update_treatment", "stop_treatment", "update_editable_document_draft", "send_internal_message"]),
+  prepare_action: z.object({ partIds, ...patient, action: z.enum(["create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived", "set_consultation_price", "record_payment_collected", "close_consultation", "create_editable_document_draft", "print_issued_document", "update_treatment", "pause_treatment", "resume_treatment", "stop_treatment", "create_charge", "update_charge", "deactivate_charge", "update_editable_document_draft", "send_internal_message"]),
     appointmentId: z.uuid().optional(), consultationId: z.uuid().optional(), paymentId: z.uuid().optional(),
     startsAt: z.iso.datetime({ offset: true }).optional(), durationMinutes: z.number().int().min(5).max(240).optional(), amountDzd: z.number().int().min(0).max(1000000).optional(),
     reason: z.string().trim().min(3).max(300).optional(), documentType: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]).optional(), variables: z.record(z.string().max(80), z.string().max(300)).optional(),
@@ -122,11 +124,16 @@ export const agentSchemas = {
     changes:z.object({dose:z.string().trim().min(1).max(300).optional(),doseUnit:z.string().trim().min(1).max(80).optional(),frequency:z.string().trim().min(1).max(300).optional(),timing:z.array(z.string().trim().min(1).max(80)).max(8).optional(),instructions:z.string().trim().min(1).max(1000).optional(),startDate:z.iso.date().optional(),endDate:z.iso.date().nullable().optional()}).strict().optional(),
     draftId:z.uuid().optional(),
     stopReason:z.enum(["inefficacite","effets_indesirables","amelioration","decision_clinique","autre"]).optional(),
+    chargeTargetName:z.string().trim().min(2).max(160).optional(),chargeName:z.string().trim().min(2).max(160).optional(),chargeAmountDzd:z.number().int().min(1).max(1000000).optional(),chargeCategory:z.enum(["local","personnel","outils","assurance","autre"]).optional(),chargeType:z.enum(["recurrente","ponctuelle"]).optional(),chargeFrequency:z.enum(["mensuelle","trimestrielle","annuelle"]).optional(),chargeDate:z.iso.date().optional(),
     notes:z.string().trim().min(3).max(300).optional(),
     body: z.string().trim().min(3).max(1000).optional(),
   }).strict().refine(v=>Object.keys(v).every(k=>actionArgumentKeys(v.action).includes(k)),'UnexpectedActionArguments')
     .refine(v=>v.action!=='update_treatment'||!!v.treatmentName&&!!v.changes&&Object.keys(v.changes).length>0,'TreatmentChangeRequired')
+    .refine(v=>!['pause_treatment','resume_treatment'].includes(v.action)||!!v.treatmentName,'TreatmentNameRequired')
     .refine(v=>v.action!=='stop_treatment'||!!v.treatmentName,'TreatmentNameRequired')
+    .refine(v=>v.action!=='create_charge'||!!v.chargeName&&v.chargeAmountDzd!==undefined&&!!v.chargeCategory&&!!v.chargeType&&!!v.chargeDate&&(v.chargeType!=='recurrente'||!!v.chargeFrequency)&&(v.chargeType==='recurrente'||v.chargeFrequency===undefined),'ChargeInputsRequired')
+    .refine(v=>v.action!=='update_charge'||!!v.chargeTargetName&&[v.chargeName,v.chargeAmountDzd,v.chargeCategory,v.chargeType,v.chargeFrequency,v.chargeDate].some(x=>x!==undefined),'ChargeUpdateRequired')
+    .refine(v=>v.action!=='deactivate_charge'||!!v.chargeTargetName,'ChargeTargetNameRequired')
     .refine(v=>v.action!=='print_issued_document'||!!v.documentType,'PrintDocumentKindRequired')
     .refine(v=>v.action!=='update_editable_document_draft'||!!v.variables&&Object.keys(v.variables).length>0,'DraftFieldsRequired'),
   navigate: z.object({ partIds, target: z.enum(["patients", "agenda", "dashboard", "patient", "documents", "finances", "parametres", "jarvis"]), ...patient }).strict(),
