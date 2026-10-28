@@ -912,6 +912,91 @@
     background-color: rgba(28, 42, 31, 0.85);
   }
 
+  /* ── Recherche centrale de la barre supérieure ──
+     Halo animé façon 21st.dev, sans dépendance : un anneau conique dont un
+     seul segment coloré tourne autour du pilulier (jetons uniquement).
+     Le fond reste un aplat opaque (même règle que la barre : pas de verre
+     sous une zone de saisie). `prefers-reduced-motion` coupe la rotation. */
+  @property --recherche-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .recherche-topbar-halo {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    border-radius: 999px;
+    isolation: isolate;
+  }
+  .recherche-topbar-fond {
+    position: absolute;
+    inset: 1px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999px;
+    background: var(--action-600);
+    box-shadow: inset 0 0 0 1px var(--action-700);
+    padding: 0 16px;
+    color: var(--paper);
+  }
+  .recherche-topbar-faisceau {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 1.5px;
+    background: conic-gradient(
+      from var(--recherche-angle),
+      transparent 0%,
+      transparent 68%,
+      var(--action-900) 78%,
+      var(--paper) 86%,
+      var(--action-700) 92%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: recherche-halo-tour 3.1s linear infinite;
+  }
+  @keyframes recherche-halo-tour {
+    to {
+      --recherche-angle: 360deg;
+    }
+  }
+  .recherche-topbar-loupe {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: var(--paper);
+    opacity: 0.85;
+  }
+  .recherche-topbar-champ {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-ui);
+    font-size: var(--text-body-size);
+    line-height: var(--text-body-leading);
+    color: var(--paper);
+  }
+  .recherche-topbar-champ::placeholder {
+    color: var(--paper);
+    opacity: 0.75;
+  }
+  .recherche-topbar-halo:focus-within .recherche-topbar-fond {
+    box-shadow: inset 0 0 0 2px var(--paper);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .recherche-topbar-faisceau {
+      animation: none;
+    }
+  }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--barre-defil) transparent;

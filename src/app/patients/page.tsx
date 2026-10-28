@@ -159,6 +159,24 @@ export default function PagePatients(): React.JSX.Element {
     };
   }, [saisie]);
 
+  // La recherche centrale de la Topbar pilote cette même saisie :
+  // - `?recherche=` relu à l'arrivée depuis un autre écran ;
+  // - événement `mindcare:topbar-recherche` quand on tape depuis la barre.
+  // Debounce + audit inchangés : tout passe par `setSaisie`.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("recherche") ?? params.get("q") ?? "";
+    if (q !== "") setSaisie(q);
+    function surTopbar(evenement: Event): void {
+      setSaisie(String((evenement as CustomEvent<string>).detail ?? ""));
+    }
+    window.addEventListener("mindcare:topbar-recherche", surTopbar);
+    return () => {
+      window.removeEventListener("mindcare:topbar-recherche", surTopbar);
+    };
+  }, []);
+
   // Attend que la session soit tranchée avant d'interroger : lancer la
   // recherche pour un visiteur qu'on est en train de rediriger émet une requête
   // pour rien, et la porte `search_patients` journalise CHAQUE appel — on

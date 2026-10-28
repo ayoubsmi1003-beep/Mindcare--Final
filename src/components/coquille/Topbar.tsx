@@ -41,6 +41,7 @@ import type { UserRole } from "@/services/authz";
 import { OrbeVoix } from "../OrbeVoix";
 import { BoutonAppelerSecretaire } from "./BoutonAppelerSecretaire";
 import { BoutonMessagesInternes } from "./MessagesInternes";
+import { RechercheTopbar } from "./RechercheTopbar";
 
 export interface TopbarProps {
   /** L'identité de l'écran. Jamais un nom de patient sur un écran de lieu. */
@@ -84,23 +85,23 @@ export function Topbar({
       className="topbar-verre flex h-topbar shrink-0 items-center gap-4 border-b border-rule px-4 shadow-douce"
     >
       {/*
-        L'identité de page. `truncate` sur le titre ET `min-w-0` sur le bloc :
-        « Consultation — M. B. » suivi d'un sous-titre de période doit rétrécir
-        avant de pousser la commande et les actions hors de la barre.
+        Identité de page conservée pour les lecteurs d'écran, recherche
+        sombre centrée à la place du titre visuel
+        (décisions praticienne 2026-10-28 : titre, sous-titre et actions
+        de page retirés du visuel — la barre ne porte que la recherche
+        et les actions de cabinet). Le sous-titre reste dans le `h1`
+        masqué pour ne pas perdre le contexte côté assistance.
       */}
-      <div className="flex min-w-0 shrink items-baseline gap-3">
-        <h1 className="truncate font-ui text-title font-semibold tracking-title text-ink-900">
+      <div className="flex min-w-0 flex-1 items-center justify-center gap-3">
+        <h1 className="sr-only">
           {titre}
+          {sousTitre !== undefined && sousTitre !== "" ? ` — ${sousTitre}` : ""}
         </h1>
-        {sousTitre !== undefined && sousTitre !== "" ? (
-          <p className="min-w-0 truncate font-ui text-label font-medium tabular-nums text-ink-500">
-            {sousTitre}
-          </p>
-        ) : null}
+        <RechercheTopbar />
       </div>
 
 
-      <div className="ml-auto flex shrink-0 items-center gap-3">
+      <div className="flex shrink-0 items-center gap-3">
         {actions}
         {/* L'alerte d'appel n'existe que pour le médecin : l'accueil ne
             s'appelle pas elle-même. La composition est une commodité ; la
