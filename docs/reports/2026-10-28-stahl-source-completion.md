@@ -255,20 +255,16 @@ de `knowledge_chunks` ou `knowledge_sources`.
 | `pnpm typecheck` | PASS — 0 erreur |
 | `npx eslint` (fichiers touchés) | PASS — 0 erreur |
 | `pnpm vitest run` (ciblé connaissance/Alexa) | PASS — 354/354 |
-| `pnpm test` (suite complète) | 405 fichiers PASS ; **2 échecs hors périmètre** (voir ci-dessous) |
+| `pnpm test` (suite complète) | **5 351 tests PASS**, 109 sautés, 0 échec d'assertion — 407 fichiers |
 | Backfill 768 + contrôle | PASS — 25 235 présents, 0 mauvaise dimension, 0 inactif, 0 hors périmètre |
 | Golden v4, trois modes | PASS — voir §F |
 
-Échecs hors périmètre, non causés par cette passe :
-
-- `tests/unit/alexa-v8-adversarial-manifest.test.ts` (fichier **non suivi**, ajouté par la
-  session concurrente) attend ≥ 2 cas `actions` + `ambiguity` ; le manifeste
-  `tests/eval/alexa-v8-cases.json` (suivi, inchangé) en contient 0.
-- `tests/unit/verifier-base.test.ts` échoue sur le message attendu : `scripts/verifier-base.mjs`
-  s'arrête d'abord sur les migrations **195–200** présentes sur disque et non appliquées
-  (travail de la session concurrente) au lieu du message « service Windows ».
-
-Aucun de ces deux tests ne touche la connaissance, l'index 768 ou Stahl.
+La commande `pnpm test` sort en code 1 uniquement à cause d'un
+`[vitest-worker]: Timeout calling "onTaskUpdate"` (RPC interne à Vitest, sur un poste à 2 cœurs
+pendant une passe de ~10 min) : **aucun test n'échoue**. Les deux fichiers précédemment rouges
+— `alexa-v8-adversarial-manifest.test.ts` et `verifier-base.test.ts` — passent désormais
+(`22/22`) après l'application des migrations 195–200 par la session concurrente ; aucun de ces
+deux fichiers ne touche la connaissance, l'index 768 ou Stahl.
 
 ### Reproductibilité
 
