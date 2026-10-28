@@ -167,6 +167,14 @@ activé**) :
    KNOWLEDGE_VECTOR=1
    KNOWLEDGE_VECTOR_RECETTE=e5-base
    ```
+   Le fichier est protégé par une ACL : un **administrateur** doit le modifier.
+   Le script `scripts/activer-vecteurs-cabinet.ps1` le fait sans risque —
+   sauvegarde horodatée, ajout des deux lignes seulement si elles sont absentes,
+   refus si une valeur différente existe déjà, relecture de confirmation, et
+   aucun contenu affiché :
+   ```
+   powershell -ExecutionPolicy Bypass -File scripts\activer-vecteurs-cabinet.ps1
+   ```
    Ces deux noms sont les SEULS admis par l'allowlist du serveur
    (`electron/main/serveur-cabinet.ts`) ; un nom inconnu fait échouer le
    démarrage, volontairement ;
