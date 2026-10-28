@@ -273,11 +273,19 @@ export function ChampRecherche({
   valeur,
   onChange,
   placeholder,
+  onKeyDown,
+  ariaExpanded,
+  ariaControls,
+  ariaActivedescendant,
 }: {
   readonly libelle: string;
   readonly valeur: string;
   readonly onChange: (v: string) => void;
   readonly placeholder?: string;
+  readonly onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
+  readonly ariaExpanded?: boolean;
+  readonly ariaControls?: string;
+  readonly ariaActivedescendant?: string;
 }): React.JSX.Element {
   const idChamp = useId();
 
@@ -301,6 +309,15 @@ export function ChampRecherche({
         value={valeur}
         onChange={(e) => onChange(e.target.value)}
         {...(placeholder === undefined ? {} : { placeholder })}
+        {...(onKeyDown === undefined ? {} : { onKeyDown })}
+        {...(ariaExpanded === undefined ? {} : { "aria-expanded": ariaExpanded })}
+        {...(ariaControls === undefined ? {} : { "aria-controls": ariaControls })}
+        {...(ariaActivedescendant === undefined
+          ? {}
+          : { "aria-activedescendant": ariaActivedescendant })}
+        {...(ariaExpanded === undefined
+          ? {}
+          : { role: "combobox", "aria-autocomplete": "list" as const })}
         className="min-h-target-lg w-full border-0 bg-transparent font-ui text-body font-regular text-ink-900 outline-none placeholder:text-ink-500"
       />
     </div>

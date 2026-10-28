@@ -7,13 +7,16 @@
 "use client";
 import { documentsEditor as documentsText } from "@/i18n/documents-editor";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 
 import { Badge, Bouton, Carte, EtatVide } from "@/components/ui";
+import { ListeSuggestions, surligner } from "@/components/recherche/ListeSuggestions";
+import { useRechercheInstantane } from "@/components/recherche/use-recherche-instantanee";
 import { fr } from "@/i18n/fr";
+import { recherche as textesRecherche } from "@/i18n/recherche";
 import {
   getMedicationVariants,
-  searchMedications,
+  searchMedicationsPage,
   type MedicationCatalogItem,
   type MedicationVariant,
 } from "@/services/medications";
@@ -60,89 +63,34 @@ function PaletteRecherche({
   readonly onSelection: (med: MedicationCatalogItem) => void;
 }): React.JSX.Element | null {
   const [q, setQ] = useState("");
-  const [resultats, setResultats] = useState<readonly MedicationCatalogItem[]>([]);
   const [idx, setIdx] = useState(0);
-  const [chargement, setChargement] = useState(false);
-  const [erreur, setErreur] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  // Garde anti-course : sans elle, une frappe rapide (« do » puis
-  // « doliprane ») laisse la réponse lente écraser la réponse utile —
-  // l'écran affiche alors des résultats qui ne correspondent plus à la saisie.
-  const seqRef = useRef(0);
-  // Cache de session (requête normalisée → résultats) : effacer une lettre
-  // puis la retaper ne refait aucun aller-retour — la réponse est immédiate.
-  // Borné (60 entrées, la plus ancienne saute) : un cache sans plafond est
-  // une fuite déguisée en optimisation.
-  const cacheRef = useRef(new Map<string, readonly MedicationCatalogItem[]>());
-  function mettreEnCache(cle: string, lignes: readonly MedicationCatalogItem[]): void {
-    const c = cacheRef.current;
-    c.set(cle, lignes);
-    if (c.size > 60) {
-      const premiere = c.keys().next();
-      if (!premiere.done) c.delete(premiere.value);
-    }
-  }
+  const idListe = useId();
+
+  const { etat, chargerPlus } = useRechercheInstantane<MedicationCatalogItem>({
+    requete: q,
+    chercher: (query, limit, offset) => searchMedicationsPage(query, limit, offset),
+    minimum: 2,
+    taille: 50,
+    cle: (m) => m.id,
+    actif: ouvert,
+  });
 
   useEffect(() => {
     if (ouvert) {
       setTimeout(() => inputRef.current?.focus(), 10);
       setQ("");
-      setResultats([]);
       setIdx(0);
-      setErreur(null);
-      seqRef.current += 1;
     }
   }, [ouvert]);
 
-  useEffect(() => {
-    if (!ouvert) return;
-    const aq = q.trim();
-    if (aq.length < 2) {
-      seqRef.current += 1;
-      setResultats([]);
-      setErreur(null);
-      setChargement(false);
-      return;
-    }
-    const t = window.setTimeout(() => {
-      const id = seqRef.current + 1;
-      seqRef.current = id;
-      // Réponse immédiate si déjà vue cette session : pas de chargement, pas
-      // d'appel — effacer/retaper une lettre ne touche plus le réseau.
-      const cle = aq.toLowerCase();
-      const connues = cacheRef.current.get(cle);
-      if (connues !== undefined) {
-        setChargement(false);
-        setErreur(null);
-        setResultats(connues);
-        setIdx(0);
-        return;
-      }
-      // Rassis-pendant-revalidation : on garde l'ancienne liste à l'écran et
-      // on signale la mise à jour par une ligne discrète (voir le rendu) au
-      // lieu de remplacer le tout par « Chargement… » à chaque frappe.
-      setChargement(true);
-      // 50 = plafond de la porte (min(max(limit,1),50)) : à 30 résultats,
-      // « paracetamol » (121 matchs) ou « amox » (139 matchs) masquaient
-      // les deux tiers du catalogue. 50 reste filtré côté base, jamais
-      // 15k lignes côté client.
-      void searchMedications(aq, 50).then((res) => {
-        if (seqRef.current !== id) return;
-        setChargement(false);
-        if (!res.ok) {
-          setResultats([]);
-          setIdx(0);
-          setErreur(res.error.message);
-          return;
-        }
-        setErreur(null);
-        mettreEnCache(cle, res.data);
-        setResultats(res.data);
-        setIdx(0);
-      });
-    }, 140);
-    return () => window.clearTimeout(t);
-  }, [q, ouvert]);
+  const choisir = useCallback(
+    (med: MedicationCatalogItem) => {
+      onSelection(med);
+      onFermer();
+    },
+    [onFermer, onSelection],
+  );
 
   const onKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -151,20 +99,22 @@ function PaletteRecherche({
         onFermer();
       } else if (e.key === "ArrowDown") {
         e.preventDefault();
-        setIdx((i) => Math.min(i + 1, resultats.length - 1));
+        setIdx((i) => Math.min(i + 1, Math.max(etat.resultats.length - 1, 0)));
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         setIdx((i) => Math.max(i - 1, 0));
       } else if (e.key === "Enter") {
         e.preventDefault();
-        const c = resultats[idx];
-        if (c) onSelection(c);
+        const c = etat.resultats[idx];
+        if (c !== undefined) choisir(c);
       }
     },
-    [idx, onFermer, onSelection, resultats],
+    [choisir, etat.resultats, idx, onFermer],
   );
 
   if (!ouvert) return null;
+
+  const actifId = etat.resultats.length > 0 ? `${idListe}-option-${idx}` : undefined;
 
   return (
     <div
@@ -187,8 +137,16 @@ function PaletteRecherche({
             ref={inputRef}
             id="recherche-med"
             type="search"
+            role="combobox"
+            aria-expanded={etat.resultats.length > 0}
+            aria-controls={idListe}
+            {...(actifId === undefined ? {} : { "aria-activedescendant": actifId })}
+            aria-autocomplete="list"
             value={q}
-            onChange={(e) => setQ(e.target.value)}
+            onChange={(e) => {
+              setQ(e.target.value);
+              setIdx(0);
+            }}
             placeholder={fr.patients.traitementsV2.rechercherPlaceholder}
             className={SOCLE_INPUT}
           />
@@ -197,39 +155,35 @@ function PaletteRecherche({
           </p>
         </div>
 
-        <div className="max-h-96 overflow-auto p-2">
-          {chargement && resultats.length === 0 ? (
-            <p className="px-3 py-6 text-center font-ui text-body text-ink-500">{fr.etats.chargement}</p>
-          ) : erreur ? (
-            <p role="alert" className="px-3 py-6 text-center font-ui text-body text-critical">{erreur}</p>
-          ) : resultats.length === 0 ? (
+        <div className="p-2">
+          {q.trim().length < 2 ? (
             <p className="px-3 py-6 text-center font-ui text-body text-ink-500">
-              {q.trim().length < 2 ? fr.patients.traitementsV2.rechercherPlaceholder : fr.patients.traitementsV2.rechercheVide}
+              {textesRecherche.minimum}
             </p>
           ) : (
-            <>
-              {chargement ? (
-                <p aria-live="polite" className="px-3 pb-1 font-ui text-label tracking-label text-ink-500">
-                  {fr.etats.chargement}
-                </p>
-              ) : null}
-              <ul role="listbox" aria-busy={chargement || undefined} className="m-0 flex list-none flex-col gap-1 p-0">
-              {resultats.map((m, i) => (
-                <li key={m.id} role="option" aria-selected={i === idx}>
-                  <button
-                    type="button"
-                    onClick={() => onSelection(m)}
-                    className={`flex w-full min-h-9 flex-col items-start gap-0.5 rounded-xl px-3 py-2 text-left outline-none transition ${i === idx ? "bg-action-050 ring-1 ring-action-600" : "hover:bg-muted"} focus-visible:ring-2 focus-visible:ring-action-600`}
-                  >
-                    <span className="font-ui text-body font-medium text-ink-900">{m.rawName}</span>
-                    <span className="font-ui text-label tracking-label text-ink-500">
-                      {[m.strength, m.form].filter(Boolean).join(" · ") || m.inn}
-                    </span>
-                  </button>
-                </li>
-              ))}
-              </ul>
-            </>
+            <ListeSuggestions
+              idListe={idListe}
+              items={etat.resultats}
+              actif={idx}
+              onChoisir={choisir}
+              rendre={(m) => (
+                <span className="flex flex-col items-start gap-0.5">
+                  <span className="font-ui text-body font-medium text-ink-900">
+                    {surligner(m.rawName, q)}
+                  </span>
+                  <span className="font-ui text-label tracking-label text-ink-500">
+                    {[m.strength, m.form].filter(Boolean).join(" · ") || m.inn}
+                  </span>
+                </span>
+              )}
+              requete={q}
+              total={etat.total}
+              chargement={etat.chargement}
+              chargementPlus={etat.chargementPlus}
+              erreur={etat.erreur}
+              vide={fr.patients.traitementsV2.rechercheVide}
+              onPlus={chargerPlus}
+            />
           )}
         </div>
 

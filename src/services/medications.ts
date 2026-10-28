@@ -35,6 +35,21 @@ const ROW = z.object({
   rank: z.coerce.number(),
 });
 
+/**
+ * Une page de recherche médicament (195→199). `total` est le nombre TOTAL de
+ * correspondances côté base, pas la taille de la page : c'est ce qui permet
+ * à l'écran de dire « 33 résultats » et d'afficher les 33, au lieu des 8
+ * premiers que l'ordonnance montrait avant.
+ */
+export interface MedicationSearchPage {
+  readonly rows: readonly MedicationCatalogItem[];
+  readonly total: number;
+  readonly offset: number;
+  readonly limit: number;
+}
+
+const PAGE_ROW = ROW.extend({ total_count: z.coerce.number() });
+
 function toItem(r: z.infer<typeof ROW>): MedicationCatalogItem {
   return {
     id: r.id,
@@ -50,20 +65,24 @@ function toItem(r: z.infer<typeof ROW>): MedicationCatalogItem {
 }
 
 /**
- * Recherche catalogue — porte app.search_medications.
- * Accent/casse insensible, prefix-friendly, typo via pg_trgm.
- * p_query vide => [] (pas d'export).
+ * Recherche catalogue paginée — porte app.search_medications_page (199).
+ * Accent/casse insensible, préfixe/contenu multi-mots, typo via pg_trgm.
+ * `p_limit` est borné à 100 EN BASE : jamais 15 000 lignes en React.
  */
-export async function searchMedications(
+export async function searchMedicationsPage(
   query: string,
-  limit = 20,
-): Promise<Result<readonly MedicationCatalogItem[]>> {
+  limit = 50,
+  offset = 0,
+): Promise<Result<MedicationSearchPage>> {
   const q = query.trim();
-  if (q === "") return ok([]);
+  const taille = Math.min(Math.max(limit, 1), 100);
+  const depart = Math.max(offset, 0);
+  if (q === "") return ok({ rows: [], total: 0, offset: depart, limit: taille });
 
-  const result = await db().rpc<unknown>("search_medications", {
+  const result = await db().rpc<unknown>("search_medications_page", {
     p_query: q,
-    p_limit: Math.min(Math.max(limit, 1), 50),
+    p_limit: taille,
+    p_offset: depart,
   });
 
   if (!result.ok) {
@@ -71,7 +90,7 @@ export async function searchMedications(
     return err(result.error);
   }
 
-  const parsed = z.array(ROW).safeParse(result.data);
+  const parsed = z.array(PAGE_ROW).safeParse(result.data);
   if (!parsed.success) {
     log.error("medications.recherche", {
       code: "regle-metier",
@@ -81,12 +100,30 @@ export async function searchMedications(
       code: "regle-metier",
       message: "Réponse catalogue incohérente.",
       technical: "schema",
-      context: "rpc:search_medications",
+      context: "rpc:search_medications_page",
     });
   }
 
+  const total = parsed.data[0]?.total_count ?? 0;
   log.info("medications.recherche", { count: parsed.data.length });
-  return ok(parsed.data.map(toItem));
+  return ok({
+    rows: parsed.data.map((row) => toItem(row)),
+    total,
+    offset: depart,
+    limit: taille,
+  });
+}
+
+/**
+ * Recherche historique (2 arguments). Conservée pour `getMedication` et les
+ * appelants qui n'ont pas besoin de paginer ; l'écran utilise la porte _page.
+ */
+export async function searchMedications(
+  query: string,
+  limit = 20,
+): Promise<Result<readonly MedicationCatalogItem[]>> {
+  const page = await searchMedicationsPage(query, limit, 0);
+  return page.ok ? ok(page.data.rows) : err(page.error);
 }
 
 const VARIANT_ROW = z.object({

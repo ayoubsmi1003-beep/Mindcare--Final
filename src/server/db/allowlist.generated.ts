@@ -124,7 +124,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "save_session_details",
   "search_knowledge_lexical",
   "search_knowledge_vector",
-  "search_medications",
+  "search_medications_page",
   "search_patients",
   "send_internal_message",
   "set_consultation_price",

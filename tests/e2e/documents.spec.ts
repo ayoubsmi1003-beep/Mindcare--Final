@@ -7,7 +7,7 @@ import { test, expect } from "@playwright/test";
 const CONNEXION = "/connexion";
 async function login(page: import("@playwright/test").Page) {
   await page.goto(CONNEXION);
-  await page.getByLabel(/E-mail/i).fill("owner.dev@invalid.local");
+  await page.getByLabel(/Nom d.utilisateur/i).fill("owner.dev@invalid.local");
   await page.getByLabel(/Mot de passe/i).fill("Y1RWX2D5uNz0YqG7K2fljBs5KZrZohbP");
   await page.getByRole("button", { name: /Se connecter/i }).click();
   await expect(page).toHaveURL(/\/patients/, { timeout: 15_000 });
@@ -52,5 +52,27 @@ test.describe("SCREEN 7 — /documents", () => {
     const content = await page.content();
     expect(content).not.toContain("sk-or-v1");
     expect(content).not.toContain("GROQ");
+  });
+
+  test("D7.5 sélecteur patient : la liste part pendant la saisie, sans Entrée", async ({ page }) => {
+    await login(page);
+    // Un nom réel lu depuis l'annuaire : aucun nom de patient n'est codé en dur.
+    await page.goto("/patients");
+    const premier = page.locator("ul li a[href^='/patients/']").first();
+    await expect(premier).toBeVisible({ timeout: 10_000 });
+    const nom = (await premier.innerText()).split("\n")[0]?.trim() ?? "";
+    const jeton = nom.split(/\s+/).find((morceau) => morceau.length >= 3) ?? "";
+    if (jeton === "") {
+      test.info().annotations.push({ type: "note", description: "annuaire vide" });
+      return;
+    }
+
+    await page.goto("/documents");
+    const champ = page
+      .getByPlaceholder(/Nom, téléphone ou numéro de dossier/i)
+      .first();
+    await champ.fill(jeton.slice(0, 3));
+    // Aucun clic sur « Rechercher », aucun Entrée : le debounce suffit.
+    await expect(page.getByRole("listbox")).toBeVisible({ timeout: 10_000 });
   });
 });

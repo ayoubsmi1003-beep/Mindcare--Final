@@ -47,6 +47,7 @@ import {
   Squelette,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
+import { recherche as textesRecherche } from "@/i18n/recherche";
 import { getSession, signOut } from "@/services/auth";
 import { purgerContexteSession } from "@/services/conversation";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
@@ -75,6 +76,13 @@ const DEBOUNCE_MS = 140;
 /** Sous deux caractères, la recherche coûte plus qu'elle ne trie. */
 const LONGUEUR_MIN = 2;
 
+/**
+ * Taille d'une page de l'annuaire. La porte borne à 100 EN BASE ; 50 tient
+ * dans un écran sans noyer la praticienne, et « Suivant » rend les 1 558
+ * dossiers atteignables — avant, les 25 premiers seulement existaient.
+ */
+const TAILLE_PAGE = 50;
+
 export default function PagePatients(): React.JSX.Element {
   const router = useRouter();
   const [utilisateur, setUtilisateur] = useState<CurrentUser | null | undefined>(undefined);
@@ -86,8 +94,10 @@ export default function PagePatients(): React.JSX.Element {
   const [sessionTranchee, setSessionTranchee] = useState<boolean | undefined>(undefined);
   const [saisie, setSaisie] = useState("");
   const [requete, setRequete] = useState("");
+  const [decalage, setDecalage] = useState(0);
   const [page, setPage] = useState<Page<PatientListItem> | undefined>(undefined);
   const [pageRequete, setPageRequete] = useState<string | undefined>(undefined);
+  const [pageDecalage, setPageDecalage] = useState<number | undefined>(undefined);
   const [relance, setRelance] = useState(0);
   const [relanceSession, setRelanceSession] = useState(0);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
@@ -141,6 +151,7 @@ export default function PagePatients(): React.JSX.Element {
   useEffect(() => {
     const t = saisie.trim();
     const minuteur = setTimeout(() => {
+      setDecalage(0);
       setRequete(t.length >= LONGUEUR_MIN ? t : "");
     }, DEBOUNCE_MS);
     return () => {
@@ -168,7 +179,11 @@ export default function PagePatients(): React.JSX.Element {
 
     // Propriété OMISE plutôt que passée à `undefined` : sous
     // `exactOptionalPropertyTypes`, les deux ne sont pas la même chose.
-    void searchPatients(requete === "" ? {} : { query: requete }).then((result) => {
+    void searchPatients(
+      requete === ""
+        ? { limit: TAILLE_PAGE, offset: decalage }
+        : { query: requete, limit: TAILLE_PAGE, offset: decalage },
+    ).then((result) => {
       clearTimeout(minuteur);
       if (annule) return;
       if (!result.ok) {
@@ -179,15 +194,23 @@ export default function PagePatients(): React.JSX.Element {
       }
       setHorsLigne(false);
       setMessageErreur(undefined);
+      // Une page devenue vide après un filtre est ramenée à la dernière page
+      // réelle : sinon « page 7 » resterait affichée sur un total de 2 pages.
+      if (result.data.rows.length === 0 && decalage > 0 && result.data.total > 0) {
+        setDecalage(Math.max(0, Math.floor((result.data.total - 1) / TAILLE_PAGE) * TAILLE_PAGE));
+        setChargement(false);
+        return;
+      }
       setPage(result.data);
       setPageRequete(requete);
+      setPageDecalage(decalage);
       setChargement(false);
     });
     return () => {
       annule = true;
       clearTimeout(minuteur);
     };
-  }, [requete, sessionTranchee, relance]);
+  }, [requete, decalage, sessionTranchee, relance]);
 
   // Fermeture de session depuis l'interface. `replace` et pas `push` : le
   // bouton Retour ne doit pas ramener sur un écran de dossiers après une
@@ -262,6 +285,7 @@ export default function PagePatients(): React.JSX.Element {
         role="search"
         onSubmit={(event) => {
           event.preventDefault();
+          setDecalage(0);
           setRequete(saisie.trim());
           setRelance(value => value + 1);
         }}
@@ -289,7 +313,7 @@ export default function PagePatients(): React.JSX.Element {
           revalidation) au lieu de clignoter en squelette à chaque frappe. */}
       {chargement && page === undefined ? <Squelette lignes={6} /> : null}
 
-      {!chargement && messageErreur === undefined && pageRequete === requete && page !== undefined && page.rows.length === 0 ? (
+      {!chargement && messageErreur === undefined && pageRequete === requete && pageDecalage === decalage && page !== undefined && page.rows.length === 0 ? (
         /* Deux phrases distinctes selon qu'une recherche est en cours ou non —
            « rien ne correspond » et « rien n'est visible » ne disent pas la
            même chose, et les confondre ferait croire à un dossier manquant.
@@ -303,9 +327,20 @@ export default function PagePatients(): React.JSX.Element {
 
       {page !== undefined && (page.rows.length > 0 || chargement) ? (
         <>
-          <p className="font-ui text-label font-medium tabular-nums text-ink-500">
-            {page.total} {fr.patients.comptage} · {fr.patients.listeActifsSeulement}
-            {pageRequete !== requete ? " · Résultats précédents — recherche non actualisée" : ""}
+          <p
+            aria-live="polite"
+            className="font-ui text-label font-medium tabular-nums text-ink-500"
+          >
+            {page.total === 0
+              ? `0 ${fr.patients.comptage}`
+              : `${(pageDecalage ?? decalage) + 1}–${Math.min(
+                  (pageDecalage ?? decalage) + TAILLE_PAGE,
+                  page.total,
+                )} ${textesRecherche.sur} ${page.total} ${fr.patients.comptage}`}{" "}
+            · {fr.patients.listeActifsSeulement}
+            {pageRequete !== requete || pageDecalage !== decalage
+              ? " · Résultats précédents — recherche non actualisée"
+              : ""}
             {chargement ? ` · ${fr.etats.chargement}` : ""}
           </p>
 
@@ -317,6 +352,41 @@ export default function PagePatients(): React.JSX.Element {
               ))}
             </ul>
           </div>
+
+          {page.total > TAILLE_PAGE ? (
+            <nav
+              aria-label={textesRecherche.page}
+              className="mt-4 flex flex-wrap items-center justify-between gap-3"
+            >
+              <button
+                type="button"
+                disabled={decalage === 0 || chargement}
+                onClick={() => {
+                  setDecalage((valeur) => Math.max(0, valeur - TAILLE_PAGE));
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="inline-flex min-h-target items-center rounded-full border border-rule bg-card px-4 font-ui text-body font-semibold text-ink-900 shadow-douce transition duration-quick hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 disabled:cursor-not-allowed disabled:opacity-disabled"
+              >
+                {textesRecherche.precedent}
+              </button>
+              <span className="font-num text-label tabular-nums text-ink-500">
+                {textesRecherche.page} {Math.floor(decalage / TAILLE_PAGE) + 1}{" "}
+                {textesRecherche.sur}{" "}
+                {Math.max(1, Math.ceil(page.total / TAILLE_PAGE))}
+              </span>
+              <button
+                type="button"
+                disabled={decalage + TAILLE_PAGE >= page.total || chargement}
+                onClick={() => {
+                  setDecalage((valeur) => valeur + TAILLE_PAGE);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="inline-flex min-h-target items-center rounded-full border border-rule bg-card px-4 font-ui text-body font-semibold text-ink-900 shadow-douce transition duration-quick hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 disabled:cursor-not-allowed disabled:opacity-disabled"
+              >
+                {textesRecherche.suivant}
+              </button>
+            </nav>
+          ) : null}
         </>
       ) : null}
     </AppShell>

@@ -2,7 +2,7 @@ import type { DocumentKind, DocumentReason } from "@/shared/documents/types";
 
 export const documentsEditor = {
 
-  dailyCount:"Prises par jour", prescription:"Prescription", prescriptionHint:"Le nom du médicament et le nombre de prises quotidiennes.", more:"Autres actions", formatting:"Mise en forme", changePatient:"Changer de dossier", library:"Vos documents", filters:"Filtrer", startHint:"Choisissez un dossier, puis préparez un certificat ou une ordonnance.", title:"Documents", subtitle:"Certificats et ordonnances", newDocument:"Nouveau document", drafts:"Brouillons", issued:"Documents émis",
+  dailyCount:"Prises par jour", prescribedDose:"Dose prescrite", prescription:"Prescription", prescriptionHint:"Le nom du médicament et le nombre de prises quotidiennes.", more:"Autres actions", formatting:"Mise en forme", changePatient:"Changer de dossier", library:"Vos documents", filters:"Filtrer", startHint:"Choisissez un dossier, puis préparez un certificat ou une ordonnance.", title:"Documents", subtitle:"Certificats et ordonnances", newDocument:"Nouveau document", drafts:"Brouillons", issued:"Documents émis",
 
   save:"Enregistrer", saving:"Enregistrement…", saved:"Enregistré", dirty:"Modifications non enregistrées", edit:"Modifier", preview:"Aperçu",
 
@@ -48,7 +48,9 @@ export const documentsEditor = {
 
   printInstructions:"Impression : A5, portrait, taille réelle (100 %), en-têtes et pieds de page du navigateur désactivés.",
 
-  printAuditFailed:"Le dialogue a été demandé, mais l’envoi à l’impression n’a pas pu être journalisé. Réessayez la journalisation.",
+  printAttestationPrompt:"La demande d’impression a été envoyée au navigateur. Confirmez uniquement si le document est réellement sorti.", confirmPrinted:"Confirmer l’impression", printNotConfirmed:"Ne pas confirmer",
+
+  printAuditFailed:"L’impression confirmée n’a pas pu être journalisée. Vérifiez le dossier avant de réessayer.",
 
   printFailed:"L’impression n’a pas pu être préparée. Le document est conservé. Réessayez.",
 
