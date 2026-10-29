@@ -43,7 +43,7 @@ export function Methode({ apercu }: { readonly apercu: ApercuAnalyse }): React.J
         </span>
       </summary>
 
-      <div className="grid grid-cols-1 gap-5 border-t border-white/70 px-5 py-5 tablet:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 border-t bord-verre px-5 py-5 tablet:grid-cols-2">
         <div className="flex flex-col gap-1.5">
           <h3 className="font-ui text-label font-semibold text-ink-900">{t.periode}</h3>
           <p className="font-ui text-label text-ink-500">

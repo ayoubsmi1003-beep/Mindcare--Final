@@ -175,7 +175,7 @@ export function StatutsRendezVous({
                 <button
                   type="button"
                   onClick={() => onStatut(s.cle)}
-                  className="flex w-full items-center justify-between gap-3 rounded-md px-2 py-1 text-left transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+                  className="flex w-full items-center justify-between gap-3 rounded-md px-2 py-1 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
                 >
                   <span className="flex min-w-0 items-center gap-2">
                     <span
@@ -236,10 +236,10 @@ export function NouveauxEtRetours({
               type="button"
               onClick={onNouveaux}
               style={{ flexGrow: nouveaux }}
-              className="group relative min-w-0 bg-emeraude-600 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-white"
+              className="group relative min-w-0 bg-emeraude-600 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-on-brand"
               aria-label={`${analyse.panneaux.nouveauxRetours.nouveaux} — ${analyse.actions.voirDossiers}`}
             >
-              <span className="absolute inset-0 flex items-center justify-center font-num text-label font-semibold tabular-nums text-white">
+              <span className="absolute inset-0 flex items-center justify-center font-num text-label font-semibold tabular-nums text-on-brand">
                 {nouveaux > 0 ? formaterNombre(nouveaux) : ""}
               </span>
             </button>
@@ -247,10 +247,10 @@ export function NouveauxEtRetours({
               type="button"
               onClick={onRetours}
               style={{ flexGrow: retours }}
-              className="group relative min-w-0 bg-aqua-600 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-white"
+              className="group relative min-w-0 bg-aqua-600 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-on-brand"
               aria-label={`${analyse.panneaux.nouveauxRetours.retours} — ${analyse.actions.voirDossiers}`}
             >
-              <span className="absolute inset-0 flex items-center justify-center font-num text-label font-semibold tabular-nums text-white">
+              <span className="absolute inset-0 flex items-center justify-center font-num text-label font-semibold tabular-nums text-on-brand">
                 {retours > 0 ? formaterNombre(retours) : ""}
               </span>
             </button>
@@ -260,7 +260,7 @@ export function NouveauxEtRetours({
             <button
               type="button"
               onClick={onNouveaux}
-              className="plaque-analyse flex flex-col gap-0.5 px-3 py-2 text-left transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+              className="plaque-analyse flex flex-col gap-0.5 px-3 py-2 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
             >
               <span className="flex items-center gap-1.5 font-ui text-label text-ink-500">
                 <span aria-hidden="true" className="h-2 w-2 rounded-full bg-emeraude-600" />
@@ -273,7 +273,7 @@ export function NouveauxEtRetours({
             <button
               type="button"
               onClick={onRetours}
-              className="plaque-analyse flex flex-col gap-0.5 px-3 py-2 text-left transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+              className="plaque-analyse flex flex-col gap-0.5 px-3 py-2 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
             >
               <span className="flex items-center gap-1.5 font-ui text-label text-ink-500">
                 <span aria-hidden="true" className="h-2 w-2 rounded-full bg-aqua-600" />
@@ -433,7 +433,7 @@ export function DelaisSuivi({
                 <button
                   type="button"
                   onClick={() => onDelai(l.cle)}
-                  className="group flex w-full min-w-0 flex-col gap-1 rounded-md px-1 py-0.5 text-left transition hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+                  className="group flex w-full min-w-0 flex-col gap-1 rounded-md px-1 py-0.5 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
                 >
                   <span className="flex items-baseline justify-between gap-3">
                     <span className="truncate font-ui text-label text-ink-700">{l.libelle}</span>
@@ -442,7 +442,7 @@ export function DelaisSuivi({
                       <span className="ml-1.5 font-ui font-normal text-ink-500">· {pct} %</span>
                     </span>
                   </span>
-                  <span className="relative block h-1.5 w-full overflow-hidden rounded-full bg-white/70">
+                  <span className="relative block h-1.5 w-full overflow-hidden rounded-full verre-clair-fort">
                     <span
                       className="analyse-pousse absolute inset-y-0 left-0 rounded-full bg-aqua-600"
                       style={{ width: `${Math.max(1.5, pct)}%`, transformOrigin: "left center" }}

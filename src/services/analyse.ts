@@ -31,6 +31,14 @@ import { err, ok, type Result } from "./result";
 
 /** `bigint` de Postgres : nombre, ou chaîne au-delà de 2^53. */
 const NOMBRE = z.coerce.number();
+/**
+ * ⚠️ `z.null()` EN PREMIER, ET CE N'EST PAS COSMÉTIQUE. `z.coerce.number()`
+ * accepte `null` et le convertit en `0` (`Number(null) === 0`). Une union qui
+ * commence par le nombre transformerait donc « pas de comparaison » et « pas de
+ * médiane » en zéros mesurés — exactement le mensonge que ces colonnes
+ * nullables existent pour éviter.
+ */
+const NOMBRE_OU_NUL = z.union([z.null(), NOMBRE]);
 const TEXTE_OU_NUL = z.union([z.string(), z.null()]);
 
 const PERIODE = z.object({
@@ -101,6 +109,37 @@ const ENCAISSE = z.object({
   perimetre: z.enum(["cabinet", "praticienne"]),
 });
 
+const BANDE_AGE = z.object({
+  bande: z.string(),
+  f: NOMBRE,
+  m: NOMBRE,
+  nr: NOMBRE,
+});
+
+const BARRE_DUREE = z.object({ cle: z.string(), n: NOMBRE });
+
+const CONTINUITE = z.object({
+  horizon: NOMBRE,
+  cohorte: NOMBRE,
+  revenus: NOMBRE,
+  pct: NOMBRE_OU_NUL,
+});
+
+const STOCK_DIAG = z.object({
+  cle: z.string(),
+  actifs: NOMBRE,
+  nouveaux: NOMBRE,
+  resolus: NOMBRE,
+});
+
+const CHARTS = z.object({
+  ages: z.array(BANDE_AGE),
+  durees: z.array(BARRE_DUREE),
+  duree_mediane: NOMBRE_OU_NUL,
+  continuite: z.array(CONTINUITE),
+  diag_stock: z.array(STOCK_DIAG),
+});
+
 const APERCU = z.object({
   periode: PERIODE,
   couverture: COUVERTURE,
@@ -114,6 +153,7 @@ const APERCU = z.object({
   delais: z.array(PART),
   diagnostics: z.array(DIAGNOSTIC),
   echelles: z.array(ECHELLE),
+  charts: CHARTS,
   encaisse: z.union([ENCAISSE, z.null()]),
 });
 
@@ -147,6 +187,11 @@ export type PartAnalyse = z.infer<typeof PART>;
 export type DiagnosticAnalyse = z.infer<typeof DIAGNOSTIC>;
 export type EchelleAnalyse = z.infer<typeof ECHELLE>;
 export type EncaissementAnalyse = z.infer<typeof ENCAISSE>;
+export type BandeAgeAnalyse = z.infer<typeof BANDE_AGE>;
+export type BarreDureeAnalyse = z.infer<typeof BARRE_DUREE>;
+export type ContinuiteAnalyse = z.infer<typeof CONTINUITE>;
+export type StockDiagnosticAnalyse = z.infer<typeof STOCK_DIAG>;
+export type ChartsAnalyse = z.infer<typeof CHARTS>;
 
 export interface ApercuAnalyse {
   readonly periode: z.infer<typeof PERIODE>;
@@ -161,6 +206,7 @@ export interface ApercuAnalyse {
   readonly delais: readonly PartAnalyse[];
   readonly diagnostics: readonly DiagnosticAnalyse[];
   readonly echelles: readonly EchelleAnalyse[];
+  readonly charts: ChartsAnalyse;
   readonly encaisse: EncaissementAnalyse | null;
 }
 
@@ -255,6 +301,7 @@ export async function getAnalyseOverview(
     delais: a.delais,
     diagnostics: a.diagnostics,
     echelles: a.echelles,
+    charts: a.charts,
     encaisse: a.encaisse,
   });
 }

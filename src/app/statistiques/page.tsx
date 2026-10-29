@@ -50,6 +50,13 @@ import {
   Traitements,
 } from "@/components/analyse/PanneauxCliniques";
 import {
+  ContinuiteSoins,
+  DiagnosticsStock,
+  DureesSeances,
+  PyramidePanel,
+  TypesConsultation,
+} from "@/components/analyse/PanneauxSupplementaires";
+import {
   SelecteurPeriodeAnalyse,
   periodeInitiale,
   type PeriodeAnalyse,
@@ -299,6 +306,32 @@ function Contenu({
       </div>
 
       <div className="grid grid-cols-1 gap-3 desktop:grid-cols-12">
+        <div className="min-w-0 desktop:col-span-4">
+          <PyramidePanel bandes={apercu.charts.ages} />
+        </div>
+        <div className="min-w-0 desktop:col-span-8">
+          <TypesConsultation
+            types={apercu.types}
+            onType={(cle) =>
+              ouvrir({ kind: "types", cle, titre: analyse.types[cle] ?? cle })
+            }
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-3 desktop:grid-cols-12">
+        <div className="min-w-0 desktop:col-span-4">
+          <DureesSeances barres={apercu.charts.durees} mediane={apercu.charts.duree_mediane} />
+        </div>
+        <div className="min-w-0 desktop:col-span-4">
+          <ContinuiteSoins points={apercu.charts.continuite} />
+        </div>
+        <div className="min-w-0 desktop:col-span-4">
+          <DiagnosticsStock points={apercu.charts.diag_stock} />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-3 desktop:grid-cols-12">
         <div className="min-w-0 desktop:col-span-7">
           <EchellesCliniques
             echelles={apercu.echelles}
@@ -410,7 +443,7 @@ function SyntheseSecondaire({
           {analyse.pulse.patientsTotal}
         </h2>
       </div>
-      <dl className="flex flex-col divide-y divide-white/70">
+      <dl className="flex flex-col divide-y divide-rule">
         {lignes.map((l) => (
           <div key={l.etiquette} className="flex items-baseline justify-between gap-4 py-2" title={l.aide}>
             <dt className="min-w-0 truncate font-ui text-label text-ink-500">{l.etiquette}</dt>

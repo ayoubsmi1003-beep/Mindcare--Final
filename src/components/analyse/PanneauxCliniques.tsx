@@ -230,7 +230,7 @@ function LigneQualite({
           "plaque-analyse flex w-full items-center gap-3 p-3 text-left transition",
           vide
             ? "cursor-default opacity-60"
-            : "hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600",
+            : "hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600",
         ].join(" ")}
       >
         <span className="icone-lueur" data-teinte={vide ? "emeraude" : teinte} aria-hidden="true">
@@ -278,7 +278,7 @@ export function Traitements({
         <button
           type="button"
           onClick={onActifs}
-          className="plaque-analyse flex flex-col gap-1 p-4 text-left transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+          className="plaque-analyse flex flex-col gap-1 p-4 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
         >
           <span className="font-ui text-label text-ink-500">{analyse.panneaux.traitements.actifs}</span>
           <span className="font-ui text-chiffre font-extrabold tabular-nums tracking-chiffre text-ink-900">
@@ -288,7 +288,7 @@ export function Traitements({
         <button
           type="button"
           onClick={onChangements}
-          className="plaque-analyse flex flex-col gap-1 p-4 text-left transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
+          className="plaque-analyse flex flex-col gap-1 p-4 text-left transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-action-600"
         >
           <span className="font-ui text-label text-ink-500">{analyse.panneaux.traitements.changements}</span>
           <span className="font-ui text-chiffre font-extrabold tabular-nums tracking-chiffre text-ink-900">

@@ -240,7 +240,7 @@ export function BarresRang({
               onClick={() => onLigne?.(l.cle)}
               className={cn(
                 "group flex w-full min-w-0 flex-col gap-1 rounded-md px-1 py-0.5 text-left",
-                onLigne === undefined ? "cursor-default" : "transition hover:bg-white/60",
+                onLigne === undefined ? "cursor-default" : "transition hover:bg-card",
               )}
             >
               <span className="flex min-w-0 items-baseline justify-between gap-3">
@@ -254,7 +254,7 @@ export function BarresRang({
                   )}
                 </span>
               </span>
-              <span className="relative block h-1.5 w-full overflow-hidden rounded-full bg-white/70">
+              <span className="relative block h-1.5 w-full overflow-hidden rounded-full verre-clair-fort">
                 <span
                   className="analyse-pousse absolute inset-y-0 left-0 block rounded-full"
                   style={{

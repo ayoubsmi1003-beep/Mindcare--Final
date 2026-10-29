@@ -260,6 +260,55 @@ export const analyse = {
     absent: "Hors périmètre",
   },
 
+  supplementaires: {
+    ages: {
+      titre: "Pyramide des âges",
+      question: "Quel âge ont les patientes suivies ?",
+      aide:
+        "Dossiers ayant eu au moins une séance close sur la période. La pyramide se lit par bande d'âge ; quand le sexe n'est pas renseigné, elle passe en barres simples plutôt que d'inventer une moitié vide.",
+      femmes: "Femmes",
+      hommes: "Hommes",
+      nonRenseigne: "Sexe non renseigné",
+      vide: "Aucun dossier vu sur la période.",
+    },
+    types: {
+      titre: "Types de consultation",
+      question: "Quelles modalités composent réellement l'activité ?",
+      aide: "Type porté par le rendez-vous. « Non renseigné » reste affiché : c'est une donnée manquante, pas une catégorie.",
+      vide: "Aucun rendez-vous typé sur la période.",
+    },
+    durees: {
+      titre: "Durée des séances",
+      question: "Combien de temps dure une consultation ?",
+      mediane: "médiane",
+      minutes: "min",
+      aide:
+        "Durée mesurée entre le début et la fin de la séance, arrondie à la minute. La médiane est calculée sur les séances de la période, pas sur une moyenne que quelques séances très longues déformeraient.",
+      vide: "Aucune durée enregistrée sur la période.",
+    },
+    continuite: {
+      titre: "Continuité des soins",
+      question: "Les dossiers ouverts reviennent-ils ?",
+      horizon: "Retour sous",
+      jours: "jours",
+      cohorte: "dossiers avec le recul nécessaire",
+      revenus: "revenus",
+      aide:
+        "Cohorte des dossiers ouverts pendant la période. Pour chaque échéance, seuls comptent les dossiers ayant réellement eu ce recul : un dossier ouvert il y a dix jours ne peut pas prouver un retour à 180 jours.",
+      vide: "Aucun dossier ouvert sur la période : pas de cohorte à suivre.",
+    },
+    diagStock: {
+      titre: "Diagnostics actifs",
+      question: "Le tableau diagnostique se stabilise-t-il ?",
+      actifs: "Actifs",
+      nouveaux: "Nouveaux",
+      resolus: "Résolus",
+      aide:
+        "Stock de diagnostics actifs à la fin de chaque mois, et flux du mois. Un diagnostic est actif s'il a été écrit avant la fin du mois et n'était pas résolu à cette date.",
+      vide: "Aucun diagnostic documenté.",
+    },
+  },
+
   graphiques: {
     aucunPoint: "Aucun point à afficher sur cette période.",
     legende: "Légende",

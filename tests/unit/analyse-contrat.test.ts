@@ -98,6 +98,24 @@ const APERCU = {
       repetes: 2,
     },
   ],
+  charts: {
+    ages: [
+      { bande: "25-34", f: 4, m: 2, nr: 1 },
+      { bande: "35-44", f: 3, m: 0, nr: 0 },
+    ],
+    durees: [{ cle: "16-30", n: 12 }, { cle: "31-45", n: 9 }],
+    duree_mediane: 32,
+    continuite: [
+      { horizon: 30, cohorte: 20, revenus: 11, pct: 55 },
+      { horizon: 60, cohorte: 12, revenus: 7, pct: 58 },
+      { horizon: 90, cohorte: 8, revenus: 5, pct: 63 },
+      { horizon: 180, cohorte: 0, revenus: 0, pct: null },
+    ],
+    diag_stock: [
+      { cle: "2026-09-01", actifs: 120, nouveaux: 5, resolus: 2 },
+      { cle: "2026-10-01", actifs: 123, nouveaux: 4, resolus: 1 },
+    ],
+  },
   encaisse: { montant: 949000, perimetre: "cabinet" },
 };
 
@@ -120,6 +138,9 @@ describe("aperçu", () => {
     expect(r.data?.comparaison.seances).toBe(214);
     expect(r.data?.serie[1]?.couvert).toBe(false);
     expect(r.data?.diagnostics[1]?.code).toBeNull();
+    expect(r.data?.charts.duree_mediane).toBe(32);
+    expect(r.data?.charts.continuite[3]?.pct).toBeNull();
+    expect(r.data?.charts.ages[0]?.bande).toBe("25-34");
   });
 
   it("rend null quand la porte refuse — sans erreur", async () => {

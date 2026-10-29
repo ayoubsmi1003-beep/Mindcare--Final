@@ -145,7 +145,7 @@ export function SelecteurPeriodeAnalyse({
           role="radiogroup"
           aria-label={t.legende}
           aria-describedby={`${idGroupe}-bornes`}
-          className="flex min-w-0 flex-wrap items-center gap-0.5 rounded-full border border-white/75 bg-white/45 p-1 shadow-[inset_0_1px_2px_rgba(10,31,12,0.06),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md"
+          className="flex min-w-0 flex-wrap items-center gap-0.5 rounded-full border bord-verre verre-clair p-1 shadow-[inset_0_1px_2px_rgba(10,31,12,0.06),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md"
         >
           {OPTIONS.map((nom, i) => {
             const actif = periode.nom === nom;
@@ -168,7 +168,7 @@ export function SelecteurPeriodeAnalyse({
                   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600",
                   actif
                     ? "bg-action-600 font-semibold text-on-brand shadow-[0_1px_0_rgba(255,255,255,0.35)_inset,0_6px_14px_-8px_rgba(27,94,32,0.65)]"
-                    : "text-ink-700 hover:bg-white/80 hover:text-ink-900",
+                    : "text-ink-700 hover:bg-card hover:text-ink-900",
                   desactive ? "opacity-60" : "",
                 ].join(" ")}
               >
@@ -180,7 +180,7 @@ export function SelecteurPeriodeAnalyse({
 
         {/* La fenêtre active, en chiffres — jamais un intervalle sous-entendu. */}
         {periode.nom === "personnalise" ? (
-          <div className="flex min-h-10 items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)]">
+          <div className="flex min-h-10 items-center gap-2 rounded-full border bord-verre verre-clair-fort px-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)]">
             <label className="flex items-center gap-1.5">
               <span className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">{t.du}</span>
               <input
@@ -189,7 +189,7 @@ export function SelecteurPeriodeAnalyse({
                 max={periode.au}
                 disabled={desactive}
                 onChange={(e) => onChange({ nom: "personnalise", du: e.target.value, au: periode.au })}
-                className="h-7 w-[8.6rem] rounded-md border border-white/80 bg-white/80 px-1.5 font-num text-label tabular-nums text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+                className="h-7 w-[8.6rem] rounded-md border bord-verre verre-clair-fort px-1.5 font-num text-label tabular-nums text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
               />
             </label>
             <span aria-hidden="true" className="font-ui text-label text-ink-300">
@@ -203,12 +203,12 @@ export function SelecteurPeriodeAnalyse({
                 min={periode.du}
                 disabled={desactive}
                 onChange={(e) => onChange({ nom: "personnalise", du: periode.du, au: e.target.value })}
-                className="h-7 w-[8.6rem] rounded-md border border-white/80 bg-white/80 px-1.5 font-num text-label tabular-nums text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+                className="h-7 w-[8.6rem] rounded-md border bord-verre verre-clair-fort px-1.5 font-num text-label tabular-nums text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
               />
             </label>
           </div>
         ) : (
-          <span className="inline-flex min-h-10 items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)]">
+          <span className="inline-flex min-h-10 items-center gap-2 rounded-full border bord-verre verre-clair-fort px-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)]">
             <span className="font-num text-label font-semibold tabular-nums text-ink-900">
               {valide ? `${jourCourt(periode.du)} → ${jourCourt(periode.au)}` : "—"}
             </span>

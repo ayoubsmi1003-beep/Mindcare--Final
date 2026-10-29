@@ -134,11 +134,11 @@ export function Synthese({
               {formaterNombre(pulse.seances)}
             </span>
             {seances.pct === null ? (
-              <span className="mb-1 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-2.5 py-0.5 font-ui text-label font-medium text-on-brand/80">
+              <span className="mb-1 inline-flex items-center rounded-full border bord-nuit verre-nuit px-2.5 py-0.5 font-ui text-label font-medium text-on-brand/80">
                 {analyse.etats.sansComparaison}
               </span>
             ) : (
-              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/15 px-2.5 py-0.5 font-ui text-label font-semibold text-on-brand backdrop-blur-sm">
+              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border bord-nuit verre-nuit px-2.5 py-0.5 font-ui text-label font-semibold text-on-brand backdrop-blur-sm">
                 <span aria-hidden="true">{seances.pct > 0 ? "↑" : seances.pct < 0 ? "↓" : "→"}</span>
                 <span className="font-num tabular-nums">
                   {seances.pct > 0 ? "+" : ""}

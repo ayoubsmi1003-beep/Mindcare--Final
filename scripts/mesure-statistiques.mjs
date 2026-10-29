@@ -67,24 +67,20 @@ async function main() {
       page.on("console", (m) => { if (m.type() === "error") erreurs.push(m.text()); });
       page.on("pageerror", (e) => erreurs.push(String(e)));
 
-      await page.goto(`${BASE}/connexion`, { waitUntil: "domcontentloaded", timeout: 60_000 });
-      await page.waitForSelector('input[type="password"]', { timeout: 30_000 });
-      await page.waitForTimeout(1200);
-      await page.fill('input[type="text"]', EMAIL);
-      await page.fill('input[type="password"]', MOTDEPASSE);
-      await page.click('button[type="submit"], form button');
-      // ⚠️ ON N'ATTEND PAS LA REDIRECTION VERS /patients. En `next dev`, la
-      // première compilation de cette route a mesuré 246 s sur ce poste ; elle
-      // n'a rien à voir avec l'écran mesuré. On attend la RÉPONSE de connexion.
-      const reponse = await page
-        .waitForResponse((r) => r.url().includes("/api/auth/sign-in"), { timeout: 240_000 })
-        .catch(() => null);
-      if (reponse === null || reponse.status() !== 200) {
-        const txt = await page.evaluate(() => document.body.innerText.slice(0, 400));
-        throw new Error(`connexion refusée : ${txt}`);
+      await page.goto(`${BASE}/connexion`, { waitUntil: "domcontentloaded", timeout: 180_000 });
+      // ⚠️ CONNEXION PAR L'API, PAS PAR LE FORMULAIRE. Le formulaire redirige
+      // vers /patients, dont la première compilation en `next dev` a mesuré
+      // 246 s sur ce poste — un coût qui n'a rien à voir avec l'écran mesuré.
+      // Le cookie httpOnly posé par la route est partagé par le contexte.
+      const connexion = await contexte.request.post(`${BASE}/api/auth/sign-in`, {
+        data: { email: EMAIL, password: MOTDEPASSE },
+        timeout: 180_000,
+      });
+      if (!connexion.ok()) {
+        throw new Error(`connexion refusée : HTTP ${connexion.status()}`);
       }
 
-      await page.goto(`${BASE}/statistiques?du=2026-09-30&au=2026-10-29`, { waitUntil: "domcontentloaded" });
+      await page.goto(`${BASE}/statistiques?du=2026-01-01&au=2026-10-29`, { waitUntil: "domcontentloaded" });
       // Les 401 de l'écran de connexion (avant session) ne concernent pas cet
       // écran : on ne mesure que ce qui se passe APRÈS l'ouverture de session.
       erreurs.length = 0;
@@ -112,7 +108,7 @@ async function main() {
         zone?.scrollTo({ top: 0 });
       });
       await page.waitForTimeout(300);
-      await page.getByRole("heading", { name: "Échelles cliniques" }).scrollIntoViewIfNeeded();
+      await page.getByRole("heading", { name: "Pyramide des âges" }).scrollIntoViewIfNeeded();
       await page.waitForTimeout(500);
       await page.screenshot({ path: path.join(PREUVES, `${r.nom}-milieu.png`) });
 
@@ -152,12 +148,14 @@ async function main() {
       });
       controle(`${r.nom} — titres de panneau non tronqués`, tronques.length === 0, tronques.join(" · "));
 
-      // 3 · Les six panneaux attendus sont présents.
+      // 3 · Les panneaux attendus sont présents — les cinq nouveaux compris.
       const panneaux = await page.evaluate(() => {
         const titres = Array.from(document.querySelectorAll("h2")).map((h) => h.textContent ?? "");
         return ["Activité dans le temps", "Statuts des rendez-vous", "Nouveaux et retours",
-                "Rythme de la semaine", "Moments de la journée", "Échelles cliniques",
-                "Diagnostics documentés", "Qualité du dossier", "Traitements"]
+                "Rythme de la semaine", "Moments de la journée", "Pyramide des âges",
+                "Types de consultation", "Durée des séances", "Continuité des soins",
+                "Diagnostics actifs", "Échelles cliniques", "Diagnostics documentés",
+                "Qualité du dossier", "Traitements"]
           .filter((t) => !titres.some((x) => x.includes(t)));
       });
       controle(`${r.nom} — tous les panneaux sont rendus`, panneaux.length === 0, panneaux.join(" · "));

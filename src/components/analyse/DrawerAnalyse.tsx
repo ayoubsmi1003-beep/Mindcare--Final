@@ -140,9 +140,9 @@ export function DrawerAnalyse({
         role="dialog"
         aria-modal="true"
         aria-labelledby="titre-detail-analyse"
-        className="verre-panneau verre-liseret relative flex h-full w-full max-w-[34rem] flex-col rounded-none border-y-0 border-r-0 border-l border-l-white/90 bg-[rgba(250,253,251,0.96)] p-0 shadow-[-28px_0_64px_-32px_rgba(10,31,12,0.45)]"
+        className="verre-panneau verre-liseret relative flex h-full w-full max-w-[34rem] flex-col rounded-none border-y-0 border-r-0 border-l bord-verre bg-[rgba(250,253,251,0.96)] p-0 shadow-[-28px_0_64px_-32px_rgba(10,31,12,0.45)]"
       >
-        <header className="flex items-start justify-between gap-4 border-b border-white/70 px-6 py-5">
+        <header className="flex items-start justify-between gap-4 border-b bord-verre px-6 py-5">
           <div className="flex min-w-0 flex-col gap-0.5">
             <p className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
               {analyse.detail.titre}
@@ -161,7 +161,7 @@ export function DrawerAnalyse({
             ref={fermerRef}
             type="button"
             onClick={onFermer}
-            className="min-h-9 shrink-0 rounded-full border border-white/80 bg-white/70 px-3 font-ui text-label font-medium text-ink-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+            className="min-h-9 shrink-0 rounded-full border bord-verre verre-clair-fort px-3 font-ui text-label font-medium text-ink-700 transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
           >
             {analyse.detail.fermer}
           </button>
@@ -192,7 +192,7 @@ export function DrawerAnalyse({
           ) : null}
 
           {etat.statut === "charge" && total > 0 ? (
-            <ul className="flex flex-col divide-y divide-white/70">
+            <ul className="flex flex-col divide-y divide-rule">
               {(etat.donnees?.lignes ?? []).map((l) => (
                 <LigneDetailAnalyse key={`${l.patientId}-${l.evenementLe}-${l.consultationId ?? l.rendezVousId ?? ""}`} ligne={l} />
               ))}
@@ -201,12 +201,12 @@ export function DrawerAnalyse({
         </div>
 
         {total > PAR_PAGE ? (
-          <footer className="flex items-center justify-between gap-3 border-t border-white/70 px-6 py-3">
+          <footer className="flex items-center justify-between gap-3 border-t bord-verre px-6 py-3">
             <button
               type="button"
               disabled={page === 0}
               onClick={() => setPage((p) => Math.max(0, p - 1))}
-              className="min-h-8 rounded-full border border-white/80 bg-white/70 px-3 font-ui text-label text-ink-700 transition hover:bg-white disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+              className="min-h-8 rounded-full border bord-verre verre-clair-fort px-3 font-ui text-label text-ink-700 transition hover:bg-card disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
             >
               {analyse.detail.precedent}
             </button>
@@ -217,7 +217,7 @@ export function DrawerAnalyse({
               type="button"
               disabled={page + 1 >= pages}
               onClick={() => setPage((p) => p + 1)}
-              className="min-h-8 rounded-full border border-white/80 bg-white/70 px-3 font-ui text-label text-ink-700 transition hover:bg-white disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+              className="min-h-8 rounded-full border bord-verre verre-clair-fort px-3 font-ui text-label text-ink-700 transition hover:bg-card disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
             >
               {analyse.detail.suivant}
             </button>
@@ -257,14 +257,14 @@ function LigneDetailAnalyse({ ligne }: { readonly ligne: LigneAnalyse }): React.
         {ligne.consultationId === null ? null : (
           <Link
             href={`/consultation/${ligne.consultationId}`}
-            className="rounded-full border border-white/80 bg-white/70 px-2.5 py-1 font-ui text-eyebrow font-medium text-action-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+            className="rounded-full border bord-verre verre-clair-fort px-2.5 py-1 font-ui text-eyebrow font-medium text-action-700 transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
           >
             {analyse.detail.ouvrirSeance}
           </Link>
         )}
         <Link
           href={`/patients/${ligne.patientId}`}
-          className="rounded-full border border-white/80 bg-white/70 px-2.5 py-1 font-ui text-eyebrow font-medium text-action-700 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
+          className="rounded-full border bord-verre verre-clair-fort px-2.5 py-1 font-ui text-eyebrow font-medium text-action-700 transition hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600"
         >
           {analyse.detail.ouvrirDossier}
         </Link>

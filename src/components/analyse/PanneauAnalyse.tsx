@@ -107,7 +107,7 @@ export function EcartPastille({
         "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-ui font-semibold",
         taille === "petit" ? "text-eyebrow" : "text-label",
         neutre
-          ? "border-white/80 bg-white/60 text-ink-500"
+          ? "bord-verre verre-clair-fort text-ink-500"
           : positif
             ? "border-positive/25 bg-positive-bg text-positive"
             : "border-attention/25 bg-attention-bg text-attention-ink",
