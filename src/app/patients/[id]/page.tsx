@@ -43,7 +43,7 @@ import {
 import { EnTeteCollant, type ActionDominante } from "@/components/patients/EnTeteCollant";
 import { RetourListe } from "@/components/patients/EnTetePatient";
 import { FormulaireModification } from "@/components/patients/FormulaireModification";
-import { EchellesPatient, ListeDiagnostics, PanneauClinique } from "@/components/patients/PanneauClinique";
+import { EtatClinique, PanneauClinique } from "@/components/patients/PanneauClinique";
 import { HistoriqueSeances } from "@/components/patients/HistoriqueSeances";
 import { PatientProfilClinique } from "@/components/patients/PatientProfilClinique";
 import {
@@ -58,12 +58,12 @@ import {
   EtatVide,
   Onglets,
   PanneauOnglet,
-  SectionPliable,
   Squelette,
   type Onglet,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { patientSummary } from "@/i18n/patient-summary";
+import { cliniqueUi } from "@/i18n/clinical-ui";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import {
@@ -261,6 +261,30 @@ export default function PageFichePatient(): React.JSX.Element {
     });
   }
 
+  /**
+   * Relecture du dossier après une écriture (diagnostic, traitement, échelle).
+   * Le résumé devient visiblement « à revérifier » ; on ne le régénère pas en
+   * silence, l'IA ne travaille jamais sans geste explicite.
+   */
+  const rafraichirEspace = useCallback((): void => {
+    if (patientScope.current !== id) return;
+    const generation = ++resultGeneration.current;
+    const actuel = () => patientScope.current === id && resultGeneration.current === generation;
+    void getPatientWorkspace(id).then((result) => {
+      if (!actuel() || !result.ok || result.data === null || result.data.identite.id !== id) return;
+      setEspace(result.data);
+      setResumeEtat((etat) =>
+        actuel()
+          ? {
+              ...etat,
+              generationEnCours: false,
+              resume: etat.resume === null ? null : { ...etat.resume, aJour: false },
+            }
+          : etat,
+      );
+    });
+  }, [id]);
+
   // ── Génération du résumé — post-rendu, repli honnête sur échec. ─────────
   const generer = useCallback((): void => {
     if (patientScope.current !== id) return;
@@ -432,15 +456,28 @@ export default function PageFichePatient(): React.JSX.Element {
 
                   {espace.clinique === null ? null : (
                     <>
-                      <SectionPliable titre={fr.patients.sections.diagnostics} replieParDefaut>
-                        <ListeDiagnostics diagnostics={espace.clinique.diagnostics} />
-                      </SectionPliable>
-                      <SectionPliable titre={fr.patients.sections.echelles} replieParDefaut>
-                        <EchellesPatient clinique={espace.clinique} patientId={espace.identite.id} />
-                      </SectionPliable>
-                      <SectionPliable titre={patientSummary.seancesPassees} replieParDefaut>
+                      {/* V8 clinique — plus de sections repliées : les diagnostics
+                          et les échelles sont le contenu de la vue d'ensemble, pas
+                          un sous-menu. Une seule surface, deux colonnes séparées
+                          par un filet : les hauteurs restent alignées sans créer
+                          un grand vide dans une carte plus courte. */}
+                      <EtatClinique
+                        clinique={espace.clinique}
+                        patientId={espace.identite.id}
+                        onMisAJour={rafraichirEspace}
+                      />
+                      <section
+                        aria-labelledby="titre-seances-passees"
+                        className="flex flex-col gap-4 rounded-3xl border border-rule bg-card p-5 shadow-carte sm:p-6"
+                      >
+                        <div className="flex flex-col gap-0.5">
+                          <h2 id="titre-seances-passees" className="m-0 font-ui text-title font-bold tracking-title text-ink-900">
+                            {patientSummary.seancesPassees}
+                          </h2>
+                          <p className="m-0 font-ui text-label text-ink-500">{cliniqueUi.seances.sousTitre}</p>
+                        </div>
                         <HistoriqueSeances patientId={espace.identite.id} />
-                      </SectionPliable>
+                      </section>
                     </>
                   )}
 
@@ -455,7 +492,11 @@ export default function PageFichePatient(): React.JSX.Element {
             {actif === "chronologie" ? <ChronologiePatient patientId={espace.identite.id} /> : null}
 
             {actif === "clinique" && espace.clinique !== null ? (
-              <PanneauClinique clinique={espace.clinique} patientId={espace.identite.id} />
+              <PanneauClinique
+                clinique={espace.clinique}
+                patientId={espace.identite.id}
+                onMisAJour={rafraichirEspace}
+              />
             ) : null}
 
             {actif === "traitements" && (espace.traitements !== null || espace.traitementsV2 !== null) ? (

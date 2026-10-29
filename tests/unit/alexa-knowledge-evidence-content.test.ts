@@ -103,5 +103,20 @@ it('keeps neighbouring context while admitting only the requested medication as 
  const messages=local.mock.calls.at(-1)?.[0],input=JSON.parse(messages.find((m:{role:string})=>m.role==='user').content);
  expect(input.passages[0].citableQuoteIds).toEqual(['q2']);
  expect(JSON.stringify(input)).toContain(other);
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference'&&e.sources[0]?.excerpt===requested)).toBe(true);
+ expect(events.some(e=>e.type==='sentence'&&e.kind==='knowledge'&&e.sources[0]?.excerpt===requested)).toBe(true);
+});
+
+it('does not publish a generated claim as supported merely because it cites a genuine passage',async()=>{
+ const passage='Le passage décrit des signes observés au cours de cet exemple synthétique.';
+ const claim='La description synthétique concerne exclusivement des animaux aquatiques.';
+ const question='Explique les signes selon DSM-5';
+ const result=await readKnowledge(client(passage),question);
+ expect(result.preuves.length).toBeGreaterThan(0);
+ local.mockResolvedValue(JSON.stringify({coverage:'supported',sentences:[{text:claim,evidence:[{index:1,quoteId:'q1'}]}]}));
+ const coverage:string[]=[];
+ const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true,onCoverage:value=>coverage.push(value)});
+ expect(events.some(event=>event.type==='sentence'&&event.kind==='inference')).toBe(false);
+ expect(events.some(event=>event.type==='sentence'&&event.text.includes(claim))).toBe(false);
+ expect(events.some(event=>event.type==='sentence'&&event.text.includes('Le passage décrit'))).toBe(true);
+ expect(coverage).not.toContain('supported');
 });

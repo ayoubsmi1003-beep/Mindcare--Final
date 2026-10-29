@@ -160,6 +160,23 @@ it('answers a current-consultation problem question from the documented concern 
  expect(summary.status).toBe('ok');expect(summary.text).toContain('décrit une baisse de l’élan et un retrait des activités habituelles');expect(summary.text).toContain('SERTRALINE');
  expect(summary.text).not.toContain('reprendre progressivement');
 });
+it('answers diagnosis questions from the selected patient gate with active and resolved states',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',activeId='33333333-3333-4333-8333-333333333331',resolvedId='33333333-3333-4333-8333-333333333332';
+ const context:ClinicalContext={patientId,consultations:[],diagnoses:[
+  {id:activeId,label:'Trouble anxieux actualisé',code:'F41.1',primary:true,onsetDate:'2025-01-01',resolvedAt:null},
+  {id:resolvedId,label:'Trouble panique résolu',code:'F41.0',primary:false,onsetDate:'2024-01-01',resolvedAt:'2026-09-01'},
+ ],treatments:{current:[],history:[],historyComplete:true},scales:[],sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false}};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Patiente',last_name:'Fictive'}]}:name==='get_alexa_clinical_context'?{ok:true,data:[context]}:{ok:false,error:{code:'unavailable',message:'Unavailable',technical:'XX000'}});
+ const text='Quels diagnostics sont documentés pour le patient sélectionné ?';
+ const execute=agentExecutor({text,conversationId:'selected-patient-diagnoses',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'diagnoses',name:'get_patient_context',args:{partIds:['diagnoses'],section:'diagnoses'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.complete).toBe(true);
+ expect(result.text).toContain('Trouble anxieux actualisé');expect(result.text).toContain('Trouble panique résolu');
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:activeId,type:'diagnostic'}));
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:resolvedId,type:'diagnostic'}));
+ expect(rpc.mock.calls.some(call=>call[0]==='get_patient')).toBe(true);
+ expect(rpc.mock.calls.filter(call=>call[0]==='get_alexa_clinical_context')).toHaveLength(1);
+});
 it('returns every stored scale administration even when the consultation page is limited to five',async()=>{
  vi.mocked(inferLocalText).mockClear();
  const patientId='22222222-2222-4222-8222-222222222222',scales=Array.from({length:101},(_,index)=>{

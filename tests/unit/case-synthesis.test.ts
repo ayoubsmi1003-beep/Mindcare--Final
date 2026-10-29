@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildCaseSynthesis, type ScaleAdministrationLite, type ScaleDefinitionLite } from "@/server/alexa/case-synthesis";
+import { buildCaseSynthesis, CASE_SYNTHESIS_VERSION, type ScaleAdministrationLite, type ScaleDefinitionLite } from "@/server/alexa/case-synthesis";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
 
 const patientId = "a1000000-0000-4000-8000-000000001016";
@@ -88,6 +88,20 @@ const definitions: readonly ScaleDefinitionLite[] = [
 ];
 
 describe("buildCaseSynthesis", () => {
+  it("versions the saved case summary after its diagnosis projection changes", () => {
+    expect(CASE_SYNTHESIS_VERSION).toBe("case-synthesis-fr-v4");
+  });
+
+  it("writes diagnosis and treatment facts as complete, human-readable sentences", () => {
+    const result = buildCaseSynthesis({ context: context(), histories, definitions });
+    const text = result.paragraphes.map((item) => item.texte).join(" ");
+
+    expect(text).toContain("Le suivi concerne le diagnostic principal « Trouble anxieux ».");
+    expect(text).toContain("Le traitement par « Sertraline » est actif (dose consignée : 50 mg ; fréquence consignée : « 1/j »).");
+    expect(result.paragraphes.every((item) => /[.!?…]\s*»?$/u.test(item.texte) && !item.texte.includes("\n") && !/^\s*[-*•]\s/mu.test(item.texte)), "every case summary item must be a complete paragraph").toBe(true);
+    expect(text).not.toContain(" · ");
+  });
+
   it("writes a readable longitudinal narrative without a date before every fact", () => {
     const result = buildCaseSynthesis({ context: context(), histories, definitions });
     const text = result.paragraphes.map((item) => item.texte).join(" ");
@@ -100,8 +114,69 @@ describe("buildCaseSynthesis", () => {
     expect(text).toContain("différences relationnelles".replace("différences", "difficultés"));
     expect(text).not.toContain("Pour la consultation du");
     expect(text).not.toMatch(/\d{2}\/\d{2}\/\d{4}.*\d{2}\/\d{2}\/\d{4}/u);
-    expect(result.paragraphes.length).toBeGreaterThanOrEqual(2);
-    expect(result.paragraphes.length).toBeLessThanOrEqual(4);
+    expect(result.paragraphes).toHaveLength(1);
+    const sources = result.paragraphes[0]?.sources.map((source) => `${source.t}:${source.id}`) ?? [];
+    expect(new Set(sources).size).toBe(sources.length);
+  });
+
+  it("uses the curated human visit paragraph instead of the retained model notes", () => {
+    const consultations = context().consultations.map((consultation) => consultation.id === consultationB
+      ? {
+          ...consultation,
+          analysis: {
+            ...consultation.analysis!,
+            content: {
+              ...(consultation.analysis!.content as Record<string, unknown>),
+              resumeNotes: "Notes sources conservées pour la traçabilité.",
+              resume: "La séance a été consacrée aux difficultés relationnelles.",
+            },
+          },
+        }
+      : consultation);
+    const result = buildCaseSynthesis({ context: context({ consultations }), histories: [], definitions: [] });
+    const text = result.paragraphes.map((item) => item.texte).join(" ");
+
+    expect(text).toContain("difficultés relationnelles");
+    expect(text).not.toContain("Notes sources conservées");
+  });
+
+  it("includes the updated active diagnosis as sourced prose and excludes a resolved prior diagnosis", () => {
+    const resolvedId = "a1000000-0000-4000-8000-000000005002";
+    const result = buildCaseSynthesis({
+      context: context({ diagnoses: [
+        { id: diagnosis, label: "Trouble anxieux actualisé", code: "F41.1", primary: true, onsetDate: "2025-01-01", resolvedAt: null },
+        { id: resolvedId, label: "Trouble panique résolu", code: "F41.0", primary: false, onsetDate: "2024-01-01", resolvedAt: "2026-09-01" },
+      ] }),
+      histories,
+      definitions,
+    });
+    const paragraphs = result.paragraphes;
+    const text = paragraphs.map((item) => item.texte).join(" ");
+    expect(text).toContain("Trouble anxieux actualisé");
+    expect(text).not.toContain("Trouble panique résolu");
+    expect(paragraphs.flatMap((item) => item.sources)).toContainEqual({ t: "diagnostic", id: diagnosis });
+    expect(paragraphs.every((item) => !item.texte.includes("\n") && !/^\s*[-*•]\s/mu.test(item.texte))).toBe(true);
+  });
+
+  it("keeps active and resolved diagnoses with their recorded status in the saved case resume", () => {
+    const resolvedId = "a1000000-0000-4000-8000-000000005002";
+    const result = buildCaseSynthesis({
+      context: context({ diagnoses: [
+        { id: diagnosis, label: "Trouble anxieux actualisé", code: "F41.1", primary: true, onsetDate: "2025-01-01", resolvedAt: null },
+        { id: resolvedId, label: "Trouble panique résolu", code: "F41.0", primary: false, onsetDate: "2024-01-01", resolvedAt: "2026-09-01" },
+      ] }),
+      histories,
+      definitions,
+    });
+
+    expect(result.diagnostics.map((entry) => entry.texte)).toEqual([
+      "Trouble anxieux actualisé (actif depuis le 01/01/2025)",
+      "Trouble panique résolu (résolu le 01/09/2026)",
+    ]);
+    expect(result.diagnostics.flatMap((entry) => entry.sources)).toEqual([
+      { t: "diagnostic", id: diagnosis },
+      { t: "diagnostic", id: resolvedId },
+    ]);
   });
 
   it("keeps the PHQ-9 item 9 finding visible without inventing a diagnosis or urgency", () => {

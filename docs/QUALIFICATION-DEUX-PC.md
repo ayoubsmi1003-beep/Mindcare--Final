@@ -176,3 +176,27 @@ Ce qu'il faut y lire :
 Tant que ce tableau n'est pas rempli, la mention « production-ready » ne doit pas
 être employée : les tests unitaires et le paquet ne remplacent pas deux machines
 réelles.
+
+---
+
+## 9. Preuves exécutées le 2026-10-28 (PC de qualification)
+
+Ces preuves ne remplacent pas la réception sur deux machines ; elles établissent
+que la mise à niveau de la base et le build décompressé fonctionnent.
+
+| Élément | Résultat | Preuve |
+|---|---|---|
+| Sauvegarde pré-mise à jour | PASS | `pre-upgrade-20261028-174003.dump`, 244 897 518 octets, SHA-256 `5E5CEEDBB3FA793F102FD457FF71B8E8075F62FD5B56787481E7E81331E2E56B` |
+| Restauration clone | PASS | 1 559 patients, 5 profils, 0 patient en attente ; comptages identiques |
+| Migrations | PASS | 38 migrations appliquées au clone puis à la production ; tête `194_alexa_consultation_scale_read` |
+| Comptages après migration | PASS | 1 559 patients, 5 profils — aucune perte |
+| `pg_hba.conf` | PASS | restauré à l'identique ; connexion `postgres` sans mot de passe refusée |
+| Build décompressé | PASS | `dist/win-unpacked/MindCare OS.exe` lancé, écran de connexion capturé |
+| Connexion médecin / accueil | PASS | captures locales `01-connexion.png`, `02-patients.png`, `03-accueil.png` |
+| Deux vraies machines, reboot, DHCP, câble, réseau invité, pare-feu, VM propre | NOT RUN | matériel/VM non disponibles dans cette session |
+
+> Le nombre observé est **1 559**, et non 1 558. Aucun dossier n'a été supprimé ;
+> l'écart d'une ligne doit être expliqué par le cabinet (probablement un dossier
+> synthétique ou un arrondi). Ne supprimez jamais une ligne pour « corriger » ce
+> chiffre.
+

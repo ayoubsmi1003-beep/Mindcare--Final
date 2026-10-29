@@ -53,14 +53,20 @@ function summaryContext(): ClinicalContext {
 
 it("renders recorded diagnoses, all treatment states and the latest completed consultation as a sourced French narrative", () => {
   const context = summaryContext();
+  context.diagnoses[0]!.label = "Trouble anxieux actualisé";
+  context.diagnoses[0]!.onsetDate = "2025-01-15";
   context.currentConsultation = { id: "open", startedAt: "2026-03-03T00:00:00Z", endedAt: null, notes: [] };
   const summary = buildCaseSummary(context, []);
   const narrative = summary.apercu.contexte;
   expect(narrative.length).toBeGreaterThanOrEqual(2);
   expect(narrative.length).toBeLessThanOrEqual(4);
   expect(narrative[0]).toMatchObject({ sources: [{ t: "diagnostic", id: "diagnostic-active" }] });
-  expect(narrative[0]?.texte).toContain("Trouble anxieux");
+  expect(narrative[0]?.texte).toContain("Trouble anxieux actualisé");
   expect(narrative[0]?.texte).not.toContain("Ancien diagnostic");
+  expect(summary.apercu.diagnostics).toEqual([
+    { texte: "Trouble anxieux actualisé (actif depuis le 15/01/2025)", sources: [{ t: "diagnostic", id: "diagnostic-active" }] },
+    { texte: "Ancien diagnostic (résolu le 01/01/2025)", sources: [{ t: "diagnostic", id: "diagnostic-resolved" }] },
+  ]);
   expect(narrative[1]?.texte).toContain("Sertraline");
   expect(narrative[1]?.texte).toContain("100 mg");
   expect(narrative[1]?.texte).toContain("1/j");

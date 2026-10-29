@@ -68,7 +68,7 @@ describe("encodage secondaire : troncature et padding déterministes", () => {
   it("tronque à la longueur max et pad à droite", () => {
     const long = { encode: () => ({ ids: [1, 2, 3, 4, 5], attention_mask: [1, 1, 1, 1, 1] }), token_to_id: () => 0 };
     const court = { encode: () => ({ ids: [7], attention_mask: [1] }), token_to_id: () => 0 };
-    const lot = encoderLotSecondaire({ encode: (t) => (t === "long" ? long : court).encode(t), token_to_id: () => 0 }, ["long", "court"], 4);
+    const lot = encoderLotSecondaire({ encode: (t) => (t === "long" ? long : court).encode(), token_to_id: () => 0 }, ["long", "court"], 4);
     expect(lot.ids[0]).toEqual([1, 2, 3, 4]);
     expect(lot.ids[1]).toEqual([7, 0, 0, 0]);
     expect(lot.attention_mask[1]).toEqual([1, 0, 0, 0]);

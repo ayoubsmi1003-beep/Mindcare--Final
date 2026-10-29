@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { identite, echec, succes } from "../_commun";
+import { identite, echec, refusIaClinique, succes } from "../_commun";
 import { alexaDb } from "@/server/alexa/db";
 import { isSameOriginRequest } from "@/server/auth/same-origin";
 import { generateSessionSummary, SessionSummaryError } from "@/server/alexa/session-summary";
@@ -8,6 +8,8 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function POST(request: Request): Promise<Response> {
   if (!isSameOriginRequest(request)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   const actor = await identite();
   if (!actor) return echec("non-authentifie", copy.failed);
   const input = z.object({ consultationId: z.uuid() }).strict().safeParse(await request.json().catch(() => null));

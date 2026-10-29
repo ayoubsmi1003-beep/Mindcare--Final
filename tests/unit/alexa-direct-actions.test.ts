@@ -1,6 +1,7 @@
 import {beforeEach,expect,it,vi} from "vitest";
 import type {EtatConversationPublique} from "@/services/conversation";
 import type {AlexaTurnResult,envoyerTourAlexa} from "@/services/alexa-turn";
+import { alexaActionsAuthorizedByExplicitCommand } from "@/shared/alexa/action-authorization";
 
 const boundary=vi.hoisted(()=>({
  ensure:vi.fn(),
@@ -94,7 +95,7 @@ it("confirme puis exécute un rendez-vous demandé sans afficher de carte de con
  }finally{h.stop();}
 });
 
-it("exécute la modification explicitement demandée sur le traitement identifié sans seconde confirmation",async()=>{
+it("garde la modification médicamenteuse en attente de confirmation clinique",async()=>{
  const held=heldTurn(completed({
   tool:"update_treatment",
   args:{patientId:PATIENT_ID,treatmentId:"d1000000-0000-4000-8000-000000000001",expectedVersion:2,changes:"{\"dose\":\"50 mg\"}"},
@@ -106,9 +107,19 @@ it("exécute la modification explicitement demandée sur le traitement identifi�
   await flush();
   held.finish();
   await sending;
+  expect(boundary.confirm).not.toHaveBeenCalled();
+  expect(boundary.execute).not.toHaveBeenCalled();
+  expect(h.state?.carteEcriture).toMatchObject({actionId:ACTION_ID,outil:"update_treatment"});
+  await h.api.accepterCarte();
   expect(boundary.confirm).toHaveBeenCalledWith(ACTION_ID);
   expect(boundary.execute).toHaveBeenCalledWith(expect.objectContaining({actionId:ACTION_ID,outil:"update_treatment"}));
+  expect(boundary.confirm.mock.invocationCallOrder[0]).toBeLessThan(boundary.execute.mock.invocationCallOrder[0]!);
   expect(h.state?.carteEcriture).toBeNull();
   expect(h.state?.tours.at(-1)?.role).toBe("jarvis");
  }finally{h.stop();}
 });
+
+it.each(["update_treatment","pause_treatment","resume_treatment","stop_treatment"] as const)(
+ "does not treat an explicit %s command as clinical confirmation",
+ action=>expect(alexaActionsAuthorizedByExplicitCommand(action)).toBe(false),
+);

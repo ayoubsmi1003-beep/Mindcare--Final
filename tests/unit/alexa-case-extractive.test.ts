@@ -33,6 +33,46 @@ describe('whole-case sentence selection',()=>{
     expect((result.text.match(/consultation du/gu)??[])).toHaveLength(1);
     expect(result.text.split(/\s+/u).length).toBeLessThanOrEqual(70);
   });
+  it('includes every active and resolved diagnosis with its recorded status in one whole-case paragraph',async()=>{
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{const body=JSON.parse(String(messages[1]!.content));return JSON.stringify({selection:body.choices[0].id});});
+    const ctx=context(1);
+    ctx.diagnoses=[
+      {id:'a5000000-0000-4000-8000-000000000101',label:'Trouble anxieux actualisé',code:'F41.1',primary:true,onsetDate:'2026-01-01',resolvedAt:null},
+      {id:'a5000000-0000-4000-8000-000000000102',label:'Trouble du sommeil actif',code:null,primary:false,onsetDate:'2026-02-01',resolvedAt:null},
+      {id:'a5000000-0000-4000-8000-000000000103',label:'Ancien diagnostic résolu',code:null,primary:false,onsetDate:'2025-01-01',resolvedAt:'2026-01-01'},
+    ];
+    const result=await summarizeClinicalCaseContext(ctx,new AbortController().signal);
+    expect(result.generated).toBe(true);
+    expect(result.text).toContain('Trouble anxieux actualisé');
+    expect(result.text).toContain('Trouble du sommeil actif');
+    expect(result.text).toContain('Ancien diagnostic résolu');
+    expect(result.text).toContain('actif depuis le 01/01/2026');
+    expect(result.text).toContain('résolu le 01/01/2026');
+    expect(result.sourceIds).toEqual(expect.arrayContaining(ctx.diagnoses.map(diagnosis=>diagnosis.id)));
+    expect(clinicalNarrativeReferences(ctx,result.sourceIds)).toEqual(expect.arrayContaining([
+      {t:'diagnostic',id:ctx.diagnoses[0]!.id},{t:'diagnostic',id:ctx.diagnoses[1]!.id},
+      {t:'diagnostic',id:ctx.diagnoses[2]!.id},
+    ]));
+    expect(result.text).not.toMatch(/\n|^\s*[-*•]\s/mu);
+    expect(result.text.trim()).toMatch(/[.!?]$/u);
+  });
+  it('capitalizes the sentence that remains after removing a repeated consultation date',async()=>{
+    vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};
+      const clinical=body.choices.find(choice=>choice.text.includes('baisse de l’énergie'))!;
+      const plan=body.choices.find(choice=>choice.text.includes('Le suivi se poursuit'))!;
+      const selections=(options!.jsonSchema as {properties:{selection:{enum:string[]}}}).properties.selection.enum;
+      const pair=selections.find(selection=>selection.split('+').includes(clinical.id)&&selection.split('+').includes(plan.id));
+      return JSON.stringify({selection:pair});
+    });
+    const ctx=context(1);
+    ctx.consultations[0]!.notes[0]!.subjective='La personne rapporte une baisse de l’énergie depuis deux semaines.';
+    ctx.consultations[0]!.notes[0]!.plan='Le suivi se poursuit la semaine prochaine.';
+    const result=await summarizeClinicalCaseContext(ctx,new AbortController().signal);
+    expect(result.generated).toBe(true);
+    expect((result.text.match(/consultation du/gu)??[])).toHaveLength(1);
+    expect(result.text).toMatch(/\. Le plan consigné/u);
+  });
   it('keeps sentence provenance through hidden batches without citing the entire selected batch',async()=>{
     const read=new Set<string>();
     vi.mocked(inferLocalText).mockImplementation(async messages=>{

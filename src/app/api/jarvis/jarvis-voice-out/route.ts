@@ -9,7 +9,7 @@ import { sessionVoix, voixLocaleConfiguree } from "@/server/voice/session";
 import { segmenterVoix } from "@/shared/jarvis/segments-voix";
 import { z } from "zod";
 
-import { echec, identite } from "../_commun";
+import { echec, identite, refusIaClinique } from "../_commun";
 
 const Schema = z
   .object({
@@ -31,6 +31,8 @@ function echecSynthese(cause: unknown): Response {
 /** Local Kokoro synthesis of an authenticated Alexa answer. */
 export async function POST(req: Request): Promise<Response> {
   if (!isSameOriginRequest(req)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   const actor = await identite();
   if (actor === null) return echec("non-authentifie", alexaCognitive.voixIndisponible);
   if (!voixLocaleConfiguree(env())) return echec("configuration", alexaCognitive.voixLocale);

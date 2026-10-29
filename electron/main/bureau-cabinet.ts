@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, Menu, session } from 'electron';
+import { app, BrowserWindow, dialog, ipcMain, Menu, safeStorage, session } from 'electron';
 import type { Session } from 'electron';
 import { execFile } from 'node:child_process';
 import { randomBytes, X509Certificate } from 'node:crypto';
@@ -17,6 +17,11 @@ import { demarrerRemappage, type Remappage } from './remappage-cabinet.js';
 import { configurerOrigineCabinet } from './config.js';
 import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, validerOrigineCabinet, ErreurConnexionCabinet, appareilRevoque } from './connexion-cabinet.js';
 import { verifierCertificatCabinet } from './confiance-cabinet.js';
+import {
+  ecrireConfianceStockee,
+  lireConfianceStockee,
+  type Scelleur,
+} from './confiance-stockage.js';
 import { journalDesktop } from './journal-desktop.js';
 import { htmlEcranCabinet } from './ecran-cabinet.js';
 import {
@@ -81,6 +86,16 @@ let adresseForcee: string | null = null;
  */
 let avertissement: string | undefined;
 const fichierConfiance = () => path.join(app.getPath('userData'), 'clinic-trust.json');
+/**
+ * DPAPI de portée UTILISATEUR. Un `clinic-trust.json` copié vers un autre
+ * compte Windows ne se déchiffre pas : le jeton de poste ne peut pas être
+ * rejoué depuis une sauvegarde de profil.
+ */
+const scelleurConfiance: Scelleur = {
+  disponible: () => { try { return safeStorage.isEncryptionAvailable(); } catch { return false; } },
+  sceller: (texte) => safeStorage.encryptString(texte),
+  desceller: (donnees) => safeStorage.decryptString(donnees),
+};
 function obtenirSessionSonde(): Session {
   sessionSonde ??= creerSessionSondeCabinet((partition, options) => session.fromPartition(partition, options));
   return sessionSonde;
@@ -104,21 +119,22 @@ function lireConfiance(): ConfianceCabinet | undefined {
     return { ...identity, certificate };
   }
   if (!existsSync(fichierConfiance())) return undefined;
-  const text = readFileSync(fichierConfiance(), 'utf8');
-  if (text.length > 12000) throw new Error('Connexion du cabinet à vérifier.');
-  const value = JSON.parse(text) as ConfianceCabinet;
-  if (!/^[0-9a-f-]{36}$/i.test(value.id) || !verifierCertificatCabinet(value.certificate, value.origin, value.certificate)) throw new Error('Connexion du cabinet à vérifier.');
-  // Jeton de poste (178) : optionnel, pour qu'un `clinic-trust.json` écrit par
-  // une version antérieure reste lisible. Un jeton mal formé est ignoré — le
-  // poste devra être réappairé, mais rien n'est inventé.
-  const deviceId = typeof value.deviceId === 'string' && /^[0-9a-f-]{36}$/i.test(value.deviceId) ? value.deviceId : undefined;
-  const deviceToken = typeof value.deviceToken === 'string' && /^[A-Za-z0-9_-]{43}$/.test(value.deviceToken) ? value.deviceToken : undefined;
-  return {
-    id: value.id,
-    origin: value.origin,
-    certificate: value.certificate,
-    ...(deviceId !== undefined && deviceToken !== undefined ? { deviceId, deviceToken } : {}),
-  };
+  const lu = lireConfianceStockee(fichierConfiance(), scelleurConfiance);
+  if (lu === undefined) return undefined;
+  // Format v1 (clair) : on le réécrit scellé au premier lancement. Si le
+  // chiffrement n'est pas disponible, on continue avec la valeur lue — mais on
+  // ne réécrit JAMAIS en clair.
+  if (lu.migrer) {
+    try {
+      ecrireConfianceStockee(fichierConfiance(), lu.value, scelleurConfiance);
+    } catch {
+      journalDesktop(app.getPath('userData'), 'CLINIC_TRUST_MIGRATION_FAILED');
+    }
+  }
+  if (!verifierCertificatCabinet(lu.value.certificate, lu.value.origin, lu.value.certificate)) {
+    throw new Error('Connexion du cabinet à vérifier.');
+  }
+  return lu.value;
 }
 /**
  * La confiance d'un POSTE D'ACCUEIL illisible ne doit pas condamner
@@ -358,7 +374,7 @@ ipcMain.handle('mindcare:cabinet-action', async (event, value: unknown) => {
       writeFileSync(certFile,certificate.raw);
       try {
         await executerInstallation('Client', `-Origin ${psQuote(paired.origin)} -PublicCertificate ${psQuote(certFile)} -CertificateSha256 ${psQuote(certificate.fingerprint256.replaceAll(':','').toLowerCase())}`);
-        writeFileSync(fichierConfiance(),JSON.stringify(paired),{mode:0o600}); confiance = paired; avertissement = undefined;
+        ecrireConfianceStockee(fichierConfiance(), paired, scelleurConfiance); confiance = paired; avertissement = undefined;
         statut({ message: messages.waitingClinic!, detail: messages.waitingClinicDetail!, premier: false, invitation: false, manuelle: false });
       } finally { rmSync(certFile,{force:true}); }
     } else if (input.action === 'manual' && !confiance && typeof input.code === 'string') {

@@ -77,6 +77,13 @@ it('routes appointment requests awaiting treatment to the reception queue',()=>{
 it('keeps a pause-state treatment follow-up on the selected patient treatment read',()=>{
  expect(frenchRequestAdmission('Quels traitements sont en pause pour le patient sélectionné ?',false)).toMatchObject({tools:['get_patient_context'],patientSection:'treatments',treatmentState:'paused'});
 });
+it.each([
+ ['Quels diagnostics sont actuellement notés comme actifs pour le patient sélectionné ?','active'],
+ ['Quels diagnostics sont actuellement notés comme actifs pour Nadia Test ?','active'],
+ ['Quels diagnostics sont actuellement notés comme résolus pour Nadia Test ?','resolved'],
+])('routes diagnosis questions about %s to the diagnosis section, not consultation notes',(text,diagnosisState)=>{
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'diagnoses',diagnosisState});
+});
 it('preserves an explicit single-day range and issued status in a patient document read',()=>{
  const text='Quels documents émis concernent le dossier courant le 1 janvier 1900 ?';
  const admission=frenchRequestAdmission(text,false);

@@ -42,7 +42,8 @@ it.each([
  expect(result.preuves).toHaveLength(1);
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique le contenu selon DSM','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(accepted);
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
+  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(text))).toBe(accepted);
 });
 it.each([
  ['1. Les signes décrits dans ce passage sont des manifestations documentées.',true],
@@ -55,14 +56,15 @@ it.each([
  expect(result.preuves).toHaveLength(1);
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique les signes selon DSM','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(accepted);
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
+  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(passage))).toBe(accepted);
 });
 it.each(['Les signes décrits dans ce passage sont des manifestations documentées.','Signe le plus fréquent : les signes décrits sont des manifestations synthétiques documentées.'])('does not confuse a medical noun with an announcement that a document was signed: %s',async text=>{
  const result=await readKnowledge(clientFor(text),'Explique les signes selon DSM');
  expect(result.preuves).toHaveLength(1);
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique les signes selon DSM','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(true);
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='knowledge'&&e.sources[0]?.excerpt?.includes(text))).toBe(true);
 });
 it.each(['Le document est signé.','La note est signee.','Le document est signe.','Je signe la note.','Signe le document.'])('still rejects an unverified signing claim: %s',async claim=>{
  const result=await readKnowledge(clientFor('Contenu synthétique : '+claim),'Explique le contenu selon DSM');
@@ -138,16 +140,16 @@ it.each([
  ['La sertraline inchangée est excrétée dans les urines à plus de 0,2 %.',false],
  ['La sertraline inchangée est excrétée dans les urines à 0,2 %.',false],
  ['Sertraline: less than 0.2% of unchanged sertraline excreted in urine.',false],
-])('allows one local French reformulation while preserving evidence and all guards: %s',async(text,accepted)=>{
+])('keeps only the literal evidence after local French reformulation checks: %s',async(text,accepted)=>{
  const passage='Sertraline: less than 0.2% of unchanged sertraline excreted in urine.';
  const result=await readKnowledge(clientFor(passage,'en'),'Explique la sertraline selon DSM-5');
  local.mockResolvedValueOnce(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}))
   .mockResolvedValueOnce(JSON.stringify({sentences:[text]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(accepted);
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
  expect(local).toHaveBeenCalledTimes(2);expect(local.mock.calls[1]![1].timeoutMs).toBe(120000);
  expect(JSON.stringify(local.mock.calls[1]![0])).toContain(passage);
- if(accepted)expect(events.flatMap(e=>e.type==='sentence'?e.sources:[])[0]?.excerpt).toBe(passage);
+  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt===passage)).toBe(accepted);
  expect(cloud).not.toHaveBeenCalled();
 });
 it('does not reformulate a conditional or population-qualified English draft without a preservation proof',async()=>{
@@ -173,7 +175,7 @@ it('retains a French paraphrase with a French decimal separator and exact Englis
  const text='La sertraline inchangée est excrétée dans les urines à moins de 0,2 %.';
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference'&&e.text.includes(text))).toBe(true);
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference'&&e.text.includes(text))).toBe(false);
  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[])[0]?.excerpt).toBe(passage);
 });
 it.each([
@@ -183,7 +185,8 @@ it.each([
  const result=await readKnowledge(clientFor(passage),'Explique la sertraline selon DSM-5');
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:`La sertraline fait l’objet de ${count} observations indépendantes dans ce passage.`,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
- expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(outcome==='supported');
+  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
+  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(passage))).toBe(outcome==='supported');
 });
 it('rejects an extra numeric citation which does not support the medication claim',async()=>{
  const passage='Sertraline: unchanged sertraline excreted in urine below 0.2%. Sertraline: synthetic study documented another observation.';
@@ -222,7 +225,7 @@ it('uses a literal French DSM criteria sentence rather than paraphrasing an excl
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:sentence,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
  expect(events).toHaveLength(1);
- expect(events[0]?.type==='sentence'&&events[0].kind).toBe('inference');
+  expect(events[0]?.type==='sentence'&&events[0].kind).toBe('knowledge');
  expect(events[0]?.type==='sentence'&&events[0].text).toContain(sentence);
 });
 it('restores approved French criteria text and discards generated paraphrase',async()=>{
@@ -232,7 +235,7 @@ it('restores approved French criteria text and discards generated paraphrase',as
  const result=await readKnowledge(clientFor(exact,'fr',section),question);
  local.mockResolvedValue(JSON.stringify({coverage:'supported',sentences:[{text:'Résumé généré qui pourrait modifier une exclusion.',evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
- const answer=events.find(event=>event.type==='sentence'&&event.kind==='inference');
+ const answer=events.find(event=>event.type==='sentence'&&event.kind==='knowledge');
  expect(answer?.type==='sentence'&&answer.text).toContain(exact);
  expect(answer?.type==='sentence'&&answer.text).not.toContain('Résumé généré');
  expect(events.some(event=>event.type==='sentence'&&event.text.includes('exhaustivité'))).toBe(true);
@@ -255,7 +258,7 @@ it('replaces a polarity-changing criteria paraphrase with the selected source se
   const result=await readKnowledge(clientFor(sentence,'fr',section),question);
   local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:'Les symptômes sont attribués à une affection documentée.',evidence:[{index:1,quoteId:'q1'}]}]}));
   const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
-  const answer=events.find(event=>event.type==='sentence'&&event.kind==='inference');
+  const answer=events.find(event=>event.type==='sentence'&&event.kind==='knowledge');
   expect(answer?.type==='sentence'&&answer.text).toContain(sentence);
   expect(answer?.type==='sentence'&&answer.text).not.toContain('Les symptômes sont attribués à une affection documentée.');
   expect(warn).not.toHaveBeenCalledWith('[alexa-knowledge] source-fallback','quote-polarity');
@@ -268,7 +271,7 @@ it('keeps the requested topic locally and separates supporting quotes from the c
  const question='Contexte fourni localement. '.repeat(45)+'Quels critères de dépression concernent les adolescents selon le DSM-5 ?';
  const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
  const answers=events.filter(e=>e.type==='sentence');
- expect(answers).toHaveLength(1);expect(answers[0]?.text).toContain(quote);expect(answers[0]?.text).toContain('exhaustivité');
+ expect(answers).toHaveLength(1);expect(answers[0]?.kind).toBe('knowledge');expect(answers[0]?.text).toContain(quote);expect(answers[0]?.text).toContain('exhaustivité');
  expect(answers[0]?.sources[0]?.excerpt).toBe(quote);
  expect(JSON.stringify(local.mock.calls[0]![0])).toContain('adolescents');
  expect(JSON.stringify(local.mock.calls[0]![0])).toContain('liste française');

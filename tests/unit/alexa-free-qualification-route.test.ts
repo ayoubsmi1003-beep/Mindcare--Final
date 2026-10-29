@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const controls = vi.hoisted(() => ({ identity: vi.fn(), qualify: vi.fn() }));
-vi.mock("@/app/api/jarvis/_commun", () => ({ identite: controls.identity }));
+vi.mock("@/app/api/jarvis/_commun", () => ({ identite: controls.identity, refusIaClinique: async () => null }));
 vi.mock("@/server/alexa/model-gateway", () => ({ qualifyAlexaModels: controls.qualify, getAlexaModelPolicy: () => ({ variant: "free" }) }));
 import { POST } from "@/app/api/alexa/qualify/route";
 

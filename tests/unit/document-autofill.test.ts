@@ -9,6 +9,7 @@ import {
   withTreatmentCount,
   type AutoFillSource,
 } from "@/components/documents/document-autofill";
+import {dailyFrequency,prescribedDose,setDailyFrequency,setPrescribedDose} from "@/components/documents/prescription-fields";
 import type {TraitementV2} from "@/services/patients";
 import type {DocumentContent} from "@/shared/documents/types";
 
@@ -82,6 +83,31 @@ describe("auto-remplissage des documents",()=>{
     expect(meds[0]?.attrs?.["posology"]).toBe("2 fois par jour");
     expect(meds[1]?.attrs?.["designation"]).toBe("LEXOMIL 6 mg");
     expect(meds[1]?.attrs?.["posology"]).toBe("");
+  });
+
+  it("préfère la fréquence actuelle et conserve séparément force, dose et instructions",()=>{
+    const data=source({
+      activeTreatments:[treatment({medicationId:"m1",medicationRaw:"Sertraline 50 mg",inn:"sertraline",strength:"50 mg",dose:"25",doseUnit:"mg",frequency:"1 fois par jour",instructions:"À prendre le soir"})],
+      lastPrescription:{id:"p-old",prescribedAt:"2026-10-01T00:00:00Z",isHandwritten:false,practitionerName:null,lignes:[
+        {designation:"sertraline 25 mg",brandName:null,dose:"50",frequencyPerDay:2,durationDays:null,instructions:null},
+      ]},
+    });
+    const medication=buildInitialContent("ordonnance",baseContent,data).content.find(node=>node.type==="medication");
+    expect(medication?.attrs).toMatchObject({strength:"50 mg",posology:"1 fois par jour",instructions:"Dose prescrite : 25 mg\nÀ prendre le soir"});
+
+    const withoutCurrentFrequency=buildInitialContent("ordonnance",baseContent,source({
+      activeTreatments:[treatment({medicationId:"m1",medicationRaw:"Sertraline 50 mg",inn:"sertraline",strength:"50 mg",frequency:null})],
+      lastPrescription:data.lastPrescription,
+    })).content.find(node=>node.type==="medication");
+    expect(withoutCurrentFrequency?.attrs?.["posology"]).toBe("");
+  });
+
+  it("permet de corriger la dose tout en préservant les instructions et le compte quotidien",()=>{
+    const attrs={posology:"1 fois par jour",instructions:"Dose prescrite : 25 mg\nÀ prendre le soir"};
+    expect(dailyFrequency(attrs)).toBe("1");
+    expect(prescribedDose(attrs)).toBe("25 mg");
+    expect(setPrescribedDose(attrs,"50 mg").instructions).toBe("Dose prescrite : 50 mg\nÀ prendre le soir");
+    expect(setDailyFrequency(attrs,"2")).toMatchObject({posology:"2 fois par jour",instructions:attrs.instructions});
   });
 
   it("construit une puce de certificat par traitement actif",()=>{

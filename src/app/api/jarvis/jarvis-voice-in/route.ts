@@ -8,7 +8,7 @@ import { sessionVoix, voixLocaleConfiguree } from "@/server/voice/session";
 import { cookies } from "next/headers";
 import { z } from "zod";
 
-import { echec, identite, succes } from "../_commun";
+import { echec, identite, refusIaClinique, succes } from "../_commun";
 
 const Schema = z
   .object({
@@ -35,6 +35,8 @@ function echecTranscription(cause: unknown): Response {
  */
 export async function POST(req: Request): Promise<Response> {
   if (!isSameOriginRequest(req)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   if ((await identite()) === null) return echec("non-authentifie", alexaCognitive.voixIndisponible);
   if (!voixLocaleConfiguree(env())) return echec("configuration", alexaCognitive.voixLocale);
   if (Number(req.headers.get("Content-Length") ?? 0) > 1_300_000) {

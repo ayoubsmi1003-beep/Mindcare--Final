@@ -46,7 +46,6 @@
 
 "use client";
 
-import { narrativeCopy } from "@/i18n/alexa-narrative";
 
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -64,7 +63,6 @@ import {
   ChampTexte,
   ChampZoneTexte,
   EtatVide,
-  GrilleChamps,
   IndicateurEnregistrement,
   LienBouton,
   Onglets,
@@ -82,6 +80,7 @@ import { MesuresSeance, type CleMesure } from "@/components/consultation/cockpit
 import { NotesStructurees } from "@/components/consultation/cockpit/NotesStructurees";
 import { RailContexte } from "@/components/consultation/cockpit/RailContexte";
 import { SectionEchelles } from "@/components/consultation/cockpit/SectionEchelles";
+import { CarteAnalyseSeance } from "@/components/consultation/CarteAnalyseSeance";
 import { TarifInline } from "@/components/consultation/cockpit/TarifInline";
 import {
   ajouterPiste,
@@ -108,6 +107,7 @@ import {
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
+import { cliniqueUi } from "@/i18n/clinical-ui";
 import {
   amendNote,
   closeConsultation,
@@ -120,7 +120,6 @@ import {
   saveRawNotes,
   saveSessionDetails,
   signNote,
-  tempsRestantAvantVerrou,
   type Amendment,
   type ChampSoap,
   type Consultation,
@@ -219,34 +218,12 @@ function dateHeure(iso: string): string | null {
   return j === null ? null : h === null ? j : `${j} — ${h}`;
 }
 
-/** Décompte `mm:ss` de la fenêtre de correction. */
-function decompte(restantMs: number): string {
-  const secondes = Math.max(0, Math.ceil(restantMs / 1000));
-  const m = Math.floor(secondes / 60);
-  const s = secondes % 60;
-  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
-}
-
 /**
  * Accord du pluriel. Le français accorde À PARTIR DE DEUX : « 0 amendement »
  * reste au singulier, et « 1 séances » de S4 ne se rejoue pas ici.
  */
 function amendementsLibelle(n: number): string {
   return `${n} ${n >= 2 ? fr.consultation.amendementPluriel : fr.consultation.amendementSingulier}`;
-}
-
-/**
- * SA-03 — la portée longitudinale en une phrase. Zéro note antérieure : dit
- * explicitement « jour seul ». Au-delà : le compte et l'accord qui va avec.
- * Un nombre, jamais une promesse sur le contenu de ces notes.
- */
-function libelleSourcesAnalyse(historiqueNotes: number): string {
-  if (historiqueNotes <= 0) return fr.consultation.analyseSansHistorique;
-  return `${historiqueNotes} ${
-    historiqueNotes >= 2
-      ? fr.consultation.noteAnterieurePluriel
-      : fr.consultation.noteAnterieureSingulier
-  }`;
 }
 
 /**
@@ -320,63 +297,24 @@ function ChronoSeance({
 }
 
 /**
- * Compte à rebours de la fenêtre de correction (15 min après signature).
- * Isolé pour la même raison que `ChronoSeance` : évite de propager le tick
- * au parent qui porte les 4 éditeurs SOAP.
+ * Le seul état de fin de séance encore visible.
+ *
+ * La signature n'est plus un geste de l'écran : elle est posée au moment de
+ * « Terminer la consultation » et n'a pas à être mise en scène. Il reste le
+ * fait clinique utile — la note est désormais en lecture seule, et une
+ * correction passe par un amendement.
  */
 function CompteReboursVerrou({
-  note,
   seanceClose,
 }: {
-  readonly note: import("@/services/consultations").Note | null;
   readonly seanceClose: boolean;
 }): React.JSX.Element | null {
-  const [maintenant, setMaintenant] = useState(() => Date.now());
-  useEffect(() => {
-    // Ne tick que pendant la fenêtre de 15 min (sinon 1 tick/s inutile pendant
-    // des heures de brouillon). Le parent ne tick plus du tout.
-    const e0 = noteEstVerrouillee(note, Date.now());
-    if (e0 !== "fenetre-correction") return;
-    const id = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
-    return () => clearInterval(id);
-  }, [note]);
-
-  // Une séance CLOSE n'ouvre aucune fenêtre de correction : les champs sont
-  // désactivés par `seanceClose`, quoi que dise l'horloge de signature. Le dire
-  // évite de promettre une correction que l'écran refuse.
-  if (seanceClose) {
-    if (note === null) return null;
-    if (note.status !== "signed") {
-      return (
-        <PanneauInfo ton="attention" titre={frConsultationCockpit.noteNonSigneeTitre}>
-          {frConsultationCockpit.noteNonSignee}
-        </PanneauInfo>
-      );
-    }
-    return (
-      <PanneauInfo titre={frConsultationCockpit.noteFigeeTitre}>
-        {frConsultationCockpit.noteFigee}
-      </PanneauInfo>
-    );
-  }
-
-  const verrou = noteEstVerrouillee(note, maintenant);
-  const restant = tempsRestantAvantVerrou(note, maintenant);
-  if (verrou === "fenetre-correction" && restant !== null) {
-    return (
-      <PanneauInfo ton="attention" titre={fr.consultation.fenetreCorrection}>
-        <span className="font-num tabular-nums">{decompte(restant)}</span>
-        {" — "}
-        {fr.consultation.fenetreIndication}
-      </PanneauInfo>
-    );
-  }
-  if (verrou === "verrouillee") {
-    return (
-      <PanneauInfo titre={fr.consultation.verrouillee}>{fr.consultation.verrouParLaBase}</PanneauInfo>
-    );
-  }
-  return null;
+  if (!seanceClose) return null;
+  return (
+    <PanneauInfo titre={cliniqueUi.seances.termineeTitre}>
+      {cliniqueUi.seances.termineeCorps}
+    </PanneauInfo>
+  );
 }
 
 export default function PageConsultation(): React.JSX.Element {
@@ -631,7 +569,6 @@ export default function PageConsultation(): React.JSX.Element {
   // c'est le dispositif d'I15, et le retirer ferait passer par un amendement une
   // correction faite dans la minute.
   const noteModifiable = etatVerrou !== "verrouillee";
-  const noteSignee = note?.status === "signed";
   const noteVide = noteEstVide({ ...soap });
   const soapRemplis = progressionNote(soap);
   const soapTotal = CHAMPS_SOAP.length;
@@ -798,69 +735,6 @@ export default function PageConsultation(): React.JSX.Element {
     return await pendingDetails.current;
   }
 
-  function signer(): void {
-    setMessageErreur(undefined);
-    setConfirmation(undefined);
-
-    if (noteEstVide({ ...soap })) {
-      // Le même refus existe en base (`app.sign_note`). On le dit avant plutôt
-      // que de faire faire un aller-retour pour une phrase moins claire.
-      setMessageErreur(fr.consultation.noteVide);
-      return;
-    }
-    if (!window.confirm(fr.consultation.confirmerSignature)) return;
-
-    setEnvoi(true);
-    void viderLesAttentes().then((pret) => {
-      if (!pret) {
-        setEnvoi(false);
-        return;
-      }
-      // Perf: réutilise `seance.note.id` si déjà connu (cas majoritaire).
-      // Seule une première note (jamais créée) nécessite une relecture.
-      const cibleConnue = seance?.note?.id ?? null;
-      if (cibleConnue !== null) {
-        void signNote(cibleConnue).then((result) => {
-          setEnvoi(false);
-          if (!result.ok) {
-            setHorsLigne(result.error.code === "hors-ligne");
-            signalerErreur(result.error.message);
-            return;
-          }
-          if (!result.data) {
-            signalerErreur(fr.consultation.introuvable);
-            return;
-          }
-          setConfirmation(fr.feedback.noteSignee);
-          charger(false);
-        });
-        return;
-      }
-      void getConsultation(id).then((lecture) => {
-        const cible = lecture.ok ? (lecture.data?.note?.id ?? null) : null;
-        if (cible === null) {
-          setEnvoi(false);
-          signalerErreur(fr.consultation.introuvable);
-          return;
-        }
-        void signNote(cible).then((result) => {
-          setEnvoi(false);
-          if (!result.ok) {
-            setHorsLigne(result.error.code === "hors-ligne");
-            signalerErreur(result.error.message);
-            return;
-          }
-          if (!result.data) {
-            signalerErreur(fr.consultation.introuvable);
-            return;
-          }
-          setConfirmation(fr.feedback.noteSignee);
-          charger(false);
-        });
-      });
-    });
-  }
-
   function clore(): void {
     setMessageErreur(undefined);
     setConfirmation(undefined);
@@ -872,48 +746,74 @@ export default function PageConsultation(): React.JSX.Element {
         setEnvoi(false);
         return;
       }
-      void closeConsultation(id).then((result) => {
-        setEnvoi(false);
-        if (!result.ok) {
-          setHorsLigne(result.error.code === "hors-ligne");
-          signalerErreur(result.error.message);
-          return;
-        }
-        if (!result.data) {
-          signalerErreur(fr.consultation.introuvable);
-          return;
-        }
-        setConfirmation(fr.feedback.seanceTerminee);
-        charger(false);
 
-        // ═══ L'ENCHAÎNEMENT D'APRÈS-SÉANCE ═══
-        //
-        // ⚠️ APRÈS, ET JAMAIS PENDANT. La clôture a DÉJÀ rendu son verdict :
-        // rien de ce qui suit ne peut la défaire ni la faire paraître en
-        // échec. `void` est délibéré — un `await` ici bloquerait l'écran sur
-        // un appel de modèle, et une panne de fournisseur ressemblerait à une
-        // consultation qui refuse de se fermer.
-        //
-        // Le message de confirmation s'enrichit au fil des étapes ; en cas
-        // d'échec il dit CE QUI a échoué et rappelle que la séance, elle, est
-        // enregistrée. Voir `src/services/apres-seance.ts`.
-        void enchainerApresSeance(id, seance?.patientId ?? null, (suivi) => {
-          // La correspondance état → message vit dans `cleConfirmationApresSeance`
-          // (testée) ; `tsc` vérifie chaque clé contre `fr.feedback.apresSeance`.
-          // `null` = garder le message courant (cas `patientId === null`, où le
-          // « Séance terminée. » posé avant l'enchaînement doit survivre).
-          const cle = cleConfirmationApresSeance(suivi);
-          if (cle !== null) setConfirmation(fr.feedback.apresSeance[cle]);
-          // L'analyse vient d'être écrite : on la remonte à l'écran plutôt
-          // que d'obliger à rouvrir la consultation pour la voir. Inutile
-          // quand elle est `ignoree` (`chargerAnalyse` rendrait `ok(null)`).
-          if (suivi.resume === "faite" && suivi.analyse !== "ignoree") {
-            void chargerAnalyse(id).then((relue) => {
-              if (relue.ok && relue.data !== null) setAnalyse(relue.data);
-            });
+      const fermer = (): void => {
+        void closeConsultation(id).then((result) => {
+          setEnvoi(false);
+          if (!result.ok) {
+            setHorsLigne(result.error.code === "hors-ligne");
+            signalerErreur(result.error.message);
+            return;
           }
+          if (!result.data) {
+            signalerErreur(fr.consultation.introuvable);
+            return;
+          }
+          setConfirmation(fr.feedback.seanceTerminee);
+          charger(false);
+
+          // ═══ L'ENCHAÎNEMENT D'APRÈS-SÉANCE ═══
+          //
+          // ⚠️ APRÈS, ET JAMAIS PENDANT. La clôture a DÉJÀ rendu son verdict :
+          // rien de ce qui suit ne peut la défaire ni la faire paraître en
+          // échec. `void` est délibéré — un `await` ici bloquerait l'écran sur
+          // un appel de modèle, et une panne de fournisseur ressemblerait à une
+          // consultation qui refuse de se fermer.
+          //
+          // Le message de confirmation s'enrichit au fil des étapes ; en cas
+          // d'échec il dit CE QUI a échoué et rappelle que la séance, elle, est
+          // enregistrée. Voir `src/services/apres-seance.ts`.
+          void enchainerApresSeance(id, seance?.patientId ?? null, (suivi) => {
+            // La correspondance état → message vit dans `cleConfirmationApresSeance`
+            // (testée) ; `tsc` vérifie chaque clé contre `fr.feedback.apresSeance`.
+            // `null` = garder le message courant (cas `patientId === null`, où le
+            // « Séance terminée. » posé avant l'enchaînement doit survivre).
+            const cle = cleConfirmationApresSeance(suivi);
+            if (cle !== null) setConfirmation(fr.feedback.apresSeance[cle]);
+            // L'analyse vient d'être écrite : on la remonte à l'écran plutôt
+            // que d'obliger à rouvrir la consultation pour la voir. Inutile
+            // quand elle est `ignoree` (`chargerAnalyse` rendrait `ok(null)`).
+            if (suivi.resume === "faite" && suivi.analyse !== "ignoree") {
+              void chargerAnalyse(id).then((relue) => {
+                if (relue.ok && relue.data !== null) setAnalyse(relue.data);
+              });
+            }
+          });
         });
-      });
+      };
+
+      // La signature n'est plus un geste visible. Elle reste pourtant ce qui
+      // verrouille la note : on la tente en silence, puis on ferme quoi qu'il
+      // arrive. Un échec de signature ne doit pas empêcher la clôture — la
+      // porte `close_consultation` accepte une note non signée, et la
+      // praticienne a déjà demandé la fin de séance.
+      const cible = seance?.note ?? null;
+      if (cible !== null && cible.status === "draft" && !noteEstVide({ ...soap })) {
+        void signNote(cible.id).then(() => fermer());
+        return;
+      }
+      if (cible === null) {
+        void getConsultation(id).then((lecture) => {
+          const note = lecture.ok ? lecture.data?.note ?? null : null;
+          if (note !== null && note.status === "draft" && !noteEstVide({ ...soap })) {
+            void signNote(note.id).then(() => fermer());
+            return;
+          }
+          fermer();
+        });
+        return;
+      }
+      fermer();
     });
   }
 
@@ -1425,7 +1325,7 @@ export default function PageConsultation(): React.JSX.Element {
             <BandeauPatient espace={dossier} />
           )}
 
-          <CompteReboursVerrou note={note} seanceClose={seanceClose} />
+          <CompteReboursVerrou seanceClose={seanceClose} />
 
           {/*
             LA NOTE D'ABORD. C'est la surface que la praticienne regarde et
@@ -1493,11 +1393,6 @@ export default function PageConsultation(): React.JSX.Element {
                   <h2 className="font-ui text-heading font-bold text-ink-900">
                     {fr.consultation.note}
                   </h2>
-                  {note?.status === "signed" ? (
-                    <span className="font-ui text-label text-ink-500">
-                      {fr.feedback.noteSignee}
-                    </span>
-                  ) : null}
                 </div>
                 <div className="flex flex-col gap-6">
                   {CHAMPS_SOAP.map((champ) => (
@@ -1511,16 +1406,15 @@ export default function PageConsultation(): React.JSX.Element {
               </section>
             )}
 
-            {note?.signedAt == null ? null : (
-              <Carte niveau="clinique">
-                <div className="p-4">
-                  <GrilleChamps>
-                    <Champ libelle={fr.consultation.signeePar} valeur={note.signerName} />
-                    <Champ libelle={fr.consultation.signeeLe} valeur={dateHeure(note.signedAt)} />
-                  </GrilleChamps>
-                </div>
-              </Carte>
-            )}
+            <CarteAnalyseSeance
+              analyse={analyse}
+              enAnalyse={enAnalyse}
+              erreur={erreurAnalyse}
+              noteVide={noteVide}
+              echellesCount={dossier?.clinique?.echelles.length ?? 0}
+              onAnalyser={analyserSeance}
+              onAnnuler={annulerAnalyse}
+            />
           </div>
 
           {dossier === undefined || dossier === null ? null : (
@@ -1698,134 +1592,7 @@ export default function PageConsultation(): React.JSX.Element {
             onReessayer={reessayerDossier}
             patientId={patientId}
             consultationActuelleId={seance.id}
-            jarvis={
-              <>
-                {/* L'aide à la décision reste dans le rail : c'est le seul
-                    module qui propose quelque chose, et il le fait en lecture
-                    seule. L'ancien panneau « Fil de séance » vide a été retiré :
-                    la transcription n'existe pas encore, et une carte vide de
-                    plus dans le rail apprend à ne plus le regarder. */}
-            <SectionPliable titre={fr.consultation.assistance}>
-              <div className="flex flex-col gap-4">
-                {/* I7 — mention permanente, jamais masquée, sur toute surface
-                    d'aide à la décision. AVANT le bouton, pas seulement après
-                    un résultat : elle est déjà là pour la fonctionnalité vide,
-                    elle ne bouge pas pour la fonctionnalité pleine. */}
-                <p className="font-ui text-label text-ink-500">{fr.disclaimer}</p>
-
-                <div>
-                  <Bouton
-                    rang="secondaire"
-                    onClick={analyserSeance}
-                    disabled={enAnalyse || (brut.trim() === "" && CHAMPS_SOAP.every(champ => soap[champ].trim() === ""))}
-                  >
-                    {fr.consultation.analyserLaSeance}
-                  </Bouton>
-                </div>
-
-                {(brut.trim() === "" && CHAMPS_SOAP.every(champ => soap[champ].trim() === "")) && !enAnalyse && analyse === null ? (
-                  <EtatVide message={fr.consultation.analyseAucuneNote} />
-                ) : null}
-
-                {/* État de chargement HONNÊTE : un texte qui dit ce qui se
-                    passe, jamais un squelette qui imiterait un contenu que
-                    personne n'a encore produit. Annulable : l'attente n'est
-                    jamais un état sans sortie. */}
-                {enAnalyse ? (
-                  <div className="flex flex-col gap-2">
-                    <PanneauInfo>{fr.consultation.analyseEnCours}</PanneauInfo>
-                    <div>
-                      <Bouton rang="secondaire" onClick={annulerAnalyse}>
-                        {fr.actions.annuler}
-                      </Bouton>
-                    </div>
-                  </div>
-                ) : null}
-
-                {/* État terminal : chaque échec nomme son issue et propose
-                    `Réessayer` — un nouveau run, jamais une résurrection. */}
-                {erreurAnalyse === undefined ? null : (
-                  <div className="flex flex-col gap-2">
-                    <PanneauInfo ton="attention">{erreurAnalyse}</PanneauInfo>
-                    <div>
-                      <Bouton rang="secondaire" onClick={analyserSeance}>
-                        {fr.actions.reessayer}
-                      </Bouton>
-                    </div>
-                  </div>
-                )}
-
-                {/* Trois blocs, dans l'ordre exact du démo-spec (§2 bis),
-                    entièrement en LECTURE SEULE — aucun champ ici n'écrit dans
-                    `soap` ni n'appelle `saveNote`. Reprendre un fragment dans
-                    l'éditeur SOAP ci-contre reste un geste manuel de la
-                    praticienne (I6) ; `draft_clinical_note`, un outil distinct
-                    et hors périmètre de cette passe, est ce qui préremplirait
-                    un jour l'éditeur lui-même. */}
-                {analyse === null ? null : (
-                  <div className="flex flex-col gap-6">
-                    {/* SA-03 — la portée, dite avant le contenu : sur les
-                        seules notes du jour, ou avec N notes antérieures. */}
-                    {analyse.resume ? <>
-                      <p className="font-ui text-body leading-relaxed text-ink-900">{analyse.resume}</p>
-                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{(analyse.method === "source_selection" || analyse.method === "extractive") ? " " + narrativeCopy.selected : ""}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
-                    </> : <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>}
-                    <details open={analyse.resume ? undefined : true}>
-                      <summary className="cursor-pointer font-ui text-label text-ink-500">{narrativeCopy.details}</summary>
-                    <div className="flex flex-col gap-3">
-                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
-                        {fr.consultation.noteStructureeTitre}
-                      </p>
-                      <div className="flex flex-col gap-4">
-                        {CHAMPS_SOAP.map((champ) => (
-                          <Champ
-                            key={champ}
-                            libelle={LIBELLES_SOAP[champ].titre}
-                            valeur={analyse.noteStructuree[champ]}
-                          />
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
-                        {fr.consultation.evolutionTitre}
-                      </p>
-                      {analyse.evolution.length === 0 ? (
-                        <EtatVide message={fr.consultation.evolutionAucune} />
-                      ) : (
-                        <ul className="flex list-disc flex-col gap-2 pl-5 font-ui text-body text-ink-900">
-                          {/* `key={ligne}` : ces entrées sont dédoublonnées côté
-                              passerelle (index.ts, §3.4 n°6) — le texte lui-même
-                              est une clé stable, pas un index de position. */}
-                          {analyse.evolution.map((ligne) => (
-                            <li key={ligne}>{ligne}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-
-                    <div className="flex flex-col gap-3">
-                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
-                        {fr.consultation.pointsNonExploresTitre}
-                      </p>
-                      {analyse.pointsNonExplores.length === 0 ? (
-                        <EtatVide message={fr.consultation.pointsNonExploresAucun} />
-                      ) : (
-                        <ul className="flex list-disc flex-col gap-2 pl-5 font-ui text-body text-ink-900">
-                          {analyse.pointsNonExplores.map((ligne) => (
-                            <li key={ligne}>{ligne}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                    </details>
-                  </div>
-                )}
-              </div>
-            </SectionPliable>
-              </>
-            }
+            jarvis={null}
           />
         </div>
       </div>
@@ -1935,14 +1702,11 @@ export default function PageConsultation(): React.JSX.Element {
             soapRemplis={soapRemplis}
             soapTotal={soapTotal}
             echellesCount={dossier?.clinique?.echelles.length ?? 0}
-            noteSignee={noteSignee}
-            noteVide={noteVide}
             seanceClose={seanceClose}
             tarifFixe={tarifPresent}
             peutClore={!seanceClose && tarifPresent === true}
             envoi={envoi}
             enregistrer={enregistrerMaintenant}
-            signer={signer}
             clore={clore}
             voirTarif={voirTarif}
             onVoirEchelles={voirEchelles}

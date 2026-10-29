@@ -13,6 +13,13 @@ const c: ClinicalConsultation = { id: "a4000000-0000-4000-8000-000000000001", st
 const proof = { id: "s1", text: "Le patient rapporte une humeur triste et des conflits familiaux avec ses parents." };
 const response = (text: string, quote = proof.text, id = "s1") => ({ sentences: [{ text, evidence: [{ id, quote }] }] });
 describe("French concise grounded clinical paragraphs", () => {
+  it('asks both first-pass and repair summaries for natural French without repeated facts',()=>{
+    for(const prompt of [narrativeCopy.sessionInstruction,narrativeCopy.sessionRepairPrompt]){
+      expect(prompt).toContain('note clinique humaine');
+      expect(prompt).toMatch(/ne répète pas le même fait/iu);
+      expect(prompt).toContain('majuscule');
+    }
+  });
   it('requires complete grammatical French in multi-visit summaries and retries',()=>{
     expect(narrativeCopy.multiVisitPrompt).toContain('Vérifie les accords sujet-verbe et genre-nombre');
     expect(narrativeCopy.multiVisitRetryPrompt).toContain('Vérifie les accords sujet-verbe et genre-nombre');
@@ -679,10 +686,15 @@ describe("French concise grounded clinical paragraphs", () => {
     const source={id:"s1",text:"Le patient rapporte « une humeur triste »."};
     expect(validateClinicalNarrative(response("Le patient rapporte une humeur triste.","Le patient rapporte \"une humeur triste\""),[source])).toBe("Le patient rapporte une humeur triste.");
   });
+  it("rejects a sentence that restates the same clinical facts after its copula",()=>{
+    const source={id:"s1",text:"Les réveils précoces et la baisse d’énergie sont des symptômes rapportés."};
+    const repeated="Les réveils précoces et la baisse d’énergie sont des réveils précoces et une baisse d’énergie.";
+    expect(validateClinicalNarrative(response(repeated,source.text),[source])).toBeNull();
+  });
   it("keeps the inference output budget aligned with its concise paragraph prompt", async () => {
     vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
     await synthesizeClinicalNarrative([proof], new AbortController().signal);
-    expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 220 }));
+    expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 320 }));
   });
   it("uses short model citation ids and maps a validated citation back to its exact clinical source",async()=>{
     const source={id:"a4000000-0000-4000-8000-000000000001:0",text:proof.text,consultationId:"a4000000-0000-4000-8000-000000000001"};

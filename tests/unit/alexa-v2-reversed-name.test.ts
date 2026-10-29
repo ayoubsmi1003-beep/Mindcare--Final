@@ -8,7 +8,13 @@ const row = { id, first_name: "Mohamed", last_name: "Belkacem", total_count: "1"
 function door(searches: Record<string, readonly typeof row[]>, verified: typeof row = row) {
   const queries: string[] = [];
   const db = { rpc: async <T>(name: string, args: RpcArgs) => {
-    if (name === "search_patients") { queries.push(String(args.p_query)); return fixtureRows<T>(searches[String(args.p_query)] ?? []); }
+    if (name === "search_patients") {
+      if (typeof args.p_query === "string") {
+        queries.push(args.p_query);
+        return fixtureRows<T>(searches[args.p_query] ?? []);
+      }
+      return fixtureRows<T>([{ total: 0, rows: [], complete: true, offset: 0, revision: "a".repeat(32) }]);
+    }
     return fixtureRows<T>([verified]);
   } } satisfies Pick<DbPort, "rpc">;
   return { db, queries };

@@ -139,6 +139,17 @@ export function commandeDemarrerService(): Commande {
 }
 
 /**
+ * `net start` rend un code 2 quand le service tourne DÉJÀ. Ce n'est pas une
+ * panne : au démarrage de Windows, le service PostgreSQL est lancé
+ * automatiquement, puis la tâche du cabinet démarre. Sans cette reconnaissance,
+ * le backend refusait de se lancer à chaque redémarrage — exactement le scénario
+ * « ça marche après une installation, plus après un reboot ».
+ */
+export function serviceDejaDemarre(message: string): boolean {
+  return /déjà|already|1056|already been started|service has already/i.test(message);
+}
+
+/**
  * `net stop` peut rendre "service not started" si l'utilisatrice a déjà
  * arrêté PostgreSQL manuellement — l'appelant traite ce cas comme un succès,
  * pas comme une erreur (§16 : on ne veut pas empêcher la fermeture de

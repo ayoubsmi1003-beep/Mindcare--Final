@@ -17,7 +17,7 @@ Sur un autre poste, ouvrir la même application. Elle trouve automatiquement le 
 Si le cabinet n'apparaît pas — routeur qui isole les postes, réseau invité, pare-feu d'un autre produit — l'écran propose **Le cabinet n'apparaît pas ?** : saisir le nom du PC médecin, affiché sur son écran et rappelé avec le code d'invitation. La requête part alors en unicast vers ce seul poste, et l'appairage reste identique (même code, même chiffrement). C'est un recours, jamais le parcours normal.
 
 - Le code vaut **une seule fois** et expire après cinq minutes. Il est détruit dès qu'un poste l'utilise, et après cinq tentatives invalides.
-- Le poste reçoit à cette occasion un **jeton de poste**, distinct du compte utilisateur, qui autorise la machine elle-même. Il est joint à chaque requête et stocké dans le profil Windows de l'utilisateur, dans un fichier lisible par ce seul compte (`clinic-trust.json`). Sa protection par DPAPI reste à faire : c'est aujourd'hui une limite connue, pas une garantie.
+- Le poste reçoit à cette occasion un **jeton de poste**, distinct du compte utilisateur, qui autorise la machine elle-même. Il est joint à chaque requête et stocké dans le profil Windows de l'utilisateur, dans `clinic-trust.json`. Son contenu est **scellé par DPAPI de portée utilisateur** (`safeStorage` d'Electron) : un fichier copié vers un autre compte Windows ne se déchiffre pas, et une copie du fichier ne permet pas de rejouer le poste.
 - L'autorisation Windows demandée sur le poste d'accueil installe la confiance dans le certificat. C'est la seule élévation de privilèges du parcours d'appairage, et elle n'a lieu qu'une fois par poste.
 
 Ensuite, l'écran de connexion habituel apparaît. Aucun utilisateur ne copie une adresse, un certificat ou une empreinte.

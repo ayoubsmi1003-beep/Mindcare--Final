@@ -1,4 +1,5 @@
 import type { DocumentContent, DocumentKind, DocumentNode, Variables } from "./types";
+import {documentsEditor} from "@/i18n/documents-editor";
 
 /**
  * Règles pures d'auto-remplissage d'un nouveau document.
@@ -15,9 +16,11 @@ export interface AutoFillTreatment {
   readonly medicationRaw: string | null;
   readonly brandName: string | null;
   readonly inn: string | null;
+  readonly strength?: string | null;
   readonly dose: string | null;
   readonly doseUnit: string | null;
   readonly frequency: string | null;
+  readonly instructions?: string | null;
 }
 
 export interface AutoFillPrescriptionLine {
@@ -87,38 +90,11 @@ export function parseExplicitDailyFrequency(value: string | null | undefined): n
   return Number.isInteger(number) && number > 0 ? number : null;
 }
 
-function lineFrequencyForTreatment(
-  treatment: AutoFillTreatment,
-  lines: AutoFillPrescription["lignes"],
-): number | null {
-  const names = [treatment.medicationRaw, treatment.brandName, treatment.inn]
-    .map(clean)
-    .filter((name) => name !== "")
-    .map(normalized)
-    .filter((name) => name.length >= 3);
-  if (names.length === 0) return null;
-
-  for (const line of lines) {
-    if (line.frequencyPerDay === null || !Number.isInteger(line.frequencyPerDay) || line.frequencyPerDay <= 0) {
-      continue;
-    }
-    const candidate = normalized(clean(line.designation) || clean(line.brandName));
-    if (candidate === "") continue;
-    if (names.some((name) => name === candidate || name.includes(candidate) || candidate.includes(name))) {
-      return line.frequencyPerDay;
-    }
-  }
-  return null;
-}
-
 export function explicitDailyFrequency(
   treatment: AutoFillTreatment,
-  lastPrescription: AutoFillPrescription | null,
+  _lastPrescription: AutoFillPrescription | null,
 ): number | null {
-  const fromPrescription = lastPrescription === null
-    ? null
-    : lineFrequencyForTreatment(treatment, lastPrescription.lignes);
-  return fromPrescription ?? parseExplicitDailyFrequency(treatment.frequency);
+  return parseExplicitDailyFrequency(treatment.frequency);
 }
 
 /** Une seule ligne par médicament, même si deux sources se recoupent. */
@@ -218,6 +194,11 @@ export function withTreatmentCount(content: DocumentContent, count: number): Doc
 
 function medicationNode(treatment: AutoFillTreatment, frequency: number | null): DocumentNode {
   const name = treatmentName(treatment);
+  const dose = [clean(treatment.dose), clean(treatment.doseUnit)].filter((part) => part !== "").join(" ");
+  const instructions = [
+    dose === "" ? "" : `${documentsEditor.prescribedDose} : ${dose}`,
+    clean(treatment.instructions),
+  ].filter((value) => value !== "").join("\n");
   return {
     type: "medication",
     attrs: {
@@ -225,13 +206,13 @@ function medicationNode(treatment: AutoFillTreatment, frequency: number | null):
       medicationId: clean(treatment.medicationId) || null,
       source: clean(treatment.medicationId) === "" ? "free-text" : "catalogue",
       designation: name,
-      strength: "",
+      strength: clean(treatment.strength),
       posology: frequency === null ? "" : `${String(frequency)} fois par jour`,
       quantity: "",
-      frequency: "",
+      frequency: parseExplicitDailyFrequency(treatment.frequency) === null ? clean(treatment.frequency) : "",
       duration: "",
       administration: "",
-      instructions: "",
+      instructions,
     },
   };
 }

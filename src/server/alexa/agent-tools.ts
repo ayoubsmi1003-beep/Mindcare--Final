@@ -3,7 +3,7 @@ import {appendLinkedAnswerLine} from '@/shared/alexa/answer-links';
 import {randomUUID} from "node:crypto";
 import {resolveDocumentDraftInputs} from "./document-draft";
 import {mergeDraftVariableChanges} from "./document-draft-update";
-import {groundDraftFieldChanges,groundStopReason,groundTreatmentChanges,resolveTreatmentTarget} from "./clinical-write-validation";
+import {groundDraftFieldChanges,groundStopReason,groundTreatmentChanges,hasExactMedicationCatalogIdentity,resolveTreatmentTarget} from "./clinical-write-validation";
 import {prepareInternalMessage} from "./internal-message";
 import {prepareActionProposal,prepareIssuedDocumentPrint} from "./action-proposal";
 import {alexaActions} from "@/i18n/alexa-actions";
@@ -45,7 +45,7 @@ export function isolatePreviousClinicalConsultation(context:ClinicalContext):Cli
  return selected.endedAt===null?{...scoped,currentConsultation:selected}:scoped;
 }
 import { localResponse } from "./local-response";
-import {planKnowledgeQuery} from "./knowledge-query";
+import {planKnowledgeQuery,requetePourLivreRequis} from "./knowledge-query";
 import { readKnowledge } from "./knowledge-adapter";
 import {synthesizeKnowledge} from './knowledge-synthesis';
 import {knowledgeSource} from './knowledge-response';
@@ -481,13 +481,12 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(call.name==="search_knowledge"){
    const sourceQuestion=original??input.text,sourceParts=frenchRequestedOutputs(sourceQuestion);
    const medicalQuestion=requestedGoal&&sourceParts?.includes(requestedGoal)?requestedGoal:sourceQuestion;
-   if(/\bstahl\b/iu.test(medicalQuestion))return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unfinishedStahl,'unfinished-knowledge-source');
    const required=planKnowledgeQuery(medicalQuestion),proposed=planKnowledgeQuery(String(a['query']));
    if(!required||!proposed)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unresolved-knowledge-source');
    if(proposed.sourceTitle&&proposed.sourceTitle!==required.sourceTitle)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unrequested-knowledge-source');
-   const retrieval=required.sourceTitle&&!proposed.sourceTitle?(required.language==='fr'?'DSM-5 ':'Taylor ')+String(a['query']):String(a['query']);
+   const retrieval=required.sourceTitle&&!proposed.sourceTitle?requetePourLivreRequis(required,String(a['query'])):String(a['query']);
    if(retrieval.length>500)return failure(call,'needs_input',copy.missing,'knowledge-query-budget');
-   const found=await readKnowledge(knowledge,retrieval,signal);
+   const found=await readKnowledge(knowledge,retrieval,signal,undefined,{traceOrigin:"agent_tool"});
    result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
    result.data=found;result.evidence=found.preuves.map(p=>knowledgeSource(p));
    let synthesisComplete=false;
@@ -495,7 +494,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const sentences=events.filter((e):e is Extract<import('@/shared/alexa/turn').AlexaEvent,{type:'sentence'}>=>e.type==='sentence');
    result.text=sentences.map(e=>e.text).join(' ');result.evidence=sentences.flatMap(e=>e.sources);
    const generated=sentences.some(e=>e.kind==='inference');
+   const quoted=sentences.length>0&&sentences.every(e=>e.kind==='knowledge'&&e.sources.length>0&&e.sources.every(source=>!!source.excerpt?.trim()));
    if(generated){result.presentation='inference';result.complete=result.complete&&synthesisComplete;result.status=result.complete?'ok':'partial';}
+   else if(found.etat==='ok'&&quoted){result.presentation='knowledge';result.complete=false;result.status='partial';}
    else if(found.etat==='ok'){result.complete=false;result.status='partial';}
    return result;
   }
@@ -577,6 +578,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     const target=resolveTreatmentTarget(clinical.treatments.current,slots.treatmentName,requestText);
     if(target.state==="missing")return failure(call,"needs_input",alexaActions.treatmentMissing,"treatment-target-missing");
     if(target.state==="ambiguous")return failure(call,"needs_input",`${alexaActions.treatmentAmbiguous} ${clinical.treatments.current.filter(t=>t.status!=="stopped").map(t=>t.medication).join(", ")}`,"treatment-target-ambiguous");
+    const catalogue=z.array(z.object({id:z.string().max(200),raw_name:z.string().max(500),inn:z.string().max(300),brand_name:z.string().nullable()}).passthrough()).max(50)
+     .parse(await rpc("search_medications",{p_query:target.treatment.medication,p_limit:50},signal,false,true));
+    if(!hasExactMedicationCatalogIdentity(target.treatment.medication,catalogue))return failure(call,"needs_input",alexaActions.treatmentMissing,"treatment-medication-catalogue-unresolved");
     let consultationId:string|null=null;
     if(clinical.currentConsultation?.id){
      const current=z.object({id:z.uuid(),patient_id:z.uuid(),status:z.enum(["open","closed"])}).parse(await rpc("get_consultation",{p_id:clinical.currentConsultation.id},signal));

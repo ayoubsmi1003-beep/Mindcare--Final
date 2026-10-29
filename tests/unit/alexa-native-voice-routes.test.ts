@@ -8,6 +8,7 @@ const { native, actor, config } = vi.hoisted(() => ({
 
 vi.mock("@/app/api/jarvis/_commun", () => ({
   identite: async () => actor.id || null,
+  refusIaClinique: async () => null,
   echec: (code: string, message: string) => Response.json({ ok: false, error: { code, message } }),
   succes: (data: unknown) => Response.json({ ok: true, data }),
 }));

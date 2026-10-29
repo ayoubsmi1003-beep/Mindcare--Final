@@ -29,6 +29,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 import { NOM_COOKIE, resoudreSession } from "@/server/auth/session";
+import { iaCliniqueAutorisee } from "@/server/auth/ia-gate";
 
 /** Échec : HTTP 200, le corps porte le contrat. Voir l'en-tête. */
 export function echec(code: string, message: string): NextResponse {
@@ -60,4 +61,31 @@ export async function identite(): Promise<string | null> {
   } catch {
     return null;
   }
+}
+
+/**
+ * Refus explicite des routes d'IA pour un compte qui n'exerce pas la clinique.
+ *
+ * Rend `null` si l'appelant est `owner` ou `practitioner`, sinon la réponse à
+ * renvoyer telle quelle : `401` sans session, `403` avec un rôle non clinique,
+ * `503` si la base ne permet pas de trancher (fail closed).
+ *
+ * L'interface masque déjà Alexa à l'accueil ; cette barrière est celle qui
+ * compte quand la requête est fabriquée à la main.
+ */
+export async function refusIaClinique(): Promise<NextResponse | null> {
+  const userId = await identite();
+  if (userId === null) {
+    return NextResponse.json(
+      { ok: false, error: { code: "non-authentifie", message: "Session requise." } },
+      { status: 401 },
+    );
+  }
+  if (!(await iaCliniqueAutorisee(userId))) {
+    return NextResponse.json(
+      { ok: false, error: { code: "interdit", message: "Fonction réservée au médecin." } },
+      { status: 403 },
+    );
+  }
+  return null;
 }

@@ -62,6 +62,9 @@ export const SEUIL_RERANK_INUTILE = 0.55 as const;
 export interface StatutRerankSecondaire {
   readonly etat: "non-initialise" | "pret" | "indisponible";
   readonly motif?: string;
+  readonly model?: string;
+  readonly revision?: string;
+  readonly inferences: number;
 }
 
 interface DependancesChargeurRerank {
@@ -132,7 +135,7 @@ export function lireRecetteRerankSecondaire(lireFichier: (chemin: string) => str
   return { model, revision, artifact_sha256: sha as Record<string, string> };
 }
 
-let statut: StatutRerankSecondaire = { etat: "non-initialise" };
+let statut: StatutRerankSecondaire = { etat: "non-initialise", inferences: 0 };
 let promesse: Promise<RerankerLocalAsync | null> | null = null;
 
 async function initialiser(deps: DependancesChargeurRerank): Promise<RerankerLocalAsync | null> {
@@ -158,13 +161,17 @@ async function initialiser(deps: DependancesChargeurRerank): Promise<RerankerLoc
       binaires.creerTokenizer,
       { creerSession: binaires.creerSession },
     );
-    const scoreur = noterPairesDepuisSession(
+    const scoreurModele = noterPairesDepuisSession(
       { Tensor: binaires.ort.Tensor },
       prete.session,
       prete.tokenizer,
       { maxLongueur: TRONCATURE_RERANK_SECONDAIRE },
     );
-    statut = { etat: "pret" };
+    const scoreur = async (requete: string, documents: readonly string[]) => {
+      if (documents.length > 0) statut = { ...statut, inferences: statut.inferences + 1 };
+      return scoreurModele(requete, documents);
+    };
+    statut = { etat: "pret", model: recette.model, revision: recette.revision, inferences: statut.inferences };
     return creerRerankerCrossEncoder(scoreur, {
       nom: "mmarco-mMiniLMv2",
       version: recette.revision,
@@ -174,7 +181,7 @@ async function initialiser(deps: DependancesChargeurRerank): Promise<RerankerLoc
   } catch (erreur) {
     const message = erreur instanceof Error ? erreur.message : String(erreur);
     const motif = message.split(":")[0] ?? "indisponible";
-    statut = { etat: "indisponible", motif: motif.slice(0, 80) };
+    statut = { etat: "indisponible", motif: motif.slice(0, 80), inferences: statut.inferences };
     return null;
   }
 }
@@ -206,7 +213,7 @@ export function rerankerSecondaireProduction(deps: DependancesChargeurRerank = d
 /** Seam de test : le prochain appel reconstruit. */
 export function reinitialiserRerankSecondaireProduction(): void {
   promesse = null;
-  statut = { etat: "non-initialise" };
+  statut = { etat: "non-initialise", inferences: 0 };
 }
 
 export function statutRerankSecondaire(): StatutRerankSecondaire {

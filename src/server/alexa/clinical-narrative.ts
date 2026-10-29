@@ -275,6 +275,15 @@ function checkClinicalNarrative(value: unknown, sources: readonly NarrativeSourc
     const clinicalClauses=text.split(/[.!?;]/u).map(clause=>clause.trim()).filter(Boolean);
     const wholeSentences=text.split(/[.!?]/u).map(clause=>clause.trim()).filter(Boolean);
     if(new Set(wholeSentences).size!==wholeSentences.length)return {text:null,rejection:'repetition'};
+    const repeatsCopulaFacts=wholeSentences.some(part=>{
+      const match=part.match(/^(.{1,240}?)\b(?:est|sont)\b\s+(?:(?:un|une|des?|le|la|les)\s+)?(.{1,240})$/u);
+      if(!match?.[1]||!match[2])return false;
+      const content=(value:string)=>new Set((value.match(/[\p{L}]{4,}/gu)??[]).filter(word=>!narrativeGlue.has(word)));
+      const before=content(match[1]),after=content(match[2]);
+      const shared=[...before].filter(word=>after.has(word)).length;
+      return before.size>=3&&after.size>=3&&shared>=3&&shared/Math.min(before.size,after.size)>=0.75;
+    });
+    if(repeatsCopulaFacts)return {text:null,rejection:'repetition'};
     const presentProof=fold(datedQuotes.filter(citation=>citation.scope!=='previous').map(citation=>citation.quote).join(' '));
     const pastOnlyWords=(fold(datedQuotes.filter(citation=>citation.scope==='previous').map(citation=>citation.quote).join(' ')).match(/[\p{L}]{5,}/gu)??[]).filter(word=>!narrativeGlue.has(word)&&!presentProof.includes(word));
     for(const clause of clinicalClauses){
@@ -404,7 +413,7 @@ async function synthesizeNarrativeBatch(sources: readonly NarrativeSource[], sig
     const aliasedEvidence=multiVisitEvidence?new Map([...sourceAliases].flatMap(([alias,id])=>multiVisitEvidence!.has(id)?[[alias,multiVisitEvidence!.get(id)!] as const]:[])):undefined;
     const responseSchema=multiVisit?multiVisitAnswerSchemaFor(requiredAliases.length?requiredAliases:[...sourceAliases.keys()].slice(0,6),aliasedEvidence,validationSources):sessionAnswerSchemaFor(validationSources,sessionEvidence);
     const systemPrompt=multiVisit?(multiVisitRetries?copy.multiVisitRetryPrompt:copy.multiVisitPrompt):sessionEvidence?copy.sessionRepairPrompt:`${copy.prompt} ${copy.sessionInstruction}`;
-    const maxOutputTokens=multiVisit?Math.min(360,180+visitIds.size*30):220;
+    const maxOutputTokens=multiVisit?Math.min(360,180+visitIds.size*30):320;
     const visitAliases=new Map([...new Set(validationSources.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
     const modelSources=validationSources.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
       ...source,...(selectedEvidence?.has(source.id)?{text:selectedEvidence.get(source.id)}:{}),id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),...(requiredSessionSource(source)?{required:true}:{}),
@@ -814,7 +823,10 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     const datedVisits=new Set<string>();
     const selectedText=(options.comparison?selected:[...new Map(selected.map(choice=>[choice.text,choice])).values()]).map(choice=>{
       const day=choice.at?date.format(new Date(choice.at)):null,prefix=day?`Pour la consultation du ${day}, `:null;
-      if(prefix&&datedVisits.has(choice.visitId)&&choice.text.startsWith(prefix))return choice.text.slice(prefix.length);
+      if(prefix&&datedVisits.has(choice.visitId)&&choice.text.startsWith(prefix)){
+        const remaining=choice.text.slice(prefix.length);
+        return remaining?remaining[0]!.toLocaleUpperCase('fr-FR')+remaining.slice(1):remaining;
+      }
       if(prefix)datedVisits.add(choice.visitId);
       return choice.text;
     });
@@ -924,7 +936,40 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
   }catch(error){signal.throwIfAborted();console.warn('[alexa-case] failure',localModelFailureCode(error));return unavailable;}
 }
 
-export async function summarizeClinicalCaseContext(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{return summarizeClinicalContext(context,signal,true,true);}
+function caseDiagnosisDate(value:string):string{
+ const match=/^(\d{4})-(\d{2})-(\d{2})/u.exec(value);
+ return match?`${match[3]}/${match[2]}/${match[1]}`:value;
+}
+
+function includeRecordedDiagnosesInCaseSummary(result:ClinicalNarrative,diagnoses:ClinicalContext['diagnoses']):ClinicalNarrative{
+  if(!result.generated)return result;
+  const recorded=diagnoses.filter(diagnosis=>diagnosis.label.trim()!=="");
+  const active=recorded.filter(diagnosis=>diagnosis.resolvedAt===null);
+  const resolved=recorded.filter(diagnosis=>diagnosis.resolvedAt!==null);
+  const entry=(diagnosis:typeof recorded[number])=>{
+    const label=diagnosis.label.trim().replace(/\s+/gu," ");
+    return diagnosis.resolvedAt!==null
+      ? `« ${label} », résolu le ${caseDiagnosisDate(diagnosis.resolvedAt)}`
+      : diagnosis.onsetDate!==null
+        ? `« ${label} », actif depuis le ${caseDiagnosisDate(diagnosis.onsetDate)}`
+        : `« ${label} », actif`;
+  };
+  const join=(values:typeof recorded)=>values.map(entry).join(" ; ");
+  const diagnosisSentences=[
+    ...(active.length?[`${active.length===1?"Le dossier indique un diagnostic actif":"Le dossier indique les diagnostics actifs"} : ${join(active)}.`]:[]),
+    ...(resolved.length?[`${resolved.length===1?"Le dossier conserve un diagnostic résolu":"Le dossier conserve les diagnostics résolus"} : ${join(resolved)}.`]:[]),
+  ];
+  return {
+    ...result,
+    text:[result.text.trim(),...diagnosisSentences].filter(Boolean).join(" "),
+    sourceIds:[...new Set([...result.sourceIds,...recorded.map(diagnosis=>diagnosis.id)])],
+  };
+}
+
+export async function summarizeClinicalCaseContext(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{
+  const result=await summarizeClinicalContext(context,signal,true,true);
+  return includeRecordedDiagnosesInCaseSummary(result,context.diagnoses);
+}
 
 function clinicalScaleDetails(scales:readonly ClinicalContext["scales"][number][]):string{
   return scales.map(scale=>`${scale.name} : score ${scale.score===null?"non renseigné":scale.score}${scale.interpretation?` ; interprétation enregistrée : ${scale.interpretation}`:""}`).join(" ; ");

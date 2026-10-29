@@ -20,6 +20,8 @@ export const patientSummary = {
   modifieDepuis: "Le dossier a changé depuis cette synthèse.",
   aJour: "À jour",
   vigilance: "Points de vigilance",
+  diagnosticIntro: "Le dossier mentionne notamment le diagnostic suivant :",
+  diagnosticsIntro: "Le dossier mentionne notamment les diagnostics suivants :",
   sources: "Sources de la synthèse",
   fermerSources: "Masquer les sources",
   sourceCount: (label: string, count: number): string =>

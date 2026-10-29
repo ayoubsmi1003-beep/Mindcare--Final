@@ -163,6 +163,30 @@ describe("PatientResolver fail closed local names", () => {
     expect(await resolvePatient(f.db, { name: "Prénom fictif Nom fictif" })).toMatchObject({ status: "resolved", patientId });
     expect(f.calls.map((call) => call.name)).toEqual(["search_patients", "get_patient"]);
   });
+  it("requires explicit selection when only a first or last name uniquely matches", async () => {
+    for (const name of ["Prénom fictif", "Nom fictif"]) {
+      const f = port({
+        search_patients: [{ id: patientId, total_count: 1, first_name: "Prénom fictif", last_name: "Nom fictif" }],
+        get_patient: [{ id: patientId, first_name: "Prénom fictif", last_name: "Nom fictif" }],
+      });
+      expect(await resolvePatient(f.db, { name })).toEqual({
+        status: "ambiguous",
+        candidates: [{ patientId, label: "Prénom fictif Nom fictif" }],
+      });
+      expect(f.calls.map((call) => call.name)).toEqual(["search_patients"]);
+    }
+  });
+  it("ranks an archived match for an incomplete name instead of treating it as absent", async () => {
+    const f = port((name, args) => name === "search_patients" && typeof args.p_spec === "string"
+      ? [{ total: 1, rows: [{ id: patientId, first_name: "Ilyes", last_name: "Bouguerra" }], complete: true, offset: 0, revision: "a".repeat(32) }]
+      : []);
+
+    expect(await resolvePatient(f.db, { name: "Ilyes" })).toEqual({
+      status: "ambiguous",
+      candidates: [{ patientId, label: "Ilyes Bouguerra" }],
+    });
+    expect(f.calls.map((call) => call.name)).toEqual(["search_patients", "search_patients"]);
+  });
   it("keeps ambiguous and missing names unresolved, including truncated search pages", async () => {
     const ambiguous = port({ search_patients: [{ id: patientId, total_count: 2, first_name: "Prénom fictif", last_name: "Nom fictif" }] });
     expect(await resolvePatient(ambiguous.db, { name: "fictif" })).toMatchObject({ status: "ambiguous" });
@@ -187,6 +211,21 @@ describe("PatientResolver fail closed local names", () => {
     const f = port({ search_patients: [{ id: patientId, total_count: 1, first_name: "Nadia", last_name: "Test" }] });
     expect(await resolvePatient(f.db, { name: "Nadi Test" })).toMatchObject({ status: "ambiguous" });
     expect(f.calls).toHaveLength(1);
+  });
+  it("ranks ambiguous name suggestions by similarity without resolving a fuzzy match", async () => {
+    const closeId = "33333333-3333-4333-8333-333333333333";
+    const f = port({ search_patients: [
+      { id: otherId, total_count: 2, first_name: "Sabrina", last_name: "Cherif" },
+      { id: closeId, total_count: 2, first_name: "Nadia", last_name: "Benaali" },
+    ] });
+
+    const result = await resolvePatient(f.db, { name: "Nadia Benali" });
+
+    expect(result).toEqual({ status: "ambiguous", candidates: [
+      { patientId: closeId, label: "Nadia Benaali" },
+      { patientId: otherId, label: "Sabrina Cherif" },
+    ] });
+    expect(f.calls.map((call) => call.name)).toEqual(["search_patients"]);
   });
   it.each(["Karim Djilali", "DJILALI Karim"])("resolves an exact full name among similar spellings: %s", async (name) => {
     const f = port({ search_patients: [

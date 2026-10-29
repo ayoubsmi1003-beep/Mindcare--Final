@@ -6,7 +6,6 @@ import { validAlexaSources, alexaNavigationSchema, alexaProposalSchema, type Ale
 
 let conversation: string | null = null;
 let conversationPending: Promise<string> | null = null;
-let lastPatient: string | null = null;
 let lastPage = "";
 let sequence = 0;
 let generation = 0;
@@ -17,10 +16,10 @@ const uuid=(value:string|null):string|null=>value&&/^[0-9a-f]{8}-[0-9a-f]{4}-[1-
 export function setAlexaDocumentContext(value:AlexaSelectedDocumentContext|null):void{selectedDocumentContext=value;}
 abonnerPatientActif(patient => {
   const next = patient?.id ?? null;
-  if (observedPatient !== next) { observedPatient = next; lastPatient = next; sequence++; }
+  if (observedPatient !== next) { observedPatient = next; sequence++; }
 });
 export function adoptAlexaConversation(id: string): void { conversation = id; }
-export function clearAlexaConversation(): void { conversation = null; conversationPending = null; lastPatient = null; lastPage = ""; sequence++; generation++; }
+export function clearAlexaConversation(): void { conversation = null; conversationPending = null; lastPage = ""; sequence++; generation++; }
 export async function ensureAlexaConversation(): Promise<string> {
   if (conversation) return conversation;
   if (conversationPending) return conversationPending;
@@ -57,12 +56,11 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
   const page = typeof window === "undefined" ? "" : window.location.pathname;
   const activePatient = patientActifCourant()?.id ?? null;
   if(lastPage==='/documents'&&page!=='/documents')selectedDocumentContext=null;
-  if (lastPage !== page) lastPatient = activePatient;
   lastPage = page;
   const params=typeof window==='undefined'?new URLSearchParams():new URLSearchParams(window.location.search),routePatient=uuid(params.get('patient'));
   const requestedDocumentId=uuid(params.get('document')),requestedDraftId=uuid(params.get('draft'));
   const matchingSelectedDocument=page==='/documents'&&selectedDocumentContext&&(!routePatient||routePatient===selectedDocumentContext.patientId)&&(!requestedDocumentId&&!requestedDraftId||requestedDocumentId===selectedDocumentContext.documentId||requestedDraftId===selectedDocumentContext.draftId)?selectedDocumentContext:null;
-  const patientId=page==='/documents'?routePatient??matchingSelectedDocument?.patientId??lastPatient:lastPatient;
+  const patientId=page==='/documents'?routePatient??matchingSelectedDocument?.patientId??activePatient:activePatient;
   const consultationId=uuid(/^\/consultation\/([^/]+)$/u.exec(page)?.[1]??null);
   const documentId=requestedDocumentId??matchingSelectedDocument?.documentId??null,draftId=requestedDraftId??matchingSelectedDocument?.draftId??null;
   const documentRevision=matchingSelectedDocument&&(documentId===matchingSelectedDocument.documentId||draftId===matchingSelectedDocument.draftId)?matchingSelectedDocument.revision:null;
@@ -83,7 +81,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
       }
     }catch{continuationToken=undefined;}
   }
-  let combinedAnswer="",limited=true,persiste=true,sourcePatientId:string|null=null,replacePatient=false;
+  let combinedAnswer="",limited=true,persiste=true,sourcePatientId:string|null=null;
   let navigation:AlexaNavigation|undefined,proposal:AlexaProposal|undefined,status:AlexaTurnResult["status"],parts:AlexaTurnResult["parts"],speechAllowed=false;
   let finalProgress:AlexaTurnResult["progress"];
   const allSources:AlexaSource[]=[],allBlocks:AlexaAnswerBlock[]=[],seenTokens=new Set<string>();
@@ -143,7 +141,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
     batchNumber++;combinedAnswer+=`${combinedAnswer?"\n\n":""}${batchAnswer}`;
     if(combinedAnswer.length>512_000)throw new Error(alexa.format);
     allBlocks.push(...batchBlocks);allSources.push(...batchSources);
-    if(batchReplacePatient){sourcePatientId=batchPatientId;replacePatient=true;}
+    if(batchReplacePatient)sourcePatientId=batchPatientId;
     navigation=batchNavigation??navigation;proposal=batchProposal??proposal;status=batchStatus;parts=batchParts;speechAllowed=batchSpeechAllowed;
     limited=batchLimited;persiste=persiste&&batchPersiste;finalProgress=batchProgress;
 
@@ -158,7 +156,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
     if(batchProgress)finalProgress=batchProgress;
     break;
   }
-  checkScope();if(replacePatient)lastPatient=sourcePatientId;
+  checkScope();
   const sourceMap=new Map<string,AlexaSource>();for(const source of allSources)sourceMap.set(JSON.stringify([source.type,source.id,source.version]),source);
   callbacks.onSentence?.(combinedAnswer);
   return {texte:combinedAnswer,sources:[...sourceMap.values()],blocks:allBlocks,patientId:sourcePatientId,limited,persiste,...(status?{status}:{}),...(parts?{parts}:{}),speechAllowed:batchNumber>1?false:speechAllowed,...(navigation?{navigation}:{}),...(proposal?{proposal}:{}),...(finalProgress?{progress:finalProgress}:{})};

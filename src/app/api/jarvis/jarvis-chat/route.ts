@@ -52,7 +52,7 @@
 import { clientSql, type ClientSql } from "@/server/jarvis/client-sql";
 import { env, jevActif } from "@/server/env";
 
-import { echec, identite } from "../_commun";
+import { echec, identite, refusIaClinique } from "../_commun";
 
 import type { LlmMessage } from "@/server/egress/external-call";
 import { decisions, JEV_MODEL_DEFAUT, llm, llmStream, resolveModel } from "@/server/egress/external-call";
@@ -842,6 +842,8 @@ function ecrivainFlux(req: Request): EcrivainFlux {
 }
 
 export async function POST(req: Request): Promise<Response> {
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   const userId = await identite();
   if (userId === null) return echec("non-authentifie", "Assistant indisponible.");
 

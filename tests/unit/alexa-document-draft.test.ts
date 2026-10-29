@@ -31,7 +31,7 @@ function port(kindContent:unknown,overrides:{patient?:unknown;workspace?:unknown
   if(name==="get_patient"){const payload:unknown=[overrides.patient??patient];return {ok:true,data:payload as readonly T[]};}
   if(name==="get_patient_workspace"){const payload:unknown=[overrides.workspace??workspace];return {ok:true,data:payload as readonly T[]};}
   if(name==="get_active_document_template"){const payload:unknown=[{content_json:kindContent,title_fr:"Document",version:5}];return {ok:true,data:payload as readonly T[]};}
-  if(name==="get_consultation"){const payload:unknown=[overrides.consultation??consultation];return {ok:true,data:payload as readonly T[]};}
+  if(name==="get_consultation"){const value=Object.hasOwn(overrides,"consultation")?overrides.consultation:consultation;const payload:unknown=value===null?[]:[value];return {ok:true,data:payload as readonly T[]};}
   return {ok:false,error:{code:"introuvable",message:"unexpected"}};
  }};
 }
@@ -87,6 +87,21 @@ describe("resolveDocumentDraftInputs",()=>{
   expect(result.state).toBe("ready");
   if(result.state!=="ready")return;
   expect(result.variables["date_consultation"]).toBe("20/10/2026");
+ });
+
+ it("refuse la date d'une consultation qui appartient à un autre patient",async()=>{
+  const result=await resolveDocumentDraftInputs(port(doc([paragraph()]),{consultation:{...consultation,patient_id:"99999999-9999-4999-8999-999999999999"}}),patientId,"justification","",`/consultation/${consultation.id}`,signal,now);
+  expect(result.state).toBe("unavailable");
+ });
+
+ it("refuse une consultation retournée sous un identifiant différent de celui demandé",async()=>{
+  const result=await resolveDocumentDraftInputs(port(doc([paragraph()]),{consultation:{...consultation,id:"55555555-5555-4555-8555-555555555555"}}),patientId,"justification","",`/consultation/${consultation.id}`,signal,now);
+  expect(result.state).toBe("unavailable");
+ });
+
+ it("ne remplace pas une consultation indisponible par la date du jour",async()=>{
+  const result=await resolveDocumentDraftInputs(port(doc([paragraph()]),{consultation:null}),patientId,"justification","",`/consultation/${consultation.id}`,signal,now);
+  expect(result.state).toBe("unavailable");
  });
 
  it("ne reprend un nombre de jours que s'il est explicitement demandé",async()=>{

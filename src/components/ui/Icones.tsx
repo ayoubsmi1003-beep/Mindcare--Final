@@ -52,6 +52,9 @@ export type NomIcone =
   | "deconnexion"
   | "recherche"
   | "jarvis"
+  | "resume"
+  | "echelle"
+  | "diagnostic"
   | "chevron"
   | "plus"
   | "croix"
@@ -196,6 +199,31 @@ const TRACES: Record<NomIcone, React.JSX.Element> = {
     <>
       <path d="M10.4 3.4l1.7 4.4 4.4 1.7-4.4 1.7-1.7 4.4-1.7-4.4L4.3 9.5l4.4-1.7z" />
       <path d="M17.6 14.6l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" />
+    </>
+  ),
+  // Le dossier qui se raconte : une page, ses lignes, et l'étincelle de la
+  // synthèse. Le même vocabulaire que le logo, sans emblème médical fermé.
+  resume: (
+    <>
+      <path d="M6.6 4.2h7.8a3 3 0 0 1 3 3v12.6H8.2a2.4 2.4 0 0 1-2.4-2.4V5.2a1 1 0 0 1 1-1z" />
+      <path d="M9 8.8h5.4M9 12.2h4.2M9 15.6h3" />
+      <path d="M17.8 3.2l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z" />
+    </>
+  ),
+  // Une règle graduée et son repère : lire un instrument, pas un score nu.
+  echelle: (
+    <>
+      <path d="M7.6 20.4V4.4" />
+      <path d="M7.6 8.2h3.6M7.6 12h5.8M7.6 15.8h3.6" />
+      <path d="M14.2 20.2l2.2-8.8 2.4 3.2-1.5 5.6z" />
+    </>
+  ),
+  // Le repère clinique : un centre, quatre directions, aucune pointe vive.
+  diagnostic: (
+    <>
+      <circle cx="12" cy="12" r="8.2" />
+      <path d="M12 8.2v7.6M8.2 12h7.6" />
+      <path d="M12 3.2v1.4M20.8 12h-1.4" />
     </>
   ),
   chevron: <path d="M9.2 4.8l7.2 7.2-7.2 7.2" />,

@@ -18,6 +18,10 @@ const PANNEAU = readFileSync(
   join(process.cwd(), "src/components/consultation/PanneauHistorique.tsx"),
   "utf8",
 );
+const CARTE = readFileSync(
+  join(process.cwd(), "src/components/consultation/CarteSeancePasse.tsx"),
+  "utf8",
+);
 const CHRONO = readFileSync(
   join(process.cwd(), "src/components/patients/ChronologiePatient.tsx"),
   "utf8",
@@ -45,12 +49,16 @@ describe("séance précédente en lecture directe", () => {
     expect(CHRONO, "première section auto").not.toContain("premiereSection");
   });
 
-  it("la ligne séance du rail ne laisse plus la pastille recouvrir la date", () => {
-    const bouton = PANNEAU.match(
-      /<button\s+type="button"\s+onClick=\{\(\) => basculer\(e\.eventId\)\}[\s\S]*?className="([^"]*)"/,
+  it("garde une date de séance lisible quand la carte se replie dans le rail étroit", () => {
+    expect(PANNEAU, "l'historique doit rendre la carte de séance").toContain("CarteSeancePasse");
+    expect(CARTE, "l'en-tête doit autoriser le retour à la ligne").toMatch(
+      /<header className="flex flex-wrap items-start justify-between/u,
     );
-    expect(bouton, "bouton ligne séance introuvable").not.toBeNull();
-    expect(bouton?.[1] ?? "", "la ligne doit passer sur deux rangées").toContain("flex-wrap");
-    expect(PANNEAU, "pastille à taille fixe").toMatch(/<span[^>]*shrink-0[^>]*>\s*<Badge/);
+    expect(CARTE, "la date doit rester dans un bloc réductible").toContain(
+      'className="flex min-w-0 items-center gap-3"',
+    );
+    expect(CARTE, "les repères de séance doivent pouvoir se replier").toContain(
+      'className="flex flex-wrap items-center gap-x-2 gap-y-1 font-ui text-label text-ink-500"',
+    );
   });
 });

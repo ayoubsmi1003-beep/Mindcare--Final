@@ -1,0 +1,464 @@
+/** Real in-process runAlexa turns for the separate 250-case corpus; never loads .env. */
+import { createHash, randomUUID } from "node:crypto";
+import { mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
+import { createRequire } from "node:module";
+import { basename, dirname, join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import {
+  resolveV8AdversarialPromptTurns,
+  validateV8AdversarialManifest,
+} from "./lib/alexa-v8-adversarial.mjs";
+import {
+  createV8AdversarialProgress,
+  recoverV8AdversarialProgress,
+} from "./lib/alexa-v8-campaign-progress.mjs";
+import {
+  executeV8AdversarialCampaign,
+  restoreV8AdversarialOracleResults,
+} from "./lib/alexa-v8-campaign-executor.mjs";
+import { sanitizeAlexaEvaluationArtifact } from "./lib/alexa-eval-artifact.mjs";
+import {
+  evaluateV8AdversarialScenario,
+  evaluateV8KnowledgeOriginCoverage,
+} from "./lib/alexa-v8-adversarial-evaluator.mjs";
+import {
+  BOOK_RAG_REQUIRED_MIGRATIONS,
+  resolveV8CampaignDatabaseUrls,
+  validateBookRagSource,
+  validateV8MigrationInventory,
+} from "./lib/alexa-v8-manifest.mjs";
+import { mergeAlexaExecutionFallback, runAlexaV8Turn } from "./lib/alexa-v8-runtime-observation.mjs";
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const evalRoot = join(root, "tests", "eval");
+const privateRoot = join(root, ".eval-out", "alexa-v8-upgrade");
+const args = process.argv.slice(2);
+const require = createRequire(join(root, "package.json"));
+const hash = value => createHash("sha256").update(value).digest("hex");
+const RESUME_BINDING_FIELDS = [
+  "manifestSha256", "frozenManifestSha256", "privateOracleSha256", "evaluatorSha256", "sourceWorkingTreeSha256",
+];
+
+function onlyKnownFlags() {
+  const allowed = new Set(["--validate-only", "--resume"]);
+  for (let index = 0; index < args.length; index++) {
+    if (!allowed.has(args[index]) || args[index] === "--resume" && typeof args[index + 1] !== "string") {
+      throw new Error("Usage: node scripts/eval-alexa-v8-adversarial.mjs [--validate-only | --resume <progress-file>]");
+    }
+    if (args[index] === "--resume") index++;
+  }
+  if (args.includes("--validate-only") && args.includes("--resume")) throw new Error("Validation mode cannot resume a campaign");
+}
+
+function resumeName() {
+  const index = args.indexOf("--resume");
+  if (index < 0) return null;
+  const value = args[index + 1];
+  if (basename(value) !== value || !/^[a-z0-9._-]{1,120}\.progress\.json$/iu.test(value)) {
+    throw new Error("Resume file must be a progress artifact in the V8 evaluation directory");
+  }
+  return value;
+}
+
+async function readJson(path) {
+  return JSON.parse(await readFile(path, "utf8"));
+}
+
+async function loadInputs() {
+  const manifestPath = join(evalRoot, "alexa-v8-adversarial-250.cjs");
+  const frozenPath = join(evalRoot, "alexa-v8-cases.json");
+  const snapshotPath = join(privateRoot, "private-oracle-snapshot-v2.json");
+  const privateOraclePath = join(privateRoot, "private-oracles-v4.json");
+  const manifestBytes = await readFile(manifestPath);
+  const frozenBytes = await readFile(frozenPath);
+  const snapshotBytes = await readFile(snapshotPath);
+  const privateOracleBytes = await readFile(privateOraclePath);
+  const manifest = require(manifestPath);
+  const frozenManifest = JSON.parse(frozenBytes.toString("utf8"));
+  const snapshot = JSON.parse(snapshotBytes.toString("utf8"));
+  const privateOracles = JSON.parse(privateOracleBytes.toString("utf8"));
+  if (privateOracles.version !== 4 || privateOracles.sourceSha256 !== hash(snapshotBytes)) {
+    throw new Error("Private adversarial bindings do not match the frozen synthetic snapshot");
+  }
+
+  const knowledgeSources = {};
+  const sourceFiles = [...new Set(manifest.cases.flatMap(item => item.oracles
+    .filter(oracle => oracle.kind === "knowledge_case").map(oracle => oracle.sourceFile)))];
+  for (const file of sourceFiles) {
+    if (basename(file) !== file || !file.endsWith(".json")) throw new Error("Invalid knowledge source reference");
+    const source = await readJson(join(evalRoot, file));
+    knowledgeSources[file] = source.cas;
+  }
+  const validation = validateV8AdversarialManifest(manifest, { frozenManifest, knowledgeSources });
+  const resolvedPrompts = {};
+  let placeholderCount = 0;
+  for (const scenario of manifest.cases) {
+    resolvedPrompts[scenario.id] = resolveV8AdversarialPromptTurns(scenario, { snapshot, privateOracles });
+    placeholderCount += scenario.turns.reduce((count, turn) => count + [...turn.matchAll(/\[([A-Z0-9_]+)\]/gu)].length, 0);
+  }
+
+  return {
+    manifest,
+    manifestSha256: hash(manifestBytes),
+    frozenManifest,
+    frozenManifestSha256: hash(frozenBytes),
+    snapshot,
+    privateOracles,
+    privateOracleSha256: hash(privateOracleBytes),
+    knowledgeSources,
+    validation,
+    resolvedPrompts,
+    placeholderCount,
+    fixtureAsOf: privateOracles.fixtureAsOf,
+  };
+}
+
+async function checkHashBinding() {
+  const { execFileSync } = await import("node:child_process");
+  execFileSync(process.execPath, [join(root, "scripts", "alexa-v8-bind-adversarial.mjs"), "--check"], {
+    cwd: root,
+    stdio: "pipe",
+    windowsHide: true,
+  });
+  const binding = await readJson(join(privateRoot, "adversarial-oracle-binding-v2.json"));
+  if (!/^[a-f0-9]{64}$/u.test(binding.checkout?.sourceWorkingTreeSha256 ?? "")) {
+    throw new Error("Adversarial source working-tree binding is invalid");
+  }
+  return binding;
+}
+
+async function writeAtomic(path, value) {
+  await mkdir(dirname(path), { recursive: true });
+  const temporary = `${path}.${process.pid}.tmp`;
+  await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, { encoding: "utf8", mode: 0o600 });
+  await rename(temporary, path);
+}
+
+function sourceCaseIds(scenario) {
+  return [...new Set(scenario.oracles.flatMap(oracle => [oracle.sourceCaseId, oracle.promptBindingSourceCaseId])
+    .filter(id => typeof id === "string"))];
+}
+
+function appContextFor(scenario, inputs) {
+  const preconditionsPath = join(evalRoot, "alexa-v8-preconditions.json");
+  const preconditions = JSON.parse(require("node:fs").readFileSync(preconditionsPath, "utf8"));
+  const selectedDocument = sourceCaseIds(scenario).some(id =>
+    preconditions.cases?.[id]?.kind === "selected_issued_document" && preconditions.cases[id].source === "currentDocument");
+  if (!selectedDocument) return { patientId: null, page: "/jarvis" };
+  const document = inputs.snapshot.currentDocument;
+  if (!document || document.status !== "issued" || document.is_synthetic !== true ||
+      typeof document.id !== "string" || typeof document.patient_id !== "string" || typeof document.content_hash !== "string") {
+    throw new Error("Selected synthetic issued-document context is invalid");
+  }
+  return {
+    patientId: document.patient_id,
+    page: "/documents",
+    documentId: document.id,
+    documentRevision: document.content_hash,
+  };
+}
+
+async function validateOnly() {
+  onlyKnownFlags();
+  const inputs = await loadInputs();
+  const binding = await checkHashBinding();
+  process.stdout.write(JSON.stringify({
+    status: "PASS",
+    mode: "static-validation-only",
+    cases: inputs.validation.total,
+    oracleReferences: inputs.manifest.cases.reduce((total, item) => total + item.oracles.length, 0),
+    resolvedPromptPlaceholders: inputs.placeholderCount,
+    manifestSha256: inputs.manifestSha256,
+    privateOracleSha256: inputs.privateOracleSha256,
+    sourceWorkingTreeSha256: binding.checkout.sourceWorkingTreeSha256,
+    knowledgeOriginCoverage: { status: "NOT RUN", direct: false, agentTool: false },
+    database: "NOT CHECKED",
+    runtime: "NOT RUN",
+  }) + "\n");
+}
+
+async function preflightDatabase(inputs) {
+  const { applicationUrl, adminUrl } = resolveV8CampaignDatabaseUrls(process.env);
+  process.env.MINDCARE_DATABASE_URL = applicationUrl;
+  const Client = require("pg").Client;
+  const client = new Client({ connectionString: adminUrl, connectionTimeoutMillis: 10000 });
+  let sourceCount;
+  try {
+    await client.connect();
+    const source = (await client.query(`SELECT current_database() AS "database",
+      (SELECT count(*)::int FROM app.patients) AS patients,
+      (SELECT count(*)::int FROM app.consultations) AS consultations,
+      (SELECT count(*) FILTER (WHERE is_synthetic IS DISTINCT FROM true)::int FROM app.patients) AS "nonSynthetic",
+      (SELECT count(*)::int FROM app.schema_migrations WHERE version = ANY($1::text[])) AS "appliedMigrationsThrough200"`,
+    [BOOK_RAG_REQUIRED_MIGRATIONS])).rows[0];
+    validateBookRagSource(source);
+    const repositoryVersions = (await readdir(join(root, "supabase", "migrations")))
+      .filter(file => file.endsWith(".sql"))
+      .map(file => file.slice(0, -4));
+    const appliedVersions = (await client.query("SELECT version FROM app.schema_migrations ORDER BY version"))
+      .rows.map(row => row.version);
+    validateV8MigrationInventory({ repositoryVersions, appliedVersions });
+    if (inputs.snapshot.source?.database !== source.database || Number(inputs.snapshot.source?.nonSynthetic) !== 0 ||
+        Number(inputs.snapshot.source?.patients) !== Number(source.patients) ||
+        Number(inputs.snapshot.source?.consultations) !== Number(source.consultations)) {
+      throw new Error("Runtime database does not match the bound synthetic snapshot");
+    }
+    const fixtureActors = {
+      owner: "ea000000-0000-4000-8000-000000000001",
+      assistant: "ea000000-0000-4000-8000-000000000003",
+    };
+    for (const [name, id] of Object.entries(fixtureActors)) {
+      const actor = (await client.query("SELECT role::text FROM app.profiles WHERE id=$1", [id])).rows[0];
+      const expectedRole = name === "owner" ? "owner" : "assistant";
+      if (!actor || actor.role !== expectedRole) throw new Error("Synthetic fixture actor scope mismatch");
+    }
+    sourceCount = Number((await client.query("SELECT count(*)::int AS total FROM app.knowledge_sources")).rows[0]?.total ?? 0);
+  } finally {
+    await client.end();
+  }
+  if (sourceCount === 0) throw new Error("Approved synthetic knowledge corpus is unavailable; campaign remains NOT RUN");
+  process.env.MINDCARE_ALEXA_EVAL_NO_KNOWLEDGE = "0";
+  return { sourceCount, database: "alexa_eval_v8_intelligence_20261027" };
+}
+
+async function bundleRuntime(outDir) {
+  const vite = createRequire(join(root, "package.json"))(require.resolve("vitest/package.json"));
+  const { build } = createRequire(vite.resolve("vite/package.json"))("esbuild");
+  const entry = join(outDir, "runtime-entry.mjs");
+  await build({
+    stdin: {
+      contents: "export {runAlexa} from '@/server/alexa/orchestrator';export {ALEXA_CONVERSATION_MODEL} from '@/server/alexa/model-policy';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {agentSchemas,compactDeclarationSchema,ALEXA_NATIVE_DEADLINE_MS,ALEXA_NATIVE_BUDGET} from '@/shared/alexa/agent';export {fermerPool} from '@/server/db/pool';",
+      resolveDir: root,
+      loader: "ts",
+    },
+    outfile: entry,
+    bundle: true,
+    platform: "node",
+    format: "esm",
+    packages: "external",
+    tsconfig: join(root, "tsconfig.json"),
+    logLevel: "silent",
+  });
+  return import(pathToFileURL(entry).href);
+}
+
+function tally(progress) {
+  return Object.fromEntries(["PASS", "FAIL", "PARTIAL", "NOT RUN", "NOT VERIFIED"].map(status =>
+    [status, progress.cases.filter(item => item.status === status).length]));
+}
+
+async function runCampaign() {
+  onlyKnownFlags();
+  const inputs = await loadInputs();
+  const sourceBinding = await checkHashBinding();
+  const evaluatorSha256 = hash(await readFile(join(root, "scripts", "lib", "alexa-v8-adversarial-evaluator.mjs")));
+  const target = await preflightDatabase(inputs);
+  const runId = randomUUID();
+  const resumed = resumeName();
+  const prefix = resumed ? resumed.replace(/\.progress\.json$/u, "") : `adversarial-${runId}`;
+  const progressPath = join(privateRoot, `${prefix}.progress.json`);
+  const reportPath = join(privateRoot, `${prefix}.report.json`);
+  const outDir = join(privateRoot, "runtime-bundles", runId);
+  await mkdir(outDir, { recursive: true });
+  const api = await bundleRuntime(outDir);
+  const fixtureAsOf = /^\d{4}-\d{2}-\d{2}$/u.test(inputs.fixtureAsOf)
+    ? `${inputs.fixtureAsOf}T12:00:00+01:00`
+    : inputs.fixtureAsOf;
+  if (!Number.isFinite(Date.parse(fixtureAsOf))) throw new Error("Invalid synthetic fixture clock");
+  process.env.ALEXA_LOCAL_TIMINGS = "1";
+
+  const priorProgress = resumed ? await readJson(join(privateRoot, resumed)) : null;
+  const previousReport = resumed ? await readJson(reportPath).catch(error => {
+    if (error?.code === "ENOENT") return null;
+    throw error;
+  }) : null;
+  let progress = priorProgress
+    ? recoverV8AdversarialProgress(priorProgress, { nextSessionId: runId })
+    : createV8AdversarialProgress({
+      manifestSha256: inputs.manifestSha256,
+      scenarios: inputs.manifest.cases.map(item => ({ id: item.id, turnCount: item.turns.length })),
+    });
+  const run = {
+    id: runId,
+    startedAt: new Date().toISOString(),
+    manifestSha256: inputs.manifestSha256,
+    frozenManifestSha256: inputs.frozenManifestSha256,
+    privateOracleSha256: inputs.privateOracleSha256,
+    evaluatorSha256,
+    sourceWorkingTreeSha256: sourceBinding.checkout.sourceWorkingTreeSha256,
+    fixtureAsOf,
+    capabilities: { approvedBookFixtureAvailable: true },
+    databaseTarget: target.database,
+    sourceCount: target.sourceCount,
+    execution: {
+      model: api.ALEXA_CONVERSATION_MODEL,
+      recipe: "native-agent",
+      gate: "runAlexa",
+      invocation: "in_process",
+      fallback: { used: false, causes: [] },
+    },
+  };
+  const previousReportMatchesBinding = Boolean(previousReport) &&
+    RESUME_BINDING_FIELDS.every(field => previousReport.run?.[field] === run[field]);
+  const safeRecords = [];
+  const oracleResults = restoreV8AdversarialOracleResults({
+    manifest: inputs.manifest,
+    binding: {
+      manifestSha256: inputs.manifestSha256,
+      frozenManifestSha256: inputs.frozenManifestSha256,
+      privateOracleSha256: inputs.privateOracleSha256,
+      evaluatorSha256,
+      sourceWorkingTreeSha256: sourceBinding.checkout.sourceWorkingTreeSha256,
+    },
+    progress,
+    report: previousReport,
+  });
+  const previousCoverage = previousReportMatchesBinding ? previousReport.knowledgeOriginCoverage : null;
+  const observedOrigins = [
+    ...(previousCoverage?.direct === true ? [{ knowledgeTraces: [{ origin: "direct" }] }] : []),
+    ...(previousCoverage?.agentTool === true ? [{ knowledgeTraces: [{ origin: "agent_tool" }] }] : []),
+  ];
+  const reportRow = scenario => {
+    const savedCase = progress.cases.find(item => item.id === scenario.id);
+    const outcomes = oracleResults.get(scenario.id) ?? [];
+    const ordered = [...outcomes].sort((left, right) => left.oracleIndex - right.oracleIndex);
+    const complete = ordered.length === scenario.oracles.length &&
+      ordered.every((item, index) => item.oracleIndex === index + 1 && item.kind === scenario.oracles[index]?.kind);
+    return {
+      id: scenario.id,
+      status: savedCase?.status ?? "NOT RUN",
+      ...(complete ? {
+        oracleCount: ordered.length,
+        passingOracleCount: ordered.filter(item => item.status === "PASS").length,
+        evaluatorSha256,
+        oracleStatuses: ordered.map(item => item.status),
+      } : {}),
+    };
+  };
+  const oracleStatusCounts = () => {
+    const counts = {};
+    for (const scenario of inputs.manifest.cases) {
+      const savedCase = progress.cases.find(item => item.id === scenario.id);
+      const outcomes = oracleResults.get(scenario.id) ?? [];
+      scenario.oracles.forEach((oracle, index) => {
+        const outcome = outcomes.find(item => item.oracleIndex === index + 1);
+        const status = outcome?.status ?? (savedCase?.status === "NOT RUN" ? "NOT RUN" : "NOT VERIFIED");
+        const group = counts[oracle.kind] ??= { total: 0, PASS: 0, FAIL: 0, "NOT RUN": 0, "NOT VERIFIED": 0 };
+        group.total++;
+        group[status]++;
+      });
+    }
+    return counts;
+  };
+  const persist = async value => {
+    progress = value;
+    await writeAtomic(progressPath, value);
+    const counts = tally(value);
+    const perOracle = oracleStatusCounts();
+    const oracleFailure = Object.values(perOracle).some(group => group.FAIL > 0);
+    await writeAtomic(reportPath, sanitizeAlexaEvaluationArtifact({
+      version: 1,
+      status: counts.FAIL || oracleFailure ? "FAIL" : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
+      run,
+      tally: counts,
+      oracleStatusCounts: perOracle,
+      knowledgeOriginCoverage: evaluateV8KnowledgeOriginCoverage(observedOrigins),
+      rows: inputs.manifest.cases.map(reportRow),
+      records: safeRecords,
+    }));
+  };
+
+  try {
+    progress = await executeV8AdversarialCampaign({
+      manifest: inputs.manifest,
+      manifestSha256: inputs.manifestSha256,
+      resolvedPrompts: inputs.resolvedPrompts,
+      progress,
+      sessionId: runId,
+      persistProgress: persist,
+      invokeTurn: async ({ scenario, turnIndex, prompt, sessionState }) => {
+        const conversationId = sessionState?.conversationId ?? randomUUID();
+        const actor = "ea000000-0000-4000-8000-000000000001";
+        const observation = await runAlexaV8Turn({
+          api,
+          actor,
+          text: prompt,
+          conversationId,
+          clientTurnId: randomUUID(),
+          appContext: appContextFor(scenario, inputs),
+          asOf: fixtureAsOf,
+        });
+        observation.caseId = scenario.id;
+        observation.turnIndex = turnIndex;
+        run.execution.fallback = mergeAlexaExecutionFallback(run.execution.fallback, observation.execution?.fallback);
+        const safe = sanitizeAlexaEvaluationArtifact({ records: [observation] }).records[0];
+        if (safe) safeRecords.push(safe);
+        observedOrigins.push(...observation.knowledgeTraces.map(trace => ({ knowledgeTraces: [trace] })));
+        return { observation, sessionState: { conversationId } };
+      },
+      evaluateScenario: async ({ scenario, observations }) => {
+        const evaluated = evaluateV8AdversarialScenario({
+          scenario,
+          observations,
+          knowledgeSources: inputs.knowledgeSources,
+          privateOracles: inputs.privateOracles,
+          snapshot: inputs.snapshot,
+        });
+        if (evaluated.evaluatorSha256 !== evaluatorSha256) throw new Error("Adversarial evaluator binding changed");
+        oracleResults.set(scenario.id, evaluated.oracleResults);
+        return {
+          status: evaluated.status,
+          oracleCount: evaluated.oracleCount,
+          passingOracleCount: evaluated.passingOracleCount,
+          evaluatorSha256: evaluated.evaluatorSha256,
+        };
+      },
+    });
+    await persist(progress);
+    const coverage = evaluateV8KnowledgeOriginCoverage(observedOrigins);
+    const counts = tally(progress);
+    const perOracle = oracleStatusCounts();
+    const everyOraclePassed = Object.values(perOracle).every(group => group.total > 0 && group.PASS === group.total);
+    const complete = progress.cases.length === 250 && progress.cases.every(item => item.status === "PASS") && everyOraclePassed;
+    const report = sanitizeAlexaEvaluationArtifact({
+      version: 1,
+      status: counts.FAIL ? "FAIL" : complete && coverage.status === "PASS" ? "PASS"
+        : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
+      run,
+      tally: counts,
+      oracleStatusCounts: perOracle,
+      knowledgeOriginCoverage: coverage,
+      rows: inputs.manifest.cases.map(reportRow),
+      records: safeRecords,
+    });
+    await writeAtomic(reportPath, report);
+    process.stdout.write(JSON.stringify({
+      status: report.status,
+      tally: counts,
+      oracleStatusCounts: report.oracleStatusCounts,
+      knowledgeOriginCoverage: coverage.status,
+      directReadKnowledge: coverage.direct,
+      agentToolReadKnowledge: coverage.agentTool,
+      report: basename(reportPath),
+      progress: basename(progressPath),
+      database: target.database,
+      physicalPrinting: "NOT VERIFIED",
+      authenticatedUiActionConfirmation: "NOT RUN",
+    }) + "\n");
+  } finally {
+    await api.releaseLocalModel();
+    await api.fermerPool();
+  }
+}
+
+if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
+  try {
+    if (args.includes("--validate-only")) await validateOnly();
+    else await runCampaign();
+  } catch (error) {
+    const code = error instanceof Error && /^[A-Za-z][A-Za-z0-9_-]{0,80}$/u.test(error.message)
+      ? error.message : "AlexaV8AdversarialRunnerFailed";
+    process.stderr.write(`${code}\n`);
+    process.exitCode = 1;
+  }
+}

@@ -33,6 +33,7 @@ node_modules/
 .next/
 .next-live-check/
 dist/
+release/
 build/
 *.log
 npm-debug.log*

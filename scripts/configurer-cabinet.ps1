@@ -202,6 +202,18 @@ if ($Mode -eq 'Host') {
     foreach ($directory in @($private, (Join-Path $root 'logs'), (Join-Path $root 'data'), (Join-Path $root 'backups'))) { New-Item -ItemType Directory -Force -Path $directory | Out-Null; Set-ClinicAcl $directory $true }
     # Refaire les ACL explicites des fichiers existants, après validation préalable.
     foreach ($file in @(Get-ClinicTree $private)) { Set-ClinicAcl $file ([IO.Directory]::Exists($file)) }
+    # MISE À JOUR D'UN HÔTE EXISTANT : le dossier de ressources doit suivre
+    # l'installation. Sans cette réécriture, le service continuerait à exécuter
+    # le backend de l'ancienne version après un Setup — le pire des deux mondes.
+    if (Test-Path -LiteralPath $serverConfig) {
+        $existingServer = Get-Content -Raw -LiteralPath $serverConfig | ConvertFrom-Json
+        if ($existingServer.version -ne 1 -or $existingServer.origin -ne $originValue) {
+            throw 'Configuration serveur privée différente: faire vérifier le changement par l''administrateur. Aucun fichier n''a été remplacé.'
+        }
+        if ($existingServer.resourcesDir -ne $resources) {
+            Write-Utf8 $serverConfig (@{ version = 1; origin = $originValue; resourcesDir = $resources } | ConvertTo-Json)
+        }
+    }
     if (-not (Test-Path -LiteralPath $serverConfig)) {
         $certificate = $null
         $rsa = [Security.Cryptography.RSACng]::new(3072)

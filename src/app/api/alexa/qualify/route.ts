@@ -1,4 +1,4 @@
-import { identite } from "@/app/api/jarvis/_commun";
+import { identite, refusIaClinique } from "@/app/api/jarvis/_commun";
 import { getAlexaModelPolicy, qualifyAlexaModels } from "@/server/alexa/model-gateway";
 import { z } from "zod";
 
@@ -7,6 +7,8 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function POST(request: Request): Promise<Response> {
   if (!isSameOriginRequest(request)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   if (!(await identite())) return Response.json({ ok: false }, { status: 401 });
   const input: unknown = await request.json().catch(() => null);
   if (input !== null) {

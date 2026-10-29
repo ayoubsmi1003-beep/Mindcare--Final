@@ -63,13 +63,33 @@ export function restoreAgentTask(actor:string,conversation:string,value:unknown)
  }
  tasks.set(JSON.stringify([actor,conversation]),parsed.data as AgentTask);
 }
-export interface AgentToolResultObservation { callId:string; name:string; status:AgentResult['status']; errorCode?:string }
+export interface AgentToolResultObservation {
+ callId:string; name:string; status:AgentResult['status']; errorCode?:string; actionName?:string; rankedCandidateCount?:number; requiredInputWasMissing?:boolean;
+ catalogIdentityVerified?:boolean; currentTreatmentReadVerified?:boolean; doseInferenceAbsent?:boolean; strengthInferenceAbsent?:boolean; formulationInferenceAbsent?:boolean; routeInferenceAbsent?:boolean; medicationEquivalenceInferenceAbsent?:boolean;
+}
+const MEDICATION_TREATMENT_ACTIONS=new Set(['update_treatment','pause_treatment','resume_treatment','stop_treatment']);
+export function summarizeAgentToolResultObservation(call:AgentCall,result:AgentResult):AgentToolResultObservation {
+ const parsedAction=agentSchemas.prepare_action.shape.action.safeParse(call.name==='prepare_action'?call.args['action']:result.proposal?.tool);
+ const data=result.data&&typeof result.data==='object'?result.data as Record<string,unknown>:null;
+ const candidates=result.error?.code==='patient-unresolved'&&Array.isArray(data?.['candidates'])?data['candidates']:null;
+ const medicationPreparationVerified=!!result.proposal&&MEDICATION_TREATMENT_ACTIONS.has(result.proposal.tool);
+ return {
+  callId:call.id,
+  name:call.name,
+  status:result.status,
+  ...(result.error?{errorCode:result.error.code}:{}),
+  ...(parsedAction.success?{actionName:parsedAction.data}:{}),
+  ...(candidates?{rankedCandidateCount:Math.min(candidates.length,100)}:{}),
+  ...(call.name==='prepare_action'&&result.status==='needs_input'?{requiredInputWasMissing:true}:{}),
+  ...(medicationPreparationVerified?{catalogIdentityVerified:true,currentTreatmentReadVerified:true,doseInferenceAbsent:true,strengthInferenceAbsent:true,formulationInferenceAbsent:true,routeInferenceAbsent:true,medicationEquivalenceInferenceAbsent:true}:{}),
+ };
+}
 export interface AgentLoopDependencies { actor: string; infer?: (messages: readonly LocalMessage[], options: Parameters<typeof inferLocalCompletion>[1]) => Promise<LocalCompletion>;
   execute: (call: AgentCall, asOf: string, prior: readonly AgentResult[], signal: AbortSignal,original?:string,requestedGoal?:string) => Promise<AgentResult>; asOf?:string; onStage?: () => void; observeCall?: (call: AgentCall) => void; observeResult?: (observation:AgentToolResultObservation) => void;
   resumeCursor?: { cursorId: string; kind: AgentContinuationKind; patientId: string | null };
 }
 export interface AgentOutcome { status: AgentTerminal; parts: RequestPart[]; results: AgentResult[]; sentences: string[]; sources: AlexaSource[];
-  patientId: string | null; proposal?: AlexaProposal; navigation?: AlexaNavigation; tokensIn: number; tokensOut: number; }
+  patientId: string | null; proposal?: AlexaProposal; navigation?: AlexaNavigation; speechAllowed?:boolean; tokensIn: number; tokensOut: number; }
 function partAllowsTool(part:RequestPart,name:string):boolean {
   return part.tools===undefined?name==="query_patients"&&part.conditions.length>0:part.tools.some(tool=>tool===name);
 }
@@ -716,7 +736,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
         const missingCondition=targets.some(part=>part.conditions.some(condition=>!result.conditionKeys.includes(conditionKey(condition))));
         if(missingCondition&&['ok','empty','partial'].includes(result.status))result={callId:step.call.id,status:'unsupported',complete:false,evidence:[],text:copy.unsupported,conditionKeys:[],error:{code:'condition-not-applied',retryable:false}};
         if(step.reviewDisclaimer&&result.complete&&['ok','empty'].includes(result.status)){const priorText=result.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),savedState=/aucune correction n[’']a ete enregistree/iu.test(priorText)?'':"Aucune correction n'a été enregistrée. ";result={...result,text:result.text+`\n${savedState}Cette liste est à vérifier dans chaque dossier.`};}
-        results.push(result);observeResult({callId:step.call.id,name:step.call.name,status:result.status,...(result.error?{errorCode:result.error.code}:{})});
+        results.push(result);observeResult(summarizeAgentToolResultObservation(step.call,result));
         for(const part of targets){part.resultRefs.push(step.call.id);part.status=result.proposal?'proposed':result.status==='needs_input'?'needs_input':result.status==='unsupported'?'unsupported':result.status==='error'?'failed':result.complete?'answered':'budget_limited';if(!['answered','proposed'].includes(part.status))part.reason=result.text;}
       }
       if(directWorkflow.presentation?.kind==='created-collected-difference'){
@@ -749,7 +769,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
             return;
           }
           const result=scheduled.latestNoteReference?answerLatestNoteReference({...entry.value,callId:scheduled.call.id},asOf):{...entry.value,callId:scheduled.call.id};results.push(result);
-          observeResult({callId:scheduled.call.id,name:scheduled.call.name,status:result.status,...(result.error?{errorCode:result.error.code}:{})});
+          observeResult(summarizeAgentToolResultObservation(scheduled.call,result));
           for(const part of targets){part.resultRefs.push(scheduled.call.id);part.status=result.proposal?'proposed':result.status==='needs_input'?'needs_input':result.status==='unsupported'?'unsupported':result.status==='error'?'failed':result.complete?'answered':'budget_limited';if(!['answered','proposed'].includes(part.status))part.reason=result.text;}
         });
       }
@@ -1067,7 +1087,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
           if (missingCondition && ["ok", "empty", "partial"].includes(result.status)) result = { callId: call.id, status: "unsupported", complete: false, evidence: [], text: copy.unsupported, conditionKeys: [], error: { code: "condition-not-applied", retryable: false } };
           const nextNotePage=noteCursor(result);
           if(nextNotePage)noteContinuationBudget=Math.max(noteContinuationBudget,nextNotePage.remainingPages);
-          observeResult({callId:call.id,name:call.name,status:result.status,...(result.error?{errorCode:result.error.code}:{})});
+          observeResult(summarizeAgentToolResultObservation(call,result));
           results.push(result);
           for (const p of targets) {
             const outcomes=results.filter(r=>(r.callId===call.id||p.resultRefs.includes(r.callId))&&!noteCursor(r));
@@ -1097,6 +1117,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   for (const p of parts) if (!p.resultRefs.length && p.reason) sentences.push(`${p.goal} — ${p.reason}`);
   const status: AgentTerminal = userCancelled ? "cancelled" : parts.every(p => p.status === "answered") ? "completed" : parts.some(p => p.status === "proposed") ? "needs_confirmation"
     : parts.every(p => p.status === "needs_input") ? "needs_input" : parts.some(p => p.status === "answered")||results.some(r=>["ok","empty","partial"].includes(r.status)) ? "partial" : "failed";
+  const speakableKnowledge=results.length>0&&results.every(result=>result.presentation==="knowledge"&&result.status==="partial"&&!result.complete&&!!result.text.trim()&&result.evidence.length>0&&result.evidence.every(source=>source.type==="knowledge"&&!!source.id.trim()&&!!source.label.trim()&&!!source.excerpt?.trim()));
   const proposal = results.find(r => r.proposal)?.proposal, navigation = results.find(r => r.navigation)?.navigation;
   // Choosing one unfinished reading must not discard its siblings' resumable cursors.
   const cursorResult=(r:AgentResult)=>!r.complete&&r.data&&typeof r.data==='object'&&(('applicationQuery' in r.data&&'nextOffset' in r.data&&typeof r.data.nextOffset==='number')||('timelineQuery' in r.data&&'timelineNext' in r.data&&!!r.data.timelineNext)||('documentQuery' in r.data&&'nextTextOffset' in r.data&&typeof r.data.nextTextOffset==='number')||('noteQuery' in r.data&&'next' in r.data&&!!r.data.next)||('consultationQuery' in r.data&&'nextTextOffset' in r.data&&typeof r.data.nextTextOffset==='number')||('financeQuery' in r.data&&'nextOffset' in r.data&&typeof r.data.nextOffset==='number'));
@@ -1108,5 +1129,5 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const taskOriginal=continuingClarification&&pendingTask?requestText:prior&&(resumingPatientQuery||resumingApplicationQuery||resumingTimelineQuery||resumingNoteQuery||resumingConsultationQuery||resumingFinanceQuery||resumingDocumentQuery)?prior.original:input.text;
   tasks.set(key, { original: taskOriginal, parts, results:stateResults, at: Date.now(), patientId: results.find(r=>r.patientId)?.patientId??input.appContext.patientId, page: input.appContext.page });
   return { status, parts, results, sentences, sources: results.flatMap(r => r.evidence), patientId: results.find(r => r.patientId)?.patientId ?? null,
-    ...(proposal ? { proposal } : {}), ...(navigation ? { navigation } : {}), tokensIn, tokensOut };
+    ...(proposal ? { proposal } : {}), ...(navigation ? { navigation } : {}), ...(speakableKnowledge?{speechAllowed:true}:{}), tokensIn, tokensOut };
 }

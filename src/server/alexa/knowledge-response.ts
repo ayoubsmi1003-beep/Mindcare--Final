@@ -2,12 +2,28 @@ import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import type { SourceCitation } from "@/server/knowledge/pages";
+import { retirerMarqueursPageAffichage } from "@/server/knowledge/pages";
 import type { readKnowledge } from "./knowledge-adapter";
 import { localDisplay } from "./local-response";
 
 export type KnowledgeResult = Awaited<ReturnType<typeof readKnowledge>>;
 type SentenceEvent = Extract<AlexaEvent, { type: "sentence" }>;
 type Preuve = KnowledgeResult["preuves"][number];
+
+const approvedBookName = /\b(?:dsm\b|dsm[‐‑‒–—-]?\s*5(?:[‐‑‒–—-]?\s*tr)?|diagnostic and statistical manual of mental disorders|manuel diagnostique et statistique des troubles mentaux|maudsley|taylor|stahl|prescriber(?:['’])?s guide|essential psychopharmacology)\b/iu;
+const leadingBookAttribution = /^(?:(?:according to|as described in|selon|d['’]apres)\s+)?(?:(?:the|le|la)\s+)?(?:dsm[‐‑‒–—-]?\s*5(?:[‐‑‒–—-]?\s*tr)?|diagnostic and statistical manual of mental disorders|manuel diagnostique et statistique des troubles mentaux|(?:the\s+)?maudsley(?:\s+prescribing guidelines in psychiatry)?|taylor|(?:the\s+)?prescriber(?:['’])?s guide(?:\s*\(stahl['’]s essential psychopharmacology\))?|stahl(?:['’]s essential psychopharmacology)?|essential psychopharmacology)\s*[,;:]\s*/iu;
+
+/** Book identity stays in structured source metadata, never in spoken excerpts. */
+export function mentionsKnowledgeBookTitle(text: string): boolean {
+  return approvedBookName.test(text.normalize("NFKC"));
+}
+
+/** Keep a literal passage when only its opening book attribution needs removal. */
+export function knowledgeExcerptForSpeech(text: string): string | null {
+  const excerpt = retirerMarqueursPageAffichage(text).trim();
+  const withoutAttribution = excerpt.replace(leadingBookAttribution, "").trimStart();
+  return withoutAttribution && !mentionsKnowledgeBookTitle(withoutAttribution) ? withoutAttribution : null;
+}
 
 /**
  * L'étiquette d'une source : titre, section, puis ÉDITION VÉRIFIÉE quand elle
@@ -51,11 +67,16 @@ export function knowledgeResponseEvents(result: KnowledgeResult, language: Alexa
   const omissions = "omittedLongPassages" in result && result.omittedLongPassages ? [message(copy.longKnowledge)] : [];
   if (result.etat !== "ok") return [message(result.etat === "faible" ? copy.weakKnowledge
     : result.etat === "panne" ? copy.knowledgeUnavailable : copy.noKnowledge), ...omissions];
+  const speakableProofs = result.preuves.flatMap(proof => {
+    const excerpt = knowledgeExcerptForSpeech(proof.extrait);
+    return excerpt ? [{ proof, excerpt }] : [];
+  });
+  if (!speakableProofs.length) return [{ ...message(copy.noKnowledge), sources: result.preuves.map(proof => knowledgeSource(proof, identities)) }, ...omissions];
   return [
     ...(mixed ? [message(copy.separateKnowledge)] : []),
-    ...result.preuves.map((proof): SentenceEvent => ({ type: "sentence",
-      text: localDisplay(proof.extrait, identities), kind: "knowledge",
-      sources: [knowledgeSource(proof, identities)],
+    ...speakableProofs.map(({ proof, excerpt }): SentenceEvent => ({ type: "sentence",
+      text: localDisplay(excerpt, identities), kind: "knowledge",
+      sources: [{ ...knowledgeSource(proof, identities), excerpt }],
     })),
     ...omissions,
   ];

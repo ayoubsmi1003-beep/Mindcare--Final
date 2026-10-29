@@ -131,6 +131,77 @@ function changedTreatmentState(state:TreatmentSnapshot,fields:readonly (typeof t
   }).join(' ; ');
 }
 
+function minusculeInitiale(value: string): string {
+  return value === "" ? value : value.charAt(0).toLocaleLowerCase("fr") + value.slice(1);
+}
+
+function assemblerLignes(value: string | null | undefined): string {
+  const lignes = (value ?? "")
+    .replace(/\r\n?/gu, "\n")
+    .split("\n")
+    .map((ligne) => ligne.replace(/^[\s•·▪◦\-–—]+/u, "").trim())
+    .filter((ligne) => ligne !== "");
+  let texte = "";
+  for (const ligne of lignes) {
+    if (texte === "") {
+      texte = ligne;
+      continue;
+    }
+    texte += `${/[;.!?…]$/u.test(texte) ? " " : " ; "}${ligne}`;
+  }
+  return texte.replace(/\s{2,}/gu, " ").trim();
+}
+
+function premierGroupe(value: string | null | undefined, max = 380): string {
+  const text = assemblerLignes(value);
+  if (text === "") return "";
+  const first = text.split(/(?<=[.!?…])\s+/u)[0] ?? text;
+  const cut = first.length <= max ? first : `${first.slice(0, max).replace(/[;,:\s]+$/u, "")}…`;
+  return /[.!?…]$/u.test(cut) ? cut : `${cut}.`;
+}
+
+/** Builds one human-readable paragraph from recorded consultation fields. */
+function buildSeanceResume(
+  consultation: ClinicalConsultation,
+  scaleParagraph: string | null,
+  changes: readonly { readonly text: string; readonly resume?: string }[],
+): string {
+  const note = consultation.notes[0];
+  const parties: string[] = [];
+  const focus = [
+    ...(consultation.sessionDetails?.focus ?? []),
+    consultation.sessionDetails?.focusLibre ?? "",
+  ].map((entry) => entry.trim()).filter((entry) => entry !== "");
+  if (focus.length > 0) {
+    const themes = [...new Set(focus)].map((theme) => {
+      const bas = theme.toLocaleLowerCase("fr");
+      if (bas === "traitement") return "au traitement";
+      if (bas === "travail") return "au travail";
+      if (bas === "relations") return "aux relations";
+      if (bas === "événement récent") return "à l’événement récent";
+      return `à ${bas}`;
+    });
+    parties.push(`Séance consacrée ${themes.join(", ")}.`);
+  }
+
+  const subjective = premierGroupe(note?.subjective);
+  if (subjective !== "") parties.push(`La séance documente : ${minusculeInitiale(subjective)}`);
+  const objective = premierGroupe(note?.objective);
+  if (objective !== "") parties.push(`L’examen retrouve : ${minusculeInitiale(objective)}`);
+  const assessment = premierGroupe(note?.assessment);
+  if (assessment !== "") parties.push(`L’évaluation clinique retient : ${minusculeInitiale(assessment)}`);
+  if (scaleParagraph !== null && scaleParagraph.trim() !== "") parties.push(scaleParagraph.trim());
+  if (changes.length > 0) {
+    const changement = changes[changes.length - 1];
+    const dernier = changement?.resume ?? premierGroupe(changement?.text, 260);
+    if (dernier !== "") parties.push(`Un changement de traitement a été documenté : ${minusculeInitiale(dernier)}`);
+  }
+  const plan = premierGroupe(note?.plan);
+  if (plan !== "") parties.push(`La conduite retenue est : ${minusculeInitiale(plan)}`);
+
+  return parties.join(" ").replace(/\s{2,}/gu, " ").trim();
+}
+
 async function readSession(db: Pick<DbPort, "rpc">, consultationId: string, signal: AbortSignal): Promise<ClinicalConsultation> {
   signal.throwIfAborted();
   const r = await db.rpc("get_consultation", { p_id: consultationId });
@@ -191,11 +262,16 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   // Put historical context before the current visit, with explicit temporal scope.
   input.sources=[...comparison.map(s=>({...s,scope:'previous' as const})),...input.sources.map(s=>({...s,scope:'current' as const})),...trends.map(s=>({...s,scope:'change' as const})),...medications.map(s=>({...s,scope:'current' as const})),...changes.map(s=>({...s,scope:'change' as const}))];
   input.complete&&=context.treatments.historyComplete;
-  const narrative = input.sources.length === 0
+  let narrative = input.sources.length === 0
     ? { text: "", complete: true, generated: true as const, method: "structured" as const, sourceIds: [] as string[] }
     : await synthesizeClinicalNarrative(input.sources, signal);
   diagnostic('model-return',{generated:narrative.generated,complete:narrative.complete,method:narrative.method,words:narrative.text.trim().split(/\s+/u).length});
-  if (!narrative.generated || narrative.method==='source_selection') throw new SessionSummaryError("unavailable");
+  let structuredFallback = narrative.method === "structured";
+  if (!narrative.generated || narrative.method === "source_selection") {
+    if (buildSeanceResume(consultation, scaleData.paragraph, changes) === "") throw new SessionSummaryError("unavailable");
+    narrative = { text: "", complete: false, generated: true, method: "structured", sourceIds: [] };
+    structuredFallback = true;
+  }
   const digest = consultationNotesDigest(consultation);
   diagnostic('verify-notes');
   if (consultationNotesDigest(await readSession(db, consultationId, signal)) !== digest) throw new SessionSummaryError("changed");
@@ -205,23 +281,26 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   diagnostic('verify-context');
   if((await buildClinicalContext(db,{patientId},{count:1},signal)).sourceRevision!==context.sourceRevision)throw new SessionSummaryError('changed');
   const soap = consultation.notes[0];
-  const resume = [narrative.text.trim(), scaleData.paragraph ?? ""].filter((part) => part !== "").join("\n\n");
+  const resumeStructure = buildSeanceResume(consultation, scaleData.paragraph, changes);
+  const resume = resumeStructure !== ""
+    ? resumeStructure
+    : [narrative.text.trim(), scaleData.paragraph ?? ""].filter((part) => part !== "").join(" ").trim();
   const content = { resume, resumeNotes: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
     evaluations: scaleData.evaluations,
     noteStructuree: { subjective: soap?.subjective ?? "", objective: soap?.objective ?? "", assessment: soap?.assessment ?? "", plan: soap?.plan ?? "" }, evolution: [], pointsNonExplores: [] };
   diagnostic('persist');
   const saved = await db.rpc<{ id: string; version: number; content: unknown }>("save_session_analysis", {
     p_consultation_id: consultationId, p_content: JSON.stringify(content),
-    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,scale_digest:scaleDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete, scale_results: scaleData.evaluations.length }),
-    p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: NARRATIVE_HASH,
+    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,scale_digest:scaleDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete, scale_results: scaleData.evaluations.length, structured_fallback: structuredFallback }),
+    p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: structuredFallback ? createHash("sha256").update(`${NARRATIVE_HASH}:structured`).digest("hex") : NARRATIVE_HASH,
   });
   const row = saved.ok ? saved.data[0] : undefined;
   if (saved.ok && !row) throw new SessionSummaryError("changed");
   let persisted = false; let persistedResume = content.resume; let persistedComplete = content.complete; let persistedMethod: typeof content.method | undefined = content.method;
   if (row) {
-    const readback = await db.rpc<{ id: string; content: { notesDigest?: string; resume?: string; complete?: boolean; method?: "reformulated" | "extractive" | "source_selection" } }>("get_consultation_analysis", { p_consultation_id: consultationId });
+    const readback = await db.rpc<{ id: string; content: { notesDigest?: string; resume?: string; complete?: boolean; method?: "reformulated" | "extractive" | "source_selection" | "structured" } }>("get_consultation_analysis", { p_consultation_id: consultationId });
     const stored = readback.ok ? readback.data[0] : undefined;
-    if (stored?.id === row.id && stored.content.notesDigest === digest && typeof stored.content.resume === "string" && (stored.content.method==='reformulated'||stored.content.method==='extractive')) {
+    if (stored?.id === row.id && stored.content.notesDigest === digest && typeof stored.content.resume === "string" && (stored.content.method === "reformulated" || stored.content.method === "extractive" || stored.content.method === "structured")) {
       persisted = true; persistedResume = stored.content.resume; persistedComplete = stored.content.complete === true; persistedMethod = stored.content.method;
     }
   }

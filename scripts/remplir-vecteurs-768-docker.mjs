@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /**
- * remplir-vecteurs-768-docker — remplit l'espace 768 du cabinet SANS secret.
+ * remplir-vecteurs-768-docker — remplit l'espace 768 de l'évaluation synthétique V8.
  *
- *   node scripts/remplir-vecteurs-768-docker.mjs [--conteneur mc-p3] [--base mindcare]
+ *   node scripts/remplir-vecteurs-768-docker.mjs
+ *     [--conteneur mindcare-v8-intelligence-20261027]
+ *     [--base alexa_eval_v8_intelligence_20261027]
  *        [--limit 500] [--batch 48] [--dry-run]
  *
  * ═══ POURQUOI CE SCRIPT ═══
@@ -24,14 +26,16 @@
 import { execFileSync, spawn } from "node:child_process";
 import { join } from "node:path";
 import { chargerEmbeddeur, vecteurPg } from "./lib/embedding-livre.mjs";
+import { requireV8Migration194, resolveV8SyntheticDockerTarget } from "./lib/alexa-v8-manifest.mjs";
 
 const args = process.argv.slice(2);
 const opt = (nom, defaut) => {
   const i = args.indexOf(nom);
   return i >= 0 && args[i + 1] !== undefined && !args[i + 1].startsWith("--") ? args[i + 1] : defaut;
 };
-const CONTENEUR = opt("--conteneur", "mc-p3");
-const BASE = opt("--base", "mindcare");
+const TARGET = resolveV8SyntheticDockerTarget(opt("--conteneur"), opt("--base"));
+const CONTENEUR = TARGET.container;
+const BASE = TARGET.database;
 const SLUG = opt("--slug", "e5-base");
 const MODELE = opt("--modele", "intfloat/multilingual-e5-base");
 const VERSION = opt("--version", "d128750597153bb5987e10b1c3493a34e5a4502a");
@@ -52,10 +56,26 @@ function psql(sql) {
   ).toString("utf8");
 }
 
+const databaseConnected = psql("SELECT current_database();").trim();
+if (databaseConnected !== BASE) throw new Error("Connected database does not match the verified V8 synthetic target.");
+const migration194Applied = psql("SELECT EXISTS (SELECT 1 FROM app.schema_migrations WHERE version = '194_alexa_consultation_scale_read');").trim() === "t";
+requireV8Migration194(migration194Applied);
+
+/**
+ * Perimetre des livres qualifies pour Alexa (ADR-041), EXPLICITE.
+ *
+ * Le 2026-10-27, un filtre code sur deux titres avait laisse Stahl hors de
+ * l'index 768 alors que la source etait deja active et approuvee. La liste
+ * reste fermee : toute extension est une decision humaine, jamais un `LIKE '%'`.
+ * Les quotes SQL sont doublees (`''`) : le titre Stahl contient une apostrophe.
+ */
+const TITRES_QUALIFIES = ["DSM-5%", "The Maudsley%", "Prescriber''s Guide%"];
+const PERIMETRE_LIVRES = TITRES_QUALIFIES.map((titre) => `s.titre LIKE '${titre}'`).join(" OR ");
+
 const autorite = `s.classification = 'C4' AND s.statut = 'active'
   AND s.approved_at IS NOT NULL AND s.approved_by IS NOT NULL
   AND (s.review_due_at IS NULL OR s.review_due_at > now()) AND s.superseded_by IS NULL
-  AND c.statut = 'active' AND (s.titre LIKE 'DSM-5%' OR s.titre LIKE 'The Maudsley%')`;
+  AND c.statut = 'active' AND (${PERIMETRE_LIVRES})`;
 
 const attendus = Number(psql(`SELECT count(*) FROM app.knowledge_chunks c
   JOIN app.knowledge_sources s ON s.id = c.source_id WHERE ${autorite};`).trim());
@@ -72,9 +92,9 @@ const restants = (() => {
   return csv.split(/\r?\n/).map((l) => l.replace(/^"|"$/gu, "")).filter((l) => l !== "");
 })();
 
-console.log(JSON.stringify({ etape: "inventaire", attendus, deja, restants: restants.length, modele: MODELE, version: VERSION.slice(0, 12) }));
+console.log(JSON.stringify({ etape: "inventaire", conteneur: CONTENEUR, base: databaseConnected, migrationGate: 194, attendus, deja, restants: restants.length, modele: MODELE, version: VERSION.slice(0, 12) }));
 if (DRY) process.exit(0);
-if (restants.length === 0) { console.log(JSON.stringify({ ok: true, deja, restants: 0 })); process.exit(0); }
+if (restants.length === 0) { console.log(JSON.stringify({ ok: true, conteneur: CONTENEUR, base: databaseConnected, migrationGate: 194, deja, restants: 0 })); process.exit(0); }
 
 const cibles = LIMITE > 0 ? restants.slice(0, LIMITE) : restants;
 const { embed, dimensions } = await chargerEmbeddeur({ dossier: DOSSIER, slug: SLUG, maxTokens: 128, threads: 2 });
@@ -125,5 +145,5 @@ const controle = JSON.parse(psql(`SELECT json_build_object(
 
 const ok = controle.mauvaises_dimensions === 0 && controle.chunks_inactifs === 0 && controle.hors_perimetre === 0
   && controle.presents >= Math.min(attendus, deja + ecrits);
-console.log(JSON.stringify({ ok, attendus, deja, ecrits, ...controle, duree_s: Math.round((performance.now() - debut) / 1000) }, null, 1));
+console.log(JSON.stringify({ ok, conteneur: CONTENEUR, base: databaseConnected, migrationGate: 194, attendus, deja, ecrits, ...controle, duree_s: Math.round((performance.now() - debut) / 1000) }, null, 1));
 process.exit(ok ? 0 : 1);

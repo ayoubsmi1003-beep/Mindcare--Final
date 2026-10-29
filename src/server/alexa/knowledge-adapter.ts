@@ -73,16 +73,14 @@ const PORTES_PARALLELES = 4;
 // hybride) pour laisser de la marge au filtre d'autorité post-KNN.
 const CANDIDATS_VECTORIELS = 24;
 
-/**
- * Plancher de similarité cosinus pour un voisin PUREMENT dense de l'espace
- * secondaire (e5-base, 768d). Il ne juge pas la pertinence clinique : il écarte
- * les voisins qui ne sont proches que par la forme. Mesuré sur le golden réel
- * (2026-10-27) : questions hors sujet 0,807–0,819 ; questions cliniques
- * 0,841–0,906 — sauf une question clinique à 0,822, dont la preuve reste
- * trouvée par la branche lexicale. Sans ce plancher, l'abstention tombait de
- * 100 % à 0 % (deux questions non cliniques recevaient une « preuve »).
- */
-const SEUIL_SIMILARITE_DENSE = 0.83;
+/** Planchers évalués par espace exact ; une recette absente de cette carte abstient. */
+const SEUILS_SIMILARITE_DENSES = new Map<string, number>([
+  ["intfloat/multilingual-e5-base|d128750597153bb5987e10b1c3493a34e5a4502a|768", 0.83],
+]);
+
+function seuilSimilariteDense(secondaire: NonNullable<DependancesReadKnowledge["vectorielSecondaire"]>): number | undefined {
+  return SEUILS_SIMILARITE_DENSES.get(`${secondaire.modele}|${secondaire.version}|${secondaire.dimensions}`);
+}
 
 /** Normalisation de comparaison (accents, casse, espaces) — jamais affichée. */
 const normaliserTexte = (valeur: string): string =>
@@ -173,6 +171,66 @@ interface OptionsReadKnowledge {
    * Le focus de diagnostic, lui, n'est JAMAIS relâché.
    */
   readonly relaxerFeuille?: boolean;
+  /** Internal path label for opt-in, content-free local evaluation diagnostics. */
+  readonly traceOrigin?: "direct" | "agent_tool" | "patient_context";
+}
+
+type TraceEtatVecteur = "not-enabled" | "pending" | "ok" | "failed" | "not-calibrated" | "missing-provider";
+
+interface TraceExecutionKnowledge {
+  readonly origin: OptionsReadKnowledge["traceOrigin"] | "unknown";
+  readonly recipe: string;
+  readonly configuredRecipe: string;
+  readonly model: { readonly embedding: string | null; readonly embeddingVersion: string | null;
+    readonly dimensions: number | null; readonly reranker: string | null; readonly rerankerVersion: string | null };
+  readonly lexical: { readonly gate: "search_knowledge_lexical"; calls: number; rows: number };
+  readonly embedding: { invoked: boolean; status: TraceEtatVecteur; outputDimensions: number | null };
+  readonly vector: { invoked: boolean; gate: string | null; rows: number; status: TraceEtatVecteur };
+  readonly reranker: { readonly mode: "cross-encoder" | "heuristic-baseline"; invocations: number; fallback: boolean };
+  readonly evidence: { selected: number; pages: number };
+  readonly fallbacks: string[];
+  result: "ok" | "faible" | "sans-preuve" | "panne" | "aborted" | "unknown";
+  readonly startedAtMs: number;
+}
+
+function traceRecipe(deps: DependancesReadKnowledge): string {
+  if (!deps.vectorActif) return "lexical-only";
+  const secondary = deps.vectorielSecondaire;
+  if (secondary) {
+    for (const slug of ["e5-small", "e5-base"] as const) {
+      const pinned = recetteSecondaireGelee(slug);
+      if (pinned?.modele === secondary.modele && pinned.version === secondary.version
+        && pinned.dimensions === secondary.dimensions) return slug;
+    }
+    return "unapproved-secondary";
+  }
+  return "primary-bge-m3";
+}
+
+function traceConfiguration(deps: DependancesReadKnowledge): TraceExecutionKnowledge["model"] & { configuredRecipe: string } {
+  const requestedRecipe = process.env["KNOWLEDGE_VECTOR_RECETTE"]?.trim() || "e5-small";
+  const pinnedSecondary = recetteSecondaireGelee(requestedRecipe);
+  const secondary = deps.vectorielSecondaire;
+  const primaryActive = deps.vectorActif && secondary === undefined;
+  const embedding = secondary?.modele ?? (primaryActive ? "BAAI/bge-m3" : null);
+  const embeddingVersion = secondary?.version ?? (primaryActive ? "5617a9f61b028005a4858fdac845db406aefb181" : null);
+  const dimensions = secondary?.dimensions ?? (primaryActive ? 1024 : null);
+  return {
+    configuredRecipe: pinnedSecondary ? requestedRecipe : "unapproved",
+    embedding,
+    embeddingVersion,
+    dimensions,
+    reranker: deps.rerankerLocal?.nom ?? null,
+    rerankerVersion: deps.rerankerLocal?.version ?? null,
+  };
+}
+
+function emitKnowledgeTrace(trace: TraceExecutionKnowledge): void {
+  if (process.env["ALEXA_LOCAL_TIMINGS"] !== "1") return;
+  const { startedAtMs, ...safe } = trace;
+  try {
+    console.info("[alexa-knowledge-execution]", JSON.stringify({ ...safe, durationMs: Math.max(0, Date.now() - startedAtMs) }));
+  } catch { /* Diagnostics must never change retrieval behavior. */ }
 }
 
 /** Retire la feuille de section en conservant le focus et toutes les autres contraintes. */
@@ -213,23 +271,76 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
   deps: DependancesReadKnowledge = dependancesReadKnowledge(),
   options: OptionsReadKnowledge = {}) {
   signal?.throwIfAborted();
+  const configuration = traceConfiguration(deps);
+  const { configuredRecipe, ...model } = configuration;
+  const trace: TraceExecutionKnowledge = {
+    origin: options.traceOrigin ?? "unknown",
+    recipe: traceRecipe(deps),
+    configuredRecipe,
+    model,
+    lexical: { gate: "search_knowledge_lexical", calls: 0, rows: 0 },
+    embedding: { invoked: false, status: deps.vectorActif ? "pending" : "not-enabled", outputDimensions: null },
+    vector: { invoked: false, gate: null, rows: 0, status: deps.vectorActif ? "pending" : "not-enabled" },
+    reranker: { mode: deps.rerankerLocal ? "cross-encoder" : "heuristic-baseline", invocations: 0, fallback: false },
+    evidence: { selected: 0, pages: 0 },
+    fallbacks: [],
+    result: "unknown",
+    startedAtMs: Date.now(),
+  };
+  const rerankerLocal = deps.rerankerLocal;
+  const rerankerTrace: RerankerLocalAsync | undefined = rerankerLocal === undefined ? undefined : {
+    nom: rerankerLocal.nom,
+    version: rerankerLocal.version,
+    reranker: (...args) => {
+      trace.reranker.invocations += 1;
+      return rerankerLocal.reranker(...args);
+    },
+    rerankerAsync: async (...args) => {
+      trace.reranker.invocations += 1;
+      return rerankerLocal.rerankerAsync(...args);
+    },
+  };
   try {
     const brut = planKnowledgeQuery(question);
     const plan = options.relaxerFeuille === true ? sansFeuille(brut) : brut;
-    if (plan === null) return { etat: "sans-preuve" as const, preuves: [] };
+    if (plan === null) {
+      trace.result = "sans-preuve";
+      trace.fallbacks.push("query-unplanned");
+      return { etat: "sans-preuve" as const, preuves: [] };
+    }
     // L'embedding de la question (coûteux) démarre avec les portes lexicales,
     // pas après elles : l'inférence et les lectures SQL se recouvrent.
-    const vecteurEnCours: Promise<readonly number[] | null> = deps.vectorActif === true && deps.vecteurRequete !== undefined
-      ? deps.vecteurRequete(question).catch(() => null)
-      : Promise.resolve(null);
+    let vecteurEnCours: Promise<readonly number[] | null> = Promise.resolve(null);
+    if (deps.vectorActif === true && deps.vecteurRequete !== undefined) {
+      trace.embedding.invoked = true;
+      trace.embedding.status = "pending";
+      vecteurEnCours = deps.vecteurRequete(question).then(vecteur => {
+        trace.embedding.status = vecteur === null ? "failed" : "ok";
+        trace.embedding.outputDimensions = vecteur?.length ?? null;
+        return vecteur;
+      }).catch(() => {
+        trace.embedding.status = "failed";
+        return null;
+      });
+    } else if (deps.vectorActif === true) {
+      trace.embedding.status = "missing-provider";
+    }
     // Les reformulations planifiées sont indépendantes : quatre portes au plus
     // en parallèle, résultats remis DANS L'ORDRE du plan (voir `parallele.ts`).
-    const resultats = await mapLimite(plan.queries, PORTES_PARALLELES, async (query) =>
-      client.rpc<unknown[]>("search_knowledge_lexical", porteLexicale(query, plan.language, LIMITES.LEXICAL).args));
+    const resultats = await mapLimite(plan.queries, PORTES_PARALLELES, async (query) => {
+      trace.lexical.calls += 1;
+      const result = await client.rpc<unknown[]>("search_knowledge_lexical", porteLexicale(query, plan.language, LIMITES.LEXICAL).args);
+      if (!result.error && Array.isArray(result.data)) trace.lexical.rows += result.data.length;
+      return result;
+    });
     signal?.throwIfAborted();
     const batches: unknown[][] = [];
     for (const result of resultats) {
-      if (result.error || !Array.isArray(result.data)) return { etat: "panne" as const, preuves: [] };
+      if (result.error || !Array.isArray(result.data)) {
+        trace.result = "panne";
+        trace.fallbacks.push("lexical-gate-failed");
+        return { etat: "panne" as const, preuves: [] };
+      }
       batches.push(result.data.filter(row => matchesRequestedBook(row, plan)));
     }
     // A prefix can remove a dose qualifier or negation. Keep whole bounded chunks,
@@ -262,14 +373,22 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // jamais en prétendant que la recherche sémantique a réussi.
     const vecteur = await vecteurEnCours;
     let lignesVectorielles: unknown[] = [];
-    let vectorielIndisponible = false;
+    let vectorielIndisponible = false,vectorielNonCalibre = false;
     if (deps.vectorActif === true) {
-      if (vecteur === null) vectorielIndisponible = true;
+      if (vecteur === null) {
+        vectorielIndisponible = true;
+        trace.vector.status = "failed";
+        trace.fallbacks.push("embedding-unavailable");
+      }
       else {
         const secondaire = deps.vectorielSecondaire;
         // Trois sites d'appel LITTÉRAUX : le générateur d'allowlist refuse les
         // noms calculés, et chaque porte doit rester vérifiable par pré-vol.
         // La dimension CHOISIT l'espace (768 → v2_768) ; elle ne le calcule pas.
+        const gateName = secondaire === undefined ? "search_knowledge_vector"
+          : secondaire.dimensions === 768 ? "search_knowledge_vector_v2_768" : "search_knowledge_vector_v2";
+        trace.vector.invoked = true;
+        trace.vector.gate = gateName;
         const gate = secondaire === undefined
           ? await client.rpc<unknown[]>("search_knowledge_vector",
               porteVectorielle(JSON.stringify([...vecteur]), LIMITES.VECTORIEL).args)
@@ -279,19 +398,24 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
             : await client.rpc<unknown[]>("search_knowledge_vector_v2",
                 porteVectorielleV2(JSON.stringify([...vecteur]), secondaire.modele, secondaire.version, CANDIDATS_VECTORIELS).args);
         signal?.throwIfAborted();
-        if (gate.error || !Array.isArray(gate.data)) vectorielIndisponible = true;
+        if (gate.error || !Array.isArray(gate.data)) {
+          vectorielIndisponible = true;
+          trace.vector.status = "failed";
+          trace.fallbacks.push("vector-gate-failed");
+        }
         else {
-          // PLANCHER DE SIMILARITÉ (espace secondaire seulement). Un rang dense
-          // ne dit pas si le voisin est PERTINENT : le 1er voisin d'une question
-          // hors sujet reste le 1er. Mesuré sur golden réel : les questions non
-          // cliniques (prix, menu) atteignent 0,807–0,819 de cosinus, les
-          // questions cliniques 0,822+ — sans plancher, la recherche dense
-          // répondait à des questions sans réponse (abstention 100 % → 0 %).
-          // Le plancher est propre au modèle épinglé (cosinus e5-base), jamais
-          // appliqué à l'index BGE-M3 dont l'échelle diffère.
-          const plancher = secondaire === undefined ? null : SEUIL_SIMILARITE_DENSE;
-          for (const candidate of gate.data.filter(row => matchesRequestedBook(row, plan))) {
-            if (plancher !== null) {
+          trace.vector.rows = gate.data.length;
+          trace.vector.status = "ok";
+          // Un plancher ne s'applique qu'au triplet exact qui a été mesuré.
+          // Une autre recette reste en lexical seul jusqu'à sa propre calibration.
+          const plancher = secondaire === undefined ? null : seuilSimilariteDense(secondaire);
+          if (secondaire !== undefined && plancher === undefined) {
+            vectorielNonCalibre = true;
+            trace.vector.status = "not-calibrated";
+            trace.fallbacks.push("vector-recipe-not-calibrated");
+          }
+          else for (const candidate of gate.data.filter(row => matchesRequestedBook(row, plan))) {
+            if (plancher !== null && plancher !== undefined) {
               const score = Number((candidate as { score?: unknown }).score);
               if (!Number.isFinite(score) || score < plancher) continue;
             }
@@ -358,8 +482,12 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         toutesLignes.push(ligne);
       }
       const search = await orchestrerRecherche(question, toutesLignes, [],
-        deps.rerankerLocal, CALIBRATION_A3, "rang", LIMITES.FINAL);
-      if (search.repliReranker) repliReranker = true;
+        rerankerTrace, CALIBRATION_A3, "rang", LIMITES.FINAL);
+      if (search.repliReranker) {
+        repliReranker = true;
+        trace.reranker.fallback = true;
+        if (!trace.fallbacks.includes("reranker-fallback")) trace.fallbacks.push("reranker-fallback");
+      }
       signal?.throwIfAborted();
       parLot.push([...search.evidences]);
     } else {
@@ -368,9 +496,13 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         // Chaque lot rend jusqu'à FUSION : la refinalisation à FINAL a lieu UNE
         // fois, globalement, pour ne pas couper un bon candidat dans son lot.
         const search = await orchestrerRecherche(lot.reference, lot.lignes, vectorielsDuLot,
-          deps.rerankerLocal, CALIBRATION_A3,
+          rerankerTrace, CALIBRATION_A3,
           vectorielsDuLot.length > 0 ? "rang" : "score", LIMITES.FUSION, false);
-        if (search.repliReranker) repliReranker = true;
+        if (search.repliReranker) {
+          repliReranker = true;
+          trace.reranker.fallback = true;
+          if (!trace.fallbacks.includes("reranker-fallback")) trace.fallbacks.push("reranker-fallback");
+        }
         signal?.throwIfAborted();
         parLot.push([...search.evidences]);
       }
@@ -484,19 +616,38 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // chunk trop long), on rejoue UNE fois sans la feuille. Le focus de
     // diagnostic reste, donc aucun autre trouble ne peut être substitué.
     if (finales.length === 0 && plan.sectionLeaf !== undefined && options.relaxerFeuille !== true) {
-      return readKnowledge(client, question, signal, deps, { relaxerFeuille: true });
+      trace.result = "sans-preuve";
+      trace.fallbacks.push("section-leaf-retry");
+      return readKnowledge(client, question, signal, deps, { ...options, relaxerFeuille: true });
     }
     const result = { etat: finales.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
       ...(plan.sectionFocuses?.some(focus=>!finales.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
+      ...(!vectorielIndisponible && vectorielNonCalibre ? { vectoriel: "non-calibre" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),
       ...(options.relaxerFeuille === true ? { sectionLeafRelaxed: true as const } : {}),
       preuves: finales.map(p => preuveAffichable(p)) };
+    if (omittedLongPassages) trace.fallbacks.push("oversized-evidence-omitted");
+    if (options.relaxerFeuille === true) trace.fallbacks.push("section-leaf-relaxed");
+    trace.evidence.selected = result.preuves.length;
+    trace.evidence.pages = result.preuves.filter(proof => proof.page !== undefined).length;
+    trace.result = result.etat;
     for (const proof of result.preuves) Object.freeze(proof);
     Object.freeze(result.preuves);
     Object.freeze(result);
     issuedKnowledgeResults.add(result);
     return result;
-  } catch { signal?.throwIfAborted(); return { etat: "panne" as const, preuves: [] }; }
+  } catch {
+    if (signal?.aborted) {
+      trace.result = "aborted";
+      trace.fallbacks.push("aborted");
+      signal.throwIfAborted();
+    }
+    trace.result = "panne";
+    trace.fallbacks.push("adapter-error");
+    return { etat: "panne" as const, preuves: [] };
+  } finally {
+    emitKnowledgeTrace(trace);
+  }
 }

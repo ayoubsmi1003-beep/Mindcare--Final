@@ -118,11 +118,15 @@ describe("libellés du poste de travail", () => {
     expect(messages.invitationComputerName).toContain("{nom}");
   });
 
-  it("ne promet pas DPAPI pour le jeton de poste", () => {
-    // La documentation a déjà menti une fois sur ce point (voir
-    // docs/deploiement-cabinet.md). Un test coûte moins cher qu'une fausse
-    // garantie de sécurité affichée à une praticienne.
+  it("décrit le scellement DPAPI réellement implémenté, sans le promettre à la légère", () => {
+    // La documentation a déjà menti une fois sur ce point. Le test vérifie
+    // maintenant les deux côtés : la phrase de la documentation ET le fait que
+    // le code passe par le module de scellement, jamais par un JSON en clair.
     const doc = readFileSync(path.resolve(process.cwd(), "docs", "deploiement-cabinet.md"), "utf8");
-    expect(doc).not.toMatch(/conservé chiffré par Windows \(DPAPI\)/i);
+    expect(doc).toMatch(/scellé par DPAPI de portée utilisateur/i);
+    const source = readFileSync(path.resolve(process.cwd(), "electron", "main", "bureau-cabinet.ts"), "utf8");
+    expect(source).toContain("ecrireConfianceStockee");
+    expect(source).toContain("lireConfianceStockee");
+    expect(source).not.toContain("JSON.stringify(paired)");
   });
 });

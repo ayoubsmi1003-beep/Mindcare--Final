@@ -8,7 +8,7 @@ import { lireCorpsVoix } from "@/server/voice/corps";
 import { CommandeLive, type EvenementLive } from "@/shared/jarvis/live";
 import { alexaLive } from "@/i18n/alexa-live";
 import { alexa } from "@/i18n/alexa";
-import { identite, echec, succes } from "../_commun";
+import { identite, echec, refusIaClinique, succes } from "../_commun";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -22,6 +22,8 @@ const sessions = new Map<string, Session>();
 const unavailable = () => echec("configuration", alexaLive.indisponible);
 
 export async function GET(): Promise<Response> {
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   if (await identite() === null) return unavailable();
   return Response.json({ ok: true, data: { status: "retired", provider: "local", cloudEnabled: false,
     replacement: "/api/alexa/turn" } },
@@ -29,6 +31,8 @@ export async function GET(): Promise<Response> {
 }
 
 export async function POST(req: Request): Promise<Response> {
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   const actor = await identite();
   if (!actor) return echec("non-authentifie", alexaLive.indisponible);
   if (!geminiLiveAutorise()) return echec("voix-cloud-retiree", alexa.frontiere);

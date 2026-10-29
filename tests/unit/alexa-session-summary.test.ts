@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from "vitest";
 vi.mock("@/server/alexa/clinical-narrative", async original => ({ ...await original<object>(), synthesizeClinicalNarrative: vi.fn() }));
-import { synthesizeClinicalNarrative } from "@/server/alexa/clinical-narrative";
+import { NARRATIVE_VERSION, synthesizeClinicalNarrative } from "@/server/alexa/clinical-narrative";
 import { generateSessionSummary } from "@/server/alexa/session-summary";
 import type { DbPort, RpcArgs } from "@/services/db/port";
 const consultationId="a4000000-0000-4000-8000-000000000001",patientId="a3000000-0000-4000-8000-000000000001",noteId="a5000000-0000-4000-8000-000000000001",analysisId="b3000000-0000-4000-8000-000000000001";
@@ -39,7 +39,7 @@ function fixture(options:{changed?:boolean;denied?:boolean;failedSave?:boolean;e
   return {ok:true,data:data as readonly T[]};
  };const db:Pick<DbPort,"rpc">={rpc};return {db,calls};
 }
-it("analyses SOAP-only sessions, saves one derived artifact and reads it back without rewriting notes",async()=>{const f=fixture(),r=await generateSessionSummary(f.db,consultationId,new AbortController().signal);expect(r.resume).toContain("parents");expect(r.persistee).toBe(true);expect(r.noteStructuree.plan).toBe(row.plan);expect(f.calls.filter(c=>c.name==='save_session_analysis')).toHaveLength(1);expect(f.calls.at(-1)?.name).toBe('get_consultation_analysis');expect(f.calls.some(c=>/save_note|save_raw_notes|sign_note/.test(c.name))).toBe(false);expect(JSON.parse(String(f.calls.find(c=>c.name==='save_session_analysis')?.args.p_source_state)).note_areas).toBe(5);});
+it("analyses SOAP-only sessions as one readable paragraph, saves one derived artifact and reads it back without rewriting notes",async()=>{const f=fixture(),r=await generateSessionSummary(f.db,consultationId,new AbortController().signal);expect(r.resume).toContain("parents");expect(r.resume).not.toMatch(/\n|^\s*[-*•]\s/mu);expect(r.resume.trim()).toMatch(/[.!?]$/u);expect(r.persistee).toBe(true);expect(r.noteStructuree.plan).toBe(row.plan);expect(f.calls.filter(c=>c.name==='save_session_analysis')).toHaveLength(1);expect(f.calls.at(-1)?.name).toBe('get_consultation_analysis');expect(f.calls.some(c=>/save_note|save_raw_notes|sign_note/.test(c.name))).toBe(false);expect(JSON.parse(String(f.calls.find(c=>c.name==='save_session_analysis')?.args.p_source_state)).note_areas).toBe(5);});
 it('passes the actual previous consultation as comparison evidence',async()=>{
  const f=fixture({previous:true});await generateSessionSummary(f.db,consultationId,new AbortController().signal);
  expect(vi.mocked(synthesizeClinicalNarrative).mock.calls[0]?.[0].some(s=>s.text.includes('Réveils nocturnes'))).toBe(true);
@@ -71,6 +71,10 @@ it('reads and summarizes every scale linked to the exact consultation',async()=>
  expect(result.resume).toContain('PHQ-9 16/27 (modérément sévère)');
  expect(result.resume).toContain('GAD-7 12/21 (modéré)');
  expect(result.resume).toMatch(/pensées de mort/iu);
+ expect(result.resume).not.toMatch(/\n|^\s*[-*•]\s/mu);
+ expect(result.resume.trim()).toMatch(/[.!?]$/u);
+ expect(NARRATIVE_VERSION).toBe('alexa-narrative-fr-v33');
+ expect(f.calls.find(call=>call.name==='save_session_analysis')?.args.p_prompt_version).toBe('alexa-narrative-fr-v33');
 });
 it('does not save a consultation summary when its scale read is unavailable',async()=>{
  const f=fixture({scaleReadUnavailable:true});
@@ -90,10 +94,17 @@ it('does not persist a consultation summary if a scale definition changes during
  expect(f.calls.some(call=>call.name==='save_session_analysis')).toBe(false);
 });
 it("stops before inference on an unauthorized patient",async()=>{const f=fixture({denied:true});await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:"unavailable"});expect(synthesizeClinicalNarrative).not.toHaveBeenCalled();});
-it('does not persist a source selection in place of the requested reformulated paragraph',async()=>{
+it('persists a factual structured paragraph instead of a source selection',async()=>{
  vi.mocked(synthesizeClinicalNarrative).mockResolvedValue({text:'Faits cités du dossier.',complete:true,generated:true,method:'source_selection',sourceIds:[]});
- const f=fixture();await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'unavailable'});
- expect(f.calls.some(call=>call.name==='save_session_analysis')).toBe(false);
+ const f=fixture(),result=await generateSessionSummary(f.db,consultationId,new AbortController().signal);
+ expect(result).toMatchObject({method:'structured',persistee:true});
+ expect(result.resume).toContain('La séance documente : difficultés avec les parents.');
+ expect(result.resume).toContain('L’examen retrouve : contact préservé.');
+ expect(result.resume).toContain('La conduite retenue est : revoir la situation familiale.');
+ expect(result.resume).not.toMatch(/\n|^\s*[-*•]\s/mu);
+ expect(result.resume.trim()).toMatch(/[.!?]$/u);
+ expect(JSON.parse(String(f.calls.find(call=>call.name==='save_session_analysis')?.args.p_source_state)).structured_fallback).toBe(true);
+ expect(f.calls.filter(call=>call.name==='save_session_analysis')).toHaveLength(1);
 });
 it('persists and reads back a transparent model-selected extractive paragraph',async()=>{
  vi.mocked(synthesizeClinicalNarrative).mockResolvedValue({text:'Le patient rapporte une humeur triste. Le suivi reste prévu.',complete:true,generated:true,method:'extractive',sourceIds:['note','plan']});
@@ -103,4 +114,15 @@ it('persists and reads back a transparent model-selected extractive paragraph',a
 });
 it("does not persist a summary after any of the five notes changes during inference",async()=>{const f=fixture({changed:true});await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:"changed"});expect(f.calls.some(c=>c.name==='save_session_analysis')).toBe(false);});
 it("keeps an honestly unpersisted paragraph when derived storage fails",async()=>{const f=fixture({failedSave:true});const r=await generateSessionSummary(f.db,consultationId,new AbortController().signal);expect(r.persistee).toBe(false);expect(r.analyseId).toBeNull();expect(r.resume).toContain('humeur');});
-it("never invents an analysis for empty notes or a failed local reformulation",async()=>{const f=fixture({empty:true});await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'empty'});vi.mocked(synthesizeClinicalNarrative).mockResolvedValue({text:'fallback',complete:false,generated:false,sourceIds:[]});const other=fixture();await expect(generateSessionSummary(other.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'unavailable'});expect(other.calls.some(c=>c.name==='save_session_analysis')).toBe(false);});
+it("does not invent a summary for empty notes and summarizes recorded fields when local reformulation fails",async()=>{
+ const f=fixture({empty:true});
+ await expect(generateSessionSummary(f.db,consultationId,new AbortController().signal)).rejects.toMatchObject({code:'empty'});
+ expect(f.calls.some(c=>c.name==='save_session_analysis')).toBe(false);
+ vi.mocked(synthesizeClinicalNarrative).mockResolvedValue({text:'fallback',complete:false,generated:false,sourceIds:[]});
+ const other=fixture(),result=await generateSessionSummary(other.db,consultationId,new AbortController().signal);
+ expect(result).toMatchObject({method:'structured',persistee:true});
+ expect(result.resume).toContain('difficultés avec les parents.');
+ expect(result.resume).not.toContain('fallback');
+ expect(result.resume).not.toMatch(/\n|^\s*[-*•]\s/mu);
+ expect(other.calls.filter(c=>c.name==='save_session_analysis')).toHaveLength(1);
+});

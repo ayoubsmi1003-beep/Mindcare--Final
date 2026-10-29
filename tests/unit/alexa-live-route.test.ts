@@ -7,6 +7,7 @@ vi.mock("next/headers", () => ({ cookies: async () => { controls.cookie(); retur
 vi.mock("@/server/auth/session", () => ({ NOM_COOKIE: "session" }));
 vi.mock("@/app/api/jarvis/_commun", () => ({
   identite: async () => controls.actor || null,
+  refusIaClinique: async () => null,
   echec: (code: string, message: string) => Response.json({ ok: false, error: { code, message } }),
   succes: (data: unknown) => Response.json({ ok: true, data }),
 }));

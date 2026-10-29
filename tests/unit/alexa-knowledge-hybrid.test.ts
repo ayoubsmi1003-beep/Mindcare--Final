@@ -170,7 +170,7 @@ describe("readKnowledge : jambe vectorielle explicite et dégradation nommée", 
     expect(result).toMatchObject({ reranker: "repli" });
   });
 
-  it("choisit la porte SECONDAIRE quand le couple modele/version est fourni", async () => {
+  it("choisit la porte 768d calibrée et son couple modèle/version", async () => {
     const journal: { gate: string; args: ArgsJarvis }[] = [];
     const client = clientHybride({
       lexicaux: [ligne("a", "Le trouble panique se caractérise par des attaques récurrentes.")],
@@ -179,12 +179,23 @@ describe("readKnowledge : jambe vectorielle explicite et dégradation nommée", 
     });
     const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
       { vectorActif: true, vecteurRequete: async () => vecteur(),
-        vectorielSecondaire: { modele: "intfloat/multilingual-e5-small", version: "614241f" } });
-    const secondaire = journal.find((c) => c.gate === "search_knowledge_vector_v2");
+        vectorielSecondaire: { modele: "intfloat/multilingual-e5-base", version: "d128750597153bb5987e10b1c3493a34e5a4502a", dimensions: 768 } });
+    const secondaire = journal.find((c) => c.gate === "search_knowledge_vector_v2_768");
     expect(secondaire).toBeDefined();
-    expect(secondaire?.args).toMatchObject({ p_modele: "intfloat/multilingual-e5-small", p_version: "614241f", p_limite: 24 });
+    expect(secondaire?.args).toMatchObject({ p_modele: "intfloat/multilingual-e5-base", p_version: "d128750597153bb5987e10b1c3493a34e5a4502a", p_limite: 24 });
     expect(journal.some((c) => c.gate === "search_knowledge_vector")).toBe(false);
     expect(result.etat).toBe("ok");
+  });
+
+  it("refuse les voisins denses d'une recette sans calibration de seuil", async () => {
+    const client = clientHybride({
+      lexicaux: [],
+      vectoriels: [ligne("small-only", "Le trouble panique se caractérise par des attaques inattendues.", { score: 0.99 })],
+    });
+    const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
+      { vectorActif: true, vecteurRequete: async () => vecteur(),
+        vectorielSecondaire: { modele: "intfloat/multilingual-e5-small", version: "614241f622f53c4eeff9890bdc4f31cfecc418b3", dimensions: 384 } });
+    expect(result).toMatchObject({ etat: "sans-preuve", preuves: [], vectoriel: "non-calibre" });
   });
 
   it("garde l'ancienne porte quand aucun index secondaire n'est configuré", async () => {

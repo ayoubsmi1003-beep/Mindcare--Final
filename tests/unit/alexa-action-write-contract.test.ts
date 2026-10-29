@@ -168,10 +168,12 @@ it("registers treatment and existing-draft edits without adding a parallel issua
  expect(nomsDEcriture()).not.toContain("print_issued_document");
 });
 
-it("registers planned actions for the existing audited confirmation and verification path",()=>{
+it("keeps medication writes on clinical confirmation and charges on the audited action path",()=>{
  expect(nomsDEcriture()).toEqual(expect.arrayContaining(["pause_treatment","resume_treatment","create_charge","update_charge","deactivate_charge"]));
- expect(alexaActionsAuthorizedByExplicitCommand("pause_treatment")).toBe(true);
- expect(alexaActionsAuthorizedByExplicitCommand("resume_treatment")).toBe(true);
+ expect(alexaActionsAuthorizedByExplicitCommand("update_treatment")).toBe(false);
+ expect(alexaActionsAuthorizedByExplicitCommand("pause_treatment")).toBe(false);
+ expect(alexaActionsAuthorizedByExplicitCommand("resume_treatment")).toBe(false);
+ expect(alexaActionsAuthorizedByExplicitCommand("stop_treatment")).toBe(false);
  expect(alexaActionsAuthorizedByExplicitCommand("create_charge")).toBe(true);
  expect(alexaActionsAuthorizedByExplicitCommand("update_charge")).toBe(true);
  expect(alexaActionsAuthorizedByExplicitCommand("deactivate_charge")).toBe(true);

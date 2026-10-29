@@ -47,6 +47,9 @@ export type { NomIcone, IconeProps } from "./Icones";
  * Les deux sont reportés à V4, où le tableau de bord leur donnera enfin un
  * consommateur réel. Reporté et écrit, pas oublié. */
 
+export { BorderBeamPanel } from "./BorderBeamPanel";
+export type { BorderBeamPanelProps } from "./BorderBeamPanel";
+
 export { Badge, Chiffre } from "./Badge";
 export type { TonBadge } from "./Badge";
 

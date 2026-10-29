@@ -9,7 +9,7 @@ const PATIENTS = "/patients";
 
 async function login(page: import("@playwright/test").Page) {
   await page.goto(CONNEXION);
-  await page.getByLabel(/E-mail/i).fill("owner.dev@invalid.local");
+  await page.getByLabel(/Nom d.utilisateur/i).fill("owner.dev@invalid.local");
   await page.getByLabel(/Mot de passe/i).fill("Y1RWX2D5uNz0YqG7K2fljBs5KZrZohbP");
   await page.getByRole("button", { name: /Se connecter/i }).click();
   await expect(page).toHaveURL(/\/patients/, { timeout: 15_000 });
@@ -137,5 +137,38 @@ test.describe("SCREEN 3 — /patients", () => {
     // No secret leak
     const content = await page.content();
     expect(content).not.toContain("OPENROUTER");
+  });
+
+  test("P3.10 pagination exposes every dossier, not only the first 25", async ({ page }) => {
+    await login(page);
+    const lignes = page.locator("ul li a[href^='/patients/']");
+    await expect(lignes.first()).toBeVisible({ timeout: 10_000 });
+    const suivant = page.getByRole("button", { name: /Suivant/i });
+    if ((await suivant.count()) === 0) {
+      test.info().annotations.push({ type: "note", description: "moins d'une page de dossiers" });
+      return;
+    }
+    const premierHref = await lignes.first().getAttribute("href");
+    await suivant.click();
+    await expect(page.locator("body")).toContainText(/51–100 sur/i, { timeout: 10_000 });
+    await expect(lignes.first()).not.toHaveAttribute("href", premierHref ?? "");
+    await page.getByRole("button", { name: /Précédent/i }).click();
+    await expect(page.locator("body")).toContainText(/1–50 sur/i, { timeout: 10_000 });
+  });
+
+  test("P3.11 nom puis prénom retrouve le dossier sans Entrée", async ({ page }) => {
+    await login(page);
+    const premier = page.locator("ul li a[href^='/patients/']").first();
+    await expect(premier).toBeVisible({ timeout: 10_000 });
+    const href = await premier.getAttribute("href");
+    const texte = (await premier.innerText()).split("\n")[0]?.trim() ?? "";
+    const jetons = texte.split(/\s+/).filter(Boolean);
+    if (href === null || jetons.length < 2) {
+      test.info().annotations.push({ type: "note", description: "nom insuffisant pour inverser" });
+      return;
+    }
+    await page.getByPlaceholder(/Nom, téléphone/i).fill([...jetons].reverse().join(" "));
+    // Le debounce (140 ms) + la porte : aucun Entrée n'est envoyé.
+    await expect(page.locator(`a[href="${href}"]`)).toBeVisible({ timeout: 10_000 });
   });
 });

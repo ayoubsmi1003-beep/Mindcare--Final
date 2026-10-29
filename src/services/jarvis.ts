@@ -50,7 +50,7 @@ export interface AnalyseSeance {
   /** Faux quand la synthèse a été produite par une version antérieure. */
   readonly aJour: boolean;
   readonly evaluations: readonly EvaluationSeance[];
-  readonly method?: "reformulated" | "extractive" | "source_selection" | undefined;
+  readonly method?: "reformulated" | "extractive" | "source_selection" | "structured" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: NoteSoap;
   readonly evolution: readonly string[];
@@ -85,7 +85,7 @@ export interface AnalyseSources {
 
 interface AnalyseSeanceRow {
   readonly resume?: string | undefined;
-  readonly method?: "reformulated" | "extractive" | "source_selection" | undefined;
+  readonly method?: "reformulated" | "extractive" | "source_selection" | "structured" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: {
     readonly subjective: string;
@@ -397,7 +397,15 @@ export async function chargerAnalyse(
     Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
 
   return ok({
-    method: c["method"] === "source_selection" ? "source_selection" : c["method"] === "reformulated" ? "reformulated" : c["method"] === "extractive" ? "extractive" : undefined,
+    method: c["method"] === "source_selection"
+      ? "source_selection"
+      : c["method"] === "reformulated"
+        ? "reformulated"
+        : c["method"] === "extractive"
+          ? "extractive"
+          : c["method"] === "structured"
+            ? "structured"
+            : undefined,
     resume: typeof c["resume"] === "string" ? c["resume"] : undefined,
     resumeNotes: typeof c["resumeNotes"] === "string" ? c["resumeNotes"] : undefined,
     aJour,

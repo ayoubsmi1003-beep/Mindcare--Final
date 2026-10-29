@@ -17,13 +17,24 @@
  * même raison qui met la section Documents de la fiche patient en repli.
  */
 
-import { useCallback, useState } from "react";
+import { useCallback, useId, useState } from "react";
 
-import { Bouton, ChampTexte, EtatVide, Squelette } from "@/components/ui";
+import { ListeSuggestions, surligner } from "@/components/recherche/ListeSuggestions";
+import { useRechercheInstantane } from "@/components/recherche/use-recherche-instantanee";
+import { ChampRecherche } from "@/components/ui";
 import { fr } from "@/i18n/fr";
+import { recherche } from "@/i18n/recherche";
 import { searchPatients, type PatientListItem } from "@/services/patients";
 
-const RESULTATS_MAX = 12;
+const RESULTATS_MAX = 25;
+
+function chercherPatient(
+  q: string,
+  limit: number,
+  offset: number,
+): ReturnType<typeof searchPatients> {
+  return searchPatients({ query: q, limit, offset });
+}
 
 export function SelecteurPatient({
   onChoisir,
@@ -31,84 +42,92 @@ export function SelecteurPatient({
   readonly onChoisir: (p: PatientListItem) => void;
 }): React.JSX.Element {
   const [texte, setTexte] = useState("");
-  const [resultats, setResultats] = useState<readonly PatientListItem[] | null>(null);
-  const [enCours, setEnCours] = useState(false);
-  const [erreur, setErreur] = useState<string | undefined>(undefined);
+  const [actif, setActif] = useState(0);
+  const idListe = useId();
 
-  const chercher = useCallback(async () => {
-    const q = texte.trim();
-    if (q === "") return;
+  const { etat, chargerPlus } = useRechercheInstantane<PatientListItem>({
+    requete: texte,
+    chercher: chercherPatient,
+    minimum: 2,
+    taille: RESULTATS_MAX,
+    cle: (p) => p.id,
+  });
 
-    setEnCours(true);
-    setErreur(undefined);
-    const r = await searchPatients({ query: q, limit: RESULTATS_MAX });
-    setEnCours(false);
+  const choisir = useCallback(
+    (p: PatientListItem): void => {
+      onChoisir(p);
+      setTexte("");
+      setActif(0);
+    },
+    [onChoisir],
+  );
 
-    if (!r.ok) {
-      setErreur(r.error.message);
-      setResultats(null);
-      return;
+  const surTouche = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setActif((index) => Math.min(index + 1, Math.max(etat.resultats.length - 1, 0)));
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActif((index) => Math.max(index - 1, 0));
+    } else if (event.key === "Enter") {
+      const choisi = etat.resultats[actif];
+      if (choisi !== undefined) {
+        event.preventDefault();
+        choisir(choisi);
+      }
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      setTexte("");
     }
-    setResultats(r.data.rows);
-  }, [texte]);
+  };
+
+  const actifId =
+    etat.resultats.length > 0 ? `${idListe}-option-${actif}` : undefined;
 
   return (
     <section aria-label={fr.documents.selecteur.titre} className="flex flex-col gap-3">
-      <form
-        className="flex items-end gap-2"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void chercher();
-        }}
-      >
-        <div className="flex-1">
-          <ChampTexte
-            libelle={fr.documents.selecteur.rechercher}
-            indication={fr.documents.selecteur.indication}
-            valeur={texte}
-            onChange={setTexte}
-          />
-        </div>
-        <Bouton rang="secondaire" type="submit" disabled={texte.trim() === ""}>
-          {fr.documents.selecteur.lancerRecherche}
-        </Bouton>
-      </form>
+      <div role="search">
+        <ChampRecherche
+          libelle={fr.documents.selecteur.rechercher}
+          placeholder={fr.documents.selecteur.indication}
+          valeur={texte}
+          onChange={(valeur) => {
+            setTexte(valeur);
+            setActif(0);
+          }}
+          onKeyDown={surTouche}
+          ariaExpanded={etat.resultats.length > 0}
+          {...(etat.resultats.length > 0 ? { ariaControls: idListe } : {})}
+          {...(actifId === undefined ? {} : { ariaActivedescendant: actifId })}
+        />
+      </div>
 
-      {erreur === undefined ? null : (
-        <p role="alert" className="font-ui text-body text-critical">
-          {erreur}
-        </p>
-      )}
-
-      {enCours ? <Squelette lignes={3} /> : null}
-
-      {!enCours && resultats !== null && resultats.length === 0 ? (
-        <EtatVide message={fr.documents.selecteur.aucunResultat} icone="recherche" />
+      {texte.trim().length === 1 ? (
+        <p className="font-ui text-label text-ink-500">{recherche.minimum}</p>
       ) : null}
 
-      {!enCours && resultats !== null && resultats.length > 0 ? (
-        <ul className="flex flex-col gap-1">
-          {resultats.map((p) => (
-            <li key={p.id}>
-              <button
-                type="button"
-                onClick={() => onChoisir(p)}
-                className={[
-                  "flex w-full items-baseline justify-between gap-3 rounded-md px-3 py-2",
-                  "text-left font-ui text-body text-ink-900 transition-colors",
-                  "duration-quick ease-out hover:bg-brand-50",
-                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
-                  "focus-visible:outline-action-600",
-                ].join(" ")}
-              >
-                <span>
-                  {p.lastName} {p.firstName}
-                </span>
-                <span className="font-num text-label text-ink-500">{p.recordNumber}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
+      {texte.trim().length >= 2 ? (
+        <ListeSuggestions
+          idListe={idListe}
+          items={etat.resultats}
+          actif={actif}
+          onChoisir={choisir}
+          rendre={(p) => (
+            <span className="flex flex-wrap items-baseline justify-between gap-2">
+              <span>
+                {surligner(p.lastName, texte)} {surligner(p.firstName, texte)}
+              </span>
+              <span className="font-num text-label text-ink-500">{p.recordNumber}</span>
+            </span>
+          )}
+          requete={texte}
+          total={etat.total}
+          chargement={etat.chargement}
+          chargementPlus={etat.chargementPlus}
+          erreur={etat.erreur}
+          vide={fr.documents.selecteur.aucunResultat}
+          onPlus={chargerPlus}
+        />
       ) : null}
     </section>
   );

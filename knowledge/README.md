@@ -1,23 +1,26 @@
 # Knowledge — index vectoriels et recette de mesure
 
-État au 2026-10-27. Ce fichier décrit CE QUI EXISTE, pas ce qui est souhaité.
+État au 2026-10-29. Ce fichier décrit CE QUI EXISTE, pas ce qui est souhaité.
 La vérité exécutable reste `supabase/migrations/` + `tests/`.
 
 ## 1. Périmètre des livres (Alexa)
 
-Alexa ne lit que deux ouvrages, par titre exact (`src/server/alexa/knowledge-query.ts`,
-`BOOKS`) :
+Le planificateur Alexa reconnaît les trois sources ci-dessous, par titre exact
+(`src/server/alexa/knowledge-query.ts`, `BOOKS`) :
 
 | Ouvrage | Édition | Langue |
 |---|---|---|
 | DSM-5 — Manuel diagnostique et statistique des troubles mentaux | 5e éd. (2015) | fr |
 | The Maudsley Prescribing Guidelines in Psychiatry | 14e éd. (2021) | en |
+| Prescriber's Guide (Stahl's Essential Psychopharmacology) | 7e éd. | en |
 
-`Stahl's Essential Psychopharmacology` est **exclu du chemin Alexa** : la porte
-d'autorisation SQL le laisse actif, mais `matchesRequestedBook` n'admet que les
-deux titres ci-dessus, et une question qui nomme Stahl est refusée
-(`planKnowledgeQuery` → `null`). Son index et ses approbations restent intacts
-hors périmètre.
+Une question peut désigner DSM-5, Maudsley/Taylor ou Stahl/Prescriber's Guide.
+La réponse parlée ne doit pas nommer l'ouvrage; l'évidence interne conserve la
+source, l'édition et la page. Les diagnostics du patient viennent du contexte
+clinique autorisé et restent séparés de la recherche dans ces ouvrages.
+La disponibilité effective des trois index et la résolution des pages sur la
+copie V8 actuelle restent NOT VERIFIED tant que le préflight et le golden v4
+n'ont pas été exécutés sur le runtime synthétique versionné.
 
 ## 2. Trois espaces vectoriels, jamais mélangés
 
@@ -43,23 +46,38 @@ Le reranker `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (117 M) est **rejeté**
 sur mesure réelle : Recall@1 50 % → 30 %, p50 118 ms → 1 144 ms
 (`knowledge/recette-rerank-secondaire.json`). Ne pas l'activer.
 
-## 4. Mesure (golden réel, 22 questions, 20 réponses attendues)
+## 4. Mesure (golden v4, 34 questions, 31 réponses attendues)
 
 ```
-node scripts/eval-book-rag.mjs --golden tests/eval/knowledge.books-v3-2026-10-27.json
+node scripts/eval-book-rag.mjs --json
 ```
 
-Avec l'espace 768 (bac à sable) — chemin de PRODUCTION piloté par l'environnement
-(le chargement réel du modèle et la porte 768 sont exercés) :
+Le script exige `MINDCARE_ALEXA_EVAL_DATABASE_URL` vers la copie synthétique V8
+locale `127.0.0.1:55445/alexa_eval_v8_intelligence_20261027`. Avant toute
+recherche, il vérifie l'identité de la base, les 1 558 patients et 8 143
+consultations de l'instantané, l'absence de patients non synthétiques et
+l'enregistrement de toutes les migrations applicatives 195 à 200. Il ne lit pas les
+fichiers `.env`, n'utilise pas les URL cabinet/test comme replis et refuse
+`--url`. Chaque requête SQL utilise une transaction `READ ONLY` et le rôle
+`authenticated` local à la transaction. L'ancienne copie en version 194 échoue
+donc volontairement au préflight; elle ne peut pas produire un résultat V4.
+Le rapport local horodaté contient la recette/modèle, les portes et appels
+réellement observés, les replis, les comptes de preuves/pages et les rangs;
+il n'enregistre ni question, ni extrait, ni URL de connexion. Cette mesure
+exerce `readKnowledge` en invocation directe; elle ne qualifie pas la rédaction
+LLM, le parcours complet `runAlexa` ou l'outil agent.
+
+Pour mesurer une recette vectorielle après validation de ce préflight :
 
 ```
-KNOWLEDGE_VECTOR=1 KNOWLEDGE_VECTOR_RECETTE=e5-base \
-node scripts/eval-book-rag.mjs \
-  --url "postgresql://…:55446/mindcare" \
-  --golden tests/eval/knowledge.books-v3-2026-10-27.json
+$env:MINDCARE_ALEXA_EVAL_DATABASE_URL = 'postgresql://postgres@127.0.0.1:55445/alexa_eval_v8_intelligence_20261027'
+$env:KNOWLEDGE_VECTOR = '1'
+$env:KNOWLEDGE_VECTOR_RECETTE = 'e5-base'
+node scripts/eval-book-rag.mjs --vector --slug e5-base --dimensions 768 --json
 ```
 
-Résultats mesurés le 2026-10-27 :
+Mesures historiques v3 au 2026-10-27 (elles ne qualifient pas le golden v4,
+Stahl, ni la copie V8 actuelle) :
 
 | Configuration | R@1 | R@3 | R@5 | MRR | Abstention | p50 |
 |---|---|---|---|---|---|---|

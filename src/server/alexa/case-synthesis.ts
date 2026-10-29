@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import type { ClinicalContext, ClinicalConsultation, ClinicalTreatment } from "@/shared/alexa/clinical";
 import { localDisplay } from "./local-response";
 
-export const CASE_SYNTHESIS_VERSION = "case-synthesis-fr-v1";
+export const CASE_SYNTHESIS_VERSION = "case-synthesis-fr-v4";
 export const CASE_SYNTHESIS_HASH = createHash("sha256").update(CASE_SYNTHESIS_VERSION).digest("hex");
 
 /**
@@ -104,9 +104,9 @@ function savedSessionResume(consultation: ClinicalConsultation): string | null {
   const content = consultation.analysis?.content;
   if (typeof content !== "object" || content === null) return null;
   const record = content as Record<string, unknown>;
-  const notes = typeof record["resumeNotes"] === "string" ? clean(record["resumeNotes"]) : "";
-  if (notes !== "") return notes;
-  return typeof record["resume"] === "string" && clean(record["resume"]) !== "" ? clean(record["resume"]) : null;
+  const resume = typeof record["resume"] === "string" ? clean(record["resume"]) : "";
+  if (resume !== "") return resume;
+  return typeof record["resumeNotes"] === "string" && clean(record["resumeNotes"]) !== "" ? clean(record["resumeNotes"]) : null;
 }
 
 function noteExcerpt(consultation: ClinicalConsultation): string | null {
@@ -120,16 +120,45 @@ function noteExcerpt(consultation: ClinicalConsultation): string | null {
 }
 
 function treatmentLine(treatment: ClinicalTreatment): string {
-  const dose = [treatment.dose, treatment.doseUnit].filter((part): part is string => part !== null && part !== "").join(" ");
+  const recordedDose = treatment.dose === null ? "" : clean(treatment.dose);
+  const recordedUnit = treatment.doseUnit === null ? "" : clean(treatment.doseUnit);
+  const dose = recordedDose === "" ? "" : !/^[\d\s,.]+$/u.test(recordedDose)
+    ? recordedUnit === "" ? recordedDose : `${recordedDose} (unité enregistrée séparément : ${recordedUnit})`
+    : [recordedDose, recordedUnit].filter(Boolean).join(" ");
   const frequency = treatment.frequency === null ? "" : clean(treatment.frequency);
   const state = treatment.status === "active" ? "actif" : treatment.status === "paused" ? "en pause" : "arrêté";
-  return [treatment.medication, dose, frequency, state].filter((part) => part !== "").join(" · ");
+  const details = [dose ? `dose consignée : ${dose}` : "", frequency ? `fréquence consignée : « ${frequency} »` : ""].filter(Boolean);
+  return `Le traitement par « ${clean(treatment.medication)} » est ${state}${details.length ? ` (${details.join(" ; ")})` : ""}.`;
+}
+
+function quotedLabel(value: string): string {
+  return `« ${clean(value)} »`;
+}
+
+function joinFrench(values: readonly string[]): string {
+  if (values.length < 2) return values[0] ?? "";
+  if (values.length === 2) return `${values[0]} et ${values[1]}`;
+  return `${values.slice(0, -1).join(", ")} et ${values.at(-1)}`;
 }
 
 function activeDiagnoses(context: ClinicalContext): CaseItem[] {
   return context.diagnoses
     .filter((diagnosis) => diagnosis.resolvedAt === null)
     .map((diagnosis) => ({ texte: diagnosis.label, sources: [{ t: "diagnostic", id: diagnosis.id }] }));
+}
+
+function diagnosisDate(value: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/u.exec(value);
+  return match ? `${match[3]}/${match[2]}/${match[1]}` : value;
+}
+
+function documentedDiagnoses(context: ClinicalContext): CaseItem[] {
+  return context.diagnoses.map((diagnosis) => {
+    const status = diagnosis.resolvedAt !== null
+      ? `résolu le ${diagnosisDate(diagnosis.resolvedAt)}`
+      : diagnosis.onsetDate !== null ? `actif depuis le ${diagnosisDate(diagnosis.onsetDate)}` : "actif";
+    return { texte: `${diagnosis.label} (${status})`, sources: [{ t: "diagnostic", id: diagnosis.id }] };
+  });
 }
 
 function currentTreatments(context: ClinicalContext): CaseItem[] {
@@ -290,21 +319,29 @@ export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
     texte: localDisplay(texte, identities),
     sources,
   });
-  const diagnostics = activeDiagnoses(input.context).map((entry) => item(entry.texte, entry.sources));
+  const diagnostics = documentedDiagnoses(input.context).map((entry) => item(entry.texte, entry.sources));
+  const active = activeDiagnoses(input.context).map((entry) => item(entry.texte, entry.sources));
   const treatments = currentTreatments(input.context).map((entry) => item(entry.texte, entry.sources));
   const groups = scaleGroups(input);
   const risk = groups.map((group) => ({ group, finding: riskFor(group) })).find((entry) => entry.finding !== null) ?? null;
 
   const situation: string[] = [];
   const situationSources: CaseSource[] = [];
-  if (diagnostics.length > 0) {
-    const labels = diagnostics.map((entry) => entry.texte);
+  if (active.length > 0) {
     const principal = input.context.diagnoses.find((entry) => entry.resolvedAt === null && entry.primary);
-    situation.push(`Le suivi est documenté pour ${labels.length === 1 ? labels[0] : `${labels.slice(0, -1).join(", ")} et ${labels.at(-1)}`}${principal === undefined ? "" : ", diagnostic principal"}.`);
-    situationSources.push(...diagnostics.flatMap((entry) => entry.sources));
+    const labels = active.map((entry) => quotedLabel(entry.texte));
+    if (labels.length === 1) {
+      situation.push(principal === undefined
+        ? `Le suivi concerne le diagnostic actif ${labels[0]}.`
+        : `Le suivi concerne le diagnostic principal ${labels[0]}.`);
+    } else {
+      situation.push(`Le suivi concerne les diagnostics actifs ${joinFrench(labels)}.`);
+      if (principal !== undefined) situation.push(`Le diagnostic principal est ${quotedLabel(principal.label)}.`);
+    }
+    situationSources.push(...active.flatMap((entry) => entry.sources));
   }
   if (treatments.length > 0) {
-    situation.push(`Le traitement actuel associe ${treatments.map((entry) => entry.texte).join(" ; ")}.`);
+    situation.push(...treatments.map((entry) => entry.texte));
     situationSources.push(...treatments.flatMap((entry) => entry.sources));
   }
   const latest = latestCompleted(input.context);
@@ -351,10 +388,11 @@ export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
     }
   }
 
-  const paragraphes: CaseItem[] = [];
-  if (situation.length > 0) paragraphes.push(item(situation.join(" "), situationSources));
-  if (trajectory.length > 0) paragraphes.push(item(trajectory.join(" "), trajectorySources));
-  if (plan.length > 0) paragraphes.push(item(plan.join(" "), planSources));
+  const texte = [...situation, ...trajectory, ...plan].join(" ").trim();
+  const sources = [...situationSources, ...trajectorySources, ...planSources];
+  const dedoublonnees = new Map<string, CaseSource>();
+  for (const source of sources) dedoublonnees.set(`${source.t}:${source.id}`, source);
+  const paragraphes: CaseItem[] = texte === "" ? [] : [item(texte, [...dedoublonnees.values()])];
 
   const vigilance: CaseItem[] = [];
   if (risk !== null && risk.finding !== null) {

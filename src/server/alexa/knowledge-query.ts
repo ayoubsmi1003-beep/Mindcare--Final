@@ -4,10 +4,14 @@ import {knowledgeComparisonRequested} from './knowledge-evidence-content';
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
-  { marker: /\bdsm(?:\s*-?\s*5)?\b/u,
+  { marker: /\bdsm(?:\s*-?\s*5)?\b/u, label: "DSM-5",
     title: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux", language: "fr" },
-  { marker: /\b(?:maudsley|taylor)\b/u,
+  { marker: /\b(?:maudsley|taylor)\b/u, label: "Taylor",
     title: "The Maudsley Prescribing Guidelines in Psychiatry", language: "en" },
+  // ADR-041 : troisième livre approuvé. Le titre doit rester IDENTIQUE à celui
+  // écrit en base par le chargeur (la comparaison est normalisée des deux côtés).
+  { marker: /(?:\bstahl\b|\bprescriber['’]s\s+guide\b)/u, label: "Stahl",
+    title: "Prescriber's Guide (Stahl's Essential Psychopharmacology)", language: "en" },
 ] as const;
 
 // Fermé : noms de médicaments du référentiel (jamais une invention).
@@ -57,7 +61,7 @@ const SCAFFOLD = new Set([
   "combien", "faut",
   // Mots de liaison français sans contenu clinique : ils ne doivent pas
   // empêcher la variante anglaise (l'ET de la porte est strict).
-  "pendant", "faire", "cas", "selon", "concernant",
+  "pendant", "faire", "cas", "selon", "concernant", "avec", "emploi",
   "واش", "يقول", "حسب", "اشرح", "شرح", "شنو", "وش", "كتاب", "مرجع", "مراجع", "chno", "wach", "3la",
 ]);
 
@@ -82,6 +86,7 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   hepatique: ["hepatique", "hepatic"], sevrage: ["sevrage", "withdrawal"],
   interaction: ["interaction", "interaction"], interactions: ["interactions", "interactions"],
   surveillance: ["surveillance", "monitoring"], effets: ["effets", "effects"],
+  precaution: ["precaution", "warnings"],
   indesirables: ["indesirables", "adverse"], grave: ["grave", "severe"], graves: ["graves", "severe"],
   initiale: ["initiale", "initial"], initial: ["initial", "initial"],
   adolescent: ["adolescent", "adolescent"], adolescents: ["adolescents", "adolescents"],
@@ -95,11 +100,15 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   antidepresseur: ["antidepresseur", "antidepressant"], antidepresseurs: ["antidepresseurs", "antidepressants"],
   titrer: ["titrer", "titrate"], titration: ["titration", "titration"],
   schizophrene: ["schizophrene", "schizophrenia"], antipsychotiques: ["antipsychotiques", "antipsychotics"],
-  precautions: ["precautions", "precautions"], renales: ["renales", "renal"],
+  precautions: ["precautions", "warnings"], renales: ["renales", "renal"],
   agitation: ["agitation", "agitation"], aigue: ["aigue", "acute"], aigu: ["aigu", "acute"],
   syndrome: ["syndrome", "syndrome"], patient: ["patient", "patient"], patients: ["patients", "patients"],
   qt: ["qt", "qt"], prise: ["prise", "management"], charge: ["charge", "management"],
   frequence: ["frequence", "frequency"], signes: ["signes", "signs"], signe: ["signe", "sign"],
+  agit: ["agit", "works"], agir: ["agir", "works"],
+  action: ["action", "action"],
+  messager: ["messager", "messenger"], messagers: ["messagers", "messenger"],
+  intracellulaire: ["intracellulaire", "intracellular"], intracellulaires: ["intracellulaires", "intracellular"],
   mecanisme: ["mecanisme", "mechanism"], mecanismes: ["mecanismes", "mechanism"],
   metabolique: ["metabolique", "metabolic"], metaboliques: ["metaboliques", "metabolic"],
   cardiaque: ["cardiaque", "cardiac"], cardiaques: ["cardiaques", "cardiac"],
@@ -123,6 +132,12 @@ export interface KnowledgeQueryPlan {
   readonly relevanceQuery: string;
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
+  /**
+   * Libellé court du livre requis (`DSM-5`, `Taylor`, `Stahl`) : il sert à
+   * réinjecter le bon marqueur quand l'outil appelant omet le nom du livre.
+   * `null` = aucun livre nommé (recherche tous les livres approuvés).
+   */
+  readonly sourceLabel: string | null;
   readonly sectionFocus?: string;
   readonly sectionFocuses?: readonly string[];
   readonly sectionLeaf?: string;
@@ -160,8 +175,6 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // Never truncate away a final book, population, dose or other restriction.
   if (question.length > 500) return null;
   let normalized = normalize(question);
-  // Stahl is not yet qualified by the user. Its index and approvals remain untouched.
-  if(/\bstahl\b/u.test(normalized))return null;
   // Only DSM-5 is observed locally. A different edition or text revision must
   // fail closed before its book label can be stripped or mapped to that source.
   for (const edition of normalized.matchAll(/\bdsm\s*-?\s*(\d+|[ivx]+)(?:\s*-?\s*(tr|r))?\b/gu)) {
@@ -170,7 +183,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const books = BOOKS.filter(book => book.marker.test(normalized));
   if (books.length > 1) return null; // No implicit substitution for a multi-book request.
   const book = books[0];
-  const named = normalized.match(/(?:\b(?:selon|d['’]apres|according to)|حسب)\s+(?:(?:le|la|les|the)\s+)?(?:(?:livre|ouvrage|manuel|book|كتاب|مرجع)\s+)?([\p{L}\p{N}-]+)/u)?.[1];
+  const named = normalized.match(/(?:\b(?:selon|d['’]apres|according to)|حسب)\s+(?:(?:le|la|les|the)\s+)?(?:(?:livre|ouvrage|manuel|book|كتاب|مرجع)\s+)?(prescriber['’]s\s+guide|[\p{L}\p{N}-]+)/u)?.[1];
   const namedBook = normalized.match(/(?:\b(?:livre|ouvrage|book)|كتاب|مرجع)\s+(?:de\s+)?([\p{L}\p{N}-]+)/u)?.[1];
   // Mots qui NE sont PAS un nom de livre : verbes et connecteurs de la
   // question (« que dit le LIVRE de … », « what does the BOOK say about … »),
@@ -237,8 +250,9 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // serait mesuré contre une référence française : couverture ~0, score ~0,
   // et la preuve ne remonterait jamais.
   let references: string[] = [queries[0] as string];
-  // Aucun livre nommé : on cherche dans les DEUX ouvrages. La requête
-  // française ne peut pas matcher Taylor (anglais). On ajoute donc UNE
+  // Aucun livre nommé : on cherche dans toutes les sources approuvées.
+  // Une requête française matche difficilement les sources anglaises
+  // (Taylor et Stahl). On ajoute donc UNE
   // variante anglaise bornée, construite des seules réalisations connues +
   // invariants (médicament, nombre, unité). Jamais pour un livre français
   // nommé (là, la requête d'origine est la bonne).
@@ -277,6 +291,16 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       references.push(requeteCoeur);
     }
   }
+  // The approved books often label monitoring requirements under "Tests".
+  // Keep the literal monitoring query and add this bounded heading alternative.
+  for (const query of [...queries]) {
+    if (!/\bmonitoring\b/u.test(query)) continue;
+    const testsHeadingQuery = query.replace(/\bmonitoring\b/gu, "tests");
+    if (!queries.includes(testsHeadingQuery)) {
+      queries.push(testsHeadingQuery);
+      references.push(testsHeadingQuery);
+    }
+  }
   // Expansion bilingue gouvernée : le concept clinique (FR ou EN) est remplace
   // par les INTITULÉS DE RUBRIQUES REELS du corpus — le seul vocabulaire qui
   // existe dans l'index. Les requetes d'origine sont conservees : la couche
@@ -285,6 +309,31 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   if (bilingue.actif && bilingue.requetes.length > 0) {
     queries = [...queries, ...bilingue.requetes];
     references = [...references, ...bilingue.requetes];
+  }
+  // Maudsley indexes the acute-agitation topic under this exact English heading.
+  // A French "prise en charge" question otherwise leaves untranslated scaffolding
+  // in the lexical AND query, so add the bounded heading query while preserving
+  // the user's original wording. Do not apply this Maudsley heading to DSM or Stahl.
+  if (/\bagitation\s+aigue\b/u.test(normalized) && (book === undefined || book.label === "Taylor")) {
+    const acuteAgitationQuery = "acute agitation";
+    if (!queries.includes(acuteAgitationQuery)) {
+      queries.push(acuteAgitationQuery);
+      references.push(acuteAgitationQuery);
+    }
+  }
+  // Some approved English chapters use "How the Drug Works" where a French
+  // question asks for a medication's mechanism of action. Preserve the literal
+  // `action` query and add this heading variant only for all-English/invariant
+  // terms, so it cannot become a mixed-language lexical AND query.
+  if (book === undefined || book.language === "en") {
+    for (const query of [...queries]) {
+      if (!/\baction\b/u.test(query) || !query.split(/\s+/u).every(invariant)) continue;
+      const worksHeadingQuery = query.replace(/\baction\b/gu, "works");
+      if (!queries.includes(worksHeadingQuery)) {
+        queries.push(worksHeadingQuery);
+        references.push(worksHeadingQuery);
+      }
+    }
   }
   // Type I must survive the baseline's one-letter token exclusion. A comparison
   // gets two exact lexical AND queries, never an OR query or a drug-only fallback.
@@ -324,7 +373,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
   // Aucun livre nommé + entité diagnostique reconnue : on AJOUTE les requêtes
   // de rubrique (concept + « critères diagnostiques ») SANS poser
-  // `sectionFocus`. Sans filtre, Taylor reste interrogeable ; avec la requête,
+  // `sectionFocus`. Sans filtre, Taylor et Stahl restent interrogeables ; avec la requête,
   // la rubrique DSM remonte au lieu de perdre un départage arbitraire entre
   // sections à couverture égale (mesuré : 5/5 partout, gagnant par hash).
   if (book === undefined && recognizedFocuses.length === 1 && !comparison) {
@@ -361,12 +410,20 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
-
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */
 export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
+
+/**
+ * Réinjecte le marqueur du livre requis quand l'outil appelant l'a omis.
+ * Le libellé vient de `BOOKS` (jamais d'une liste recopiée) : DSM-5, Taylor
+ * ou Stahl. Sans livre requis, la requête est rendue inchangée.
+ */
+export function requetePourLivreRequis(plan: KnowledgeQueryPlan, query: string): string {
+  return plan.sourceLabel === null ? query : `${plan.sourceLabel} ${query}`;
+}
 
 /** Requested-book matching restricts already-governed rows; it grants no access. */
 export function matchesRequestedBook(row: unknown, plan: KnowledgeQueryPlan): boolean {

@@ -1,6 +1,6 @@
 {
   "name": "mindcare-os",
-  "version": "0.1.4-rc1.20261020",
+  "version": "0.1.4-rc1.20261028",
   "private": true,
   "type": "module",
   "description": "Logiciel de gestion du cabinet de psychiatrie — dossiers, agenda, consultations, documents, comptabilite.",
@@ -24,6 +24,7 @@
     "dev:electron": "pnpm build:electron && node scripts/dev-electron.mjs",
     "icone:generer": "node scripts/generer-icone.mjs",
     "build:desktop": "node scripts/preparer-paquet.mjs && node scripts/elaguer-pgsql.mjs && pnpm build:electron && electron-builder --win && node scripts/verifier-paquet.mjs",
+    "release:cabinet": "node scripts/creer-release-cabinet.mjs",
     "snapshot:production": "node scripts/snapshot-production.mjs",
     "pgsql:elaguer": "node scripts/elaguer-pgsql.mjs",
     "verifier:paquet": "node scripts/verifier-paquet.mjs",

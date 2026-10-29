@@ -1,4 +1,5 @@
 import {z} from "zod";
+import {medicationNames} from "@/shared/alexa/medications";
 import type {ClinicalTreatment} from "@/shared/alexa/clinical";
 import type {Variables} from "@/shared/documents/types";
 
@@ -18,10 +19,38 @@ function contient(haystack:string,needle:string):boolean{
  return !!value&&text.includes(` ${value} `);
 }
 
+function hasExplicitDoseIntent(requestText:string):boolean{
+ const text=normaliser(requestText);
+ const negatedDoseDirective=/\b(?:ne|n)\s+(?:[\p{L}\p{N}]+\s+){0,3}(?:pas|plus|jamais)\b(?:\s+[\p{L}\p{N}]+){0,3}\s+(?:dose|posologie)\b/u.test(text);
+ const missingDose=/\b(?:sans|pas de|aucune?|aucun)\s+(?:dose|posologie)\b/u.test(text)||
+  /\b(?:dose|posologie)(?:\s+[\p{L}\p{N}]+){0,4}\s+(?:n\s+est\s+pas|pas|non|inconnue|omise|absente|manquante)\b/u.test(text);
+ if(negatedDoseDirective||missingDose)return false;
+ const verbs="(?:fixe|passe|augmente|diminue|reduis|baisse|ajuste|modifie|change|porte|monte|regle|prescris|administre)";
+ const doseWords="(?:dose|posologie)";
+ const directDoseDirective=new RegExp(`\\b${verbs}\\b(?:\\s+[\\p{L}\\p{N}]+){0,4}\\s+\\b${doseWords}\\b|\\b${doseWords}\\b(?:\\s+[\\p{L}\\p{N}]+){0,4}\\s+\\b${verbs}\\b`,"u");
+ if(directDoseDirective.test(text))return true;
+ const strengthOrForm=/\b(?:comprime|gelule|capsule|forme|concentration|teneur|liberation|retard)\b/u.test(text);
+ if(strengthOrForm)return false;
+ const units="mg|g|mcg|µg|microgrammes?|ml|l|%";
+ const dosePerPeriod=new RegExp(`\\b${verbs}\\b.*\\b\\d+(?:\\s+\\d+)?\\s+(?:${units})\\s+(?:par jour|par prise|quotidien(?:ne|nement)?)\\b`,"u");
+ if(dosePerPeriod.test(text))return true;
+ const measuredChange=new RegExp(`\\b(?:passe|augmente|diminue|reduis|baisse|ajuste)\\b.*\\bde\\s+\\d+(?:\\s+\\d+)?\\s+(?:${units})\\s+a\\s+\\d+(?:\\s+\\d+)?\\s+(?:${units})\\b`,"u");
+ return measuredChange.test(text);
+}
+
 export type TreatmentTargetResolution=
  |{readonly state:"resolved";readonly treatment:ClinicalTreatment}
  |{readonly state:"missing"}
  |{readonly state:"ambiguous"};
+
+export type MedicationCatalogIdentity=Readonly<{raw_name:string;inn:string;brand_name:string|null}>;
+
+/** Exact catalogue labels only; this does not map brand, strength, or form to another identity. */
+export function hasExactMedicationCatalogIdentity(name:string,rows:readonly MedicationCatalogIdentity[]):boolean{
+ const expected=normaliser(name);
+ return !!expected&&rows.some(row=>[row.raw_name,row.inn,row.brand_name].some(value=>
+  typeof value==="string"&&normaliser(value)===expected));
+}
 
 const treatmentChangesSchema=z.object({
  dose:z.string().trim().min(1).max(300).optional(),doseUnit:z.string().trim().min(1).max(80).optional(),
@@ -36,6 +65,13 @@ export function resolveTreatmentTarget(
  requestText:string,
 ):TreatmentTargetResolution{
  const eligible=current.filter(treatment=>treatment.status==="active"||treatment.status==="paused");
+ const explicitlyNamed=medicationNames.filter(name=>contient(requestText,name));
+ if(explicitlyNamed.some(name=>!eligible.some(treatment=>contient(treatment.medication,name))))return {state:"missing"};
+ if(proposedName&&contient(requestText,proposedName)){
+  const proposed=eligible.filter(treatment=>contient(treatment.medication,proposedName)||contient(proposedName,treatment.medication));
+  if(proposed.length===1)return {state:"resolved",treatment:proposed[0]!};
+  return {state:proposed.length>1?"ambiguous":"missing"};
+ }
  const mentioned=eligible.filter(treatment=>contient(requestText,treatment.medication));
  if(mentioned.length===1)return {state:"resolved",treatment:mentioned[0]!};
  if(mentioned.length>1)return {state:"ambiguous"};
@@ -44,17 +80,11 @@ export function resolveTreatmentTarget(
  if(genericTarget&&eligible.length===1)return {state:"resolved",treatment:eligible[0]!};
  if(genericTarget&&eligible.length>1)return {state:"ambiguous"};
 
- // A model-proposed name is useful only when it is present in the user's words;
- // it cannot choose between otherwise unmentioned current treatments.
- if(proposedName&&contient(requestText,proposedName)){
-  const proposed=eligible.filter(treatment=>contient(treatment.medication,proposedName)||contient(proposedName,treatment.medication));
-  if(proposed.length===1)return {state:"resolved",treatment:proposed[0]!};
-  if(proposed.length>1)return {state:"ambiguous"};
- }
  return {state:"missing"};
 }
 
 function isDoseValueGrounded(dose:string,doseUnit:string|undefined,requestText:string):boolean{
+ if(!hasExplicitDoseIntent(requestText))return false;
  if(!contient(requestText,dose))return false;
  const units="mg|g|mcg|µg|microgrammes?|ml|l|comprim(?:e|es)|gouttes?|capsules?|%";
  const requestedAmounts=[...normaliser(requestText).matchAll(new RegExp(`\\b(\\d+(?:[.,]\\d+)?)\\s*(?:(${units}))\\b`,"gu"))];
@@ -82,6 +112,7 @@ function isDateGrounded(value:string,requestText:string):boolean{
 export function groundTreatmentChanges(rawChanges:unknown,requestText:string):Readonly<Record<string,unknown>>{
  const changes:TreatmentFieldChanges=treatmentChangesSchema.parse(rawChanges);
  const output:Record<string,unknown>={};
+ if(changes.doseUnit!==undefined&&changes.dose===undefined)throw new Error("TreatmentDoseUnitRequiresDose");
  if(changes.dose!==undefined){if(!isDoseValueGrounded(changes.dose,changes.doseUnit,requestText))throw new Error("UnrequestedTreatmentDose");output.dose=changes.dose;}
  if(changes.doseUnit!==undefined){if(!contient(requestText,changes.doseUnit))throw new Error("UnrequestedTreatmentDoseUnit");output.dose_unit=changes.doseUnit;}
  if(changes.frequency!==undefined){if(!contient(requestText,changes.frequency))throw new Error("UnrequestedTreatmentFrequency");output.frequency=changes.frequency;}

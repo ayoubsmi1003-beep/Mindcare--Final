@@ -6,7 +6,7 @@ import { sessionVoix, voixLocaleConfiguree } from "@/server/voice/session";
 import { arreterReveil, demanderReveil, preparerReveil } from "@/server/voice/wake-runtime";
 import { z } from "zod";
 
-import { echec, identite, succes } from "../_commun";
+import { echec, identite, refusIaClinique, succes } from "../_commun";
 
 const Schema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("start") }).strict(),
@@ -22,6 +22,8 @@ const Schema = z.discriminatedUnion("action", [
  */
 export async function POST(request: Request): Promise<Response> {
   if (!isSameOriginRequest(request)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   if ((await identite()) === null) return echec("non-authentifie", alexa.voixLocale);
   if (!voixLocaleConfiguree(env())) return echec("configuration", alexa.voixLocale);
 

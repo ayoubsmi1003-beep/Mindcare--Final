@@ -28,6 +28,7 @@ import {
   commandeInitdb,
   contenuEcouteLocale,
   contenuPgHba,
+  serviceDejaDemarre,
   versionCluster,
 } from "./pg-cluster.js";
 import { urlDepart, PORT_BACKEND } from "./config.js";
@@ -478,7 +479,10 @@ async function enregistrerEtDemarrerService(bin: BinairesPg, dataDir: string, jo
     const deja = msg.includes("already") || msg.includes("existe") || msg.includes("1073") || msg.includes("service exists");
     if (!deja) throw e;
   }
-  await executer(commandeDemarrerService());
+  await executer(commandeDemarrerService()).catch((error: unknown) => {
+    const message = error instanceof Error ? error.message : String(error);
+    if (!serviceDejaDemarre(message)) throw error;
+  });
 }
 
 // Fallback dev : démarrer postgres sans service Windows (pg_ctl start)

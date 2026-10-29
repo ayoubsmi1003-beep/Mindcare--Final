@@ -66,7 +66,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const [preview,setPreview]=useState<DraftPreview|null>(null),[manifest,setManifest]=useState<PageManifest|null>(null),[opened,setOpened]=useState<Document|null>(null),[snapshot,setSnapshot]=useState<IssuedSnapshot|null>(null);
 
- const [error,setError]=useState<string|null>(null),[busy,setBusy]=useState(false),[voidReason,setVoidReason]=useState(""),[showVoid,setShowVoid]=useState(false),[issuedZoom,setIssuedZoom]=useState<IssuedZoom>(100);
+ const [error,setError]=useState<string|null>(null),[busy,setBusy]=useState(false),[voidReason,setVoidReason]=useState(""),[showVoid,setShowVoid]=useState(false),[issuedZoom,setIssuedZoom]=useState<IssuedZoom>(100),[printPendingId,setPrintPendingId]=useState<string|null>(null);
 
  const [libraryTab,setLibraryTab]=useState<"drafts"|"issued">("drafts"),[view,setView]=useState<"edit"|"preview">("preview");
  const editing=useDocumentDraft(draftId),initialOpened=useRef<string|null>(null),initialPrintDone=useRef(false),draftPrintInFlight=useRef(false),root=useRef<HTMLDivElement>(null),issuedManualZoom=useRef(false);
@@ -136,9 +136,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
    await openDocument(issued.data.documentId);
    try{
     await printDocument(issued.data);
-    const marked=await markDocumentPrinted(issued.data.documentId);
-    if(!marked.ok){setError(t.printAuditFailed);setAuditPending(issued.data.documentId);}
-    else{setAuditPending(null);await openDocument(issued.data.documentId);}
+    setPrintPendingId(issued.data.documentId);
    }catch{setError(t.printFailed);}
    await refresh();
   }catch{setError(t.printFailed);}
@@ -147,7 +145,8 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const duplicate=async()=>{const id=editing.draft?.id??snapshot?.draftId;if(!id&&!opened)return;if(editing.dirty&&!await editing.flush())return;const r=id?await duplicateDraft(id):await reviseIssuedDocument(opened!.id);if(r.ok&&r.data){await chooseDraft(r.data);await refresh();}else if(!r.ok)setError(r.error.message);};
 
- const print=useCallback(async()=>{if(!opened)return;setError(null);setBusy(true);try{if(snapshot)await printDocument(snapshot);else if(opened.renderedHtml)await printLegacyDocument(opened.renderedHtml);const r=await markDocumentPrinted(opened.id);if(!r.ok){setError(t.printAuditFailed);setAuditPending(opened.id);}else{setAuditPending(null);await openDocument(opened.id);}}catch{setError(t.printFailed);}finally{setBusy(false);}},[opened,snapshot,openDocument]);
+ const print=useCallback(async()=>{if(!opened)return;setError(null);setBusy(true);try{if(snapshot)await printDocument(snapshot);else if(opened.renderedHtml)await printLegacyDocument(opened.renderedHtml);else throw new Error("DocumentPrintUnavailable");setPrintPendingId(opened.id);}catch{setError(t.printFailed);}finally{setBusy(false);}},[opened,snapshot]);
+ const confirmPrinted=async()=>{const id=printPendingId;if(!id||opened?.id!==id)return;setBusy(true);setError(null);try{const result=await markDocumentPrinted(id);if(!result.ok||result.data===null){setError(t.printAuditFailed);setAuditPending(id);setPrintPendingId(null);return;}setAuditPending(null);setPrintPendingId(null);await openDocument(id);}catch{setError(t.printAuditFailed);setAuditPending(id);setPrintPendingId(null);}finally{setBusy(false);}};
  // Alexa ne peut ouvrir que la pièce exacte qu'elle a relue. L'impression
  // reste le dialogue du navigateur : aucun succès d'imprimante n'est supposé.
  useEffect(()=>{if(!initialPrint||!initialDocumentId||initialPrintDone.current||opened?.id!==initialDocumentId||!snapshot)return;initialPrintDone.current=true;void print();},[initialPrint,initialDocumentId,opened,snapshot,print]);
@@ -199,6 +198,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
     {opened?<>
      <header className="doc2-document-head"><div className="doc2-document-title"><div className="doc2-title-line"><h2>{documentLabels[opened.docType]}</h2><Badge ton={opened.status==="voided"?"attention":"positif"}>{opened.status==="voided"?t.voided:t.issuedStatus}</Badge></div><small className="doc2-number-note">{t.issuedNumber} · <strong>{opened.docNumber}</strong></small>{opened.voidReason?<small className="doc2-hint is-warning">{opened.voidReason}</small>:null}</div><div className="doc2-actions"><details className="doc2-action-menu"><summary>{t.more}<Icone nom="chevron" taille={16}/></summary><div><button type="button" disabled={busy} onClick={()=>{void duplicate();}}>{t.newRevision}</button><button type="button" disabled={busy||opened.status==="voided"} onClick={()=>setShowVoid(true)}>{t.voidDocument}</button></div></details><Bouton rang="principal" taille="compact" disabled={busy||opened.status==="voided"} onClick={()=>{void print();}}>{t.print}</Bouton></div></header>
+     {printPendingId===opened.id?<div className="doc2-alert" role="status"><p>{t.printAttestationPrompt}</p><button type="button" disabled={busy||opened.status==="voided"} onClick={()=>{void confirmPrinted();}}>{t.confirmPrinted}</button><button type="button" disabled={busy} onClick={()=>setPrintPendingId(null)}>{t.printNotConfirmed}</button></div>:null}
      {auditPending===opened.id?<div className="doc2-alert" role="alert"><Icone nom="alerte" taille={20}/><p>{t.printAuditFailed}</p><button type="button" onClick={()=>{void markDocumentPrinted(opened.id).then(r=>{if(r.ok){setAuditPending(null);setError(null);void openDocument(opened.id);}else setError(t.printAuditFailed);});}}>{t.auditRetry}</button></div>:null}
      {!snapshot?<p className="doc2-legacy-note">{t.legacyRevisionNotice}</p>:null}
      <div className="doc2-paper-area"><div className="doc2-preview-toolbar doc2-issued-toolbar"><span className="doc2-preview-label">{t.preview}</span><div className="doc2-zoom" role="group" aria-label={t.zoom}>{ISSUED_ZOOMS.map(value=><button type="button" key={value} aria-pressed={issuedZoom===value} onClick={()=>{issuedManualZoom.current=true;setIssuedZoom(value);}}>{value} %</button>)}</div></div><div className="doc2-preview doc2-issued-preview"><div className="doc2-preview-sheet" style={{zoom:issuedZoom/100}} dangerouslySetInnerHTML={{__html:snapshot?.html??'<article class="doc2-page doc2-legacy doc-feuille doc-corps">'+(opened.renderedHtml??"")+'</article>'}}/></div></div>

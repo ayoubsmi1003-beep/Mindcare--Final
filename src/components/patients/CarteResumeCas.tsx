@@ -190,6 +190,7 @@ function ContenuSchema2({
   if (resume.contenu.schema !== 2) return <></>;
   const contenu = resume.contenu;
   const paragraphes = contenu.apercu.contexte;
+  const diagnostics = contenu.apercu.diagnostics;
   const vigilance = contenu.etatActuel.filter(isVigilance);
   const legacyEtat = contenu.etatActuel.filter((item) => !isVigilance(item));
   const groups = sourceGroups([...paragraphes, ...vigilance, ...contenu.apercu.diagnostics, ...contenu.apercu.traitements]);
@@ -209,6 +210,13 @@ function ContenuSchema2({
             </p>
           ))}
         </div>
+      )}
+
+      {diagnostics.length === 0 ? null : (
+        <p className="m-0 break-words font-ui text-body leading-relaxed text-ink-900">
+          {diagnostics.length === 1 ? patientSummary.diagnosticIntro : patientSummary.diagnosticsIntro}{" "}
+          {diagnostics.map((item) => item.texte).join("; ")}.
+        </p>
       )}
 
       {vigilance.length > 0 ? (

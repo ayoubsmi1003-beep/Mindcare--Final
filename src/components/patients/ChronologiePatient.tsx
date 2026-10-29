@@ -22,11 +22,9 @@
 
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Bouton, EtatVide, PastilleIcone, Squelette } from "@/components/ui";
-import { Icone } from "@/components/ui/Icones";
 import type { NomIcone } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import {
@@ -35,12 +33,7 @@ import {
   type TimelineEvent,
   type TimelineLabelKey,
 } from "@/services/patients";
-import { getConsultation } from "@/services/consultations";
-import { chargerAnalyse } from "@/services/jarvis";
-import {
-  DetailSeanceAccordion,
-  type DetailSeanceChargee,
-} from "@/components/consultation/DetailSeanceAccordion";
+import { CarteSeancePasse } from "@/components/consultation/CarteSeancePasse";
 
 import { heure, jourLong, moisLong } from "./format";
 
@@ -153,111 +146,50 @@ function detailLisible(evenement: TimelineEvent): string | null {
  * Une ligne consultation — LE MÊME pli que dans la séance en cours.
  *
  * Avant, elle naviguait vers `/consultation/[id]` : quitter la fiche pour
- * relire une note, c'est perdre le dossier des yeux. Maintenant les notes
- * se déplient ICI, via le même `DetailSeanceAccordion` — une seule
- * implémentation, les deux écrans ne divergent pas. Le lien vers la séance
- * reste, discret, en bas du pli, pour le cas où il faut tout le contexte.
+ * relire une note, c'est perdre le dossier des yeux. Maintenant le résumé de
+ * la séance est une carte, avec le même composant que la vue d'ensemble et
+ * l'historique de consultation. Le détail (SOAP + analyse) s'ouvre sur place,
+ * et le lien vers la séance reste disponible en bas.
  *
  * ⚠️ Le dépliage charge via `get_consultation`, qui journalise sa lecture
  * (règle 6) : relire une séance est un accès au dossier, même depuis la
  * fiche. La porte rend `c.id` comme `event_id` pour ce type (048).
  */
-function LigneConsultation({ evenement }: { readonly evenement: TimelineEvent }): React.JSX.Element {
-  const [ouvert, setOuvert] = useState(false);
-  const [detail, setDetail] = useState<DetailSeanceChargee | undefined>(undefined);
-
-  const jour = jourLong(evenement.occurredAt);
-  const h = heure(evenement.occurredAt);
-
-  function basculer(): void {
-    if (ouvert) {
-      setOuvert(false);
-      return;
-    }
-    setOuvert(true);
-    if (detail !== undefined) return;
-    // Les deux lectures partent ENSEMBLE : l'analyse n'est pas une suite de
-    // la note, et les enchaîner doublerait l'attente pour rien.
-    void Promise.all([
-      getConsultation(evenement.eventId),
-      chargerAnalyse(evenement.eventId),
-    ]).then(([resSeance, resAnalyse]) => {
-      const charge: DetailSeanceChargee = {
-        seance: resSeance.ok ? resSeance.data : null,
-        analyse: resAnalyse.ok ? resAnalyse.data : null,
-        erreur: resSeance.ok ? undefined : resSeance.error.message,
-      };
-      setDetail(charge);
-    });
-  }
-
+function LigneConsultation({
+  evenement,
+  chargementAuto,
+}: {
+  readonly evenement: TimelineEvent;
+  readonly chargementAuto: boolean;
+}): React.JSX.Element {
   return (
     <li className="flex gap-4 py-4">
       {/* Le filet de temps : une colonne fine, continue, qui relie les
           événements sans les encadrer chacun dans une carte. */}
       <div className="flex shrink-0 flex-col items-center gap-2">
-        <PastilleIcone nom={ICONES[evenement.eventType]} ton="neutre" />
+        <PastilleIcone nom="resume" ton="action" />
         <span aria-hidden="true" className="w-0 grow border-l border-rule" />
       </div>
 
       <div className="flex min-w-0 grow flex-col gap-1 pb-2">
-        <button
-          type="button"
-          onClick={basculer}
-          aria-expanded={ouvert}
-          className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 rounded text-left outline-none transition duration-instant ease-soft focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
-        >
-          <span className="font-ui text-body font-medium text-ink-900">
-            {LIBELLES[evenement.labelKey]}
-          </span>
-          <span className="font-ui text-label tracking-label text-ink-500 tabular-nums">
-            {jour ?? fr.etats.texteAbsent}
-            {h === null ? null : ` · ${h}`}
-          </span>
-          {evenement.practitionerName === null ? null : (
-            <span className="truncate font-ui text-label tracking-label text-ink-500">
-              {evenement.practitionerName}
-            </span>
-          )}
-          <span
-            aria-hidden="true"
-            className={[
-              "shrink-0 text-ink-500 transition-transform duration-quick",
-              ouvert ? "rotate-90" : "",
-            ].join(" ")}
-          >
-            <Icone nom="chevron" taille={16} />
-          </span>
-        </button>
-
-        {ouvert ? (
-          <div className="flex min-w-0 flex-col gap-3 pt-2">
-            {detail === undefined ? (
-              <Squelette lignes={4} />
-            ) : (
-              <DetailSeanceAccordion detail={detail} />
-            )}
-            <span>
-              <Link
-                href={`/consultation/${evenement.eventId}`}
-                className="rounded font-ui text-label tracking-label text-action-600 underline decoration-rule underline-offset-2 outline-none hover:decoration-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
-              >
-                {fr.patients.actions.ouvrirConsultation} →
-              </Link>
-            </span>
-          </div>
-        ) : null}
+        <CarteSeancePasse evenement={evenement} chargementAuto={chargementAuto} />
       </div>
     </li>
   );
 }
 
-function LigneEvenement({ evenement }: { readonly evenement: TimelineEvent }): React.JSX.Element {
+function LigneEvenement({
+  evenement,
+  chargementAuto,
+}: {
+  readonly evenement: TimelineEvent;
+  readonly chargementAuto: boolean;
+}): React.JSX.Element {
   // Les consultations se déplient sur place (notes directes) ; les autres
   // événements n'ont pas d'écran propre — les rendre cliquables promettrait
   // une destination qui n'existe pas.
-  if (evenement.eventType === "consultation") {
-    return <LigneConsultation evenement={evenement} />;
+  if (evenement.eventType === "consultation" && evenement.labelKey === "consultation_close") {
+    return <LigneConsultation evenement={evenement} chargementAuto={chargementAuto} />;
   }
 
   const detail = detailLisible(evenement);
@@ -322,7 +254,9 @@ export function ChronologiePatient({
         setMessageErreur(result.error.message);
         return;
       }
-      setEvenements(result.data.evenements);
+      // La signature n'est plus un geste visible : son événement technique
+      // n'a pas à encombrer l'histoire clinique. La trace reste en base.
+      setEvenements(result.data.evenements.filter((event) => event.labelKey !== "note_signee"));
       setCurseur(result.data.curseurSuivant);
       setFini(result.data.curseurSuivant === null);
     });
@@ -343,7 +277,10 @@ export function ChronologiePatient({
       }
       // Concaténation : le keyset garantit qu'aucun événement déjà affiché ne
       // revient, même si de nouveaux se sont insérés entre-temps.
-      setEvenements((precedents) => [...precedents, ...result.data.evenements]);
+      setEvenements((precedents) => [
+        ...precedents,
+        ...result.data.evenements.filter((event) => event.labelKey !== "note_signee"),
+      ]);
       setCurseur(result.data.curseurSuivant);
       setFini(result.data.curseurSuivant === null);
     });
@@ -364,6 +301,7 @@ export function ChronologiePatient({
   // Intertitres par mois : un flux de cinquante lignes sans repère temporel
   // oblige à lire chaque date pour se situer.
   let moisCourant: string | null = null;
+  let consultationsVues = 0;
 
   return (
     <div className="flex flex-col gap-4">
@@ -372,6 +310,10 @@ export function ChronologiePatient({
           const mois = moisLong(e.occurredAt);
           const nouveauMois = mois !== null && mois !== moisCourant;
           if (nouveauMois) moisCourant = mois;
+          const chargementAuto =
+            e.eventType === "consultation" && e.labelKey === "consultation_close"
+              ? consultationsVues++ < 5
+              : false;
 
           return (
             <li key={`${e.eventId}-${e.labelKey}`} className="list-none">
@@ -381,7 +323,7 @@ export function ChronologiePatient({
                 </h3>
               ) : null}
               <ul className="m-0 list-none p-0">
-                <LigneEvenement evenement={e} />
+                <LigneEvenement evenement={e} chargementAuto={chargementAuto} />
               </ul>
             </li>
           );

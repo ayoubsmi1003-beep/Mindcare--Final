@@ -80,5 +80,8 @@ describe("rerank secondaire : échec fermé, jamais de faux rerank", () => {
     const ranges = await r.rerankerAsync("q", [fusionne({ chunkId: "a" }), fusionne({ chunkId: "b" })], 5);
     expect(ranges.map((x) => x.candidat.chunkId)).toEqual(["a", "b"]);
     expect(r.nom).toBe("mmarco-mMiniLMv2");
+    expect(statutRerankSecondaire()).toMatchObject({
+      etat: "pret", model: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1", revision: "rev-test", inferences: 1,
+    });
   });
 });

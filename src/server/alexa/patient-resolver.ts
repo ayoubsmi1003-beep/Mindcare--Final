@@ -17,7 +17,36 @@ const hasIdentity = (row: PatientRow) => typeof row.id === "string" && uuid.test
   && typeof row.first_name === "string" && row.first_name.trim().length > 0
   && typeof row.last_name === "string" && row.last_name.trim().length > 0;
 const matchesName = (row: PatientRow, name: string) => hasIdentity(row)
-  && [fullName(row), `${row.last_name} ${row.first_name}`, row.first_name!, row.last_name!].some((value) => normalise(value) === name);
+  && [fullName(row), `${row.last_name} ${row.first_name}`].some((value) => normalise(value) === name);
+function nameDistance(left: string, right: string): number {
+  const a = Array.from(left), b = Array.from(right);
+  if (!a.length || !b.length) return 1;
+  let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i++) {
+    const current: number[] = [i];
+    for (let j = 1; j <= b.length; j++) {
+      current[j] = Math.min(current[j - 1]! + 1, previous[j]! + 1, previous[j - 1]! + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    previous = current;
+  }
+  return previous[b.length]! / Math.max(a.length, b.length);
+}
+function nameRotations(value: string): string[] {
+  const words = value.split(/\s+/u);
+  return words.length >= 2 && words.length <= 4
+    ? words.map((_, index) => [...words.slice(index), ...words.slice(0, index)].join(" "))
+    : [value];
+}
+function rankedCandidates(rows: readonly PatientRow[], name: string) {
+  const searches = nameRotations(normalise(name));
+  return rows.filter(hasIdentity).map((row) => {
+    const names = [fullName(row), `${row.last_name} ${row.first_name}`, row.first_name!, row.last_name!].map(normalise);
+    return { row, distance: Math.min(...searches.flatMap((search) => names.map((candidate) => nameDistance(search, candidate)))) };
+  }).sort((left, right) => left.distance - right.distance
+    || normalise(fullName(left.row)).localeCompare(normalise(fullName(right.row)), "fr")
+    || left.row.id.localeCompare(right.row.id))
+    .map(({ row }) => ({ patientId: row.id, label: fullName(row) }));
+}
 function searchCount(value: unknown): number | null {
   if (typeof value !== "number" && !(typeof value === "string" && /^[1-9]\d*$/.test(value))) return null;
   const count = Number(value);
@@ -40,7 +69,7 @@ async function resolveArchivedName(db:Pick<DbPort,"rpc">,name:string,asOf:string
    const wrapped=page.data[0],raw=typeof wrapped==="object"&&wrapped!==null&&"search_patients" in wrapped?wrapped.search_patients:wrapped;
    const parsed=archivedPatientPageSchema.safeParse(raw);
    if(!parsed.success||parsed.data.offset!==offset||parsed.data.rows.length>parsed.data.total||new Set(parsed.data.rows.map(row=>row.id)).size!==parsed.data.rows.length)return {status:"unavailable"};
-   if(total===undefined){total=parsed.data.total;revision=parsed.data.revision;if(total>100)return {status:"ambiguous",candidates:parsed.data.rows.map(row=>({patientId:row.id,label:fullName(row)}))};}
+   if(total===undefined){total=parsed.data.total;revision=parsed.data.revision;if(total>100)return {status:"ambiguous",candidates:rankedCandidates(parsed.data.rows,name)};}
    if(parsed.data.total!==total||parsed.data.revision!==revision)return {status:"unavailable"};
    rows.push(...parsed.data.rows);
    if(rows.length===total)break;
@@ -48,9 +77,9 @@ async function resolveArchivedName(db:Pick<DbPort,"rpc">,name:string,asOf:string
   }
   if(total===undefined)return {status:"unavailable"};
   if(total===0)return {status:"absent"};
-  if(rows.length!==total||new Set(rows.map(row=>row.id)).size!==rows.length||rows.some(row=>!hasIdentity(row)))return {status:"ambiguous",candidates:rows.filter(hasIdentity).map(row=>({patientId:row.id,label:fullName(row)}))};
+  if(rows.length!==total||new Set(rows.map(row=>row.id)).size!==rows.length||rows.some(row=>!hasIdentity(row)))return {status:"ambiguous",candidates:rankedCandidates(rows,name)};
   const exact=rows.filter(row=>matchesName(row,normalise(name)));
-  return exact.length===1?resolved(exact[0]!):{status:"ambiguous",candidates:rows.map(row=>({patientId:row.id,label:fullName(row)}))};
+  return exact.length===1?resolved(exact[0]!):{status:"ambiguous",candidates:rankedCandidates(rows,name)};
  }catch{return {status:signal?.aborted?"cancelled":"unavailable"};}
 }
 
@@ -80,7 +109,6 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
         }
       }
       if (search.data.length === 0) {
-        if(name.trim().split(/\s+/u).length<2)return {status:"absent"};
         const archived=await resolveArchivedName(db,name,asOf??new Date().toISOString(),signal);
         if(archived.status!=="resolved")return archived;
         target=archived.patientId;requestedName=normalise(name);
@@ -106,7 +134,7 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
         && candidates.every((row) => searchCount(row.total_count) === candidates.length)
         && new Set(candidates.map((row) => row.id)).size === candidates.length;
       if (!complete || exact.length !== 1) {
-        return { status: "ambiguous", candidates: candidates.map((row) => ({ patientId: row.id, label: fullName(row) })) };
+        return { status: "ambiguous", candidates: rankedCandidates(candidates, name) };
       }
       target = exact[0]?.id;
       }

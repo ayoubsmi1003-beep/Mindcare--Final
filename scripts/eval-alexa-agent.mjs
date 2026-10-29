@@ -1,10 +1,12 @@
 /** Real French MiniCPM + actor-bound SQL. Explicit isolated, synthetic-only preflight; no .env reads. */
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { resolve, join, relative, isAbsolute } from "node:path";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { createHash, randomUUID } from "node:crypto";
 import {finalizeAlexaAdmission} from './lib/alexa-eval-admission.mjs';
+import { BOOK_RAG_REQUIRED_MIGRATIONS, resolveV8CampaignDatabaseUrls, validateBookRagSource, validateV8MigrationInventory } from "./lib/alexa-v8-manifest.mjs";
+import { sanitizeAlexaEvaluationArtifact } from "./lib/alexa-eval-artifact.mjs";
 
 if(process.argv.includes('--review-report')){
  const {reviewRecordedCampaign}=await import('./lib/alexa-eval-clinical-review.mjs');
@@ -54,12 +56,7 @@ if (args.includes("--round-robin")) {
 const fixtureAsOf = manifest.fixtureAsOf;
 if (!fixtureAsOf) throw new Error("ExplicitFixtureClockRequired");
 
-const dbValue = process.env.MINDCARE_ALEXA_EVAL_DATABASE_URL;
-if (!dbValue) throw new Error("Set MINDCARE_ALEXA_EVAL_DATABASE_URL explicitly to an isolated alexa_eval database.");
-const db = new URL(dbValue);
-if (!["postgres:", "postgresql:"].includes(db.protocol) || !["127.0.0.1", "localhost"].includes(db.hostname) || !/^\/alexa_eval(?:_[a-z0-9_]+)?$/.test(db.pathname) || db.port === "55441") {
-  throw new Error("DisposableDatabaseRequired");
-}
+const { applicationUrl: dbValue, adminUrl } = resolveV8CampaignDatabaseUrls(process.env);
 process.env.MINDCARE_DATABASE_URL = dbValue;
 
 const actorIds = manifest.actors ?? {
@@ -69,17 +66,24 @@ const actorIds = manifest.actors ?? {
 const actorRoles = { owner: 'owner', assistant: 'assistant', other: 'practitioner' };
 if (!actorIds.owner || Object.entries(actorIds).some(([key,id]) => !Object.hasOwn(actorRoles,key) || typeof id !== 'string' || !/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(id))) throw Error('InvalidFixtureActors');
 for (const spec of manifest.cases) if (!actorIds[spec.expected.actor ?? 'owner']) throw Error('UnknownFixtureActor');
-const adminValue = process.env.MINDCARE_ALEXA_EVAL_ADMIN_URL;
-if (!adminValue) throw Error('ExplicitDisposablePreflightAdminRequired');
-const admin = new URL(adminValue);
-if (!['postgres:', 'postgresql:'].includes(admin.protocol) || !['127.0.0.1','localhost'].includes(admin.hostname) || admin.port !== db.port || admin.pathname !== db.pathname) throw Error('DisposablePreflightTargetMismatch');
 const { Client } = require('pg');
-const preflight = new Client({ connectionString: admin.href, connectionTimeoutMillis: 10000 });
+const preflight = new Client({ connectionString: adminUrl, connectionTimeoutMillis: 10000 });
 let sourceCount;
 try {
  await preflight.connect();
- const check = (await preflight.query('SELECT current_database() name, count(*) FILTER (WHERE is_synthetic IS DISTINCT FROM true)::int unsafe FROM app.patients')).rows[0];
- if (check?.name !== db.pathname.slice(1) || check.unsafe !== 0) throw Error('SyntheticDatabasePreflightFailed');
+ const check = (await preflight.query(`SELECT current_database() AS "database",
+   (SELECT count(*)::int FROM app.patients) AS patients,
+   (SELECT count(*)::int FROM app.consultations) AS consultations,
+   (SELECT count(*) FILTER (WHERE is_synthetic IS DISTINCT FROM true)::int FROM app.patients) AS "nonSynthetic",
+   (SELECT count(*)::int FROM app.schema_migrations WHERE version = ANY($1::text[])) AS "appliedMigrationsThrough200"`,
+ [BOOK_RAG_REQUIRED_MIGRATIONS])).rows[0];
+ validateBookRagSource(check);
+ const repositoryVersions = (await readdir(join(root, "supabase", "migrations")))
+  .filter(file => file.endsWith(".sql"))
+  .map(file => file.slice(0, -4));
+ const appliedVersions = (await preflight.query("SELECT version FROM app.schema_migrations ORDER BY version"))
+  .rows.map(row => row.version);
+ validateV8MigrationInventory({ repositoryVersions, appliedVersions });
  for (const [key,id] of Object.entries(actorIds)) {
   const profile = (await preflight.query('SELECT cabinet_id,role::text FROM app.profiles WHERE id=$1',[id])).rows[0];
   if (!profile || profile.role !== actorRoles[key] || (manifest.fixtureCabinet && profile.cabinet_id !== manifest.fixtureCabinet)) throw Error('FixtureActorScopeMismatch');
@@ -97,7 +101,7 @@ await mkdir(resolve(output, ".."), { recursive: true });
 const entry = join(outDir, "entry.mjs");
 await build({
   stdin: {
-    contents: "export {runAlexa} from '@/server/alexa/orchestrator';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {agentSchemas,compactDeclarationSchema,ALEXA_NATIVE_DEADLINE_MS,ALEXA_NATIVE_BUDGET} from '@/shared/alexa/agent';export {withCaller} from '@/server/db/withCaller';export {fermerPool} from '@/server/db/pool';",
+    contents: "export {runAlexa} from '@/server/alexa/orchestrator';export {ALEXA_CONVERSATION_MODEL} from '@/server/alexa/model-policy';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {agentSchemas,compactDeclarationSchema,ALEXA_NATIVE_DEADLINE_MS,ALEXA_NATIVE_BUDGET} from '@/shared/alexa/agent';export {withCaller} from '@/server/db/withCaller';export {fermerPool} from '@/server/db/pool';",
     resolveDir: root,
     loader: "ts",
   },
@@ -117,6 +121,7 @@ const run = {
   bundleSha256: createHash('sha256').update(await readFile(entry)).digest('hex'),
   manifestSha256: createHash('sha256').update(manifestSource).digest('hex'),
   fixtureAsOf,
+  execution: { model: api.ALEXA_CONVERSATION_MODEL, recipe: "native-agent", gate: "runAlexa", invocation: "in_process", fallback: { used: false, causes: [] } },
   capabilities: { approvedBookFixtureAvailable: process.env.MINDCARE_ALEXA_EVAL_NO_KNOWLEDGE !== '1' },
 };
 const rows = [];
@@ -204,7 +209,7 @@ for (const spec of manifest.cases) {
             timings.inference.push({ ms: Date.now() - time, error: code });
             throw error;
           }
-          timings.inference.push({ ms: Date.now() - time, tokensIn: result.tokensIn, tokensOut: result.tokensOut, kind: result.kind, ...(result.kind === 'answer' ? { plainText: result.text.slice(0, 1200) } : {}) });
+          timings.inference.push({ ms: Date.now() - time, tokensIn: result.tokensIn, tokensOut: result.tokensOut, kind: result.kind });
           if (result.kind === "calls") {
             for (const call of result.calls) {
               const schema = call.name === "declare_request" ? api.compactDeclarationSchema : api.agentSchemas[call.name];
@@ -250,12 +255,12 @@ for (const spec of manifest.cases) {
       infrastructureBlock = startupError;
     }
     rows.push(result);
-    console.log(`${result.status} ${spec.id} ${result.ms}ms ${result.failures.join("; ")}`);
+    console.log(`${result.status} ${spec.id} ${result.ms}ms checks-failed=${result.failures.length}`);
   } catch (error) {
     rows.push({ id: spec.id, scenario: spec.scenario, language: spec.language, status: "FAIL", classification: "infrastructure-or-harness", reason: error instanceof Error ? error.message : "unknown" });
     console.log(`FAIL ${spec.id} harness`);
   }
-  await writeFile(output, JSON.stringify({ version: 1, status: "PARTIAL", baseline: manifest.baseline, run, rows, records }, null, 2));
+  await writeFile(output, JSON.stringify(sanitizeAlexaEvaluationArtifact({ version: 1, status: "PARTIAL", baseline: manifest.baseline, run, rows, records }), null, 2));
   if (infrastructureBlock) break;
 }
 
@@ -264,7 +269,7 @@ for (const spec of manifest.cases) if (!rows.some(row => row.id === spec.id)) ro
 await api.releaseLocalModel();
 await api.fermerPool();
 const tally = Object.fromEntries(["PASS", "FAIL", "PARTIAL", "NOT RUN"].map((status) => [status, rows.filter((row) => row.status === status).length]));
-const report = {
+const report = sanitizeAlexaEvaluationArtifact({
   version: 1,
   status: tally.FAIL ? "FAIL" : tally["NOT RUN"] ? "PARTIAL" : "PASS",
   baseline: manifest.baseline,
@@ -273,7 +278,7 @@ const report = {
   rows,
   records,
   release: "NO-GO until all correctness, completeness, security, browser, voice and packaging gates pass",
-};
+});
 await writeFile(output, JSON.stringify(report, null, 2));
 console.log(JSON.stringify(tally));
 process.exitCode = tally.FAIL ? 1 : 0;

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { selectV8Cases, validateV8Manifest, validateV8Target, validateV8Source } from '../../scripts/lib/alexa-v8-manifest.mjs';
+import { selectV8Cases, validateV8Manifest, validateV8Target, validateV8Source, validateV8MigrationInventory } from '../../scripts/lib/alexa-v8-manifest.mjs';
 
 type V8Manifest = {
   status: string;
@@ -105,5 +105,21 @@ describe('Alexa V8 evaluation database', () => {
     expect(() => validateV8Source({ ...source, database: 'mindcare' })).toThrow(/synthetic/i);
     expect(() => validateV8Source({ ...source, nonSynthetic: 1 })).toThrow(/synthetic/i);
     expect(() => validateV8Source({ ...source, consultations: 8142 })).toThrow(/synthetic/i);
+  });
+
+  it('requires the V8 evaluation database migration registry to match the current source inventory exactly', () => {
+    const repositoryVersions = ['194_alexa_consultation_scale_read', '200_recherche_medicaments_plan',
+      '205_diagnosis_gates', '206_diagnosis_synthetic_flag'];
+    expect(validateV8MigrationInventory({ repositoryVersions, appliedVersions: [...repositoryVersions] })).toEqual({
+      status: 'PASS', repositoryCount: 4, appliedCount: 4, highestRepositoryVersion: '206_diagnosis_synthetic_flag',
+    });
+    expect(() => validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: repositoryVersions.slice(0, -1),
+    })).toThrow('V8MigrationInventoryMismatch');
+    expect(() => validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: [...repositoryVersions, '207_untracked_database_migration'],
+    })).toThrow('V8MigrationInventoryMismatch');
   });
 });

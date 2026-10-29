@@ -24,6 +24,107 @@ export function validateV8Target(value) {
   }
 }
 
+export const BOOK_RAG_REQUIRED_MIGRATIONS = Object.freeze([
+  '195_recherche_medicaments_complete',
+  '196_recherche_patients_complete',
+  '197_recherche_medicaments_infixe',
+  '198_recherche_medicaments_rls',
+  '199_recherche_medicaments_scan',
+  '200_recherche_medicaments_plan',
+]);
+
+export function resolveBookRagDatabaseUrl(env) {
+  const value = env?.MINDCARE_ALEXA_EVAL_DATABASE_URL;
+  if (typeof value !== 'string' || value.trim() === '') {
+    throw new Error('An explicit V8 synthetic evaluation URL is required');
+  }
+  validateV8Target(value);
+  return value;
+}
+
+export function resolveV8CampaignDatabaseUrls(env) {
+  const applicationUrl = resolveBookRagDatabaseUrl(env);
+  const adminUrl = env?.MINDCARE_ALEXA_EVAL_ADMIN_URL;
+  if (typeof adminUrl !== 'string' || adminUrl.trim() === '') {
+    throw new Error('An explicit V8 disposable admin URL is required');
+  }
+  validateV8Target(adminUrl);
+  const application = new URL(applicationUrl);
+  const admin = new URL(adminUrl);
+  if (application.hostname !== admin.hostname || application.port !== admin.port || application.pathname !== admin.pathname) {
+    throw new Error('V8 application and preflight URLs must target the same disposable database');
+  }
+  return { applicationUrl, adminUrl };
+}
+
+export function validateBookRagSource(value) {
+  if (!value || value.database !== 'alexa_eval_v8_intelligence_20261027' ||
+      Number(value.patients) !== 1558 || Number(value.consultations) !== 8143 ||
+      Number(value.nonSynthetic) !== 0) {
+    throw new Error('Verified V8 synthetic evaluation snapshot required');
+  }
+  if (Number(value.appliedMigrationsThrough200) !== BOOK_RAG_REQUIRED_MIGRATIONS.length) {
+    throw new Error('V8 book evaluation requires all application migrations 195 through 200');
+  }
+}
+
+function compareMigrationVersions(left, right) {
+  const leftNumber = Number(/^(\d+)_/u.exec(left)?.[1] ?? Number.NaN);
+  const rightNumber = Number(/^(\d+)_/u.exec(right)?.[1] ?? Number.NaN);
+  return leftNumber - rightNumber || left.localeCompare(right);
+}
+
+/** Refuse live evaluation against a migration registry that differs from this checkout. */
+export function validateV8MigrationInventory({ repositoryVersions, appliedVersions } = {}) {
+  const asSet = values => {
+    if (!Array.isArray(values) || !values.length || values.some(value =>
+      typeof value !== 'string' || value.trim() !== value || value.length > 240 || /[\\/]/u.test(value))) {
+      throw new Error('V8MigrationInventoryMismatch');
+    }
+    const versions = new Set(values);
+    if (versions.size !== values.length) throw new Error('V8MigrationInventoryMismatch');
+    return versions;
+  };
+  const repository = asSet(repositoryVersions);
+  const applied = asSet(appliedVersions);
+  if (repository.size !== applied.size || [...repository].some(version => !applied.has(version))) {
+    throw new Error('V8MigrationInventoryMismatch');
+  }
+  const highestRepositoryVersion = [...repository].sort(compareMigrationVersions).at(-1);
+  return {
+    status: 'PASS',
+    repositoryCount: repository.size,
+    appliedCount: applied.size,
+    highestRepositoryVersion,
+  };
+}
+
+export function assertBookRagArguments(args) {
+  if (args.some(arg => arg === '--url' || arg.startsWith('--url='))) {
+    throw new Error('--url is not supported; use the explicit V8 evaluation environment variable');
+  }
+}
+
+const v8SyntheticDockerTarget = Object.freeze({
+  container: 'mindcare-v8-intelligence-20261027',
+  database: 'alexa_eval_v8_intelligence_20261027',
+});
+
+export function resolveV8SyntheticDockerTarget(container, database) {
+  const target = {
+    container: container ?? v8SyntheticDockerTarget.container,
+    database: database ?? v8SyntheticDockerTarget.database,
+  };
+  if (target.container !== v8SyntheticDockerTarget.container || target.database !== v8SyntheticDockerTarget.database) {
+    throw new Error('V8 synthetic evaluation target only; refusing another Docker database.');
+  }
+  return target;
+}
+
+export function requireV8Migration194(applied) {
+  if (applied !== true) throw new Error('V8 synthetic target must include migration 194.');
+}
+
 export function validateV8Source(value) {
   if (!value || value.database !== 'alexa_eval_v8_intelligence_20261027' || value.nonSynthetic !== 0 ||
       value.patients !== 1558 || value.consultations !== 8143) {

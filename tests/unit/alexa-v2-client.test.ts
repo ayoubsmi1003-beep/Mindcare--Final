@@ -130,17 +130,20 @@ it("discards a pending stream chunk when the active dossier changes", async () =
   expect(sentences).toEqual([]);
 });
 
-it.each(["b", null])("keeps an explicit resolved scope %s for the follow-up while the open page still shows A", async resolved => {
-  vi.stubGlobal("window", { location: { pathname: "/jarvis" } });
+it.each(["b", null])("keeps active consultation context A separate from the resolved result %s", async resolved => {
+  const page = "/consultation/11111111-1111-4111-8111-111111111111";
+  vi.stubGlobal("window", { location: { pathname: page } });
   definirPatientActif({ id: "a", nom: "synthetic", numero: "test" });
-  const patients: unknown[] = [];
+  const contexts: unknown[] = [];
   vi.stubGlobal("fetch", async (_url: unknown, init: RequestInit) => {
-    const body = JSON.parse(String(init.body)); patients.push(body.appContext.patientId);
+    const body = JSON.parse(String(init.body)); contexts.push(body.appContext);
     return new Response(`data: ${JSON.stringify({ type: "done", patientId: resolved, limited: true })}\n\n`);
   });
-  await envoyerTourAlexa("résumé de Synthetic B");
+  const result = await envoyerTourAlexa("résumé de Synthetic B");
+  expect(result.patientId).toBe(resolved);
   await envoyerTourAlexa("et avant ?");
-  expect(patients).toEqual(["a", resolved]);
+  const activeContext = { patientId: "a", page, consultationId: "11111111-1111-4111-8111-111111111111" };
+  expect(contexts).toEqual([activeContext, activeContext]);
 });
 
 it.each(["a", "b"])("a nonclinical turn preserves verified scope %s without attributing its answer to that patient", async selected => {
@@ -157,10 +160,10 @@ it.each(["a", "b"])("a nonclinical turn preserves verified scope %s without attr
   const cash = await envoyerTourAlexa("Recette du jour");
   expect(cash.patientId).toBeNull();
   await envoyerTourAlexa("Le traitement actuel");
-  expect(patients).toEqual(["a", selected, selected]);
+  expect(patients).toEqual(["a", "a", "a"]);
 });
 
-it("an unresolved explicit patient clears the scope even after a nonclinical turn", async () => {
+it("keeps the active application patient while an unresolved explicit patient remains unresolved", async () => {
   vi.stubGlobal("window", { location: { pathname: "/patients/a" } });
   definirPatientActif({ id: "a", nom: "synthetic", numero: "test" });
   const patients: unknown[] = [];
@@ -173,7 +176,7 @@ it("an unresolved explicit patient clears the scope even after a nonclinical tur
   await envoyerTourAlexa("Recette du jour");
   await envoyerTourAlexa("traitement de Synthetic Unknown");
   await envoyerTourAlexa("Et le traitement ?");
-  expect(patients).toEqual(["a", "a", null]);
+  expect(patients).toEqual(["a", "a", "a"]);
 });
 
 it("does not commit a new patient scope if cancellation follows done before stream completion", async () => {

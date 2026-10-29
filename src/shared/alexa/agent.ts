@@ -142,7 +142,7 @@ export const agentSchemas = {
 export type AgentToolName = keyof typeof agentSchemas;
 export interface AgentCall { id: string; name: string; args: Record<string, unknown> }
 export interface AgentResult { callId: string; status: "ok" | "empty" | "partial" | "needs_input" | "error" | "unsupported"; complete: boolean;
-  presentation?: "inference"; data?: unknown; evidence: AlexaSource[]; text: string; conditionKeys: string[]; proposal?: AlexaProposal; patientId?: string;
+  presentation?: "inference" | "knowledge"; data?: unknown; evidence: AlexaSource[]; text: string; conditionKeys: string[]; proposal?: AlexaProposal; patientId?: string;
   links?: import('./answer-links').AlexaAnswerLink[]; navigation?: AlexaNavigation; error?: { code: string; retryable: boolean }; }
 export type AgentTerminal = "completed" | "partial" | "needs_input" | "needs_confirmation" | "failed" | "cancelled";
 export class AgentReadError extends Error {

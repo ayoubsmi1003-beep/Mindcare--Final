@@ -162,7 +162,8 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     for(const [index,text] of result.sentences.entries()){
       const response=responses[index]?.text===text?responses[index]:undefined;
       const synthesis=!response&&text.startsWith(agentCopy.fr.synthesis+"\n");
-      emit({type:"sentence",text,kind:response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact",sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
+      const kind=response?.presentation==="knowledge"?"knowledge":response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact";
+      emit({type:"sentence",text,kind,sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
     if(result.proposal)emit({type:"proposal",...result.proposal});
     const nextPlan=dependencies.resumeCursor&&previous?previous:inheritedAgendaText&&previous?.agendaDay?{intent:'agenda' as const,count:previous.count,agendaDay:previous.agendaDay,...(previous.agendaRequestedOnly!==undefined?{agendaRequestedOnly:previous.agendaRequestedOnly}:{})}:planRequest(turnInput.text,previous,asOf);
@@ -174,7 +175,7 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     if(newPatients)reference.patients=newPatients;else if(selectedListedPatient&&previous?.patients)reference.patients=previous.patients;else if(!inheritedText)delete reference.patients;
     if(selectedPatientId)reference.selectedPatientId=selectedPatientId;else delete reference.selectedPatientId;
     conversationState.finish(lease,reference);
-    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed: result.status === "completed",...(result.navigation?{navigation:result.navigation}:{})});
+    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed:result.speechAllowed??result.status==="completed",...(result.navigation?{navigation:result.navigation}:{})});
     return;
   }
   if (signal.aborted) { emit({ type: "error", code: "cancelled", message: dialogue(planRequest(input.text, null).language).stale }); return; }
@@ -403,7 +404,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
     }
     else if (plan.intent === "knowledge") {
       emit({ type: "stage", stage: "knowledge" });
-      const result = await readKnowledge(dependencies.knowledge, plan.knowledgeQuery??input.text, signal);
+      const result = await readKnowledge(dependencies.knowledge, plan.knowledgeQuery??input.text, signal, undefined, { traceOrigin: "direct" });
       active();
       const events = await synthesizeKnowledge(result, input.text, plan.language, signal);
       active();
@@ -489,7 +490,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
       }
       if (plan.includeKnowledge) {
         emit({ type: "stage", stage: "knowledge" });
-        const knowledge = await readKnowledge(dependencies.knowledge, input.text, signal);
+        const knowledge = await readKnowledge(dependencies.knowledge, input.text, signal, undefined, { traceOrigin: "patient_context" });
         active();
         output.push(...knowledgeResponseEvents(knowledge, plan.language, true, resolution.identityTokens));
         limited ||= knowledge.etat !== "ok";

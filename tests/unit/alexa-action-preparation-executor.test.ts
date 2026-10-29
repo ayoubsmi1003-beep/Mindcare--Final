@@ -14,10 +14,11 @@ const context=(current=[treatment])=>({patientId:patient,consultations:[],treatm
 const draft={id:draftId,patientId:patient,kind:"certificat_medical",templateId:"55555555-5555-4555-8555-555555555555",templateVersion:2,content:{type:"doc" as const,content:[{type:"paragraph" as const,content:[{type:"field" as const,attrs:{name:"motif",value:"ancien motif"}},{type:"text" as const,text:" conservé"}]}]},variables:{motif:"ancien motif",jours:"14"},revision:3,documentDate:"2026-10-01",rendererVersion:"v2",issuedDocumentId:null,archivedAt:null,title:"Certificat médical",patientName:"Nadia Test"};
 const input=(text:string,page="/jarvis"):TurnInput=>({text,conversationId:"conversation",clientTurnId:"11111111-1111-4111-8111-111111111111",appContext:{patientId:patient,page}});
 
-function executor(text:string,options:{treatments?:typeof treatment[];drafts?:typeof draft[];documents?:readonly unknown[];page?:string}={}){
+function executor(text:string,options:{treatments?:typeof treatment[];drafts?:typeof draft[];documents?:readonly unknown[];medicationCatalog?:readonly unknown[];page?:string}={}){
  const rpc=scriptedAlexaRpc(async(name)=>{
   if(name==="get_patient")return {ok:true as const,data:[{id:patient,first_name:"Nadia",last_name:"Test"}]};
   if(name==="get_alexa_clinical_context")return {ok:true as const,data:[context(options.treatments??[treatment])]};
+  if(name==="search_medications")return {ok:true as const,data:options.medicationCatalog??[{id:"99999999-9999-4999-8999-999999999999",raw_name:"Sertraline 25 mg",inn:"Sertraline",brand_name:"Zoloft",form:"comprimé",strength:"25 mg",source:"synthetic-catalogue"}]};
   if(name==="list_editable_document_drafts")return {ok:true as const,data:options.drafts??[draft]};
   if(name==="list_patient_documents")return {ok:true as const,data:options.documents??[{document_id:issuedDocumentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued"}]};
   throw Error("Unexpected gate: "+name);
@@ -45,6 +46,24 @@ it("prepares only the requested, current treatment fields with its current versi
  const result=await f.run({id:"change",name:"prepare_action",args:{partIds:["p"],action:"update_treatment",treatmentName:"Sertraline",changes:{dose:"50",doseUnit:"mg"}}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
  expect(result.status).toBe("ok");expect(result.proposal?.tool).toBe("update_treatment");
  expect(result.proposal?.args).toMatchObject({treatmentId,expectedVersion:4,patientId:patient,consultationId:null,changes:JSON.stringify({dose:"50",dose_unit:"mg"})});
+ expect(f.rpc).toHaveBeenCalledWith("search_medications",{p_query:"Sertraline",p_limit:50});
+});
+
+it("does not propose a treatment write unless its exact name is present in the local medication catalogue",async()=>{
+ const text="Modifie la Sertraline du dossier courant et passe la dose à 50 mg.";
+ const f=executor(text,{medicationCatalog:[]});
+ const result=await f.run({id:"change",name:"prepare_action",args:{partIds:["p"],action:"update_treatment",treatmentName:"Sertraline",changes:{dose:"50",doseUnit:"mg"}}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
+ expect(result).toMatchObject({status:"needs_input",error:{code:"treatment-medication-catalogue-unresolved"}});
+ expect(result.proposal).toBeUndefined();
+});
+
+it("does not use a catalogue brand alias to select a differently named current treatment",async()=>{
+ const text="Modifie le traitement Zoloft du dossier courant et passe la dose à 50 mg.";
+ const f=executor(text);
+ const result=await f.run({id:"change",name:"prepare_action",args:{partIds:["p"],action:"update_treatment",treatmentName:"Zoloft",changes:{dose:"50",doseUnit:"mg"}}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
+ expect(result).toMatchObject({status:"needs_input",error:{code:"treatment-target-missing"}});
+ expect(result.proposal).toBeUndefined();
+ expect(f.rpc.mock.calls.some(([name])=>name==="search_medications")).toBe(false);
 });
 
 it("asks instead of choosing when multiple current treatments fit a generic request",async()=>{
@@ -57,6 +76,14 @@ it("refuses a dose copied from the old regimen instead of the requested new valu
  const f=executor("Modifie la Sertraline du dossier courant et passe de 25 mg à 50 mg.");
  const result=await f.run({id:"change",name:"prepare_action",args:{partIds:["p"],action:"update_treatment",treatmentName:"Sertraline",changes:{dose:"25",doseUnit:"mg"}}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
  expect(result.status).toBe("needs_input");expect(result.proposal).toBeUndefined();
+});
+
+it("does not turn a requested tablet strength into a prescribed dose write",async()=>{
+ const f=executor("Modifie la Sertraline du dossier courant et passe à un comprimé de 50 mg.");
+ const result=await f.run({id:"change",name:"prepare_action",args:{partIds:["p"],action:"update_treatment",treatmentName:"Sertraline",changes:{dose:"50",doseUnit:"mg"}}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
+ expect(result.status).toBe("needs_input");
+ expect(result.error?.code).toBe("treatment-change-not-grounded");
+ expect(result.proposal).toBeUndefined();
 });
 
 it("opens and prepares one existing draft while preserving every untouched field",async()=>{

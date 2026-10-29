@@ -1,5 +1,5 @@
 /**
- * Racine du document — jetons, fontes, et le bandeau d'ADR-016.
+ * Racine du document — jetons, fontes et coquille applicative.
  *
  * ── LES FONTES, ET POURQUOI `google` PLUTÔT QUE `local` ────────────────────
  *
@@ -54,8 +54,6 @@ import {
   Montserrat,
   Source_Code_Pro,
 } from "next/font/google";
-
-import { SyntheticDataBanner } from "@/components/SyntheticDataBanner";
 
 // Source unique des jetons de design (I10). Importé au niveau racine : aucun
 // écran ne rend correctement sans lui, tailwind.config.ts ne faisant que
@@ -163,15 +161,12 @@ export default function RootLayout({
       className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteDisplay.variable} ${fonteInter.variable}`}
     >
       {/* ⚠️ COLONNE FLEX, ET CE N'EST PAS COSMÉTIQUE.
-          Le bandeau ADR-016 précède la coquille. Tant que `<body>` était un bloc
-          ordinaire, le rail — haut de `100vh` — commençait SOUS le bandeau et
-          dépassait donc du bas de l'écran d'exactement sa hauteur : « Se
-          déconnecter » tombait hors de vue. Mesuré à 1920×1080.
-          Ici le bandeau ne rétrécit pas (`shrink-0`), la coquille prend le reste
-          (`flex-1`), et le rail demande « toute la hauteur DISPONIBLE » au lieu
-          de « toute la hauteur de l'écran ». `min-h-0` autorise l'enfant flex à
-          être plus petit que son contenu, sans quoi il refuse de se comprimer et
-          le problème revient intact.
+          La coquille prend toute la hauteur disponible (`flex-1`) et le rail
+          demande « toute la hauteur DISPONIBLE » au lieu de « toute la hauteur
+          de l'écran ». `min-h-0` autorise l'enfant flex à être plus petit que
+          son contenu, sans quoi il refuse de se comprimer. Le bandeau ADR-016
+          a été retiré ; la structure flex reste, car elle garantit que « Se
+          déconnecter » reste visible en bas du rail à 1920×1080.
 
           ⚠️ `h-screen` ET NON `min-h-screen` : une hauteur MINIMALE ne résout
           aucun pourcentage chez les enfants — `h-full` sur le rail y retombait
@@ -182,21 +177,11 @@ export default function RootLayout({
           le mobilier reste fixe et où seul ce qu'on lit bouge. */}
       <body className="flex h-screen flex-col overflow-hidden">
         {process.env.NODE_ENV === "development" ? <Script id="extension-hydration-compatibility" strategy="beforeInteractive" dangerouslySetInnerHTML={{__html:extensionMarkerScript}} /> : null}
-        {/* ADR-016 — posé À LA RACINE, donc impossible à oublier sur un écran.
-            Placé dans un layout par page, il manquerait exactement là où on ne
-            l'a pas prévu, c'est-à-dire là où on en aurait besoin.
-
-            ⚠️ V3 DEVAIT LE SUPPRIMER. IL NE L'A PAS FAIT, ET C'EST DÉLIBÉRÉ.
-            Le contrat de session écrit « bandeau supprimé après V0 (il n'a plus
-            d'objet EN LOCAL) » — or on n'est pas en local : `app.deployment`
-            vaut toujours `cloud-dev`. Ce bandeau est la surface visible de la
-            condition 2 d'ADR-016 (« données synthétiques uniquement »), et il
-            s'efface DÉJÀ tout seul le jour où la base répond `self-hosted`.
-            Le retirer maintenant supprimerait une garantie vivante pour une
-            raison esthétique. Il a été RESTYLÉ, pas enlevé. */}
-        <div className="shrink-0">
-          <SyntheticDataBanner />
-        </div>
+        {/* Le bandeau ADR-016 a été retiré de la coquille le 2026-10-28, sur
+            décision de la praticienne : la base locale est déjà synthetic-only
+            et le bandeau reprenait la première ligne de chaque écran. La
+            garantie de déploiement reste vérifiée côté serveur, pas par un
+            bandeau permanent. */}
         <div className="flex min-h-0 flex-1 flex-col">{children}</div>
       </body>
     </html>

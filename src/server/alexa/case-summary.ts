@@ -8,6 +8,12 @@ import { consultationExcerpts } from "./note-excerpts";
 
 export interface SummaryItem { texte: string; sources: { t: "consultation" | "diagnostic" | "treatment"; id: string }[] }
 
+function diagnosisDate(value: string): string {
+  // These are SQL DATE values; avoid timezone parsing that can shift the day.
+  const match = /^(\d{4})-(\d{2})-(\d{2})/u.exec(value);
+  return match ? `${match[3]}/${match[2]}/${match[1]}` : value;
+}
+
 /** All five local note areas, with current drafts separate from completed visits. */
 export function buildConsultationNoteDetails(context: ClinicalContext, identities: readonly string[], language: AlexaLanguage = "fr"): SummaryItem[] {
   const copy = summaryDialogue(language);
@@ -72,7 +78,12 @@ export function buildCaseSummary(context: ClinicalContext, identities: readonly 
   const copy = dialogue("fr");
   const item = (texte: string, sources: SummaryItem["sources"]): SummaryItem => ({ texte: localDisplay(texte, identities), sources });
   const narrative = buildStructuredSummaryNarrative(context, identities);
-  const diagnostics = context.diagnoses.filter(d => !d.resolvedAt).map(d => item(d.label, [{ t: "diagnostic", id: d.id }]));
+  const diagnostics = context.diagnoses.map(d => {
+    const status = d.resolvedAt !== null
+      ? `résolu le ${diagnosisDate(d.resolvedAt)}`
+      : d.onsetDate !== null ? `actif depuis le ${diagnosisDate(d.onsetDate)}` : "actif";
+    return item(`${d.label} (${status})`, [{ t: "diagnostic", id: d.id }]);
+  });
   const treatments = context.treatments.current.map(t => item([t.medication, t.dose, t.doseUnit, t.frequency, copy.states[t.status]].filter(Boolean).join(" · "), [{ t: "treatment", id: t.id }]));
   const byYear = new Map<string, SummaryItem[]>();
   for (const consultation of context.consultations) {

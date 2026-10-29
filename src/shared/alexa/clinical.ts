@@ -2,7 +2,7 @@ import { z } from "zod";
 import { sessionDetailsSchema } from './session-details';
 
 /** Derived paragraphs must be regenerated after their validation policy changes. */
-export const SESSION_NARRATIVE_VERSION='alexa-narrative-fr-v30';
+export const SESSION_NARRATIVE_VERSION='alexa-narrative-fr-v33';
 
 const id = z.string().uuid();
 const nullableText = z.string().nullable();

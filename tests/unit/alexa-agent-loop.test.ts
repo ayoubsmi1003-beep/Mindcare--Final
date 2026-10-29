@@ -2,7 +2,7 @@ import { expect, it, vi } from "vitest";
 import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { runAgentLoop,restoreAgentTask,savedAgentTask } from "@/server/alexa/agent-loop";
+import { runAgentLoop,restoreAgentTask,savedAgentTask,summarizeAgentToolResultObservation } from "@/server/alexa/agent-loop";
 import {parsePatientMention} from "@/shared/alexa/patient-mention";
 import {explicitAgentPeriod} from '@/server/alexa/agent-period';
 import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agenda-plan';
@@ -683,6 +683,26 @@ it.each([
 it('lets synthetic evaluations observe only the result status and safe error code',async()=>{
  const observed:unknown[]=[];const result=await runAgentLoop({...input,text:'Comment fonctionne un ordinateur ?',conversationId:'observe-direct-result'},{actor:'observe-direct-result',observeResult:value=>observed.push(value),execute:async call=>({callId:call.id,status:'error',complete:false,text:'Réponse indisponible.',evidence:[],conditionKeys:[],error:{code:'general-invalid-response',retryable:false}})},new AbortController().signal);
  expect(result.status).toBe('failed');expect(observed).toEqual([{callId:expect.any(String),name:'answer_general',status:'error',errorCode:'general-invalid-response'}]);
+});
+it('records only bounded ambiguity and preparation metadata for action evaluation',()=>{
+ const observation=summarizeAgentToolResultObservation(
+  {id:'private-call-id',name:'prepare_action',args:{action:'create_appointment',patientId:'11111111-1111-4111-8111-111111111111'}},
+  {callId:'private-call-id',status:'needs_input',complete:false,text:'Alice Smith or Alice Smyth',evidence:[],conditionKeys:[],data:{candidates:[{patientId:'11111111-1111-4111-8111-111111111111',label:'Alice Smith'},{patientId:'22222222-2222-4222-8222-222222222222',label:'Alice Smyth'}]},error:{code:'patient-unresolved',retryable:false}},
+ );
+ expect(observation).toEqual({callId:'private-call-id',name:'prepare_action',status:'needs_input',errorCode:'patient-unresolved',actionName:'create_appointment',rankedCandidateCount:2,requiredInputWasMissing:true});
+ expect(JSON.stringify(observation)).not.toContain('Alice');
+ expect(JSON.stringify(observation)).not.toContain('11111111');
+});
+it('records medication validation only after a treatment proposal passed preparation gates',()=>{
+ const observation=summarizeAgentToolResultObservation(
+  {id:'call-2',name:'prepare_action',args:{action:'update_treatment'}},
+  {callId:'call-2',status:'ok',complete:true,text:'',evidence:[],conditionKeys:[],proposal:{tool:'update_treatment',args:{patientId:'11111111-1111-4111-8111-111111111111'}}},
+ );
+ expect(observation).toMatchObject({
+  actionName:'update_treatment',catalogIdentityVerified:true,currentTreatmentReadVerified:true,
+  doseInferenceAbsent:true,strengthInferenceAbsent:true,formulationInferenceAbsent:true,routeInferenceAbsent:true,medicationEquivalenceInferenceAbsent:true,
+ });
+ expect(JSON.stringify(observation)).not.toContain('11111111');
 });
 it('keeps a raw note page out of MiniCPM context before an independent second read',async()=>{
  const text='Pour Amel Bensaid, quelles sont les notes de consultation et combien de consultations terminées sont enregistrées ?';

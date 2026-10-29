@@ -80,6 +80,11 @@ export function localiserExtrait(texte: string): LocalisationPage | null {
   };
 }
 
+/** Retire le marqueur interne du texte affiché, sans modifier l'extrait source utilisé pour la provenance. */
+export function retirerMarqueursPageAffichage(texte: string): string {
+  return texte.replace(MARQUEUR, " ").replace(/[ \t]{2,}/gu, " ").trim();
+}
+
 /**
  * Vérifie que la localisation appartient bien à l'ouvrage attendu. `bookId`
  * attendu absent (recette d'édition inconnue) → la localisation est refusée :

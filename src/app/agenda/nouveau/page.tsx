@@ -161,9 +161,20 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
   }, [utilisateur]);
 
   useEffect(() => {
-    if (requetePatient === undefined) return;
+    const valeur = saisiePatient.trim();
+    const minuteur = setTimeout(() => {
+      setRequetePatient(valeur.length >= 2 ? valeur : undefined);
+    }, 120);
+    return () => clearTimeout(minuteur);
+  }, [saisiePatient]);
+
+  useEffect(() => {
+    if (requetePatient === undefined) {
+      setResultats(undefined);
+      return;
+    }
     let annule = false;
-    void searchPatients(requetePatient === "" ? {} : { query: requetePatient }).then((result) => {
+    void searchPatients({ query: requetePatient, limit: 25 }).then((result) => {
       if (annule) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
@@ -369,8 +380,8 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
                   placeholder={fr.patients.rechercherIndication}
                   onChange={(event) => setSaisiePatient(event.target.value)}
                   onKeyDown={(event) => {
-                    // La recherche journalise : elle se déclenche sur une
-                    // intention explicite, jamais à chaque frappe.
+                    // Entrée reste un raccourci immédiat ; la recherche part
+                    // aussi toute seule après 120 ms de saisie (debounce).
                     if (event.key === "Enter") {
                       event.preventDefault();
                       setRequetePatient(saisiePatient.trim());

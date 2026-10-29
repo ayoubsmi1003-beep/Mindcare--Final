@@ -28,6 +28,8 @@ const treatmentRow = z.object({
   medication_id: z.string(),
   medication_raw: z.string().nullable(),
   brand_name: z.string().nullable(),
+  strength: z.string().nullable().optional(),
+  instructions: z.string().nullable().optional(),
   inn: z.string().nullable().optional(),
   dose: z.string().nullable(),
   dose_unit: z.string().nullable(),
@@ -87,6 +89,8 @@ function treatmentFromRow(row: z.infer<typeof treatmentRow>): AutoFillTreatment 
     medicationId: row.medication_id,
     medicationRaw: row.medication_raw,
     brandName: row.brand_name,
+    strength: row.strength ?? null,
+    instructions: row.instructions ?? null,
     inn: row.inn ?? null,
     dose: row.dose,
     doseUnit: row.dose_unit,
@@ -120,6 +124,7 @@ function explicitDays(text: string): number | null {
 async function readConsultationDate(
   db: Pick<DbPort, "rpc">,
   page: string,
+  patientId: string,
   signal: AbortSignal,
 ): Promise<string | null> {
   const match = /^\/consultation\/([0-9a-f-]{36})$/iu.exec(page);
@@ -130,7 +135,7 @@ async function readConsultationDate(
   signal.throwIfAborted();
   if (!result.ok || result.data.length !== 1) return null;
   const parsed = consultationRow.safeParse(result.data[0]);
-  return parsed.success && z.uuid().safeParse(parsed.data.id).success ? parsed.data.started_at : null;
+  return parsed.success && parsed.data.id === id && parsed.data.patient_id === patientId ? parsed.data.started_at : null;
 }
 
 function civilDateFromInstant(value: string | null): string | null {
@@ -196,8 +201,11 @@ export async function resolveDocumentDraftInputs(
     if (days !== null) variables = { ...variables, jours: String(days) };
   }
   if (kind === "justification") {
-    const consultationDate = civilDateFromInstant(await readConsultationDate(db, page, signal));
-    if (consultationDate !== null) variables = { ...variables, date_consultation: consultationDate.split("-").reverse().join("/") };
+    if (page.startsWith("/consultation/")) {
+      const consultationDate = civilDateFromInstant(await readConsultationDate(db, page, patientId, signal));
+      if (consultationDate === null) return { state: "unavailable" };
+      variables = { ...variables, date_consultation: consultationDate.split("-").reverse().join("/") };
+    }
   }
 
   const missing = missingInitialFields(kind, variables);

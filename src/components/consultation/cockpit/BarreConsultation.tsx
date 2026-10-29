@@ -12,11 +12,9 @@ import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
  * était le SECOND du même écran (la barre supérieure le porte déjà). Ici :
  *   · « Note clinique n/4 » compte les quatre rubriques réellement remplies ;
  *   · « Échelles n » mène à la section, jamais à une liste inventée ;
- *   · « Signature » dit l'état, et le geste primaire suit cet état :
- *     Signer tant que la note est un brouillon, Terminer une fois signée.
- *
- * `clore` reste disponible avant signature, mais en rang secondaire : la
- * séquence clinique est visible sans retirer un chemin que la base autorise.
+ *   · le geste primaire est « Terminer la consultation ». La signature n'est
+ *     plus une étape visible : elle est posée au moment de la clôture, pour
+ *     que la note reste verrouillée et auditable sans ajouter un clic.
  */
 export function BarreConsultation({
   etatBrut,
@@ -26,14 +24,11 @@ export function BarreConsultation({
   soapRemplis,
   soapTotal,
   echellesCount,
-  noteSignee,
-  noteVide,
   seanceClose,
   tarifFixe,
   peutClore,
   envoi,
   enregistrer,
-  signer,
   clore,
   voirTarif,
   onVoirEchelles,
@@ -46,14 +41,11 @@ export function BarreConsultation({
   readonly soapRemplis: number;
   readonly soapTotal: number;
   readonly echellesCount: number;
-  readonly noteSignee: boolean;
-  readonly noteVide: boolean;
   readonly seanceClose: boolean;
   readonly tarifFixe: boolean | undefined;
   readonly peutClore: boolean;
   readonly envoi: boolean;
   readonly enregistrer: () => void;
-  readonly signer: () => void;
   readonly clore: () => void;
   readonly voirTarif: () => void;
   readonly onVoirEchelles: () => void;
@@ -94,23 +86,6 @@ export function BarreConsultation({
             <span>{echellesCount}</span>
           </button>
 
-          <span
-            className={[
-              classePuce,
-              noteSignee
-                ? "border-positive bg-positive-bg text-positive"
-                : "border-attention bg-attention-bg text-attention-ink",
-            ].join(" ")}
-          >
-            <span className="font-semibold">{progression.signature}</span>
-            <span>{noteSignee ? progression.signee : progression.nonSignee}</span>
-          </span>
-
-          {noteVide && !noteSignee ? (
-            <span className="font-ui text-label font-semibold text-attention-ink">
-              {progression.noteVide}
-            </span>
-          ) : null}
         </div>
 
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
@@ -155,19 +130,9 @@ export function BarreConsultation({
           >
             {fr.actions.enregistrer}
           </Bouton>
-          {!noteSignee && !seanceClose ? (
-            <Bouton
-              rang="principal"
-              taille="compact"
-              onClick={signer}
-              disabled={envoi || noteVide}
-            >
-              {fr.actions.signerLaNote}
-            </Bouton>
-          ) : null}
           {peutClore ? (
             <Bouton
-              rang={noteSignee ? "principal" : "secondaire"}
+              rang="principal"
               taille="compact"
               onClick={clore}
               disabled={envoi}

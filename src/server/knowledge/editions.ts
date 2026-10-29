@@ -13,9 +13,9 @@
  *
  * ═══ CE QUE CE N'EST PAS ═══
  *   · PAS un catalogue de retrieval : l'admission à la réponse Alexa reste
- *     décidée par `knowledge-query.ts` (DSM-5 + Maudsley uniquement, dérision
- *     d'édition refusée). Cette table ne fait qu'habiller une source DÉJÀ
- *     autorisée par les portes SQL.
+ *     décidée par `knowledge-query.ts` (DSM-5, Maudsley et Stahl 7e ; toute
+ *     dérive d'édition est refusée). Cette table ne fait qu'habiller une
+ *     source DÉJÀ autorisée par les portes SQL.
  *   · PAS une correspondance approximative : titre normalisé ET version
  *     exacte. Un titre qui ressemble ou une version qui a bougé → `null`.
  *     On préfère ne rien afficher plutôt que d'attribuer une édition fausse.
@@ -42,7 +42,7 @@ export interface EditionOuvrage {
   readonly langue: "fr" | "en";
 }
 
-/** Les deux seuls ouvrages admis à répondre (décision D2). */
+/** Les trois ouvrages admis à répondre (ADR-041 : DSM-5, Maudsley, Stahl 7e). */
 export const EDITIONS: readonly EditionOuvrage[] = [
   {
     titre: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux",
@@ -60,6 +60,17 @@ export const EDITIONS: readonly EditionOuvrage[] = [
     edition: "14e éd.",
     annee: 2021,
     version: "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+    langue: "en",
+  },
+  {
+    // Le paquet canonique porte `title` + `subtitle` séparés ; le chargeur
+    // compose le titre stocké en base. Les deux formes sont vérifiées par test.
+    titre: "Prescriber's Guide (Stahl's Essential Psychopharmacology)",
+    bookId: "stahl-prescribers-guide-7e-cup",
+    editionCle: "Seventh edition (Stahl's Essential Psychopharmacology: Prescriber's Guide)",
+    edition: "7e éd.",
+    annee: 2021,
+    version: "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3",
     langue: "en",
   },
 ] as const;

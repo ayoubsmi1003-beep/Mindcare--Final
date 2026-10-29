@@ -26,7 +26,7 @@
 
 import { BlocErreur, EtatVide } from "@/components/ui";
 import { Icone, type NomIcone } from "@/components/ui/Icones";
-import { jourEtHeure } from "@/components/patients/format";
+import { cliniqueUi } from "@/i18n/clinical-ui";
 import { fr } from "@/i18n/fr";
 import {
   CHAMPS_SOAP,
@@ -146,8 +146,11 @@ export function sectionsPour(detail: DetailSeanceChargee): readonly SectionDef[]
 
 export function DetailSeanceAccordion({
   detail,
+  resumeExterne = false,
 }: {
   readonly detail: DetailSeanceChargee;
+  /** Le parent affiche déjà le paragraphe de synthèse dans sa propre carte. */
+  readonly resumeExterne?: boolean;
 }): React.JSX.Element {
   if (detail.erreur !== undefined) {
     return <BlocErreur message={detail.erreur} />;
@@ -160,7 +163,6 @@ export function DetailSeanceAccordion({
     return <EtatVide message={fr.consultation.introuvable} />;
   }
 
-  const note = detail.seance.note;
   const sections = sectionsPour(detail);
 
   if (sections.length === 0) {
@@ -169,13 +171,6 @@ export function DetailSeanceAccordion({
 
   return (
     <div className="flex flex-col gap-3">
-      {note?.signedAt == null ? null : (
-        <p className="font-ui text-label tabular-nums text-ink-500">
-          {fr.consultation.signeePar} {note.signerName ?? fr.etats.texteAbsent} —{" "}
-          {fr.consultation.signeeLe} {jourEtHeure(note.signedAt) ?? fr.etats.texteAbsent}
-        </p>
-      )}
-
       <div className="flex w-full flex-col gap-3">
         {sections.map((section) => {
           const vide = section.texte === null;
@@ -204,15 +199,43 @@ export function DetailSeanceAccordion({
                   <div className="flex flex-col gap-3">
                     {/* I7 — la mention accompagne toute surface d'aide à la
                         décision, y compris relue des mois plus tard. */}
-                    <p className="font-ui text-label text-ink-500">{fr.disclaimer}</p>
-                    {detail.analyse.resume === undefined || detail.analyse.resume.trim() === "" ? null : (
-                      <p className="whitespace-pre-wrap break-words font-ui text-body leading-relaxed text-ink-900">
-                        {detail.analyse.resume}
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="m-0 font-ui text-label text-ink-500">{fr.disclaimer}</p>
+                      <span className="rounded-full border border-rule bg-sunken px-2 py-0.5 font-ui text-eyebrow uppercase tracking-label text-ink-500">
+                        {detail.analyse.resumeNotes !== undefined && detail.analyse.resume !== detail.analyse.resumeNotes
+                          ? cliniqueUi.resume.methodeStructuree
+                          : detail.analyse.method === "extractive"
+                            ? cliniqueUi.resume.methodeExtraite
+                            : detail.analyse.method === "structured"
+                              ? cliniqueUi.resume.methodeStructuree
+                              : cliniqueUi.resume.methodeReformulee}
+                      </span>
+                    </div>
+                    {resumeExterne ? null : detail.analyse.resume === undefined || detail.analyse.resume.trim() === "" ? null : (
+                      <p className="break-words font-ui text-body leading-notes text-ink-900">
+                        {detail.analyse.resume.replace(/\s*\n+\s*/gu, " ")}
                       </p>
                     )}
-                    {detail.analyse.evolution.length === 0 ? (
-                      <EtatVide message={fr.consultation.evolutionAucune} />
-                    ) : (
+                    {detail.analyse.evaluations.length === 0 ? null : (
+                      <div className="flex flex-wrap gap-2">
+                        {detail.analyse.evaluations.map((evaluation) => (
+                          <span
+                            key={`${evaluation.scaleCode}-${evaluation.administeredAt}`}
+                            className="inline-flex flex-wrap items-baseline gap-1 rounded-full border border-azure-200 bg-azure-050 px-2.5 py-1 font-ui text-label text-ink-700"
+                          >
+                            <span className="font-semibold text-azure-700">{evaluation.scaleName}</span>
+                            <span className="font-num tabular-nums">
+                              {evaluation.score === null ? "—" : String(evaluation.score)}
+                              {evaluation.max === null ? "" : `/${String(evaluation.max)}`}
+                            </span>
+                            {evaluation.interpretation === null ? null : (
+                              <span className="text-ink-500">· {evaluation.interpretation}</span>
+                            )}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {detail.analyse.evolution.length === 0 ? null : (
                       <ul className="flex list-disc flex-col gap-2 pl-5 font-ui text-body text-ink-900">
                         {detail.analyse.evolution.map((ligne) => (
                           <li key={ligne}>{ligne}</li>

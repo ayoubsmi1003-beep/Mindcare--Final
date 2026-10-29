@@ -1,12 +1,12 @@
 import {ALEXA_AGENT_LANGUAGE,ALEXA_NATIVE_DEADLINE_MS} from "@/shared/alexa/agent";
 import { legacyAlexaTurn } from "./legacy";
-import { identite } from "@/app/api/jarvis/_commun";
+import { identite, refusIaClinique } from "@/app/api/jarvis/_commun";
 import { clientSql } from "@/server/jarvis/client-sql";
 import { alexaDb } from "@/server/alexa/db";
 import { runAlexa } from "@/server/alexa/orchestrator";
 import { savedAgentTask,restoreAgentTask } from "@/server/alexa/agent-loop";
 import { createAgentContinuation, describePendingAgentCursor, resolveAgentContinuation } from "@/server/alexa/agent-continuation";
-import { conversationState } from "@/server/alexa/conversation-state";
+import { conversationState,referenceForPersistence } from "@/server/alexa/conversation-state";
 import { turnInput,type AlexaEvent } from "@/shared/alexa/turn";
 import { alexa } from "@/i18n/alexa";
 import { agentCopy } from "@/i18n/alexa-agent";
@@ -17,6 +17,7 @@ export const runtime="nodejs";
 export const dynamic="force-dynamic";
 const claimSchema=z.object({state:z.enum(["claimed","replay","pending","interrupted","conflict","unavailable"]),answer:z.string().max(12000).optional(),metadata:z.unknown().optional()});
 export async function POST(request:Request):Promise<Response>{
+ const refus=await refusIaClinique();if(refus)return refus;
  if(process.env["ALEXA_NATIVE_AGENT_ENABLED"]!=="1")return legacyAlexaTurn(request);
  if(!isSameOriginRequest(request))return new Response(null,{status:403});
  const actor=await identite();if(!actor)return Response.json({ok:false},{status:401});
@@ -64,7 +65,7 @@ export async function POST(request:Request):Promise<Response>{
  if(!prior.error&&prior.data){
   if(savedMetadata.success){
    restoreAgentTask(actor,input.conversationId,savedMetadata.data.task??savedContext);
-   if(savedMetadata.data.reference)conversationState.restore(actor,input.conversationId,effectivePatientId,input.appContext.page,savedMetadata.data.reference,context);
+   if(savedMetadata.data.reference&&!conversationState.read(actor,input.conversationId,effectivePatientId,input.appContext.page,Date.now(),context))conversationState.restore(actor,input.conversationId,effectivePatientId,input.appContext.page,savedMetadata.data.reference,context);
   }else restoreAgentTask(actor,input.conversationId,savedContext);
  }
  const controller=new AbortController(),abort=()=>controller.abort(request.signal.reason);
@@ -102,9 +103,10 @@ export async function POST(request:Request):Promise<Response>{
     if(batchesCompleted!==undefined)done.progress={completedBatches:batchesCompleted,complete:!nextContinuation};
     if(nextContinuation)done.continuation={token:nextContinuation.token,progress:{kind:nextContinuation.kind,completedBatches:nextContinuation.completedBatches,position:nextContinuation.position}};
     const persistedEvents=[...events,{...done,persiste:true}];
-    const reference=conversationState.read(actor,input.conversationId,effectivePatientId,input.appContext.page,Date.now(),context)??undefined;
+    const reference=conversationState.read(actor,input.conversationId,effectivePatientId,input.appContext.page,Date.now(),context);
+    const persistedReference=reference?referenceForPersistence(reference):undefined;
     const persistenceStartedAt=Date.now();
-    const saved=await persistence.rpc("complete_jarvis_turn",{p_conversation_id:input.conversationId,p_client_turn_id:input.clientTurnId,p_chemin:"patient",p_contenu:answer,p_statut:done.status==="completed"?"complet":"interrompu",p_outil:JSON.stringify({version:3,events:persistedEvents,task,...(reference?{reference}:{}),continuation:nextContinuation})}).catch(()=>({error:true,data:false}));
+    const saved=await persistence.rpc("complete_jarvis_turn",{p_conversation_id:input.conversationId,p_client_turn_id:input.clientTurnId,p_chemin:"patient",p_contenu:answer,p_statut:done.status==="completed"?"complet":"interrompu",p_outil:JSON.stringify({version:3,events:persistedEvents,task,...(persistedReference?{reference:persistedReference}:{}),continuation:nextContinuation})}).catch(()=>({error:true,data:false}));
     const persisted=!saved.error&&saved.data===true;
     if(!persisted)console.error("[alexa-turn] persistence outcome",JSON.stringify({operation:"complete_jarvis_turn",outcome:saved.error?"rpc_error":saved.data===false?"gate_rejected":"invalid_response",elapsedMs:Date.now()-persistenceStartedAt}));
     send({...done,persiste:persisted});

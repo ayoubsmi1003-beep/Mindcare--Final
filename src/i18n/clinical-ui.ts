@@ -1,0 +1,161 @@
+/**
+ * Libellés de la couche clinique du dossier patient.
+ *
+ * `fr.ts` reste gelé jusqu'à la découpe Phase 6. Ces textes sont donc typés ici,
+ * comme `patient-summary.ts` et `consultation-cockpit.ts`. Aucune phrase ne
+ * fabrique un fait clinique : elles nomment seulement ce que la base rend.
+ */
+export const cliniqueUi = {
+  commun: {
+    voirDetail: "Voir le détail",
+    masquerDetail: "Masquer le détail",
+    voirReponses: "Voir les réponses",
+    masquerReponses: "Masquer les réponses",
+    reessayer: "Réessayer",
+    chargement: "Chargement…",
+    aucuneDonnee: "Aucune donnée disponible.",
+    dateInconnue: "date non renseignée",
+    seanceDu: (date: string): string => `Séance du ${date}`,
+  },
+  resume: {
+    identite: (nom: string, age: number | null): string =>
+      age === null ? nom : `${nom} · ${String(age)} ans`,
+    synthese: "Synthèse de la séance",
+    syntheseFactuelle: "Résumé factuel de la séance",
+    syntheseFactuelleAide:
+      "Résumé construit à partir des notes et des échelles enregistrées. L’analyse assistée n’est pas disponible pour cette séance.",
+    analyseAbsenteTitre: "Aucune analyse enregistrée pour cette séance",
+    analyseAbsenteCorps:
+      "La séance et ses notes sont bien enregistrées. L’analyse assistée peut être générée maintenant à partir de ces éléments.",
+    analyser: "Analyser cette séance",
+    analyseEnCours: "Analyse de la séance en cours…",
+    analyseEnCoursCourt: "Analyse…",
+    analyseIndisponible:
+      "L’analyse assistée n’a pas pu être générée. Le résumé factuel reste affiché.",
+    analyseRelancer: "Relancer l’analyse",
+    paragrapheUnique: "Un paragraphe de synthèse",
+    actions: "Actions de la séance",
+    echelles: "Échelles de la séance",
+    vigilance: "Points de vigilance",
+    sources: "Sources",
+    methodeExtraite: "Extrait de la séance",
+    methodeReformulee: "Synthèse reformulée",
+    methodeStructuree: "Synthèse structurée",
+    nonAJour: "Analyse produite par une version antérieure.",
+  },
+  diagnostics: {
+    titre: "Diagnostics",
+    sousTitre: "Le fil diagnostique du dossier, actif et résolu.",
+    videTitre: "Aucun diagnostic consigné",
+    videCorps:
+      "Le dossier ne porte encore aucun diagnostic. Vous pouvez en consigner un ici : il sera tracé, daté et rattaché à la praticienne.",
+    consigner: "Consigner un diagnostic",
+    saisieProfessionnelle:
+      "Un diagnostic retenu, pas un symptôme isolé. Le libellé clinique reste la référence ; le code est une aide au classement, jamais un jugement automatique. Les éléments qui soutiennent le diagnostic restent dans la note de séance ; cette fiche garde le libellé, le code, le rôle et les dates.",
+    modele: "Diagnostic fréquent (aide à la saisie)",
+    modeleAide:
+      "Choisir un libellé pré-remplit le code ICD-10. Vous pouvez ensuite tout modifier librement.",
+    modeleVide: "— Choisir un diagnostic fréquent —",
+    principal: "Diagnostic principal",
+    principalAide:
+      "Le principal est celui qui motive le suivi actuel. Les autres diagnostics actifs sont secondaires.",
+    secondaire: "Secondaire",
+    role: "Rôle du diagnostic",
+    statut: "Statut",
+    statutAide:
+      "Un diagnostic actif est conservé au fil des séances ; il devient résolu lorsqu’il ne guide plus la prise en charge.",
+    dateDebutAide:
+      "Date de la première documentation clinique au dossier, si elle est connue.",
+    codeAide:
+      "Facultatif. Le libellé clinique reste la référence ; le code sert au classement et à la continuité.",
+    actif: "Actif",
+    resolu: "Résolu",
+    depuis: (date: string): string => `Depuis le ${date}`,
+    resoluLe: (date: string): string => `Résolu le ${date}`,
+    code: "Code",
+    libelle: "Libellé du diagnostic",
+    libelleAide: "Écrivez le libellé clinique tel qu’il doit apparaître au dossier.",
+    codeSysteme: "Système de code",
+    codeValeur: "Code (facultatif)",
+    dateDebut: "Date de début (facultatif)",
+    principalQuestion: "Marquer comme diagnostic principal",
+    enregistrer: "Enregistrer le diagnostic",
+    annuler: "Annuler",
+    enregistre: "Diagnostic consigné.",
+    erreur: "Le diagnostic n’a pas pu être enregistré. Aucune donnée n’a été modifiée.",
+    dateFuture: "La date de début ne peut pas être dans le futur.",
+    resoudre: "Résoudre",
+    resoudreConfirmation: "Marquer ce diagnostic comme résolu ?",
+    resoluOk: "Diagnostic marqué comme résolu.",
+    erreurResolution: "Le diagnostic n’a pas pu être marqué comme résolu.",
+    aucunActif: "Aucun diagnostic actif.",
+    aucunResolu: "Aucun diagnostic résolu.",
+    groupeActifs: "Diagnostics actifs",
+    groupeResolus: "Diagnostics résolus",
+  },
+  echelles: {
+    titre: "Échelles d’évaluation",
+    sousTitre: "Scores, interprétation et réponses item par item.",
+    videTitre: "Aucune échelle enregistrée",
+    videCorps:
+      "Les échelles administrées pendant une consultation apparaîtront ici, avec leurs questions et les réponses choisies.",
+    derniereMesure: "Dernière mesure",
+    score: "Score",
+    interpretation: "Interprétation",
+    ecart: "Écart",
+    mesureUnique: "Mesure unique : aucun écart calculable.",
+    itemRisque: "Item de risque positif",
+    questions: "Questions et réponses",
+    question: (n: number): string => `Question ${String(n)}`,
+    reponseChoisie: "Réponse choisie",
+    aucuneReponse: "Aucune réponse détaillée n’est disponible pour cette mesure.",
+    aucuneReponseAide:
+      "Le score est enregistré, mais les réponses item par item ne le sont pas dans cette version du dossier.",
+    historique: "Historique des mesures",
+    historiqueAide: "Choisissez une mesure pour relire ses réponses.",
+    consulter: "Consulter",
+    selectionnee: "Mesure affichée",
+    date: "Mesurée le",
+    sansDetail: "Détail non disponible",
+    options: (n: number): string => `${String(n)} choix`,
+    echelleAdministree: "Administrée pendant la séance",
+    echelleHorsSeance: "Administrée hors séance",
+    risqueAlerte: "À explorer cliniquement",
+    voirToutes: "Voir toutes les mesures",
+    masquerToutes: "Masquer les mesures plus anciennes",
+    referentielIndisponible:
+      "Le référentiel des échelles n’a pas pu être chargé. Les scores restent affichés ; les questions seront de nouveau disponibles après rechargement.",
+  },
+  seances: {
+    titre: "Séances précédentes",
+    sousTitre: "Chaque séance, son résumé et ses notes.",
+    vide: "Aucune séance terminée n’est enregistrée dans ce dossier.",
+    chargement: "Chargement des séances…",
+    afficherPlus: "Afficher les séances plus anciennes",
+    fin: "Toutes les séances enregistrées sont affichées.",
+    seanceDu: (date: string, heure: string | null): string =>
+      heure === null ? `Séance du ${date}` : `Séance du ${date} · ${heure}`,
+    praticienne: "Praticienne",
+    statutClose: "Terminée",
+    statutOuverte: "Ouverte",
+    resumeAbsent: "Aucun résumé n’est encore disponible pour cette séance.",
+    resumeAbsentAide:
+      "Les notes restent consultables. L’analyse assistée peut être générée à la demande.",
+    ouvrirConsultation: "Ouvrir la consultation",
+    voirNotes: "Voir les notes",
+    masquerNotes: "Masquer les notes",
+    echellesDeLaSeance: "Échelles de la séance",
+    analyseDisponible: "Analyse disponible",
+    analyseAncienne: "Analyse antérieure",
+    analyseAbsente: "Analyse non générée",
+    termineeTitre: "Séance terminée",
+    termineeCorps:
+      "La note est en lecture seule. Une correction passe par un amendement.",
+  },
+  clinique: {
+    titre: "État clinique",
+    sousTitre: "Diagnostics et échelles, sans détour.",
+    diagnostics: "Diagnostics",
+    echelles: "Échelles",
+  },
+} as const;

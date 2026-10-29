@@ -1265,6 +1265,13 @@ les citations « ADR-022 » du code désignent §4.2 repris par ADR-025.
 
 **Ce qui n'est pas tranché ici.** L'identité de l'approbateur (`…e1` est `is_active = false` ; `…a1` owner est actif et a activé DSM-5 — précédent, pas décision) ; la revue clinique des 1 139 éléments ; la décision sur la faute imprimée ; l'élargissement des listes fermées de découpeurs (`CHUNKERS_ACCEPTES`, `validerIdChunk`, `VERSIONS_CHUNKER` — patch `2026-10-20-stahl-integration-4-allowlists.patch` livré, non appliqué).
 
+**Suivi 2026-10-28 — réconciliation code / base (sans réécrire la décision ci-dessus).**
+- **Activation.** Elle a été enregistrée en base le **2026-10-20 à 19:51 UTC** par le script d'activation, sur l'approbation déclarée par le propriétaire du projet pour le profil `…a1` : source `active`, `C4`, **3 076 chunks actifs et vectorisés**. La phrase « l'activation clinique reste interdite » ci-dessus décrit l'état du 20 octobre avant l'acte ; elle est historique.
+- **Patchs 1 et 2 appliqués.** `BOOKS` (`knowledge-query.ts`) porte **trois** titres approuvés et le garde `stahl → null` est retiré ; `tests/unit/alexa-final-two-books.test.ts` est réécrit en invariant à trois livres, **propriété de sécurité conservée** (source hors liste toujours refusée ; un livre nommé cible uniquement ce livre).
+- **Patch 3 déjà présent.** La liste anglaise de `MOTS_VIDES` (`rerank.ts`) était dans le code ; l'entrée « non appliqué » était périmée.
+- **Identité bibliographique.** `EDITIONS` (`editions.ts`) porte désormais Stahl (`book_id`, 7ᵉ éd., 2021, version épinglée). Sans cette entrée, `preuveAffichable()` refusait la localisation et **supprimait la page** alors que le marqueur `[stahl… p.NNN|src:NNN]` est présent dans **3 076/3 076** chunks.
+- **R1 (ordre de lecture) reste ouvert.** Il n'est pas corrigé par cette passe : voir `docs/reports/2026-10-28-stahl-source-completion.md`.
+
 ---
 
 ## M08 HUMAN DECISION GATE — Taylor 2021 (ouvert, en attente de décisions humaines)

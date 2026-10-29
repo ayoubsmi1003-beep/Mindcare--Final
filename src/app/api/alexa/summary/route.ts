@@ -1,6 +1,6 @@
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import { z } from "zod";
-import { identite, echec, succes } from "@/app/api/jarvis/_commun";
+import { identite, echec, refusIaClinique, succes } from "@/app/api/jarvis/_commun";
 import { alexaDb } from "@/server/alexa/db";
 import { buildClinicalContext, readClinicalSourceRevision } from "@/server/alexa/clinical-context";
 import { resolvePatient } from "@/server/alexa/patient-resolver";
@@ -35,6 +35,8 @@ const scaleDefinitionRow = z.object({
 
 export async function POST(request: Request): Promise<Response> {
   if (!isSameOriginRequest(request)) return new Response(null, { status: 403 });
+  const refus = await refusIaClinique();
+  if (refus) return refus;
   const actor = await identite();
   if (!actor) return echec("non-authentifie", alexa.lectureIndisponible);
   const input = z.object({ patientId: z.uuid() }).strict().safeParse(await request.json().catch(() => null));
