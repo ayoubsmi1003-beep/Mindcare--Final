@@ -74,7 +74,7 @@ type EtatAnalyse =
   | { readonly statut: "vide" }
   | { readonly statut: "erreur"; readonly message: string };
 
-const DELAI_MAX_MS = 20_000;
+const DELAI_MAX_MS = 45_000;
 
 /**
  * La période lue dans l'URL, pour qu'un rechargement retrouve le même écran.

@@ -47,6 +47,17 @@ function statutPour(code: string): number {
   }
 }
 
+/**
+ * ⚠️ LES DEUX PORTES D'ANALYSE ONT UN PLAFOND PLUS LARGE, ET C'EST ÉCRIT ICI
+ * PLUTÔT QUE DANS LA PORTE. Elles agrègent une année entière ; mesuré à 23 s
+ * sur 365 jours (la RLS évalue deux fonctions par ligne). Le plafond reste une
+ * valeur FERMÉE : aucun délai ne vient de la requête HTTP.
+ */
+const PORTES_ANALYSE: ReadonlySet<string> = new Set([
+  "get_analysis_overview",
+  "get_analysis_drilldown",
+]);
+
 export async function POST(requete: Request): Promise<NextResponse> {
   const ctx = await preparer();
   if (ctx instanceof NextResponse) return ctx;
@@ -69,10 +80,14 @@ export async function POST(requete: Request): Promise<NextResponse> {
   // existent — le même oracle d'existence qu'ADR-003 interdit sur les patients.
   if (!rpcAutorise(name)) return refus("introuvable", 404);
 
-  const resultat = await withCaller(ctx.userId, async (q) => {
-    const port = faireePgPort(q, "api.rpc");
-    return port.rpc<Record<string, unknown>>(name, args);
-  }).catch((cause) => {documentBoundaryDiagnostic("transaction",cause);return null;});
+  const resultat = await withCaller(
+    ctx.userId,
+    async (q) => {
+      const port = faireePgPort(q, "api.rpc");
+      return port.rpc<Record<string, unknown>>(name, args);
+    },
+    PORTES_ANALYSE.has(name) ? { statementTimeout: "analysis" } : {},
+  ).catch((cause) => {documentBoundaryDiagnostic("transaction",cause);return null;});
 
   if (resultat === null) return refus("indisponible", 503);
   if (!resultat.ok) {

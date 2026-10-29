@@ -101,6 +101,16 @@ const ROLE_VISITEUR = "SET LOCAL ROLE anon";
 const DELAI_REQUETE = "15s";
 /** Bounded compound Alexa patient counts may aggregate the full visit history. */
 const DELAI_RECHERCHE_PATIENTS = "45s";
+/**
+ * L'écran Statistiques agrège une année entière : séances, rendez-vous, notes,
+ * diagnostics, échelles, traitements, paiements. Mesuré sur la base de
+ * développement (1 558 dossiers, 7 571 séances) : 3,9 s sur 30 jours, 7,1 s sur
+ * 90 jours, 23 s sur 365. La RLS évalue deux fonctions PAR LIGNE, donc le coût
+ * suit le nombre de lignes lues et non le nombre de lignes rendues. 15 s
+ * coupaient purement et simplement la vue « Année en cours » ; 45 s est la
+ * même borne que la recherche patient, et reste un plafond, pas une promesse.
+ */
+const DELAI_ANALYSE = "45s";
 
 /**
  * Exécute `fn` dans UNE transaction, sous l'identité de `userId`.
@@ -118,7 +128,7 @@ const DELAI_RECHERCHE_PATIENTS = "45s";
 export async function withCaller<T>(
   userId: string | null,
   fn: (q: Querier) => Promise<T>,
-  options: { statementTimeout?: "patient-search" } = {},
+  options: { statementTimeout?: "patient-search" | "analysis" } = {},
 ): Promise<T> {
   const client = await acquireConnection(() => { const pool = obtenirPool(); const started = performance.now(); return pool.connect().catch((cause: unknown) => { console.warn("[db-acquire]", { elapsedMs: Math.round(performance.now()-started), total: pool.totalCount, idle: pool.idleCount, waiting: pool.waitingCount, target: new URL(pool.options.connectionString ?? "postgres://unknown").host }); throw cause; }); });
   try {
@@ -127,7 +137,14 @@ export async function withCaller<T>(
     // `true` = SET LOCAL : la valeur disparaît avec la transaction.
     // La chaîne vide est le « personne » de `auth.uid()`, qui la ramène à NULL.
     await client.query("SELECT set_config('request.jwt.claim.sub', $1, true)", [userId ?? ""]);
-    const statementTimeout=options.statementTimeout==="patient-search"?DELAI_RECHERCHE_PATIENTS:DELAI_REQUETE;
+    // Le choix se fait sur une valeur FERMÉE, jamais sur un nombre venu du
+    // client : un délai piloté par l'appelant serait un levier de déni.
+    const statementTimeout =
+      options.statementTimeout === "patient-search"
+        ? DELAI_RECHERCHE_PATIENTS
+        : options.statementTimeout === "analysis"
+          ? DELAI_ANALYSE
+          : DELAI_REQUETE;
     await client.query(`SET LOCAL statement_timeout = '${statementTimeout}'`);
 
     const resultat = await fn(faireQuerier(client));
