@@ -912,6 +912,91 @@
     background-color: rgba(28, 42, 31, 0.85);
   }
 
+  /* ── Recherche centrale de la barre supérieure ──
+     Halo animé façon 21st.dev, sans dépendance : un anneau conique dont un
+     seul segment coloré tourne autour du pilulier (jetons uniquement).
+     Le fond reste un aplat opaque (même règle que la barre : pas de verre
+     sous une zone de saisie). `prefers-reduced-motion` coupe la rotation. */
+  @property --recherche-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .recherche-topbar-halo {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    border-radius: 999px;
+    isolation: isolate;
+  }
+  .recherche-topbar-fond {
+    position: absolute;
+    inset: 1px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999px;
+    background: var(--action-600);
+    box-shadow: inset 0 0 0 1px var(--action-700);
+    padding: 0 16px;
+    color: var(--paper);
+  }
+  .recherche-topbar-faisceau {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 1.5px;
+    background: conic-gradient(
+      from var(--recherche-angle),
+      transparent 0%,
+      transparent 68%,
+      var(--action-900) 78%,
+      var(--paper) 86%,
+      var(--action-700) 92%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: recherche-halo-tour 3.1s linear infinite;
+  }
+  @keyframes recherche-halo-tour {
+    to {
+      --recherche-angle: 360deg;
+    }
+  }
+  .recherche-topbar-loupe {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: var(--paper);
+    opacity: 0.85;
+  }
+  .recherche-topbar-champ {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-ui);
+    font-size: var(--text-body-size);
+    line-height: var(--text-body-leading);
+    color: var(--paper);
+  }
+  .recherche-topbar-champ::placeholder {
+    color: var(--paper);
+    opacity: 0.75;
+  }
+  .recherche-topbar-halo:focus-within .recherche-topbar-fond {
+    box-shadow: inset 0 0 0 2px var(--paper);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .recherche-topbar-faisceau {
+      animation: none;
+    }
+  }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--barre-defil) transparent;
@@ -1854,4 +1939,228 @@
   .hero-connexion { animation: none; }
   .medaillon-cerveau { animation: none; transform: none; }
   .carte-verre-login::after { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * ANALYSE — LE VERRE ASSUMÉ (décision de l'utilisatrice, 2026-10-29)
+ *
+ * ⚠️ EXCEPTION DOCUMENTÉE. §4.2 réserve le verre au mobilier flottant. Ici,
+ * la praticienne a explicitement demandé une surface vitrée pour cet écran.
+ * La règle de lisibilité n'est PAS levée : chaque valeur chiffrée repose sur
+ * une plaque dont le composite sur le sol de page reste ≥ 7:1 pour --ink-900
+ * et ≥ 4.5:1 pour --ink-500. Les arrêts ci-dessous sont choisis pour cela :
+ *   · verre de panneau : blanc 0.62 → 0.42 → 0.55 sur #eef7f0
+ *     composite ≈ #f7fdf9 ; ink-900 (#3e2723) ≈ 13.2:1 ; ink-500 (#6d4c41) ≈ 7.6:1
+ *   · bulle d'infobulle : blanc 0.94 → composite ≈ #fafdfb ; ≈ 13.6:1
+ * Un arrêt plus transparent ferait tomber ink-500 sous 4.5:1 : ne pas baisser.
+ *
+ * ⚠️ AUCUN DÉGRADÉ SOUS UNE DOSE, UN SCORE OU UN MONTANT DE LIGNE. Le verre
+ * est un CADRE ; les valeurs vivent sur les plaques opaques internes.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.analyse-scene {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Le halo de fond — trois nappes émeraude/menthe/champagne, aucune animation.
+   Il donne au verre quelque chose à flouter ; sans lui, `backdrop-filter` ne
+   produit qu'un gris. */
+.analyse-halo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1100px 620px at 88% -10%, rgba(46, 125, 50, 0.10), transparent 62%),
+    radial-gradient(900px 560px at -8% 4%, rgba(120, 200, 160, 0.16), transparent 60%),
+    radial-gradient(760px 520px at 42% 108%, rgba(255, 240, 205, 0.34), transparent 64%),
+    radial-gradient(680px 480px at 96% 82%, rgba(56, 142, 60, 0.08), transparent 60%);
+}
+
+.verre-panneau {
+  position: relative;
+  border-radius: var(--r-2xl);
+  background: linear-gradient(
+    152deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(247, 255, 250, 0.42) 46%,
+    rgba(255, 255, 255, 0.55) 100%
+  );
+  -webkit-backdrop-filter: blur(18px) saturate(1.55);
+  backdrop-filter: blur(18px) saturate(1.55);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -1px 0 rgba(10, 31, 12, 0.05),
+    0 2px 4px rgba(10, 31, 12, 0.04),
+    0 24px 48px -30px rgba(27, 94, 32, 0.36);
+}
+
+/* Le liseré lumineux : un filet de 1 px qui prend la lumière en haut à gauche,
+   puis s'éteint. Pur décor, posé sur le cadre — jamais sous le texte. */
+.verre-liseret::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.10) 34%,
+    rgba(255, 255, 255, 0) 62%,
+    rgba(46, 125, 50, 0.14) 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* La plaque opaque : c'est ELLE qui porte les valeurs, jamais le verre. */
+.plaque-analyse {
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 0 #ffffff, 0 1px 2px rgba(10, 31, 12, 0.04);
+}
+
+/* La vedette — le seul aplat profond de l'écran. Encre blanche pure sur les
+   trois arrêts de --grad-vedette-nuit : 16.9 / 11.4 / 5.3:1. */
+.verre-vedette {
+  position: relative;
+  border-radius: var(--r-2xl);
+  background-image: var(--grad-vedette-nuit);
+  color: var(--on-brand);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 24px 48px -24px rgba(10, 31, 12, 0.55);
+  overflow: hidden;
+}
+.verre-vedette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--grad-reflet);
+  pointer-events: none;
+}
+
+/* ── Les pastilles d'icône qui s'allument ────────────────────────────────
+   Chaque panneau a sa teinte ; l'icône prend cette teinte et une lueur de sa
+   propre couleur. Au survol du panneau, la lueur s'intensifie (180 ms) — pas
+   de boucle, pas de pulsation : une seule transition, réversible. */
+.icone-lueur {
+  --teinte: var(--emeraude-600);
+  --lueur: color-mix(in oklab, var(--teinte) 45%, transparent);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: var(--teinte);
+  background:
+    radial-gradient(130% 130% at 28% 18%, #ffffff 0%, rgba(255, 255, 255, 0.62) 46%, rgba(255, 255, 255, 0.18) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    inset 0 -1px 0 color-mix(in oklab, var(--teinte) 12%, transparent),
+    0 6px 16px -10px var(--lueur);
+  transition: box-shadow var(--d-quick) var(--e-soft), transform var(--d-quick) var(--e-soft);
+}
+.icone-lueur svg {
+  filter: drop-shadow(0 0 5px var(--lueur));
+  transition: filter var(--d-quick) var(--e-soft), transform var(--d-quick) var(--e-soft);
+}
+.verre-panneau:hover .icone-lueur svg,
+.icone-lueur:focus-visible svg {
+  filter: drop-shadow(0 0 11px var(--lueur));
+  transform: scale(1.06);
+}
+.verre-panneau:hover .icone-lueur {
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    inset 0 -1px 0 color-mix(in oklab, var(--teinte) 16%, transparent),
+    0 10px 22px -10px var(--lueur);
+}
+
+.icone-lueur[data-teinte="emeraude"] { --teinte: var(--emeraude-600); }
+.icone-lueur[data-teinte="aqua"]     { --teinte: var(--aqua-600); }
+.icone-lueur[data-teinte="azure"]    { --teinte: var(--azure-600); }
+.icone-lueur[data-teinte="violet"]   { --teinte: var(--violet-600); }
+.icone-lueur[data-teinte="ambre"]    { --teinte: var(--ambre-600); }
+.icone-lueur[data-teinte="corail"]   { --teinte: var(--corail-600); }
+
+/* ── La bulle d'infobulle ────────────────────────────────────────────────
+   0.94 d'opacité : assez pour que le chiffre reste net, assez pour que le
+   verre se lise. `pointer-events: none` — elle ne vole jamais le survol. */
+.verre-bulle {
+  background: rgba(250, 253, 251, 0.94);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  backdrop-filter: blur(14px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--r-md);
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 10px 28px -12px rgba(10, 31, 12, 0.35);
+  pointer-events: none;
+}
+
+/* ── Le mouvement — un seul moment, une seule fois ───────────────────────
+   520 ms à l'entrée, décalé de 40 ms par panneau. Aucune animation en boucle.
+   Sous `prefers-reduced-motion`, la règle globale de tokens.css ramène tout à
+   0.01 ms : rien ne bouge, tout reste lisible. */
+@keyframes analyse-monte {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.analyse-monte {
+  animation: analyse-monte 520ms var(--e-out) both;
+  animation-delay: var(--delai, 0ms);
+}
+
+@keyframes analyse-trace {
+  from { stroke-dashoffset: var(--longueur, 2000); }
+  to   { stroke-dashoffset: 0; }
+}
+.analyse-trace {
+  stroke-dasharray: var(--longueur, 2000);
+  animation: analyse-trace 900ms var(--e-out) 120ms both;
+}
+
+@keyframes analyse-pousse {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+.analyse-pousse {
+  transform-origin: bottom;
+  animation: analyse-pousse 560ms var(--e-out) both;
+  animation-delay: var(--delai, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analyse-monte,
+  .analyse-trace,
+  .analyse-pousse { animation: none; }
+}
+
+/* ── La barre de période — collante, en verre, jamais au-dessus du contenu ─ */
+.analyse-barre {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  /* ⚠️ 0.92 LAISSAIT LIRE LE CONTENU À TRAVERS LA BARRE. Mesuré à 1440×900 :
+     les libellés de diagnostics passaient derrière « DU / AU ». Une barre
+     collante doit être OPAQUE là où elle couvre du texte ; le verre reste sur
+     les panneaux, pas sur le chrome qui défile au-dessus d'eux. */
+  background: linear-gradient(180deg, rgba(250, 253, 251, 0.985), rgba(250, 253, 251, 0.96));
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px -22px rgba(10, 31, 12, 0.35);
 }
