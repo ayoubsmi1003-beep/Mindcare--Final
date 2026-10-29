@@ -80,7 +80,7 @@ async function main() {
         throw new Error(`connexion refusée : HTTP ${connexion.status()}`);
       }
 
-      await page.goto(`${BASE}/statistiques?du=2026-01-01&au=2026-10-29`, { waitUntil: "domcontentloaded" });
+      await page.goto(`${BASE}/statistiques?du=2026-09-30&au=2026-10-29`, { waitUntil: "domcontentloaded" });
       // Les 401 de l'écran de connexion (avant session) ne concernent pas cet
       // écran : on ne mesure que ce qui se passe APRÈS l'ouverture de session.
       erreurs.length = 0;

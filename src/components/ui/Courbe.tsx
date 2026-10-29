@@ -66,6 +66,13 @@ export interface CourbeProps {
   readonly libelleSecondaire?: string;
   readonly ariaLabel: string;
   readonly onPoint?: (cle: string) => void;
+  /**
+   * Le plafond de l'axe, quand l'unité a un maximum naturel (un pourcentage :
+   * 100). Sans lui, une courbe de taux se recadre sur sa plus haute valeur et
+   * une hausse de 14 % à 55 % occupe toute la hauteur — visuellement vraie,
+   * cliniquement trompeuse.
+   */
+  readonly plafond?: number;
 }
 
 /** Une série découpée en segments continus — un trou ferme le segment. */
@@ -151,6 +158,7 @@ export function Courbe({
   libelleSecondaire,
   ariaLabel,
   onPoint,
+  plafond,
 }: CourbeProps): React.JSX.Element {
   const id = React.useId().replace(/[^a-zA-Z0-9]/g, "");
   const zoneRef = React.useRef<HTMLDivElement | null>(null);
@@ -189,7 +197,7 @@ export function Courbe({
   const valeurs = points.flatMap((p) =>
     [p.valeur, p.secondaire ?? null].filter((v): v is number => v !== null),
   );
-  const max = plafondLisible(Math.max(1, ...valeurs));
+  const max = plafond ?? plafondLisible(Math.max(1, ...valeurs));
   const x = (i: number): number =>
     points.length === 1
       ? margeG + largeurTrace / 2

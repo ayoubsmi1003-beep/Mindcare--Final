@@ -32,7 +32,13 @@ export function PyramideAges({
   readonly bandes: readonly BandeAge[];
   readonly ariaLabel: string;
 }): React.JSX.Element {
-  const avecSexe = bandes.some((b) => b.f + b.m > 0);
+  const total = bandes.reduce((s, b) => s + b.f + b.m + b.nr, 0);
+  // ⚠️ UN SEUL SEXE RENSEIGNÉ NE FAIT PAS UNE PYRAMIDE. Avec 158 « non
+  // renseigné » et un seul homme, la version appariée n'affichait qu'une barre
+  // de 1 et masquait toute la population. On bascule en barres simples tant que
+  // le sexe n'est pas connu pour au moins 80 % des dossiers.
+  const connus = bandes.reduce((s, b) => s + b.f + b.m, 0);
+  const avecSexe = connus > 0 && connus >= total * 0.8;
   const max = Math.max(
     1,
     ...bandes.map((b) => (avecSexe ? Math.max(b.f, b.m) : b.f + b.m + b.nr)),
@@ -227,7 +233,19 @@ export function Histogramme({
             style={{ left: `${((indexMediane + 0.5) * 100) / barres.length}%` }}
             aria-hidden="true"
           >
-            <span className="mb-0.5 -translate-x-0 whitespace-nowrap rounded-full border bord-verre verre-clair-fort px-2 py-0.5 font-num text-eyebrow font-semibold tabular-nums text-ink-900 shadow-douce">
+            <span
+              className={[
+                "mb-0.5 whitespace-nowrap rounded-full border bord-verre verre-clair-fort px-2 py-0.5 font-num text-eyebrow font-semibold tabular-nums text-ink-900 shadow-douce",
+                // ⚠️ LE CHIP NE DOIT PAS SORTIR DU PANNEAU. Centré sur la
+                // dernière colonne, il débordait de 40 px à droite. Près d'un
+                // bord, il s'aligne sur ce bord au lieu de se centrer.
+                indexMediane >= barres.length - 2
+                  ? "absolute right-0 top-0"
+                  : indexMediane <= 0
+                    ? "absolute left-0 top-0"
+                    : "relative",
+              ].join(" ")}
+            >
               {analyse.supplementaires.durees.mediane} {mediane} {analyse.supplementaires.durees.minutes}
             </span>
             <span className="w-px flex-1 border-l border-dashed border-ink-300" />

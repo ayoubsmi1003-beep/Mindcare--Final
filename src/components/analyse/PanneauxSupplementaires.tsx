@@ -9,7 +9,7 @@
  * `app.analysis_extra` ; ici on ne calcule qu'une hauteur et une position.
  */
 
-import { BarresRang } from "@/components/ui/Barres";
+import { BarresComparees, BarresRang } from "@/components/ui/Barres";
 import { Courbe, type PointCourbe } from "@/components/ui/Courbe";
 import { analyse } from "@/i18n/analyse";
 import { formaterNombre, libelleSeau, titreSeau } from "@/lib/analyse-series";
@@ -172,6 +172,7 @@ export function ContinuiteSoins({
             libelleSecondaire={analyse.supplementaires.continuite.revenus}
             ariaLabel={analyse.supplementaires.continuite.titre}
             hauteur={188}
+            plafond={100}
           />
         </>
       )}
@@ -186,19 +187,7 @@ export function DiagnosticsStock({
 }: {
   readonly points: readonly StockDiagnosticAnalyse[];
 }): React.JSX.Element {
-  const serie: PointCourbe[] = points.map((p) => ({
-    cle: p.cle,
-    libelle: libelleSeau(p.cle, "mois"),
-    titre: titreSeau(p.cle, "mois"),
-    valeur: p.actifs,
-    secondaire: p.nouveaux,
-    couvert: true,
-  }));
-
   const dernier = points.at(-1);
-  const premier = points[0];
-  const variation =
-    dernier !== undefined && premier !== undefined ? dernier.actifs - premier.actifs : 0;
 
   return (
     <PanneauAnalyse
@@ -222,19 +211,34 @@ export function DiagnosticsStock({
             <span className="font-ui text-label text-ink-500">
               {analyse.supplementaires.diagStock.actifs.toLowerCase()}
             </span>
-            {variation !== 0 ? (
-              <span className="font-num text-label tabular-nums text-ink-500">
-                {variation > 0 ? "+" : "−"}
-                {formaterNombre(Math.abs(variation))} {analyse.supplementaires.diagStock.nouveaux.toLowerCase()}
-              </span>
-            ) : null}
           </div>
-          <Courbe
-            points={serie}
-            libellePrimaire={analyse.supplementaires.diagStock.actifs}
-            libelleSecondaire={analyse.supplementaires.diagStock.nouveaux}
+          {/* ⚠️ UN STOCK PRESQUE PLAT NE FAIT PAS UN GRAPHIQUE LISIBLE. 919
+              diagnostics actifs sur deux mois donnaient une ligne collée au
+              bord. On dessine donc les FLUX du mois — ce qui est réellement
+              nouveau, ce qui est résolu — et le stock reste dans l'en-tête. */}
+          <BarresComparees
+            categories={points.map((p) => ({
+              cle: p.cle,
+              libelle: libelleSeau(p.cle, "mois"),
+              titre: titreSeau(p.cle, "mois"),
+            }))}
+            series={[
+              {
+                cle: "nouveaux",
+                libelle: analyse.supplementaires.diagStock.nouveaux,
+                famille: "emeraude",
+                valeurs: points.map((p) => p.nouveaux),
+              },
+              {
+                cle: "resolus",
+                libelle: analyse.supplementaires.diagStock.resolus,
+                famille: "corail",
+                valeurs: points.map((p) => p.resolus),
+              },
+            ]}
+            hauteur={168}
+            etiquettesMax={6}
             ariaLabel={analyse.supplementaires.diagStock.titre}
-            hauteur={188}
           />
         </>
       )}
