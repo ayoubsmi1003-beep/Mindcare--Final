@@ -173,7 +173,7 @@ it("n'invente aucune page quand le chunk n'en porte pas, et ne cite pas une sour
   expect(event.sources[0]?.label).not.toMatch(/\bp\.\s*\d/u);
 });
 
-it("refuse une page soufflée par le modèle : le nombre non ancré fait échouer la synthèse", async () => {
+it("ignore la page soufflée par le modèle et ne garde que le passage source vérifié", async () => {
   const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
   try {
     const result = await readKnowledge(clientPour(`${PHRASE} ${MARQUEUR}`), "Explique le trouble panique selon DSM");
@@ -182,6 +182,10 @@ it("refuse une page soufflée par le modèle : le nombre non ancré fait échoue
     const events = await synthesizeKnowledge(result, "Explique le trouble panique selon DSM", "fr",
       new AbortController().signal, { compact: true });
     expect(events.some(e => e.type === "sentence" && e.kind === "inference")).toBe(false);
-    expect(warn).toHaveBeenCalledWith("[alexa-knowledge] source-fallback", "number");
+    const spoken = events.filter(e => e.type === "sentence" && e.kind === "knowledge");
+    expect(spoken.map(e => e.type === "sentence" ? e.text : "").join(" ")).toBe(`Passage cité : « ${PHRASE} »`);
+    expect(spoken.some(e => e.type === "sentence" && e.text.includes("999"))).toBe(false);
+    expect(spoken.flatMap(e => e.type === "sentence" ? e.sources : []).map(source => source.provenance.pageImprimee)).toContain(205);
+    expect(warn).not.toHaveBeenCalledWith("[alexa-knowledge] source-fallback", "number");
   } finally { warn.mockRestore(); }
 });

@@ -65,7 +65,7 @@ export function restoreAgentTask(actor:string,conversation:string,value:unknown)
 }
 export interface AgentToolResultObservation {
  callId:string; name:string; status:AgentResult['status']; errorCode?:string; actionName?:string; rankedCandidateCount?:number; requiredInputWasMissing?:boolean;
- catalogIdentityVerified?:boolean; currentTreatmentReadVerified?:boolean; doseInferenceAbsent?:boolean; strengthInferenceAbsent?:boolean; formulationInferenceAbsent?:boolean; routeInferenceAbsent?:boolean; medicationEquivalenceInferenceAbsent?:boolean;
+ catalogIdentityVerified?:boolean; currentTreatmentReadVerified?:boolean; doseInferenceAbsent?:boolean; strengthInferenceAbsent?:boolean; formulationInferenceAbsent?:boolean; routeInferenceAbsent?:boolean; medicationEquivalenceInferenceAbsent?:boolean; knowledgeSourceCount?:number; knowledgeExcerptCount?:number;
 }
 const MEDICATION_TREATMENT_ACTIONS=new Set(['update_treatment','pause_treatment','resume_treatment','stop_treatment']);
 export function summarizeAgentToolResultObservation(call:AgentCall,result:AgentResult):AgentToolResultObservation {
@@ -73,6 +73,7 @@ export function summarizeAgentToolResultObservation(call:AgentCall,result:AgentR
  const data=result.data&&typeof result.data==='object'?result.data as Record<string,unknown>:null;
  const candidates=result.error?.code==='patient-unresolved'&&Array.isArray(data?.['candidates'])?data['candidates']:null;
  const medicationPreparationVerified=!!result.proposal&&MEDICATION_TREATMENT_ACTIONS.has(result.proposal.tool);
+  const knowledgeSources=call.name==='search_knowledge'?result.evidence.filter(source=>source.type==='knowledge'):[];
  return {
   callId:call.id,
   name:call.name,
@@ -81,6 +82,7 @@ export function summarizeAgentToolResultObservation(call:AgentCall,result:AgentR
   ...(parsedAction.success?{actionName:parsedAction.data}:{}),
   ...(candidates?{rankedCandidateCount:Math.min(candidates.length,100)}:{}),
   ...(call.name==='prepare_action'&&result.status==='needs_input'?{requiredInputWasMissing:true}:{}),
+   ...(call.name==='search_knowledge'?{knowledgeSourceCount:Math.min(knowledgeSources.length,100),knowledgeExcerptCount:Math.min(knowledgeSources.filter(source=>!!source.excerpt?.trim()).length,100)}:{}),
   ...(medicationPreparationVerified?{catalogIdentityVerified:true,currentTreatmentReadVerified:true,doseInferenceAbsent:true,strengthInferenceAbsent:true,formulationInferenceAbsent:true,routeInferenceAbsent:true,medicationEquivalenceInferenceAbsent:true}:{}),
  };
 }

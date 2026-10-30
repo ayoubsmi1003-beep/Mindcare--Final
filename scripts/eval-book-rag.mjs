@@ -90,7 +90,16 @@ const verifierCible = async () => {
       .filter(file => file.endsWith(".sql"))
       .map(file => file.slice(0, -4));
     const { rows: appliedRows } = await client.query("SELECT version FROM app.schema_migrations ORDER BY version");
-    validateV8MigrationInventory({ repositoryVersions, appliedVersions: appliedRows.map(row => row.version) });
+    const appliedVersions = appliedRows.map(row => row.version);
+    const acknowledgedHistoricalVersions = [];
+    if (appliedVersions.includes("173_document_autofill_context")) {
+      const legacyEffect = (await client.query(
+        "SELECT to_regprocedure('app.document_context(app.document_drafts)') IS NOT NULL AS present",
+      )).rows[0]?.present === true;
+      if (!legacyEffect) throw new Error("V8HistoricalMigrationEffectMismatch");
+      acknowledgedHistoricalVersions.push("173_document_autofill_context");
+    }
+    validateV8MigrationInventory({ repositoryVersions, appliedVersions, acknowledgedHistoricalVersions });
     return source;
   } finally {
     try {

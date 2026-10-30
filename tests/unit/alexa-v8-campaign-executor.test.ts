@@ -22,6 +22,50 @@ function manifestWith(...cases: { id: string; turns: string[]; oracleCount?: num
 }
 
 describe("Alexa V8 adversarial multi-turn executor", () => {
+  it("requires a matching database qualification before restoring campaign verdicts", async () => {
+    const api = await loadExecutor();
+    expect(api).not.toBeNull();
+    expect(typeof api?.matchesV8AdversarialResumeBinding).toBe("function");
+    if (!api?.matchesV8AdversarialResumeBinding) return;
+
+    const binding = {
+      manifestSha256: "a".repeat(64),
+      frozenManifestSha256: "b".repeat(64),
+      privateOracleSha256: "c".repeat(64),
+      evaluatorSha256: "d".repeat(64),
+      sourceWorkingTreeSha256: "e".repeat(64),
+      databaseBindingSha256: "f".repeat(64),
+    };
+
+    expect(api.matchesV8AdversarialResumeBinding({ binding, report: { run: binding } })).toBe(true);
+    expect(api.matchesV8AdversarialResumeBinding({
+      binding,
+      report: { run: { ...binding, databaseBindingSha256: "0".repeat(64) } },
+    })).toBe(false);
+    expect(api.matchesV8AdversarialResumeBinding({
+      binding,
+      report: { run: { ...binding, databaseBindingSha256: undefined } },
+    })).toBe(false);
+  });
+
+  it("selects one diagnostic case without mutating the frozen campaign or other prompts", async () => {
+    const api = await loadExecutor();
+    expect(api).not.toBeNull();
+    if (!api?.selectV8AdversarialCase) return;
+    const manifest = manifestWith(
+      { id: "ADV-001", turns: ["template one"] },
+      { id: "ADV-002", turns: ["template two"] },
+    );
+    const resolvedPrompts = { "ADV-001": ["synthetic prompt one"], "ADV-002": ["synthetic prompt two"] };
+
+    const selected = api.selectV8AdversarialCase({ manifest, resolvedPrompts, caseId: "ADV-001" });
+
+    expect(selected.manifest.cases).toEqual([manifest.cases[0]]);
+    expect(selected.resolvedPrompts).toEqual({ "ADV-001": ["synthetic prompt one"] });
+    expect(manifest.cases).toHaveLength(2);
+    expect(resolvedPrompts["ADV-002"]).toEqual(["synthetic prompt two"]);
+  });
+
   it("restores per-oracle verdicts for completed cases from a matching safe report", async () => {
     const api = await loadExecutor();
     expect(api).not.toBeNull();
@@ -39,6 +83,7 @@ describe("Alexa V8 adversarial multi-turn executor", () => {
       privateOracleSha256: "d".repeat(64),
       evaluatorSha256: "e".repeat(64),
       sourceWorkingTreeSha256: "a".repeat(64),
+      databaseBindingSha256: "f".repeat(64),
     };
     let progress = createV8AdversarialProgress({
       manifestSha256,
@@ -92,6 +137,10 @@ describe("Alexa V8 adversarial multi-turn executor", () => {
           passingOracleCount: 2,
           evaluatorSha256: "e".repeat(64),
           oracleStatuses: ["PASS", "PASS"],
+          oracleChecks: [
+            { oracleIndex: 1, kind: "test_oracle", checks: [{ id: "explicit_intent", status: "PASS" }] },
+            { oracleIndex: 2, kind: "test_oracle", checks: [{ id: "audit_event", status: "PASS" }] },
+          ],
         }, {
           id: "ADV-005",
           status: "NOT VERIFIED",
@@ -104,8 +153,8 @@ describe("Alexa V8 adversarial multi-turn executor", () => {
     });
 
     expect(restored.get("ADV-004")).toEqual([
-      { oracleIndex: 1, kind: "test_oracle", status: "PASS" },
-      { oracleIndex: 2, kind: "test_oracle", status: "PASS" },
+      { oracleIndex: 1, kind: "test_oracle", status: "PASS", checks: [{ id: "explicit_intent", status: "PASS" }] },
+      { oracleIndex: 2, kind: "test_oracle", status: "PASS", checks: [{ id: "audit_event", status: "PASS" }] },
     ]);
     expect(restored.get("ADV-005")).toEqual([
       { oracleIndex: 1, kind: "test_oracle", status: "NOT VERIFIED" },
@@ -116,6 +165,22 @@ describe("Alexa V8 adversarial multi-turn executor", () => {
       progress,
       report: {
         run: { ...binding, privateOracleSha256: "a".repeat(64) },
+        rows: [{
+          id: "ADV-004",
+          status: "PASS",
+          oracleCount: 2,
+          passingOracleCount: 2,
+          evaluatorSha256: "e".repeat(64),
+          oracleStatuses: ["PASS", "PASS"],
+        }],
+      },
+    }).size).toBe(0);
+    expect(api.restoreV8AdversarialOracleResults({
+      manifest,
+      binding,
+      progress,
+      report: {
+        run: { ...binding, databaseBindingSha256: "0".repeat(64) },
         rows: [{
           id: "ADV-004",
           status: "PASS",

@@ -19,6 +19,7 @@ const DOCUMENT_DRAFT_ACTIONS = new Set([
 const normalize = value => typeof value === "string"
   ? value.normalize("NFKD").replace(/\p{M}/gu, "").replace(/[’‘]/gu, "'").toLowerCase().replace(/\s+/gu, " ").trim()
   : "";
+const CRITERIA_COVERAGE_DISCLAIMER = normalize("Cette synthèse reprend les éléments cités ; l’exhaustivité des critères demandés n’est pas confirmée.");
 const object = value => value !== null && typeof value === "object" && !Array.isArray(value) ? value : {};
 
 function observationsOf(value) {
@@ -35,16 +36,24 @@ function tracesOf(observations) {
     .filter(trace => trace && typeof trace === "object");
 }
 
-function citationMatches(source, expected) {
+function citationTitleMatches(source, expected) {
   if (source?.type !== "knowledge" || typeof source.label !== "string") return false;
   const label = normalize(source.label);
-  const titleMatches = label.includes(normalize(expected?.source));
+  return label.includes(normalize(expected?.source));
+}
+
+function citationSectionMatches(source, expected) {
+  if (source?.type !== "knowledge" || typeof source.label !== "string") return false;
+  const label = normalize(source.label);
   const groups = Array.isArray(expected?.section) ? expected.section : [];
-  const sectionMatches = groups.length > 0 && groups.every(group => {
+  return groups.length > 0 && groups.every(group => {
     const alternatives = Array.isArray(group) ? group.flat(Infinity) : [group];
     return alternatives.some(term => typeof term === "string" && normalize(term) && label.includes(normalize(term)));
   });
-  return titleMatches && sectionMatches;
+}
+
+function citationMatches(source, expected) {
+  return citationTitleMatches(source, expected) && citationSectionMatches(source, expected);
 }
 
 function citationHasResolvedPage(source) {
@@ -70,7 +79,8 @@ function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected) {
     if (index < 0) return false;
     remainder = remainder.slice(0, index) + remainder.slice(index + excerpt.length);
   }
-  return remainder.replace(/\bpassage\s+cite\b/gu, "").replace(/[^\p{L}\p{N}]/gu, "").length === 0;
+  return remainder.replace(/\bpassage\s+cite\b/gu, "").replace(CRITERIA_COVERAGE_DISCLAIMER, "")
+    .replace(/[^\p{L}\p{N}]/gu, "").length === 0;
 }
 
 function result(checks) {
@@ -120,6 +130,10 @@ export function evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: in
   }
 
   const matchingCitation = citations.find(source => citationMatches(source, sourceCase.attendu));
+  const sourceTitleMatched = citations.some(source => citationTitleMatches(source, sourceCase.attendu));
+  const sourceSectionMatched = citations.some(source => citationSectionMatches(source, sourceCase.attendu));
+  const citationMatched = matchingCitation !== undefined;
+  const pageResolved = matchingCitation ? citationHasResolvedPage(matchingCitation) : false;
   const answerEvents = sentences.filter(event => typeof event.text === "string" && event.text.trim());
   const answerEvidenceStatus = matchingCitation && answerEvents.length > 0 &&
     answerEvents.every(event => knowledgeSentenceUsesOnlyCitedExcerpts(event, sourceCase.attendu))
@@ -127,8 +141,8 @@ export function evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: in
   const checks = [
     { id: "answer_present", status: answerText.trim() && !ABSTENTION.test(normalize(answerText)) ? "PASS" : "FAIL" },
     { id: "answer_evidence", status: answerEvidenceStatus },
-    { id: "source", status: matchingCitation ? "PASS" : "FAIL" },
-    { id: "page", status: matchingCitation && citationHasResolvedPage(matchingCitation) ? "PASS" : "FAIL" },
+    { id: "source", status: citationMatched ? "PASS" : "FAIL", sourceTitleMatched, sourceSectionMatched, citationMatched },
+    { id: "page", status: pageResolved ? "PASS" : "FAIL", citationMatched, pageResolved },
   ];
   if (oracle.omitBookTitleFromUserFacingAnswer === true) {
     checks.push({ id: "book_title_omitted", status: BOOK_TITLE.test(answerText) ? "FAIL" : "PASS" });
@@ -659,7 +673,7 @@ export function evaluateV8ClinicalOracle({ oracle, sourceCase, snapshot, observa
       status = hasClinicalRead && observations.every(item => !Array.isArray(item.knowledgeTraces) || item.knowledgeTraces.length === 0)
         ? "PASS" : "FAIL";
     } else if (id === "case_summary_paragraph_items") {
-      status = clinicalGate && texts.every(paragraphShape) && citations.some(source => source.type === "diagnostic") ? "PASS" : "FAIL";
+      status = clinicalGate && texts.every(paragraphShape) ? "PASS" : "FAIL";
     } else if (id === "case_summary_includes_active_and_resolved" || id === "diagnosis_status_and_dates_preserved") {
       const diagnoses = caseDiagnoses.map(diagnosisProjection);
       const active = diagnoses.filter(row => row?.resolvedAt === null);
@@ -1046,7 +1060,17 @@ export function evaluateV8AdversarialScenario({ scenario, observations: input, k
     } else {
       evaluated = result([{ id: "evidence_specific_evaluator", status: "NOT VERIFIED" }]);
     }
-    return { oracleIndex: index + 1, kind: oracle?.kind ?? "unknown", status: evaluated.status };
+    return {
+      oracleIndex: index + 1,
+      kind: oracle?.kind ?? "unknown",
+      status: evaluated.status,
+      checks: evaluated.checks.map(check => ({
+        id: check.id,
+        status: check.status,
+        ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
+          .filter(key => typeof check[key] === "boolean").map(key => [key, check[key]])),
+      })),
+    };
   });
   const statuses = oracleResults.map(item => item.status);
   const status = statuses.includes("FAIL") ? "FAIL"

@@ -38,6 +38,33 @@ import {
 const CAMPAIGN = "alexa-v8-adversarial-250";
 const CASE_ID = /^ADV-\d{3}$/u;
 const ORACLE_STATUSES = new Set(["PASS", "FAIL", "NOT RUN", "NOT VERIFIED"]);
+const RESUME_BINDING_FIELDS = [
+  "manifestSha256", "frozenManifestSha256", "privateOracleSha256", "evaluatorSha256",
+  "sourceWorkingTreeSha256", "databaseBindingSha256",
+];
+
+/** A saved verdict can be reused only for the same source and qualified synthetic database. */
+export function matchesV8AdversarialResumeBinding({ binding, report } = {}) {
+  const run = report?.run;
+  return RESUME_BINDING_FIELDS.every(field => /^[a-f0-9]{64}$/u.test(binding?.[field] ?? "") &&
+    run?.[field] === binding[field]);
+}
+
+/** Selects one manifest-bound scenario for a diagnostic run without changing the frozen source manifest. */
+export function selectV8AdversarialCase({ manifest, resolvedPrompts, caseId } = {}) {
+  requireInput(manifest?.version === 1 && manifest.campaign === CAMPAIGN && Array.isArray(manifest.cases),
+    "Invalid V8 adversarial manifest");
+  requireInput(CASE_ID.test(caseId ?? ""), "Invalid V8 adversarial case ID");
+  const scenario = manifest.cases.find(item => item?.id === caseId);
+  const prompts = resolvedPrompts?.[caseId];
+  requireInput(scenario && Array.isArray(scenario.turns) && Array.isArray(prompts) &&
+    prompts.length === scenario.turns.length && prompts.every(prompt => typeof prompt === "string" && prompt.trim()),
+  "V8 adversarial case or resolved prompts are unavailable");
+  return {
+    manifest: { ...manifest, cases: [scenario] },
+    resolvedPrompts: { [caseId]: prompts },
+  };
+}
 
 function requireInput(condition, message) {
   if (!condition) throw new Error(message);
@@ -52,11 +79,10 @@ export function restoreV8AdversarialOracleResults({ manifest, binding, progress:
   } catch {
     return restored;
   }
-  const bindingFields = ["manifestSha256", "frozenManifestSha256", "privateOracleSha256", "evaluatorSha256", "sourceWorkingTreeSha256"];
   if (manifest?.version !== 1 || manifest.campaign !== CAMPAIGN || !Array.isArray(manifest.cases) ||
-      !binding || bindingFields.some(field => !/^[a-f0-9]{64}$/u.test(binding[field] ?? "")) ||
+      !matchesV8AdversarialResumeBinding({ binding, report }) ||
       binding.manifestSha256 !== progress.manifestSha256 ||
-      bindingFields.some(field => report?.run?.[field] !== binding[field])) return restored;
+      !report?.run) return restored;
 
   for (const scenario of manifest.cases) {
     const savedCase = progress.cases.find(item => item.id === scenario?.id);
@@ -79,10 +105,17 @@ export function restoreV8AdversarialOracleResults({ manifest, binding, progress:
         (savedCase.status === "PASS" && statuses.some(status => status !== "PASS")) ||
         (savedCase.status === "FAIL" && !statuses.includes("FAIL")) ||
         (awaitingAdjudication && statuses.includes("FAIL"))) continue;
+    const checkRows = Array.isArray(row.oracleChecks) ? row.oracleChecks : [];
+    const hasCompleteChecks = checkRows.length === scenario.oracles.length && checkRows.every((checks, index) =>
+      checks?.oracleIndex === index + 1 && checks.kind === scenario.oracles[index]?.kind && Array.isArray(checks.checks) &&
+      checks.checks.every(check => typeof check?.id === "string" &&
+        (/^[a-z][a-z0-9_]{0,63}$/u.test(check.id) || ["direct_readKnowledge", "agent_tool_readKnowledge"].includes(check.id)) &&
+        ORACLE_STATUSES.has(check.status)));
     restored.set(scenario.id, statuses.map((status, index) => ({
       oracleIndex: index + 1,
       kind: scenario.oracles[index]?.kind ?? "unknown",
       status,
+      ...(hasCompleteChecks ? { checks: checkRows[index].checks.map(({ id, status: checkStatus }) => ({ id, status: checkStatus })) } : {}),
     })));
   }
   return restored;

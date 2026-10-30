@@ -165,7 +165,7 @@ export interface KnowledgeQueryPlan {
 }
 
 function normalize(text: string): string {
-  return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().trim()
+  return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/[’‘]/gu, "'").trim()
     .replace(/[٠-٩]/gu, digit => String(digit.charCodeAt(0) - 0x0660))
     .replace(/[۰-۹]/gu, digit => String(digit.charCodeAt(0) - 0x06f0)).replace(/٫/gu, ".");
 }
@@ -337,10 +337,10 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   }
   // Type I must survive the baseline's one-letter token exclusion. A comparison
   // gets two exact lexical AND queries, never an OR query or a drug-only fallback.
-  const typeI = /\btype\s+i\b/u.test(normalized);
-  const typeII = /(?:\btype\s+ii\b|\b(?:et|vs|versus)\s+ii\b)/u.test(normalized);
+  const typeI = /\btypes?\s+i\b/u.test(normalized);
+  const typeII = /(?:\btypes?\s+ii\b|\b(?:de|du|et|vs|versus)\s+(?:type\s+)?ii\b)/u.test(normalized);
   if (typeI && typeII) {
-    const common = tokens.filter(token => !["type", "ii", "vs", "versus"].includes(token)).join(" ");
+    const common = tokens.filter(token => !["type", "types", "ii", "vs", "versus"].includes(token)).join(" ");
     // Les lots d'expansion bilingue sont CONSERVES : la comparaison de types
     // ne doit pas supprimer les rubriques candidates du concept clinique.
     const conservees = references.slice(1);
@@ -357,7 +357,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const comparison=knowledgeComparisonRequested(question);
   const focusRules:readonly (readonly [RegExp,string])[]=[
     [/\btrouble depressif caracterise\b/u,'trouble depressif caracterise'],
-    [/\bepisode depressif caracterise\b/u,'trouble depressif caracterise'],
+    [/\bepisode depressif(?: caracterise)?\b/u,'trouble depressif caracterise'],
     [/\btrouble panique\b/u,'trouble panique'],
     [/\b(?:hypomanie|hypomaniaque)\b/u,'episode hypomaniaque'],
     [/\b(?:manie|maniaque)\b/u,'episode maniaque'],
@@ -366,10 +366,10 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     [/\b(?:trouble obsessionnel[- ]compulsif|toc)\b/u,'trouble obsessionnel-compulsif'],
     [/\bstress post[- ]traumatique\b/u,'trouble stress post-traumatique'],
     [/\bdysphorique premenstruel\b/u,'trouble dysphorique premenstruel'],
-    [/\b(?:trouble lie a l'usage|trouble de l'usage|usage d'une substance)\b/u,'trouble de l usage'],
+    [/\b(?:trouble lie a l[’']usage|trouble de l[’']usage|usage d[’']une substance)\b/u,"troubles de l'usage d'une substance"],
   ];
   const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
-  const sectionFocus=book?.language==='fr'&&(!comparison||recognizedFocuses.length===1)?recognizedFocuses[0]:undefined;
+  const sectionFocus=book?.language==='fr'&&!comparison?recognizedFocuses[0]:undefined;
   const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
   // Aucun livre nommé + entité diagnostique reconnue : on AJOUTE les requêtes
   // de rubrique (concept + « critères diagnostiques ») SANS poser
@@ -388,8 +388,11 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   }
   // These two approved chapters contain their criteria directly under the topic heading.
   const embeddedCriteria=sectionFocus==='anxiete generalisee'||sectionFocus==='trouble obsessionnel-compulsif';
+  // DSM substance criteria live at this topic heading without an A/B marker structure.
+  const criteriaAtTopicSection=embeddedCriteria||sectionFocus==="troubles de l'usage d'une substance";
   const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized),descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
-  const sectionLeaf = sectionFocus ? embeddedCriteria&&(criteriaRequested||descriptionRequested)?sectionFocus:!embeddedCriteria&&criteriaRequested?'criteres diagnostiques':!embeddedCriteria&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
+  const symptomFamiliesRequested=/\b(?:familles|groupes) de symptomes\b/u.test(normalized);
+  const sectionLeaf = sectionFocus ? criteriaAtTopicSection&&(criteriaRequested||descriptionRequested)?sectionFocus:!criteriaAtTopicSection&&criteriaRequested&&!symptomFamiliesRequested?'criteres diagnostiques':!criteriaAtTopicSection&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
   // Indice de feuille pour un livre NON nommé : même logique, sans filtre.
   const leafHint = sectionLeaf !== undefined
     ? sectionLeaf

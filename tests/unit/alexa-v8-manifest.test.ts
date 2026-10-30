@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { selectV8Cases, validateV8Manifest, validateV8Target, validateV8Source, validateV8MigrationInventory } from '../../scripts/lib/alexa-v8-manifest.mjs';
+import { selectV8Cases, validateV8Manifest, validateV8Target, validateV8Source, validateV8MigrationInventory, v8AdversarialRequiresCrossEncoder } from '../../scripts/lib/alexa-v8-manifest.mjs';
+import * as v8Manifest from '../../scripts/lib/alexa-v8-manifest.mjs';
 
 type V8Manifest = {
   status: string;
@@ -121,5 +122,78 @@ describe('Alexa V8 evaluation database', () => {
       repositoryVersions,
       appliedVersions: [...repositoryVersions, '207_untracked_database_migration'],
     })).toThrow('V8MigrationInventoryMismatch');
+  });
+
+  it('accepts only explicitly acknowledged historical migration rows while requiring every current migration', () => {
+    const repositoryVersions = ['194_alexa_consultation_scale_read', '200_recherche_medicaments_plan',
+      '205_diagnosis_gates', '206_diagnosis_synthetic_flag'];
+    const historical = '173_document_autofill_context';
+    expect(validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: [...repositoryVersions, historical],
+      acknowledgedHistoricalVersions: [historical],
+    })).toEqual({
+      status: 'PASS', repositoryCount: 4, appliedCount: 5,
+      highestRepositoryVersion: '206_diagnosis_synthetic_flag',
+      acknowledgedHistoricalVersions: [historical],
+    });
+    expect(() => validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: [...repositoryVersions, historical],
+    })).toThrow('V8MigrationInventoryMismatch');
+    expect(() => validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: [...repositoryVersions, '207_untracked_database_migration'],
+      acknowledgedHistoricalVersions: [historical],
+    })).toThrow('V8MigrationInventoryMismatch');
+    expect(() => validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions: [...repositoryVersions, historical],
+      acknowledgedHistoricalVersions: ['207_untracked_database_migration'],
+    })).toThrow('V8MigrationInventoryMismatch');
+  });
+
+  it('resolves live campaign actors from the bound synthetic snapshot', () => {
+    const snapshot = {
+      owner: { id: '00000000-0000-0000-0000-0000000000a1', cabinet_id: '00000000-0000-0000-0000-000000000001' },
+      tables: { profiles: [
+        { id: '00000000-0000-0000-0000-0000000000a1', cabinet_id: '00000000-0000-0000-0000-000000000001', role: 'owner' },
+        { id: '00000000-0000-0000-0000-0000000000a3', cabinet_id: '00000000-0000-0000-0000-000000000001', role: 'assistant' },
+      ] },
+    };
+    expect(typeof v8Manifest.resolveV8CampaignActors).toBe('function');
+    expect(v8Manifest.resolveV8CampaignActors(snapshot)).toEqual({
+      owner: '00000000-0000-0000-0000-0000000000a1',
+      assistant: '00000000-0000-0000-0000-0000000000a3',
+    });
+  });
+
+  it('fails closed when the bound snapshot has missing or ambiguous campaign actors', () => {
+    const owner = { id: '00000000-0000-0000-0000-0000000000a1', cabinet_id: '00000000-0000-0000-0000-000000000001' };
+    const profiles = [
+      { ...owner, role: 'owner' },
+      { id: '00000000-0000-0000-0000-0000000000a3', cabinet_id: owner.cabinet_id, role: 'assistant' },
+    ];
+    expect(typeof v8Manifest.resolveV8CampaignActors).toBe('function');
+    expect(() => v8Manifest.resolveV8CampaignActors({ owner, tables: { profiles: [] } }))
+      .toThrow('V8SyntheticActorScopeMismatch');
+    expect(() => v8Manifest.resolveV8CampaignActors({ owner, tables: { profiles: [
+      ...profiles,
+      { id: '00000000-0000-0000-0000-0000000000a4', cabinet_id: owner.cabinet_id, role: 'assistant' },
+    ] } })).toThrow('V8SyntheticActorScopeMismatch');
+  });
+
+  it('opts into real cross-encoder inference only for retrieval oracles that require it', () => {
+    expect(typeof v8Manifest.v8AdversarialRequiresCrossEncoder).toBe('function');
+    expect(v8AdversarialRequiresCrossEncoder({ oracles: [{
+      kind: 'retrieval_contract', mustTrace: ['embedding_invocation', 'reranker_invocation'],
+    }] })).toBe(true);
+    expect(v8AdversarialRequiresCrossEncoder({ oracles: [{
+      kind: 'retrieval_contract', mustTrace: ['embedding_invocation'],
+    }] })).toBe(false);
+    expect(v8AdversarialRequiresCrossEncoder({ oracles: [{
+      kind: 'knowledge_case', mustTrace: ['reranker_invocation'],
+    }] })).toBe(false);
+    expect(v8AdversarialRequiresCrossEncoder(null)).toBe(false);
   });
 });

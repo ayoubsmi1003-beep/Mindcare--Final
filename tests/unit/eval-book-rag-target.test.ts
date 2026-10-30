@@ -57,3 +57,12 @@ it("wires the read-only evaluator to the V8 gates and records safe direct-path t
   expect(evaluator).toContain("writeFileSync(artifactPath");
   expect(evaluator).not.toMatch(/chargerEnv|MINDCARE_(?:ADMIN|TEST|DATABASE)_DATABASE_URL/u);
 });
+
+it("acknowledges the retained historical migration only when its database effect exists", () => {
+  const evaluator = readFileSync(resolve("scripts/eval-book-rag.mjs"), "utf8");
+
+  expect(evaluator).toContain('appliedVersions.includes("173_document_autofill_context")');
+  expect(evaluator).toContain("to_regprocedure('app.document_context(app.document_drafts)')");
+  expect(evaluator).toContain('if (!legacyEffect) throw new Error("V8HistoricalMigrationEffectMismatch")');
+  expect(evaluator).toMatch(/validateV8MigrationInventory\(\{[\s\S]*?acknowledgedHistoricalVersions/u);
+});

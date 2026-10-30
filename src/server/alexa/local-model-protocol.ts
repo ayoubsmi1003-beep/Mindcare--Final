@@ -98,10 +98,12 @@ export function parseLocalAnswer(raw: string): string {
   return value.text;
 }
 
-/** Count the runtime's exact rendered tokens, including requests already beyond the window. */
-export function assertLocalContextFits(value: unknown, outputTokens: number): void {
-  // The loopback transport bounds this response to 96 KB; token count must not be clipped.
+/** Fit the requested generation budget to exact rendered tokens and the safety reserve. */
+export function fitLocalOutputTokens(value: unknown, requestedOutputTokens: number): number {
   const parsed = z.object({ tokens: z.array(z.number().int()) }).parse(value);
-  if(process.env['ALEXA_LOCAL_TIMINGS']==='1')try{console.info('[alexa-local-token-budget]',{inputTokens:parsed.tokens.length,outputTokens,reservedTokens:128,contextTokens:4096});}catch{/* Diagnostics cannot change admission. */}
-  if (parsed.tokens.length + outputTokens + 128 > 4096) throw new Error("LocalModelContext");
+  const requested = z.number().int().min(1).max(1024).parse(requestedOutputTokens);
+  const outputTokens = Math.min(requested, 4096 - parsed.tokens.length - 128);
+  if(process.env['ALEXA_LOCAL_TIMINGS']==='1')try{console.info('[alexa-local-token-budget]',{inputTokens:parsed.tokens.length,requestedOutputTokens:requested,outputTokens,reservedTokens:128,contextTokens:4096});}catch{/* Diagnostics cannot change admission. */}
+  if (outputTokens < 1) throw new Error("LocalModelContext");
+  return outputTokens;
 }

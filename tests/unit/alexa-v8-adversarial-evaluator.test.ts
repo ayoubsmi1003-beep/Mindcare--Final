@@ -98,6 +98,21 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
     expect(result.checks).toContainEqual({ id: "answer_evidence", status: "NOT VERIFIED" });
   });
 
+  it("accepts only the fixed criteria-coverage disclaimer alongside cited excerpts", async () => {
+    const excerpt = "Les critères évaluent plusieurs symptômes sur une période déterminée.";
+    const disclaimer = "Cette synthèse reprend les éléments cités ; l’exhaustivité des critères demandés n’est pas confirmée.";
+    const grounded = observation({ text: `Passage cité : « ${excerpt} » ${disclaimer}` });
+    grounded.events[0]!.sources[0]!.excerpt = excerpt;
+
+    const result = await (await loadEvaluator())!.evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: [grounded] });
+
+    expect(result.checks).toContainEqual({ id: "answer_evidence", status: "PASS" });
+    const embellished = observation({ text: `Passage cité : « ${excerpt} » ${disclaimer} Une autre règle clinique est établie.` });
+    embellished.events[0]!.sources[0]!.excerpt = excerpt;
+    const rejected = await (await loadEvaluator())!.evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: [embellished] });
+    expect(rejected.checks).toContainEqual({ id: "answer_evidence", status: "NOT VERIFIED" });
+  });
+
   it("does not accept an uncited answer sentence alongside a grounded passage", async () => {
     const api = await loadEvaluator();
     expect(api).not.toBeNull();
@@ -131,9 +146,18 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
 
     expect(result.status).toBe("FAIL");
     expect(result.checks).toEqual(expect.arrayContaining([
-      expect.objectContaining({ id: "source", status: "FAIL" }),
-      expect.objectContaining({ id: "page", status: "FAIL" }),
+      expect.objectContaining({ id: "source", status: "FAIL", sourceTitleMatched: false, sourceSectionMatched: false, citationMatched: false }),
+      expect.objectContaining({ id: "page", status: "FAIL", citationMatched: false, pageResolved: false }),
       expect.objectContaining({ id: "book_title_omitted", status: "FAIL" }),
+    ]));
+    const scenarioResult = api.evaluateV8AdversarialScenario({
+      scenario: { id: "ADV-001", oracles: [oracle] },
+      observations: [invalid],
+      knowledgeSources: { [oracle.sourceFile]: [sourceCase] },
+    });
+    expect(scenarioResult.oracleResults[0]?.checks).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: "source", sourceTitleMatched: false, sourceSectionMatched: false, citationMatched: false }),
+      expect.objectContaining({ id: "page", citationMatched: false, pageResolved: false }),
     ]));
   });
 
@@ -161,7 +185,7 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
     const result = api.evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: [missingExpectedPage] });
 
     expect(result.status).toBe("FAIL");
-    expect(result.checks).toContainEqual({ id: "page", status: "FAIL" });
+    expect(result.checks).toContainEqual(expect.objectContaining({ id: "page", status: "FAIL", citationMatched: true, pageResolved: false }));
   });
 
   it("does not pass an answerable question when the cited response is an abstention", async () => {
@@ -728,7 +752,12 @@ describe("Alexa V8 adversarial action evidence oracle", () => {
     });
 
     expect(result.status).toBe("FAIL");
-    expect(result.oracleResults).toEqual([{ oracleIndex: 1, kind: "action_contract", status: "FAIL" }]);
+    expect(result.oracleResults[0]).toMatchObject({
+      oracleIndex: 1,
+      kind: "action_contract",
+      status: "FAIL",
+      checks: expect.arrayContaining([{ id: "frozen_expected_action_outcome", status: "FAIL" }]),
+    });
   });
 
   it("does not count the expected proposal as a persisted action", async () => {
@@ -1075,6 +1104,48 @@ describe("Alexa V8 frozen snapshot and clinical contracts", () => {
       .toMatchObject({ status: "FAIL" });
     expect(check(correct, rows, "patient-b").status).not.toBe("PASS");
     expect(check(correct, [], "patient-a", []).status).toBe("NOT VERIFIED");
+  });
+
+  it("keeps paragraph formatting separate from diagnosis coverage when the synthetic case has no diagnoses", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+
+    const result = api.evaluateV8ClinicalOracle({
+      oracle: {
+        kind: "clinical_contract",
+        sourceCaseId: "v8-037",
+        scope: "case_summary",
+        rules: ["case_summary_paragraph_items", "diagnosis_source_attribution", "diagnosis_sources_resolve"],
+      },
+      sourceCase: {
+        id: "v8-037",
+        turnCount: 1,
+        turnScopes: [{ index: 0, patientRef: "PATIENT_A" }],
+        assertions: [],
+      },
+      snapshot: { patientA: { id: "patient-a" }, tables: { diagnoses: [] } },
+      observations: [{
+        queries: [
+          { name: "get_patient", response: { ok: true, data: [{ id: "patient-a" }] } },
+          { name: "get_alexa_clinical_context", args: { p_patient_id: "patient-a" }, response: {
+            ok: true, data: [{ patientId: "patient-a", diagnoses: [] }],
+          } },
+        ],
+        events: [{ type: "sentence", text: "La personne décrit une difficulté persistante au quotidien.", sources: [
+          { type: "patient", id: "patient-a" },
+          { type: "query", id: "clinical-read", provenance: { gate: "get_alexa_clinical_context" } },
+
+        ] }],
+      }],
+    });
+
+    expect(result.checks).toEqual([
+      { id: "case_summary_paragraph_items", status: "PASS" },
+      { id: "diagnosis_source_attribution", status: "NOT VERIFIED" },
+      { id: "diagnosis_sources_resolve", status: "NOT VERIFIED" },
+    ]);
+    expect(result.status).toBe("NOT VERIFIED");
   });
 
   it("reports every oracle separately as NOT RUN when the complete corpus has no runtime observations", async () => {

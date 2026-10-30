@@ -68,6 +68,29 @@ export function validateBookRagSource(value) {
   }
 }
 
+export function resolveV8CampaignActors(snapshot) {
+  const owner = snapshot?.owner;
+  const profiles = snapshot?.tables?.profiles;
+  const isUuid = value => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/iu.test(value);
+  if (!isUuid(owner?.id) || !isUuid(owner?.cabinet_id) || !Array.isArray(profiles)) {
+    throw new Error('V8SyntheticActorScopeMismatch');
+  }
+  const scoped = profiles.filter(profile => profile?.cabinet_id === owner.cabinet_id);
+  const owners = scoped.filter(profile => profile.id === owner.id && profile.role === 'owner');
+  const assistants = scoped.filter(profile => profile.role === 'assistant');
+  if (owners.length !== 1 || assistants.length !== 1 || !isUuid(assistants[0]?.id)) {
+    throw new Error('V8SyntheticActorScopeMismatch');
+  }
+  return { owner: owner.id, assistant: assistants[0].id };
+}
+
+/** Enable the experimental cross-encoder only for cases whose independent oracle requires it. */
+export function v8AdversarialRequiresCrossEncoder(scenario) {
+  return Array.isArray(scenario?.oracles) && scenario.oracles.some(oracle =>
+    oracle?.kind === 'retrieval_contract' && Array.isArray(oracle.mustTrace) &&
+    oracle.mustTrace.includes('reranker_invocation'));
+}
+
 function compareMigrationVersions(left, right) {
   const leftNumber = Number(/^(\d+)_/u.exec(left)?.[1] ?? Number.NaN);
   const rightNumber = Number(/^(\d+)_/u.exec(right)?.[1] ?? Number.NaN);
@@ -75,9 +98,9 @@ function compareMigrationVersions(left, right) {
 }
 
 /** Refuse live evaluation against a migration registry that differs from this checkout. */
-export function validateV8MigrationInventory({ repositoryVersions, appliedVersions } = {}) {
-  const asSet = values => {
-    if (!Array.isArray(values) || !values.length || values.some(value =>
+export function validateV8MigrationInventory({ repositoryVersions, appliedVersions, acknowledgedHistoricalVersions = [] } = {}) {
+  const asSet = (values, allowEmpty = false) => {
+    if (!Array.isArray(values) || (!allowEmpty && !values.length) || values.some(value =>
       typeof value !== 'string' || value.trim() !== value || value.length > 240 || /[\\/]/u.test(value))) {
       throw new Error('V8MigrationInventoryMismatch');
     }
@@ -87,7 +110,11 @@ export function validateV8MigrationInventory({ repositoryVersions, appliedVersio
   };
   const repository = asSet(repositoryVersions);
   const applied = asSet(appliedVersions);
-  if (repository.size !== applied.size || [...repository].some(version => !applied.has(version))) {
+  const acknowledged = asSet(acknowledgedHistoricalVersions, true);
+  const missing = [...repository].some(version => !applied.has(version));
+  const unacknowledged = [...applied].some(version => !repository.has(version) && !acknowledged.has(version));
+  const invalidAcknowledgement = [...acknowledged].some(version => repository.has(version) || !applied.has(version));
+  if (missing || unacknowledged || invalidAcknowledgement) {
     throw new Error('V8MigrationInventoryMismatch');
   }
   const highestRepositoryVersion = [...repository].sort(compareMigrationVersions).at(-1);
@@ -96,6 +123,7 @@ export function validateV8MigrationInventory({ repositoryVersions, appliedVersio
     repositoryCount: repository.size,
     appliedCount: applied.size,
     highestRepositoryVersion,
+    ...(acknowledged.size ? { acknowledgedHistoricalVersions: [...acknowledged].sort(compareMigrationVersions) } : {}),
   };
 }
 

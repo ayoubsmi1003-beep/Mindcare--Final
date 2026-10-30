@@ -1,5 +1,5 @@
 const evaluationStatuses = new Set(["PASS", "FAIL", "PARTIAL", "NOT RUN", "NOT VERIFIED"]);
-const eventStatuses = new Set(["answered", "cancelled", "completed", "empty", "failed", "needs_input", "pending", "unsupported"]);
+const eventStatuses = new Set(["answered", "budget_limited", "cancelled", "completed", "empty", "failed", "needs_input", "partial", "pending", "proposed", "unsupported"]);
 const toolStatuses = new Set(["ok", "partial", "empty", "unsupported", "needs_input", "error", "cancelled", "pending", "failed"]);
 const sourceTypes = new Set(["appointment", "consultation", "document", "knowledge", "patient", "query", "treatment", "diagnostic", "scale"]);
 const caseId = value => typeof value === "string" && /^(?:ADV-\d{3}|v8-\d{3}|\d{1,4}-[a-z]{2,8}|[a-z]{2,4}-\d{3})$/iu.test(value);
@@ -18,6 +18,11 @@ const vectorGates = new Set(["search_knowledge_vector", "search_knowledge_vector
 const actionGateNames = new Set([
   "propose_jarvis_action", "confirm_jarvis_action", "reject_jarvis_action", "execute_jarvis_action",
 ]);
+const agentCallNames = new Set([
+  "declare_request", "query_patients", "get_patient_context", "query_consultations", "query_agenda",
+  "query_documents", "query_finance", "query_app", "search_knowledge", "answer_general",
+  "prepare_action", "navigate", "ask_doctor",
+]);
 const actionNames = new Set([
   "create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived",
   "set_consultation_price", "record_payment_collected", "close_consultation",
@@ -34,10 +39,39 @@ const token = value => typeof value === "string" && /^[a-z0-9_-]{1,64}$/iu.test(
 const finite = value => Number.isFinite(value) && value >= 0 ? value : undefined;
 const status = value => evaluationStatuses.has(value) ? value : "NOT VERIFIED";
 const eventStatus = value => eventStatuses.has(value) ? value : undefined;
+const safeResultCount = data => {
+  if (Array.isArray(data)) return data.length <= 1000000 ? data.length : undefined;
+  const result = object(data);
+  for (const key of ["rows", "items", "patients", "consultations", "documents", "results"]) {
+    if (Array.isArray(result[key]) && result[key].length <= 1000000) return result[key].length;
+  }
+  return undefined;
+};
+const safeOracleCheckId = value => typeof value === "string" &&
+  (/^[a-z][a-z0-9_]{0,63}$/u.test(value) || ["direct_readKnowledge", "agent_tool_readKnowledge"].includes(value));
 
 function safeRun(value) {
   const run = object(value);
   const execution = object(run.execution);
+  const databaseSnapshot = object(run.databaseSnapshot);
+  const migrationInventory = object(run.migrationInventory);
+  const safeDatabaseSnapshot = ["patients", "consultations", "nonSynthetic"].every(key =>
+    Number.isInteger(databaseSnapshot[key]) && databaseSnapshot[key] >= 0 && databaseSnapshot[key] <= 10000000)
+    ? Object.fromEntries(["patients", "consultations", "nonSynthetic"].map(key => [key, databaseSnapshot[key]]))
+    : undefined;
+  const safeMigrationInventory = migrationInventory.status === "PASS" &&
+    Number.isInteger(migrationInventory.repositoryCount) && migrationInventory.repositoryCount >= 0 && migrationInventory.repositoryCount <= 10000 &&
+    Number.isInteger(migrationInventory.appliedCount) && migrationInventory.appliedCount >= 0 && migrationInventory.appliedCount <= 10000 &&
+    typeof migrationInventory.highestRepositoryVersion === "string" && /^\d{3}_[a-z0-9_]{1,80}$/u.test(migrationInventory.highestRepositoryVersion)
+    ? {
+      status: "PASS",
+      repositoryCount: migrationInventory.repositoryCount,
+      appliedCount: migrationInventory.appliedCount,
+      highestRepositoryVersion: migrationInventory.highestRepositoryVersion,
+      acknowledgedHistoricalVersions: list(migrationInventory.acknowledgedHistoricalVersions)
+        .filter(version => typeof version === "string" && /^\d{3}_[a-z0-9_]{1,80}$/u.test(version)).slice(0, 100),
+    }
+    : undefined;
   return {
     ...(typeof run.id === "string" && (/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/iu.test(run.id) || /^run-[a-z0-9_-]{1,48}$/iu.test(run.id)) ? { id: run.id } : {}),
     ...(typeof run.startedAt === "string" && Number.isFinite(Date.parse(run.startedAt)) ? { startedAt: run.startedAt } : {}),
@@ -47,6 +81,13 @@ function safeRun(value) {
     ...(typeof run.privateOracleSha256 === "string" && /^[a-f0-9]{64}$/u.test(run.privateOracleSha256) ? { privateOracleSha256: run.privateOracleSha256 } : {}),
     ...(typeof run.evaluatorSha256 === "string" && /^[a-f0-9]{64}$/u.test(run.evaluatorSha256) ? { evaluatorSha256: run.evaluatorSha256 } : {}),
     ...(typeof run.sourceWorkingTreeSha256 === "string" && /^[a-f0-9]{64}$/u.test(run.sourceWorkingTreeSha256) ? { sourceWorkingTreeSha256: run.sourceWorkingTreeSha256 } : {}),
+    ...(run.databaseTarget === "alexa_eval_v8_intelligence_20261027" ? { databaseTarget: run.databaseTarget } : {}),
+    ...(typeof run.databaseBindingSha256 === "string" && /^[a-f0-9]{64}$/u.test(run.databaseBindingSha256) ? { databaseBindingSha256: run.databaseBindingSha256 } : {}),
+    ...(finite(run.sourceCount) !== undefined && run.sourceCount <= 100000 ? { sourceCount: run.sourceCount } : {}),
+    ...(safeDatabaseSnapshot ? { databaseSnapshot: safeDatabaseSnapshot } : {}),
+    ...(safeMigrationInventory ? { migrationInventory: safeMigrationInventory } : {}),
+    ...( ["fresh", "matched", "mismatch_restarted_fresh"].includes(run.resumeBindingStatus)
+      ? { resumeBindingStatus: run.resumeBindingStatus } : {}),
     ...(typeof run.fixtureAsOf === "string" && /^\d{4}-\d{2}-\d{2}$/u.test(run.fixtureAsOf) ? { fixtureAsOf: run.fixtureAsOf } : {}),
     ...(typeof object(run.capabilities).approvedBookFixtureAvailable === "boolean" ? { capabilities: { approvedBookFixtureAvailable: object(run.capabilities).approvedBookFixtureAvailable } } : {}),
     ...(Object.keys(execution).length ? { execution: {
@@ -66,25 +107,54 @@ function safeEvent(value) {
   const event = object(value);
   const type = eventTypes.has(event.type) ? event.type : "unknown";
   if (type === "sentence") {
+    const hasSources = Array.isArray(event.sources);
     const sources = list(event.sources);
+    const knowledgeSources = sources.filter(source => object(source).type === "knowledge");
+    const safeCount = (value, maximum) => Number.isInteger(value) && value >= 0 && value <= maximum ? value : undefined;
+    const hasKnowledge = event.kind === "knowledge" || knowledgeSources.length > 0 || safeCount(event.knowledgeSourceCount, 2048) !== undefined;
     return {
       type,
-      ...(typeof event.text === "string" ? { textChars: event.text.length } : {}),
+      ...(typeof event.text === "string" ? { textChars: event.text.length }
+        : Number.isInteger(event.textChars) && event.textChars >= 0 && event.textChars <= 12000 ? { textChars: event.textChars } : {}),
       ...(["fact", "inference", "knowledge"].includes(event.kind) ? { kind: event.kind } : {}),
-      sourceCount: sources.length,
-      sourceTypes: [...new Set(sources.map(source => token(object(source).type)).filter(type => type && sourceTypes.has(type)))].sort(),
+      sourceCount: hasSources ? sources.length
+        : Number.isInteger(event.sourceCount) && event.sourceCount >= 0 && event.sourceCount <= 2048 ? event.sourceCount : 0,
+      sourceTypes: hasSources
+        ? [...new Set(sources.map(source => token(object(source).type)).filter(type => type && sourceTypes.has(type)))].sort()
+        : [...new Set(list(event.sourceTypes).filter(type => sourceTypes.has(type)))].sort(),
+      ...(hasKnowledge ? {
+        knowledgeSourceCount: hasSources ? knowledgeSources.length : safeCount(event.knowledgeSourceCount, 2048) ?? 0,
+        knowledgeExcerptCount: hasSources
+          ? knowledgeSources.filter(source => typeof object(source).excerpt === "string" && object(source).excerpt.trim()).length
+          : safeCount(event.knowledgeExcerptCount, 2048) ?? 0,
+        knowledgePageCount: hasSources
+          ? knowledgeSources.filter(source => {
+            const provenance = object(object(source).provenance);
+            return Number.isInteger(provenance.pageImprimee) && provenance.pageImprimee > 0 ||
+              Number.isInteger(provenance.pagePdf) && provenance.pagePdf > 0;
+          }).length
+          : safeCount(event.knowledgePageCount, 2048) ?? 0,
+      } : {}),
     };
   }
   if (type === "done") {
+    const hasParts = Array.isArray(event.parts);
     const parts = list(event.parts);
+    const partStatuses = hasParts
+      ? parts.map(part => eventStatus(object(part).status) ?? "unknown")
+      : list(event.partStatuses).map(partStatus => eventStatus(partStatus) ?? "unknown");
     return {
       type,
       ...(eventStatus(event.status) ? { status: event.status } : {}),
       ...(typeof event.limited === "boolean" ? { limited: event.limited } : {}),
       ...(typeof event.speechAllowed === "boolean" ? { speechAllowed: event.speechAllowed } : {}),
-      partCount: parts.length,
-      partStatuses: parts.map(part => eventStatus(object(part).status) ?? "unknown"),
+      partCount: hasParts ? parts.length
+        : Number.isInteger(event.partCount) && event.partCount >= 0 && event.partCount <= 100 ? event.partCount : partStatuses.length,
+      partStatuses,
       ...(event.navigation && typeof object(event.navigation).target === "string" ? { navigationTarget: token(object(event.navigation).target) ?? "unknown" } : {}),
+      ...(typeof object(event.navigation).print === "boolean" ? { navigationPrint: object(event.navigation).print } : {}),
+      ...(typeof object(event.navigation).documentWorkspace === "boolean" ? { navigationDocumentWorkspace: object(event.navigation).documentWorkspace } : {}),
+      ...(typeof object(event.navigation).printDialogOpened === "boolean" ? { printDialogOpened: object(event.navigation).printDialogOpened } : {}),
     };
   }
   if (type === "error") {
@@ -99,6 +169,25 @@ function safeRow(value) {
   const rawOracleStatuses = list(row.oracleStatuses);
   const safeOracleStatuses = rawOracleStatuses.length > 0 && rawOracleStatuses.length <= 32 &&
     rawOracleStatuses.every(result => oracleStatuses.includes(result)) ? rawOracleStatuses : undefined;
+  const safeOracleChecks = list(row.oracleChecks).flatMap(item => {
+    const oracle = object(item);
+    if (!Number.isInteger(oracle.oracleIndex) || oracle.oracleIndex < 1 || oracle.oracleIndex > 32 ||
+        !oracleKinds.has(oracle.kind) || !Array.isArray(oracle.checks) || oracle.checks.length > 64) return [];
+    return [{
+      oracleIndex: oracle.oracleIndex,
+      kind: oracle.kind,
+      checks: oracle.checks.flatMap(check => {
+        const value = object(check);
+        return safeOracleCheckId(value.id) && oracleStatuses.includes(value.status)
+          ? [{
+            id: value.id,
+            status: value.status,
+            ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
+              .filter(key => typeof value[key] === "boolean").map(key => [key, value[key]])),
+          }] : [];
+      }),
+    }];
+  }).slice(0, 32);
   const qualification = object(row.qualification);
   const safeQualification = Object.fromEntries(Object.entries(qualification)
     .filter(([key, result]) => token(key) && evaluationStatuses.has(result))
@@ -114,6 +203,7 @@ function safeRow(value) {
     ...(typeof row.evaluatorSha256 === "string" && /^[a-f0-9]{64}$/u.test(row.evaluatorSha256)
       ? { evaluatorSha256: row.evaluatorSha256 } : {}),
     ...(safeOracleStatuses ? { oracleStatuses: safeOracleStatuses } : {}),
+    ...(safeOracleChecks.length ? { oracleChecks: safeOracleChecks } : {}),
     ...(finite(row.ms) !== undefined ? { ms: row.ms } : {}),
     ...(Object.keys(safeQualification).length ? { qualification: safeQualification } : {}),
     ...(row.correctness && typeof row.correctness === "object" ? { correctnessStatus: status(object(row.correctness).status) } : {}),
@@ -187,16 +277,21 @@ function safeRecord(value) {
   const timings = object(record.timings);
   const safeExecution = safeRun({ execution: record.execution }).execution;
   return {
-    ...(caseId(record.id) ? { id: record.id } : {}),
+    ...(caseId(record.id) ? { id: record.id } : caseId(record.caseId) ? { id: record.caseId } : {}),
     ...(finite(record.requestBudgetMs) !== undefined ? { requestBudgetMs: record.requestBudgetMs } : {}),
     ...(finite(record.inferenceBudgetMs) !== undefined ? { inferenceBudgetMs: record.inferenceBudgetMs } : {}),
     ...(finite(record.ms) !== undefined ? { ms: record.ms } : {}),
+    ...(Number.isInteger(record.externalEgressCount) && record.externalEgressCount >= 0 && record.externalEgressCount <= 1000000
+      ? { externalEgressCount: record.externalEgressCount } : {}),
     ...(safeExecution && Object.keys(safeExecution).length ? { execution: safeExecution } : {}),
     events: list(record.events).map(safeEvent),
-    calls: list(record.calls).map(call => ({
-      ...(object(call).valid === true && gateName(object(call).name) ? { name: object(call).name } : { name: "invalid-call" }),
-      ...(typeof object(call).valid === "boolean" ? { valid: object(call).valid } : {}),
-    })),
+    calls: list(record.calls).map(call => {
+      const name = object(call).name;
+      return {
+        ...(agentCallNames.has(name) || gateName(name) ? { name } : { name: "invalid-call" }),
+        ...(typeof object(call).valid === "boolean" ? { valid: object(call).valid } : {}),
+      };
+    }),
     toolResults: list(record.toolResults).map(result => ({
       ...(toolStatuses.has(object(result).status) ? { status: object(result).status } : {}),
       ...(typeof object(result).complete === "boolean" ? { complete: object(result).complete } : {}),
@@ -207,15 +302,24 @@ function safeRecord(value) {
       ...Object.fromEntries(["catalogIdentityVerified", "currentTreatmentReadVerified", "doseInferenceAbsent", "strengthInferenceAbsent",
         "formulationInferenceAbsent", "routeInferenceAbsent", "medicationEquivalenceInferenceAbsent"]
         .filter(key => object(result)[key] === true).map(key => [key, true])),
+      ...(Number.isInteger(object(result).knowledgeSourceCount) && object(result).knowledgeSourceCount >= 0 && object(result).knowledgeSourceCount <= 100
+        ? { knowledgeSourceCount: object(result).knowledgeSourceCount } : {}),
+      ...(Number.isInteger(object(result).knowledgeExcerptCount) && object(result).knowledgeExcerptCount >= 0 && object(result).knowledgeExcerptCount <= 100
+        ? { knowledgeExcerptCount: object(result).knowledgeExcerptCount } : {}),
       ...(typeof object(result).text === "string" ? { textChars: object(result).text.length } : {}),
-      evidenceCount: list(object(result).evidence).length,
-      evidenceTypes: [...new Set(list(object(result).evidence).map(source => token(object(source).type)).filter(type => type && sourceTypes.has(type)))].sort(),
+      ...(Array.isArray(object(result).evidence) ? {
+        evidenceCount: object(result).evidence.length,
+        evidenceTypes: [...new Set(object(result).evidence.map(source => token(object(source).type)).filter(type => type && sourceTypes.has(type)))].sort(),
+      } : {}),
     })),
-    queries: list(record.queries).map(query => ({
-      ...(gateName(object(query).name) ? { name: object(query).name } : { name: "unknown-gate" }),
-      ok: object(query).response?.ok === true,
-      resultCount: list(object(query).response?.data).length,
-    })),
+    queries: list(record.queries).map(query => {
+      const count = safeResultCount(object(query).response?.data);
+      return {
+        ...(gateName(object(query).name) ? { name: object(query).name } : { name: "unknown-gate" }),
+        ok: object(query).response?.ok === true,
+        ...(count === undefined ? {} : { resultCount: count }),
+      };
+    }),
     actionGateCalls: list(record.actionGateCalls).flatMap(call => {
       const item = object(call);
       if (!actionGateNames.has(item.gate)) return [];

@@ -17,20 +17,21 @@ const clientFor=(text:string,language='fr',section='Synthetic'):ClientSql=>({ rp
 const client=clientFor(quote);
 afterEach(() => { local.mockReset(); cloud.mockClear(); });
 it.each([
- ['Selon le DSM-5, les signes sont décrits dans ce passage.','source-edition'],
- ['Les signes durent 17 jours.','clinical-quantity'],
- ['Le passage décrit 17 éléments.','standalone-number'],
-])('classifies unsupported numeric output without logging its content: %s',async(text,kind)=>{
- const warn=vi.spyOn(console,'warn').mockImplementation(()=>{});
- try{
-  const result=await readKnowledge(clientFor('Les signes sont décrits dans ce passage de référence synthétique.'),'Explique les signes selon DSM');
-  expect(result.preuves).toHaveLength(1);
-  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
-  const events=await synthesizeKnowledge(result,'Explique les signes selon DSM','fr',new AbortController().signal,{compact:true});
-  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
-  expect(warn).toHaveBeenCalledWith('[alexa-knowledge] rejected-number-kind',kind);
-  expect(JSON.stringify(warn.mock.calls)).not.toContain(text);
- }finally{warn.mockRestore();}
+ 'Selon le DSM-5, les signes sont décrits dans ce passage.',
+ 'Les signes durent 17 jours.',
+ 'Le passage décrit 17 éléments.',
+])('emits only the literal source excerpt when model prose contains unsupported numbers: %s',async text=>{
+ const passage='Les signes sont décrits dans ce passage de référence synthétique.';
+ const result=await readKnowledge(clientFor(passage),'Explique les signes selon DSM');
+ expect(result.preuves).toHaveLength(1);
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
+ const events=await synthesizeKnowledge(result,'Explique les signes selon DSM','fr',new AbortController().signal,{compact:true});
+ const emitted=events.filter(e=>e.type==='sentence'&&e.kind==='knowledge');
+ expect(emitted).toHaveLength(1);
+ if(emitted[0]?.type!=='sentence')return;
+ expect(emitted[0].sources[0]?.excerpt).toContain(passage);
+ expect(emitted[0].text).not.toContain('17');
+ expect(emitted[0].text).not.toContain('DSM-5');
 });
 it.each([
  ['Le sujet se sent reposé dans cette description synthétique.',true],
@@ -46,18 +47,23 @@ it.each([
   expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(text))).toBe(accepted);
 });
 it.each([
- ['1. Les signes décrits dans ce passage sont des manifestations documentées.',true],
- ['1. Les signes décrits durent 2 jours.',false],
- ['1.5 mg sont décrits pour ces signes.',false],
- ['2 mg sont décrits pour ces signes.',false],
-])('separates editorial list numbering from clinical quantities: %s',async(text,accepted)=>{
+ '1. Les signes décrits dans ce passage sont des manifestations documentées.',
+ '1. Les signes décrits durent 2 jours.',
+ '1.5 mg sont décrits pour ces signes.',
+ '2 mg sont décrits pour ces signes.',
+])('emits the cited source instead of model-authored list numbers or quantities: %s',async text=>{
  const passage='Les signes décrits dans ce passage sont des manifestations documentées.';
  const result=await readKnowledge(clientFor(passage),'Explique les signes selon DSM');
  expect(result.preuves).toHaveLength(1);
  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique les signes selon DSM','fr',new AbortController().signal,{compact:true});
-  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
-  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(passage))).toBe(accepted);
+ const emitted=events.filter(e=>e.type==='sentence'&&e.kind==='knowledge');
+ expect(emitted).toHaveLength(1);
+ if(emitted[0]?.type!=='sentence')return;
+ expect(emitted[0].sources[0]?.excerpt).toContain(passage);
+ expect(emitted[0].text).not.toContain('2 jours');
+ expect(emitted[0].text).not.toContain('1.5 mg');
+ expect(emitted[0].text).not.toContain('2 mg');
 });
 it.each(['Les signes décrits dans ce passage sont des manifestations documentées.','Signe le plus fréquent : les signes décrits sont des manifestations synthétiques documentées.'])('does not confuse a medical noun with an announcement that a document was signed: %s',async text=>{
  const result=await readKnowledge(clientFor(text),'Explique les signes selon DSM');
@@ -148,6 +154,7 @@ it.each([
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
   expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
  expect(local).toHaveBeenCalledTimes(2);expect(local.mock.calls[1]![1].timeoutMs).toBe(120000);
+ expect(local.mock.calls[1]![1].maxOutputTokens).toBe(1024);
  expect(JSON.stringify(local.mock.calls[1]![0])).toContain(passage);
   expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt===passage)).toBe(accepted);
  expect(cloud).not.toHaveBeenCalled();
@@ -178,15 +185,18 @@ it('retains a French paraphrase with a French decimal separator and exact Englis
   expect(events.some(e=>e.type==='sentence'&&e.kind==='inference'&&e.text.includes(text))).toBe(false);
  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[])[0]?.excerpt).toBe(passage);
 });
-it.each([
- ['3','supported'],['trois','supported'],['4','refused'],['quatre','refused'],
-])('checks spelled-out source counts as well as digits without changing their value: %s',async(count,outcome)=>{
+it.each(['3','trois','4','quatre'])('uses the exact source count instead of the model-selected count: %s',async count=>{
  const passage='Sertraline : trois observations indépendantes sont rapportées dans cette entrée synthétique.';
  const result=await readKnowledge(clientFor(passage),'Explique la sertraline selon DSM-5');
- local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:`La sertraline fait l’objet de ${count} observations indépendantes dans ce passage.`,evidence:[{index:1,quoteId:'q1'}]}]}));
+ const text='La sertraline fait l’objet de '+count+' observations indépendantes dans ce passage.';
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
-  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
-  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt?.includes(passage))).toBe(outcome==='supported');
+ const emitted=events.filter(e=>e.type==='sentence'&&e.kind==='knowledge');
+ expect(emitted).toHaveLength(1);
+ if(emitted[0]?.type!=='sentence')return;
+ expect(emitted[0].sources[0]?.excerpt).toBe(passage);
+ expect(emitted[0].text).toContain('trois observations');
+ if(count==='4'||count==='quatre')expect(emitted[0].text).not.toContain(count);
 });
 it('rejects an extra numeric citation which does not support the medication claim',async()=>{
  const passage='Sertraline: unchanged sertraline excreted in urine below 0.2%. Sertraline: synthetic study documented another observation.';
@@ -211,6 +221,40 @@ it('reserves output context for compact extractive criteria answers',async()=>{
  expect(local).toHaveBeenCalledOnce();
  expect(local.mock.calls[0]![1].maxOutputTokens).toBe(256);
  expect(local.mock.calls[0]![0][0]?.content).toContain('Le serveur insère le texte exact approuvé');
+});
+it('uses extractive criteria selection for symptom and duration threshold questions',async()=>{
+ const question='Pour caractériser un épisode dépressif selon le DSM-5, quels seuils de symptômes et de durée faut-il vérifier ?';
+ const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+ const evidence='Le passage décrit les critères diagnostiques du trouble dépressif caractérisé et les seuils de symptômes et de durée.';
+ const result=await readKnowledge(clientFor(evidence,'fr',section),question);
+ expect(planKnowledgeQuery(question)).not.toBeNull();
+ expect(result.etat).toBe('ok');
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:evidence,evidence:[{index:1,quoteId:'q1'}]}]}));
+ await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ expect(local).toHaveBeenCalledOnce();
+ expect(local.mock.calls[0]![1].maxOutputTokens).toBe(256);
+ expect(local.mock.calls[0]![0][0]?.content).toContain('Le serveur insère le texte exact approuvé');
+});
+it('reconstructs literal criteria quotes when one selection groups multiple evidence spans',async()=>{
+ const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+ const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+ const evidence='Critères diagnostiques du trouble dépressif caractérisé : un premier signe est décrit. Une autre partie précise un second signe clinique.';
+ const result=await readKnowledge(clientFor(evidence,'fr',section),question);
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:'Critère retenu',evidence:[{index:1,quoteId:'q1'},{index:1,quoteId:'q2'}]}]}));
+ const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ const answer=events.find(event=>event.type==='sentence'&&event.kind==='knowledge');
+ expect(local).toHaveBeenCalledOnce();
+ expect(answer?.type==='sentence'&&answer.text).not.toContain('Critère retenu');
+ const excerpt=answer?.type==='sentence'?answer.sources[0]?.excerpt??'':'';
+ expect(excerpt).toContain('un premier signe est décrit.');
+ expect(excerpt).toContain('Une autre partie précise un second signe clinique.');
+});
+it('caps compact book synthesis output below the local context window',async()=>{
+ const question='Explique la dépression selon DSM';
+ const result=await readKnowledge(client,question);
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:quote,evidence:[{index:1,quoteId:'q1'}]}]}));
+ await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ expect(local.mock.calls[0]![1].maxOutputTokens).toBe(1024);
 });
 it('uses a literal French DSM criteria sentence rather than paraphrasing an exclusion',async()=>{
  const sentence='Critères diagnostiques du trouble dépressif caractérisé : ce diagnostic n’est pas établi sur la seule base de ce signe clinique documenté.';
@@ -351,4 +395,15 @@ it("returns literal sources when MiniCPM is unavailable without trying a cloud m
   const events = await synthesizeKnowledge(result, "critères dépression selon DSM", "fr", new AbortController().signal);
   expect(events.some(event => event.type === "sentence" && event.sources.length > 0)).toBe(true);
   expect(local).toHaveBeenCalledOnce(); expect(cloud).not.toHaveBeenCalled();
+});
+it("emits only the literal cited passage when model prose adds an unsupported number",async()=>{
+ const passage="Les signes observés dans le passage de référence sont décrits sans quantité précise.";
+ const result=await readKnowledge(clientFor(passage),"Explique les signes selon DSM");
+ expect(result.preuves).toHaveLength(1);
+ local.mockResolvedValue(JSON.stringify({coverage:"partial",sentences:[{text:"Le passage dure 17 jours.",evidence:[{index:1,quoteId:"q1"}]}]}));
+ const events=await synthesizeKnowledge(result,"Explique les signes selon DSM","fr",new AbortController().signal,{compact:true});
+ const emitted=events.filter((event):event is Extract<typeof event,{type:"sentence"}>=>event.type==="sentence");
+ expect(emitted).toHaveLength(1);
+ expect(emitted[0]!.sources[0]?.excerpt).toContain(passage);
+ expect(emitted[0]!.text).not.toContain("17");
 });

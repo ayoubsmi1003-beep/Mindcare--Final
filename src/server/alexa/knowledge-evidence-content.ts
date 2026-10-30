@@ -46,7 +46,8 @@ export function copiedEnglishProse(text:string):boolean{
 import {medicationNames} from '@/shared/alexa/medications';
 export function knowledgeComparisonRequested(question:string):boolean{
  const text=question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- return /\b(?:compar\w*|differences?|versus|vs)\b|فرق|قارن/u.test(text)
+ return /\b(?:compar\w*|differences?|versus|vs|separ\w*)\b|فرق|قارن/u.test(text)
+  ||/\bdistinct\w*\b/u.test(text)&&/\b(?:de|du|des)\b/u.test(text)
   ||/\b(?:distingu\w*|distinction)\b/u.test(text)&&/\b(?:entre|et|versus|vs)\b|\//u.test(text);
 }
 export function requestedMedicationNames(text:string):readonly string[]{

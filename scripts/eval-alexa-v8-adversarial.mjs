@@ -14,7 +14,9 @@ import {
 } from "./lib/alexa-v8-campaign-progress.mjs";
 import {
   executeV8AdversarialCampaign,
+  matchesV8AdversarialResumeBinding,
   restoreV8AdversarialOracleResults,
+  selectV8AdversarialCase,
 } from "./lib/alexa-v8-campaign-executor.mjs";
 import { sanitizeAlexaEvaluationArtifact } from "./lib/alexa-eval-artifact.mjs";
 import {
@@ -23,9 +25,11 @@ import {
 } from "./lib/alexa-v8-adversarial-evaluator.mjs";
 import {
   BOOK_RAG_REQUIRED_MIGRATIONS,
+  resolveV8CampaignActors,
   resolveV8CampaignDatabaseUrls,
   validateBookRagSource,
   validateV8MigrationInventory,
+  v8AdversarialRequiresCrossEncoder,
 } from "./lib/alexa-v8-manifest.mjs";
 import { mergeAlexaExecutionFallback, runAlexaV8Turn } from "./lib/alexa-v8-runtime-observation.mjs";
 
@@ -35,19 +39,23 @@ const privateRoot = join(root, ".eval-out", "alexa-v8-upgrade");
 const args = process.argv.slice(2);
 const require = createRequire(join(root, "package.json"));
 const hash = value => createHash("sha256").update(value).digest("hex");
-const RESUME_BINDING_FIELDS = [
-  "manifestSha256", "frozenManifestSha256", "privateOracleSha256", "evaluatorSha256", "sourceWorkingTreeSha256",
-];
 
 function onlyKnownFlags() {
-  const allowed = new Set(["--validate-only", "--resume"]);
+  const allowed = new Set(["--validate-only", "--resume", "--case"]);
   for (let index = 0; index < args.length; index++) {
-    if (!allowed.has(args[index]) || args[index] === "--resume" && typeof args[index + 1] !== "string") {
-      throw new Error("Usage: node scripts/eval-alexa-v8-adversarial.mjs [--validate-only | --resume <progress-file>]");
+    if (!allowed.has(args[index]) || ["--resume", "--case"].includes(args[index]) && typeof args[index + 1] !== "string") {
+      throw new Error("Usage: node scripts/eval-alexa-v8-adversarial.mjs [--validate-only | --resume <progress-file> | --case ADV-001]");
     }
-    if (args[index] === "--resume") index++;
+    if (args[index] === "--case" && !/^ADV-\d{3}$/u.test(args[index + 1] ?? "")) throw new Error("Invalid diagnostic case ID");
+    if (["--resume", "--case"].includes(args[index])) index++;
   }
-  if (args.includes("--validate-only") && args.includes("--resume")) throw new Error("Validation mode cannot resume a campaign");
+  if (args.includes("--validate-only") && args.some(flag => ["--resume", "--case"].includes(flag))) throw new Error("Validation mode cannot run a diagnostic case or resume a campaign");
+  if (args.includes("--case") && args.includes("--resume")) throw new Error("A diagnostic case run cannot resume a campaign");
+}
+
+function diagnosticCaseId() {
+  const index = args.indexOf("--case");
+  return index < 0 ? null : args[index + 1];
 }
 
 function resumeName() {
@@ -183,6 +191,8 @@ async function preflightDatabase(inputs) {
   const Client = require("pg").Client;
   const client = new Client({ connectionString: adminUrl, connectionTimeoutMillis: 10000 });
   let sourceCount;
+  let databaseSnapshot;
+  let migrationInventory;
   try {
     await client.connect();
     const source = (await client.query(`SELECT current_database() AS "database",
@@ -192,21 +202,35 @@ async function preflightDatabase(inputs) {
       (SELECT count(*)::int FROM app.schema_migrations WHERE version = ANY($1::text[])) AS "appliedMigrationsThrough200"`,
     [BOOK_RAG_REQUIRED_MIGRATIONS])).rows[0];
     validateBookRagSource(source);
+    databaseSnapshot = {
+      patients: Number(source.patients),
+      consultations: Number(source.consultations),
+      nonSynthetic: Number(source.nonSynthetic),
+    };
     const repositoryVersions = (await readdir(join(root, "supabase", "migrations")))
       .filter(file => file.endsWith(".sql"))
       .map(file => file.slice(0, -4));
     const appliedVersions = (await client.query("SELECT version FROM app.schema_migrations ORDER BY version"))
       .rows.map(row => row.version);
-    validateV8MigrationInventory({ repositoryVersions, appliedVersions });
+    const acknowledgedHistoricalVersions = [];
+    if (appliedVersions.includes("173_document_autofill_context")) {
+      const legacyEffect = (await client.query(
+        "SELECT to_regprocedure('app.document_context(app.document_drafts)') IS NOT NULL AS present",
+      )).rows[0]?.present === true;
+      if (!legacyEffect) throw new Error("V8HistoricalMigrationEffectMismatch");
+      acknowledgedHistoricalVersions.push("173_document_autofill_context");
+    }
+    migrationInventory = validateV8MigrationInventory({
+      repositoryVersions,
+      appliedVersions,
+      acknowledgedHistoricalVersions,
+    });
     if (inputs.snapshot.source?.database !== source.database || Number(inputs.snapshot.source?.nonSynthetic) !== 0 ||
         Number(inputs.snapshot.source?.patients) !== Number(source.patients) ||
         Number(inputs.snapshot.source?.consultations) !== Number(source.consultations)) {
       throw new Error("Runtime database does not match the bound synthetic snapshot");
     }
-    const fixtureActors = {
-      owner: "ea000000-0000-4000-8000-000000000001",
-      assistant: "ea000000-0000-4000-8000-000000000003",
-    };
+    const fixtureActors = resolveV8CampaignActors(inputs.snapshot);
     for (const [name, id] of Object.entries(fixtureActors)) {
       const actor = (await client.query("SELECT role::text FROM app.profiles WHERE id=$1", [id])).rows[0];
       const expectedRole = name === "owner" ? "owner" : "assistant";
@@ -218,12 +242,19 @@ async function preflightDatabase(inputs) {
   }
   if (sourceCount === 0) throw new Error("Approved synthetic knowledge corpus is unavailable; campaign remains NOT RUN");
   process.env.MINDCARE_ALEXA_EVAL_NO_KNOWLEDGE = "0";
-  return { sourceCount, database: "alexa_eval_v8_intelligence_20261027" };
+  return {
+    sourceCount,
+    database: "alexa_eval_v8_intelligence_20261027",
+    databaseSnapshot,
+    migrationInventory,
+    actors: resolveV8CampaignActors(inputs.snapshot),
+  };
 }
 
 async function bundleRuntime(outDir) {
-  const vite = createRequire(join(root, "package.json"))(require.resolve("vitest/package.json"));
-  const { build } = createRequire(vite.resolve("vite/package.json"))("esbuild");
+  const vitestPackage = require.resolve("vitest/package.json");
+  const vitePackage = createRequire(vitestPackage).resolve("vite/package.json");
+  const { build } = createRequire(vitePackage)("esbuild");
   const entry = join(outDir, "runtime-entry.mjs");
   await build({
     stdin: {
@@ -250,14 +281,20 @@ function tally(progress) {
 async function runCampaign() {
   onlyKnownFlags();
   const inputs = await loadInputs();
+  const selectedCase = diagnosticCaseId();
+  if (selectedCase) Object.assign(inputs, selectV8AdversarialCase({
+    manifest: inputs.manifest,
+    resolvedPrompts: inputs.resolvedPrompts,
+    caseId: selectedCase,
+  }));
   const sourceBinding = await checkHashBinding();
   const evaluatorSha256 = hash(await readFile(join(root, "scripts", "lib", "alexa-v8-adversarial-evaluator.mjs")));
   const target = await preflightDatabase(inputs);
   const runId = randomUUID();
   const resumed = resumeName();
-  const prefix = resumed ? resumed.replace(/\.progress\.json$/u, "") : `adversarial-${runId}`;
-  const progressPath = join(privateRoot, `${prefix}.progress.json`);
-  const reportPath = join(privateRoot, `${prefix}.report.json`);
+  let prefix = resumed ? resumed.replace(/\.progress\.json$/u, "") : `adversarial-${runId}`;
+  let progressPath = join(privateRoot, `${prefix}.progress.json`);
+  let reportPath = join(privateRoot, `${prefix}.report.json`);
   const outDir = join(privateRoot, "runtime-bundles", runId);
   await mkdir(outDir, { recursive: true });
   const api = await bundleRuntime(outDir);
@@ -272,12 +309,12 @@ async function runCampaign() {
     if (error?.code === "ENOENT") return null;
     throw error;
   }) : null;
-  let progress = priorProgress
-    ? recoverV8AdversarialProgress(priorProgress, { nextSessionId: runId })
-    : createV8AdversarialProgress({
-      manifestSha256: inputs.manifestSha256,
-      scenarios: inputs.manifest.cases.map(item => ({ id: item.id, turnCount: item.turns.length })),
-    });
+  const databaseBindingSha256 = hash(JSON.stringify({
+    database: target.database,
+    databaseSnapshot: target.databaseSnapshot,
+    sourceCount: target.sourceCount,
+    migrationInventory: target.migrationInventory,
+  }));
   const run = {
     id: runId,
     startedAt: new Date().toISOString(),
@@ -289,7 +326,10 @@ async function runCampaign() {
     fixtureAsOf,
     capabilities: { approvedBookFixtureAvailable: true },
     databaseTarget: target.database,
+    databaseSnapshot: target.databaseSnapshot,
+    databaseBindingSha256,
     sourceCount: target.sourceCount,
+    migrationInventory: target.migrationInventory,
     execution: {
       model: api.ALEXA_CONVERSATION_MODEL,
       recipe: "native-agent",
@@ -298,8 +338,20 @@ async function runCampaign() {
       fallback: { used: false, causes: [] },
     },
   };
-  const previousReportMatchesBinding = Boolean(previousReport) &&
-    RESUME_BINDING_FIELDS.every(field => previousReport.run?.[field] === run[field]);
+  const previousReportMatchesBinding = matchesV8AdversarialResumeBinding({ report: previousReport, binding: run });
+  run.resumeBindingStatus = !resumed ? "fresh"
+    : previousReportMatchesBinding ? "matched" : "mismatch_restarted_fresh";
+  if (resumed && !previousReportMatchesBinding) {
+    prefix = `adversarial-${runId}`;
+    progressPath = join(privateRoot, `${prefix}.progress.json`);
+    reportPath = join(privateRoot, `${prefix}.report.json`);
+  }
+  let progress = priorProgress && previousReportMatchesBinding
+    ? recoverV8AdversarialProgress(priorProgress, { nextSessionId: runId })
+    : createV8AdversarialProgress({
+      manifestSha256: inputs.manifestSha256,
+      scenarios: inputs.manifest.cases.map(item => ({ id: item.id, turnCount: item.turns.length })),
+    });
   const safeRecords = [];
   const oracleResults = restoreV8AdversarialOracleResults({
     manifest: inputs.manifest,
@@ -309,6 +361,7 @@ async function runCampaign() {
       privateOracleSha256: inputs.privateOracleSha256,
       evaluatorSha256,
       sourceWorkingTreeSha256: sourceBinding.checkout.sourceWorkingTreeSha256,
+      databaseBindingSha256,
     },
     progress,
     report: previousReport,
@@ -332,6 +385,16 @@ async function runCampaign() {
         passingOracleCount: ordered.filter(item => item.status === "PASS").length,
         evaluatorSha256,
         oracleStatuses: ordered.map(item => item.status),
+        oracleChecks: ordered.map(item => ({
+          oracleIndex: item.oracleIndex,
+          kind: item.kind,
+          checks: Array.isArray(item.checks) ? item.checks.map(check => ({
+            id: check.id,
+            status: check.status,
+            ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
+              .filter(key => typeof check[key] === "boolean").map(key => [key, check[key]])),
+          })) : [],
+        })),
       } : {}),
     };
   };
@@ -378,16 +441,25 @@ async function runCampaign() {
       persistProgress: persist,
       invokeTurn: async ({ scenario, turnIndex, prompt, sessionState }) => {
         const conversationId = sessionState?.conversationId ?? randomUUID();
-        const actor = "ea000000-0000-4000-8000-000000000001";
-        const observation = await runAlexaV8Turn({
-          api,
-          actor,
-          text: prompt,
-          conversationId,
-          clientTurnId: randomUUID(),
-          appContext: appContextFor(scenario, inputs),
-          asOf: fixtureAsOf,
-        });
+        const actor = target.actors.owner;
+        const previousReranker = process.env["KNOWLEDGE_RERANK"];
+        if (v8AdversarialRequiresCrossEncoder(scenario)) process.env["KNOWLEDGE_RERANK"] = "mmarco";
+        else delete process.env["KNOWLEDGE_RERANK"];
+        let observation;
+        try {
+          observation = await runAlexaV8Turn({
+            api,
+            actor,
+            text: prompt,
+            conversationId,
+            clientTurnId: randomUUID(),
+            appContext: appContextFor(scenario, inputs),
+            asOf: fixtureAsOf,
+          });
+        } finally {
+          if (previousReranker === undefined) delete process.env["KNOWLEDGE_RERANK"];
+          else process.env["KNOWLEDGE_RERANK"] = previousReranker;
+        }
         observation.caseId = scenario.id;
         observation.turnIndex = turnIndex;
         run.execution.fallback = mergeAlexaExecutionFallback(run.execution.fallback, observation.execution?.fallback);
@@ -442,6 +514,10 @@ async function runCampaign() {
       report: basename(reportPath),
       progress: basename(progressPath),
       database: target.database,
+      databaseSnapshot: target.databaseSnapshot,
+      migrationInventory: target.migrationInventory,
+      databaseBindingSha256,
+      resumeBindingStatus: run.resumeBindingStatus,
       physicalPrinting: "NOT VERIFIED",
       authenticatedUiActionConfirmation: "NOT RUN",
     }) + "\n");
@@ -458,7 +534,9 @@ if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.m
   } catch (error) {
     const code = error instanceof Error && /^[A-Za-z][A-Za-z0-9_-]{0,80}$/u.test(error.message)
       ? error.message : "AlexaV8AdversarialRunnerFailed";
-    process.stderr.write(`${code}\n`);
+    const systemCode = error && typeof error === "object" &&
+      typeof error.code === "string" && /^[A-Za-z0-9_-]{1,32}$/u.test(error.code) ? error.code : null;
+    process.stderr.write(`${code}${systemCode ? ` errorCode=${systemCode}` : ""}\n`);
     process.exitCode = 1;
   }
 }

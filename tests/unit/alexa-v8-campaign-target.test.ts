@@ -82,3 +82,32 @@ it("restores per-oracle results into the privacy-safe adversarial report on resu
   expect(runner).toContain("previousReport");
   expect(runner).toContain("oracleStatuses");
 });
+
+it("retains validated migration evidence for the adversarial preflight return", () => {
+  const runner = readFileSync(resolve("scripts/eval-alexa-v8-adversarial.mjs"), "utf8");
+  const start = runner.indexOf("async function preflightDatabase(inputs)");
+  const end = runner.indexOf("\nasync function bundleRuntime", start);
+  const preflight = runner.slice(start, end);
+
+  expect(preflight).toMatch(/let migrationInventory\s*;/u);
+  expect(preflight).toMatch(/migrationInventory\s*=\s*validateV8MigrationInventory/u);
+  expect(preflight).toMatch(/return\s*\{[\s\S]*migrationInventory/u);
+});
+
+it("resolves the bundler from Vitest's package location before building live turns", () => {
+  const runner = readFileSync(resolve("scripts/eval-alexa-v8-adversarial.mjs"), "utf8");
+
+  expect(runner).toContain('const vitestPackage = require.resolve("vitest/package.json")');
+  expect(runner).toContain('const vitePackage = createRequire(vitestPackage).resolve("vite/package.json")');
+  expect(runner).toContain('const { build } = createRequire(vitePackage)("esbuild")');
+});
+
+it("scopes mmarco to retrieval-contract turns and restores the prior process environment", () => {
+  const runner = readFileSync(resolve("scripts/eval-alexa-v8-adversarial.mjs"), "utf8");
+
+  expect(runner).toContain("v8AdversarialRequiresCrossEncoder(scenario)");
+  expect(runner).toContain('process.env["KNOWLEDGE_RERANK"] = "mmarco"');
+  expect(runner).toContain('delete process.env["KNOWLEDGE_RERANK"]');
+  expect(runner).toContain("finally");
+  expect(runner).toContain('process.env["KNOWLEDGE_RERANK"] = previousReranker');
+});

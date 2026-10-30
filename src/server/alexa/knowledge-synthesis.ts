@@ -66,7 +66,8 @@ function focusFor(question: string): KnowledgeFocus {
 }
 function onlyRequestsNamedCriteria(question:string,focus:string):boolean{
  const text=numericFold(question).replace(/\bdsm\s*-?\s*5\b/gu,' ').replace(focus,' ');
- const scaffolding=new Set(['quels','quelles','quel','quelle','criteres','les','des','du','de','d','dans','le','la','sont','est','decrits','decrit','documentes','documentees','selon','donne','donner','liste','lister','presente','presenter','enumere','enumerer']);
+ const scaffolding=new Set(['quels','quelles','quel','quelle','criteres','les','des','du','de','d','dans','le','la','sont','est','decrits','decrit','documentes','documentees','selon','donne','donner','liste','lister','presente','presenter','enumere','enumerer',
+  'pour','caracteriser','un','episode','depressif','seuils','symptomes','et','duree','faut','il','verifier']);
  return (text.match(/\p{L}+/gu)??[]).every(word=>scaffolding.has(word));
 }
 
@@ -101,7 +102,10 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   });
   const omittedQuotes=options.compact&&choices.some((row,index)=>fold(row.quotes.join(' '))!==fold(result.preuves[index]!.extrait));
   if(omittedQuotes)return fallback('coverage');
-  if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length))return fallback(extractiveCriteria?'criteria-selection':'entity');
+  if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length)){
+    if(extractiveCriteria)console.warn('[alexa-knowledge] criteria-selection-rejected','no-allowed-quote');
+    return fallback(extractiveCriteria?'criteria-selection':'entity');
+  }
   const localMessages=options.compact?messages.map(m=>m.role==='user'?{...m,content:JSON.stringify({...JSON.parse(m.content),passages:result.preuves.map((proof,index)=>{
     const row=choices[index]!,spans=row.quotes.map((text,i)=>['q'+(i+1),text]);
     return {index:index+1,title:proof.titre,section:proof.section,citableQuoteIds:row.allowedQuoteIds,citations:spans.filter(span=>row.allowedQuoteIds.includes(span[0]!)),context:spans.filter(span=>!row.allowedQuoteIds.includes(span[0]!))};
@@ -112,7 +116,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     const completion = await inferLocalText(localMessages, { jsonSchema:options.compact?z.toJSONSchema(answerSchema,{target:'draft-7'}):knowledgeAnswerJsonSchema,
       // Direct native book reads may be the first inference of the turn, including integrity and startup.
       timeoutMs: options.compact?ALEXA_NATIVE_DEADLINE_MS-ALEXA_NATIVE_BUDGET.marginMs:60000,
-      maxOutputTokens: options.compact?(extractiveCriteria?256:unverifiedCriteria?512:1024):1024, signal });
+      maxOutputTokens: options.compact?(extractiveCriteria?256:1024):1024, signal });
     signal.throwIfAborted();
     const decoded:unknown=JSON.parse(completion),metadata=answerMetadata.safeParse(decoded);
     if(metadata.success&&metadata.data.coverage==='insufficient'&&metadata.data.sentences.length)return fallback('insufficient-nonempty');
@@ -131,11 +135,19 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     if(options.compact)answer={...answer,sentences:answer.sentences.map(sentence=>({...sentence,text:sentence.text.replace(/^\s*\d+[.)]\s+(?=\p{L})/u,'')}))};
     if(extractiveCriteria){
       const sentences:typeof answer.sentences=[];
+      const selected=new Set<string>();
       for(const sentence of answer.sentences){
-        if(sentence.evidence.length!==1)return fallback('criteria-selection');
-        const evidence=sentence.evidence[0]!,proof=result.preuves[evidence.index-1];
-        if(!proof||!isRequestedCriteriaProof(proof))return fallback('criteria-selection');
-        sentences.push({...sentence,text:evidence.quote});
+        for(const evidence of sentence.evidence){
+          const proof=result.preuves[evidence.index-1];
+          if(!proof||!isRequestedCriteriaProof(proof)){console.warn('[alexa-knowledge] criteria-selection-rejected','section');return fallback('criteria-selection');}
+          const key=JSON.stringify([evidence.index,evidence.quote]);
+          if(selected.has(key))continue;
+          if(sentences.length>=5){console.warn('[alexa-knowledge] criteria-selection-rejected','quote-count');return fallback('criteria-selection');}
+          selected.add(key);
+          // Models may group several selected sources into one sentence. Split
+          // their references and emit each exact approved quote independently.
+          sentences.push({...sentence,text:evidence.quote,evidence:[evidence]});
+        }
       }
       answer={...answer,coverage:'partial',sentences};
     }
@@ -196,24 +208,14 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
         if(medications.length&&!medications.some(name=>requestedMedicationNames(evidence.quote).includes(name)))return fallback('entity');
       }
       const citedText = sentence.evidence.map(evidence => evidence.quote).join(" ");
-      if(!medicationSpanGrounded(question,sentence.text,citedText))return fallback('entity');
-      const normalizedSentence = numericFold(sentence.text);
+      // The generated prose is not emitted; validate the exact literal passages Alexa will speak.
+      if(!medicationSpanGrounded(question,citedText,citedText))return fallback('entity');
+      const normalizedSentence = numericFold(citedText);
       if (/\p{N}|±/u.test(normalizedSentence.replace(/[0-9]/gu, ""))) return fallback("unicode-number");
-      const numbers = explicitNumbers(sentence.text);
-      const supportedNumbers = new Set<string>(explicitNumbers(citedText));
-      for (const quantity of quantities(citedText)) supportedNumbers.add(quantity.split(" ")[0]!);
-      if (numbers.some(number => !supportedNumbers.has(number))){
-        const withoutEdition=sentence.text.replace(/\bDSM[-\s]5(?:[-\s]TR)?\b/giu,'');
-        const kind=explicitNumbers(withoutEdition).every(number=>supportedNumbers.has(number))?'source-edition'
-          :quantities(sentence.text).some(quantity=>!supportedNumbers.has(quantity.split(' ')[0]!))?'clinical-quantity'
-          :/(?:^|[\n;]\s*)\d+[.)]\s+\p{L}/u.test(sentence.text)?'editorial-enumeration':'standalone-number';
-        console.warn('[alexa-knowledge] rejected-number-kind',kind);
-        return fallback("number");
-      }
-      const supportedQuantities = new Set(quantities(citedText));
-      if (quantities(sentence.text).some(quantity => !supportedQuantities.has(quantity))) return fallback("quantity");
-      if((numbers.length||quantities(sentence.text).length)&&sentence.evidence.some(e=>!medicationNumericQuoteGrounded(question,e.quote,result.preuves[e.index-1]!.langue)))return fallback('entity');
-      if (verifierCitations(sentence.text, used.map(index => result.preuves[index - 1]!)).verdict === "rejete") return fallback("citation");
+      const numbers = explicitNumbers(citedText);
+      const quotedQuantities = quantities(citedText);
+      if((numbers.length||quotedQuantities.length)&&sentence.evidence.some(e=>!medicationNumericQuoteGrounded(question,e.quote,result.preuves[e.index-1]!.langue)))return fallback('entity');
+      if (verifierCitations(citedText, used.map(index => result.preuves[index - 1]!)).verdict === "rejete") return fallback("citation");
       // A genuine citation cannot establish that generated prose follows from it.
       // Keep the model as a quote selector; only server-framed source text is emitted.
       for (const evidence of sentence.evidence) {

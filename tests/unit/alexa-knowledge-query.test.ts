@@ -34,6 +34,7 @@ describe("bounded Alexa lexical question planning", () => {
   it.each([
     ['Quels critères d’hypomanie figurent dans le DSM-5 ?', 'Épisode hypomaniaque', 'Critères diagnostiques'],
     ['Comment le DSM-5 décrit-il la manie ?', 'Épisode maniaque', 'Critères diagnostiques'],
+    ['Pour caractériser un épisode dépressif selon le DSM-5, quels seuils de symptômes et de durée faut-il vérifier ?', 'Trouble dépressif caractérisé', 'Critères diagnostiques'],
     ['Quels sont les principaux signes de la schizophrénie selon le DSM-5 ?', 'Schizophrénie', 'Critères diagnostiques'],
     ['Quels signes de schizophrénie le DSM-5 distingue-t-il ?', 'Schizophrénie', 'Critères diagnostiques'],
     ['Quels critères d’anxiété généralisée donne le DSM-5 ?', 'Anxiété généralisée', null],
@@ -274,4 +275,51 @@ it("measures the whole passage budget in UTF-8 bytes for Arabic text", async () 
   expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(8192);
   const { client } = boundary([row(MAUDSLEY, text)]);
   expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({ etat: "sans-preuve", preuves: [], omittedLongPassages: true });
+});
+
+
+describe("adversarial DSM query variants", () => {
+  it("does not filter a distinctness question to only the panic-disorder section", () => {
+    const plan = planKnowledgeQuery("Le DSM-5 classe-t-il l’agoraphobie comme un diagnostic distinct du trouble panique ?")!;
+    const agoraphobia = row(DSM, "Passage synthétique sur l’agoraphobie et le trouble panique.", {
+      section: "Section II › Troubles anxieux › Agoraphobie",
+    });
+    expect(plan.sectionFocus).toBeUndefined();
+    expect(matchesRequestedBook(agoraphobia, plan)).toBe(true);
+  });
+
+  it("does not force symptom-family retrieval into a criteria-only leaf", () => {
+    const plan = planKnowledgeQuery("Quelles grandes familles de symptômes le DSM-5 décrit-il pour le stress post-traumatique ?")!;
+    expect(plan.sectionLeaf).toBeUndefined();
+    expect(matchesRequestedBook(row(DSM, "Passage synthétique sur la section.", {
+      section: "Section II › Troubles liés à des traumatismes ou à des facteurs de stress › Trouble stress post-traumatique",
+    }), plan)).toBe(true);
+  });
+
+  it.each([
+    ["Quelles grandes familles de symptômes le DSM-5 décrit-il pour le stress post-traumatique ?", "Troubles liés à des traumatismes ou à des facteurs de stress", "Trouble stress post-traumatique"],
+    ["Sur quelle période et à partir de quels critères le DSM-5 décrit-il un trouble lié à l’usage d’une substance ?", "Troubles liés à une substance et troubles addictifs", "Troubles de l’usage d’une substance"],
+  ])("matches the indexed DSM section for %s", (question, chapter, focus) => {
+    const plan = planKnowledgeQuery(question)!;
+    if (question.includes("substance")) {
+      expect(plan.sectionFocus).toBe("troubles de l'usage d'une substance");
+      expect(plan.sectionLeaf).toBe(plan.sectionFocus);
+      expect(plan.embeddedCriteriaOnly).toBeUndefined();
+    }
+    const section = ["Section II", chapter, focus].join(" › ");
+    const text = "Passage synthétique sur le sujet.";
+    expect(matchesRequestedBook(row(DSM, text, { section }), plan)).toBe(true);
+  });
+
+  it.each([
+    "Quel critère permet de distinguer le trouble bipolaire de type I du type II dans le DSM-5 ?",
+    "Quel critère distingue les types I et II du trouble bipolaire selon le DSM-5 ?",
+  ])("splits type I and II bipolar comparisons into bounded focused queries: %s", async question => {
+    const { client, calls } = boundary([row(DSM, "Trouble bipolaire type I et type II.")]);
+    await readKnowledge(client, question);
+    const queries = calls.map(call => String(call.args["p_requete"]));
+    expect(queries).toHaveLength(2);
+    expect(queries[0]).toMatch(/trouble bipolaire type i$/u);
+    expect(queries[1]).toMatch(/trouble bipolaire type ii$/u);
+  });
 });

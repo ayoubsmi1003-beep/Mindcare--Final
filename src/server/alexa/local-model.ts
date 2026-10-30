@@ -13,7 +13,7 @@ import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
 import { localAssetLayout, verifyLocalAssetAccess } from "./local-model-assets";
 import { LocalModelSlot } from "./local-model-slot";
 import {measureLocalModelPhase} from './local-model-timing';
-import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
+import { fitLocalOutputTokens, buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
 
 export const LOCAL_MODEL_PIN = {
   model: ALEXA_CONVERSATION_MODEL,
@@ -142,7 +142,8 @@ async function prepare(signal: AbortSignal): Promise<void> {
 /** Local inference only. Callers retain their privacy admission and response validators. */
 async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {
   if (runtimeState.identity !== runtimeIdentity) throw new Error("LocalModelIntegrity");
-  const body = JSON.stringify(buildLocalRequest(messages, options));
+  const requestBody = buildLocalRequest(messages, options);
+  let body = JSON.stringify(requestBody);
   const timeout = localModelTimeoutMs(options);
   const signal = AbortSignal.any([...(options.signal ? [options.signal] : []), AbortSignal.timeout(Math.ceil(timeout))]);
   const releaseSlot = await measureLocalModelPhase('slot',()=>runtimeState.slot.acquire(signal));
@@ -154,7 +155,8 @@ async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTe
     if (template.status !== 200) throw new Error("LocalModelInput");
     const rendered = z.object({ prompt: z.string().max(64000) }).parse(JSON.parse(template.body));
     const tokenized = await loopback("/tokenize", signal, JSON.stringify({ content: rendered.prompt, add_special: true }));
-    assertLocalContextFits(JSON.parse(tokenized.body), options.maxOutputTokens ?? 512);
+    requestBody.max_tokens = fitLocalOutputTokens(JSON.parse(tokenized.body), requestBody.max_tokens);
+    body = JSON.stringify(requestBody);
     });
     const response = await measureLocalModelPhase('generation',()=>loopback("/v1/chat/completions", signal, body));
     signal.throwIfAborted();

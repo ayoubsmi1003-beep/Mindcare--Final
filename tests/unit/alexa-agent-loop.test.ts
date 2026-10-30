@@ -693,6 +693,20 @@ it('records only bounded ambiguity and preparation metadata for action evaluatio
  expect(JSON.stringify(observation)).not.toContain('Alice');
  expect(JSON.stringify(observation)).not.toContain('11111111');
 });
+
+it('records only content-free source and excerpt counts for knowledge tool results',()=>{
+ const observation=summarizeAgentToolResultObservation(
+  {id:'private-call-id',name:'search_knowledge',args:{query:'private question'}},
+  {callId:'private-call-id',status:'ok',complete:true,text:'Alice private answer',evidence:[
+   {id:'private-source-1',type:'knowledge',label:'Private title',excerpt:'Private excerpt'},
+   {id:'private-source-2',type:'knowledge',label:'Private title without excerpt'},
+   {id:'private-patient',type:'patient',label:'Alice',excerpt:'Patient text'},
+  ],conditionKeys:[]},
+ );
+ expect(observation).toEqual({callId:'private-call-id',name:'search_knowledge',status:'ok',knowledgeSourceCount:2,knowledgeExcerptCount:1});
+ expect(JSON.stringify(observation)).not.toContain('Private');
+ expect(JSON.stringify(observation)).not.toContain('Alice');
+});
 it('records medication validation only after a treatment proposal passed preparation gates',()=>{
  const observation=summarizeAgentToolResultObservation(
   {id:'call-2',name:'prepare_action',args:{action:'update_treatment'}},

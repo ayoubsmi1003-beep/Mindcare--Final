@@ -34,6 +34,54 @@ it("preserves bounded per-oracle verdicts for safe campaign resume", () => {
   expect(JSON.stringify(artifact)).not.toContain("Patient Alice");
 });
 
+it("preserves only safe oracle check IDs and nonnegative egress counts", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    status: "FAIL",
+    rows: [{
+      id: "ADV-001",
+      status: "FAIL",
+      oracleCount: 1,
+      passingOracleCount: 0,
+      evaluatorSha256: "a".repeat(64),
+      oracleStatuses: ["FAIL"],
+      oracleChecks: [{
+        oracleIndex: 1,
+        kind: "knowledge_case",
+        checks: [
+          { id: "answer_evidence", status: "NOT VERIFIED" },
+          { id: "direct_readKnowledge", status: "PASS" },
+          { id: "source", status: "FAIL", sourceTitleMatched: false, sourceSectionMatched: true, citationMatched: false, privateLabel: "Synthetic private content" },
+          { id: "Patient Alice private note", status: "FAIL" },
+        ],
+        answer: "SYNTHETIC-PRIVATE-ANSWER",
+      }],
+    }],
+    records: [
+      { id: "ADV-001", externalEgressCount: 0, prompt: "SYNTHETIC-PRIVATE-PROMPT" },
+      { id: "ADV-002", externalEgressCount: -1 },
+    ],
+  });
+
+  expect(artifact.rows[0]).toMatchObject({
+    id: "ADV-001",
+    oracleChecks: [{
+      oracleIndex: 1,
+      kind: "knowledge_case",
+      checks: [
+        { id: "answer_evidence", status: "NOT VERIFIED" },
+        { id: "direct_readKnowledge", status: "PASS" },
+        { id: "source", status: "FAIL", sourceTitleMatched: false, sourceSectionMatched: true, citationMatched: false },
+      ],
+    }],
+  });
+  expect(artifact.records[0]).toMatchObject({ id: "ADV-001", externalEgressCount: 0 });
+  expect(artifact.records[1]).not.toHaveProperty("externalEgressCount");
+  const serialized = JSON.stringify(artifact);
+  for (const forbidden of ["Patient Alice", "private note", "Synthetic private content", "SYNTHETIC-PRIVATE-ANSWER", "SYNTHETIC-PRIVATE-PROMPT"]) {
+    expect(serialized).not.toContain(forbidden);
+  }
+});
+
 it("keeps only content-free direct and agent-tool retrieval coverage", () => {
   const artifact = sanitizeAlexaEvaluationArtifact({
     status: "PASS",
@@ -184,13 +232,59 @@ it("retains only bounded action preparation metadata in evaluation records", () 
     rankedCandidateCount: 2,
     requiredInputWasMissing: true,
     catalogIdentityVerified: true,
-    evidenceCount: 0,
-    evidenceTypes: [],
   }]);
   const serialized = JSON.stringify(artifact);
   for (const forbidden of ["private-call-id", "11111111", "Patient Alice", "Patient Bob"]) {
     expect(serialized).not.toContain(forbidden);
   }
+});
+
+
+it("links safe runtime observations by case ID and retains content-free knowledge counts", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    status: "PARTIAL",
+    records: [{
+      caseId: "ADV-021",
+      ms: 42,
+      toolResults: [{
+        status: "ok",
+        knowledgeSourceCount: 2,
+        knowledgeExcerptCount: 1,
+        privateText: "SYNTHETIC-PRIVATE-EXCERPT",
+      }],
+    }],
+  });
+
+  expect(artifact.records[0]).toMatchObject({
+    id: "ADV-021",
+    toolResults: [{ status: "ok", knowledgeSourceCount: 2, knowledgeExcerptCount: 1 }],
+  });
+  expect(artifact.records[0]).not.toHaveProperty("caseId");
+  expect(JSON.stringify(artifact)).not.toContain("SYNTHETIC-PRIVATE-EXCERPT");
+});
+
+it("keeps safe citation and part counts when a campaign record is sanitized twice", () => {
+  const first = sanitizeAlexaEvaluationArtifact({ records: [{
+    id: "ADV-001",
+    events: [
+      { type: "sentence", kind: "knowledge", text: "Synthetic answer", sources: [
+        { type: "knowledge", id: "synthetic-source", label: "Synthetic source", excerpt: "Synthetic quote", provenance: { pageImprimee: 42 } },
+      ] },
+      { type: "done", status: "partial", limited: true, speechAllowed: true, parts: [
+        { status: "budget_limited", resultRefs: ["synthetic-call"] },
+      ] },
+    ],
+  }] });
+
+  const second = sanitizeAlexaEvaluationArtifact({ records: first.records });
+
+  expect(second.records[0]?.events).toEqual(first.records[0]?.events);
+  expect(second.records[0]?.events).toEqual([
+    { type: "sentence", textChars: 16, kind: "knowledge", sourceCount: 1, sourceTypes: ["knowledge"], knowledgeSourceCount: 1, knowledgeExcerptCount: 1, knowledgePageCount: 1 },
+    { type: "done", status: "partial", limited: true, speechAllowed: true, partCount: 1, partStatuses: ["budget_limited"] },
+  ]);
+  expect(JSON.stringify(second)).not.toContain("Synthetic quote");
+  expect(JSON.stringify(second)).not.toContain("synthetic-call");
 });
 
 it("keeps allowlisted per-turn execution metadata without prompt or patient text", () => {
@@ -222,4 +316,98 @@ it("keeps allowlisted per-turn execution metadata without prompt or patient text
   const serialized = JSON.stringify(artifact);
   expect(serialized).not.toContain("Patient Alice");
   expect(serialized).not.toContain("private prompt");
+});
+
+it("retains only aggregate synthetic database and migration evidence for resume binding", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    run: {
+      databaseTarget: "alexa_eval_v8_intelligence_20261027",
+      databaseBindingSha256: "f".repeat(64),
+      sourceCount: 9,
+      databaseSnapshot: { patients: 1558, consultations: 8143, nonSynthetic: 0 },
+      migrationInventory: {
+        status: "PASS",
+        repositoryCount: 206,
+        appliedCount: 188,
+        highestRepositoryVersion: "209_analysis_indexes",
+        acknowledgedHistoricalVersions: ["173_document_autofill_context"],
+      },
+      resumeBindingStatus: "mismatch_restarted_fresh",
+    },
+  });
+
+  expect(artifact.run).toMatchObject({
+    databaseTarget: "alexa_eval_v8_intelligence_20261027",
+    databaseBindingSha256: "f".repeat(64),
+    sourceCount: 9,
+    databaseSnapshot: { patients: 1558, consultations: 8143, nonSynthetic: 0 },
+    migrationInventory: {
+      status: "PASS",
+      repositoryCount: 206,
+      appliedCount: 188,
+      highestRepositoryVersion: "209_analysis_indexes",
+      acknowledgedHistoricalVersions: ["173_document_autofill_context"],
+    },
+    resumeBindingStatus: "mismatch_restarted_fresh",
+  });
+});
+
+it("preserves allowlisted agent tool names while stripping call arguments", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    records: [{
+      id: "ADV-205",
+      calls: [
+        { name: "prepare_action", valid: true, args: { action: "update_treatment", privateText: "SYNTHETIC-PRIVATE" } },
+        { name: "query_patients", valid: false, args: { patientName: "SYNTHETIC-PRIVATE" } },
+        { name: "unregistered_tool", valid: false, args: { secret: "SYNTHETIC-PRIVATE" } },
+      ],
+    }],
+  });
+
+  expect(artifact.records[0]?.calls).toEqual([
+    { name: "prepare_action", valid: true },
+    { name: "query_patients", valid: false },
+    { name: "invalid-call", valid: false },
+  ]);
+  expect(JSON.stringify(artifact)).not.toContain("SYNTHETIC-PRIVATE");
+});
+
+it("distinguishes a print navigation request from print-dialog evidence", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    records: [{
+      id: "ADV-231",
+      events: [{ type: "done", navigation: {
+        target: "document",
+        print: true,
+        printDialogOpened: false,
+        documentWorkspace: false,
+      } }],
+    }],
+  });
+
+  expect(artifact.records[0]?.events[0]).toMatchObject({
+    type: "done",
+    navigationTarget: "document",
+    navigationPrint: true,
+    printDialogOpened: false,
+    navigationDocumentWorkspace: false,
+  });
+});
+
+it("reports only known row counts from structured RPC results", () => {
+  const artifact = sanitizeAlexaEvaluationArtifact({
+    records: [{
+      id: "ADV-082",
+      queries: [
+        { name: "search_patients", response: { ok: true, data: { items: [{ id: "PRIVATE-1" }, { id: "PRIVATE-2" }] } } },
+        { name: "get_patient", response: { ok: true, data: { id: "PRIVATE-1", status: "active" } } },
+      ],
+    }],
+  });
+
+  expect(artifact.records[0]?.queries).toEqual([
+    { name: "search_patients", ok: true, resultCount: 2 },
+    { name: "get_patient", ok: true },
+  ]);
+  expect(JSON.stringify(artifact)).not.toContain("PRIVATE-");
 });
