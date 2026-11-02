@@ -186,6 +186,13 @@ export interface BoutonProps {
    * ordinaire — un `aria-pressed="false"` sur une commande ment tout autant.
    */
   readonly enfonce?: boolean;
+  /**
+   * Retire les flèches de la chorégraphie Flow.
+   *
+   * Réservé aux CHIPS de sélection (filtres, horaires) : une flèche y ferait
+   * croire à une navigation alors que le geste ne fait que choisir un état.
+   */
+  readonly sansFleches?: boolean;
 }
 
 function habillage(
@@ -327,10 +334,11 @@ export function Bouton({
   pleineLargeur = false,
   deploye,
   enfonce,
+  sansFleches = false,
 }: BoutonProps): React.JSX.Element {
   const fige = disabled || chargement;
   const ton = critique ? CRITIQUE : retrait ? RETRAIT : RANGS[rang];
-  const sansFleches = taille === "icone";
+  const sansFleche = taille === "icone" || sansFleches;
   return (
     <button
       type={type}
@@ -342,14 +350,14 @@ export function Bouton({
       aria-pressed={enfonce}
       className={habillage(rang, retrait, critique, taille, enfonce, pleineLargeur)}
     >
-      <Choregraphie cercle={ton.cercle} sansFleches={sansFleches} anime={!fige} />
+      <Choregraphie cercle={ton.cercle} sansFleches={sansFleche} anime={!fige} />
       {chargement ? (
         <span
           aria-hidden="true"
           className="relative z-10 inline-block size-2 shrink-0 animate-respire rounded-full bg-current"
         />
       ) : null}
-      <TexteBouton sansFleches={sansFleches}>{children}</TexteBouton>
+      <TexteBouton sansFleches={sansFleche}>{children}</TexteBouton>
     </button>
   );
 }

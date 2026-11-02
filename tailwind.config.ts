@@ -894,6 +894,10 @@ const config: Config = {
       width: {
         rail: "var(--rail-largeur)",
         "rail-compact": "var(--rail-compact)",
+        // Le volet de revue de l'espace traitements : même largeur que la
+        // colonne de contexte existante, pour ne pas inventer une seconde
+        // mesure de rail.
+        charge: "var(--grid-context-width)",
         // Le cercle Flow : 220% du bouton, voir `--flow-cercle` (tokens.css).
         cercle: "var(--flow-cercle)",
       },

@@ -547,6 +547,11 @@ export interface TraitementV2 {
   readonly form: string | null;
   readonly strength: string | null;
   readonly inn: string | null;
+  /** Additif 211 — absent des réponses de workspace antérieures. */
+  readonly practitionerName?: string | null;
+  readonly atcClass?: string | null;
+  readonly consultationId?: string | null;
+  readonly previousTreatmentId?: string | null;
 }
 
 export interface RendezVousResume {

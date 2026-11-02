@@ -67,6 +67,7 @@ export type { TailleAvatar } from "./Avatar";
 
 export { ChampTexte, ChampSelection, ChampZoneTexte, ChampRecherche } from "./Champs";
 
+export { Dialogue } from "./Dialogue";
 export { EspaceTravail, SectionPliable } from "./Espaces";
 
 export {

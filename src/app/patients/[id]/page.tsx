@@ -101,7 +101,20 @@ export default function PageFichePatient(): React.JSX.Element {
   const [espace, setEspace] = useState<PatientWorkspace | null | undefined>(undefined);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
-  const [onglet, setOnglet] = useState<CleOnglet>("vueDEnsemble");
+  const [onglet, setOnglet] = useState<CleOnglet>(() => {
+    if (typeof window === "undefined") return "vueDEnsemble";
+    const valeur = new URLSearchParams(window.location.search).get("onglet");
+    switch (valeur) {
+      case "chronologie":
+      case "clinique":
+      case "traitements":
+      case "rendezVous":
+      case "documents":
+        return valeur;
+      default:
+        return "vueDEnsemble";
+    }
+  });
 
 
   const [resumeEtat, setResumeEtat] = useState<ResumeEtat>({
@@ -203,6 +216,15 @@ export default function PageFichePatient(): React.JSX.Element {
       effacerPatientActif();
     };
   }, [espace, id]);
+
+  function changerOnglet(cle: CleOnglet): void {
+    setOnglet(cle);
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (cle === "vueDEnsemble") url.searchParams.delete("onglet");
+    else url.searchParams.set("onglet", cle);
+    window.history.replaceState(null, "", url.toString());
+  }
 
   function deconnecter(): void {
     // Phase 3 : la cible Jarvis et le contexte d'outil meurent avec la
@@ -331,20 +353,20 @@ export default function PageFichePatient(): React.JSX.Element {
     switch (source.t) {
       case "diagnostic":
       case "echelle":
-        setOnglet("clinique");
+        changerOnglet("clinique");
         break;
       case "prescription":
       case "treatment":
-        setOnglet("traitements");
+        changerOnglet("traitements");
         break;
       case "consultation":
-        setOnglet("chronologie");
+        changerOnglet("chronologie");
         break;
       case "rdv":
-        setOnglet("rendezVous");
+        changerOnglet("rendezVous");
         break;
       case "document":
-        setOnglet("documents");
+        changerOnglet("documents");
         break;
     }
   }
@@ -427,7 +449,7 @@ export default function PageFichePatient(): React.JSX.Element {
           <Onglets
             onglets={onglets}
             actif={actif}
-            onChanger={(cle) => setOnglet(cle as CleOnglet)}
+            onChanger={(cle) => changerOnglet(cle as CleOnglet)}
             etiquette={fr.patients.titre}
           />
 
@@ -449,7 +471,7 @@ export default function PageFichePatient(): React.JSX.Element {
                     onEtatChange={setResumeEtat}
                     onGenerer={generer}
                     onOuvrirSource={ouvrirSource}
-                    profil={<PatientProfilClinique espace={espace} onOuvrirClinique={() => setOnglet("clinique")} />}
+                    profil={<PatientProfilClinique espace={espace} onOuvrirClinique={() => changerOnglet("clinique")} />}
                   />
                   {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
                   <SectionDepuisDerniere espace={espace} />

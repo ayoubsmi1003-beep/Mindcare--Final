@@ -86,6 +86,7 @@ const ECRANS_CONSTRUITS: readonly NomEcran[] = [
   "agenda",
   "finances",
   "documents",
+  "traitements",
   "statistiques",
   "parametres",
   "jarvis",

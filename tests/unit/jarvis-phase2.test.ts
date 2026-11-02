@@ -73,6 +73,8 @@ function traitement(partiel: Partial<Treatment> & { id: string }): Treatment {
     currentVersion: 1,
     createdAt: "2026-06-01T09:00:00+01:00",
     updatedAt: "2026-06-01T09:00:00+01:00",
+    practitionerName: null,
+    atcClass: null,
     ...partiel,
   };
 }

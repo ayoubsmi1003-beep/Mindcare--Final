@@ -57,6 +57,10 @@ export interface Treatment {
   readonly currentVersion: number;
   readonly createdAt: string;
   readonly updatedAt: string;
+  /** Exposé par la lecture de liste (211), absent des retours d'écriture bruts. */
+  readonly practitionerName: string | null;
+  /** Classe ATC du catalogue, quand elle existe. */
+  readonly atcClass: string | null;
 }
 
 export interface TreatmentHistoryEntry {
@@ -107,6 +111,8 @@ const TREATMENT_ROW = z.object({
   form: z.string().nullable().optional(),
   strength: z.string().nullable().optional(),
   inn: z.string().nullable().optional(),
+  practitioner_name: z.string().nullable().optional(),
+  atc_class: z.string().nullable().optional(),
   consultation_id: z.string().nullable(),
   previous_treatment_id: z.string().nullable(),
   status: z.enum(["active", "paused", "stopped"]),
@@ -177,6 +183,8 @@ function toTreatment(r: z.infer<typeof TREATMENT_ROW>): Treatment {
     currentVersion: r.current_version,
     createdAt: r.created_at,
     updatedAt: r.updated_at,
+    practitionerName: r.practitioner_name ?? null,
+    atcClass: r.atc_class ?? null,
   };
 }
 

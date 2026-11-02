@@ -1791,6 +1791,7 @@ export default function PageConsultation(): React.JSX.Element {
                 traitements={dossier.traitements}
                 traitementsV2={dossier.traitementsV2}
                 patientId={patientId}
+                consultationId={seance?.id ?? null}
                 onRefresh={reessayerDossier}
               />
             ) : (
