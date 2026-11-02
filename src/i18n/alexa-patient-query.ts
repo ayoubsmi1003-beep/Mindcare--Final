@@ -66,6 +66,10 @@ export function filteredPatientCountParagraph(total:number,population:'active'|'
  if(total===0)return `Aucun ${subject} ne répond${subject.startsWith('patient')?'':' pas'} aux critères${criteria.length?` : ${criteria.join(' et ')}`:' de cette recherche'}.`;
  return `Parmi les ${scope}, ${formatted} ${total===1?'répond':'répondent'} aux critères${criteria.length?` : ${criteria.join(' et ')}`:' de cette recherche'}.`;
 }
+export function phonePresencePartitionParagraph(withPhone:number,withoutPhone:number):string {
+ const format=new Intl.NumberFormat('fr-DZ');
+ return `Avec téléphone : ${format.format(withPhone)}. Sans téléphone : ${format.format(withoutPhone)}.`;
+}
 export const patientQueryCopy={
  fieldUnresolved:(field:keyof typeof fields)=>'Condition de présence ou d’absence non résolue : '+fields[field],
  sexesUnresolved:'Combinaison de sexes non résolue',

@@ -71,7 +71,7 @@ function validateProgress(progress) {
     "Invalid adversarial progress session");
   requireInput(progress.activeCaseId === null || CASE_ID.test(progress.activeCaseId),
     "Invalid active adversarial scenario");
-  requireInput(Array.isArray(progress.cases) && progress.cases.length > 0 && progress.cases.length <= 250,
+  requireInput(Array.isArray(progress.cases) && progress.cases.length > 0 && progress.cases.length <= 300,
     "Invalid adversarial progress cases");
 
   const ids = new Set();
@@ -146,13 +146,13 @@ function findCase(progress, scenarioId) {
 }
 
 /**
- * Creates a content-free checkpoint for the separate 250-case campaign.
+ * Creates a content-free checkpoint for the separate adversarial campaign.
  * @param {{manifestSha256: string; scenarios: {id: string; turnCount: number}[]; startedAt?: string}} options
  * @returns {V8Progress}
  */
 export function createV8AdversarialProgress({ manifestSha256, scenarios, startedAt = new Date().toISOString() } = {}) {
   requireInput(SHA256.test(manifestSha256), "Invalid adversarial manifest digest");
-  requireInput(Array.isArray(scenarios) && scenarios.length > 0 && scenarios.length <= 250,
+  requireInput(Array.isArray(scenarios) && scenarios.length > 0 && scenarios.length <= 300,
     "Adversarial scenarios are required");
 
   const seen = new Set();

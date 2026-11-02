@@ -1,6 +1,6 @@
 /** Real in-process runAlexa turns for the separate 250-case corpus; never loads .env. */
 import { createHash, randomUUID } from "node:crypto";
-import { mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -19,6 +19,8 @@ import {
   selectV8AdversarialCase,
 } from "./lib/alexa-v8-campaign-executor.mjs";
 import { sanitizeAlexaEvaluationArtifact } from "./lib/alexa-eval-artifact.mjs";
+import { createV8AnswerTranscriptRow } from "./lib/alexa-v8-answer-transcript.mjs";
+import { withV8KnowledgeVectorEnabled } from "./lib/alexa-v8-campaign-config.mjs";
 import {
   evaluateV8AdversarialScenario,
   evaluateV8KnowledgeOriginCoverage,
@@ -31,25 +33,30 @@ import {
   validateV8MigrationInventory,
   v8AdversarialRequiresCrossEncoder,
 } from "./lib/alexa-v8-manifest.mjs";
-import { mergeAlexaExecutionFallback, runAlexaV8Turn } from "./lib/alexa-v8-runtime-observation.mjs";
+import {
+  mergeAlexaExecutionFallback,
+  runAlexaV8DirectKnowledge,
+  runAlexaV8Turn,
+} from "./lib/alexa-v8-runtime-observation.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const evalRoot = join(root, "tests", "eval");
 const privateRoot = join(root, ".eval-out", "alexa-v8-upgrade");
 const args = process.argv.slice(2);
+const v9Corpus = args.includes("--corpus-v9");
 const require = createRequire(join(root, "package.json"));
 const hash = value => createHash("sha256").update(value).digest("hex");
 
 function onlyKnownFlags() {
-  const allowed = new Set(["--validate-only", "--resume", "--case"]);
+  const allowed = new Set(["--validate-only", "--resume", "--case", "--capture-answers", "--corpus-v9"]);
   for (let index = 0; index < args.length; index++) {
     if (!allowed.has(args[index]) || ["--resume", "--case"].includes(args[index]) && typeof args[index + 1] !== "string") {
-      throw new Error("Usage: node scripts/eval-alexa-v8-adversarial.mjs [--validate-only | --resume <progress-file> | --case ADV-001]");
+      throw new Error("Usage: node scripts/eval-alexa-v8-adversarial.mjs [--corpus-v9] [--validate-only | --resume <progress-file> | --case ADV-001] [--capture-answers]");
     }
     if (args[index] === "--case" && !/^ADV-\d{3}$/u.test(args[index + 1] ?? "")) throw new Error("Invalid diagnostic case ID");
     if (["--resume", "--case"].includes(args[index])) index++;
   }
-  if (args.includes("--validate-only") && args.some(flag => ["--resume", "--case"].includes(flag))) throw new Error("Validation mode cannot run a diagnostic case or resume a campaign");
+  if (args.includes("--validate-only") && args.some(flag => ["--resume", "--case", "--capture-answers"].includes(flag))) throw new Error("Validation mode cannot run a diagnostic case, resume a campaign, or capture answers");
   if (args.includes("--case") && args.includes("--resume")) throw new Error("A diagnostic case run cannot resume a campaign");
 }
 
@@ -73,7 +80,7 @@ async function readJson(path) {
 }
 
 async function loadInputs() {
-  const manifestPath = join(evalRoot, "alexa-v8-adversarial-250.cjs");
+  const manifestPath = join(evalRoot, v9Corpus ? "alexa-v9-adversarial-300.cjs" : "alexa-v8-adversarial-250.cjs");
   const frozenPath = join(evalRoot, "alexa-v8-cases.json");
   const snapshotPath = join(privateRoot, "private-oracle-snapshot-v2.json");
   const privateOraclePath = join(privateRoot, "private-oracles-v4.json");
@@ -81,7 +88,18 @@ async function loadInputs() {
   const frozenBytes = await readFile(frozenPath);
   const snapshotBytes = await readFile(snapshotPath);
   const privateOracleBytes = await readFile(privateOraclePath);
-  const manifest = require(manifestPath);
+  const manifestFile = require(manifestPath);
+  const fullManifest = v9Corpus ? { ...manifestFile, campaign: "alexa-v8-adversarial-250" } : manifestFile;
+  const requestedCases = (process.env["ALEXA_EVAL_CASE_FILTER"] ?? "")
+    .split(",").map(value => value.trim()).filter(Boolean);
+  if (requestedCases.some(id => !/^ADV-\d{3}$/u.test(id))) throw new Error("Invalid ALEXA_EVAL_CASE_FILTER");
+  const filteredCases = requestedCases.length
+    ? fullManifest.cases.filter(scenario => requestedCases.includes(scenario.id))
+    : fullManifest.cases;
+  if (requestedCases.length && filteredCases.length !== new Set(requestedCases).size) {
+    throw new Error("ALEXA_EVAL_CASE_FILTER contains an unknown case");
+  }
+  const manifest = requestedCases.length ? { ...fullManifest, cases: filteredCases } : fullManifest;
   const frozenManifest = JSON.parse(frozenBytes.toString("utf8"));
   const snapshot = JSON.parse(snapshotBytes.toString("utf8"));
   const privateOracles = JSON.parse(privateOracleBytes.toString("utf8"));
@@ -90,14 +108,18 @@ async function loadInputs() {
   }
 
   const knowledgeSources = {};
-  const sourceFiles = [...new Set(manifest.cases.flatMap(item => item.oracles
+  const sourceFiles = [...new Set(fullManifest.cases.flatMap(item => item.oracles
     .filter(oracle => oracle.kind === "knowledge_case").map(oracle => oracle.sourceFile)))];
   for (const file of sourceFiles) {
     if (basename(file) !== file || !file.endsWith(".json")) throw new Error("Invalid knowledge source reference");
     const source = await readJson(join(evalRoot, file));
     knowledgeSources[file] = source.cas;
   }
-  const validation = validateV8AdversarialManifest(manifest, { frozenManifest, knowledgeSources });
+  const validation = validateV8AdversarialManifest(fullManifest, {
+    frozenManifest,
+    knowledgeSources,
+    ...(v9Corpus ? { campaign: "alexa-v8-adversarial-250", categoryCounts: fullManifest.categoryCounts } : {}),
+  });
   const resolvedPrompts = {};
   let placeholderCount = 0;
   for (const scenario of manifest.cases) {
@@ -122,6 +144,10 @@ async function loadInputs() {
 }
 
 async function checkHashBinding() {
+  if (v9Corpus) {
+    const { workingTreeSha256 } = await import("./alexa-v8-bind-adversarial.mjs");
+    return { checkout: { sourceWorkingTreeSha256: workingTreeSha256() } };
+  }
   const { execFileSync } = await import("node:child_process");
   execFileSync(process.execPath, [join(root, "scripts", "alexa-v8-bind-adversarial.mjs"), "--check"], {
     cwd: root,
@@ -147,12 +173,26 @@ function sourceCaseIds(scenario) {
     .filter(id => typeof id === "string"))];
 }
 
-function appContextFor(scenario, inputs) {
+function patientForRef(snapshot, reference) {
+  if (reference === "PATIENT_A") return snapshot?.patientA ?? null;
+  if (reference === "PATIENT_B") return snapshot?.patientB ?? null;
+  const long = /^PATIENT_LONG_([123])$/u.exec(reference ?? "");
+  return long ? snapshot?.longPatients?.[Number(long[1]) - 1] ?? null : null;
+}
+
+function appContextFor(scenario, inputs, turnIndex = 0) {
   const preconditionsPath = join(evalRoot, "alexa-v8-preconditions.json");
   const preconditions = JSON.parse(require("node:fs").readFileSync(preconditionsPath, "utf8"));
   const selectedDocument = sourceCaseIds(scenario).some(id =>
     preconditions.cases?.[id]?.kind === "selected_issued_document" && preconditions.cases[id].source === "currentDocument");
-  if (!selectedDocument) return { patientId: null, page: "/jarvis" };
+  if (!selectedDocument) {
+    const source = sourceCaseIds(scenario)
+      .map(id => inputs.privateOracles.cases.find(item => item.id === id))
+      .find(item => Array.isArray(item?.turnScopes));
+    const scope = source?.turnScopes?.[turnIndex === 0 ? 0 : turnIndex - 1] ?? source?.turnScopes?.at(0);
+    const patient = patientForRef(inputs.snapshot, scope?.patientRef);
+    return { patientId: patient?.id ?? null, page: patient?.id ? `/patients/${patient.id}` : "/jarvis" };
+  }
   const document = inputs.snapshot.currentDocument;
   if (!document || document.status !== "issued" || document.is_synthetic !== true ||
       typeof document.id !== "string" || typeof document.patient_id !== "string" || typeof document.content_hash !== "string") {
@@ -225,7 +265,8 @@ async function preflightDatabase(inputs) {
       appliedVersions,
       acknowledgedHistoricalVersions,
     });
-    if (inputs.snapshot.source?.database !== source.database || Number(inputs.snapshot.source?.nonSynthetic) !== 0 ||
+    const actionDatabase = process.env.ALEXA_EVAL_EXECUTE_ACTIONS === "1" && source.database === "alexa_eval_v9_actions_20261031";
+    if ((!actionDatabase && inputs.snapshot.source?.database !== source.database) || Number(inputs.snapshot.source?.nonSynthetic) !== 0 ||
         Number(inputs.snapshot.source?.patients) !== Number(source.patients) ||
         Number(inputs.snapshot.source?.consultations) !== Number(source.consultations)) {
       throw new Error("Runtime database does not match the bound synthetic snapshot");
@@ -258,7 +299,7 @@ async function bundleRuntime(outDir) {
   const entry = join(outDir, "runtime-entry.mjs");
   await build({
     stdin: {
-      contents: "export {runAlexa} from '@/server/alexa/orchestrator';export {ALEXA_CONVERSATION_MODEL} from '@/server/alexa/model-policy';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {agentSchemas,compactDeclarationSchema,ALEXA_NATIVE_DEADLINE_MS,ALEXA_NATIVE_BUDGET} from '@/shared/alexa/agent';export {fermerPool} from '@/server/db/pool';",
+      contents: "export {runAlexa} from '@/server/alexa/orchestrator';export {readKnowledge} from '@/server/alexa/knowledge-adapter';export {ALEXA_CONVERSATION_MODEL} from '@/server/alexa/model-policy';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {agentSchemas,compactDeclarationSchema,ALEXA_NATIVE_DEADLINE_MS,ALEXA_NATIVE_BUDGET} from '@/shared/alexa/agent';export {fermerPool} from '@/server/db/pool';",
       resolveDir: root,
       loader: "ts",
     },
@@ -281,6 +322,7 @@ function tally(progress) {
 async function runCampaign() {
   onlyKnownFlags();
   const inputs = await loadInputs();
+  if (v9Corpus) process.env.KNOWLEDGE_VECTOR_RECETTE ??= "e5-base";
   const selectedCase = diagnosticCaseId();
   if (selectedCase) Object.assign(inputs, selectV8AdversarialCase({
     manifest: inputs.manifest,
@@ -295,6 +337,9 @@ async function runCampaign() {
   let prefix = resumed ? resumed.replace(/\.progress\.json$/u, "") : `adversarial-${runId}`;
   let progressPath = join(privateRoot, `${prefix}.progress.json`);
   let reportPath = join(privateRoot, `${prefix}.report.json`);
+  let answerTranscriptPath = args.includes("--capture-answers")
+    ? join(privateRoot, `${prefix}.answers.jsonl`)
+    : null;
   const outDir = join(privateRoot, "runtime-bundles", runId);
   await mkdir(outDir, { recursive: true });
   const api = await bundleRuntime(outDir);
@@ -318,6 +363,7 @@ async function runCampaign() {
   const run = {
     id: runId,
     startedAt: new Date().toISOString(),
+    corpus: v9Corpus ? "alexa-v9-adversarial-300" : "alexa-v8-adversarial-250",
     manifestSha256: inputs.manifestSha256,
     frozenManifestSha256: inputs.frozenManifestSha256,
     privateOracleSha256: inputs.privateOracleSha256,
@@ -337,6 +383,12 @@ async function runCampaign() {
       invocation: "in_process",
       fallback: { used: false, causes: [] },
     },
+    retrievalConfiguration: {
+      vectorFeatureGate: "enabled",
+      recipe: process.env["KNOWLEDGE_VECTOR_RECETTE"]?.trim() || "e5-small",
+      crossEncoder: "mmarco-for-retrieval-contract-cases",
+    },
+    ...(answerTranscriptPath ? { answerTranscript: basename(answerTranscriptPath) } : {}),
   };
   const previousReportMatchesBinding = matchesV8AdversarialResumeBinding({ report: previousReport, binding: run });
   run.resumeBindingStatus = !resumed ? "fresh"
@@ -345,7 +397,12 @@ async function runCampaign() {
     prefix = `adversarial-${runId}`;
     progressPath = join(privateRoot, `${prefix}.progress.json`);
     reportPath = join(privateRoot, `${prefix}.report.json`);
+    answerTranscriptPath = args.includes("--capture-answers")
+      ? join(privateRoot, `${prefix}.answers.jsonl`)
+      : null;
+    if (answerTranscriptPath) run.answerTranscript = basename(answerTranscriptPath);
   }
+  if (answerTranscriptPath) await appendFile(answerTranscriptPath, "", "utf8");
   let progress = priorProgress && previousReportMatchesBinding
     ? recoverV8AdversarialProgress(priorProgress, { nextSessionId: runId })
     : createV8AdversarialProgress({
@@ -447,14 +504,41 @@ async function runCampaign() {
         else delete process.env["KNOWLEDGE_RERANK"];
         let observation;
         try {
-          observation = await runAlexaV8Turn({
-            api,
-            actor,
-            text: prompt,
-            conversationId,
-            clientTurnId: randomUUID(),
-            appContext: appContextFor(scenario, inputs),
-            asOf: fixtureAsOf,
+          observation = await withV8KnowledgeVectorEnabled(async () => {
+            const actionSourceCase = scenario.oracles
+              .filter(oracle => oracle.kind === "action_contract" && typeof oracle.sourceCaseId === "string")
+              .map(oracle => inputs.privateOracles.cases.find(item => item.id === oracle.sourceCaseId))
+              .find(Boolean);
+            const expectedAction = actionSourceCase?.assertions?.find(assertion => assertion.kind === "expected_action");
+            const expectedPatientId = patientForRef(inputs.snapshot, actionSourceCase?.turnScopes?.[turnIndex]?.patientRef)?.id;
+            const turn = await runAlexaV8Turn({
+              api,
+              actor,
+              text: prompt,
+              conversationId,
+              clientTurnId: randomUUID(),
+              appContext: appContextFor(scenario, inputs, turnIndex),
+              asOf: fixtureAsOf,
+              expectedAction,
+              expectedPatientId,
+            });
+            if (answerTranscriptPath) {
+              const transcriptRow = createV8AnswerTranscriptRow({
+                caseId: scenario.id,
+                turnIndex,
+                prompt,
+                observation: turn,
+              });
+              await appendFile(answerTranscriptPath, `${JSON.stringify(transcriptRow)}\n`, "utf8");
+            }
+            if (scenario.oracles.some(oracle => oracle.kind === "retrieval_contract")) {
+              const direct = await runAlexaV8DirectKnowledge({ api, actor, question: prompt });
+              turn.knowledgeTraces.push(...direct.knowledgeTraces);
+              if (direct.externalEgressCount !== null) {
+                turn.externalEgressCount = (turn.externalEgressCount ?? 0) + direct.externalEgressCount;
+              }
+            }
+            return turn;
           });
         } finally {
           if (previousReranker === undefined) delete process.env["KNOWLEDGE_RERANK"];
@@ -463,6 +547,17 @@ async function runCampaign() {
         observation.caseId = scenario.id;
         observation.turnIndex = turnIndex;
         run.execution.fallback = mergeAlexaExecutionFallback(run.execution.fallback, observation.execution?.fallback);
+        if (process.env["ALEXA_EVAL_DUMP_OBSERVATIONS"] === "1") {
+          await appendFile(join(privateRoot, "observations-debug.jsonl"), `${JSON.stringify({
+            caseId: scenario.id, turnIndex,
+            queries: observation.queries,
+            calls: observation.calls,
+            events: observation.events,
+            toolResults: observation.toolResults,
+            actionEvidence: observation.actionEvidence,
+            proposal: observation.events.find(event => event.type === "proposal"),
+          })}\n`, "utf8");
+        }
         const safe = sanitizeAlexaEvaluationArtifact({ records: [observation] }).records[0];
         if (safe) safeRecords.push(safe);
         observedOrigins.push(...observation.knowledgeTraces.map(trace => ({ knowledgeTraces: [trace] })));
@@ -491,7 +586,7 @@ async function runCampaign() {
     const counts = tally(progress);
     const perOracle = oracleStatusCounts();
     const everyOraclePassed = Object.values(perOracle).every(group => group.total > 0 && group.PASS === group.total);
-    const complete = progress.cases.length === 250 && progress.cases.every(item => item.status === "PASS") && everyOraclePassed;
+    const complete = progress.cases.length === inputs.manifest.cases.length && progress.cases.every(item => item.status === "PASS") && everyOraclePassed;
     const report = sanitizeAlexaEvaluationArtifact({
       version: 1,
       status: counts.FAIL ? "FAIL" : complete && coverage.status === "PASS" ? "PASS"
@@ -520,6 +615,7 @@ async function runCampaign() {
       resumeBindingStatus: run.resumeBindingStatus,
       physicalPrinting: "NOT VERIFIED",
       authenticatedUiActionConfirmation: "NOT RUN",
+      ...(answerTranscriptPath ? { answers: basename(answerTranscriptPath) } : {}),
     }) + "\n");
   } finally {
     await api.releaseLocalModel();
@@ -532,6 +628,7 @@ if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.m
     if (args.includes("--validate-only")) await validateOnly();
     else await runCampaign();
   } catch (error) {
+    if (process.env["ALEXA_EVAL_DEBUG"] === "1") console.error(error);
     const code = error instanceof Error && /^[A-Za-z][A-Za-z0-9_-]{0,80}$/u.test(error.message)
       ? error.message : "AlexaV8AdversarialRunnerFailed";
     const systemCode = error && typeof error === "object" &&

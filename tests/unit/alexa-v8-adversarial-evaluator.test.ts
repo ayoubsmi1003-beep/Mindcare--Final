@@ -1,9 +1,13 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 
 const loadEvaluator = async () => import(new URL(
   "../../scripts/lib/alexa-v8-adversarial-evaluator.mjs",
   import.meta.url,
 ).href).catch(() => null);
+
+type EvaluatorCheck = { id: string; status: string };
+const findCheck = (result: { checks?: EvaluatorCheck[] }, id: string) =>
+  result.checks?.find(check => check.id === id);
 
 const sourceCase = {
   id: "DSM-MDD-SEUIL",
@@ -67,6 +71,56 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
       expect.objectContaining({ id: "page", status: "PASS" }),
       expect.objectContaining({ id: "book_title_omitted", status: "PASS" }),
     ]));
+  });
+
+  it("ignores fixed non-clinical framing when checking answer evidence", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const framed = observation();
+    framed.events.unshift({ type: "sentence", kind: "knowledge", text: "Ces sources ne couvrent qu’une partie de la question.", sources: [] });
+    const result = api.evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: [framed] });
+    expect(findCheck(result, "answer_evidence")?.status).toBe("PASS");
+  });
+
+  it("matches a knowledge citation anchored by literal text instead of a section path", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const cited = observation({
+      text: "Le trouble stress post-traumatique regroupe plusieurs familles de symptômes.",
+    });
+    cited.events[0]!.sources[0]!.label = "DSM-5 · Trouble stress post-traumatique · p. 300";
+    cited.events[0]!.sources[0]!.excerpt = cited.events[0]!.text;
+    const result = api.evaluateV8KnowledgeOracle({
+      oracle: { kind: "knowledge_case", caseId: "DSM-PTSD", answerable: true, omitBookTitleFromUserFacingAnswer: true },
+      sourceCase: { id: "DSM-PTSD", answerable: true, attendu: { source: "DSM-5", texteContient: ["stress post-traumatique"] } },
+      observations: [cited],
+    });
+    expect(findCheck(result, "source")?.status).toBe("PASS");
+    expect(findCheck(result, "page")?.status).toBe("PASS");
+  });
+
+  it("does not pass a fallback-only answer even when its source metadata matches", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const fallback = {
+      events: [{
+        type: "sentence", kind: "knowledge",
+        text: "La synthèse vérifiée est indisponible. Les références retrouvées restent consultables dans les sources.",
+        sources: [{
+          type: "knowledge", id: "synthetic-chunk",
+          label: "DSM-5 · Trouble dépressif caractérisé · Critères diagnostiques · p. 161",
+          provenance: { sourceId: "synthetic-book", chunkId: "synthetic-chunk", pageImprimee: 161 },
+        }],
+      }],
+      knowledgeTraces: [{ origin: "direct", result: "ok", evidence: { selected: 1, pages: 1 } }],
+    };
+    const result = api.evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: [fallback] });
+    expect(result.status).not.toBe("PASS");
+    expect(findCheck(result, "answer_present")?.status).toBe("FAIL");
+    expect(findCheck(result, "answer_evidence")?.status).toBe("NOT VERIFIED");
   });
 
   it("does not treat a correct source citation as proof that answer text is grounded in its passage", async () => {
@@ -235,7 +289,7 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
     const api = await loadEvaluator();
     expect(api).not.toBeNull();
     if (!api) return;
-    const observation = {
+    const observation: any = {
       execution: { model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf", recipe: "native-agent", gate: "runAlexa", invocation: "in_process" },
       events: [{ type: "sentence", text: "Les critères évaluent plusieurs symptômes sur une période déterminée.", sources: [{
         type: "knowledge", id: "synthetic-chunk", label: "DSM-5 · Trouble dépressif caractérisé · Critères diagnostiques · p. 161",
@@ -371,6 +425,21 @@ describe("Alexa V8 adversarial independent knowledge oracle", () => {
     routed.execution = { gate: "runAlexa", invocation: "in_process" };
     delete routed.externalEgressCount;
     expect(api.evaluateV8RouteOracle({ oracle: routeOracle, observations: [routed] })).toMatchObject({ status: "NOT VERIFIED" });
+  });
+
+  it("recognizes a natural safe refusal as abstention", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const refused = {
+      events: [{ type: "sentence", text: "Je n’ai pas de réponse fiable à vous donner pour le moment.", sources: [] }],
+      externalEgressCount: 0,
+      execution: { gate: "runAlexa", invocation: "in_process" },
+    };
+    expect(api.evaluateV8RouteOracle({
+      oracle: { kind: "route_contract", expectedPipeline: "safe_abstention", externalEgress: "forbidden" },
+      observations: [refused],
+    })).toMatchObject({ status: "PASS" });
   });
 
   it("aggregates only fully adjudicated oracle references and hashes its evaluator", async () => {
@@ -563,7 +632,7 @@ describe("Alexa V8 adversarial action evidence oracle", () => {
     expect(api).not.toBeNull();
     if (!api) return;
 
-    const observation = {
+    const observation: any = {
       events: [{ type: "proposal", tool: "update_treatment" }],
       queries: [{ name: "update_treatment", response: { ok: true, data: [{ changed: true }] } }],
       actionEvidence: [{
@@ -956,7 +1025,7 @@ describe("Alexa V8 frozen snapshot and clinical contracts", () => {
       assertions: [{ kind: "exact_count", subject: "active_count", value: 2 }],
     };
     const snapshot = { patientA: { id: "patient-a" } };
-    const observed = {
+    const observed: any = {
       queries: [{ name: "search_patients", response: { ok: true, data: [{ total: 2 }] } }],
       events: [
         { type: "sentence", text: "Le dossier compte 2 patients actifs.", sources: [{ type: "query", id: "count-result" }] },
@@ -970,6 +1039,263 @@ describe("Alexa V8 frozen snapshot and clinical contracts", () => {
     observed.events[0]!.text = "Le dossier compte 3 patients actifs.";
     expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, snapshot, observations: [observed] }))
       .toMatchObject({ status: "FAIL" });
+  });
+
+  it("accepts a natural zero-count answer only when the frozen value is zero", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-002" };
+    const sourceCase = {
+      id: "v8-002",
+      sourceSha256: "a".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{ kind: "exact_count", subject: "archived_count", value: 0 }],
+    };
+    const observed: any = {
+      queries: [{ name: "search_patients", response: { ok: true, data: [{ total: 0 }] } }],
+      events: [
+        { type: "sentence", text: "Le cabinet ne compte aucun patient archivé.", sources: [{ type: "query", id: "count-result" }] },
+        { type: "done", status: "completed", parts: [{ status: "answered", resultRefs: ["read-1"] }] },
+      ],
+      calls: [{ name: "query_patients", effectiveArgs: { mode: "count", population: "archived" }, valid: true }],
+    };
+
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, snapshot: {}, observations: [observed] }))
+      .toMatchObject({ status: "PASS" });
+    observed.events[0]!.text = "Le cabinet compte 0 patient archivé.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, snapshot: {}, observations: [observed] }))
+      .toMatchObject({ status: "PASS" });
+    observed.events[0]!.text = "Le cabinet compte 3 patients archivés.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, snapshot: {}, observations: [observed] }))
+      .toMatchObject({ status: "FAIL" });
+  });
+
+  it("accepts a verified zero-row answer when the frozen assertion has no rows", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-115" };
+    const sourceCase = {
+      id: "v8-115",
+      sourceSha256: "a".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: "PATIENT_A" }],
+      assertions: [{ kind: "exact_rows", rows: [] }],
+    };
+    const observed: any = {
+      queries: [{ name: "query_alexa_records", response: { ok: true, data: [{ total: 0, rows: [] }] } }],
+      events: [{ type: "sentence", text: "Aucun rendez-vous à venir n'est enregistré pour ce patient.", sources: [] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "PASS" });
+    observed.events[0]!.text = "Trois rendez-vous sont à venir.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("matches a frozen appointment row through the read-gate projection without ignoring identity, time, or status", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-113" };
+    const sourceCase = {
+      id: "v8-113",
+      sourceSha256: "c".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{
+        kind: "exact_rows",
+        rows: [{
+          id: "appointment-1",
+          patient_id: "patient-1",
+          status: "confirmed",
+          starts_at: "2026-10-29T09:00:00+00:00",
+          ends_at: "2026-10-29T09:30:00+00:00",
+          kind: "suivi",
+          source: "doctor",
+          cabinet_id: "cabinet-1",
+          created_at: "2026-10-22T11:15:57.322335+00:00",
+          updated_at: "2026-10-22T11:15:57.322335+00:00",
+        }],
+      }],
+    };
+    const observation: any = {
+      queries: [{ name: "query_alexa_records", response: { ok: true, data: [{
+        total: 1,
+        rows: [{ id: "appointment-1", patientId: "patient-1", status: "confirmed", at: "2026-10-29T09:00:00+00:00", label: "Patient synthétique", amount: null }],
+      }] } }],
+      events: [{ type: "sentence", text: "Un rendez-vous confirmé à 9 h.", sources: [{ type: "appointment", id: "appointment-1" }] }],
+    };
+    const evaluate = () => api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [structuredClone(observation)] });
+    expect(evaluate().status).toBe("PASS");
+
+    observation.queries[0]!.response.data[0].rows[0]!.status = "requested";
+    expect(evaluate().status).toBe("FAIL");
+    observation.queries[0]!.response.data[0].rows[0]!.status = "confirmed";
+    observation.queries[0]!.response.data[0].rows[0]!.at = "2026-10-29T10:00:00+00:00";
+    expect(evaluate().status).toBe("FAIL");
+    observation.queries[0]!.response.data[0].rows[0]!.at = "2026-10-29T09:00:00+00:00";
+    observation.queries[0]!.response.data[0].rows[0]!.id = "appointment-2";
+    expect(evaluate().status).toBe("FAIL");
+  });
+
+  it("accepts a verified empty patient set only when the answer says no patient matches", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-149" };
+    const sourceCase = {
+      id: "v8-149",
+      sourceSha256: "e".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{ kind: "exact_patient_set", values: [] }],
+    };
+    const observed: any = {
+      queries: [{ name: "search_patients", response: { ok: true, data: [{ total: 0, rows: [] }] } }],
+      events: [{ type: "sentence", text: "Aucun patient archivé ne correspond à votre demande.", sources: [] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "PASS" });
+    observed.events[0]!.text = "Trois patients archivés correspondent.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("accepts an empty clinical collection only when the read and answer agree", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-170" };
+    const sourceCase = {
+      id: "v8-170",
+      sourceSha256: "f".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: "PATIENT_A" }],
+      assertions: [{ kind: "exact_rows", rows: [] }],
+    };
+    const observed: any = {
+      queries: [{ name: "get_patient_context", response: { ok: true, data: [{
+        treatments: { current: [], history: [], historyComplete: true },
+      }] } }],
+      events: [{ type: "sentence", text: "Aucun traitement en pause n’est enregistré pour ce patient.", sources: [] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "PASS" });
+    observed.queries[0]!.response.data[0].treatments.current.push({ id: "treatment-1" });
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("accepts a cited first page only when the frozen total and every page row are verified", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const values = Array.from({ length: 25 }, (_, index) => ({ id: `patient-${index + 1}`, name: `Patient ${index + 1}` }));
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-012" };
+    const sourceCase = {
+      id: "v8-012",
+      sourceSha256: "9".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{ kind: "exact_patient_set", count: 25, values }],
+    };
+    const page = values.slice(0, 2).map((value, index) => ({
+      id: value.id, first_name: `Patient`, last_name: String(index + 1),
+    }));
+    const observed: any = {
+      queries: [{ name: "search_patients", response: { ok: true, data: [{ total: 25, rows: page, offset: 0 }] } }],
+      events: [{
+        type: "sentence",
+        text: "Parmi les patients actifs, 25 n’ont pas de numéro de téléphone. Voici les 2 premiers noms. Patient 1. Patient 2.",
+        sources: [{ type: "patient", id: "patient-1" }, { type: "patient", id: "patient-2" }],
+      }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [structuredClone(observed)] })).toMatchObject({ status: "PASS" });
+    observed.queries[0]!.response.data[0].rows[0]!.id = "patient-99";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [structuredClone(observed)] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("anchors a clock answer to the frozen campaign clock instead of the host clock", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-088" };
+    const sourceCase = {
+      id: "v8-088", sourceSha256: "8".repeat(64), turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{ kind: "clock_tolerance", zone: "Africa/Algiers", maximumSkewSeconds: 120 }],
+    };
+    const observed = {
+      asOf: "2026-10-28T12:00:00+01:00",
+      events: [{ type: "sentence", text: "Au cabinet, il est 12 h 00.", sources: [] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "PASS" });
+    observed.events[0]!.text = "Au cabinet, il est 13 h 00.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("matches a frozen consultation row through the clinical-context projection", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-033" };
+    const sourceCase = {
+      id: "v8-033",
+      sourceSha256: "d".repeat(64),
+      turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: "PATIENT_A" }],
+      assertions: [{
+        kind: "source_rows",
+        rows: [{
+          id: "consultation-1",
+          patient_id: "patient-1",
+          cabinet_id: "cabinet-1",
+          status: "closed",
+          started_at: "2025-08-31T13:00:00+00:00",
+          ended_at: "2025-08-31T13:30:00+00:00",
+          raw_notes: "Note brute synthétique.",
+          session_token: "session-1",
+          duration_seconds: 1800,
+          appointment_id: "appointment-1",
+        }],
+      }],
+    };
+    const observed: any = {
+      queries: [{ name: "get_alexa_clinical_context", response: { ok: true, data: [{
+        patientId: "patient-1",
+        consultations: [{
+          id: "consultation-1",
+          patientId: "patient-1",
+          status: "closed",
+          startedAt: "2025-08-31T13:00:00+00:00",
+          endedAt: "2025-08-31T13:30:00+00:00",
+          notes: [],
+        }],
+      }] } }],
+      events: [{ type: "sentence", text: "Deux consultations sont comparées.", sources: [{ type: "consultation", id: "consultation-1" }] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [structuredClone(observed)] })).toMatchObject({ status: "PASS" });
+
+    observed.queries[0]!.response.data[0].consultations[0].endedAt = "2026-04-26T14:00:00+00:00";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [structuredClone(observed)] })).toMatchObject({ status: "FAIL" });
+  });
+
+  it("refuses a fallback-only snapshot answer even when the read found the row", async () => {
+    const api = await loadEvaluator();
+    expect(api).not.toBeNull();
+    if (!api) return;
+    const oracle = { kind: "snapshot_case", sourceCaseId: "v8-149" };
+    const sourceCase = {
+      id: "v8-149", sourceSha256: "e".repeat(64), turnCount: 1,
+      turnScopes: [{ index: 0, patientRef: null }],
+      assertions: [{ kind: "exact_value", field: "patients.phone", value: "0558076104" }],
+    };
+    const observed: any = {
+      queries: [{ name: "get_patient", response: { ok: true, data: [{ id: "patient-1", phone: "0558076104" }] } }],
+      events: [{ type: "sentence", text: "Localise islam adjina. — Je n’ai pas de réponse fiable à vous donner pour le moment.", sources: [{ type: "patient", id: "patient-1" }] }],
+    };
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "FAIL" });
+
+    observed.events[0]!.text = "Pour islam adjina, le téléphone enregistré est 0558076104.";
+    expect(api.evaluateV8SnapshotOracle({ oracle, sourceCase, observations: [observed] })).toMatchObject({ status: "PASS" });
   });
 
   it("checks clock answers against the requested timezone and latest/previous source identities", async () => {
@@ -994,7 +1320,7 @@ describe("Alexa V8 frozen snapshot and clinical contracts", () => {
     const time = new Intl.DateTimeFormat("en-GB", {
       timeZone: "Africa/Algiers", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
     }).format(new Date());
-    const observation = {
+    const observation: any = {
       events: [{ type: "sentence", text: `Il est ${time}. Les consultations précédente et la plus récente sont résumées.`, sources: [
         { type: "consultation", id: "consultation-latest" },
         { type: "consultation", id: "consultation-previous" },
@@ -1178,4 +1504,30 @@ describe("Alexa V8 frozen snapshot and clinical contracts", () => {
       oracleStatusCounts: { snapshot_case: { total: 250, PASS: 0, FAIL: 0, "NOT RUN": 250, "NOT VERIFIED": 0 } },
     });
   });
+});
+
+
+
+it('passes a verified phone-presence partition from two read metrics',async()=>{
+ const api=await loadEvaluator();expect(api).not.toBeNull();if(!api)return;
+ const oracle={kind:'snapshot_case',sourceCaseId:'v8-016'};
+ const sourceCase={id:'v8-016',sourceSha256:'7'.repeat(64),turnCount:1,turnScopes:[{index:0,patientRef:null}],assertions:[{kind:'exact_partition',withPhone:1352,withoutPhone:206}]};
+ const observed={queries:[{name:'search_patients',response:{ok:true,data:[{metrics:{active:1558,missing_phone:206,with_phone:1352}}]}}],events:[{type:'sentence',text:'Avec téléphone : 1 352. Sans téléphone : 206.',sources:[]}]};
+ expect(api.evaluateV8SnapshotOracle({oracle,sourceCase,observations:[observed]})).toMatchObject({status:'PASS'});
+});
+
+it('passes an unpriced-consultation count without requiring a money word in the answer',async()=>{
+ const api=await loadEvaluator();expect(api).not.toBeNull();if(!api)return;
+ const oracle={kind:'snapshot_case',sourceCaseId:'v8-138'};
+ const sourceCase={id:'v8-138',sourceSha256:'6'.repeat(64),turnCount:1,turnScopes:[{index:0,patientRef:null}],assertions:[{kind:'exact_count',subject:'closed_without_payment',value:8142}]};
+ const observed={queries:[{name:'query_alexa_records',response:{ok:true,data:[{total:0,rows:[],totals:{unpriced:8142}}]}}],events:[{type:'sentence',text:'8 142 consultations terminées sans tarif enregistré.',sources:[]}]};
+ expect(api.evaluateV8SnapshotOracle({oracle,sourceCase,observations:[observed]})).toMatchObject({status:'PASS'});
+});
+
+it('verifies a civilian-date answer against the frozen cabinet clock',async()=>{
+ const api=await loadEvaluator();if(!api)return;
+ const oracle={kind:'snapshot_case',sourceCaseId:'v8-086'};
+ const sourceCase={id:'v8-086',sourceSha256:'a'.repeat(64),turnCount:1,turnScopes:[{index:0,patientRef:null}],assertions:[{kind:'exact_value',field:'clock.localDate',value:'2026-10-28'}]};
+ const observed={asOf:'2026-10-28T12:00:00+01:00',events:[{type:'sentence',text:'2026-10-28',sources:[]}]};
+ console.log(JSON.stringify(api.evaluateV8SnapshotOracle({oracle,sourceCase,observations:[observed]})));
 });

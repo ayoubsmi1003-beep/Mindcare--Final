@@ -17,7 +17,7 @@ export function nativeAgendaStatusContract(text:string):{complete:boolean;status
  const positive=new Set<AgendaStatus>(),negative=new Set<AgendaStatus>();
  rest=rest.replace(/\b(?:non honore[es]*|absent[es]*|no[- ]show)\b/gu,()=>{positive.add('no_show');return '';});
  const all=/\btous (?:les )?statuts\b/u.test(rest);rest=rest.replace(/\btous (?:les )?statuts\b/gu,'');
- const phrases:readonly [AgendaStatus,string][]=[['requested',"a confirmer|en attente de confirmation|demande[es]*"],['confirmed','confirme[es]*'],['arrived','arrive[es]*'],['in_session','en consultation|en seance|en cours'],['completed','termine[es]*|acheve[es]*'],['cancelled','annule[es]*']];
+ const phrases:readonly [AgendaStatus,string][]=[['requested',"a confirmer|en attente de confirmation|demande[es]*"],['confirmed','confirme[es]*'],['arrived','arrive[es]*|arrivee[s]?|pointe?\\w*\\s+(?:leur\\s+)?arrivee'],['in_session','en consultation|en seance|en cours'],['completed','termine[es]*|acheve[es]*'],['cancelled','annule[es]*|annulations?']];
  for(const [status,phrase]of phrases){
   rest=rest.replace(new RegExp(`\\b(?:(non|sans|sauf|hors|excluant|excepte|pas)\\s+(?:les?\\s+)?)?(${phrase})\\b`,'gu'),(_match,excluded:unknown)=>{(excluded?negative:positive).add(status);return '';});
  }
@@ -36,6 +36,15 @@ const unsupported = /\b(?:semaine|mois|annee|matin|soir|apres-midi|janvier|fevri
 /** A day reference only; ambiguous or unsupported periods never become today. */
 export function agendaSelection(text: string, inheritedDay?: string, asOf = new Date().toISOString()): { day: string; requestedOnly: boolean } | null {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+  const months = ["janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"];
+  const explicitDate = /\b(\d{1,2})(?:er)?\s+(janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre)\s+((?:19|20)\d{2})\b/u.exec(normalized);
+  if (explicitDate) {
+    const day = Number(explicitDate[1]), month = months.indexOf(explicitDate[2]!) + 1, year = Number(explicitDate[3]);
+    const date = new Date(Date.UTC(year, month - 1, day));
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return null;
+    const civil = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    return { day: civil, requestedOnly: /\ba confirmer\b|\ben attente (?:de confirmation|d.approbation)\b/u.test(normalized) };
+  }
   const mentions = [...normalized.matchAll(days)].map(match => match[0]);
   const unqualified = normalized.replace(/\b(?:prochain\s+patient|patient\s+suivant)\b|المريض\s+(?:التالي|الجاي)/gu, "");
   if (mentions.length > 1 || unsupported.test(normalized.replace(days, ""))

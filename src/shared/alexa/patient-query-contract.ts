@@ -48,7 +48,7 @@ export function patientQueryContract(text:string,asOf:string):PatientQueryContra
   const conditions=[...(explicitPatientConditions(segment)??[])];
   // Absence is local to the field, rather than inferred from a sibling predicate.
   for(const [field,pattern]of [['identity_card',"(?:cni|carte d'identite|carte d.identite|numero de piece d'identite)"],['phone','(?:telephone|portable)'],['birth_date','(?:date de naissance)'],['sex','(?:sexe)']] as const){
-   const missing=new RegExp(`(?:sans|aucun(?:e)?|pas de|pas d'|manqu\\w*|non renseigne\\w*)\\s+(?:un |une |numero de |numero d'|de |d')?${pattern}|${pattern}\\s+(?:est |sont )?(?:manquant\\w*|non renseigne\\w*|vide\\w*|absent\\w*)`,'u').test(segment);
+   const missing=new RegExp(`(?:sans|aucun(?:e)?|pas de|pas d'|ni|manqu\\w*|non renseigne\\w*)\\s+(?:un |une |numero de |numero d'|de |d')?${pattern}|${pattern}\\s+(?:est |sont )?(?:manquant\\w*|non renseigne\\w*|vide\\w*|absent\\w*)`,'u').test(segment);
    const present=new RegExp(`(?:avec|ayant)\\s+(?:un |une |le |la |son |sa |numero de |numero d')?${pattern}(?:\\s+renseigne\\w*)?|${pattern}\\s+(?:est |sont )?(?:renseigne\\w*|present\\w*)`,'u').test(segment);
    if(missing||present){for(let i=conditions.length-1;i>=0;i--)if(conditions[i]!.field===field)conditions.splice(i,1);conditions.push({field,op:missing?'missing':'present',value:null});}
    else if(new RegExp(pattern,'u').test(segment)&&!conditions.some(c=>c.field===field)&&!(field==='sex'&&/\bsexe (?:feminin|masculin)\b/u.test(segment)))unsupported.push(copy.fieldUnresolved(field));
@@ -62,7 +62,7 @@ export function patientQueryContract(text:string,asOf:string):PatientQueryContra
   const seen=new Set<string>();groups.push(conditions.filter(c=>{const k=conditionKey(c);if(seen.has(k))return false;seen.add(k);return true;}));
  }
  if(/\b(?:separement|chaque nombre)\b/u.test(t)&&!frenchPatientCountContract(text))unsupported.push(copy.outputsUnresolved);
- const disjunctions=(t.match(/\bou\b/gu)??[]).length,knownAlternatives=(t.match(/\bans? ou plus\b|\bnul(?:le)?s? ou vides?\b/gu)??[]).length;
+ const disjunctions=(t.match(/\bou\b/gu)??[]).length,knownAlternatives=(t.match(/\bans? ou plus\b|\bnul(?:le)?s? ou vides?\b|\b(?:consultations?|seances?|visites?)[^.!?]{0,40}\bou plus\b|\bpresence\s+ou\s+(?:l['’])?absence\b|\babsence\s+ou\s+(?:la\s+)?presence\b/gu)??[]).length;
  if(disjunctions>segments.length-1+knownAlternatives)unsupported.push(copy.disjunctionUnresolved);
  if(/\b(?:pas (?:des? )?(?:femmes?|hommes?|adultes?|mineurs?|enfants?|moins|plus|sans)|non (?:adultes?|mineurs?)|ne (?:sont|soient) pas)\b/u.test(t))unsupported.push(copy.negationUnresolved);
  const temporal=new RegExp(`\\b(?:${months.join('|')}|(?:19|20)\\d{2}|ce mois|entre|depuis|avant|apres|jusqu\\w*)\\b`,'u').test(t),period=temporal?patientQueryPeriod(text,asOf):null;

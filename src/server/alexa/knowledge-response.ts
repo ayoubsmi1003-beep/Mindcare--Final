@@ -5,6 +5,7 @@ import type { SourceCitation } from "@/server/knowledge/pages";
 import { retirerMarqueursPageAffichage } from "@/server/knowledge/pages";
 import type { readKnowledge } from "./knowledge-adapter";
 import { localDisplay } from "./local-response";
+import { isKnowledgeLocationQuestion } from "./knowledge-query";
 
 export type KnowledgeResult = Awaited<ReturnType<typeof readKnowledge>>;
 type SentenceEvent = Extract<AlexaEvent, { type: "sentence" }>;
@@ -61,10 +62,20 @@ export function citationDePreuve(proof: Preuve): SourceCitation {
 
 /** Book excerpts remain attributed evidence, never an individualized clinical conclusion. */
 export function knowledgeResponseEvents(result: KnowledgeResult, language: AlexaLanguage,
-  mixed = false, identities: readonly string[] = []): SentenceEvent[] {
+  mixed = false, identities: readonly string[] = [], question?: string): SentenceEvent[] {
   const copy = dialogue(language);
   const message = (text: string): SentenceEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
   const omissions = "omittedLongPassages" in result && result.omittedLongPassages ? [message(copy.longKnowledge)] : [];
+  if (question && isKnowledgeLocationQuestion(question)) {
+    if (result.etat !== "ok") return [message(result.etat === "faible" ? copy.weakKnowledge
+      : result.etat === "panne" ? copy.knowledgeUnavailable : copy.noKnowledge), ...omissions];
+    const proof = result.preuves.find(item => typeof item.section === "string" && item.section.trim()
+      && "page" in item && typeof item.page?.libelle === "string" && item.page.libelle.trim());
+    if (!proof || !proof.section || !("page" in proof) || !proof.page) return [message(copy.noKnowledge), ...omissions];
+    const locator = localDisplay(`${proof.section} — ${proof.page.libelle}`, identities);
+    return [{ type: "sentence", text: locator, kind: "knowledge",
+      sources: [{ ...knowledgeSource(proof, identities), excerpt: locator }] }];
+  }
   if (result.etat !== "ok") return [message(result.etat === "faible" ? copy.weakKnowledge
     : result.etat === "panne" ? copy.knowledgeUnavailable : copy.noKnowledge), ...omissions];
   const speakableProofs = result.preuves.flatMap(proof => {

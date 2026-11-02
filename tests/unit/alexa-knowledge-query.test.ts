@@ -1,8 +1,8 @@
-import { LIMITES } from "@/server/knowledge/recherche";
+﻿import { LIMITES } from "@/server/knowledge/recherche";
 import { describe, expect, it } from "vitest";
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import type { ArgsJarvis, ClientSql } from "@/server/jarvis/client-sql";
-import {planKnowledgeQuery,matchesRequestedBook} from '@/server/alexa/knowledge-query';
+import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesRequestedBook} from '@/server/alexa/knowledge-query';
 
 const DSM = "DSM-5 — Manuel diagnostique et statistique des troubles mentaux";
 const MAUDSLEY = "The Maudsley Prescribing Guidelines in Psychiatry";
@@ -24,6 +24,16 @@ function boundary(rows: unknown[]) {
 }
 
 describe("bounded Alexa lexical question planning", () => {
+  it.each([
+    ["Dans quelle partie du DSM-5 trouver les seuils et la durée ?", true],
+    ["Quelle section décrit le trouble dépressif caractérisé ?", true],
+    ["Où trouver ce chapitre dans le DSM-5 ?", true],
+    ["Where in the DSM-5 are diagnostic criteria located?", true],
+    ["Quels critères diagnostiques et quelle durée sont requis ?", false],
+  ])("classifies an explicit source-location request without treating content questions as locators: %s", (question, expected) => {
+    expect(isKnowledgeLocationQuestion(question)).toBe(expected);
+  });
+
   it('preserves both primary topics of a DSM comparison and rejects unrelated differentials',()=>{
     const plan=planKnowledgeQuery('Compare les descriptions de manie et d’hypomanie selon le DSM-5.')!;
     expect(plan.sectionFocuses).toEqual(['episode hypomaniaque','episode maniaque']);
@@ -323,3 +333,25 @@ describe("adversarial DSM query variants", () => {
     expect(queries[1]).toMatch(/trouble bipolaire type ii$/u);
   });
 });
+
+describe("drug location section focus", () => {
+  it.each([
+    ["Localise le passage sur les effets métaboliques de l’olanzapine et sa page.", "notable side effects"],
+    ["Où est décrit le mécanisme de la clozapine ?", "how the drug works"],
+    ["Trouve le passage sur les précautions d’emploi de la clozapine, avec la page.", "other warnings/precautions"],
+    ["Localise les effets cutanés graves de la lamotrigine, avec la page.", "life-threatening or dangerous side effects"],
+    ["Quelle section recense les examens de surveillance du lithium ?", "tests"],
+    ["Localise les effets moteurs de l’halopéridol.", "notable side effects"],
+  ])("binds a drug location question to the Stahl section: %s", (question, focus) => {
+    expect(planKnowledgeQuery(question)?.sectionFocus).toBe(focus);
+  });
+
+  it.each([
+    "Où trouver les précautions rénales du lithium ?",
+    "Localise la surveillance hématologique sous clozapine.",
+    "Quelle page traite de l’allongement du QT sous antipsychotiques ?",
+  ])("does not force a Stahl section on a Maudsley-specific location: %s", question => {
+    expect(planKnowledgeQuery(question)?.sectionFocus).toBeUndefined();
+  });
+});
+

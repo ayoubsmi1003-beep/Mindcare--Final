@@ -148,16 +148,34 @@ export function resolveV8AdversarialPromptTurns(scenario, { snapshot, privateOra
   }));
 }
 
-/** Validate the separate 250-case corpus without changing frozen V8 expectations. */
-export function validateV8AdversarialManifest(manifest, { frozenManifest, knowledgeSources } = {}) {
-  if (!manifest || manifest.version !== 1 || manifest.campaign !== 'alexa-v8-adversarial-250' ||
-      manifest.status !== 'DRAFT_ORACLES_PENDING' || !Array.isArray(manifest.cases) || manifest.cases.length !== 250) {
-    throw new Error('Expected separate 250-case adversarial campaign');
+/**
+ * Validate a separate adversarial corpus without changing frozen V8 expectations.
+ * Defaults preserve the original 250-case campaign; callers may bind another
+ * campaign name and category distribution for a new corpus.
+ * @param {object} manifest
+ * @param {{
+ *   frozenManifest?: any,
+ *   knowledgeSources?: Record<string, any>,
+ *   campaign?: string,
+ *   categoryCounts?: Record<string, number>,
+ * }} [options]
+ */
+export function validateV8AdversarialManifest(manifest, {
+  frozenManifest,
+  knowledgeSources,
+  campaign = 'alexa-v8-adversarial-250',
+  categoryCounts = V8_ADVERSARIAL_CATEGORIES,
+} = {}) {
+  const expectedTotal = Object.values(categoryCounts).reduce((total, count) => total + count, 0);
+  if (!manifest || manifest.version !== 1 || manifest.campaign !== campaign ||
+      manifest.status !== 'DRAFT_ORACLES_PENDING' || !Array.isArray(manifest.cases) ||
+      manifest.cases.length !== expectedTotal) {
+    throw new Error(`Expected separate ${expectedTotal}-case adversarial campaign`);
   }
   if (!frozenManifest || !Array.isArray(frozenManifest.cases) || !knowledgeSources || typeof knowledgeSources !== 'object') {
     throw new Error('Independent oracle sources required');
   }
-  if (!manifest.categoryCounts || Object.entries(V8_ADVERSARIAL_CATEGORIES).some(([key, count]) => manifest.categoryCounts[key] !== count)) {
+  if (!manifest.categoryCounts || Object.entries(categoryCounts).some(([key, count]) => manifest.categoryCounts[key] !== count)) {
     throw new Error('Incorrect declared adversarial category distribution');
   }
 
@@ -168,7 +186,7 @@ export function validateV8AdversarialManifest(manifest, { frozenManifest, knowle
   const signatures = new Set();
   const intents = new Set();
   const ids = new Set();
-  const categories = Object.fromEntries(Object.keys(V8_ADVERSARIAL_CATEGORIES).map(key => [key, 0]));
+  const categories = Object.fromEntries(Object.keys(categoryCounts).map(key => [key, 0]));
   const dimensions = new Set();
 
   for (const item of manifest.cases) {
@@ -389,7 +407,7 @@ export function validateV8AdversarialManifest(manifest, { frozenManifest, knowle
     }
   }
 
-  if (Object.entries(V8_ADVERSARIAL_CATEGORIES).some(([category, count]) => categories[category] !== count)) {
+  if (Object.entries(categoryCounts).some(([category, count]) => categories[category] !== count)) {
     throw new Error('Incorrect adversarial category distribution');
   }
   const missingDimensions = requiredDimensions.filter(tag => !dimensions.has(tag));

@@ -19,10 +19,16 @@
 - `electron-chemins` · `electron-etat-demarrage` · `electron-pg-cluster` : runtime bureau.
 - `traitements-liste-patient-id` · `verifier-base` : domaine traitements, garde démarrage.
 
-## Intégration (`tests/integration/`, 5 — exigent `MINDCARE_TEST_DATABASE_URL`)
+## Intégration (`tests/integration/`, 7 — exigent leur URL de base)
 - `auth-locale` · `frontiere-donnees` · `identite-pool` · `demarrage-sante` ·
   `jarvis-approbation` :
   sessions, frontière, pool, santé au démarrage, approbation. Sautées sans base → NOT RUN.
+- `alexa-v9-fixture` : acceptation des diagnostics, échelles, paiements, médicaments,
+  documents et RLS sur `alexa_eval_v9_fixture_20261030` ; exige
+  `MINDCARE_ALEXA_V9_FIXTURE_ADMIN_URL`, sinon skipped explicite.
+- `alexa-v9-action-gate` : proposition → confirmation → exécution → audit →
+  rollback sur `alexa_eval_v9_actions_20261031` ; exige
+  `MINDCARE_ALEXA_ACTION_DB_URL`, sinon skipped explicite.
 
 ## E2E (`tests/e2e/`, Playwright, 19 specs — exigent app démarrée)
 `connexion` · `tableauDeBord` · `patients` · `patients-fiche` · `patients-nouveau` ·
@@ -36,6 +42,15 @@
 ## Checkpoints shell (`scripts/checkpoint-*.sh`)
 `s0` (provision) · `j1a` (T10, base déjà écrite) · `v1`/`v2`/`v3` · `s2`/`s4`/`s5`/`s7`/`s7b` ·
 `v6-finance` · `v8-documents` · `pg-local` · `jarvis*` · `clinique-http` · `frontiere-http` · `jarvis-http`.
+
+## Corpus d'évaluation Alexa V9 (`tests/eval/alexa-v9-adversarial-300.cjs`)
+300 questions françaises neuves (`ADV-301` → `ADV-600`), aucune ne nomme un livre,
+un manuel ou un éditeur. Oracles indépendants uniquement : cas gelés 200 + corpus
+de connaissances approuvé. Distribution : 35 connaissances, 30 mixtes, 20 routage,
+20 récupération, 30 suivis, 40 patients/consultations, 30 agenda, 25 finances,
+40 actions, 30 documents/impression. Validation statique :
+`tests/unit/alexa-v9-adversarial-manifest.test.ts` (5/5). Le corpus 250 est retiré
+de l'usage ; il reste dans l'arbre comme historique, non exécuté.
 
 ## Evals Jarvis (`scripts/eval-*.mjs` — hors-ligne, `.eval-out/`, sans clé)
 `routage` (120) · `boucle` (42) · `chaine` (28) · `ecritures` (échec honnête, 26) ·

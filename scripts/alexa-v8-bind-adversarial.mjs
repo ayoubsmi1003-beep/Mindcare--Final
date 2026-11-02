@@ -58,7 +58,7 @@ function indexById(values, label) {
   return indexed;
 }
 
-function workingTreeSha256() {
+export function workingTreeSha256() {
   const diff = execFileSync('git', ['diff', '--binary', 'HEAD'], { cwd: repoRoot, encoding: 'buffer' });
   const paths = execFileSync('git', ['ls-files', '--others', '--exclude-standard', '-z'], {
     cwd: repoRoot,

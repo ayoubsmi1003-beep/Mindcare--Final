@@ -2,7 +2,7 @@
 export function splitAlexaQuestions(text: string): readonly string[] | null {
   const parts: string[] = [];
   let part = "", quote: string | null = null;
-  const append = () => { if (part.trim()) parts.push(part.trim()); part = ""; };
+  const append = () => { const clean = part.trim().replace(/[,;]+$/u, "").trim(); if (clean) parts.push(clean); part = ""; };
   const french = /^[ \t]+et(?:\s+aussi)?\s+(?=(?:quel(?:le)?s?\b|comment\b|pourquoi\b|combien\b|r[eé]sum|montre\b|donne\b|explique\b|compare\b|(?:son|sa|ses|le|la|les)\s+(?:diagnosti|traitement|notes?|scores?|derni[eè]re)))/iu;
   const arabic = /^[ \t]+و\s*(?=(?:واش|وش|ما\s+(?:هو|هي)|شحال|لخص|قارن|اشرح|عطيني))/u;
   for (let index = 0; index < text.length; index++) {

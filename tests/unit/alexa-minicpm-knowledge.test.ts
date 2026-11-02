@@ -1,4 +1,4 @@
-import { afterEach, expect, it, vi } from "vitest";
+﻿import { afterEach, expect, it, vi } from "vitest";
 const { local, cloud } = vi.hoisted(() => ({ local: vi.fn(), cloud: vi.fn(() => { throw new Error("UnexpectedCloudText"); }) }));
 vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: local }));
 vi.mock("@/server/egress/external-call", () => ({ llm: cloud }));
@@ -7,9 +7,9 @@ import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import { matchesSectionFocus,planKnowledgeQuery } from "@/server/alexa/knowledge-query";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 const quote = "Critères de la dépression : le texte de référence décrit les critères documentés.";
-const clientFor=(text:string,language='fr',section='Synthetic'):ClientSql=>({ rpc: async <T>() => ({ data: [{
+const clientFor=(text:string,language='fr',section='Synthetic',version='synthetic-v1'):ClientSql=>({ rpc: async <T>() => ({ data: [{
   chunk_id: "synthetic-chunk", source_id: "synthetic-dsm", source_titre: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux",
-  source_version: "synthetic-v1", section, version_chunk: "synthetic-c1", langue: language, texte: text, score: 0.6,
+  source_version: version, section, version_chunk: "synthetic-c1", langue: language, texte: text, score: 0.6,
   source_statut: "active", source_classification: "C4", source_approuvee_le: new Date("2026-01-01"),
   source_approuvee_par: "synthetic-reviewer", source_revue_a_jour: true, source_remplacee_par: null,
   unit_id: "synthetic-unit", parent_texte_hash: "synthetic-parent", enfant_index: 1, enfants_total: 1,
@@ -407,3 +407,40 @@ it("emits only the literal cited passage when model prose adds an unsupported nu
  expect(emitted[0]!.sources[0]?.excerpt).toContain(passage);
  expect(emitted[0]!.text).not.toContain("17");
 });
+
+it("answers an explicit French source-location question from its verified section and page without speaking the book title", async () => {
+  const question = "Dans quelle partie du DSM-5 trouver les seuils et la durée de l’épisode dépressif ?";
+  const section = "Section II — Critères diagnostiques et codes › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques";
+  const passage = "L’épisode dépressif caractérisé répond aux critères diagnostiques : les seuils de symptômes et la durée sont définis dans cette rubrique. [dsm5-fr-2015-elsevier p.200|src:200]";
+  const result = await readKnowledge(clientFor(passage, "fr", section, "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"), question);
+  const events = await synthesizeKnowledge(result, question, "fr", new AbortController().signal, { compact: true });
+  const sentences = events.filter((event): event is Extract<typeof event, { type: "sentence" }> => event.type === "sentence");
+
+  expect(result.etat).toBe("ok");
+  expect(result.preuves[0]?.page?.libelle).toBe("p. 200");
+  expect(local).not.toHaveBeenCalled();
+  expect(sentences).toHaveLength(1);
+  expect(sentences[0]?.text).toBe(`${section} — p. 200`);
+  expect(sentences[0]?.text).not.toMatch(/DSM-5/iu);
+  expect(sentences[0]?.sources[0]).toMatchObject({
+    type: "knowledge",
+    excerpt: `${section} — p. 200`,
+    provenance: { pageImprimee: 200 },
+  });
+});
+
+it("does not invent a page or section answer when the source location cannot be resolved", async () => {
+  const question = "Dans quelle partie du DSM-5 trouver les seuils et la durée de l’épisode dépressif ?";
+  const section = "Section II — Critères diagnostiques et codes › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques";
+  const passage = "L’épisode dépressif caractérisé répond aux critères diagnostiques : les seuils de symptômes et la durée sont définis dans cette rubrique.";
+  const result = await readKnowledge(clientFor(passage, "fr", section, "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53"), question);
+  const events = await synthesizeKnowledge(result, question, "fr", new AbortController().signal, { compact: true });
+  const citations = events.flatMap(event => event.type === "sentence" ? event.sources : []).filter(source => source.type === "knowledge");
+
+  expect(result.preuves[0]?.page).toBeUndefined();
+  expect(citations).toHaveLength(0);
+  expect(events.some(event => event.type === "sentence" && event.text.includes(section))).toBe(false);
+  expect(local).not.toHaveBeenCalled();
+});
+
+

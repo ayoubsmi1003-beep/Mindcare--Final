@@ -20,7 +20,7 @@ function financeParagraph(result:AgentResult,question:string,detailed:boolean):s
   if(data.total===0&&Array.isArray(data.rows)&&data.rows.length===0&&/\bpaiements?\b/u.test(plain)&&explicitPaymentList)return /\b(?:en attente|impaye\w*|a encaisser|non encaisse\w*)\b/u.test(plain)?'Aucun paiement en attente ne correspond à cette demande.':'Aucun paiement ne correspond à cette demande.';
   if(detailed)return;
  if(pulse&&/\bchiffre d['’]affaires\b/u.test(plain)&&typeof pulse.revenu_periode==='number')return `${financePeriod(data)}les recettes encaissées du cabinet sont de ${frNumber(pulse.revenu_periode)} DZD.`;
- if(pulse&&/\b(?:resultat net|solde net)\b/u.test(plain)&&typeof pulse.resultat_net_periode==='number')return `${financePeriod(data)}${financePeriod(data)?'le':'Le'} résultat net du cabinet est de ${frNumber(pulse.resultat_net_periode)} DZD.`;
+ if(pulse&&/\b(?:benefice net|resultat net|solde net)\b/u.test(plain)&&typeof pulse.resultat_net_periode==='number')return `${financePeriod(data)}${financePeriod(data)?'le':'Le'} résultat net du cabinet est de ${frNumber(pulse.resultat_net_periode)} DZD.`;
  const recurring=data.total_recurrent_mensuel,oneOff=data.total_ponctuel_periode,from=typeof data.du==='string'?data.du:undefined,to=typeof data.au==='string'?data.au:undefined;
  const monthStart=from?new Date(`${from}T12:00:00Z`):null,monthEnd=to?new Date(`${to}T12:00:00Z`):null;
  const oneMonth=!!monthStart&&!!monthEnd&&!Number.isNaN(monthStart.getTime())&&!Number.isNaN(monthEnd.getTime())&&monthStart.getUTCDate()===1&&monthStart.getUTCFullYear()===monthEnd.getUTCFullYear()&&monthStart.getUTCMonth()===monthEnd.getUTCMonth()&&monthEnd.getUTCDate()===new Date(Date.UTC(monthEnd.getUTCFullYear(),monthEnd.getUTCMonth()+1,0)).getUTCDate();
@@ -30,7 +30,8 @@ function financeParagraph(result:AgentResult,question:string,detailed:boolean):s
   const rows=Array.isArray(composition.charges_par_categorie)?composition.charges_par_categorie.filter(isRecord):[];
   if(!rows.length)return `${financePeriod(data)}${financePeriod(data)?'aucune':'Aucune'} charge n’est enregistrée pour cette période.`;
   const items=rows.map(row=>`${String(row.libelle??row.cle??'Catégorie')} : ${frNumber(Number(row.montant))} DZD${typeof row.part_pct==='number'?` (${frNumber(row.part_pct)} %)` : ''}`);
-  return `${financePeriod(data)}les charges se répartissent ainsi : ${items.join(' ; ')}.`;
+  const total=rows.reduce((sum,row)=>sum+Number(row.montant??0),0);
+  return `${financePeriod(data)}le total des charges est de ${frNumber(total)} DZD et se répartit ainsi : ${items.join(' ; ')}.`;
  }
  const totals=isRecord(data.totals)?data.totals:null;
  if(totals&&/\b(?:montant|total|somme|valeur)\b[^.!?]*\b(?:paiements?|encaisse\w*|recettes?)\b/u.test(plain)&&/\bencaisse\w*\b/u.test(plain)&&typeof totals.collectedDzd==='number')return totals.collectedDzd===0?'Sur la période demandée, le montant encaissé est de 0 DZD.':`Sur la période demandée, le montant encaissé est de ${frNumber(totals.collectedDzd)} DZD.`;
@@ -46,6 +47,9 @@ function financeParagraph(result:AgentResult,question:string,detailed:boolean):s
 export function presentAgentResults(results:readonly AgentResult[],question:string):string[]{
  const detailed=/\b(?:liste\w*|noms?|lesquels|lesquelles|mot pour mot|lis|lire|detail\w*|integral\w*)\b/u.test(question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
  const linked=results.some(r=>r.links?.length);
- const texts=results.filter(r=>r.text).map(r=>{const finance=financeParagraph(r,question,detailed||!!linked);const calendar=isRecord(r.data)&&isRecord(r.data.financeQuery)&&r.data.financeQuery.mode==='calendar';return finance??(detailed||linked||calendar?r.text:r.text.replace(/\s*\n\s*/gu,' ').trim());});
- return detailed||linked?texts:texts.length?[texts.join(' ')]:[];
+ const texts=results.filter(r=>r.text).map(r=>{const finance=results.length===1?financeParagraph(r,question,detailed||!!linked):undefined;const calendar=isRecord(r.data)&&isRecord(r.data.financeQuery)&&r.data.financeQuery.mode==='calendar';return finance??(detailed||linked||calendar?r.text:r.text.replace(/\s*\n\s*/gu,' ').trim());});
+ // A knowledge passage keeps its own citation sentence; gluing it to a data
+ // read would attribute the data sentence to the book.
+ const hasKnowledge=results.some(r=>Array.isArray(r.evidence)&&r.evidence.some(source=>source.type==='knowledge'));
+ return detailed||linked||hasKnowledge?texts:texts.length?[texts.join(' ')]:[];
 }

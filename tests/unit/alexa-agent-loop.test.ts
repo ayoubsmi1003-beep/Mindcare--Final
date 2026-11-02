@@ -1112,3 +1112,38 @@ it('keeps explicit absolute agenda bounds on the direct path',async()=>{
  await runAgentLoop({...input,text:'Quels sont les rendez-vous du 2026-10-01 au 2026-10-15 ?',conversationId:'absolute-agenda'},{actor:'absolute-agenda',asOf:'2026-10-20T11:00:00Z',infer,observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
  expect(infer).not.toHaveBeenCalled();expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-01T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00'}}]);
 });
+
+it.each([
+ ['Quel téléphone figure au dossier de islam adjina ? Puis comment distingue-t-on obsessions et compulsions ?', 'get_patient_context'],
+ ['Combien de dossiers actifs n’ont pas de téléphone ? Ensuite, quel seuil temporel définit un épisode maniaque ?', 'query_patients'],
+])('splits a data-plus-knowledge compound into two deterministic reads: %s',async (text,firstTool)=>{
+ let inferenceCalls=0;const observed:{name:string;args:Record<string,unknown>}[]=[];
+ const conditionKeysFor=(args:Record<string,unknown>)=>{
+  const filters=Array.isArray(args['filters'])?args['filters'] as {field:string;op:string;value:unknown}[]:[];
+  return filters.map(condition=>`${condition.field}:${condition.op}:${condition.value===null?'null':String(condition.value)}`);
+ };
+ const result=await runAgentLoop({...input,text,conversationId:'mixed-'+text.slice(0,20),appContext:{patientId:null,page:'/jarvis'}},{actor:'mixed-compound',asOf:'2026-10-28T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw Error('A compound read must not need the model');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Lecture directe terminée.',evidence:[{id:call.id,type:'query',label:'Lecture'}],conditionKeys:conditionKeysFor(call.args)})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed.map(entry=>entry.name)).toEqual([firstTool,'search_knowledge']);
+ expect(result.results.length).toBe(2);
+});
+
+it.each([
+ 'Quel est le premier rendez-vous de la journée au cabinet ?',
+ 'Quels rendez-vous du matin sont prévus demain ?',
+ 'Quels rendez-vous de l’après-midi sont prévus demain ?',
+])('TEMP agenda direct %s',async text=>{
+ const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'agenda-direct-'+text.slice(0,10),appContext:{patientId:null,page:'/jarvis'}},{actor:'agenda-direct',asOf:'2026-10-28T12:00:00+01:00',infer:async()=>{throw Error('no model');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Lecture.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ console.log(text,'=>',JSON.stringify(observed),result.status);
+});
+
+it.each([
+ ['Combien de dossiers actifs compte le cabinet ?',{mode:'count',population:'active',filters:[]}],
+ ['Combien de patients actifs le cabinet compte-t-il ?',{mode:'count',population:'active',filters:[]}],
+ ['Combien de dossiers compte le cabinet, actifs et archivés réunis ?',{mode:'count',population:'all',filters:[]}],
+])('counts a plain population stated with ?compte le cabinet? without the model: %s',async (text,expected)=>{
+ const observed:Record<string,unknown>[]=[];
+ const r=await runAgentLoop({...input,text,conversationId:'plain-count-'+text.slice(0,12),appContext:{patientId:null,page:'/patients'}},{actor:'plain-count',asOf:'2026-10-28T12:00:00+01:00',infer:async()=>{throw Error('model');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'1 558 patients.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ console.log(text,'=>',JSON.stringify(observed),r.status);
+});

@@ -189,6 +189,12 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
   const clinicalTopic = mentionsMedication(normalized) || /dsm|cim|icd|diagnosti|symptom|traitement|medicament|posolog|therap|psychi|depress|anxi|angoiss|bipol|schizo|suicid|sommeil|insomni|sante|malad|douleur|stress|medecin|soins|fievre|migraine|diabet|cancer|hypertens|vaccin|grossesse|infection|antibio|\b(?:medical|health|illness|disease|fever|pain|doctor|physician|pregnancy)\b|مريض|مرض|تشخيص|اعراض|علاج|دواء|اكتئاب|قلق|انتحار|النوم|ارق|صحة|طبي|حمى|سكري|سرطان|ضغط\s+الدم|حمل|عدوى|لقاح/u.test(normalized);
   const focus = clinicalFocus(normalized);
   const operation = /compar|قارن|مقارن/u.test(normalized) ? "compare" : /resum|synth|لخص|تلخيص|ملخص/u.test(normalized) ? "summarize" : undefined;
+  // Patient-level money questions stay on the audited patient finance read;
+  // the cabinet overview gate must not ignore a named patient.
+  if(parsePatientMention(text).status==='named'&&(
+    /\b(?:combien|quel(?:le)?)\b[^.!?]{0,80}\b(?:regle|paye|encaisse|verse)\b/u.test(normalized)
+    ||/\bsolde\b[^.!?]{0,40}\b(?:reste|du|impaye)\b/u.test(normalized)
+  ))return { intent: "patient_finance", count: 10, language };
   // Writes always retain the existing human confirmation boundary.
   if (/supprim|effac|\bsigne(?:r)?\b|clotur|fermer|ajout|prescri|modifi(?!cation)|augment|arrete.*trait|(?:prepar|redig|gener).{0,60}brouillon|حذف|امسح|وقع|زيد.*دوز/u.test(normalized)) return { intent: "proposal", count: 1, language };
   if (/(?:n['’]|ne\s+|pas\s+)(?:ouvre|ouvrir|va|aller)|(?:ouvre|ouvrir|va|aller)\b.{0,30}\b(?:pas|jamais)\b|لا\s+(?:تفتح|تروح|افتح)|ما\s+(?:تفتح|تروح)/u.test(normalized)) return { intent: "clarify", count: 1, language };
@@ -269,6 +275,7 @@ export function planRequest(text: string, previous: WorkingReference | null, asO
   const shortcut=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().trim();
   const language=/\p{Script=Arabic}/u.test(text)?"ar" as const:"fr" as const;
   if(/^(?:quelle heure est[- ]il(?: a alger)?|il est quelle heure|شحال الساعة|كم الساعة)[?!.؟\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
+  if(/^(?:quelle date (?:civile )?(?:est[- ]en[- ]cours|sommes[- ]nous|est[- ]il)|quel jour sommes[- ]nous|on est quel jour|quelle est la date(?: d.aujourd.hui| du jour)?)(?:\s+a alger)?[?!.\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
   // Exact, bounded local reads remain available without a model qualification.
   const listMatch=/^(combien de |liste (?:les |des )?|montre (?:les |la liste des )?|quels sont les )patients(?: (?:sans|qui n['’]ont pas de) (telephone|numero de telephone|piece d['’]identite|carte d['’]identite|email))?[?!.\s]*$/u.exec(shortcut);
   const arabicMatch=/^(شحال من|عدد|شكون|قائمة) (?:مريض|المرضى|مرضى)(?: (?:بلا|بدون) (نوميرو|رقم هاتف|بطاقة تعريف|ايميل))?[؟?!.\s]*$/u.exec(shortcut);

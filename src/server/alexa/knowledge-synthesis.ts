@@ -1,4 +1,4 @@
-import {z} from 'zod';
+﻿import {z} from 'zod';
 import { knowledgeAnswerSchema, knowledgeAnswerJsonSchema,indexedKnowledgeAnswerSchema,resolveIndexedKnowledgeAnswer } from "@/shared/alexa/knowledge-answer";
 import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
@@ -9,7 +9,7 @@ import {headingOnlyEvidence,bibliographyEvidence,bibliographyRequested,knowledge
 import {isIssuedKnowledgeResult} from "./knowledge-adapter";
 import { inferLocalText } from "./local-model";
 import {localModelFailureCode} from './local-model-protocol';
-import {planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
+import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
 import { classerCharge } from "@/server/egress/classification";
 import { verifierCitations } from "@/server/knowledge/citations";
 import { ALEXA_KNOWLEDGE_TRANSFORM, knowledgeMessages, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
@@ -76,11 +76,53 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   const locale = language === "fr" ? "fr" : "ar";
   const copy = dialogue(language);
   const message = (text: string): AlexaEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
+  let extractiveChoices: Array<{ proof: KnowledgeResult["preuves"][number]; quote: string; order: number }> = [];
+  const extractiveFallback = (): AlexaEvent[] | null => {
+    if (!extractiveChoices.length) return null;
+    const stop = new Set(["avec", "dans", "pour", "quel", "quels", "quelle", "quelles", "comment", "combien", "quoi", "sont", "être", "cette", "cette", "leur", "leurs", "plus", "moins", "selon", "entre", "dont", "aussi", "peut", "faut", "il", "elle", "nous", "vous", "mais", "donc", "alors", "tout", "tous", "toute", "toutes", "sans", "chez", "dossier", "patient", "patiente"]);
+    const words = new Set((numericFold(question).match(/[\p{L}\p{N}]+/gu) ?? []).filter(word => word.length >= 4 && !stop.has(word)));
+    const scored = extractiveChoices.map(entry => ({
+      ...entry,
+      score: [...words].reduce((total, word) => total + (numericFold(entry.quote).includes(word) ? 1 : 0), 0),
+    })).sort((left, right) => right.score - left.score || left.order - right.order);
+    const selected = scored.filter(entry => entry.score > 0).slice(0, 3);
+    const pool = selected.length ? selected : scored.slice(0, 1);
+    const sentences: Extract<AlexaEvent, { type: "sentence" }>[] = [];
+    for (const entry of pool) {
+      const quote = knowledgeExcerptForSpeech(entry.quote);
+      if (quote === null) continue;
+      sentences.push({
+        type: "sentence",
+        text: knowledgeSynthesisCopy[locale].quote(quote),
+        kind: "knowledge",
+        sources: [{ ...knowledgeSource(entry.proof), excerpt: quote }],
+      });
+    }
+    if (!sentences.length) return null;
+    if (options.compact) {
+      const sources = new Map<string, AlexaSource>();
+      for (const source of sentences.flatMap(sentence => sentence.sources)) {
+        const previous = sources.get(source.id);
+        const excerpts = [...new Set([previous?.excerpt, source.excerpt].filter((value): value is string => !!value))];
+        sources.set(source.id, { ...source, ...(excerpts.length ? { excerpt: excerpts.join("\n\n") } : {}) });
+      }
+      return [{ type: "sentence", text: sentences.map(sentence => sentence.text).join(" "), kind: "knowledge", sources: [...sources.values()] }];
+    }
+    return sentences;
+  };
+  const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty"]);
   const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "criteria-selection" | "unsafe-text" | "quote" | "quote-span" | "quote-polarity" | "unicode-number" | "number" | "quantity" | "citation" | "source-title" | "size" | "parse" = "parse") => {
     console.warn("[alexa-knowledge] source-fallback", reason);
+    if (EXTRACTIVE_REASONS.has(reason)) {
+      const extracted = extractiveFallback();
+      if (extracted) return extracted;
+    }
     if(options.compact)return [{type:'sentence' as const,text:knowledgeSynthesisCopy.fr.compactUnavailable,kind:'knowledge' as const,sources:isIssuedKnowledgeResult(result)?result.preuves.map(p=>knowledgeSource(p)):[]}];
     return [message(knowledgeSynthesisCopy[locale].unavailable), ...knowledgeResponseEvents(result, language)];
   };
+  if (isIssuedKnowledgeResult(result) && isKnowledgeLocationQuestion(question)) {
+    return knowledgeResponseEvents(result, language, false, [], question);
+  }
   const messages = knowledgeMessages(result, taskFor(question), locale, focusFor(question));
   if (!messages || classerCharge(messages, { transformId: ALEXA_KNOWLEDGE_TRANSFORM }).decision !== "AUTORISER")
     return options.compact?(result.etat!=='ok'?knowledgeResponseEvents(result,language):fallback('coverage')):knowledgeResponseEvents(result, language);
@@ -100,6 +142,11 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     const allowedQuoteIds=quotes.flatMap((text,i)=>(!extractiveCriteria||isRequestedCriteriaProof(proof))&&!headingOnlyEvidence(text,proof.section)&&(!bibliographyEvidence(proof.section)||bibliographyRequested(question))&&(!medications.length||medications.some(name=>requestedMedicationNames(text).includes(name)))?['q'+(i+1)]:[]);
     return {index:index+1,quotes,allowedQuoteIds};
   });
+  extractiveChoices = choices.flatMap((row, index) => row.allowedQuoteIds.flatMap(id => {
+    const quote = row.quotes[Number(id.slice(1)) - 1];
+    const proof = result.preuves[index];
+    return quote && proof ? [{ proof, quote, order: index * 100 + Number(id.slice(1)) }] : [];
+  }));
   const omittedQuotes=options.compact&&choices.some((row,index)=>fold(row.quotes.join(' '))!==fold(result.preuves[index]!.extrait));
   if(omittedQuotes)return fallback('coverage');
   if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length)){
@@ -246,3 +293,4 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     return fallback(error instanceof SyntaxError?'parse':error instanceof z.ZodError?'schema':'provider');
   }
 }
+

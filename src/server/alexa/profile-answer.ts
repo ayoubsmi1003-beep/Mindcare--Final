@@ -7,7 +7,7 @@ type Field=keyof typeof alexaRecordCopy.fr.profile|'age'|'name';
 function requestedProfileFields(question:string):Field[]|null{
  const copy=alexaRecordCopy.fr,requested=new Set<Field>(),plain=question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
  const emergencyRequested=/\burgence|personne a (?:contacter|prevenir)\b/u.test(plain);
- if(/\b(?:nom|prenom|nom complet|identite complete)\b/u.test(plain)&&/\b(?:patient\s+(?:selectionne\w*|courant)|(?:ce|cette)\s+patient(?:e)?|dossier\s+(?:ouvert|courant|actif)|son dossier)\b/u.test(plain))requested.add('name');
+ if(/\b(?:nom|prenom|nom complet|identite complete)\b/u.test(plain)&&/\b(?:patient\s+(?:selectionne\w*|courant)|(?:ce|cette)\s+patient(?:e)?|dossier\s+(?:actuellement\s+)?(?:ouvert|courant|actif)|son dossier)\b/u.test(plain))requested.add('name');
  if(emergencyRequested)requested.add('emergency_contact');
  if(/\b(?:telephones?|tel|mobiles?|portables?)\b/u.test(plain)&&(!emergencyRequested||/\bet\b/u.test(plain))){
   if(/\bsecondaire|autre numero|deuxieme numero\b/u.test(plain))requested.add('phone_alt');
@@ -25,8 +25,9 @@ function requestedProfileFields(question:string):Field[]|null{
  if(/\bnumero (?:de|du) dossier|\breference (?:de|du) dossier\b/u.test(plain))requested.add('record_number');
  if(/\bnotes? administrati\w*\b/u.test(plain))requested.add('notes_admin');
  if(/\b(?:statuts?|actifs?|actives?|archive\w*)\b/u.test(plain))requested.add('is_active');
- const broad=/\b(?:toutes? les informations|fiches?|profils?|(?:informations|donnees|renseignements) (?:administrati\w*|generales)|dossier administratif(?: complet)?)\b/u.test(plain);
- return broad?Object.keys(copy.profile) as (keyof typeof copy.profile)[]:requested.size?[...requested]:null;
+ const broad=/\b(?:toutes? les informations|fiches?|profils?|(?:informations|donnees|renseignements) (?:administrati\w*|generales)|dossier administratif(?: complet)?)\b/u.test(plain)||/^(?:(?:alexa|assistant)[, :]+)?(?:localise|ouvre|affiche|montre|presente)\b/u.test(plain)||/^(?:pardon|non|excusez?[- ]moi)\b[^.!?]{0,40}\b(?:c'est|je voulais|plut[oô]t)\b/u.test(plain);
+ const missingAdministrative=/\b(?:champs?|informations?|donnees?|renseignements?)\b[^.!?]{0,80}\b(?:administrati\w*)\b[^.!?]{0,80}\b(?:manqu\w*|incomplet\w*|absent\w*|non\s+renseigne\w*)\b|\b(?:champs?|informations?|donnees?)\b[^.!?]{0,80}\b(?:manqu\w*|incomplet\w*|absent\w*)\b[^.!?]{0,80}\badministrati\w*/u.test(plain);
+ return broad||missingAdministrative?Object.keys(copy.profile) as (keyof typeof copy.profile)[]:requested.size?[...requested]:null;
 }
 export const profileNeedsClarification=(question:string):boolean=>requestedProfileFields(question)===null;
 export function profileAnswer(p:z.infer<typeof patientProfileSchema>,question:string,asOf:string):string{

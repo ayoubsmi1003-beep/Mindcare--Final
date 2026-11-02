@@ -1,6 +1,6 @@
 import { jetoniser } from "@/server/knowledge/rerank";
 import { medicationNames } from "@/shared/alexa/medications";
-import {knowledgeComparisonRequested} from './knowledge-evidence-content';
+import {knowledgeComparisonRequested,requestedMedicationNames} from './knowledge-evidence-content';
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -168,6 +168,14 @@ function normalize(text: string): string {
   return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/[’‘]/gu, "'").trim()
     .replace(/[٠-٩]/gu, digit => String(digit.charCodeAt(0) - 0x0660))
     .replace(/[۰-۹]/gu, digit => String(digit.charCodeAt(0) - 0x06f0)).replace(/٫/gu, ".");
+}
+
+/** Explicit source-location requests can be answered from a verified section/page pair. */
+export function isKnowledgeLocationQuestion(question: string): boolean {
+  const text = normalize(question);
+  return /\b(?:dans\s+)?quel(?:le|s)?\s+(?:partie|section|rubrique|chapitre|page)s?\b/u.test(text)
+    || /\b(?:ou|a)\s+(?:trouver|trouve|se\s+trouve|se\s+situe)\b/u.test(text)
+    || /\bwhere\s+(?:in|can\s+i\s+find|do\s+i\s+find)\b|\bwhich\s+(?:part|section|chapter|page)\b/u.test(text);
 }
 
 /** Local query planning only. SQL still decides approval, lifecycle and access. */
@@ -364,12 +372,24 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     [/\bschizophrenie\b/u,'schizophrenie'],
     [/\banxiete generalisee\b/u,'anxiete generalisee'],
     [/\b(?:trouble obsessionnel[- ]compulsif|toc)\b/u,'trouble obsessionnel-compulsif'],
+    [/\bagoraphobie\b/u,'agoraphobie'],
     [/\bstress post[- ]traumatique\b/u,'trouble stress post-traumatique'],
     [/\bdysphorique premenstruel\b/u,'trouble dysphorique premenstruel'],
     [/\b(?:trouble lie a l[’']usage|trouble de l[’']usage|usage d[’']une substance)\b/u,"troubles de l'usage d'une substance"],
   ];
   const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
-  const sectionFocus=book?.language==='fr'&&!comparison?recognizedFocuses[0]:undefined;
+  const locationRequest=isKnowledgeLocationQuestion(question)||/\b(?:localise|localiser|retrouve|trouve)\b[^.!?]{0,100}\b(?:passage|section|chapitre|page)\b/u.test(normalized)||/\blocalise\w*\b/u.test(normalized)||/\bou\s+est\s+(?:decrit|decrite|mentionne|mentionnee)\b/u.test(normalized);
+  const focusedContent=recognizedFocuses[0]==='trouble depressif caracterise';
+  const drugLocationFocus=locationRequest&&requestedMedicationNames(question).length>0&&!/\b(?:renal\w*|rein\w*|kidney\w*|hematolog\w*|neutrophil\w*|qt)\b/u.test(normalized)
+    ? (/\b(?:mecanism\w*|agit|action\w*|fonctionn\w*)\b/u.test(normalized)?'how the drug works'
+      :/\b(?:posologie|dose)\b/u.test(normalized)?'dosing tips'
+        :/\b(?:cutan\w*|rash|grav\w*)\b/u.test(normalized)?'life-threatening or dangerous side effects'
+          :/\b(?:metaboliqu\w*|poids|glycemie|diabete|moteur\w*|parkinson\w*|extrapyramid\w*)\b/u.test(normalized)?'notable side effects'
+            :/\b(?:precaution\w*|mise en garde|avertissement\w*)\b/u.test(normalized)?'other warnings/precautions'
+              :/\b(?:examens?|surveillance|bilan|tests?)\b/u.test(normalized)&&!/\b(?:hematolog|renal|rein)\b/u.test(normalized)?'tests'
+                :undefined)
+    : undefined;
+  const sectionFocus=drugLocationFocus??(!comparison&&requestedMedicationNames(question).length===0&&(book?.language==='fr'||(!book&&(locationRequest||focusedContent)))?recognizedFocuses[0]:undefined);
   const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
   // Aucun livre nommé + entité diagnostique reconnue : on AJOUTE les requêtes
   // de rubrique (concept + « critères diagnostiques ») SANS poser
@@ -386,11 +406,20 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       }
     }
   }
+  if (drugLocationFocus) {
+    const medication = requestedMedicationNames(question)[0];
+    const requete = medication ? `${medication} ${drugLocationFocus}` : drugLocationFocus;
+    if (!queries.includes(requete)) {
+      queries.push(requete);
+      references.push(requete);
+    }
+  }
   // These two approved chapters contain their criteria directly under the topic heading.
   const embeddedCriteria=sectionFocus==='anxiete generalisee'||sectionFocus==='trouble obsessionnel-compulsif';
   // DSM substance criteria live at this topic heading without an A/B marker structure.
   const criteriaAtTopicSection=embeddedCriteria||sectionFocus==="troubles de l'usage d'une substance";
-  const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized),descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
+  const thresholdRequested=/\b(?:seuils?|duree|combien de temps|minimum temporel|periode minimale)\b/u.test(normalized);
+ const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized)||thresholdRequested,descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const symptomFamiliesRequested=/\b(?:familles|groupes) de symptomes\b/u.test(normalized);
   const sectionLeaf = sectionFocus ? criteriaAtTopicSection&&(criteriaRequested||descriptionRequested)?sectionFocus:!criteriaAtTopicSection&&criteriaRequested&&!symptomFamiliesRequested?'criteres diagnostiques':!criteriaAtTopicSection&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
   // Indice de feuille pour un livre NON nommé : même logique, sans filtre.

@@ -9,6 +9,25 @@ afterEach(()=>{vi.mocked(summarizeClinicalContext).mockReset();vi.mocked(summari
 const patient='22222222-2222-4222-8222-222222222222',record='33333333-3333-4333-8333-333333333333';
 const input={text:'Affiche les informations demandées.',conversationId:'all-app-reads',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:patient,page:'/patients/'+patient}};
 const asOf='2026-10-15T12:00:00.000Z';
+it('anchors the next appointment on the supplied asOf through the agenda gate',async()=>{
+ const starts='2026-10-16T09:00:00+01:00',ends='2026-10-16T09:30:00+01:00';
+ const rpc=scriptedAlexaRpc(async(name,args)=>{
+  if(name==='query_alexa_records'){
+   expect(args).toMatchObject({p_as_of:asOf,p_domain:'agenda'});
+   const spec=JSON.parse(String(args.p_spec));
+   expect(spec).toMatchObject({patientId:patient,from:asOf});
+   expect(Date.parse(spec.to)-Date.parse(spec.from)).toBeLessThanOrEqual(366*86400000);
+   return {ok:true as const,data:[{total:1,rows:[{id:record,patientId:patient,label:'Patient fictif',at:starts,status:'confirmed',amount:null}],totals:{},complete:true,offset:0}]};
+  }
+  if(name==='get_patient')return {ok:true as const,data:[{id:patient,first_name:'Patient',last_name:'Fictif',record_number:'EVAL-1'}]};
+  if(name==='get_appointment')return {ok:true as const,data:[{id:record,patient_id:patient,starts_at:starts,ends_at:ends,status:'confirmed',source:'doctor',kind:'suivi',notes_admin:null,arrived_at:null,record_number:'EVAL-1',first_name:'Patient',last_name:'Fictif',practitioner_name:'Dr Fictif'}]};
+  throw Error(name);
+ });
+ const result=await agentExecutor({...input,text:'Quel est le prochain rendez-vous de ce patient ?'},{rpc},{rpc:vi.fn()})({id:'next',name:'query_agenda',args:{partIds:['n'],patientId:patient}},asOf,[],new AbortController().signal);
+ expect(result).toMatchObject({status:'ok',complete:true,data:{id:record,starts_at:starts}});
+ expect(result.evidence.some(source=>source.provenance?.gate==='query_alexa_records')).toBe(true);
+});
+
 it('answers a complete consultation count naturally without a fictitious empty-page range',async()=>{
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:26,rows:[],totals:{},complete:true,offset:0}]});
  const result=await agentExecutor({...input,text:'Compte les consultations terminées.',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()})({id:'count',name:'query_consultations',args:{partIds:['c'],mode:'count',status:'closed'}},asOf,[],new AbortController().signal);

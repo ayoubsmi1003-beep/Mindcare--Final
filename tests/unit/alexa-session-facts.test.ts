@@ -12,7 +12,7 @@ function fixture(text:string,options:{oneVisit?:boolean;nextAppointment?:boolean
  const rpc=scriptedAlexaRpc(async(name,args)=>{
   if(name==='get_patient')return {ok:true as const,data:[{id:patient}]};
   if(name==='get_alexa_clinical_context'){const rows=options.oneVisit?visits.slice(0,1):visits;return {ok:true as const,data:[{patientId:patient,consultations:rows,treatments:{current:[treatment],history:[change],historyComplete:true},diagnoses:[],scales:options.scales??[],sourceRevision:'a'.repeat(64),coverage:{requested:args.p_limit,returned:rows.length,hasMore:false,complete:true}}]};}
-  if(name==='get_patient_workspace')return {ok:true as const,data:[{identite:{id:patient},agenda:{prochain_rendez_vous:options.nextAppointment?{id:latest}:null}}]};
+  if(name==='query_alexa_records')return {ok:true as const,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]};
   if(name==='query_alexa_note_sections'){const spec=JSON.parse(String(args.p_spec)) as {consultationId?:string};const id=spec.consultationId??previous;const selected=visits.find(item=>item.id===id)??visits[1]!;return {ok:true as const,data:[{patientId:patient,total:1,revision:'a'.repeat(32),complete:true,rows:[{consultationId:id,startedAt:selected.startedAt,consultationStatus:'closed',sourceId:id,area:'subjective',status:'draft',version:'1',signedAt:null,aiDraft:false,reason:null,text:'Les difficultés familiales persistent.',textLength:38,textOffset:0}]}]};}
   throw Error('UnexpectedGate '+name);
  });
@@ -59,8 +59,8 @@ it('answers scale questions with the recorded values and interpretation',async()
  expect(result.text.match(/Consultation du/gu)).toHaveLength(2);
  expect(result.evidence.filter(e=>e.type==='scale')).toHaveLength(3);
 });
-it('reports a genuinely missing next appointment from the authorized workspace instead of asking for a date',async()=>{
+it('reports a genuinely missing next appointment from the authorized agenda gate instead of asking for a date',async()=>{
  const f=fixture('Quand est son prochain rendez-vous ?');
  const result=await f.execute({id:'next',name:'query_agenda',args:{partIds:['next']}},'2026-10-22T12:00:00Z',[],new AbortController().signal);
- expect(result.complete).toBe(true);expect(result.text).toMatch(/aucun rendez-vous.*venir/iu);expect(f.rpc.mock.calls.some(c=>c[0]==='get_patient_workspace')).toBe(true);
+ expect(result.complete).toBe(true);expect(result.text).toMatch(/aucun rendez-vous.*venir/iu);expect(f.rpc.mock.calls.some(c=>c[0]==='query_alexa_records')).toBe(true);
 });

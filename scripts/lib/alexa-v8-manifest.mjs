@@ -18,8 +18,9 @@ export function selectV8Cases(manifest, cohort) {
 export function validateV8Target(value) {
   let target;
   try { target = new URL(value); } catch { throw new Error('Disposable evaluation database required'); }
+  const actionTarget = process.env.ALEXA_EVAL_EXECUTE_ACTIONS === '1' && target.pathname === '/alexa_eval_v9_actions_20261031';
   if (!['postgres:', 'postgresql:'].includes(target.protocol) || target.hostname !== '127.0.0.1' ||
-      target.port !== '55445' || target.pathname !== '/alexa_eval_v8_intelligence_20261027' || target.search || target.hash) {
+      target.port !== '55445' || (!actionTarget && target.pathname !== '/alexa_eval_v8_intelligence_20261027') || target.search || target.hash) {
     throw new Error('Disposable evaluation database required');
   }
 }
@@ -58,7 +59,8 @@ export function resolveV8CampaignDatabaseUrls(env) {
 }
 
 export function validateBookRagSource(value) {
-  if (!value || value.database !== 'alexa_eval_v8_intelligence_20261027' ||
+  const actionDatabase = process.env.ALEXA_EVAL_EXECUTE_ACTIONS === '1' && value?.database === 'alexa_eval_v9_actions_20261031';
+  if (!value || (!actionDatabase && value.database !== 'alexa_eval_v8_intelligence_20261027') ||
       Number(value.patients) !== 1558 || Number(value.consultations) !== 8143 ||
       Number(value.nonSynthetic) !== 0) {
     throw new Error('Verified V8 synthetic evaluation snapshot required');
@@ -97,7 +99,10 @@ function compareMigrationVersions(left, right) {
   return leftNumber - rightNumber || left.localeCompare(right);
 }
 
-/** Refuse live evaluation against a migration registry that differs from this checkout. */
+/**
+ * Refuse live evaluation against a migration registry that differs from this checkout.
+ * @param {{repositoryVersions: string[], appliedVersions: string[], acknowledgedHistoricalVersions?: string[]}} [options]
+ */
 export function validateV8MigrationInventory({ repositoryVersions, appliedVersions, acknowledgedHistoricalVersions = [] } = {}) {
   const asSet = (values, allowEmpty = false) => {
     if (!Array.isArray(values) || (!allowEmpty && !values.length) || values.some(value =>

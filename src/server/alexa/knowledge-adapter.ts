@@ -12,7 +12,7 @@ import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-s
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { recetteSecondaireGelee } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { matchesLeafHint, matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
+import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
@@ -620,14 +620,26 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       trace.fallbacks.push("section-leaf-retry");
       return readKnowledge(client, question, signal, deps, { ...options, relaxerFeuille: true });
     }
-    const result = { etat: finales.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
+    const preuvesAffichables = finales.map(preuve => preuveAffichable(preuve));
+    const locationSupported = isKnowledgeLocationQuestion(question)
+      && preuvesAffichables.some(proof => {
+        if (!proof.section || !proof.page) return false;
+        if (plan.sourceTitle && normaliserTexte(proof.titre) !== normaliserTexte(plan.sourceTitle)) return false;
+        if (plan.sectionLeaf && matchesLeafHint(proof.section, plan.sectionLeaf)) return true;
+        if (plan.sectionFocus && matchesSectionFocus(proof.section, plan.sectionFocus)) return true;
+        if (plan.sectionFocuses?.length) return plan.sectionFocuses.some(focus => matchesSectionFocus(proof.section, focus));
+        return true;
+      });
+    const etat = finales.length === 0 ? "sans-preuve" as const
+      : issue === "faible" && !locationSupported ? "faible" as const : "ok" as const;
+    const result = { etat,
       ...(plan.sectionFocuses?.some(focus=>!finales.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
       ...(!vectorielIndisponible && vectorielNonCalibre ? { vectoriel: "non-calibre" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),
       ...(options.relaxerFeuille === true ? { sectionLeafRelaxed: true as const } : {}),
-      preuves: finales.map(p => preuveAffichable(p)) };
+      preuves: preuvesAffichables };
     if (omittedLongPassages) trace.fallbacks.push("oversized-evidence-omitted");
     if (options.relaxerFeuille === true) trace.fallbacks.push("section-leaf-relaxed");
     trace.evidence.selected = result.preuves.length;

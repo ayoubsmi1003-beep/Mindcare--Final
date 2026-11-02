@@ -283,7 +283,7 @@ export async function prepareActionProposal(
     if (tool === "create_appointment" || tool === "reschedule_appointment") {
       const clockTime=explicitAlgerianClockTime(text);
       if (!clockTime) return { state: "missing", slot: "date" };
-      const explicitDay = /\d{4}-\d{2}-\d{2}|aujourd|demain|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche/u.test(text);
+      const explicitDay = /\d{4}-\d{2}-\d{2}|\d{1,2}(?:er)?\s+(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre)\s+(?:19|20)\d{2}|aujourd|demain|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche/u.test(text);
       if (!explicitDay) return { state: "missing", slot: "date" };
       const startsAt = `${selection.day}T${clockTime}:00+01:00`;
       if (tool === "create_appointment") {

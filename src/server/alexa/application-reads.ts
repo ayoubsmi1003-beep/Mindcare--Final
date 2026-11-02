@@ -14,9 +14,10 @@ function result(callId:string,data:unknown,lines:string[],gate:string):AgentResu
 export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal,options:{asOf?:string;offset?:number;revision?:string;query?:string;day?:string;queue?:string}={}):Promise<AgentResult>{
  if(view==='medication_catalog'){
   if(!options.query||options.query.trim().length<2)throw new AgentReadError('malformed');
-  const rows=z.array(z.object({id:z.string().max(200),raw_name:z.string().max(500),inn:z.string().max(300),brand_name:text,form:text,strength:text,source:z.string().max(300)})).max(20).parse(await rpc('search_medications',{p_query:options.query,p_limit:20},signal));
+  const rows=z.array(z.object({id:z.string().max(200),raw_name:z.string().max(500),inn:z.string().max(300),brand_name:text,form:text,strength:text,source:z.string().max(300)})).max(50).parse(await rpc('search_medications',{p_query:options.query,p_limit:50},signal));
   const r=result(callId,{rows,query:options.query},rows.length?rows.map(row=>copy.extended.medication(row.raw_name,row.inn,row.form,row.strength)): [copy.extended.empty],'search_medications');
-  r.complete=rows.length<20;r.status=rows.length===20?'partial':rows.length?'ok':'empty';if(!r.complete)r.text+=' '+copy.extended.catalogueLimit;return r;
+  r.evidence=[{id:callId,type:'query',label:'search_medications',provenance:{gate:'search_medications'}},...rows.map(row=>({id:row.id,type:'query' as const,label:row.raw_name}))];
+  r.complete=rows.length<50;r.status=rows.length===50?'partial':rows.length?'ok':'empty';if(!r.complete)r.text+=' '+copy.extended.catalogueLimit;return r;
  }
  if(view==='reception'){
   const day=options.day??aujourdHuiCabinet(new Date(options.asOf!)),queue=options.queue??'all';
@@ -74,6 +75,7 @@ export async function readFinanceView(callId:string,mode:string,from:string,to:s
   copy.period(du,au),copy.chargePopulation,`${labels.total_recurrent_mensuel} : ${value.total_recurrent_mensuel} DZD`,`${labels.total_ponctuel_periode} : ${value.total_ponctuel_periode} DZD`,
   ...rows.map(row=>`${row.intitule} — ${row.categorie} — ${row.montant} DZD — ${row.type}${row.frequence?' / '+row.frequence:''} — ${row.date_charge}${row.date_prochaine_echeance?copy.finance.deadline+row.date_prochaine_echeance:''}`),
   ...(!complete?[copy.page(offset+1,offset+rows.length,matching.length)]:[])],gate);
+ r.evidence=[...r.evidence,...rows.map(row=>({id:row.id,type:'query' as const,label:row.intitule}))];
  r.complete=complete;r.status=complete?(matching.length?'ok':'empty'):'partial';return r;
 }
 function readFinancePanel(callId:string,mode:string,du:string,au:string,offset:number,raw:unknown,revision?:string):AgentResult{
@@ -83,7 +85,8 @@ function readFinancePanel(callId:string,mode:string,du:string,au:string,offset:n
  if(mode==='composition'){
   const part=z.object({cle:z.string().max(100),libelle:z.string().max(200),montant:amount,part_pct:z.number().min(0).max(100)});
   const value=z.object({composition:z.object({revenus_par_type:z.array(part.extend({nb_seances:amount})).max(100),charges_par_categorie:z.array(part).max(100)})}).parse(raw);
-  return result(callId,{...period,...value},[copy.period(du,au),f.amounts,f.revenueTypes,...value.composition.revenus_par_type.map(r=>f.typeName(r.libelle)+' — '+r.montant+copy.currency+' — '+r.nb_seances+' '+f.sessions+' — '+r.part_pct+' %'),f.chargeCategories,...value.composition.charges_par_categorie.map(r=>f.typeName(r.libelle)+' — '+r.montant+copy.currency+' — '+r.part_pct+' %')],gate);
+  const totalCharges=value.composition.charges_par_categorie.reduce((total,row)=>total+row.montant,0);
+  return result(callId,{...period,...value,total_charges:totalCharges},[copy.period(du,au),`${labels['charges_periode']??'Charges'} : ${totalCharges} DZD`,f.amounts,f.revenueTypes,...value.composition.revenus_par_type.map(r=>f.typeName(r.libelle)+' — '+r.montant+copy.currency+' — '+r.nb_seances+' '+f.sessions+' — '+r.part_pct+' %'),f.chargeCategories,...value.composition.charges_par_categorie.map(r=>f.typeName(r.libelle)+' — '+r.montant+copy.currency+' — '+r.part_pct+' %')],gate);
  }
  if(mode==='evolution'){
   const value=z.object({evolution:z.array(z.object({mois_label:z.string().max(80),mois_iso:z.string().regex(/^\d{4}-\d{2}$/),revenu:amount,charges:amount,resultat_net:money})).length(6)}).parse(raw);

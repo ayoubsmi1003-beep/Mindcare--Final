@@ -140,7 +140,7 @@ export async function executeV8AdversarialCampaign({
   clock = () => new Date().toISOString(),
 } = {}) {
   requireInput(manifest && manifest.version === 1 && manifest.campaign === CAMPAIGN &&
-    Array.isArray(manifest.cases) && manifest.cases.length >= 1 && manifest.cases.length <= 250,
+    Array.isArray(manifest.cases) && manifest.cases.length >= 1 && manifest.cases.length <= 300,
   "Invalid V8 adversarial manifest");
   requireInput(typeof manifestSha256 === "string" && initialProgress?.manifestSha256 === manifestSha256,
     "Adversarial manifest digest mismatch");

@@ -45,6 +45,58 @@ describe("Alexa V8 runtime knowledge trace capture", () => {
     expect(unrelated).toHaveBeenCalledWith("unrelated local diagnostic", "content-free");
   });
 
+  it("executes a direct readKnowledge call and returns only its direct trace", async () => {
+    const api = await loadTurnRunner();
+    expect(api).not.toBeNull();
+    expect(api?.runAlexaV8DirectKnowledge).toBeTypeOf("function");
+    if (!api || typeof api.runAlexaV8DirectKnowledge !== "function") return;
+
+    const sql = { marker: "synthetic-sql-client" };
+    const readKnowledge = vi.fn(async (_client: unknown, _question: string, _signal: unknown, _deps: unknown, options: { traceOrigin: string }) => {
+      console.info("[alexa-knowledge-execution]", JSON.stringify({
+        origin: options.traceOrigin,
+        recipe: "e5-small",
+        configuredRecipe: "e5-small",
+        model: { embedding: "intfloat/multilingual-e5-small", dimensions: 384, reranker: null, rerankerVersion: null },
+        lexical: { gate: "search_knowledge_lexical", calls: 1, rows: 1 },
+        embedding: { invoked: true, status: "ok", outputDimensions: 384 },
+        vector: { invoked: true, gate: "search_knowledge_vector_v2", rows: 1, status: "ok" },
+        reranker: { mode: "heuristic-baseline", invocations: 0, fallback: false },
+        evidence: { selected: 1, pages: 1 },
+        fallbacks: [],
+        result: "ok",
+      }));
+      return {
+        etat: "ok",
+        preuves: [{
+          titre: "Synthetic book",
+          section: "Chapter X",
+          version: "v1",
+          extrait: "private source excerpt",
+          page: { pageImprimee: 17, pagePdf: null, libelle: "p. 17" },
+        }],
+      };
+    });
+    const runtime = { clientSql: vi.fn(() => sql), readKnowledge };
+
+    const observation = await api.runAlexaV8DirectKnowledge({
+      api: runtime,
+      actor: "synthetic-actor",
+      question: "Question synthétique",
+      signal: AbortSignal.timeout(1000),
+    });
+
+    expect(runtime.clientSql).toHaveBeenCalledWith("synthetic-actor");
+    expect(readKnowledge).toHaveBeenCalledWith(sql, "Question synthétique", expect.any(AbortSignal), undefined, { traceOrigin: "direct" });
+    expect(observation.knowledgeTraces).toMatchObject([{ origin: "direct", recipe: "e5-small", embedding: { invoked: true, status: "ok" } }]);
+    expect(observation.evidenceSummary).toEqual({
+      state: "ok",
+      sourceCount: 1,
+      sources: [{ title: "Synthetic book", version: "v1", section: "Chapter X", page: "p. 17", excerptUtf8Bytes: 22 }],
+    });
+    expect(JSON.stringify(observation)).not.toContain("private source excerpt");
+  });
+
   it("restores the logger when a captured turn throws", async () => {
     const api = await loadCapture();
     expect(api).not.toBeNull();

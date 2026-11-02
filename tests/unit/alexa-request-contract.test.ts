@@ -1,6 +1,7 @@
-import {expect,it} from 'vitest';
+﻿import {expect,it} from 'vitest';
 import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,explicitFrenchDayRange,explicitFrenchDateRange,frenchPatientCompoundContract,frenchPatientCountContract,frenchReadArgumentBindings,frenchRequestAdmission,frenchRequestedOutputs,isFrenchAlexaCapabilityQuestion,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
 import {parsePatientMention} from '@/shared/alexa/patient-mention';
+import {patientQueryContract} from '@/shared/alexa/patient-query-contract';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
 it.each([
@@ -14,6 +15,15 @@ it.each([
  ['Peux-tu cesser le traitement de Lina Test ?','stop_treatment'],
 ])('admits explicit French medication mutations through the confirmed action tool: %s',(text,preparationAction)=>{
  expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['prepare_action'],preparationAction});
+});
+it.each([
+  ['Ajoute pour islam adjina une consultation le 4 novembre 2026 à 10 h, durée 30 minutes.', 'create_appointment', 'islam adjina'],
+  ['Place islam adjina sur le créneau déjà occupé sélectionné.', 'create_appointment', 'islam adjina'],
+  ['Pour samiha ferhat, prévois une consultation le 6 novembre 2026.', 'create_appointment', 'samiha ferhat'],
+  ['Décale le rendez-vous choisi de islam adjina au 5 novembre 2026 à 11 h.', 'reschedule_appointment', 'islam adjina'],
+])('admits a lower-case synthetic patient name in an explicit action: %s', (text, preparationAction, name) => {
+  expect(parsePatientMention(text)).toEqual({ status: 'named', name });
+  expect(frenchRequestAdmission(text, false)).toMatchObject({ tools: ['prepare_action'], preparationAction });
 });
 it('leaves a count plus another read to native multi-output interpretation',()=>{
  expect(frenchPatientCountContract('Combien de patients actifs ? Lis les notes du dossier courant.')).toBeNull();
@@ -105,7 +115,7 @@ it.each([
  expect(admission).toMatchObject({tools:['query_finance'],financeMode,from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
  if(financeState)expect(admission.financeState).toBe(financeState);
 });
-it.each(['Quels patients sont attendus demain matin ?','Quels patients sont attendus demain après-midi ?'])('routes patient-attendee wording to the agenda read gate: %s',text=>{
+it.each(['Quels patients sont attendus demain matin ?','Quels patients sont attendus demain après-midi ?','Qui est attendu demain avant midi ?'])('routes patient-attendee wording to the agenda read gate: %s',text=>{
  expect(frenchRequestAdmission(text,false,'2026-10-27T09:00:00+01:00')).toMatchObject({tools:['query_agenda']});
 });
 it.each([
@@ -395,3 +405,123 @@ it('recognizes a count with a universal determiner while retaining the active sc
  expect(c?.clauses).toHaveLength(1);
  expect(constrainCountDeclaration([part([])],c!)[0]?.population).toBe('active');
 });
+it.each([
+ 'Quels seuils de symptômes et de durée faut-il vérifier pour caractériser un épisode dépressif ?',
+ 'Comment la lamotrigine agit-elle sur les canaux sodiques ?',
+ 'Quelle posologie de sertraline est proposée dans la dépression ?',
+ 'Quels effets métaboliques sont documentés pour l’olanzapine ?',
+ 'Quelle surveillance hématologique accompagne un traitement par clozapine ?',
+ 'Quel critère distingue le trouble bipolaire de type I du type II ?',
+ 'Quels groupes de symptômes structurent le tableau de stress post-traumatique ?',
+ 'Quelle cible de lithémie est recommandée en entretien ?',
+])('routes general clinical knowledge to the source gate without a book name: %s',text=>{
+ expect(frenchRequestAdmission(text,false).tools).toEqual(['search_knowledge']);
+});
+it.each([
+ 'Quels traitements sont actifs pour Lina Test ?',
+ 'Quels traitements sont actifs pour le patient sélectionné ?',
+ 'Combien de consultations terminées ce mois-ci ?',
+ 'Quel est le téléphone du cabinet ?',
+ 'Quel est le prix actuel du lithium en Algérie ?',
+ 'Combien de dossiers sont archivés ?',
+ 'Quel est le résultat net du mois en cours ?',
+])('does not send a patient-scoped, app or price question to the source gate: %s',text=>{
+ expect(frenchRequestAdmission(text,false).tools??[]).not.toContain('search_knowledge');
+});
+it.each([
+ 'Pardon, c’est samiha ferhat que je voulais.',
+ 'Non, c’est samiha ferhat.',
+ 'Je me suis trompé, remplace par samiha ferhat.',
+])('keeps the corrected patient name in a self-correction: %s',text=>{
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'samiha ferhat'});
+});
+it('keeps a dossier field lookup on the named patient instead of reading “porte” as a name',()=>{
+ expect(parsePatientMention('Quel numéro de dossier porte islam adjina ?')).toEqual({status:'named',name:'islam adjina'});
+});
+it.each([
+ 'Quels diagnostics porte actuellement islam adjina ?',
+ 'Quelles échelles islam adjina a-t-il passées ?',
+ 'Quel score le plus récent figure pour islam adjina ?',
+])('keeps a lower-case synthetic name attached to its clinical section: %s',text=>{
+ expect(parsePatientMention(text)).toEqual({status:'named',name:'islam adjina'});
+ expect(frenchRequestAdmission(text,false,'2026-10-31T12:00:00+01:00').tools).toEqual(['get_patient_context']);
+});
+it.each([
+ 'Combien de dossiers actifs ont une carte d’identité ?',
+ 'Combien de dossiers actifs sont administrativement incomplets ?',
+ 'Répartis les dossiers actifs selon la présence ou l’absence de téléphone.',
+])('routes a patient-population count without mixing in the profile reader: %s',text=>{
+ const admission=frenchRequestAdmission(text,false,'2026-10-31T12:00:00+01:00');
+ expect(admission.tools).toEqual(['query_patients']);
+ expect(admission.patientSection).toBeUndefined();
+ if(text.startsWith('Répartis')) expect(patientQueryContract(text,'2026-10-31T12:00:00+01:00').unsupported).toEqual([]);
+});
+it('counts active children when the question names the population without “patients”',()=>{
+ const contract=frenchPatientCountContract('Quel est le nombre d’enfants actifs au cabinet ?');
+ expect(contract).not.toBeNull();
+ expect(countContractParts(contract!)).toMatchObject([{population:'active',conditions:[{field:'age',op:'lt',value:18}],tools:['query_patients']}]);
+});
+it('counts active and archived dossiers together when the cabinet is the subject',()=>{
+ const contract=frenchPatientCountContract('Combien de dossiers compte le cabinet, actifs et archivés réunis ?');
+ expect(contract).not.toBeNull();
+ expect(countContractParts(contract!)).toMatchObject([{population:'all',conditions:[],tools:['query_patients']}]);
+});
+it('keeps the administrative-incomplete predicate explicit instead of rejecting it',()=>{
+ const plan=patientQueryContract('Combien de dossiers actifs sont administrativement incomplets ?','2026-10-31T12:00:00+01:00');
+ expect(plan.unsupported).toEqual([]);
+ expect(plan.filterGroups).toEqual([[{field:'administrative_incomplete',op:'eq',value:true}]]);
+});
+it.each([
+ ['Combien de patients actifs n’ont ni téléphone ni carte d’identité ?',[{field:'phone',op:'missing',value:null},{field:'identity_card',op:'missing',value:null}]],
+ ['Combien d’adultes actifs sont sans téléphone ?',[{field:'age',op:'gte',value:18},{field:'phone',op:'missing',value:null}]],
+ ['Combien d’enfants actifs sont sans carte d’identité ?',[{field:'age',op:'lt',value:18},{field:'identity_card',op:'missing',value:null}]],
+ ['Combien de patients actifs comptent trois consultations terminées ou plus ?',[{field:'completed_consultations',op:'gte',value:3}]],
+])('keeps a natural compound patient count explicit: %s',(text,conditions)=>{
+ const plan=patientQueryContract(text,'2026-10-31T12:00:00+01:00');
+ expect(plan.unsupported).toEqual([]);
+ expect(plan.filterGroups[0]).toEqual(expect.arrayContaining(conditions));
+});
+it('recognizes a present identity card stated with the verb “ont”',()=>{
+ const contract=frenchPatientCountContract('Combien de dossiers actifs ont une carte d’identité ?');
+ expect(contract).not.toBeNull();
+ expect(countContractParts(contract!)).toMatchObject([{conditions:[{field:'identity_card',op:'present',value:null}],tools:['query_patients']}]);
+});
+
+
+it('routes the next cabinet slot to the agenda read gate',()=>{
+ expect(frenchRequestAdmission('Quel est le prochain horaire disponible au cabinet ?',false,'2026-10-28T12:00:00+01:00').tools).toEqual(['query_agenda']);
+});
+
+it.each([
+ 'Donne le téléphone et l’adresse du cabinet.',
+ 'Quelle adresse professionnelle est enregistrée ?',
+])('routes cabinet contact details to the app read gate: %s',text=>{
+ expect(frenchRequestAdmission(text,false).tools).toEqual(['query_app']);
+});
+
+
+it('routes a completed-visit threshold count to the patient gate, not a consultation list',()=>{
+ expect(frenchRequestAdmission('Combien de patients actifs comptent trois consultations terminées ou plus ?',false,'2026-10-28T12:00:00+01:00').tools).toEqual(['query_patients']);
+});
+
+it('keeps the three-completed-visits count grounded without a disjunction error',()=>{
+ const c=frenchPatientCountContract('Combien de patients actifs comptent trois consultations terminées ou plus ?')!;
+ expect(c).not.toBeNull();
+ expect(()=>constrainCountDeclaration(countContractParts(c),c)).not.toThrow();
+});
+import {deterministicActionRequest} from '@/server/alexa/action-proposal';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

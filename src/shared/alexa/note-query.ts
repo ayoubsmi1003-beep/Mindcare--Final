@@ -2,7 +2,13 @@ import {z} from 'zod';
 import {parsePatientMention} from './patient-mention';
 const fold=(text:string)=>text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/\s+/gu,' ').trim();
 export const noteSearchRequested=(text:string):boolean=>/\b(?:cherch\w*|recherch\w*|(?:contien|contenan)\w*|mentionn\w*|parl\w*|propos|mots?|expressions?|phrases?)\b/u.test(fold(text));
-export const documentBodySearchRequested=(text:string):boolean=>/\b(?:documents?|certificats?|ordonnances?|justificatifs?|justifications?)\b/u.test(fold(text))&&/\b(?:(?:contien|contenan)\w*|mentionn\w*|dont (?:le )?(?:texte|contenu)|par (?:le )?contenu|parlent de)\b/u.test(fold(text));
+export const documentBodySearchRequested=(text:string):boolean=>{
+  const plain=fold(text);
+  // "Le dossier contient-il des documents ?" lists the dossier, it does not
+  // search inside document bodies.
+  if(/\bdossiers?\b[^.!?]{0,60}\bcontien\w*/u.test(plain))return false;
+  return /\b(?:documents?|certificats?|ordonnances?|justificatifs?|justifications?)\b/u.test(plain)&&/\b(?:(?:contien|contenan)\w*|mentionn\w*|dont (?:le )?(?:texte|contenu)|par (?:le )?contenu|parlent de)\b/u.test(plain);
+};
 /** Identity resolution and literal content search are separate operations. */
 export function noteQueryGrounded(text:string,query:string):boolean{
  const wanted=fold(query);if(!wanted)return true;

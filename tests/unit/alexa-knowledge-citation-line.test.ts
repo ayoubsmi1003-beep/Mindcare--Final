@@ -185,7 +185,7 @@ it("ignore la page soufflée par le modèle et ne garde que le passage source v�
     const spoken = events.filter(e => e.type === "sentence" && e.kind === "knowledge");
     expect(spoken.map(e => e.type === "sentence" ? e.text : "").join(" ")).toBe(`Passage cité : « ${PHRASE} »`);
     expect(spoken.some(e => e.type === "sentence" && e.text.includes("999"))).toBe(false);
-    expect(spoken.flatMap(e => e.type === "sentence" ? e.sources : []).map(source => source.provenance.pageImprimee)).toContain(205);
+    expect(spoken.flatMap(e => e.type === "sentence" ? e.sources : []).map(source => source.provenance?.pageImprimee)).toContain(205);
     expect(warn).not.toHaveBeenCalledWith("[alexa-knowledge] source-fallback", "number");
   } finally { warn.mockRestore(); }
 });

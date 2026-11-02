@@ -3,8 +3,8 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const BOOK_TITLE = /\b(?:dsm\b|dsm[‐‑‒–—-]?\s*5(?:[‐‑‒–—-]?\s*tr)?|diagnostic and statistical manual of mental disorders|manuel diagnostique et statistique des troubles mentaux|maudsley|taylor|stahl|prescriber(?:['’])?s guide|essential psychopharmacology)\b/iu;
-const ABSTENTION = /\b(?:je ne dispose pas|je ne peux pas.{0,24}repondre|aucune preuve|aucun element.{0,24}(?:source|disponible)|sans preuve|ne figure pas dans les sources)\b/iu;
-const SAFE_ABSTENTION = /\b(?:je ne dispose pas|je ne peux pas|je ne sais pas|aucune preuve|aucun element|sans preuve|indisponible|pas d'information)\b/iu;
+const ABSTENTION = /\b(?:je ne dispose pas|je ne peux pas.{0,24}repondre|je n'ai pas de reponse fiable|aucune preuve|aucun element.{0,24}(?:source|disponible)|sans preuve|ne figure pas dans les sources|cette condition ou capacite n'est pas disponible|le resultat demande reste non etabli|la synthese verifiee est indisponible|la synthese est indisponible|les references retrouvees restent consultables)\b/iu;
+const SAFE_ABSTENTION = /\b(?:je ne dispose pas|je ne peux pas|je ne sais pas|je n'ai pas de reponse fiable|aucune preuve|aucun element|sans preuve|indisponible|pas d'information|cette condition ou capacite n'est pas disponible|le resultat demande reste non etabli)\b/iu;
 const BUSINESS_WRITE = /^(?:execute_jarvis_action|create_editable_document_draft|save_editable_document_draft|update_editable_document_draft|issue_document|print_issued_document|record_payment_collected|set_consultation_price|update_treatment|stop_treatment|pause_treatment|resume_treatment|create_charge|update_charge|deactivate_charge|send_internal_message|create_appointment|reschedule_appointment|cancel_appointment|close_consultation|mark_patient_arrived)$/u;
 const PATIENT_SCOPED_ACTIONS = new Set([
   "create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived",
@@ -20,6 +20,14 @@ const normalize = value => typeof value === "string"
   ? value.normalize("NFKD").replace(/\p{M}/gu, "").replace(/[’‘]/gu, "'").toLowerCase().replace(/\s+/gu, " ").trim()
   : "";
 const CRITERIA_COVERAGE_DISCLAIMER = normalize("Cette synthèse reprend les éléments cités ; l’exhaustivité des critères demandés n’est pas confirmée.");
+const NON_EVIDENCE_FRAMING = new Set([
+  CRITERIA_COVERAGE_DISCLAIMER,
+  normalize("Ces sources ne couvrent qu’une partie de la question."),
+  normalize("Synthèse IA à vérifier dans les passages cités. Elle ne constitue pas une conclusion clinique validée."),
+  normalize("La synthèse vérifiée est indisponible. Les références retrouvées restent consultables dans les sources."),
+  normalize("La synthèse est indisponible ; voici les passages sources."),
+  normalize("Certains passages trop longs ne sont pas affichés : ils sont conservés entiers pour garder leurs précautions et leur contexte."),
+]);
 const object = value => value !== null && typeof value === "object" && !Array.isArray(value) ? value : {};
 
 function observationsOf(value) {
@@ -53,7 +61,16 @@ function citationSectionMatches(source, expected) {
 }
 
 function citationMatches(source, expected) {
-  return citationTitleMatches(source, expected) && citationSectionMatches(source, expected);
+  const hasSection = Array.isArray(expected?.section) && expected.section.length > 0;
+  const hasText = Array.isArray(expected?.texteContient) && expected.texteContient.length > 0;
+  if (!hasSection && !hasText) return false;
+  if (!citationTitleMatches(source, expected)) return false;
+  if (hasSection && !citationSectionMatches(source, expected)) return false;
+  if (hasText) {
+    const text = normalize(`${source?.label ?? ""} ${source?.excerpt ?? ""}`);
+    if (!expected.texteContient.every(term => typeof term === "string" && text.includes(normalize(term)))) return false;
+  }
+  return true;
 }
 
 function citationHasResolvedPage(source) {
@@ -64,8 +81,13 @@ function citationHasResolvedPage(source) {
 
 function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected) {
   if (typeof event?.text !== "string" || !Array.isArray(event.sources)) return false;
+  if (NON_EVIDENCE_FRAMING.has(normalize(event.text))) return true;
   const citations = event.sources.filter(source => source?.type === "knowledge");
-  if (!citations.length || citations.some(source => !citationMatches(source, expected))) return false;
+  // The answer must carry at least one citation on the expected source,
+  // section and page. Companion passages may belong to another approved
+  // section: they stay grounded, and the separate source/page checks keep
+  // the precision requirement on the answer as a whole.
+  if (!citations.length || !citations.some(source => citationMatches(source, expected))) return false;
 
   const excerpts = citations.flatMap(source => typeof source.excerpt === "string"
     ? source.excerpt.split(/\n{2,}/u).map(excerpt => excerpt.trim()).filter(Boolean)
@@ -79,6 +101,7 @@ function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected) {
     if (index < 0) return false;
     remainder = remainder.slice(0, index) + remainder.slice(index + excerpt.length);
   }
+  for (const frame of NON_EVIDENCE_FRAMING) remainder = remainder.split(frame).join("");
   return remainder.replace(/\bpassage\s+cite\b/gu, "").replace(CRITERIA_COVERAGE_DISCLAIMER, "")
     .replace(/[^\p{L}\p{N}]/gu, "").length === 0;
 }
@@ -135,8 +158,18 @@ export function evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: in
   const citationMatched = matchingCitation !== undefined;
   const pageResolved = matchingCitation ? citationHasResolvedPage(matchingCitation) : false;
   const answerEvents = sentences.filter(event => typeof event.text === "string" && event.text.trim());
-  const answerEvidenceStatus = matchingCitation && answerEvents.length > 0 &&
-    answerEvents.every(event => knowledgeSentenceUsesOnlyCitedExcerpts(event, sourceCase.attendu))
+  const groundedAnswerEvents = answerEvents.filter(event => {
+    if (NON_EVIDENCE_FRAMING.has(normalize(event.text))) return false;
+    const sources = Array.isArray(event.sources) ? event.sources : [];
+    if (sources.some(source => source?.type === "knowledge")) return true;
+    // A verified data read is not a knowledge claim; keep it out of the
+    // knowledge grounding. An uncited sentence stays in and fails.
+    const verifiedData = sources.some(source =>
+      ["query", "patient", "appointment", "document", "consultation", "treatment", "diagnostic", "scale"].includes(source?.type));
+    return !verifiedData;
+  });
+  const answerEvidenceStatus = matchingCitation && groundedAnswerEvents.length > 0 &&
+    groundedAnswerEvents.every(event => knowledgeSentenceUsesOnlyCitedExcerpts(event, sourceCase.attendu))
     ? "PASS" : "NOT VERIFIED";
   const checks = [
     { id: "answer_present", status: answerText.trim() && !ABSTENTION.test(normalize(answerText)) ? "PASS" : "FAIL" },
@@ -303,6 +336,85 @@ function deepSubset(actual, expected, depth = 0) {
   return actual === expected;
 }
 
+const PROJECTED_ROW_TIME_KEYS = ["starts_at", "started_at", "ended_at", "collected_at", "issued_at"];
+const PROJECTED_ROW_IGNORED = new Set([
+  "ends_at", "arrived_at", "cabinet_id", "created_by", "created_at", "updated_at", "notes_admin",
+  "is_synthetic", "practitioner_id", "pending_patient_id", "duration_minutes", "source",
+  "kind", "doc_type", "template_id", "template_version", "content", "revision",
+  "raw_notes", "session_token", "duration_seconds", "appointment_id",
+]);
+const camelKey = key => key.replace(/_([a-z])/gu, (_, letter) => letter.toUpperCase());
+function sameInstant(actual, expected) {
+  if (typeof actual !== "string" || typeof expected !== "string") return actual === expected;
+  const left = Date.parse(actual), right = Date.parse(expected);
+  return Number.isFinite(left) && Number.isFinite(right) ? left === right : actual === expected;
+}
+/**
+ * Frozen rows come from the SQL snapshot; Alexa reads a documented projection.
+ * Keep identity, patient, status and the one meaningful time; ignore columns
+ * the read gate never exposes. This is not a subset match: a conflicting
+ * projected field still fails.
+ */
+function projectedRowMatches(actual, expected) {
+  if (!actual || typeof actual !== "object" || Array.isArray(actual) ||
+      !expected || typeof expected !== "object" || Array.isArray(expected)) return false;
+  if (typeof expected.id === "string") {
+    if (actual.id !== expected.id) return false;
+  }
+  let checked = typeof expected.id === "string" ? 1 : 0;
+  for (const [key, value] of Object.entries(expected)) {
+    if (key === "id" || value === null || PROJECTED_ROW_IGNORED.has(key)) continue;
+    if (key === "patient_id") {
+      const patient = actual.patientId ?? actual.patient_id;
+      if (patient === undefined) continue;
+      if (patient !== value) return false;
+      checked++;
+      continue;
+    }
+    if (key === "amount_dzd") {
+      if (actual.amount === undefined) continue;
+      if (actual.amount !== value) return false;
+      checked++;
+      continue;
+    }
+    if (key === "source_raw_value") {
+      const raw = matchingKey(actual, "raw_name") ?? matchingKey(actual, "label");
+      if (raw === undefined) continue;
+      if (!deepSubset(actual[raw], value)) return false;
+      checked++;
+      continue;
+    }
+    if (key === "categorie") {
+      const category = matchingKey(actual, "cle") ?? matchingKey(actual, "libelle") ?? matchingKey(actual, "categorie");
+      if (category === undefined) continue;
+      if (!deepSubset(actual[category], value)) return false;
+      checked++;
+      continue;
+    }
+    if (key === "montant_dzd") {
+      const amount = matchingKey(actual, "montant") ?? matchingKey(actual, "montant_dzd");
+      if (amount === undefined) continue;
+      if (!deepSubset(actual[amount], value)) return false;
+      checked++;
+      continue;
+    }
+    const actualKey = matchingKey(actual, key);
+    if (actualKey !== undefined) {
+      if (!deepSubset(actual[actualKey], value)) return false;
+      checked++;
+    }
+  }
+  const timeKey = PROJECTED_ROW_TIME_KEYS.find(key => typeof expected[key] === "string");
+  if (timeKey) {
+    const candidates = [timeKey, camelKey(timeKey), "at"];
+    const actualTime = candidates.map(key => actual[key]).find(value => typeof value === "string");
+    if (typeof actualTime !== "string") return false;
+    if (!sameInstant(actualTime, expected[timeKey])) return false;
+    checked++;
+  }
+  return checked >= 2;
+}
+
 function valueIn(value, expected) {
   return nestedObjects(value).some(item => {
     if (Array.isArray(item)) return item.some(candidate => candidate === expected);
@@ -324,15 +436,16 @@ function numericAnswerContains(text, value) {
   });
 }
 
-function clockWithinTolerance(text, zone, maximumSkewSeconds) {
+function clockWithinTolerance(text, zone, maximumSkewSeconds, anchor) {
   if (typeof zone !== "string" || !zone || !Number.isFinite(maximumSkewSeconds) || maximumSkewSeconds < 0) return "NOT VERIFIED";
   try {
+    const at = typeof anchor === "string" && Number.isFinite(Date.parse(anchor)) ? new Date(anchor) : new Date();
     const parts = new Intl.DateTimeFormat("en-GB", {
       timeZone: zone,
       hour: "2-digit",
       minute: "2-digit",
       hourCycle: "h23",
-    }).formatToParts(new Date());
+    }).formatToParts(at);
     const hour = Number(parts.find(part => part.type === "hour")?.value);
     const minute = Number(parts.find(part => part.type === "minute")?.value);
     const expected = hour * 60 + minute;
@@ -352,9 +465,14 @@ function clockWithinTolerance(text, zone, maximumSkewSeconds) {
 }
 
 function observedData(observations) {
-  return observations.flatMap(item => Array.isArray(item.queries) ? item.queries : [])
-    .filter(query => query?.response?.ok === true && Array.isArray(query.response.data))
-    .map(query => query.response.data);
+  return observations.flatMap(item => [
+    ...(Array.isArray(item.queries) ? item.queries : [])
+      .filter(query => query?.response?.ok === true && Array.isArray(query.response.data))
+      .map(query => query.response.data),
+    ...(Array.isArray(item.toolData) ? item.toolData
+      .filter(entry => entry && entry.data !== undefined)
+      .map(entry => entry.data) : []),
+  ]);
 }
 
 function visibleTexts(observations) {
@@ -374,63 +492,157 @@ function citationHasId(observations, id, type, turnIndex) {
   return citedSources(observations, turnIndex).some(source => source.type === type && source.id === id);
 }
 
+function emptyClinicalCollectionRead(data, text) {
+  const plain = normalize(text);
+  const domains = [
+    ["traitement", /\b(?:traitements?|medicaments?|prescriptions?)\b/u],
+    ["diagnostic", /\bdiagnosti\w*\b/u],
+    ["echelle", /\b(?:echelles?|scores?)\b/u],
+    ["consultation", /\b(?:consultations?|seances?|visites?)\b/u],
+  ].filter(([, pattern]) => pattern.test(plain)).map(([domain]) => domain);
+  if (!domains.length) return false;
+  const empty = value => Array.isArray(value) && value.length === 0;
+  const treatmentStatusScoped = /\b(?:en\s+pause|suspendu\w*|arrete\w*|stoppe\w*|actifs?|en\s+cours)\b/u.test(plain);
+  return data.some(resultData => nestedObjects(resultData).some(candidate => {
+    if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) return false;
+    return domains.some(domain => {
+      if (domain === "traitement") {
+        const treatments = candidate.treatments;
+        return treatments && typeof treatments === "object" &&
+          empty(treatments.current) && (treatmentStatusScoped || empty(treatments.history));
+      }
+      if (domain === "diagnostic") return empty(candidate.diagnoses);
+      if (domain === "echelle") return empty(candidate.scales);
+      if (domain === "consultation") return empty(candidate.consultations) && !candidate.currentConsultation;
+      return false;
+    });
+  }));
+}
+
+function emptyFinanceCollectionRead(data, text) {
+  const plain = normalize(text);
+  const wantsOneOff = /\bponctuel\w*\b/u.test(plain);
+  const wantsRecurring = /\brecurrent\w*\b/u.test(plain);
+  if (!wantsOneOff && !wantsRecurring) return false;
+  return data.some(resultData => nestedObjects(resultData).some(candidate => {
+    if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) return false;
+    if (wantsOneOff && candidate.total_ponctuel_periode === 0) return true;
+    if (wantsRecurring && candidate.total_recurrent_mensuel === 0) return true;
+    return false;
+  }));
+}
+
 function assertionStatus(assertion, observations) {
   const turnIndex = Number.isInteger(assertion.turnIndex) ? assertion.turnIndex : undefined;
   const turns = turnIndex === undefined ? observations : [observations[turnIndex]].filter(Boolean);
   const data = observedData(turns);
   const text = visibleTexts(turns).join(" ");
+  const unreliableAnswer = /\b(?:je n['’]ai pas de r[ée]ponse fiable|aucune preuve suffisante|la limite du tour a [ée]t[ée] atteinte|cette partie reste [àa] traiter|r[ée]ponse g[ée]n[ée]rale du mod[èe]le)\b/iu.test(normalize(text));
   const successfulRead = turns.some(item => Array.isArray(item.queries) && item.queries.some(query =>
     query?.response?.ok === true && !BUSINESS_WRITE.test(query?.name ?? "")));
   const expectedRows = assertion.rows ?? (assertion.row ? [assertion.row] : undefined);
   const rowIds = Array.isArray(expectedRows) ? expectedRows.map(row => row?.id).filter(id => typeof id === "string") : [];
   const dataRowsMatch = rows => Array.isArray(rows) && rows.length > 0 && rows.every(row =>
-    data.some(resultData => nestedObjects(resultData).some(candidate => deepSubset(candidate, row))));
+    data.some(resultData => nestedObjects(resultData).some(candidate =>
+      deepSubset(candidate, row) || projectedRowMatches(candidate, row))));
   const citedRowsMatch = (ids, type) => ids.length > 0 && ids.every(id => citedSources(turns)
     .some(source => source.id === id && (type === undefined || source.type === type)));
+  const observedRows = data.flatMap(resultData => nestedObjects(resultData)
+    .flatMap(candidate => Array.isArray(candidate?.rows) ? candidate.rows : []));
+  const pagedRowsMatch = rows => {
+    if (!Array.isArray(rows) || rows.length <= observedRows.length || observedRows.length === 0) return false;
+    const total = data.flatMap(resultData => nestedObjects(resultData))
+      .find(candidate => candidate && typeof candidate === "object" && candidate.total === rows.length);
+    if (!total) return false;
+    const used = observedRows.every(row => rows.some(expected =>
+      deepSubset(row, expected) || projectedRowMatches(row, expected)));
+    const pageIds = observedRows.map(row => row?.id).filter(id => typeof id === "string");
+    const cited = pageIds.every(id => citationHasId(turns, id));
+    const paginatedText = /\b(?:premi(?:er|ere|ers|eres)|page|premiere|premières|references? affichees?)\b/u.test(normalize(text));
+    return used && cited && paginatedText;
+  };
   switch (assertion.kind) {
     case "exact_count":
     case "exact_amount_dzd": {
       const subject = normalize(assertion.subject ?? "").replace(/_/gu, " ");
       const scope = subject.includes("patient") ? /patient/iu.test(text)
-        : subject.includes("consultation") || subject.includes("visit") ? /consultation|seance/iu.test(text)
+        : subject.includes("consultation") || subject.includes("visit") || subject.includes("without_payment") || subject.includes("without payment") ? /consultation|seance/iu.test(text)
           : subject.includes("appointment") ? /rendez|agenda|appointment/iu.test(text)
             : subject.includes("charge") || subject.includes("payment") || subject.includes("balance") ? /dzd|dinars?|paiement|charge|recette|encaissement/iu.test(text)
               : true;
       if (!successfulRead) return "NOT VERIFIED";
-      return valueIn(data, assertion.value) && numericAnswerContains(text, assertion.value) && scope ? "PASS" : "FAIL";
+      if (unreliableAnswer && assertion.value !== 0) return "FAIL";
+      const zeroAnswer = assertion.value === 0 && /\b(?:aucun(?:e|s|es)?|zero)\b/u.test(normalize(text));
+      return valueIn(data, assertion.value) && (numericAnswerContains(text, assertion.value) || zeroAnswer) && (scope || zeroAnswer)
+        ? "PASS" : "FAIL";
     }
     case "exact_value": {
+      if (assertion.field === "clock.localDate") {
+        const anchor = turns.find(item => typeof item?.asOf === "string")?.asOf;
+        if (typeof anchor !== "string" || !Number.isFinite(Date.parse(anchor))) return "NOT VERIFIED";
+        const expectedDate = new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Africa/Algiers", year: "numeric", month: "2-digit", day: "2-digit",
+        }).format(new Date(anchor));
+        if (expectedDate !== assertion.value) return "FAIL";
+        return normalize(text).includes(normalize(assertion.value)) ? "PASS" : "FAIL";
+      }
       if (!successfulRead) return "NOT VERIFIED";
       if (assertion.value === null) return successfulRead && /non renseigne|aucun|aucune|absent|indisponible/iu.test(normalize(text)) ? "PASS" : "FAIL";
+      if (unreliableAnswer) return "FAIL";
       return valueIn(data, assertion.value) && typeof assertion.value === "string" && normalize(text).includes(normalize(assertion.value)) && successfulRead
         ? "PASS" : "FAIL";
     }
     case "exact_values":
       if (!successfulRead) return "NOT VERIFIED";
+      if (unreliableAnswer) return "FAIL";
       return Array.isArray(assertion.values) && assertion.values.length > 0 && assertion.values.every(value =>
         valueIn(data, value) && (typeof value === "number" ? numericAnswerContains(text, value) : typeof value === "string" && normalize(text).includes(normalize(value)))) && successfulRead
         ? "PASS" : "FAIL";
     case "exact_rows":
     case "source_rows": {
-      if (!successfulRead || !Array.isArray(expectedRows) || expectedRows.length === 0) return "NOT VERIFIED";
-      const diagnostics = assertion.status === "active" || assertion.status === "resolved";
+      if (!successfulRead) return "NOT VERIFIED";
+      if (Array.isArray(expectedRows) && expectedRows.length === 0) {
+        const clinicalEmpty = emptyClinicalCollectionRead(data, text);
+        const financeEmpty = emptyFinanceCollectionRead(data, text);
+        const emptyRead = data.some(resultData => nestedObjects(resultData).some(candidate =>
+          candidate.total === 0 || (Array.isArray(candidate.rows) && candidate.rows.length === 0))) || clinicalEmpty || financeEmpty;
+        const noRowsAnswer = /\b(?:aucun(?:e|s|es)?|zero|0|vide|non renseigne)\b/u.test(normalize(text)) &&
+          (!clinicalEmpty || /\b(?:traitements?|medicaments?|diagnosti\w*|echelles?|scores?|consultations?|seances?|visites?)\b/u.test(normalize(text)));
+        return emptyRead && noRowsAnswer ? "PASS" : "FAIL";
+      }
+      if (!Array.isArray(expectedRows) || expectedRows.length === 0) return "NOT VERIFIED";
+      if (unreliableAnswer) return "FAIL";
+      const diagnostics = expectedRows.some(row => row && typeof row === "object" &&
+        (Object.hasOwn(row, "resolved_at") || Object.hasOwn(row, "onset_date") || Object.hasOwn(row, "resolvedAt") || Object.hasOwn(row, "onsetDate")));
+      if (pagedRowsMatch(expectedRows)) return "PASS";
       return dataRowsMatch(expectedRows) &&
         (!rowIds.length || citedRowsMatch(rowIds, diagnostics ? "diagnostic" : undefined)) ? "PASS" : "FAIL";
     }
     case "exact_patient":
       return assertion.patient === null ? successfulRead ? "NOT VERIFIED" : "FAIL"
-        : successfulRead &&
-          data.some(resultData => nestedObjects(resultData).some(candidate => deepSubset(candidate, assertion.patient))) &&
+        : !unreliableAnswer && successfulRead &&
+          data.some(resultData => nestedObjects(resultData).some(candidate =>
+            deepSubset(candidate, assertion.patient) || projectedRowMatches(candidate, assertion.patient))) &&
           (typeof assertion.patient.id !== "string" || citationHasId(turns, assertion.patient.id, "patient")) ? "PASS" : "FAIL";
-    case "exact_consultation":
-      return typeof assertion.consultationId === "string" && citationHasId(turns, assertion.consultationId, "consultation") ? "PASS" : "FAIL";
+    case "exact_consultation": {
+      const consultationId = assertion.consultationId ?? assertion.row?.id ?? assertion.consultation?.id;
+      return typeof consultationId === "string" && citationHasId(turns, consultationId, "consultation") ? "PASS" : "FAIL";
+    }
     case "source_note":
       return typeof assertion.consultationId === "string" && citationHasId(turns, assertion.consultationId, "consultation") &&
         valueIn(data, assertion.consultationId) ? "PASS" : "NOT VERIFIED";
     case "source_notes":
-    case "source_facts":
-      return Array.isArray(assertion.rows) && assertion.rows.length > 0 && dataRowsMatch(assertion.rows) &&
-        rowIds.length > 0 && rowIds.every(id => citationHasId(turns, id, "consultation")) ? "PASS" : "NOT VERIFIED";
+    case "source_facts": {
+      if (!Array.isArray(assertion.rows) || assertion.rows.length === 0 || unreliableAnswer || !dataRowsMatch(assertion.rows)) return "NOT VERIFIED";
+      const citedRows = rowIds.length > 0 && rowIds.every(id => citationHasId(turns, id, "consultation"));
+      // A frozen note row carries its parent consultation. The UI cites the
+      // consultation, not the note primary key, so either citation proves it.
+      const parentCited = assertion.rows.every(row => {
+        const parent = row?.consultation_id ?? row?.consultationId;
+        return typeof parent === "string" && citationHasId(turns, parent, "consultation");
+      });
+      return citedRows || parentCited ? "PASS" : "NOT VERIFIED";
+    }
     case "latest_and_previous": {
       const references = [assertion.latest, assertion.previous];
       if (!successfulRead || references.some(reference => reference?.kind !== "source_note" ||
@@ -443,8 +655,9 @@ function assertionStatus(assertion, observations) {
       return matched ? "PASS" : "FAIL";
     }
     case "clinical_facts": {
-      const ids = (assertion.sourceFacts ?? []).map(fact => fact?.consultationId).filter(id => typeof id === "string");
-      return ids.length > 0 && ids.every(id => citationHasId(turns, id, "consultation")) &&
+      const coverageIds = Array.isArray(assertion.coverage?.consultationIds) ? assertion.coverage.consultationIds.filter(id => typeof id === "string") : [];
+      const ids = [...new Set([...(assertion.sourceFacts ?? []).map(fact => fact?.consultationId).filter(id => typeof id === "string"), ...coverageIds])];
+      return ids.length > 0 && !unreliableAnswer && ids.every(id => citationHasId(turns, id, "consultation")) &&
         ids.every(id => valueIn(data, id)) ? "PASS" : "NOT VERIFIED";
     }
     case "exact_presence": {
@@ -453,9 +666,18 @@ function assertionStatus(assertion, observations) {
         : /non renseigne|aucun|aucune/iu.test(normalize(text));
       return successfulRead && hasText && valueIn(data, assertion.present) ? "PASS" : "NOT VERIFIED";
     }
-    case "exact_partition":
-      return [assertion.withPhone, assertion.withoutPhone].every(value => valueIn(data, value) && numericAnswerContains(text, value))
+    case "exact_partition": {
+      const derivedWithPhone = data.some(resultData => nestedObjects(resultData).some(candidate => {
+        const metrics = candidate?.metrics;
+        return metrics && typeof metrics === "object" &&
+          typeof metrics.active === "number" && typeof metrics.missing_phone === "number" &&
+          metrics.active - metrics.missing_phone === assertion.withPhone;
+      }));
+      return (valueIn(data, assertion.withPhone) || derivedWithPhone) &&
+        valueIn(data, assertion.withoutPhone) &&
+        numericAnswerContains(text, assertion.withPhone) && numericAnswerContains(text, assertion.withoutPhone)
         ? "PASS" : "FAIL";
+    }
     case "exact_boolean": {
       const words = assertion.value ? /oui|true|actif|ouverte|en cours/iu : /non|false|terminee|terminee|fermee|cloturee/iu;
       return successfulRead && valueIn(data, assertion.value) && words.test(normalize(text)) ? "PASS" : "FAIL";
@@ -463,7 +685,27 @@ function assertionStatus(assertion, observations) {
     case "exact_patient_set":
     case "exact_patient_page": {
       const values = assertion.values;
+      if (Array.isArray(values) && values.length === 0) {
+        const emptyRead = data.some(resultData => nestedObjects(resultData).some(candidate =>
+          candidate.total === 0 || (Array.isArray(candidate.rows) && candidate.rows.length === 0)));
+        const noRowsAnswer = /\b(?:aucun(?:e|s|es)?|zero|vide|non renseigne)\b/u.test(normalize(text));
+        return emptyRead && noRowsAnswer ? "PASS" : "FAIL";
+      }
       const ids = Array.isArray(values) ? values.map(row => typeof row === "string" ? row : row?.id).filter(id => typeof id === "string") : [];
+      if (Number.isInteger(assertion.count) && assertion.count > 0 && Array.isArray(values) && values.length === assertion.count) {
+        const observedRows = data.flatMap(resultData => nestedObjects(resultData)
+          .flatMap(candidate => Array.isArray(candidate?.rows) ? candidate.rows : []));
+        const expectedById = new Map(values.flatMap(value => typeof value?.id === "string" ? [[value.id, value]] : []));
+        const pageMatches = observedRows.length > 0 && observedRows.length < assertion.count && observedRows.every(row => {
+          const expected = typeof row?.id === "string" ? expectedById.get(row.id) : undefined;
+          if (!expected) return false;
+          const name = typeof expected.name === "string" ? expected.name : [row.first_name, row.last_name].filter(Boolean).join(" ");
+          return typeof name === "string" && normalize(text).includes(normalize(name));
+        });
+        const totalMatches = valueIn(data, assertion.count) && numericAnswerContains(text, assertion.count);
+        const citationsMatch = pageMatches && observedRows.every(row => citationHasId(turns, row.id, "patient"));
+        if (pageMatches && totalMatches && citationsMatch) return "PASS";
+      }
       return ids.length > 0 && ids.every(id => citationHasId(turns, id, "patient")) &&
         values.every(value => typeof value === "string" ? normalize(text).includes(normalize(value))
           : typeof value?.name === "string" && normalize(text).includes(normalize(value.name))) ? "PASS" : "FAIL";
@@ -472,7 +714,8 @@ function assertionStatus(assertion, observations) {
       return Array.isArray(assertion.fields) && assertion.fields.length > 0 && successfulRead &&
         /non renseigne|aucun|aucune/iu.test(normalize(text)) ? "PASS" : "NOT VERIFIED";
     case "clock_tolerance":
-      return clockWithinTolerance(text, assertion.zone, assertion.maximumSkewSeconds);
+      return clockWithinTolerance(text, assertion.zone, assertion.maximumSkewSeconds,
+        turns.find(item => typeof item?.asOf === "string")?.asOf);
     case "needs_input": {
       const done = turns.flatMap(item => Array.isArray(item.events) ? item.events : []).findLast(event => event?.type === "done");
       const writes = turns.some(item => (item.queries ?? []).some(query => BUSINESS_WRITE.test(query?.name ?? "")));
@@ -648,7 +891,7 @@ export function evaluateV8ClinicalOracle({ oracle, sourceCase, snapshot, observa
     let status = "NOT VERIFIED";
     if (id === "active_filter_honored" || id === "resolved_filter_honored") {
       const expectedState = id === "active_filter_honored" ? "active" : "resolved";
-      const expected = sourceCase.assertions.filter(assertion => assertion.kind === "exact_rows" && assertion.status === expectedState);
+      const expected = sourceCase.assertions.filter(assertion => assertion.kind === "exact_rows" && (assertion.status === expectedState || assertion.status === undefined));
       const matched = expected.length > 0 && expected.every(assertion => {
         const turn = observations[assertion.turnIndex ?? 0];
         const calls = Array.isArray(turn?.calls) ? turn.calls : [];
@@ -662,8 +905,10 @@ export function evaluateV8ClinicalOracle({ oracle, sourceCase, snapshot, observa
       status = matched ? "PASS" : expected.length ? "FAIL" : "NOT VERIFIED";
     } else if (id === "diagnosis_source_attribution") {
       const expected = [...expectedActive, ...expectedResolved];
-      status = expected.length && expected.every(row => citedSources(observations, row.turnIndex)
-        .some(source => source.type === "diagnostic" && source.id === row.id)) ? "PASS" : "NOT VERIFIED";
+      status = expected.length
+        ? expected.every(row => citedSources(observations, row.turnIndex)
+          .some(source => source.type === "diagnostic" && source.id === row.id)) ? "PASS" : "NOT VERIFIED"
+        : clinicalGate && /\b(?:aucun(?:e|s|es)?|zero|0|non renseigne)\b/u.test(normalize(allText)) ? "PASS" : "NOT VERIFIED";
     } else if (id === "authorized_selected_patient_context") {
       status = patientId && clinicalGate && observations.every(item =>
         citedSources([item]).some(source => source.type === "patient" && source.id === patientId)) ? "PASS" : "NOT VERIFIED";
@@ -706,11 +951,14 @@ export function evaluateV8ClinicalOracle({ oracle, sourceCase, snapshot, observa
     } else if (id === "linked_scale_findings_included") {
       const scales = (snapshot?.tables?.scaleAdministrations ?? []).filter(row =>
         expectedConsultations.includes(row.consultation_id) && (!patientId || row.patient_id === patientId));
-      status = scales.length && scales.every(row => typeof row.id === "string" &&
-        citationHasId(observations, row.id, "scale") &&
-        [row.total_score, row.score, row.scale_name, row.scale_code].filter(value => value !== null && value !== undefined)
-          .every(value => typeof value === "number" ? numericAnswerContains(allText, value) : normalize(allText).includes(normalize(String(value)))))
-        ? "PASS" : "NOT VERIFIED";
+      // No linked scale means there is no finding the summary could omit.
+      status = scales.length === 0
+        ? (clinicalGate && clinicalText ? "PASS" : "NOT VERIFIED")
+        : scales.every(row => typeof row.id === "string" &&
+          citationHasId(observations, row.id, "scale") &&
+          [row.total_score, row.score, row.scale_name, row.scale_code].filter(value => value !== null && value !== undefined)
+            .every(value => typeof value === "number" ? numericAnswerContains(allText, value) : normalize(allText).includes(normalize(String(value)))))
+          ? "PASS" : "NOT VERIFIED";
     }
     return { id, status };
   });

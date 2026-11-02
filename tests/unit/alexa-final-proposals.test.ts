@@ -14,6 +14,11 @@ it("preserves French spaced-hour notation when preparing an appointment proposal
  const text="Prépare un rendez-vous demain à 10 h 00 pendant 45 minutes pour le patient sélectionné.",selection=agendaSelection(text)!;
  expect(await prepareActionProposal(input(text),port([]),client,new AbortController().signal)).toMatchObject({state:"ready",proposal:{tool:"create_appointment",args:{patientId:patient,startsAt:`${selection.day}T10:00:00+01:00`,durationMinutes:45}}});
 });
+it("prepares an appointment on an explicit French civil date",async()=>{
+ const text="Ajoute pour le patient sélectionné une consultation le 4 novembre 2026 à 10 h, durée 30 minutes.";
+ expect(agendaSelection(text)).toEqual({day:"2026-11-04",requestedOnly:false});
+ expect(await prepareActionProposal(input(text),port([]),client,new AbortController().signal)).toMatchObject({state:"ready",proposal:{tool:"create_appointment",args:{patientId:patient,startsAt:"2026-11-04T10:00:00+01:00",durationMinutes:30}}});
+});
 it("tariff proposal uses only local audited reads and never writes",async()=>{
   const calls:string[]=[];
   expect(await prepareActionProposal(input("Fixe le tarif à 3000 DZD"),port(calls),client,new AbortController().signal)).toMatchObject({state:"ready",proposal:{tool:"set_consultation_price",args:{consultationId:consultation,amountDzd:3000}}});
