@@ -1,4 +1,5 @@
 ﻿import {expect,it} from 'vitest';
+import {planRequest} from '@/shared/alexa/request-plan';
 import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,explicitFrenchDayRange,explicitFrenchDateRange,frenchPatientCompoundContract,frenchPatientCountContract,frenchReadArgumentBindings,frenchRequestAdmission,frenchRequestedOutputs,isFrenchAlexaCapabilityQuestion,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
 import {parsePatientMention} from '@/shared/alexa/patient-mention';
 import {patientQueryContract} from '@/shared/alexa/patient-query-contract';
@@ -525,3 +526,8 @@ import {deterministicActionRequest} from '@/server/alexa/action-proposal';
 
 
 
+
+it('abstains deterministically on unverifiable current prices and daily menus',()=>{
+ for(const text of ['Quel est le tarif actuel du lithium en Alg?rie ?','Combien co?te actuellement la clozapine dans les pharmacies alg?riennes ?','Quel repas la cantine de l?h?pital propose-t-elle aujourd?hui ?','Quel est le prix du Zoloft ?'])expect(planRequest(text,null,'2026-10-28T12:00:00+01:00').intent).toBe('safe_abstention');
+ expect(planRequest('Quel est le tarif de la consultation ?',null,'2026-10-28T12:00:00+01:00').intent).not.toBe('safe_abstention');
+});

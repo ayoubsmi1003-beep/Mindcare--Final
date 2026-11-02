@@ -3,7 +3,7 @@ import { mentionsMedication } from "./medications";
 import { isBoundedPublicQuestion } from "./public-question";
 import { agendaSelection, isGlobalWhoAgenda } from "./agenda-plan";
 
-export type AlexaIntent = "history" | "current_consultation" | "notes" | "diagnoses" | "scales" | "dialogue" | "general" | "navigation" | "treatments" | "treatment_changes" | "summary" | "preparation" | "longitudinal" | "knowledge" | "agenda" | "receipts" | "patient_search" | "proposal" | "clarify" | "app_help" | "clock" | "profile" | "documents" | "patient_finance";
+export type AlexaIntent = "history" | "current_consultation" | "notes" | "diagnoses" | "scales" | "dialogue" | "general" | "navigation" | "treatments" | "treatment_changes" | "summary" | "preparation" | "longitudinal" | "knowledge" | "agenda" | "receipts" | "patient_search" | "proposal" | "clarify" | "app_help" | "clock" | "profile" | "documents" | "patient_finance" | "safe_abstention";
 export type AlexaLanguage = "fr" | "ar" | "mixed";
 export type ClinicalFocus = "sleep" | "anxiety" | "mood" | "risk" | "symptoms";
 export interface WorkingReference {
@@ -274,6 +274,12 @@ function clinicalFocus(text: string): ClinicalFocus | undefined {
 export function planRequest(text: string, previous: WorkingReference | null, asOf = new Date().toISOString()): RequestPlan {
   const shortcut=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().trim();
   const language=/\p{Script=Arabic}/u.test(text)?"ar" as const:"fr" as const;
+  // Unverifiable current facts (medication prices, availability, daily menus)
+  // must never be answered from a stale approved source or the model.
+  const patientScoped=parsePatientMention(text).status!=="none"||/\b(?:patient|patiente|dossier|son|sa|ses)\b/u.test(shortcut);
+  const medicationPricing=mentionsMedication(shortcut)&&/\b(?:prix|tarifs?|cout\w*|coute\w*|disponibilit\w*|pharmacies?)\b/u.test(shortcut)&&!patientScoped;
+  const currentOffTopic=/\bcantine\b/u.test(shortcut)&&/\baujourd/u.test(shortcut);
+  if(medicationPricing||currentOffTopic)return {intent:"safe_abstention",count:1,language};
   if(/^(?:quelle heure est[- ]il(?: a alger)?|il est quelle heure|شحال الساعة|كم الساعة)[?!.؟\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
   if(/^(?:quelle date (?:civile )?(?:est[- ]en[- ]cours|sommes[- ]nous|est[- ]il)|quel jour sommes[- ]nous|on est quel jour|quelle est la date(?: d.aujourd.hui| du jour)?)(?:\s+a alger)?[?!.\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
   // Exact, bounded local reads remain available without a model qualification.

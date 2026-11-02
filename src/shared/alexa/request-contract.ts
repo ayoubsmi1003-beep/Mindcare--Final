@@ -178,7 +178,7 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
  // A single interrogative with comma-separated categories may mean several outputs.
  // Leave that ambiguous form to native interpretation instead of forcing one output.
  const explicitCombinedPopulationCount=explicitCombinedPatientPopulationCount(text);
- if(starts.length===1&&text.slice(starts[0]).includes(',')&&!explicitCombinedPopulationCount&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
+ if(starts.length===1&&text.slice(starts[0]).includes(',')&&!explicitCombinedPopulationCount&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors|tous statuts confondus|toutes (?:periodes|dates) confondues|au total)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
  const clauses=starts.length===1?[text.trim()]:starts.map((at,i)=>text.slice(at,starts[i+1]??text.length).replace(/[,;\s]+(?:et\s*)?$/iu,'').trim());
  return clauses.length<=12?{clauses}:null;
 }
@@ -271,6 +271,7 @@ export function countContractParts(contract:FrenchCountContract):RequestPart[]{r
 export function requestedPopulation(text:string):NonNullable<RequestPart['population']>{
  const plain=fold(text);
  if(/\bactifs?\s+et\s+archives?\b|\by compris (?:les )?archives?\b/u.test(plain))return 'all';
+ if(/\b(?:tous\s+statuts\s+confondus|toutes\s+(?:periodes|dates)\s+confondues)\b/u.test(plain))return 'all';
  if(/\b(?:inactifs?|archives?)\b/u.test(plain))return 'archived';
  if(/\b(?:actifs?|actives?)\b/u.test(plain))return 'active';
  if(/\b(?:tous les patients|toutes les patientes|tous les dossiers|toute la patientele|ensemble des patients)\b/u.test(plain))return 'all';

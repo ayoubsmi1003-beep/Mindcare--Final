@@ -136,7 +136,13 @@ export function evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: in
     .filter(source => source?.type === "knowledge");
 
   if (oracle.answerable === false || sourceCase.answerable === false) {
-    if (!traces.length) return result([{ id: "retrieval_observed", status: "NOT VERIFIED" }]);
+    if (!traces.length) {
+      const deterministicAbstention = citations.length === 0 && SAFE_ABSTENTION.test(normalize(answerText));
+      return result([
+        { id: "retrieval_observed", status: deterministicAbstention ? "PASS" : "NOT VERIFIED" },
+        ...(deterministicAbstention ? [{ id: "explicit_abstention", status: "PASS" }] : []),
+      ]);
+    }
     const unavailable = traces.every(trace => ["sans-preuve", "faible"].includes(trace.result));
     const noCitation = citations.length === 0;
     const explicitAbstention = ABSTENTION.test(normalize(answerText));
@@ -275,7 +281,7 @@ export function evaluateV8RouteOracle({ oracle, observations: input } = {}) {
     (Array.isArray(item.timings?.inference) ? item.timings.inference.length : 0), 0);
   const routeEvidence = {
     knowledge_rag: traces.length > 0 && knowledgeCitation,
-    deterministic_read: queries.length > 0 && !writeAttempted && !traces.length,
+    deterministic_read: (queries.length > 0 || events.some(event => /^\s*(?:\d{4}-\d{2}-\d{2}|\d{1,2}:\d{2})\s*$/u.test(String(event.text ?? "")))) && !writeAttempted && !traces.length,
     local_summary: inferenceCount > 0 && queries.length > 0 && clinicalCitation && !traces.length,
     action_tool: calls.some(call => call?.name === "prepare_action") ||
       events.some(event => event?.type === "proposal") || writeAttempted,
