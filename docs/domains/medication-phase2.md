@@ -66,6 +66,12 @@ dans le périmètre, `is_synthetic` pour le cloud-dev) :
 
 Aucune porte ne fait d'`UPDATE` ni de `DELETE`.
 
+## Décision de périmètre — 2026-11-02
+
+Aucune source d'interaction validée ne sera intégrée dans cette phase. La revue
+reste une attestation humaine, avec sa source ; MindCare ne calcule, ne classe
+et ne certifie aucune interaction.
+
 ## Limites assumées
 
 - Pas de moteur d'interaction validé : la revue est une attestation avec source.
