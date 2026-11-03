@@ -27,6 +27,12 @@ const VARIABLES_SERVEUR = new Set([
   "OPENROUTER_API_KEY", "OPENROUTER_MODEL", "OPENROUTER_MODEL_TIMEOUT_MS", "OPENROUTER_QUALIFICATION_FILE", "STT_MODEL", "TTS_MODEL", "VOICE_PROVIDER",
 ]);
 
+// Retained in older installations but unused by this version of the server.
+const VARIABLES_ANCIEN_RELAIS = new Set([
+  "MINDCARE_BOOKING_ENABLED", "MINDCARE_BOOKING_EDGE_ORIGIN",
+  "MINDCARE_BOOKING_BRIDGE_SECRET", "MINDCARE_BOOKING_IDLE_POLL_MS",
+]);
+
 /** Fichier optionnel serveur uniquement; pas de variables de processus ou de base. */
 export function lireVariablesServeur(texte: string): Record<string, string> {
   const variables: Record<string, string> = {};
@@ -34,6 +40,7 @@ export function lireVariablesServeur(texte: string): Record<string, string> {
     if (!ligne.trim() || ligne.trimStart().startsWith("#")) continue;
     const egal = ligne.indexOf("=");
     const nom = ligne.slice(0, egal).trim();
+    if (egal > 0 && VARIABLES_ANCIEN_RELAIS.has(nom)) continue;
     if (egal < 1 || !VARIABLES_SERVEUR.has(nom) || Object.hasOwn(variables, nom)) throw new Error("CONFIGURATION_CABINET: variable serveur inconnue ou dupliquée dans private/runtime.env.");
     let valeur = ligne.slice(egal + 1).trim();
     if ((valeur.startsWith('"') && valeur.endsWith('"')) || (valeur.startsWith("'") && valeur.endsWith("'"))) valeur = valeur.slice(1, -1);

@@ -28,6 +28,7 @@ import {
   commandeInitdb,
   contenuEcouteLocale,
   contenuPgHba,
+  postgresProcessEnvironment,
   serviceDejaDemarre,
   versionCluster,
 } from "./pg-cluster.js";
@@ -357,7 +358,7 @@ export async function verifierMigrations(
   try {
     const u = new URL(url);
     if (u.protocol !== "postgresql:" && u.protocol !== "postgres:") throw new Error("protocole");
-    envPg = {
+    envPg = postgresProcessEnvironment({
       ...process.env,
       PGHOST: u.hostname,
       PGPORT: u.port !== "" ? u.port : "5432",
@@ -365,7 +366,7 @@ export async function verifierMigrations(
       PGUSER: decodeURIComponent(u.username),
       PGPASSWORD: decodeURIComponent(u.password),
       PGCONNECT_TIMEOUT: "5",
-    };
+    });
   } catch {
     return { ok: false, detail: "MINDCARE_DATABASE_URL est illisible." };
   }

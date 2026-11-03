@@ -31,6 +31,11 @@ import { lookup } from "node:dns/promises";
 /** Nombre de recherches rapides avant de proposer « ce PC est le PC médecin ». */
 export const RECHERCHES_RAPIDES = 3;
 
+/** A doctor-specific delivery may initialize only a genuinely unconfigured PC. */
+export function initialiserHoteDocteur(marqueur: boolean, configuration: boolean, base: boolean, confiance: boolean): boolean {
+  return marqueur && !configuration && !base && !confiance;
+}
+
 /** Fenêtre d'écoute d'une découverte rapide, puis d'une découverte lente. */
 const FENETRE_RAPIDE_MS = 900;
 const FENETRE_LENTE_MS = 1_500;

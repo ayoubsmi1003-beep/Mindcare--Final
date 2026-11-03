@@ -6,6 +6,8 @@ param(
     [string]$PublicCertificate,
     [string]$CertificateSha256,
     [string]$InvitationFile,
+    [switch]$RequireSnapshot,
+    [switch]$RepairInstallPermissions,
     [switch]$DryRun
 )
 $ErrorActionPreference = 'Stop'
@@ -101,6 +103,10 @@ function Assert-ClinicInstall([string]$Install) {
     $parent = [IO.Directory]::GetParent($Install)
     while ($parent) { Test-AdministratorAcl ([IO.Directory]::GetAccessControl($parent.FullName)) $true $false ($null -eq $parent.Parent); $parent = $parent.Parent }
 }
+function Assert-RepairInstallLocation([string]$Install) {
+    $expected = [IO.Path]::GetFullPath((Join-Path $env:ProgramFiles 'MindCare OS')).TrimEnd('\')
+    if (-not [string]::Equals([IO.Path]::GetFullPath($Install).TrimEnd('\'), $expected, [StringComparison]::OrdinalIgnoreCase)) { throw 'Réparation automatique réservée au dossier MindCare sous Program Files.' }
+}
 function Assert-SetupPolicy([string]$Policy) {
     if ($Policy -notin @('RemoteSigned', 'AllSigned')) { throw 'Politique PowerShell incompatible. Utiliser une procédure approuvée par l''administrateur (RemoteSigned pour fichiers locaux ou scripts signés AllSigned). Aucune politique Windows ne sera modifiée.' }
 }
@@ -116,6 +122,15 @@ function Trust-PublicCertificate([byte[]]$Bytes) {
 
 $install = (Resolve-Path -LiteralPath $InstallDir).ProviderPath
 $resources = Join-Path $install 'resources'
+if ($RequireSnapshot) {
+    if ($Mode -ne 'Host') { throw 'Instantané réservé au poste médecin.' }
+    $snapshot = Join-Path $resources 'snapshot'
+    foreach ($name in @('base.dump','manifest.json','gates.sql')) {
+        if (-not (Test-Path -LiteralPath (Join-Path $snapshot $name) -PathType Leaf)) { throw 'Dossier médecin incomplet : instantané absent.' }
+    }
+    $manifest = Get-Content -Raw -LiteralPath (Join-Path $snapshot 'manifest.json') | ConvertFrom-Json
+    if ($manifest.sha256 -notmatch '^[0-9a-fA-F]{64}$' -or $manifest.patient_count -lt 1 -or (Get-FileHash -LiteralPath (Join-Path $snapshot 'base.dump') -Algorithm SHA256).Hash -ne $manifest.sha256) { throw 'Dossier médecin incomplet : instantané invalide.' }
+}
 $exeName = 'MindCare OS.exe'
 $exe = Join-Path $install $exeName
 if (-not (Test-Path -LiteralPath $exe -PathType Leaf) -or -not (Test-Path -LiteralPath (Join-Path $resources 'app.asar') -PathType Leaf)) { throw 'Installation MindCare introuvable dans le dossier indiqué.' }
@@ -178,6 +193,19 @@ if ($DryRun -or $WhatIfPreference) {
 $principal = [Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent())
 if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { throw 'Ouvrir Windows PowerShell en tant qu''administrateur.' }
 if (-not $PSCmdlet.ShouldProcess($originValue, 'Configurer ce poste MindCare et approuver son certificat du cabinet')) { return }
+if ($RepairInstallPermissions) {
+    if ($Mode -ne 'Host') { throw 'Réparation réservée au poste médecin.' }
+    Assert-RepairInstallLocation $install
+    if (Test-Path -LiteralPath (Join-Path $install 'data\PG_VERSION')) { throw 'Base dans le dossier applicatif : aucune permission modifiée.' }
+    $parent = [IO.Directory]::GetParent($install)
+    while ($parent) { Test-AdministratorAcl ([IO.Directory]::GetAccessControl($parent.FullName)) $true $false ($null -eq $parent.Parent); $parent = $parent.Parent }
+    $files = @(Get-ClinicTree $install)
+    $privateSnapshot = [IO.Path]::GetFullPath((Join-Path $resources 'snapshot')).TrimEnd('\')
+    foreach ($file in $files) {
+        $isSnapshot = [string]::Equals($file, $privateSnapshot, [StringComparison]::OrdinalIgnoreCase) -or $file.StartsWith($privateSnapshot + '\', [StringComparison]::OrdinalIgnoreCase)
+        Set-ClinicAcl $file ([IO.Directory]::Exists($file)) (-not $isSnapshot)
+    }
+}
 # Le programme installé exécute ce ScriptBlock local; aucune politique modifiée.
 Assert-ClinicInstall $install
 if (Test-Path -LiteralPath $root) { Test-AdministratorAcl ([IO.Directory]::GetAccessControl($root)) $false; Get-ClinicTree $root | Out-Null }

@@ -29,6 +29,7 @@ import {
   creerResolveur,
   delaiEntreRecherches,
   fenetreRecherche,
+  initialiserHoteDocteur,
   nomHoteValide,
   proposerHote,
 } from './recherche-cabinet.js';
@@ -251,8 +252,10 @@ class ErreurInstallation extends Error {
 async function executerInstallation(mode: 'Host' | 'Client', extra = ''): Promise<void> {
   const install = path.dirname(process.execPath);
   const script = path.join(process.resourcesPath, 'cabinet', 'configurer-cabinet.ps1');
+  const programFiles = process.env['ProgramFiles'] ?? 'C:\\Program Files';
+  const reparer = mode === 'Host' && !extra.includes('-InvitationFile') && install.toLowerCase() === path.join(programFiles, 'MindCare OS').toLowerCase() ? ' -RepairInstallPermissions' : '';
   // Script local livré avec l'application, exécuté par UAC sans changer la politique Windows.
-  const command = `$ErrorActionPreference='Stop'; try { & ([ScriptBlock]::Create([IO.File]::ReadAllText(${psQuote(script)}))) -Mode ${mode} -InstallDir ${psQuote(install)} ${extra} | Out-Null; exit 0 } catch { exit 1 }`;
+  const command = `$ErrorActionPreference='Stop'; try { & ([ScriptBlock]::Create([IO.File]::ReadAllText(${psQuote(script)}))) -Mode ${mode} -InstallDir ${psQuote(install)} ${extra}${reparer} | Out-Null; exit 0 } catch { exit 1 }`;
   const encoded = Buffer.from(command, 'utf16le').toString('base64');
   const powershell = path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe');
   const launch = `$p=Start-Process -FilePath ${psQuote(powershell)} -WindowStyle Hidden -Verb RunAs -Wait -PassThru -ArgumentList @('-NoProfile','-NonInteractive','-EncodedCommand',${psQuote(encoded)}); exit $p.ExitCode`;
@@ -428,6 +431,19 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
     {label:messages.inviteMenu!,click:()=>{void inviterPoste();}},
     {label:messages.diagnosticMenu!,click:()=>{void diagnosticDecouverte();}},
     {role:'quit',label:messages.quit!}]}]));
+  const marqueurDocteur = app.isPackaged && existsSync(path.join(process.resourcesPath, 'cabinet', 'doctor-host.json'));
+  if (initialiserHoteDocteur(marqueurDocteur, existsSync(path.join(RACINE, 'desktop.json')), existsSync(path.join(RACINE, 'data', 'PG_VERSION')), confiance !== undefined)) {
+    try {
+      await executerInstallation('Host', '-RequireSnapshot');
+      confiance = lireConfiance();
+      if (!confiance) throw new Error('CONFIGURATION_CABINET');
+      await appliquerConfiance(confiance);
+      return { mode: 'host', origin: confiance.origin };
+    } catch (error) {
+      if (error instanceof ErreurInstallation) await afficherRefusInstallation();
+      throw error;
+    }
+  }
   // Trusted startup belongs to the main window; discovery is enrollment only.
   if (confiance) {
     await appliquerConfiance(confiance);

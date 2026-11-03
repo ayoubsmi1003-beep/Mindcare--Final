@@ -13,6 +13,11 @@ import type { BinairesPg } from "./pg-binaires";
 
 export const NOM_SERVICE = "mindcare-postgres";
 
+/** Windows service processes may otherwise select an unavailable code-page conversion. */
+export function postgresProcessEnvironment(env: NodeJS.ProcessEnv): NodeJS.ProcessEnv {
+  return { ...env, PGCLIENTENCODING: "UTF8" };
+}
+
 /**
  * ⚠️ 16, PAS 15 — malgré ce qu'affirment CLAUDE.md et
  * `installer-windows.ps1`. Découvert par exécution réelle (§K du plan) :

@@ -81,13 +81,20 @@ describe("le lecteur automatique global", () => {
     })).toBeNull();
   });
 
-  it("refuse un tour interrompu, partiel ou non terminé", () => {
+  it("refuse un tour interrompu, partiel, échoué ou annulé", () => {
     expect(choisirActionLectureAuto([{ ...BASE, interrompu: true }], new Set(), new Set(), OPTS)).toBeNull();
-    for (const statut of ["partial", "needs_input", "needs_confirmation", "failed", "cancelled"] as const) {
+    for (const statut of ["partial", "failed", "cancelled"] as const) {
       expect(choisirActionLectureAuto([{ ...BASE, alexaStatus: statut }], new Set(), new Set(), OPTS)).toBeNull();
     }
     expect(choisirActionLectureAuto([{ ...BASE, alexaStatus: "completed" }], new Set(), new Set(), OPTS))
       .toMatchObject({ action: "lire" });
+  });
+
+  it("lit une clarification et une demande de confirmation, pas seulement un succès", () => {
+    for (const statut of ["needs_input", "needs_confirmation"] as const) {
+      expect(choisirActionLectureAuto([{ ...BASE, alexaStatus: statut }], new Set(), new Set(), OPTS))
+        .toMatchObject({ action: "lire" });
+    }
   });
 
   it("lit une réponse de plus de 2000 caractères au lieu de la taire", () => {

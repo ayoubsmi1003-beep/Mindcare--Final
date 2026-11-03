@@ -22,7 +22,7 @@ import { spawn } from "node:child_process";
 import path from "node:path";
 
 import type { BinairesPg } from "./pg-binaires";
-import type { Commande } from "./pg-cluster";
+import { postgresProcessEnvironment, type Commande } from "./pg-cluster.js";
 
 function executer(commande: Commande, env?: NodeJS.ProcessEnv, entree?: string): Promise<void> {
   return new Promise((resoudre, rejeter) => {
@@ -77,14 +77,14 @@ export interface CibleProvisionnement {
 }
 
 function envPsql(cible: CibleProvisionnement): NodeJS.ProcessEnv {
-  return {
+  return postgresProcessEnvironment({
     ...process.env,
     PGHOST: cible.hote,
     PGPORT: String(cible.port),
     PGDATABASE: cible.base,
     PGUSER: cible.superutilisateur,
     PGPASSWORD: cible.motDePasseSuperutilisateur,
-  };
+  });
 }
 
 /**

@@ -82,9 +82,19 @@ export function fautLireAuto(
   if (!opts.conversationChargee) return false;
   if (tour.role !== "jarvis") return false;
   if (tour.interrompu === true) return false;
-  // Un tour partiel / en attente / échoué n'est pas une réponse complète.
+  // Une clarification (`needs_input`) et une demande de confirmation
+  // (`needs_confirmation`) SONT des réponses complètes : la praticienne doit
+  // les entendre, sinon « toujours à voix haute » est faux. Un tour partiel,
+  // échoué ou annulé reste muet : ce n'est pas un corps de réponse.
   // `conversation.ts` porte le statut terminal ; on ne le devine pas.
-  if (tour.alexaStatus !== undefined && tour.alexaStatus !== "completed") return false;
+  if (
+    tour.alexaStatus !== undefined &&
+    tour.alexaStatus !== "completed" &&
+    tour.alexaStatus !== "needs_input" &&
+    tour.alexaStatus !== "needs_confirmation"
+  ) {
+    return false;
+  }
   if (tour.dejaParlee === true) return false;
   // La synthèse est locale: un nom de dossier ne franchit plus de frontière
   // fournisseur. Il n'y a donc plus de raison de rendre la réponse muette.

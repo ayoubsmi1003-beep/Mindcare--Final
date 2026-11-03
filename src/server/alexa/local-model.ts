@@ -22,9 +22,19 @@ export const LOCAL_MODEL_PIN = {
   archiveSha256: "1283323272b04cd07905816a597a0da810918102de958f4ff6f7bbaa70ed2efe",
   runtimeManifestSha256: "a57e54357f5ca5a5fa0d70de662a076fc2150232bccd183abaf5d83982694465",
 } as const;
-/** The two-core delivery PC measures 10.4 tokens/s with one thread, versus 0.8 with four. */
+/**
+ * Prompt processing, not generation, dominates an Alexa turn: the agent sends a
+ * large system/tool prompt before the first token. Measured on the 4-thread
+ * delivery PC with the pinned Q4_K_M model and a 1,089-token prompt:
+ *   1 thread  = 8.2 prompt tok/s  (133 s)
+ *   2 threads = 54.0 prompt tok/s (20 s)
+ *   4 threads = 63.1 prompt tok/s (17 s), but generation dropped to 7.7 tok/s.
+ * Two threads keep generation at ~10.8 tok/s while cutting prompt time 6.5x.
+ * One thread is kept only on a genuinely 1-2 thread CPU.
+ */
 export function localModelThreadCountFor(available: number): number {
-  return available <= 4 ? 1 : Math.max(1, Math.min(4, Math.floor(available)));
+  if (available <= 2) return 1;
+  return Math.max(2, Math.min(4, Math.floor(available / 2)));
 }
 interface LocalRuntimeState {
   child: ChildProcess | null;

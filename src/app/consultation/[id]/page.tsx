@@ -700,6 +700,24 @@ export default function PageConsultation(): React.JSX.Element {
       minuteurBrut.current = undefined;
     }
 
+    // I15 : une note signée et verrouillée ne se réécrit plus (`trg_note_immutable`,
+    // 008) — `save_note` et `save_session_details` (171, `structured` vit dans la
+    // note, `WHERE status='draft'`) lèvent ou rendent NULL. Tenter quand même
+    // bloquerait `Terminer` alors que `close_consultation` (026/037) accepte une
+    // note verrouillée. On ne touche qu'au brut, jamais à la note.
+    if (!noteModifiable) {
+      if (brutEnAttente) {
+        const rBrut = await saveRawNotes(id, brut);
+        if (!rBrut.ok) {
+          setEtatBrut("echec");
+          signalerErreur(rBrut.error.message);
+          return false;
+        }
+        setEtatBrut("enregistre");
+      }
+      return true;
+    }
+
     const complet: Partial<Record<ChampSoap, string>> = {};
     for (const champ of CHAMPS_SOAP) complet[champ] = soap[champ];
 
