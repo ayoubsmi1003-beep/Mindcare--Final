@@ -5,8 +5,8 @@ schema change, no clinical write, no model/runtime change.
 
 ## 1. Baseline
 
-- Branch `v8-alexa-final`, HEAD `35b927d`, up to date with
-  `github/v8-alexa-final`.
+- Branch `v8-alexa-final`, baseline HEAD `35b927d`. The correction commit
+  `2ca56ea` is pushed to `github/v8-alexa-final`.
 - **33 pre-existing uncommitted local changes** are preserved: `electron/`,
   `scripts/`, several unit tests, `supabase/bootstrap/010_app_role.sql`, and
   the **local deletion of `214_purge_documents_synthetiques.sql`**. Migration
