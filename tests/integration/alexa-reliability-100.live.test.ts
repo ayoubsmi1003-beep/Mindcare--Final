@@ -4,7 +4,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { Client } from "pg";
 import { describe, expect, it } from "vitest";
-import { readKnowledge } from "@/server/alexa/knowledge-adapter";
+import { readKnowledge, dependancesReadKnowledge } from "@/server/alexa/knowledge-adapter";
 import { inferNativeGeneralAlexa } from "@/server/alexa/model-gateway";
 import { inferLocalText } from "@/server/alexa/local-model";
 import { ouvrirSession } from "@/server/auth/session";
@@ -127,7 +127,7 @@ describe.skipIf(!enabled)("Alexa reliability — 100 cases", () => {
         const elapsed = () => Math.round(performance.now() - started);
 
         if (category === "rag" || category === "medication" || id === "REL-03" || id === "REL-04" || id === "REL-05") {
-          const result = await readKnowledge(sql, question, undefined, { vectorActif: false });
+          const result = await readKnowledge(sql, question, undefined, dependancesReadKnowledge());
           if (oracle["kind"] === "abstention" || oracle["answerable"] === false) {
             record(id, category, result.etat === "sans-preuve" ? "PASS" : "FAIL", elapsed(), `etat=${result.etat}`);
             continue;

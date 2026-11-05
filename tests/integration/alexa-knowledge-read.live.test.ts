@@ -1,6 +1,6 @@
 import { Client } from "pg";
 import { describe, expect, it } from "vitest";
-import { readKnowledge } from "@/server/alexa/knowledge-adapter";
+import { readKnowledge, dependancesReadKnowledge } from "@/server/alexa/knowledge-adapter";
 import type { ClientSql, ReponseRpc } from "@/server/jarvis/client-sql";
 
 /**
@@ -42,10 +42,10 @@ describe.skipIf(!url)("readKnowledge on the cabinet database (read-only)", () =>
 
     try {
       const started = performance.now();
-      const sertraline = await readKnowledge(sql, "Quelles précautions pour la sertraline ?", undefined, { vectorActif: false });
+      const sertraline = await readKnowledge(sql, "Quelles précautions pour la sertraline ?", undefined, dependancesReadKnowledge());
       const sertralineMs = Math.round(performance.now() - started);
-      const lithium = await readKnowledge(sql, "Comment surveiller un patient sous lithium ?", undefined, { vectorActif: false });
-      const offCorpus = await readKnowledge(sql, "Quelle est la capitale de l'Australie ?", undefined, { vectorActif: false });
+      const lithium = await readKnowledge(sql, "Comment surveiller un patient sous lithium ?", undefined, dependancesReadKnowledge());
+      const offCorpus = await readKnowledge(sql, "Quelle est la capitale de l'Australie ?", undefined, dependancesReadKnowledge());
 
       const sections = (value: typeof sertraline) => value.preuves.map(proof => proof.section ?? "").join(" || ");
       console.log(JSON.stringify({
