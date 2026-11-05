@@ -26,7 +26,7 @@ const cases = allCases.filter(testCase => ["summaries", "notes", "mixed", "multi
   && (!wantedIds?.length || wantedIds.includes(testCase.id)));
 
 interface Answer { status: string | null; sentences: number; sources: string[]; chars: number; hasDigit: boolean;
-  calls: { name: string; keys: string[]; section?: string }[];
+  calls: { name: string; keys: string[]; section?: string; query?: string }[];
   parts: { status: string; reasonClass: string }[];
   stages: string[];
   fallbackText: boolean }
@@ -50,7 +50,7 @@ async function turn(actor: string, patientId: string, question: string, conversa
       { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, contextKey: JSON.stringify({ patientId, page: `/patients/${patientId}` }),
         agentObserve: call => {
           const keys = Object.keys(call.args);
-          calls.push({ name: call.name, keys, ...(typeof call.args["section"] === "string" ? { section: call.args["section"] } : {}) });
+          calls.push({ name: call.name, keys, ...(typeof call.args["section"] === "string" ? { section: call.args["section"] } : {}), ...(typeof call.args["query"] === "string" ? { query: call.args["query"] } : {}) });
         } },
       event => { events.push(event); },
       controller.signal,

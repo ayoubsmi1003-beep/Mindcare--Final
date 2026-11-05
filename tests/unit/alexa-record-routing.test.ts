@@ -110,5 +110,7 @@ describe("patient-record routing", () => {
     expect(parsePatientMention("Quels événements de vie sont rapportés dans les notes ?")).toEqual({ status: "none" });
     expect(parsePatientMention("Et pour la grossesse ?")).toEqual({ status: "none" });
     expect(parsePatientMention("Et en cas d'insuffisance rénale ?")).toEqual({ status: "none" });
+    expect(parsePatientMention("Le patient prend-il un traitement dont les précautions figurent dans les sources approuvées ?")).toEqual({ status: "none" });
+    expect(parsePatientMention("Le patient a-t-il un traitement contre-indiqué au regard de ses diagnostics ?")).toEqual({ status: "none" });
   });
 });
