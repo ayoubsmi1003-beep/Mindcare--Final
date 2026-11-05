@@ -98,7 +98,7 @@ def main():
     startup_ms = (time.perf_counter() - start) * 1000
     process = psutil.Process()
     ram_samples = [process.memory_info().rss]
-    question = {"route": {"type": "choice", "instructions": "Que demande la personne ?", "options": ROUTES}}
+    question = {"route": {"type": "choice", "instructions": "Que demande la personne ?", "criteria": ROUTES}}
     results = []
     for group, case_id, utterance in cases:
         start = time.perf_counter()
