@@ -35,6 +35,7 @@ import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelin
 import { agentCopy, missingPatientFieldParagraph, patientListParagraph, patientListPageParagraph, patientPopulationCountParagraph } from "@/i18n/alexa-agent";
 import { resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
+import { readPatientFinance, patientFinanceSentence } from "./patient-finance";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
 /** Narrow a two-visit read to its verified second-most-recent visit. */
 export function isolatePreviousClinicalConsultation(context:ClinicalContext):ClinicalContext|null {
@@ -400,7 +401,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
       evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context',section:'sessionDetails',consultations:visits.length}},...visits.map(v=>({id:v.id,type:'consultation' as const,label:date(v.startedAt)}))],
       data:{patientId,sourceRevision:context.sourceRevision,coverage:context.coverage,measureEvolution:visits.map(v=>({consultationId:v.id,startedAt:v.startedAt,sessionDetails:v.sessionDetails??null}))}};
     }
-    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance)\b|\b(?:consultation|seance)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(requested);
+    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance|note)\b|\b(?:consultation|seance|note)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(requested);
     if(!spec.consultationId&&!spec.from&&!spec.to&&(olderDifficulty||followUp||latestConsultation)){
      const context=await buildClinicalContext(db,{patientId:patientId!},{count:2},signal);
      const visits=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>b.startedAt.localeCompare(a.startedAt)||b.id.localeCompare(a.id));
@@ -421,14 +422,26 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     const normalizedRequest=requestText.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase();
     const recurringThemeRequest=/\b(?:theme|motif|element) recurrent\b/u.test(normalizedRequest);
     const chronologicalSummary=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(normalizedRequest)&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(normalizedRequest);
-    const requestedSummaryCount=requestedCounts[0],previousConsultationRequest=section==='summary'&&/\b(?:avant[- ]derniere|precedente consultation|consultation qui precede la derniere)\b/u.test(normalizedRequest);
+    const consultationBounds=/\bpremi[eè]re\b[^.!?]*\bderni[eè]re\b[^.!?]*\bconsultations?\b/u.test(normalizedRequest),requestedSummaryCount=consultationBounds?undefined:requestedCounts[0],previousConsultationRequest=section==='summary'&&/\b(?:avant[- ]derniere|precedente consultation|consultation qui precede la derniere)\b/u.test(normalizedRequest);
     const latestConsultationComparison=section==='summary'&&requestedSummaryCount===2&&/\b(?:entre\b.*\b(?:deux|2)\b|compar\w*|difference)\b/u.test(normalizedRequest)&&/\b(?:chang\w*|evolu\w*|compar\w*|difference)\b/u.test(normalizedRequest);
     const requestedSummaryScope=rangedSummary||requestedSummaryCount!==undefined;
     const defaultChronology=section==='summary'&&chronologicalSummary&&!requestedSummaryScope;
     const summaryReadCount=section==='summary'
-      ? previousConsultationRequest?2:requestedSummaryCount??(defaultChronology?6:typeof a['count']==='number'?a['count']:100)
+      ? consultationBounds?100:previousConsultationRequest?2:requestedSummaryCount??(defaultChronology?6:typeof a['count']==='number'?a['count']:100)
       : typeof a['count']==='number'?a['count']:5;
     let authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:summaryReadCount,all:section==='summary'&&!rangedSummary&&!chronologicalSummary&&!previousConsultationRequest&&requestedSummaryCount===undefined,...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
+    if(section==='summary'&&consultationBounds){
+     const visits=[...authorizedContext.consultations,...(authorizedContext.currentConsultation?[authorizedContext.currentConsultation]:[])].sort((left,right)=>left.startedAt.localeCompare(right.startedAt)||left.id.localeCompare(right.id));
+     const first=visits[0],last=visits.at(-1);
+     if(!first||!last)return {...result,status:'empty',complete:true,text:applicationReadCopy.extended.empty,evidence:[patientSource(patientId!)]};
+     const date=(at:string)=>new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers',day:'numeric',month:'long',year:'numeric'}).format(new Date(at));
+     result.data={patientId,sourceRevision:authorizedContext.sourceRevision,consultationBounds:{first:{id:first.id,startedAt:first.startedAt},last:{id:last.id,startedAt:last.startedAt,endedAt:last.endedAt}},coverage:authorizedContext.coverage};
+     result.text=`La première consultation du dossier est datée du ${date(first.startedAt)} ; la dernière consultation ${last.endedAt===null?'en cours a commencé':'est datée du'} ${date(last.startedAt)}.`;
+     result.evidence=[patientSource(patientId!),{id:first.id,type:'consultation',label:date(first.startedAt)},{id:last.id,type:'consultation',label:date(last.startedAt)}];
+     result.complete=authorizedContext.coverage.complete;
+     result.status=result.complete?'ok':'partial';
+     return result;
+    }
     if(previousConsultationRequest){
      const scoped=isolatePreviousClinicalConsultation(authorizedContext);
      if(!scoped)return {...result,status:'empty',complete:true,text:narrativeCopy.olderSessionMissing,evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:authorizedContext.sourceRevision,provenance:{gate:'get_alexa_clinical_context',consultationsRead:authorizedContext.coverage.returned}}]};
@@ -471,6 +484,12 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
         ?? (chronologicalSummary||latestConsultationComparison?await summarizeClinicalContext(comparisonContext,signal,!requestedSummaryScope,true,{chronological:true,includeDates:latestConsultationComparison,...(latestConsultationComparison?{comparison:true}:{})}):rangedSummary?await summarizeClinicalConsultations(context,signal):boundedSummary?await summarizeClinicalContext(context,signal,false,true,{includeDates:false,...(singleVisitFocus?{focus:singleVisitFocus}:{})}):!requestedSummaryScope?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
     summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
+    // A bounded single-visit summary already has a deterministic, source-cited
+    // local response. Keep it when the optional narrative model fails instead
+    // of turning a readable dossier into a failed turn.
+    if (!narrative.generated && boundedSummary && requestedSummaryCount===1 && result.text.trim()) {
+      result.complete=false;result.status="partial";return result;
+    }
     if (!narrative.generated) return {...result,status:"error",complete:false,text:narrative.text,error:{code:"clinical-synthesis-unavailable",retryable:false}};
      const completeForRequest=clinicalSummaryComplete(context,narrative.complete,requestedSummaryScope);
      const summaryLimit=defaultChronology&&context.coverage.hasMore?applicationReadCopy.extended.historySummaryLimit:completeForRequest?"":narrativeCopy.limited;
@@ -707,6 +726,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    return failure(call,'needs_input','Aucun document ouvert n’est identifié dans l’espace actuel. Précisez le document à consulter.','current-document-not-selected');
   }
+  if(call.name==='query_finance'&&patientId&&/\bsituation financi[eè]re\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())){
+   const summary=await readPatientFinance(db,patientId,signal);
+   const sentence=patientFinanceSentence(summary,'fr');
+   result.data={patientFinance:summary};
+   result.text=sentence.text;
+   result.evidence=[patientSource(patientId),...sentence.sources];
+   result.complete=summary.complete;
+   result.status=summary.complete?'ok':'partial';
+   return result;
+  }
   if(["query_agenda","query_consultations","query_finance","query_documents"].includes(call.name)){
    const {partIds:_parts,patientName:_name,patientId:_patient,...spec}=a;
    if(call.name==='query_agenda')delete spec['limit'];
@@ -758,6 +787,10 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const groundedDomain=call.name==='query_agenda'||(call.name==='query_finance'&&frenchRequestAdmission(input.text,false).tools?.includes('query_finance'));
    if(requestedPeriod&&groundedDomain&&typeof spec['from']==='string'&&typeof spec['to']==='string'&&(Date.parse(spec['from'])!==Date.parse(requestedPeriod.from)||Date.parse(spec['to'])!==Date.parse(requestedPeriod.to)))return failure(call,'needs_input',recordsCopy.periodConflict,'requested-period-mismatch');
    if((!!spec["from"])!==(!!spec["to"]))return failure(call,"needs_input",copy.date,"period");
+   if(call.name==='query_agenda'&&patientId&&!spec['appointmentId']&&!spec['from']&&!spec['to']&&!spec['period']&&/\b(?:prevus?|prevues?|a venir|prochain\w*|futur\w*)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())){
+    const from=z.iso.datetime({offset:true}).parse(asOf),to=new Date(Date.parse(from)+364*86400000).toISOString();
+    spec['from']=from;spec['to']=to;
+   }
    if(call.name==="query_agenda"&&!spec["from"])return failure(call,"needs_input",copy.date,"period");
    if(call.name==="query_finance"&&cabinetFinanceModes.some(mode=>mode===spec["mode"])){
     if(typeof spec["from"]!=="string"||typeof spec["to"]!=="string")return failure(call,"needs_input",copy.date,"period");

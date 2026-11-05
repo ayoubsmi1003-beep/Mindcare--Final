@@ -15,6 +15,7 @@ const common = new Set([
   "avant", "apres", "depuis", "entre", "dans", "avec", "sans", "et", "pour", "chez", "de", "du", "en", "au", "a", "il", "elle", "par", "nom", "complet", "que", "qui", "restent", "reste", "restant", "attente", "encore", "matin", "matinee", "apres-midi", "aprem", "soir", "soiree", "journee", "creneau", "creneaux", "semaine", "annee", "voulais", "voulait", "plutot", "plutôt",
   "selon", "dsm", "livre", "livres", "reference", "references",
   "diagnostic", "diagnostics", "note", "notes", "cliniques", "symptome", "symptomes", "anxiete", "depression", "sommeil", "humeur", "dose", "posologie", "frequence",
+  "antecedent", "antecedents", "allergie", "allergies", "contre-indication", "contre-indications", "grossesse", "allaitement", "vie", "insuffisance", "renal", "renale", "renaux", "renales",
   "trouble", "troubles", "bipolaire", "bipolaires", "schizophrenie",
   "sur", "concernant", "svp", "s'il", "s’il", "please", "merci", "score", "scores", "echelle", "echelles", "ordonnance", "cours", "tarif", "tarifs", "prix", "cout", "couts",
   "est", "est-il", "est-elle", "sont", "sont-ils", "sont-elles", "ont", "ont-ils", "ont-elles", "prend", "prend-il", "prend-elle", "indique", "indiquent", "indiquent-elles", "enregistre", "enregistree", "enregistres", "enregistrees", "ete", "fait", "font", "a-t-il", "a-t-elle", "contient", "contient-il", "contient-elle", "contiennent", "comprend", "comprend-il", "comporte", "comporte-t-il", "efficace", "efficaces", "ou", "aucun", "aucune", "quel", "quelle", "quels", "quelles", "suivant", "prochain", "suivante", "prochaine", "dit", "disent", "montre", "montrent", "auquel", "auxquels",
@@ -117,7 +118,8 @@ export function parsePatientMention(text: string): PatientMention {
   for (const match of text.matchAll(/\b(?:pour|chez)\s+/giu)) {
     const start = match.index + match[0].length;
     const candidate = candidateName(text.slice(start, start + 100));
-    if (candidate?.includes(" ") && !isMedicationName(candidate)) add(candidate, start);
+    const firstWord = candidate?.split(/\s+/u)[0];
+    if (candidate?.includes(" ") && !isMedicationName(candidate) && !(firstWord && isMedicationName(firstWord))) add(candidate, start);
   }
   // Action commands often put the patient immediately after the verb:
   // « Place islam adjina sur le créneau ». Require a full name.
@@ -181,7 +183,7 @@ export function parsePatientMention(text: string): PatientMention {
     if (generalSingleTopic(candidate, text.slice(0, match.index))) continue;
     // In medication questions an unquoted drug is a topic. A separately named
     // patient, "patient Lithium" or a quoted identity still resolves locally.
-    if (candidate && medicineQuestion && isMedicationName(candidate)) continue;
+    if (candidate && medicineQuestion && (isMedicationName(candidate) || isMedicationName(candidate.split(/\s+/u)[0]!))) continue;
     // In "score de Hamilton", Hamilton names the scale. A quoted name or
     // "patient Hamilton" remains an explicit identity reference. Exclude this
     // eponym before counting distinct names, including a named mixed request.

@@ -191,12 +191,14 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
   const operation = /compar|قارن|مقارن/u.test(normalized) ? "compare" : /resum|synth|لخص|تلخيص|ملخص/u.test(normalized) ? "summarize" : undefined;
   // Patient-level money questions stay on the audited patient finance read;
   // the cabinet overview gate must not ignore a named patient.
+  if((parsePatientMention(text).status==='named'||requestsPatientScope(text))&&/\bsituation financi[eè]re\b/u.test(normalized))return { intent: "patient_finance", count: 10, language };
   if(parsePatientMention(text).status==='named'&&(
     /\b(?:combien|quel(?:le)?)\b[^.!?]{0,80}\b(?:regle|paye|encaisse|verse)\b/u.test(normalized)
     ||/\bsolde\b[^.!?]{0,40}\b(?:reste|du|impaye)\b/u.test(normalized)
   ))return { intent: "patient_finance", count: 10, language };
   // Writes always retain the existing human confirmation boundary.
-  if (/supprim|effac|\bsigne(?:r)?\b|clotur|fermer|ajout|prescri|modifi(?!cation)|augment|arrete.*trait|(?:prepar|redig|gener).{0,60}brouillon|حذف|امسح|وقع|زيد.*دوز/u.test(normalized)) return { intent: "proposal", count: 1, language };
+  const noMutation=/\b(?:sans|ne\s+pas|n['’]\s*pas)\s+(?:ajouter|ajoute|modifier|modifie|changer|change|supprimer|supprime|creer|cree|enregistrer|enregistre|arreter|arrete|suspendre|suspends|reprendre|reprends)\b/u.test(normalized);
+  if (!noMutation && /supprim|effac|\bsigne(?:r)?\b|clotur|fermer|ajout|prescri|modifi(?!cation)|augment|arrete.*trait|(?:prepar|redig|gener).{0,60}brouillon|حذف|امسح|وقع|زيد.*دوز/u.test(normalized)) return { intent: "proposal", count: 1, language };
   if (/(?:n['’]|ne\s+|pas\s+)(?:ouvre|ouvrir|va|aller)|(?:ouvre|ouvrir|va|aller)\b.{0,30}\b(?:pas|jamais)\b|لا\s+(?:تفتح|تروح|افتح)|ما\s+(?:تفتح|تروح)/u.test(normalized)) return { intent: "clarify", count: 1, language };
   // Admit the complete public question before loose clinical word fragments
   // ("photosynthese" contains "synthese"). The egress privacy gate still runs.
@@ -250,6 +252,7 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
     const count = requestedCount(normalized) ?? 1;
     return count < 1 || count > 100 || (operation === "compare" && count < 2) ? { intent: "clarify", count: 1, language } : { intent: "history", count, language, ...(operation ? { operation } : {}), ...(focus ? { focus } : {}) };
   }
+  if (/\b(?:antecedents?|histoire medicale)\b/u.test(normalized)) return { intent: "summary", count: 5, language };
   if (/resume|resum|synthese|cas|ملخص|لخص/u.test(normalized)) return { intent: "summary", count: 5, language };
   if (/comment va (?:ce patient|cette patiente)|كيف(?:اش)?\s+راه\s+المريض/u.test(normalized)) return { intent: "summary", count: 5, language };
   if (agendaRequest.test(normalized) || isGlobalWhoAgenda(normalized)) return { intent: "agenda", count: 1, language };

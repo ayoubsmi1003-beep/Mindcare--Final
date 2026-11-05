@@ -143,7 +143,7 @@ function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPat
  if((/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(plain)&&!singleScaleInventory))return null;
  const mention=parsePatientMention(text);
  if(mention.status==='ambiguous')return null;
- const latestVisit=/\b(?:derniere|plus recente)\s+(?:consultation|seance)\b|\b(?:consultation|seance)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(plain);
+ const latestVisit=/\b(?:derniere|plus recente)\s+(?:consultation|seance|note)\b|\b(?:consultation|seance|note)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(plain);
  const noteScopeKnown=scope.unboundedPeriod===true||!!scope.from&&!!scope.to;
  const explicitNoteRead=!!scope.noteQuery&&noteSearchRequested(text)||(!!scope.noteArea||/\b(?:cinq|5)\s+(?:parties|notes|rubriques)\b/u.test(plain))&&!!scope.from&&!!scope.to||/\bmesures\b[^.!?]*\bevolu\w*|\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
  const patientContextRead=tool==='get_patient_context'&&!!scope.patientSection&&(!!selectedPatientId||mention.status==='named')&&(scope.patientSection!=='notes'||latestVisit||noteScopeKnown&&explicitNoteRead);
@@ -558,7 +558,8 @@ function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:
  const dayWord=/\b(?:du jour|ce jour|de la journee|dans la journee|aujourd'hui)\b/u.test(plain),dayWindow=dayWord?cabinetDayWindow(asOf):null;
  const firstOfDay=/\b(?:premier|premiere|ouverture)\b[^.!?]{0,40}\b(?:rendez[- ]vous|rdv|journee|agenda)\b/u.test(plain);
  const nextWindow=nextAppointment&&!window&&!slotWindow&&!dayWindow?(()=>{const base=cabinetDayWindow(asOf);if(!base)return null;const end=new Date(base.to);end.setUTCDate(end.getUTCDate()+6);return {from:base.from,to:`${end.toISOString().slice(0,10)}T00:00:00+01:00`};})():null;
- const effectiveWindow=window??slotWindow??dayWindow??nextWindow;
+ const upcomingPatientWindow=selectedPatientId&&!window&&!/\b(?:aujourd.hui|demain|hier|semaine|mois|annee)\b/u.test(plain)&&/\b(?:prevus?|prevues?|a venir|prochains?|prochaines?)\b/u.test(plain)?(()=>{const from=z.iso.datetime({offset:true}).parse(asOf),to=new Date(Date.parse(from)+364*86400000).toISOString();return {from,to};})():null;
+ const effectiveWindow=window??slotWindow??dayWindow??nextWindow??upcomingPatientWindow;
  if(scope.tools?.length!==1||scope.tools[0]!=='query_agenda'||(!effectiveWindow&&!nextAppointment)||mention.status==='ambiguous'||!statusContract.complete)return null;
  const namedPatient=mention.status==='named'&&mention.name.includes(' ');
  const needsPatient=/\b(?:patient(?:e)?|dossier|son|sa|ses)\b/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
@@ -948,7 +949,8 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
   const queryContract=patientQueryContract(input.text,asOf);
   const medicalOnly=admission.tools?.length===1&&admission.tools[0]==='search_knowledge';
   const medicalPart:RequestPart={id:'requested_1',goal:input.text,tools:['search_knowledge'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]};
-  const directKnowledgeRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract&&medicalOnly&&input.text.length<=500?{part:medicalPart,call:{id:`direct-${input.clientTurnId}-knowledge`,name:'search_knowledge',args:{partIds:[medicalPart.id],query:input.text}}}:null;
+  const directKnowledgeRead=freshRead&&!requestedOutputs&&!countContract&&!compoundContract&&medicalOnly&&input.text.length<=500?{part:medicalPart,call:{id:`direct-${input.clientTurnId}-knowledge`,name:'search_knowledge',args:{partIds:[medicalPart.id],query:input.text}}}:null;
+ if(directKnowledgeRead){parts=[medicalPart];declared=true;}
   const extraApp=admission.applicationView==='reception'||admission.applicationView==='medication_catalog'?admission.applicationView:null;
   const catalogueLiteral=extraApp==='medication_catalog'?input.text.match(/(?:cherche|recherche|trouve|affiche)\s+(.+?)\s+dans le catalogue/iu)?.[1]?.trim():undefined;
   const appPart:RequestPart={id:'requested_1',goal:input.text,tools:['query_app'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]};

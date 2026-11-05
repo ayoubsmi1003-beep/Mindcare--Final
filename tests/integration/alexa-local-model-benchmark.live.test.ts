@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { describe, expect, it } from "vitest";
-import { inferLocalText, releaseLocalModel } from "@/server/alexa/local-model";
+import { inferLocalCompletion, releaseLocalModel } from "@/server/alexa/local-model";
 
 /**
  * Measures the pinned local model on the real development machine.
@@ -34,25 +34,27 @@ describe.skipIf(!enabled)("local model benchmark (pinned MiniCPM)", () => {
   it("measures cold start, warm generation and resident memory", async () => {
     const before = process.memoryUsage();
     const coldStart = performance.now();
-    const cold = await inferLocalText(messages, { maxOutputTokens: 120, timeoutMs: 180_000 });
+    const cold = await inferLocalCompletion(messages, { maxOutputTokens: 120, timeoutMs: 180_000 });
     const coldMs = Math.round(performance.now() - coldStart);
     const llamaMb = llamaMemoryMb();
 
     const warmStart = performance.now();
-    const warm = await inferLocalText(messages, { maxOutputTokens: 120, timeoutMs: 180_000 });
+    const warm = await inferLocalCompletion(messages, { maxOutputTokens: 120, timeoutMs: 180_000 });
     const warmMs = Math.round(performance.now() - warmStart);
     const after = process.memoryUsage();
+    const text = (value: typeof cold) => value.kind === "answer" ? value.text : "";
 
     console.log(JSON.stringify({
-      cold: { ms: coldMs, characters: cold.length, head: cold.slice(0, 80) },
-      warm: { ms: warmMs, characters: warm.length, head: warm.slice(0, 80) },
+      cold: { ms: coldMs, characters: text(cold).length, tokensOut: cold.tokensOut, tokensPerSecond: cold.tokensOut > 0 ? Number((cold.tokensOut / (coldMs / 1000)).toFixed(2)) : null },
+      warm: { ms: warmMs, characters: text(warm).length, tokensOut: warm.tokensOut, tokensPerSecond: warm.tokensOut > 0 ? Number((warm.tokensOut / (warmMs / 1000)).toFixed(2)) : null },
       llamaServerMb: llamaMb,
       nodeRssMb: Math.round(after.rss / 1024 / 1024),
       nodeRssDeltaMb: Math.round((after.rss - before.rss) / 1024 / 1024),
+      ttft: "not measured: non-streaming client",
     }, null, 2));
 
-    expect(cold.length).toBeGreaterThan(0);
-    expect(warm.length).toBeGreaterThan(0);
+    expect(text(cold).length).toBeGreaterThan(0);
+    expect(text(warm).length).toBeGreaterThan(0);
     await releaseLocalModel();
   }, 420_000);
 });

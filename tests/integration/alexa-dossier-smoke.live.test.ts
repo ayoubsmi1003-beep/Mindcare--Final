@@ -20,19 +20,38 @@ const allCases = require("../eval/alexa-reliability-100.cjs") as ReadonlyArray<{
   id: string; category: string; question: string; turns?: readonly string[];
 }>;
 const selected = process.env["SMOKE_CATEGORY"] ?? "";
+const wantedIds = process.env["SMOKE_IDS"]?.split(",").map(value => value.trim()).filter(Boolean);
 const cases = allCases.filter(testCase => ["summaries", "notes", "mixed", "multi_turn"].includes(testCase.category)
-  && (!selected || testCase.category === selected));
+  && (!selected || testCase.category === selected)
+  && (!wantedIds?.length || wantedIds.includes(testCase.id)));
 
-interface Answer { status: string | null; sentences: number; sources: string[]; chars: number; hasDigit: boolean }
+interface Answer { status: string | null; sentences: number; sources: string[]; chars: number; hasDigit: boolean;
+  calls: { name: string; keys: string[]; section?: string }[];
+  parts: { status: string; reasonClass: string }[];
+  stages: string[];
+  fallbackText: boolean }
+
+const classifyReason = (text: string): string =>
+  /aucune preuve/iu.test(text) ? "no-evidence"
+    : /p[ée]riode|dates? de d[ée]but/iu.test(text) ? "period"
+      : /quel patient|quelle information/iu.test(text) ? "clarification"
+        : /synth[èe]se|r[ée]ponse fiable/iu.test(text) ? "generation"
+          : /limite du tour/iu.test(text) ? "budget"
+            : "other";
 
 async function turn(actor: string, patientId: string, question: string, conversationId: string): Promise<Answer> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(new DOMException("Deadline", "TimeoutError")), 180_000);
   const events: AlexaEvent[] = [];
+  const calls: Answer["calls"] = [];
   try {
     await runAlexa(
       { text: question, conversationId, clientTurnId: randomUUID(), appContext: { patientId, page: `/patients/${patientId}` } },
-      { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, contextKey: JSON.stringify({ patientId, page: `/patients/${patientId}` }) },
+      { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, contextKey: JSON.stringify({ patientId, page: `/patients/${patientId}` }),
+        agentObserve: call => {
+          const keys = Object.keys(call.args);
+          calls.push({ name: call.name, keys, ...(typeof call.args["section"] === "string" ? { section: call.args["section"] } : {}) });
+        } },
       event => { events.push(event); },
       controller.signal,
     );
@@ -48,6 +67,10 @@ async function turn(actor: string, patientId: string, question: string, conversa
     sources: [...new Set(sentences.flatMap(sentence => sentence.sources.map(source => source.type)))],
     chars: text.length,
     hasDigit: /\d/u.test(text),
+    calls,
+    parts: done?.parts?.map(part => ({ status: part.status, reasonClass: classifyReason(part.reason ?? "") })) ?? [],
+    stages: events.filter((event): event is Extract<AlexaEvent, { type: "stage" }> => event.type === "stage").map(event => event.stage),
+    fallbackText: /synth[eè]se v[eé]rifi[eé]e est indisponible|aucune preuve suffisante|r[eé]ponse fiable est indisponible/iu.test(text),
   };
 }
 
@@ -78,9 +101,7 @@ describe.skipIf(!enabled)("dossier smoke", () => {
       const structural = acceptable(first) && (!second || acceptable(second));
       const smoke = structural && knowledgeOk;
       const outcome = { id: testCase.id, category: testCase.category, status: smoke ? "SMOKE" : "FAIL",
-        first: { status: first.status, sentences: first.sentences, sources: first.sources, chars: first.chars },
-        second: second ? { status: second.status, sentences: second.sentences, sources: second.sources, chars: second.chars } : null,
-        knowledgeOk };
+        first, second, knowledgeOk };
       outcomes.push(outcome);
       console.log(JSON.stringify(outcome));
     }
