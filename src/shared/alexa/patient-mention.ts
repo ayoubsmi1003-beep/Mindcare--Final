@@ -91,7 +91,7 @@ export function parsePatientMention(text: string): PatientMention {
   // Support explicit synthetic records such as "Patient Test001" while
   // keeping a quoted note marker ("REPERE-001-S06") as content, not identity.
   for (const match of text.matchAll(/\bpatiente?\s+test\d{1,4}\b/giu)) add(match[0],match.index);
-  const medicineQuestion = /dose|posolog|traitement|m[ée]dicament|effets?|contre.?indications?|fonctionne|m[ée]canisme/iu.test(text);
+  const medicineQuestion = /dose|posolog|traitement|m[ée]dicament|effets?|contre.?indications?|fonctionne|m[ée]canisme|pr[ée]cautions?|surveillance|monitoring|grossesse|allaitement|interactions?|risques?|indications?|toxicit[ée]|surdosage/iu.test(text);
   // Establish direct identities first so an apostrophe inside a surname
   // ("patient Jean D'Angelo") cannot become a second elided introducer.
   const direct = text.matchAll(/(?:(?<![\p{L}\p{N}])(?:r[eé]sum[eé]|synth[eè]se|consultations?|s[eé]ances?|traitements?|m[eé]dicaments?|diagnostics?(?:\s+(?:porte|portent)(?:\s+(?:actuellement|maintenant))?)?|notes?|[eé]chelles?|scores?|dossiers?(?:\s+(?:porte|contient|affiche|indique|pr[eé]sente))?|patient|patiente|prend)|ملخص|لخص|(?:ال)?(?:جلسة|جلسات|جلستان|جلستين|استشارة|استشارات|استشارتان|استشارتين))\s+/giu);
@@ -102,6 +102,14 @@ export function parsePatientMention(text: string): PatientMention {
     const candidate = candidateName(tail);
     if (generalSingleTopic(candidate, text.slice(0, start))) continue;
     if (candidate && isMedicationName(candidate) && /^(?:traitements?|m[eé]dicaments?)\s/iu.test(match[0])) continue;
+    // « un patient sous lithium » is a generic clinical subject, not an
+    // identity. Without this guard the parser returned `named: "lithium"` and
+    // the turn failed looking for a patient called lithium.
+    if (candidate && /^(?:sous|avec|prenant|traite|trait[ée]e|qui|ayant|porteur|porteuse)\b/iu.test(candidate)) continue;
+    // A capitalised name after the explicit noun remains an identity
+    // (« traitement du patient Lithium ») ; a lowercase drug in running text
+    // is a topic (« un patient sous lithium »).
+    if (candidate && /^\p{Ll}/u.test(candidate) && candidate.split(/\s+/u).some(word => isMedicationName(word))) continue;
     add(candidate, start);
   }
   // A patient named after « pour » or « chez » is explicit even when the

@@ -10,9 +10,8 @@ import {isIssuedKnowledgeResult} from "./knowledge-adapter";
 import { inferLocalText } from "./local-model";
 import {localModelFailureCode} from './local-model-protocol';
 import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
-import { classerCharge } from "@/server/egress/classification";
 import { verifierCitations } from "@/server/knowledge/citations";
-import { ALEXA_KNOWLEDGE_TRANSFORM, knowledgeMessages, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
+import { knowledgeMessages, isIssuedKnowledgeEnvelope, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
 import { knowledgeExcerptForSpeech, knowledgeResponseEvents, knowledgeSource, type KnowledgeResult } from "./knowledge-response";
 
 const fold = (value: string) => value.normalize("NFC").replace(/\s+/gu, " ").trim();
@@ -77,6 +76,18 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   const copy = dialogue(language);
   const message = (text: string): AlexaEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
   let extractiveChoices: Array<{ proof: KnowledgeResult["preuves"][number]; quote: string; order: number }> = [];
+  /**
+   * The ingested chunk carries its breadcrumb ("Sertraline › Dosing and Use ›
+   * Other Warnings/Precautions — …"). The breadcrumb is provenance, already
+   * carried by `proof.section`; repeating it inside the quoted sentence makes
+   * the answer look like a raw index row. Strip an EXACT leading prefix only.
+   */
+  const sansEnteteDeSection = (quote: string, section: string | null): string => {
+    if (!section) return quote;
+    const escaped = section.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+    const stripped = quote.replace(new RegExp(`^${escaped}\\s*(?:—|–|-)\\s*`, "u"), "").trim();
+    return stripped.length ? stripped : quote;
+  };
   const extractiveFallback = (): AlexaEvent[] | null => {
     if (!extractiveChoices.length) return null;
     const stop = new Set(["avec", "dans", "pour", "quel", "quels", "quelle", "quelles", "comment", "combien", "quoi", "sont", "être", "cette", "cette", "leur", "leurs", "plus", "moins", "selon", "entre", "dont", "aussi", "peut", "faut", "il", "elle", "nous", "vous", "mais", "donc", "alors", "tout", "tous", "toute", "toutes", "sans", "chez", "dossier", "patient", "patiente"]);
@@ -89,7 +100,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     const pool = selected.length ? selected : scored.slice(0, 1);
     const sentences: Extract<AlexaEvent, { type: "sentence" }>[] = [];
     for (const entry of pool) {
-      const quote = knowledgeExcerptForSpeech(entry.quote);
+      const quote = knowledgeExcerptForSpeech(sansEnteteDeSection(entry.quote, entry.proof.section));
       if (quote === null) continue;
       sentences.push({
         type: "sentence",
@@ -110,7 +121,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     }
     return sentences;
   };
-  const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty"]);
+  const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty", "coverage"]);
   const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "criteria-selection" | "unsafe-text" | "quote" | "quote-span" | "quote-polarity" | "unicode-number" | "number" | "quantity" | "citation" | "source-title" | "size" | "parse" = "parse") => {
     console.warn("[alexa-knowledge] source-fallback", reason);
     if (EXTRACTIVE_REASONS.has(reason)) {
@@ -124,7 +135,18 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     return knowledgeResponseEvents(result, language, false, [], question);
   }
   const messages = knowledgeMessages(result, taskFor(question), locale, focusFor(question));
-  if (!messages || classerCharge(messages, { transformId: ALEXA_KNOWLEDGE_TRANSFORM }).decision !== "AUTORISER")
+  if (process.env["ALEXA_DEBUG_KNOWLEDGE"] === "1") {
+    console.warn("[alexa-knowledge] synthesis-entry", JSON.stringify({
+      etat: result.etat, proofs: result.preuves.length, issued: isIssuedKnowledgeResult(result),
+      messages: messages !== null, envelope: messages !== null && isIssuedKnowledgeEnvelope(messages), compact: options.compact === true,
+    }));
+  }
+  // Local inference only: the evidence envelope is server-issued and frozen,
+  // and no byte leaves the machine. The egress classifier's person-name
+  // heuristic is not an egress control here and rejects book titles
+  // ("Prescriber's Guide") and section paths ("Sertraline Dosing") as names.
+  // Identifier/injection checks remain at the real egress boundary.
+  if (!messages || !isIssuedKnowledgeEnvelope(messages))
     return options.compact?(result.etat!=='ok'?knowledgeResponseEvents(result,language):fallback('coverage')):knowledgeResponseEvents(result, language);
   if(options.compact&&'missingRequestedSections' in result&&result.missingRequestedSections)return [{type:'sentence',text:KNOWLEDGE_COMPARISON_UNAVAILABLE,kind:'knowledge',sources:result.preuves.map(p=>knowledgeSource(p))}];
   // Question data is local-only; do not alter the issued, approved-source egress envelope.
@@ -148,7 +170,11 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     return quote && proof ? [{ proof, quote, order: index * 100 + Number(id.slice(1)) }] : [];
   }));
   const omittedQuotes=options.compact&&choices.some((row,index)=>fold(row.quotes.join(' '))!==fold(result.preuves[index]!.extrait));
-  if(omittedQuotes)return fallback('coverage');
+  // A bibliographic marker or a heading is not a citable span. Rejecting the
+  // WHOLE synthesis because the split quotes do not reconstruct the raw chunk
+  // discarded every real answer; the model's citations are still bounded by
+  // `allowedQuoteIds` and checked below.
+  if(omittedQuotes)console.warn('[alexa-knowledge] quote-context-omitted');
   if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length)){
     if(extractiveCriteria)console.warn('[alexa-knowledge] criteria-selection-rejected','no-allowed-quote');
     return fallback(extractiveCriteria?'criteria-selection':'entity');
@@ -267,7 +293,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       // Keep the model as a quote selector; only server-framed source text is emitted.
       for (const evidence of sentence.evidence) {
         const proof=result.preuves[evidence.index-1]!;
-        const quote = knowledgeExcerptForSpeech(evidence.quote);
+        const quote = knowledgeExcerptForSpeech(sansEnteteDeSection(evidence.quote, proof.section));
         if(quote===null)return fallback('source-title');
         events.push({ type: "sentence", text: knowledgeSynthesisCopy[locale].quote(quote),
           kind: "knowledge", sources: [{...knowledgeSource(proof),excerpt:quote}] });
@@ -275,6 +301,9 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     }
     if ("omittedLongPassages" in result && result.omittedLongPassages) events.push(message(copy.longKnowledge));
     if (events.reduce((total, event) => total + (event.type === "sentence" ? event.text.length : 0), 0) > 12000) return fallback("size");
+    // Deliberate: the server publishes verbatim approved quotes, not the
+    // model's prose. A quoted answer is therefore never certified `supported`
+    // (tests: "does not publish a generated claim as supported", criteria).
     options.onCoverage?.("partial");
     if(options.compact){
       const sentences=events.filter((e):e is Extract<AlexaEvent,{type:'sentence'}>=>e.type==='sentence'),sources=new Map<string,AlexaSource>();

@@ -716,7 +716,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     spec['from']=absolutePeriod.from;spec['to']=absolutePeriod.to;delete spec['period'];
    }
    if(call.name==='query_consultations'){
-    const closure=/\bdate (?:de )?(?:cloture|fin)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+    const closure=/\bdate (?:de )?(?:cloture|fin)\b|\b(?:consultations?|seances?)\s+(?:terminees?|cloturees?|closes?|finies?|realisees?)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
     if(spec['dateAxis']==='ended_at'&&!closure)return failure(call,'needs_input',recordsCopy.periodConflict,'unrequested-date-axis');
     if(closure)spec['dateAxis']='ended_at';
    }

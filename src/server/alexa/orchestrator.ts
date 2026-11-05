@@ -1,4 +1,5 @@
 ﻿import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
+import type { AgentCall } from "@/shared/alexa/agent";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
 import type { AlexaEvent, AlexaNavigation, TurnInput } from "@/shared/alexa/turn";
@@ -20,6 +21,8 @@ import { executeRead } from "./tool-executor";
 import { contextSources, localDisplay, localResponse } from "./local-response";
 import { inferGeneralAlexa, type inferAlexa } from "./model-gateway";
 import { readKnowledge } from "./knowledge-adapter";
+import { planKnowledgeQuery } from "./knowledge-query";
+import { requestedMedicationNames } from "./knowledge-evidence-content";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { readAgenda, readAgendaDay, requestsNextPatient } from "./agenda-adapter";
 import { readDailyReceipts } from "./receipts-adapter";
@@ -37,6 +40,27 @@ import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
 import { explicitFrenchCurrentMonthRange, frenchRequestAdmission } from "@/shared/alexa/request-contract";
 import { z } from "zod";
+
+/** Deterministic application aggregates that the local 1B router often misses. */
+function deterministicAggregateCall(text: string, asOf: string): AgentCall | null {
+  const plain = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+  if (/^combien\b[^.!?]{0,80}\bconsultations?\b[^.!?]{0,40}\b(?:terminees?|closes?|faites?|realisees?)\b[^.!?]{0,40}\b(?:cette annee|annee en cours|annee civile)\b\s*[?.!]*$/u.test(plain)) {
+    const year = Number(asOf.slice(0, 4)) || new Date().getUTCFullYear();
+    return {
+      id: "deterministic_consultations", name: "query_consultations",
+      args: { partIds: ["deterministic"], mode: "count", status: "closed", dateAxis: "ended_at",
+        from: `${year}-01-01T00:00:00+01:00`, to: `${year + 1}-01-01T00:00:00+01:00` },
+    };
+  }
+  if (/^combien\b[^.!?]{0,80}\bnouveaux?\s+patients?\b[^.!?]{0,40}\b(?:ce mois|mois en cours|mois courant)\b\s*[?.!]*$/u.test(plain)) {
+    const period = explicitFrenchCurrentMonthRange(text, asOf);
+    if (period) return {
+      id: "deterministic_new_patients", name: "query_patients",
+      args: { partIds: ["deterministic"], mode: "count", population: "active", createdPeriod: period },
+    };
+  }
+  return null;
+}
 
 export interface OrchestratorDependencies {
   db: Pick<DbPort, "rpc">;
@@ -269,12 +293,50 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     const listedReferenceText=agentInput.text.replace(/^\s*(?:montre|affiche|ouvre|présente|presente|sélectionne|selectionne)\s+/iu,'');
     const selectedListedPatient=previous?.patients?resolveListedReference(listedReferenceText,previous.patients):null;
     const inheritedAgendaNextDayText=dependencies.resumeCursor?null:agendaDayFollowup(agentInput.text,previous),inheritedAgendaText=inheritedAgendaNextDayText??(dependencies.resumeCursor?null:agendaStatusFollowup(agentInput.text,previous)),inheritedTreatmentText=inheritedAgendaText||dependencies.resumeCursor?null:treatmentPauseFollowup(agentInput.text,previous),inheritedFinanceText=inheritedAgendaText||inheritedTreatmentText||dependencies.resumeCursor?null:previousMonthFollowup(agentInput.text,previous,asOf),inheritedPatientCountText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||dependencies.resumeCursor?null:replacedPatientCountFollowup(agentInput.text,previous,asOf),inheritedPatientCorrectionText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||dependencies.resumeCursor?null:patientCorrectionFollowup(agentInput.text,previous),inheritedPreviousConsultationText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||dependencies.resumeCursor?null:previousConsultationFollowup(agentInput.text,previous,asOf),inheritedConsultationStatusText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||dependencies.resumeCursor?null:consultationStatusFollowup(agentInput.text,previous,asOf),inheritedGroupedMinorText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||dependencies.resumeCursor?null:groupedMinorFollowup(agentInput.text,previous,asOf),inheritedMonthlyChargesText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||dependencies.resumeCursor?null:monthlyChargesFollowup(agentInput.text,previous),inheritedOrdinalPhoneText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||dependencies.resumeCursor?null:ordinalPhoneFollowup(agentInput.text,previous),inheritedTreatmentFrequencyText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||dependencies.resumeCursor?null:treatmentFrequencyFollowup(agentInput.text,previous,asOf),inheritedLatestScaleText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||dependencies.resumeCursor?null:latestScaleFollowup(agentInput.text,previous,asOf),inheritedComparisonText=dependencies.resumeCursor?null:consultationComparisonFollowup(agentInput.text,previous,asOf),inheritedDiagnosisStateText=dependencies.resumeCursor?null:diagnosisStateFollowup(agentInput.text,previous,asOf),inheritedPaymentsTotalText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||inheritedLatestScaleText||dependencies.resumeCursor?null:patientPaymentsTotalFollowup(agentInput.text,previous),inheritedText=inheritedAgendaText??inheritedTreatmentText??inheritedFinanceText??inheritedPatientCountText??inheritedPatientCorrectionText??inheritedPreviousConsultationText??inheritedConsultationStatusText??inheritedGroupedMinorText??inheritedMonthlyChargesText??inheritedOrdinalPhoneText??inheritedTreatmentFrequencyText??inheritedLatestScaleText??inheritedComparisonText??inheritedDiagnosisStateText??inheritedPaymentsTotalText;
-    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:agentInput;
-    const reusePatient=continuesPatientReference(turnInput.text,previous);
+    const knowledgeFollowup=!dependencies.resumeCursor&&previous?.lastRequest&&input.text.length<=80
+      &&requestedMedicationNames(previous.lastRequest).length>0
+      &&!/\b(?:patient|patients|combien|dossier|dossiers)\b/iu.test(previous.lastRequest)
+      &&planKnowledgeQuery(previous.lastRequest)!==null
+      &&/^(?:et|pour|en cas de|quid|et si|chez)\b/iu.test(input.text.trim())
+      &&!/\b(?:patient|dossier|consultation|agenda|rendez|paiement|document)\b/iu.test(input.text)
+      ?`${previous.lastRequest} ${input.text.trim()}`:null;
+    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:agentInput;    const reusePatient=continuesPatientReference(turnInput.text,previous);
     const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
+    const deterministicAggregate=!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
+      ?deterministicAggregateCall(turnInput.text,asOf):null;
+    if(deterministicAggregate){
+      const result=await agentExecutor(scopedInput,dependencies.db,dependencies.knowledge)(deterministicAggregate,asOf,[],signal,input.text);
+      if(result.text&&["ok","empty","partial"].includes(result.status)){
+        emit({type:"sentence",text:result.text,kind:"fact",sources:result.evidence});
+        conversationState.finish(lease,{intent:deterministicAggregate.name==="query_consultations"?"history":"patient_search",count:1,lastRequest:turnInput.text});
+        emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,
+          limited:!result.complete,status:result.complete?"completed":"partial",speechAllowed:true,
+          parts:[{id:"deterministic",goal:input.text,conditions:[],dependsOn:[],status:"answered",resultRefs:[]}]});
+        return;
+      }
+    }
     const result=await runAgentLoop(scopedInput,{actor:dependencies.actor,...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{}),...(dependencies.agentInfer?{infer:dependencies.agentInfer}:{}),...(dependencies.agentObserve?{observeCall:dependencies.agentObserve}:{}),...(dependencies.agentObserveResult?{observeResult:dependencies.agentObserveResult}:{}),...(dependencies.agentObserveData?{observeData:dependencies.agentObserveData}:{}),...(dependencies.resumeCursor?{resumeCursor:dependencies.resumeCursor}:{}),execute:agentExecutor(scopedInput,dependencies.db,dependencies.knowledge),onStage:()=>emit({type:"stage",stage:"analysis"})},signal);
     if(!conversationState.isCurrent(lease)) {emit({type:"error",code:"stale",message:dialogue("fr").stale});return;}
+    // The 1B router can fail a book question outright ("capacité non
+    // disponible") while approved evidence exists. Fall back to the governed
+    // reader + compact synthesis instead of refusing. This runs only when the
+    // agent produced no usable part, so normal routing is untouched.
+    const unrouted=result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status));
+    if(unrouted&&!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
+      &&parsePatientMention(input.text).status==="none"&&planKnowledgeQuery(turnInput.text)!==null){
+      const found=await readKnowledge(dependencies.knowledge,turnInput.text,signal,undefined,{traceOrigin:"direct"});
+      if(found.etat==="ok"&&found.preuves.length>0){
+        emit({type:"stage",stage:"knowledge"});
+        const events=await synthesizeKnowledge(found,turnInput.text,"fr",signal,{compact:true});
+        for(const event of events)emit(event);
+        conversationState.finish(lease,{intent:"knowledge",count:1,lastRequest:turnInput.text});
+        emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,
+          status:"partial",speechAllowed:true,
+          parts:[{id:"knowledge_fallback",goal:input.text,conditions:[],dependsOn:[],status:"answered",resultRefs:[]}]});
+        return;
+      }
+    }
     const responses=result.results.filter(r=>r.text);
     if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
     const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>`${p.goal} — ${p.reason}`));

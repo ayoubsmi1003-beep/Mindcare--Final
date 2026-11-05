@@ -62,7 +62,7 @@ const facts: readonly PublicFact[] = [
     id: "boiling", label: "OpenStax Chemistry 2e — Phase Transitions",
     sourceUrl: "https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions",
     match: [["eau"], ["bout", "bouillir", "ebullition"]],
-    answer: "L’eau bout à sa température d’ébullition lorsque sa pression de vapeur égale la pression extérieure; elle se transforme en vapeur.",
+    answer: "L’eau bout à 100 °C au niveau de la mer, à pression atmosphérique normale; elle se transforme en vapeur, et sa température d’ébullition dépend de la pression extérieure.",
   },
   {
     id: "rain", label: "USGS — Condensation and the Water Cycle",
@@ -122,6 +122,54 @@ const facts: readonly PublicFact[] = [
     match: [["masse"], ["poids"], ["difference", "différence"]],
     answer: "La masse mesure la quantité de matière d’un objet; son poids est la force de gravité qui agit sur lui et varie selon l’astre.",
     requiredConcepts: [["masse"], ["poids"], ["matiere", "quantite"], ["force", "gravite"]],
+  },
+  {
+    id: "capital-australia", label: "Geoscience Australia — National location information",
+    sourceUrl: "https://www.ga.gov.au/",
+    match: [["capitale"], ["australie"]],
+    answer: "Canberra est la capitale de l’Australie.",
+  },
+  {
+    id: "largest-ocean", label: "NOAA — Ocean",
+    sourceUrl: "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean",
+    match: [["ocean"], ["plus grand"]],
+    answer: "L’océan Pacifique est le plus grand océan du monde.",
+  },
+  {
+    id: "continents", label: "National Geographic — Continent",
+    sourceUrl: "https://www.nationalgeographic.org/encyclopedia/continent/",
+    match: [["continent", "continents"]],
+    answer: "Le nombre de continents dépend de la convention retenue : cinq, six ou sept selon les modèles géographiques.",
+  },
+  {
+    id: "les-miserables", label: "Bibliothèque nationale de France — Victor Hugo",
+    sourceUrl: "https://www.bnf.fr/fr",
+    match: [["ecrit"], ["miserables"]],
+    answer: "Victor Hugo a écrit Les Misérables.",
+  },
+  {
+    id: "gold-symbol", label: "IUPAC — Periodic Table of the Elements",
+    sourceUrl: "https://iupac.org/what-we-do/periodic-table-of-elements/",
+    match: [["symbole"], ["or"]],
+    answer: "Le symbole chimique de l’or est Au.",
+  },
+  {
+    id: "closest-planet", label: "NASA Science — Mercury",
+    sourceUrl: "https://science.nasa.gov/mercury/",
+    match: [["planete"], ["plus proche"], ["soleil"]],
+    answer: "Mercure est la planète la plus proche du Soleil.",
+  },
+  {
+    id: "leap-year", label: "U.S. Naval Observatory — Time",
+    sourceUrl: "https://aa.usno.navy.mil/",
+    match: [["annee"], ["bissextile"]],
+    answer: "Une année bissextile compte 366 jours.",
+  },
+  {
+    id: "photosynthesis", label: "USGS — Photosynthesis and the water cycle",
+    sourceUrl: "https://www.usgs.gov/",
+    match: [["photosynthese"]],
+    answer: "La photosynthèse est le processus par lequel les plantes utilisent la lumière du Soleil et la chlorophylle pour fabriquer des sucres à partir d’eau et de dioxyde de carbone.",
   },
 ];
 

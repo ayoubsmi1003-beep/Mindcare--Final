@@ -381,7 +381,14 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   {
     id: "precautions",
     fr: ["precautions", "mises en garde", "precautions particulieres", "avertissements"],
-    en: ["other warnings", "precautions", "warnings and precautions"],
+    // « precautions » etait liste AUSSI en anglais : le garde « question deja
+    // dans le vocabulaire du corpus » sautait alors l'expansion et laissait
+    // partir la requete « precautions <medicament> ». Or l'index ne contient
+    // pas ce lexeme : « Warnings/Precautions » est TOKENISE EN UN SEUL MOT
+    // (`warnings/precautions`), donc « precautions » seul ne matche rien.
+    // Mesure sur la base du cabinet : 0 ligne pour « precautions sertraline »,
+    // 2 lignes (score 0,73) pour « other warnings/precautions sertraline ».
+    en: ["other warnings", "other warnings/precautions", "warnings/precautions", "warnings and precautions"],
     rubriques: ["Other Warnings/Precautions"],
     origine: "livre",
     note: "rubrique « Other Warnings/Precautions »",
@@ -395,8 +402,23 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
     note: "rubrique « Habit Forming »",
   },
   {
+    id: "titration",
+    // « Comment titrer la clozapine ? » produced only a weak English AND query
+    // (1 row, 0.0957). The corpus labels the same content "Dosing Tips" /
+    // "Usual Dosage Range"/ "How to Dose".
+    fr: ["titrer", "titration", "augmenter progressivement", "montee de dose"],
+    en: ["dosing tips", "how to dose", "usual dosage range"],
+    rubriques: ["Dosing Tips", "Usual Dosage Range", "How to Dose"],
+    origine: "livre",
+    note: "rubriques de titration mesurées",
+  },
+  {
     id: "surveillance",
-    fr: ["surveillance", "surveillance apres l initiation", "monitoring"],
+    // « surveiller » (verbe) n'existait pas : « Comment surveiller un patient
+    // sous lithium ? » ne produisait qu'une requete francaise en ET, donc zero
+    // ligne. Mesure : 0 pour « surveiller patient sous lithium », 20 des que
+    // la requete contient « monitoring ».
+    fr: ["surveillance", "surveiller", "surveille", "surveillons", "surveillance apres l initiation", "monitoring"],
     en: ["monitoring after starting", "monitoring"],
     rubriques: ["Monitoring after starting an atypical antipsychotic"],
     origine: "livre",

@@ -264,7 +264,7 @@ export function FilJarvis({
                 style={{ maxWidth: compact ? "var(--bulle-jarvis-max)" : "46rem" }}
               >
                 <AlexaAnswerText text={tour.texte} blocks={tour.alexaBlocks}/>
-                {tour.interrompu === true && (!tour.alexaStatus || tour.alexaStatus === "cancelled") && (
+                {tour.interrompu === true && tour.alexaStatus === "cancelled" && (
                   <span className="ml-2 font-ui text-label italic text-ink-500">
                     {fr.jarvis.flux.interrompue}
                   </span>

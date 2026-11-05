@@ -25,7 +25,7 @@ import { fr } from "@/i18n/fr";
 import { adoptAlexaConversation, clearAlexaConversation, ensureAlexaConversation, envoyerTourAlexa, AlexaTurnError } from "./alexa-turn";
 import { navigateAlexa } from "./alexa-navigation";
 import { abonnerTourVoixLocale, abonnerPropositionVoixLocale, arreterVoixLocale } from "./alexa-local";
-import { stageLabels } from "@/i18n/alexa-dialogue";
+import { stageLabels, dialogue } from "@/i18n/alexa-dialogue";
 import { alexaActions } from "@/i18n/alexa-actions";
 import { libelleEtape } from "@/i18n/etapes";
 import {alexaProposalLabels} from "./alexa-proposal";
@@ -657,7 +657,7 @@ export async function chargerHistorique(): Promise<void> {
         role: m.role,
         texte: m.contenu,
         ...(m.role==="jarvis"?readAlexaHistory(m.outil):{}),
-        ...(m.statut === "interrompu" && { interrompu: true }),
+        ...(m.statut === "interrompu" && { interrompu: true, alexaStatus: "partial" as const }),
       });
       if (m.outil !== null && typeof m.outil === "object" && typeof m.outil["nom"] === "string") {
         reconstruits.push({
@@ -670,7 +670,10 @@ export async function chargerHistorique(): Promise<void> {
         reconstruits.push({
           id: `${messageId}-coupure`,
           role: "systeme",
-          texte: fr.jarvis.historique.interrompue,
+          // A persisted "interrompu" covers both a user stop and a partial
+          // turn; the old wording ("arrêtée à votre demande") blamed the user
+          // for a server-side partial answer.
+          texte: dialogue("fr").partialInterrupted,
         });
       }
     }
@@ -1048,10 +1051,10 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
   } catch (error) {
     if (!ownsTurn()) return;
     if (controller.signal.aborted) {
-      remplacerTour(tour.id, { interrompu: true });
+      remplacerTour(tour.id, { interrompu: true, alexaStatus: "cancelled" });
       interne.etat = "composition";
     } else {
-      if (error instanceof AlexaTurnError && error.partial) remplacerTour(tour.id, { interrompu: true, persiste: false });
+      if (error instanceof AlexaTurnError && error.partial) remplacerTour(tour.id, { interrompu: true, persiste: false, alexaStatus: "partial" });
       interne.erreur = { code: "indisponible", message: error instanceof AlexaTurnError ? error.message : fr.erreurs.indisponible, context: "alexa.turn" };
       interne.etat = "erreur";
     }

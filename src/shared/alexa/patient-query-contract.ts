@@ -66,7 +66,7 @@ export function patientQueryContract(text:string,asOf:string):PatientQueryContra
  if(disjunctions>segments.length-1+knownAlternatives)unsupported.push(copy.disjunctionUnresolved);
  if(/\b(?:pas (?:des? )?(?:femmes?|hommes?|adultes?|mineurs?|enfants?|moins|plus|sans)|non (?:adultes?|mineurs?)|ne (?:sont|soient) pas)\b/u.test(t))unsupported.push(copy.negationUnresolved);
  const temporal=new RegExp(`\\b(?:${months.join('|')}|(?:19|20)\\d{2}|ce mois|entre|depuis|avant|apres|jusqu\\w*)\\b`,'u').test(t),period=temporal?patientQueryPeriod(text,asOf):null;
- const creation=/\b(?:inscrit\w*|cree\w*|creation|enregistre\w*)\b/u.test(t),consultation=/\bconsult\w*\b/u.test(t),legacyRelative=groups.flat().some(c=>['no_completed_days','no_completed_months'].includes(c.field));
+ const creation=/\b(?:inscrit\w*|cree\w*|creation|enregistre\w*)\b|\bnouveaux?\s+patients?\b(?!\s+(?:ayant|ont|qui|avec|sous|traites?|suivis?))/u.test(t),consultation=/\bconsult\w*\b/u.test(t),legacyRelative=groups.flat().some(c=>['no_completed_days','no_completed_months'].includes(c.field));
  if(temporal&&!period&&!legacyRelative)unsupported.push(copy.periodUnresolved);
  if(period&&creation&&consultation)unsupported.push(copy.axisAmbiguous);
  if(period&&!creation&&!consultation)unsupported.push(copy.axisMissing);

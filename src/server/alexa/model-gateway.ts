@@ -145,7 +145,7 @@ const GENERAL_PRIVATE_OR_CLINICAL = /\b(?:patients?|patientes?|dossier\w*|record
 const GENERAL_DRUGS = /\b(?:xanax|prozac|zoloft|deroxat|lexomil|rivotril|paracetamol|ibuprofen|aspirin\w*|insulin\w*)\b|باراسيتامول|سيرترالين|اسيتالوبرام|فلوكسيتين|ريسبيريدون|اولانزابين|ليثيوم|زاناكس|بروزاك|انسولين/u;
 const GENERAL_MEDICAL_TERMS = /\b(?:doctors?|physician\w*|medecin\w*|soins?|illness\w*|fever\w*|fievre\w*|migraine\w*|diabet\w*|cancer\w*|hypertens\w*|vaccin\w*|pregnan\w*|grossesse|infection\w*|antibio\w*)\b|حمى|سكري|سرطان|ضغط\s+الدم|حمل|عدوى|لقاح|مضاد\s+حيوي/u;
 const GENERAL_ENGLISH_TERMS = /\b(?:the|and|with|because|causing|creating|engines?|systems?|stability|motion|stationary|orbiting|without|through)\b/u;
-const GENERAL_ACTION_OR_SOURCE = /\b(?:ignore|instructions?|system\s+prompt|role|envoi\w*|envoie\w*|transmet\w*|execut\w*|supprim\w*|commande\w*|ecri\w*|redige\w*|ouvre\w*|fais|lance\w*|copie\w*|shell|powershell|terminal|send|emails?|delete|execute|launch|save|update|write|open\w*|livres?|ouvrages?|citations?|bibliograph\w*|taylor|maudsley|stahl)\b|\[(?:source|book|livre)\b|\bpage\s+\d|(?:j['’]ai|je\s+viens\s+de|i\s+have|we\s+have)\s+(?:lu|ouvert|ajoute|cree|enregistre|modifie|read|saved|opened|updated|created)|\bi\s+(?:read|opened|saved|updated|created)\b|donnees\s+(?:locales?|du\s+cabinet)|local\s+data|تم\s+(?:حفظ|فتح|تعديل|ارسال)|حفظت|فتحت|عدلت|نفذت|ارسلت|تجاهل|تعليمات|نفذ|احذف/u;
+const GENERAL_ACTION_OR_SOURCE = /\b(?:ignore|instructions?|system\s+prompt|role|envoi\w*|envoie\w*|transmet\w*|execut\w*|supprim\w*|commande\w*|ecri(?:s|vez|vons|re)\b|redige(?:s|z|r)\b|ouvre\w*|fais|lance\w*|copie\w*|shell|powershell|terminal|send|emails?|delete|execute|launch|save|update|write|open\w*|livres?|ouvrages?|citations?|bibliograph\w*|taylor|maudsley|stahl)\b|\[(?:source|book|livre)\b|\bpage\s+\d|(?:j['’]ai|je\s+viens\s+de|i\s+have|we\s+have)\s+(?:lu|ouvert|ajoute|cree|enregistre|modifie|read|saved|opened|updated|created)|\bi\s+(?:read|opened|saved|updated|created)\b|donnees\s+(?:locales?|du\s+cabinet)|local\s+data|تم\s+(?:حفظ|فتح|تعديل|ارسال)|حفظت|فتحت|عدلت|نفذت|ارسلت|تجاهل|تعليمات|نفذ|احذف/u;
 
 export function isFrenchQuotedInstructionPolicyQuestion(text:string):boolean{
  const value=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
@@ -160,6 +160,7 @@ function generalTextIsUnsafe(text: string, computerExplanation = false): boolean
   // are still scanned in the complete original answer.
   const actions = computerExplanation ? value.replace(/(?:\b(?:un\s+ordinateur|l['’]ordinateur)\s+(?:peut\s+)?(?:execut\w*|trait\w*|interpret\w*|suiv\w*)\s+(?:les|des)\s+instructions|\ba computer executes instructions|الحاسوب ينفذ تعليمات)/gu, "ordinateur calcule") : value;
   return /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]/u.test(text)
+    || /\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b|https?:\/\//u.test(text)
     || /\b(?:my|your|his|her|their)\s+(?:names?|surnames?|identit(?:y|ies))\b/u.test(value)
     || /\b(?:chiffre d.affaires|chiffre|soldes?|finances?|impayes?|depenses?|benefices?|revenus?|encaissements?|resultat net)\b/u.test(value)
     || GENERAL_PRIVATE_OR_CLINICAL.test(value) || GENERAL_MEDICAL_TERMS.test(value) || GENERAL_DRUGS.test(value) || GENERAL_ENGLISH_TERMS.test(value) || mentionsMedication(value)
@@ -171,9 +172,22 @@ function isGeneralC4(value: unknown): boolean {
   const verdict = classerCharge(value, null);
   return verdict.classe === "C4" && verdict.decision === "AUTORISER";
 }
-function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boolean):boolean{
- return !!answer.trim()&&answer.length<=500&&!/[\p{Script=Arabic}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Cyrillic}]/u.test(answer)&&!GENERAL_ENGLISH_OUTPUT.test(answer)
-  &&!generalTextIsUnsafe(answer,computerExplanation)&&isGeneralC4(answer);
+/**
+ * Admission of a LOCAL, STATELESS general answer.
+ *
+ * The egress classifier is deliberately NOT applied here. Its `c1:nom-complet`
+ * rule matches any two consecutive capitalised words — `C'est Canberra`,
+ * `La France`, `Le DSM-5` — and rejected every ordinary French sentence
+ * containing a proper noun. Measured: "C'est Canberra. C'est la capitale de
+ * l'Australie." was classified C1/BLOQUER while `generalTextIsUnsafe` was
+ * false. The general prompt carries no patient context (only the public
+ * question), so no patient identifier can reach this answer; the clinical,
+ * private, contact and action guards below remain the only relevant ones.
+ */
+export function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boolean):boolean{
+ const value=answer.trim(),lengthOk=value.length>0&&value.length<=500,scriptOk=!/[\p{Script=Arabic}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Cyrillic}]/u.test(value),englishOk=!GENERAL_ENGLISH_OUTPUT.test(value),safe=!generalTextIsUnsafe(value,computerExplanation);
+ if(process.env["ALEXA_DEBUG_GENERAL"]==="1")console.warn("[alexa-general-admission]",JSON.stringify({lengthOk,scriptOk,englishOk,safe,characters:value.length}));
+ return lengthOk&&scriptOk&&englishOk&&safe;
 }
 const GENERAL_ENGLISH_OUTPUT=/\b(?:the|and|with|because|without|through|lists?|checks?|checklist|mistakes?|backup|files?|saved|exported?|steps?|tasks?|work|time|goals?|priorities|focus|deadline|workflow|schedule|before|future|systematic(?:ally)?|validation|execution)\b/iu;
 
@@ -253,7 +267,9 @@ export async function inferGeneralAlexa(text: string, options: {
         maxOutputTokens: 1024, timeoutMs: remaining, signal: options.signal,
       });
       if (options.signal?.aborted) return { ok: false, code: "cancelled", localFallback: true };
-      if (answer.trim() && answer.length <= 2000 && !generalTextIsUnsafe(answer, computerExplanation) && isGeneralC4(answer))
+      // Local, stateless answer: no egress, so the egress classifier's
+      // capitalised-name heuristic does not apply (see isValidFrenchGeneralAnswer).
+      if (answer.trim() && answer.length <= 2000 && !generalTextIsUnsafe(answer, computerExplanation))
         return { ok: true, text: answer.trim(), model: ALEXA_DIRECT_MODEL };
     }
     return { ok: false, code: "invalid-response", localFallback: true };
