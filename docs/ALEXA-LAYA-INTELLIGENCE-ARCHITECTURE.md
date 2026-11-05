@@ -119,3 +119,62 @@ L'ablation exploratoire sur les 130 cas de test final hors suivis et demandes mi
 Pour explorer D, chaque catégorie candidate devait avoir au moins cinq vraies décisions au-dessus de tous ses faux positifs sur la calibration des cas non couverts par A. Ce filtre a retenu zéro catégorie parmi conversation, connaissances, traitement actif, agenda du jour et agenda du lendemain. Le résultat exploratoire de 54/130 vient entièrement de l'ajout d'une clarification par défaut. Il ne mesure aucun gain dû à Laya. La comparaison D de bout en bout et le gain face à MiniCPM réel restent **NOT RUN**.
 
 **Décision** · le checkpoint multilingue et ce contrat de décision ne franchissent pas les conditions du pilote. Le prototype reste isolé. Les paramètres exacts, les preuves, les réponses et les lectures réellement autorisées exigent un scénario synthétique de bout en bout. L'intégration native, ONNX et la distribution Windows restent hors livraison de ce prototype.
+
+## Comparaison des trois checkpoints
+
+Même corpus, même empreinte SHA-256 `dec3ac937a18f713962b32c467f7566a4517a3866e57fa5712b19aad42a422d6`. Les rapports locaux `baseline.json`, `laya-multilingual.json`, `laya.json` et `laya-typed-decisions.json` sont dans `.cache/laya-benchmark/`. Chaque rapport Laya contient 320 identifiants uniques, les probabilités et la latence par cas.
+
+| Checkpoint | Routes exactes | Test final | Autre catégorie sur 60 clarifications/refus | Démarrage avec hash | Médiane | p95 | Pic RSS échantillonné |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Multilingue | 108 / 320 | 62 / 170 | 57 | 94,4 s | 1,34 s | 7,40 s | 1,33 Go |
+| Général | 103 / 320 | 53 / 170 | 46 | 35,5 s | 3,15 s | 5,29 s | 1,56 Go |
+| Typed Decisions | 103 / 320 | 50 / 170 | 60 | 36,9 s | 3,93 s | 4,95 s | 1,77 Go |
+
+Les trois rappels sur la catégorie mixte sont de 0/40. Typed Decisions propose deux fois cette catégorie, sur deux autres types de questions. Le général et Typed Decisions émettent un avertissement de température hors plage dans le runtime pour les choix à 11 options ou plus. Leurs scores bruts ne servent pas de seuil de sécurité.
+
+Dans l'ablation exploratoire à 130 cas, C atteint 64 routes exactes pour le général et 60 pour Typed Decisions, avec respectivement 26 et 30 catégories différentes du refus ou de la clarification attendue. Le filtrage exploratoire D retient zéro catégorie pour ces deux checkpoints également. Les 54 routes exactes obtenues en D s'expliquent par la clarification par défaut.
+
+### Routes exactes par famille, sur dix formulations
+
+| Famille | Partition | Multilingue | Général | Typed Decisions |
+| --- | --- | ---: | ---: | ---: |
+| salutation | calibration | 0 | 2 | 4 |
+| reformulation | holdout | 0 | 3 | 1 |
+| organisation | holdout | 0 | 1 | 2 |
+| cherche | calibration | 1 | 1 | 0 |
+| ouvre | calibration | 10 | 3 | 5 |
+| change | holdout | 8 | 6 | 4 |
+| traitement | calibration | 2 | 2 | 5 |
+| arrets | holdout | 7 | 9 | 8 |
+| diagnostics | holdout | 10 | 10 | 10 |
+| echelles | calibration | 5 | 9 | 9 |
+| agenda-demain | holdout | 8 | 2 | 0 |
+| agenda-aujourdhui | calibration | 9 | 8 | 9 |
+| telephone | holdout | 10 | 2 | 6 |
+| lithium-rein | calibration | 0 | 0 | 1 |
+| syndrome | calibration | 0 | 0 | 0 |
+| clozapine | holdout | 0 | 0 | 0 |
+| toc | holdout | 0 | 0 | 0 |
+| traitement-rein | calibration | 0 | 0 | 0 |
+| traitement-qt | calibration | 0 | 0 | 0 |
+| traitement-interactions | holdout | 0 | 0 | 0 |
+| traitement-effets | holdout | 0 | 0 | 0 |
+| rdv-incomplet | holdout | 0 | 0 | 0 |
+| pause | calibration | 8 | 9 | 10 |
+| reprise | holdout | 9 | 8 | 9 |
+| suivi-traitement | holdout | 2 | 1 | 2 |
+| suivi-diagnostic | calibration | 10 | 10 | 10 |
+| suivi-consultation | holdout | 7 | 10 | 8 |
+| suivi-expire | calibration | 0 | 0 | 0 |
+| suppression | calibration | 1 | 6 | 0 |
+| identite-ambigue | holdout | 0 | 0 | 0 |
+| injection | holdout | 1 | 1 | 0 |
+| date-ambigue | calibration | 0 | 0 | 0 |
+
+## Fichiers livrés
+
+- `docs/ALEXA-LAYA-INTELLIGENCE-ARCHITECTURE.md` et `docs/ALEXA-LAYA-FICHE-PRATICIENNE.md`
+- `scripts/eval-alexa-laya.py`
+- `tests/eval/alexa-laya-fr-v1.json` et `tests/unit/alexa-laya-baseline.test.ts`
+
+La livraison couvre la cartographie et le prototype d'évaluation. Le pilote reste inactif. Les lectures et écritures autorisées, la résolution de références avec historique réel, la qualité des preuves et des réponses, la comparaison complète face à MiniCPM et le paquet Windows restent à vérifier.
