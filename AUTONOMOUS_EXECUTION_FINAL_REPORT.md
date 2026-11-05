@@ -73,7 +73,9 @@ anything.
 | `tests/unit/alexa-general-reference-facts.test.ts` | 10 sourced public-fact-card tests |
 | `src/server/alexa/general-reference.ts` | nine sourced public-fact cards (Canberra, Pacific, continents, Hugo, Au, Mercury, 366, 100 °C, photosynthesis) |
 | `src/shared/alexa/patient-query-contract.ts` | "nouveaux patients" creation period; consultation axis preserved |
-| `src/server/alexa/agent-tools.ts` | "consultations terminées" closure detection |
+| `src/server/alexa/agent-tools.ts` | "consultations terminées" closure detection; `search_knowledge` searches the doctor's original question |
+| `.env` (local, not committed) | `KNOWLEDGE_VECTOR=1`, `KNOWLEDGE_VECTOR_RECETTE=e5-base` |
+| `tests/integration/alexa-vector-paraphrases.live.test.ts` | 10 unseen paraphrase probe, lexical vs hybrid, off-corpus control |
 | `tests/unit/alexa-general-admission.test.ts` | new regression tests (benign facts, clinical refusal, literary question) |
 | `tests/unit/alexa-knowledge-admission.test.ts` | new regression tests (medication topic vs named patient) |
 | `tests/integration/alexa-knowledge-trace.live.test.ts` | planned queries, rows and sections (no source text) |
@@ -101,6 +103,7 @@ No schema, migration, index, patient record or clinical write was changed.
 | 100-case by category | General 10/10, RAG 20/20, medication 10/10, patient 15/15, reliability 5/5; summaries/notes/mixed/multi 0/40 NOT RUN (16 smoke-executed: summaries 8, notes 7, multi-turn 1; 24 gaps/unrun: 7 summary, 3 note, 4 multi-turn, 10 mixed) |
 | Patient + application aggregates (real practitioner session) | **15/15 PASS**, totals match the governed gates (patients, missing fields, minors, never seen, 6 months, unpaid, appointments, confirmed appointments, consultations, pending payments, documents, new patients, revenue) |
 | Patient dossier smoke | summary, active diagnoses, last-consultation notes and active treatments all **completed** with patient/consultation/treatment/scale sources |
+| Vector paraphrase probe (10 unseen questions) | lexical **8/10**, hybrid **10/10**; off-corpus `sans-preuve`; first query 34 s (model load), then 0.3–1.3 s; RSS 869 MB |
 | Browser (Chromium, signed-in) | `/jarvis` loads; sertraline and lithium answers show cited passages; Canberra shows « C'est Canberra… » with status « Terminé »; **0 console errors** |
 | ESLint (changed files) | PASS (no output) |
 | `readKnowledge` sertraline | `ok`, 2 proofs, 431 ms, section `Other Warnings/Precautions` |
@@ -111,6 +114,30 @@ No schema, migration, index, patient record or clinical write was changed.
 | General « capitale de l'Australie » | `completed`, « C'est Canberra… » (when the model answers correctly) |
 | HTTP `/api/health`, `/jarvis` | 200 |
 | Model | cold 10.7 s, warm 2.87 s, `llama-server` 851 MB, Node 61 MB |
+
+### Hybrid retrieval (generalization)
+
+The lexical gate alone missed 2/10 unseen paraphrases. The existing 768-d
+e5-base index is enabled in the development configuration
+(`KNOWLEDGE_VECTOR=1`, `KNOWLEDGE_VECTOR_RECETTE=e5-base`):
+
+| Probe | Lexical | Hybrid |
+|---|---:|---:|
+| 10 unseen paraphrases (renal lithium, clozapine haematology, valproate pregnancy, first-line bipolar, …) | 8/10 `ok` | **10/10 `ok`** |
+| Off-corpus control | `sans-preuve` | `sans-preuve` |
+| First query | — | ~34 s (ONNX model load) |
+| Warm query | 0.05–0.5 s | 0.3–1.3 s |
+| RSS after load | — | 869 MB |
+
+The agent now searches with the doctor's **original question** instead of the
+model's variable query, so the same wording always reaches the same evidence.
+The packaged runtime flag is not yet written: `%ProgramData%\MindCare\private\runtime.env`
+is access-denied without elevation.
+
+Safety limitation: when the 1B model returns an English draft that the French
+guard rejects, the server still refuses to publish that draft; the user sees
+« synthèse indisponible, références consultables » with the sources. The
+retrieval is fixed; French generation remains model-limited.
 
 ### General facts (resolved)
 
@@ -184,15 +211,18 @@ Broad signed-in sweep (same Chromium flow, `/jarvis`):
 3. **Knowledge answers are cited extracts, not prose.** The architecture
    deliberately publishes verbatim approved quotes; the model selects quotes.
    Every knowledge answer is therefore `partial` by design.
-4. **Vector search disabled.** BGE-M3 is absent; the 768-d e5-base index exists
-   but costs ~1.1 GB RAM on an 8 GB machine.
+4. **Vector search**: the primary BGE-M3 is absent; the 768-d e5-base secondary
+   index is now enabled in the development `.env` (869 MB RSS, first query
+   ~34 s). The packaged runtime flag is pending elevation.
 5. **Timeout architecture unchanged.** No timeout was reproduced in the measured
    turns (45–80 s); the 620 s native / 90 s legacy divergence remains a risk.
 6. **Desktop bundle** not built: `pnpm build` (Next production) passes, but
    `pnpm build:desktop` needs `git` and elevation for the target; the installed
    application was not touched.
-7. **No git**: no commit, diff or clean rollback. Every changed file is listed
-   above.
+7. **Git**: PortableGit 2.56.0.4 is installed; commits `b32af25` and `5acd0fc`
+   were pushed to `github/v8-alexa-final`. Pre-existing local changes in
+   `electron/`, `scripts/` and the deletion of migration 214 remain uncommitted
+   and preserved.
 8. **UI stop-state observation**: the monthly revenue turn completes in 332 ms
    when invoked directly, but the signed-in browser sweep saw the
    « Arrêter la réponse » control remain visible for more than five minutes on
@@ -239,3 +269,18 @@ The redacted report is written to `.eval-out/alexa-reliability-100/`.
 - No migration, column, enum, RLS policy or permission was changed.
 - The installed application under `C:\Program Files\MindCare OS` was not
   modified.
+
+## 8. Git and remote
+
+- PortableGit **2.56.0.4** installed at
+  `C:\Users\ABC Informatique\AppData\Local\Programs\PortableGit` (not on PATH;
+  invoked by full path).
+- Remotes: `github` and `origin` both point to
+  `https://github.com/ayoubsmi1003-beep/Mindcare--Final.git`.
+- Pushed on `v8-alexa-final`:
+  - `b32af25` — evidence retrieval, application answers, factual cards, tests.
+  - `5acd0fc` — hybrid e5-base retrieval and original-question search.
+- Uncommitted and preserved: pre-existing `electron/`, `scripts/` and unit-test
+  changes, plus the local deletion of `214_purge_documents_synthetiques.sql`
+  (the dev server refuses to start while that unapplied migration is on disk).
+

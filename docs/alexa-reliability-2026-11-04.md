@@ -106,10 +106,13 @@ runtime) et le chargement. C'est un coût fixe mesuré, pas une hypothèse.
    `agent-tools.ts` ne certifie donc pas `complete`. Toute réponse de
    connaissance reste « partielle » par conception. Décision produit à assumer
    explicitement.
-2. Recherche vectorielle désactivée : BGE-M3 est absent du poste. L'index
-   768 d (e5-base, 25 235 vecteurs) existe mais n'est lu que si
-   `KNOWLEDGE_VECTOR=1` **et** `KNOWLEDGE_VECTOR_RECETTE=e5-base`. Non activé
-   ici : +1,1 Go de modèle sur 8 Go, décision à mesurer.
+2. Recherche vectorielle **activée en développement** : BGE-M3 reste absent,
+   mais l'index 768 d (e5-base, 25 235 vecteurs) est lu depuis que
+   `KNOWLEDGE_VECTOR=1` et `KNOWLEDGE_VECTOR_RECETTE=e5-base` sont posés dans
+   `.env`. Mesure : 10 paraphrases inédites passent de **8/10** (lexical seul)
+   à **10/10** (hybride), hors corpus reste `sans-preuve`. Premier chargement
+   ~34 s, requêtes suivantes 0,3–1,3 s, RSS 869 Mo. Le drapeau du paquet
+   installé reste à poser (fichier privé protégé, élévation requise).
 3. « Traitement de première intention du trouble bipolaire » rend 0 ligne : la
    formulation `première intention` n'a pas de concept bilingue. Le corpus
    répond pourtant à `first-line treatment bipolar` (20 lignes).

@@ -28,6 +28,13 @@ Updated: 2026-11-05 (autonomous session, final checkpoint)
 - **Tests** — typecheck 0; `pnpm build` PASS; **444/445 unit files pass** (only
   the missing-`git` packaging test fails); 16 knowledge suites pass; ESLint on
   changed files clean.
+- **Hybrid retrieval** — the existing 768-d e5-base index is enabled in the dev
+  `.env`: 10 unseen paraphrases go from **8/10 lexical** to **10/10 hybrid**,
+  off-corpus still `sans-preuve`, first query ~34 s then 0.3–1.3 s, RSS 869 MB.
+  The agent now searches with the doctor's original question.
+- **Git** — PortableGit 2.56.0.4 installed; commits `b32af25` and `5acd0fc`
+  pushed to `github/v8-alexa-final`
+  (`https://github.com/ayoubsmi1003-beep/Mindcare--Final.git`).
 
 ## Remaining
 
