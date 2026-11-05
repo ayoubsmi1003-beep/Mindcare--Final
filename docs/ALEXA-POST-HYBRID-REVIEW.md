@@ -192,6 +192,13 @@ The full 40-case inventory is therefore: **11 semantic failures** (SUM-14,
 MIX-01…MIX-10), **29 structural/blocked** cases, and **no case converted to
 PASS without evidence**.
 
+The mixed synthesis audit (`docs/ALEXA-MIXED-SYNTHESIS-AUDIT.md`) refines the
+ten MIX results: with the direct composition in commit `496c586`, the mixed
+path executes patient then knowledge, but 9/10 knowledge calls returned
+`sans-preuve`; MIX-03 retrieved approved passages but remains `BLOCKED` rather
+than PASS. The dominant cause is insufficient evidence in the executed
+lexical-only retrieval path, with query/context assembly as a secondary factor.
+
 ## 4. Model evaluation
 
 The model was evaluated through the **real compact selector path**, on ten

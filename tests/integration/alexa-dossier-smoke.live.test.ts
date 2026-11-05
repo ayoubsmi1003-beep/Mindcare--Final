@@ -26,10 +26,15 @@ const cases = allCases.filter(testCase => ["summaries", "notes", "mixed", "multi
   && (!wantedIds?.length || wantedIds.includes(testCase.id)));
 
 interface Answer { status: string | null; sentences: number; sources: string[]; chars: number; hasDigit: boolean;
-  calls: { name: string; keys: string[]; section?: string; query?: string }[];
+  calls: { name: string; keys: string[]; section?: string; query?: string; action?: string }[];
   parts: { status: string; reasonClass: string }[];
   stages: string[];
-  fallbackText: boolean }
+  fallbackText: boolean;
+  fallbackCount: number;
+  knowledgeSources: number;
+  patientSources: number;
+  answerKinds: string[];
+  answerCharsBySource: { patient: number; knowledge: number; none: number } }
 
 const classifyReason = (text: string): string =>
   /aucune preuve/iu.test(text) ? "no-evidence"
@@ -50,7 +55,7 @@ async function turn(actor: string, patientId: string, question: string, conversa
       { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, contextKey: JSON.stringify({ patientId, page: `/patients/${patientId}` }),
         agentObserve: call => {
           const keys = Object.keys(call.args);
-          calls.push({ name: call.name, keys, ...(typeof call.args["section"] === "string" ? { section: call.args["section"] } : {}), ...(typeof call.args["query"] === "string" ? { query: call.args["query"] } : {}) });
+          calls.push({ name: call.name, keys, ...(typeof call.args["section"] === "string" ? { section: call.args["section"] } : {}), ...(typeof call.args["query"] === "string" ? { query: call.args["query"] } : {}), ...(typeof call.args["action"] === "string" ? { action: call.args["action"] } : {}) });
         } },
       event => { events.push(event); },
       controller.signal,
@@ -58,9 +63,18 @@ async function turn(actor: string, patientId: string, question: string, conversa
   } finally {
     clearTimeout(timer);
   }
+
   const sentences = events.filter((event): event is Extract<AlexaEvent, { type: "sentence" }> => event.type === "sentence");
   const done = events.find((event): event is Extract<AlexaEvent, { type: "done" }> => event.type === "done");
   const text = sentences.map(sentence => sentence.text).join("\n");
+  const fallbackCount = (text.match(/synth[eè]se v[eé]rifi[eé]e est indisponible|aucune preuve suffisante|r[eé]ponse fiable est indisponible/giu) ?? []).length;
+  const patientSources = new Set(sentences.flatMap(sentence => sentence.sources.filter(source => source.type !== "knowledge").map(source => source.id)));
+  const knowledgeSources = new Set(sentences.flatMap(sentence => sentence.sources.filter(source => source.type === "knowledge").map(source => source.id)));
+  const answerCharsBySource = { patient: 0, knowledge: 0, none: 0 };
+  for (const sentence of sentences) {
+    const types = new Set(sentence.sources.map(source => source.type));
+    answerCharsBySource[types.has("knowledge") ? "knowledge" : types.size ? "patient" : "none"] += sentence.text.length;
+  }
   return {
     status: done?.status ?? null,
     sentences: sentences.length,
@@ -70,7 +84,12 @@ async function turn(actor: string, patientId: string, question: string, conversa
     calls,
     parts: done?.parts?.map(part => ({ status: part.status, reasonClass: classifyReason(part.reason ?? "") })) ?? [],
     stages: events.filter((event): event is Extract<AlexaEvent, { type: "stage" }> => event.type === "stage").map(event => event.stage),
-    fallbackText: /synth[eè]se v[eé]rifi[eé]e est indisponible|aucune preuve suffisante|r[eé]ponse fiable est indisponible/iu.test(text),
+    fallbackText: fallbackCount > 0,
+    fallbackCount,
+    knowledgeSources: knowledgeSources.size,
+    patientSources: patientSources.size,
+    answerKinds: [...new Set(sentences.map(sentence => sentence.kind))],
+    answerCharsBySource,
   };
 }
 
