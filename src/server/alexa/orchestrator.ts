@@ -40,6 +40,8 @@ import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
 import { explicitFrenchCurrentMonthRange, frenchRequestAdmission } from "@/shared/alexa/request-contract";
 import type { TurnTraceRecorder } from "./turn-trace";
+import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
+export { isKnowledgeFollowup, knowledgeFollowupQuestion };
 import { z } from "zod";
 
 /** Deterministic application aggregates that the local 1B router often misses. */
@@ -137,22 +139,6 @@ function replacedPatientCountFollowup(text:string,previous:WorkingReference|null
  return previous.lastRequest.replace(priorMention.name,nextName);
 }
 const FRENCH_MONTHS=["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre"];
-export function knowledgeFollowupQuestion(previous:string,text:string):string|null{
- const tail=text.trim().replace(/[?.!]+$/u,'').trim();
- const condition=/^et\s+pour\s+(?:la\s+)?grossesse$/iu.test(tail)?'pendant la grossesse'
-  :/^et\s+pour\s+(?:la\s+)?allaitement$/iu.test(tail)?'pendant l’allaitement'
-  :tail.replace(/^et\s+/iu,'');
- const stem=previous.trim().replace(/[?.!]+$/u,'').trim();
- return `${stem} ${condition} ?`;
-}
-export function isKnowledgeFollowup(previous:string,text:string):boolean{
- return text.length<=80
-  &&requestedMedicationNames(previous).length>0
-  &&!/\b(?:patient|patients|combien|dossier|dossiers)\b/iu.test(previous)
-  &&planKnowledgeQuery(previous)!==null
-  &&/^(?:et|pour|en cas de|quid|et si|chez)\b/iu.test(text.trim())
-  &&!/\b(?:patient|dossier|consultation|agenda|rendez|paiement|document)\b/iu.test(text);
-}
 function agendaDayFollowup(text:string,previous:WorkingReference|null):string|null{
  if(!previous?.agendaDay)return null;
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').trim();
@@ -312,11 +298,17 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     const listedReferenceText=agentInput.text.replace(/^\s*(?:montre|affiche|ouvre|présente|presente|sélectionne|selectionne)\s+/iu,'');
     const selectedListedPatient=previous?.patients?resolveListedReference(listedReferenceText,previous.patients):null;
     const inheritedAgendaNextDayText=dependencies.resumeCursor?null:agendaDayFollowup(agentInput.text,previous),inheritedAgendaText=inheritedAgendaNextDayText??(dependencies.resumeCursor?null:agendaStatusFollowup(agentInput.text,previous)),inheritedTreatmentText=inheritedAgendaText||dependencies.resumeCursor?null:treatmentPauseFollowup(agentInput.text,previous),inheritedFinanceText=inheritedAgendaText||inheritedTreatmentText||dependencies.resumeCursor?null:previousMonthFollowup(agentInput.text,previous,asOf),inheritedPatientCountText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||dependencies.resumeCursor?null:replacedPatientCountFollowup(agentInput.text,previous,asOf),inheritedPatientCorrectionText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||dependencies.resumeCursor?null:patientCorrectionFollowup(agentInput.text,previous),inheritedPreviousConsultationText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||dependencies.resumeCursor?null:previousConsultationFollowup(agentInput.text,previous,asOf),inheritedConsultationStatusText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||dependencies.resumeCursor?null:consultationStatusFollowup(agentInput.text,previous,asOf),inheritedGroupedMinorText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||dependencies.resumeCursor?null:groupedMinorFollowup(agentInput.text,previous,asOf),inheritedMonthlyChargesText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||dependencies.resumeCursor?null:monthlyChargesFollowup(agentInput.text,previous),inheritedOrdinalPhoneText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||dependencies.resumeCursor?null:ordinalPhoneFollowup(agentInput.text,previous),inheritedTreatmentFrequencyText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||dependencies.resumeCursor?null:treatmentFrequencyFollowup(agentInput.text,previous,asOf),inheritedLatestScaleText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||dependencies.resumeCursor?null:latestScaleFollowup(agentInput.text,previous,asOf),inheritedComparisonText=dependencies.resumeCursor?null:consultationComparisonFollowup(agentInput.text,previous,asOf),inheritedDiagnosisStateText=dependencies.resumeCursor?null:diagnosisStateFollowup(agentInput.text,previous,asOf),inheritedPaymentsTotalText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||inheritedLatestScaleText||dependencies.resumeCursor?null:patientPaymentsTotalFollowup(agentInput.text,previous),inheritedText=inheritedAgendaText??inheritedTreatmentText??inheritedFinanceText??inheritedPatientCountText??inheritedPatientCorrectionText??inheritedPreviousConsultationText??inheritedConsultationStatusText??inheritedGroupedMinorText??inheritedMonthlyChargesText??inheritedOrdinalPhoneText??inheritedTreatmentFrequencyText??inheritedLatestScaleText??inheritedComparisonText??inheritedDiagnosisStateText??inheritedPaymentsTotalText;
-    const knowledgeFollowup=!dependencies.resumeCursor&&previous?.lastRequest&&isKnowledgeFollowup(previous.lastRequest,input.text)
+    const knowledgeFollowup=!dependencies.resumeCursor&&previous?.lastRequest&&isKnowledgeFollowup(previous.lastRequest,input.text,previous.intent==='knowledge',question=>planKnowledgeQuery(question)!==null)
       ?knowledgeFollowupQuestion(previous.lastRequest,input.text):null;
+    // Short references to the working patient. Without an established patient these stay
+    // unchanged, so the existing scope gate still asks which patient is meant.
+    const workingPatient=!dependencies.resumeCursor&&!inheritedText&&!knowledgeFollowup&&!selectedListedPatient&&previous?.selectedPatientId?previous.selectedPatientId:null;
+    const appliedToPatient=workingPatient&&previous?.intent==='knowledge'&&previous.lastRequest?knowledgeAppliedToPatient(previous.lastRequest,input.text):null;
+    const patientFollowup=workingPatient&&!appliedToPatient?resolvePatientFollowup(input.text):{kind:'none' as const};
+    const frameText=appliedToPatient??(patientFollowup.kind==='rewrite'?patientFollowup.text:null);
 
-    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');
-    const reusePatient=continuesPatientReference(turnInput.text,previous);
+    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');
+    const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none';
     const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
     const deterministicAggregate=!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
