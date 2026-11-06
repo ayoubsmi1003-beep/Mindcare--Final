@@ -139,17 +139,17 @@ planKnowledgeQuery → lexical + dense → RRF → rerank → select
             1 term-subset query  2 alternate language  3 neighbouring chunks
 ```
 
-**Publication contract:**
-```ts
-interface KnowledgeClaim { french: string; quotes: { chunkId: string; quote: string; page: number | null }[]; verified: boolean; }
-```
+**Publication contract (changed after adversarial review, 2026-11-06):**
 
-1. **Verifier (deterministic):** numbers and units, drug names, negation, population qualifiers must match the cited quotes.
-2. **Verified:** publish the French claim, with the source passage and its real page beside it, labelled as a reformulation.
-3. **Not verified:** publish the verbatim passage in a French frame.
-4. **Unsafe content, or no proof:** say so. Evidence that exists is never hidden behind "indisponible".
+The first design verified a French claim with rules. Review proved that can't protect meaning: "contra-indicated" became "indiqué", "twice daily" became "une fois par jour", doses swapped between populations, and all passed. So French is not treated as verified on this model.
 
-The status stays `partial`, never `supported`: a verified reformulation is checked for consistency, not proven to be entailed. Where approved books disagree, each position is shown with its source.
+1. **The literal passage always comes first,** in a French frame, with its source and, when known, its page.
+2. **French is only a reading aid,** after the passage, labelled "traduction automatique non vérifiée", and classed as `inference`.
+3. **Only plain descriptive sentences get one.** A sentence with a number, dose, frequency, negation, qualifier, population or risk term stays verbatim English; the model isn't asked.
+4. **The aid is refused** if it adds any of those, changes a drug, contains a link or markup, or gives advice.
+5. **Evidence that exists is never hidden behind "indisponible"** on `provider`, `entity` or `source-title` failures. `unsafe-text` keeps refusing.
+
+The status stays `partial`, never `supported`. Disagreement between books isn't synthesized: each cited passage appears with its own source. Rendering clinical content into French needs a stronger model and its own evaluation.
 
 ### TurnOutcome
 

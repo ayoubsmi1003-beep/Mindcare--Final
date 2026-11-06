@@ -2,6 +2,24 @@
 
 Living checklist. Each batch: failing test first, fix, targeted suite, commit.
 
+## Status at 2026-11-06
+
+The batch lists below are the original plan. Actual state:
+
+| Batch | State | Notes |
+|---|---|---|
+| B0 Baseline | Running | Campaign started at `8854321`. L2 and L3 baselines still need a run on that commit |
+| B1 Trace, targeted fixes | Done | `8fd5eb9` |
+| B2 Evidence | Done | `69734e8`, weak-evidence passages in `ab132d1`'s successor |
+| B3 Retrieval | Partly done | Planner, canonical subjects, recovery, packaging done. Fusion and reranker wait for measurement |
+| B4 Frame, follow-ups | Partly done | Slot-based resolver done (`542ed04`). Regex rewriters stay until evaluation shows they're covered. "Pourquoi ?" and "Détaille" still have no referent |
+| B5 French | Done, reduced | Reading aid only: see `05` |
+| B6 General | Partly done | Ordinary words and openings done. Prose publication and history not done |
+| B7 Understanding, inference | Partly done | Registries and idle window done (`352b3bb`). `TurnUnderstanding` and parallel plan not started: decided from the evaluation |
+| B8 Application reads | Partly done | Allergies, adverse events, adherence, measurements done (`0e5c799`), but the evaluation database has 0 such rows, so only the empty path runs live. Statistics, dashboard, messages, case summary not started |
+| B9 Safety | Partly done | `alexa-why`, `eval:alexa` done. OpenRouter gate awaits the user's decision |
+| B10 Final | Not started | Needs the baseline |
+
 ## Environment
 
 | Item | Value |
