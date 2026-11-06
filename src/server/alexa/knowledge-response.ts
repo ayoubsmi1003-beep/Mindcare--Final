@@ -12,9 +12,10 @@ type SentenceEvent = Extract<AlexaEvent, { type: "sentence" }>;
 type Preuve = KnowledgeResult["preuves"][number];
 
 const approvedBookName = /\b(?:dsm\b|dsm[‐‑‒–—-]?\s*5(?:[‐‑‒–—-]?\s*tr)?|diagnostic and statistical manual of mental disorders|manuel diagnostique et statistique des troubles mentaux|maudsley|taylor|stahl|prescriber(?:['’])?s guide|essential psychopharmacology)\b/iu;
+const dsmSelfReference = /\bdsm(?:[‐‑‒–—-]?\s*(?:5|iv|iii|ii)(?:[‐‑‒–—-]?\s*tr)?)?\b/giu;
 const leadingBookAttribution = /^(?:(?:according to|as described in|selon|d['’]apres)\s+)?(?:(?:the|le|la)\s+)?(?:dsm[‐‑‒–—-]?\s*5(?:[‐‑‒–—-]?\s*tr)?|diagnostic and statistical manual of mental disorders|manuel diagnostique et statistique des troubles mentaux|(?:the\s+)?maudsley(?:\s+prescribing guidelines in psychiatry)?|taylor|(?:the\s+)?prescriber(?:['’])?s guide(?:\s*\(stahl['’]s essential psychopharmacology\))?|stahl(?:['’]s essential psychopharmacology)?|essential psychopharmacology)\s*[,;:]\s*/iu;
 
-/** Book identity stays in structured source metadata, never in spoken excerpts. */
+/** Book identity stays in structured source metadata. Only the DSM's naming of itself may stay inside a quote. */
 export function mentionsKnowledgeBookTitle(text: string): boolean {
   return approvedBookName.test(text.normalize("NFKC"));
 }
@@ -23,7 +24,8 @@ export function mentionsKnowledgeBookTitle(text: string): boolean {
 export function knowledgeExcerptForSpeech(text: string): string | null {
   const excerpt = retirerMarqueursPageAffichage(text).trim();
   const withoutAttribution = excerpt.replace(leadingBookAttribution, "").trimStart();
-  return withoutAttribution && !mentionsKnowledgeBookTitle(withoutAttribution) ? withoutAttribution : null;
+  // The DSM's own text names the DSM throughout. Refusing those passages hid real criteria.
+  return withoutAttribution && !mentionsKnowledgeBookTitle(withoutAttribution.replace(dsmSelfReference, " ")) ? withoutAttribution : null;
 }
 
 /**

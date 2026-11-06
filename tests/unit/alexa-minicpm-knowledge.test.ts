@@ -140,34 +140,58 @@ it('refuses an English source sentence copied into the native French answer',asy
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
 });
-it.each([
- ['La sertraline inchangée est excrétée dans les urines à moins de 0,2 %.',true],
- ['La sertraline inchangée est excrétée dans les urines à moins de 9 %.',false],
- ['La sertraline inchangée est excrétée dans les urines à plus de 0,2 %.',false],
- ['La sertraline inchangée est excrétée dans les urines à 0,2 %.',false],
- ['Sertraline: less than 0.2% of unchanged sertraline excreted in urine.',false],
-])('keeps only the literal evidence after local French reformulation checks: %s',async(text,accepted)=>{
+it('never asks the model to render a sentence carrying a number, and keeps it literal',async()=>{
  const passage='Sertraline: less than 0.2% of unchanged sertraline excreted in urine.';
+ const result=await readKnowledge(clientFor(passage,'en'),'Explique la sertraline selon DSM-5');
+ local.mockResolvedValueOnce(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}));
+ const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
+ const sentences=events.filter((e):e is Extract<typeof e,{type:'sentence'}>=>e.type==='sentence');
+ expect(local).toHaveBeenCalledOnce();expect(sentences.some(e=>e.kind==='inference')).toBe(false);
+ expect(sentences.map(e=>e.text).join(' ')).toContain(passage);
+ expect(sentences.flatMap(e=>e.sources).some(source=>source.excerpt===passage)).toBe(true);
+ expect(cloud).not.toHaveBeenCalled();
+});
+it.each([
+ ['La sertraline inhibe la recapture de la sérotonine dans les neurones.',true],
+ ['La sertraline inhibe la recapture de la sérotonine chez les enfants.',false],
+ ['La clozapine inhibe la recapture de la sérotonine dans les neurones.',false],
+ ['Sertraline inhibits the reuptake of serotonin in neurons.',false],
+])('adds French only as a marked aid after the literal passage: %s',async(text,accepted)=>{
+ const passage='Sertraline inhibits the reuptake of serotonin in neurons.';
  const result=await readKnowledge(clientFor(passage,'en'),'Explique la sertraline selon DSM-5');
  local.mockResolvedValueOnce(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}))
   .mockResolvedValueOnce(JSON.stringify({sentences:[text]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
-  expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
- expect(local).toHaveBeenCalledTimes(2);expect(local.mock.calls[1]![1].timeoutMs).toBe(120000);
- expect(local.mock.calls[1]![1].maxOutputTokens).toBe(1024);
+ const sentences=events.filter((e):e is Extract<typeof e,{type:'sentence'}>=>e.type==='sentence'),published=sentences.map(e=>e.text).join(' ');
+ expect(local).toHaveBeenCalledTimes(2);
  expect(JSON.stringify(local.mock.calls[1]![0])).toContain(passage);
-  expect(events.flatMap(e=>e.type==='sentence'?e.sources:[]).some(source=>source.excerpt===passage)).toBe(accepted);
+ expect(sentences.flatMap(e=>e.sources).some(source=>source.excerpt===passage)).toBe(true);
+ expect(published.indexOf(passage)).toBeGreaterThanOrEqual(0);
+ expect(published.includes('non vérifiée')).toBe(accepted);
+ expect(sentences.some(e=>e.kind==='inference')).toBe(accepted);
+ if(accepted)expect(published.indexOf(text)).toBeGreaterThan(published.indexOf(passage));
+ else if(text!==passage)expect(published).not.toContain(text);
  expect(cloud).not.toHaveBeenCalled();
 });
-it('does not reformulate a conditional or population-qualified English draft without a preservation proof',async()=>{
+it('does not ask for French on a conditional or population-qualified sentence',async()=>{
  const passage='Sertraline is considered only in patients with a documented synthetic condition.';
  const result=await readKnowledge(clientFor(passage,'en'),'Explique la sertraline selon DSM-5');
- local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}));
+ local.mockResolvedValueOnce(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}));
  const events=await synthesizeKnowledge(result,'Explique la sertraline selon DSM-5','fr',new AbortController().signal,{compact:true});
- expect(local).toHaveBeenCalledOnce();expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
+ const published=events.flatMap(e=>e.type==='sentence'?[e.text]:[]).join(' ');
+ expect(local).toHaveBeenCalledOnce();
+ expect(events.some(e=>e.type==='sentence'&&e.kind==='inference')).toBe(false);
+ expect(published).toContain(passage);expect(published).not.toContain('non vérifiée');
+});
+it('refuses a dose from a drug book when the medication asked about is unknown, even when the model is down',async()=>{
+ const passage='Usual dosage range is 15-30 mg/day for adults.';
+ const result=await readKnowledge(clientFor(passage,'en'),'Quelle est la posologie de la lurasidone selon DSM-5');
+ local.mockRejectedValue(new Error('LocalModelUnavailable'));
+ const events=await synthesizeKnowledge(result,'Quelle est la posologie de la lurasidone selon DSM-5','fr',new AbortController().signal,{compact:true});
+ expect(JSON.stringify(events.flatMap(e=>e.type==='sentence'?[e.text]:[]))).not.toContain('15-30');
 });
 it('preserves caller cancellation during the single warm French reformulation',async()=>{
- const passage='Sertraline: less than 0.2% of unchanged sertraline excreted in urine.';
+ const passage='Sertraline inhibits the reuptake of serotonin in neurons.';
  const result=await readKnowledge(clientFor(passage,'en'),'Explique la sertraline selon DSM-5'),controller=new AbortController();
  local.mockResolvedValueOnce(JSON.stringify({coverage:'partial',sentences:[{text:passage,evidence:[{index:1,quoteId:'q1'}]}]}))
   .mockImplementationOnce(async(_messages,options)=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(options.signal.reason),{once:true})));
@@ -343,11 +367,13 @@ it.each([
   expect(JSON.stringify(warn.mock.calls)).not.toContain(quote);
  }finally{warn.mockRestore();}
 });
-it('discloses compact synthesis failure without dumping retrieved chunks',async()=>{
+it('publishes only the literal approved passage when the local model fails',async()=>{
  const result=await readKnowledge(client,'critères dépression selon DSM');local.mockRejectedValue(new Error('LocalModelUnavailable'));
  const events=await synthesizeKnowledge(result,'critères dépression selon DSM','fr',new AbortController().signal,{compact:true});
- expect(events).toHaveLength(1);expect(JSON.stringify(events)).not.toContain(quote);
- expect(events[0]?.type==='sentence'&&events[0].sources[0]?.provenance?.chunkId).toBe('synthetic-chunk');
+ expect(events).toHaveLength(1);
+ const event=events[0]!;if(event.type!=='sentence')throw new Error('sentence expected');
+ expect(event.kind).toBe('knowledge');expect(event.text).toContain(quote);
+ expect(event.sources[0]?.provenance?.chunkId).toBe('synthetic-chunk');expect(cloud).not.toHaveBeenCalled();
 });
 it('does not publish references from a forged compact evidence envelope',async()=>{
  const issued=await readKnowledge(client,'critères dépression selon DSM');

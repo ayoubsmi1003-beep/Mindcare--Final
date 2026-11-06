@@ -1,5 +1,6 @@
 ﻿import {z} from 'zod';
 import { noteTurnCode } from "./turn-trace";
+import { explicitNumbers, frenchAidAcceptable, frenchAidEligible, hiddenControls, medicationBoundBySection, numericEvidenceAllowed, numericFold, quantities } from "./knowledge-french";
 import { knowledgeAnswerSchema, knowledgeAnswerJsonSchema,indexedKnowledgeAnswerSchema,resolveIndexedKnowledgeAnswer } from "@/shared/alexa/knowledge-answer";
 import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
@@ -13,15 +14,10 @@ import {localModelFailureCode} from './local-model-protocol';
 import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
 import { verifierCitations } from "@/server/knowledge/citations";
 import { knowledgeMessages, isIssuedKnowledgeEnvelope, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
-import { knowledgeExcerptForSpeech, knowledgeResponseEvents, knowledgeSource, type KnowledgeResult } from "./knowledge-response";
+import { knowledgeExcerptForSpeech, knowledgeResponseEvents, knowledgeSource, mentionsKnowledgeBookTitle, type KnowledgeResult } from "./knowledge-response";
 
 const fold = (value: string) => value.normalize("NFC").replace(/\s+/gu, " ").trim();
 const answerMetadata=z.object({coverage:knowledgeAnswerSchema.shape.coverage,sentences:z.array(z.unknown()).max(5)});
-const numericFold = (value: string) => fold(value.normalize("NFKD").replace(/\p{M}/gu, "")).toLowerCase()
-  .replace(/[٠-٩]/gu, digit => String(digit.charCodeAt(0) - 0x0660))
-  .replace(/[۰-۹]/gu, digit => String(digit.charCodeAt(0) - 0x06f0)).replace(/٫/gu, ".")
-  .replace(/[−﹣－]/gu, "-").replace(/[⁄∕]/gu, "/").replace(/(?<=\d),(?=\d)/gu,'.');
-const hiddenControls = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]/u;
 const negation = /\b(?:ne|pas|jamais|sans|non|no|not|never|without|avoid\w*|contraindicat\w*|evit\w*|contre[- ]?indiqu\w*)\b|\bn['’]|لا|ليس|دون/u;
 const personalClaim = /\b(?:tu|toi|ton|ta|tes|vous|votre|vos|your|you|my|j['’]ai|je suis|i have|i am|prescrivez|prenez|arretez|augmentez|diminuez)\b|أنت|انت\s|لديك|عندك|تناول|انصحك/u;
 const performedAction = /\b(?:enregistree?s?|sauvegardee?s?|modifiee?s?|cree[es]*|supprimee?s?|envoyee?s?|executee?s?|prescrit(?:e|s|es)?|validee?s?|confirmee?s?|ajoutee?s?|saved|recorded|updated|prescribed|created|deleted|sent|executed|confirmed|signed)\b|\bmis(?:e|es)? a jour\b|تم\s+(?:حفظ|تسجيل|تعديل|ارسال|حذف|تنفيذ|تاكيد|توقيع)|حفظت|سجلت|عدلت|ارسلت|نفذت/u;
@@ -36,23 +32,6 @@ function claimsPerformedAction(text:string):boolean{
   ||/\b(?:notes?|documents?|ordonnances?|comptes? rendus?|dossiers?|consultations?|actions?|prescriptions?)\s+(?:(?:est|sont|a ete|ont ete)\s+)?signes?\b/u.test(plain)
   ||/(?:^|[.!?]\s*)signez?\s+(?:le |la |les |l')(?:(?:note|document|ordonnance|dossier|prescription|consultation)s?|compte rendu|comptes rendus)\b/u.test(plain);
 }
-const numberWords: Readonly<Record<string, string>> = { un: "1", une: "1", deux: "2", trois: "3", quatre: "4", cinq: "5", six: "6", sept: "7", huit: "8", neuf: "9", dix: "10", one: "1", two: "2", three: "3", four: "4", five: "5", seven: "7", eight: "8", nine: "9", ten: "10", واحد: "1", اثنين: "2", ثلاثة: "3", اربعة: "4", خمسة: "5", ستة: "6", سبعة: "7", ثمانية: "8", تسعة: "9", عشرة: "10" };
-const units: Readonly<Record<string, string>> = { day: "day", days: "day", jour: "day", jours: "day", يوم: "day", يوما: "day", ايام: "day", week: "week", weeks: "week", semaine: "week", semaines: "week", اسبوع: "week", اسابيع: "week", month: "month", months: "month", mois: "month", شهر: "month", اشهر: "month", year: "year", years: "year", an: "year", ans: "year", annee: "year", annees: "year", سنة: "year", سنوات: "year", hour: "hour", hours: "hour", heure: "hour", heures: "hour", ساعة: "hour", ساعات: "hour", minute: "minute", minutes: "minute", دقيقة: "minute", دقائق: "minute", mg: "mg", milligramme: "mg", milligrammes: "mg", milligram: "mg", milligrams: "mg", g: "g", mcg: "mcg", μg: "mcg", ml: "ml", symptom: "symptom", symptoms: "symptom", symptome: "symptom", symptomes: "symptom", اعراض: "symptom", "%": "%" };
-function explicitNumbers(value:string):string[]{
- const text=numericFold(value),written=text.match(/\p{L}+/gu)??[];
- // Indefinite articles establish a quantity only next to a recognized unit.
- return [...text.match(/[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?/gu)??[],...written.flatMap(word=>numberWords[word]&&!['un','une','one'].includes(word)?[numberWords[word]]:[])];
-}
-function numericBounds(value:string):string[]{
- const signs:Readonly<Record<string,string>>={'<':'lt','>':'gt','<=':'lte','>=':'gte','≤':'lte','≥':'gte','less than':'lt','below':'lt','under':'lt','moins de':'lt','greater than':'gt','more than':'gt','above':'gt','plus de':'gt','at most':'lte','au plus':'lte','at least':'gte','au moins':'gte'};
- const pattern=/(<=|>=|<|>|≤|≥|less than|below|under|moins de|greater than|more than|above|plus de|at most|au plus|at least|au moins)\s*([0-9]+(?:\.[0-9]+)?)/gu;
- return [...numericFold(value).matchAll(pattern)].map(m=>`${signs[m[1]!]}:${m[2]}`).sort();
-}
-function quantities(value: string): string[] {
-  const expression = new RegExp(`(?<![\\p{L}\\p{N}])([+-]?\\d+(?:[.,]\\d+)?(?:/\\d+)?|${Object.keys(numberWords).join("|")})\\s*(?:(?:des|de|du|of|the|من)\\s+){0,2}(${Object.keys(units).join("|")})(?![\\p{L}\\p{N}])`, "gu");
-  return [...numericFold(value).matchAll(expression)].map(match => `${numberWords[match[1]!] ?? match[1]!.replace(",", ".")} ${units[match[2]!]}`);
-}
-
 /** Task labels only are projected. The original question remains local. */
 function taskFor(question: string): KnowledgeTask {
   const text = question.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
@@ -72,7 +51,9 @@ function onlyRequestsNamedCriteria(question:string,focus:string):boolean{
 }
 
 /** Synthesis cannot call tools. Every emitted paragraph must cite a literal span of this turn's evidence. */
+const FRENCH_AID_LATEST_START_MS=150_000;
 export async function synthesizeKnowledge(result: KnowledgeResult, question: string, language: AlexaLanguage, signal: AbortSignal, options:{compact?:boolean;onCoverage?:(coverage:'supported'|'partial')=>void}={}): Promise<AlexaEvent[]> {
+  const synthesisStartedAt=Date.now();
   const locale = language === "fr" ? "fr" : "ar";
   const copy = dialogue(language);
   const message = (text: string): AlexaEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
@@ -89,23 +70,38 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     const stripped = quote.replace(new RegExp(`^${escaped}\\s*(?:—|–|-)\\s*`, "u"), "").trim();
     return stripped.length ? stripped : quote;
   };
+  // A number that relies on its heading must show that heading: drug or population may be there.
+  const framedQuote = (proof: KnowledgeResult["preuves"][number], quote: string): string =>
+    proof.section && (explicitNumbers(quote).length || quantities(quote).length) && !requestedMedicationNames(quote).length
+      ? knowledgeSynthesisCopy.fr.quoteIn(proof.section, quote) : knowledgeSynthesisCopy[locale].quote(quote);
   const extractiveFallback = (): AlexaEvent[] | null => {
-    if (!extractiveChoices.length) return null;
+    // Same per-quote checks as the main path: this path must never be the weaker one.
+    const groundedChoices = extractiveChoices.filter(({ proof, quote }) => !hiddenControls.test(quote)
+      && !/\p{N}|±/u.test(numericFold(quote).replace(/[0-9]/gu, ""))
+      && numericEvidenceAllowed(question, quote, proof.langue, proof.section));
+    if (!groundedChoices.length) return null;
     const stop = new Set(["avec", "dans", "pour", "quel", "quels", "quelle", "quelles", "comment", "combien", "quoi", "sont", "être", "cette", "cette", "leur", "leurs", "plus", "moins", "selon", "entre", "dont", "aussi", "peut", "faut", "il", "elle", "nous", "vous", "mais", "donc", "alors", "tout", "tous", "toute", "toutes", "sans", "chez", "dossier", "patient", "patiente"]);
     const words = new Set((numericFold(question).match(/[\p{L}\p{N}]+/gu) ?? []).filter(word => word.length >= 4 && !stop.has(word)));
-    const scored = extractiveChoices.map(entry => ({
+    const scored = groundedChoices.map(entry => ({
       ...entry,
       score: [...words].reduce((total, word) => total + (numericFold(entry.quote).includes(word) ? 1 : 0), 0),
     })).sort((left, right) => right.score - left.score || left.order - right.order);
     const selected = scored.filter(entry => entry.score > 0).slice(0, 3);
-    const pool = selected.length ? selected : scored.slice(0, 1);
+    let pool = selected.length ? selected : scored.slice(0, 1);
+    // A comparison answered for one drug only reads as the whole answer.
+    const compared = knowledgeComparisonRequested(question) ? requestedMedicationNames(question) : [];
+    if (compared.length > 1) {
+      const covering = compared.map(name => scored.find(entry => requestedMedicationNames(entry.quote).includes(name)));
+      if (covering.some(entry => entry === undefined)) return null;
+      pool = [...new Set(covering as typeof scored)];
+    }
     const sentences: Extract<AlexaEvent, { type: "sentence" }>[] = [];
     for (const entry of pool) {
       const quote = knowledgeExcerptForSpeech(sansEnteteDeSection(entry.quote, entry.proof.section));
       if (quote === null) continue;
       sentences.push({
         type: "sentence",
-        text: knowledgeSynthesisCopy[locale].quote(quote),
+        text: framedQuote(entry.proof, quote),
         kind: "knowledge",
         sources: [{ ...knowledgeSource(entry.proof), excerpt: quote }],
       });
@@ -122,7 +118,9 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     }
     return sentences;
   };
-  const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty", "coverage"]);
+  // Only literal approved passages are published on these paths, so the model's failure
+  // or its discarded text never hides evidence the retrieval found.
+  const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty", "coverage", "provider", "entity", "source-title"]);
   const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "criteria-selection" | "unsafe-text" | "quote" | "quote-span" | "quote-polarity" | "unicode-number" | "number" | "quantity" | "citation" | "source-title" | "size" | "parse" = "parse") => {
     console.warn("[alexa-knowledge] source-fallback", reason);
     noteTurnCode("knowledge", `source-fallback:${reason}`);
@@ -163,7 +161,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     &&numericFold((proof.section??'').split('›').at(-1)??'')===numericFold(criteriaPlan?.sectionLeaf??'criteres diagnostiques');
   const choices=result.preuves.map((proof,index)=>{
     const quotes=issuedQuoteChoices(proof.extrait,proof.langue);
-    const allowedQuoteIds=quotes.flatMap((text,i)=>(!extractiveCriteria||isRequestedCriteriaProof(proof))&&!headingOnlyEvidence(text,proof.section)&&(!bibliographyEvidence(proof.section)||bibliographyRequested(question))&&(!medications.length||medications.some(name=>requestedMedicationNames(text).includes(name)))?['q'+(i+1)]:[]);
+    const allowedQuoteIds=quotes.flatMap((text,i)=>(!extractiveCriteria||isRequestedCriteriaProof(proof))&&!headingOnlyEvidence(text,proof.section)&&(!bibliographyEvidence(proof.section)||bibliographyRequested(question))&&(!medications.length||medications.some(name=>requestedMedicationNames(text).includes(name))||medicationBoundBySection(question,text,proof.section))?['q'+(i+1)]:[]);
     return {index:index+1,quotes,allowedQuoteIds};
   });
   extractiveChoices = choices.flatMap((row, index) => row.allowedQuoteIds.flatMap(id => {
@@ -235,28 +233,35 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
         literalSingleSpan:answer.sentences.filter(s=>s.evidence.length===1&&fold(s.text)===fold(s.evidence[0]!.quote)).length,
         bibliographyMarkers:answer.sentences.filter(s=>/\p{L}\d+(?:,\d+){2,}/u.test(s.text)).length,
       });
-    const englishDraft=answer.sentences.length===1?answer.sentences[0]:undefined;
-    if(options.compact&&englishDraft&&copiedEnglishProse(englishDraft.text)){
-      // Restriction-bearing or combined claims need an entailment proof before translation repair.
-      const literal=englishDraft.evidence.length===1&&fold(englishDraft.text)===fold(englishDraft.evidence[0]!.quote);
-      if(!literal||medications.length!==1||negation.test(numericFold(englishDraft.text))||/\b(?:if|when|unless|except|however|although|but|may|might|should|could|only|patients?|pregnan\w*|renal|kidney|hepatic|children|elderly|usually|generally|often|approximately|associated)\b/u.test(numericFold(englishDraft.text)))return fallback('language');
-      const localizedSchema=z.object({sentences:z.array(z.string().min(1).max(1600)).length(1)}).strict();
-      const localized=localizedSchema.parse(JSON.parse(await inferLocalText([
-        {role:'system',content:KNOWLEDGE_FRENCH_REFORMULATION_PROMPT},
-        ...localMessages.filter(m=>m.role==='user'),
-        {role:'user',content:JSON.stringify({draft:englishDraft.text})},
-      ],{jsonSchema:z.toJSONSchema(localizedSchema,{target:'draft-7'}),timeoutMs:ALEXA_NATIVE_BUDGET.inferenceMs,maxOutputTokens:1024,signal})));
-      signal.throwIfAborted();
-      if(JSON.stringify(numericBounds(englishDraft.text))!==JSON.stringify(numericBounds(localized.sentences[0]!)))return fallback('quantity');
-      answer={...answer,sentences:[{...englishDraft,text:localized.sentences[0]!}]};
-    }
     const events: AlexaEvent[] = options.compact?[]:[message(knowledgeSynthesisCopy[locale].draft)];
     if(unverifiedCriteria)events.push(message(KNOWLEDGE_CRITERIA_COVERAGE));
     else if (answer.coverage === "partial") events.push(message(knowledgeSynthesisCopy[locale].partial));
     // Indices RÉELLEMENT cités par les phrases acceptées : la ligne de sources
     // ne mentionne que ces passages, jamais un voisin récupéré mais inutilisé.
+    let frenchRenderings=0,hasFrenchAid=false;
+    const frenchOf=async(proof:KnowledgeResult['preuves'][number],quote:string):Promise<string|null>=>{
+      if(!options.compact||locale!=='fr'||proof.langue!=='en'||frenchRenderings>=2)return null;
+      if(!frenchAidEligible(quote)){noteTurnCode('knowledge','french-ineligible');return null;}
+      // Validated quotes must not be lost to the turn deadline for the sake of an optional aid.
+      if(Date.now()-synthesisStartedAt>FRENCH_AID_LATEST_START_MS){noteTurnCode('knowledge','french-skipped:budget');return null;}
+      frenchRenderings++;
+      try{
+        const schema=z.object({sentences:z.array(z.string().min(1).max(1600)).length(1)}).strict();
+        const completion=await inferLocalText([{role:'system',content:KNOWLEDGE_FRENCH_REFORMULATION_PROMPT},{role:'user',content:JSON.stringify({draft:quote})}],
+          {jsonSchema:z.toJSONSchema(schema,{target:'draft-7'}),timeoutMs:ALEXA_NATIVE_BUDGET.inferenceMs,maxOutputTokens:1024,signal});
+        signal.throwIfAborted();
+        const french=schema.parse(JSON.parse(completion)).sentences[0]!.trim(),verdict=frenchAidAcceptable(quote,french);
+        if(!verdict.ok){noteTurnCode('knowledge',`french-rejected:${verdict.reason}`);return null;}
+        if(personalClaim.test(numericFold(french))||claimsPerformedAction(french)||mentionsKnowledgeBookTitle(french)){noteTurnCode('knowledge','french-rejected:unsafe');return null;}
+        noteTurnCode('knowledge','french-aid');
+        return french;
+      }catch(error){
+        signal.throwIfAborted();
+        noteTurnCode('knowledge',`french-failed:${localModelFailureCode(error)}`);
+        return null;
+      }
+    };
     for (const sentence of answer.sentences) {
-      if(options.compact&&(copiedEnglishProse(sentence.text)||/\p{L}\d+(?:,\d+){2,}/u.test(sentence.text)))return fallback('language');
       const unsafeKind=/<\/?[a-z][^>]*>/iu.test(sentence.text)?'markup':hiddenControls.test(sentence.text)?'controls'
         :personalClaim.test(numericFold(sentence.text))?'personal-claim':claimsPerformedAction(sentence.text)?'action-claim':null;
       if(unsafeKind){
@@ -280,31 +285,34 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
           || hiddenControls.test(evidence.quote) || !fold(proof.extrait).includes(quote)) return fallback("quote-span");
         if(headingOnlyEvidence(evidence.quote,proof.section))return fallback('heading-only');
         if(bibliographyEvidence(proof.section)&&!bibliographyRequested(question))return fallback('bibliography-only');
-        if(medications.length&&!medications.some(name=>requestedMedicationNames(evidence.quote).includes(name)))return fallback('entity');
+        if(medications.length&&!medications.some(name=>requestedMedicationNames(evidence.quote).includes(name))&&!medicationBoundBySection(question,evidence.quote,proof.section))return fallback('entity');
       }
       const citedText = sentence.evidence.map(evidence => evidence.quote).join(" ");
-      // The generated prose is not emitted; validate the exact literal passages Alexa will speak.
-      if(!medicationSpanGrounded(question,citedText,citedText))return fallback('entity');
+      // The model's sentence text is not emitted; validate the exact literal passages.
+      if(!medicationSpanGrounded(question,citedText,citedText)&&!sentence.evidence.every(e=>medicationBoundBySection(question,e.quote,result.preuves[e.index-1]!.section)))return fallback('entity');
       const normalizedSentence = numericFold(citedText);
       if (/\p{N}|±/u.test(normalizedSentence.replace(/[0-9]/gu, ""))) return fallback("unicode-number");
       const numbers = explicitNumbers(citedText);
       const quotedQuantities = quantities(citedText);
-      if((numbers.length||quotedQuantities.length)&&sentence.evidence.some(e=>!medicationNumericQuoteGrounded(question,e.quote,result.preuves[e.index-1]!.langue)))return fallback('entity');
+      if((numbers.length||quotedQuantities.length)&&sentence.evidence.some(e=>!numericEvidenceAllowed(question,e.quote,result.preuves[e.index-1]!.langue,result.preuves[e.index-1]!.section)))return fallback('entity');
       if (verifierCitations(citedText, used.map(index => result.preuves[index - 1]!)).verdict === "rejete") return fallback("citation");
-      // A genuine citation cannot establish that generated prose follows from it.
-      // Keep the model as a quote selector; only server-framed source text is emitted.
+      // A genuine citation cannot establish that generated prose follows from it. The model
+      // selects quotes; the server frames them. The only model text ever emitted is the French
+      // reading aid, placed after the literal passage and marked as unverified.
       for (const evidence of sentence.evidence) {
         const proof=result.preuves[evidence.index-1]!;
         const quote = knowledgeExcerptForSpeech(sansEnteteDeSection(evidence.quote, proof.section));
         if(quote===null)return fallback('source-title');
-        events.push({ type: "sentence", text: knowledgeSynthesisCopy[locale].quote(quote),
-          kind: "knowledge", sources: [{...knowledgeSource(proof),excerpt:quote}] });
+        const french=await frenchOf(proof,quote);
+        if(french)hasFrenchAid=true;
+        events.push({ type: "sentence", text: framedQuote(proof,quote)+(french?' '+knowledgeSynthesisCopy.fr.readingAid(french):''),
+          kind: french?"inference":"knowledge", sources: [{...knowledgeSource(proof),excerpt:quote}] });
       }
     }
     if ("omittedLongPassages" in result && result.omittedLongPassages) events.push(message(copy.longKnowledge));
     if (events.reduce((total, event) => total + (event.type === "sentence" ? event.text.length : 0), 0) > 12000) return fallback("size");
-    // Deliberate: the server publishes verbatim approved quotes, not the
-    // model's prose. A quoted answer is therefore never certified `supported`
+    // Deliberate: the evidence is the verbatim approved quote, not the model's prose.
+    // An answer built this way is therefore never certified `supported`
     // (tests: "does not publish a generated claim as supported", criteria).
     options.onCoverage?.("partial");
     if(options.compact){
@@ -315,7 +323,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       }
       const comparisonFocuses=planKnowledgeQuery(question)?.sectionFocuses;
       if(comparisonFocuses?.some(focus=>!result.preuves.some(p=>sources.has(p.chunkId)&&matchesSectionFocus(p.section,focus))))return fallback('coverage');
-      return [{type:'sentence',text:sentences.map(e=>e.text).join(' '),kind:'knowledge',sources:[...sources.values()]}];
+      return [{type:'sentence',text:sentences.map(e=>e.text).join(' '),kind:hasFrenchAid?'inference':'knowledge',sources:[...sources.values()]}];
     }
     return events;
   } catch(error) {
