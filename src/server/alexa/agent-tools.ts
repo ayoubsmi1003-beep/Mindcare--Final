@@ -1,4 +1,6 @@
 import { noteTurnCode } from "./turn-trace";
+import { isPatientSafetySection, PATIENT_SAFETY_GATES, patientSafetyRead } from "./patient-safety-reads";
+import { clinicalSafetyCopy } from "@/i18n/alexa-clinical-safety";
 import {isDeepStrictEqual} from "node:util";
 import {appendLinkedAnswerLine} from '@/shared/alexa/answer-links';
 import {randomUUID} from "node:crypto";
@@ -412,6 +414,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     }
     const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf,requestText);
     page.evidence.unshift(patientSource(patientId!));return page;
+   }
+   if(isPatientSafetySection(a["section"])){
+    const section=a["section"],gate=PATIENT_SAFETY_GATES[section];
+    const rows=section==="allergies"?await rpc("list_patient_allergies",{p_id:patientId!},signal,true,true)
+     :section==="adverse_events"?await rpc("list_patient_adverse_events",{p_id:patientId!,p_limit:100},signal,true,true)
+     :section==="adherence"?await rpc("list_patient_adherence",{p_id:patientId!},signal,true,true)
+     :await rpc("list_patient_measurements",{p_id:patientId!,p_kind:null,p_limit:200},signal,true,true);
+    const read=patientSafetyRead(section,rows??[]);
+    return {...result,status:read.empty?"empty":read.complete?"ok":"partial",complete:read.complete,text:read.text,data:{patientId,section,rows:read.rows},
+     evidence:[patientSource(patientId!),{id:call.id,type:"query",label:clinicalSafetyCopy.source,provenance:{gate,section,rows:read.rows}}]};
    }
    if(a["section"]==="profile"){
     const row=await rpc("get_patient",{p_id:patientId!},signal);

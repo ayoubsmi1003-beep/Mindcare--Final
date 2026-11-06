@@ -78,6 +78,9 @@ export function knowledgeAppliedToPatient(previous: string, text: string): strin
 const PATIENT_SECTIONS: readonly (readonly [RegExp, string])[] = [
   [/^(?:traitements?|medicaments?|ordonnances?)(?: actuels?| en cours)?$/u, "Quels traitements sont en cours pour le patient sélectionné ?"],
   [/^diagnostics?$/u, "Quels diagnostics actifs pour le patient sélectionné ?"],
+  [/^allergies?$/u, "Quelles allergies du patient sélectionné ?"],
+  [/^observance$/u, "Quelle est l'observance du patient sélectionné ?"],
+  [/^effets? (?:indesirables?|secondaires?)$/u, "Quels effets indésirables sont consignés dans le dossier du patient sélectionné ?"],
   [/^(?:echelles?|scores?)$/u, "Montre les résultats d’échelles pour le patient sélectionné."],
   [/^(?:paiements?|reglements?|impayes?|solde)$/u, "Quel est le solde à encaisser pour le patient sélectionné ?"],
   [/^(?:rendez-vous|rdv)$/u, "Quels rendez-vous du patient sélectionné ?"],
