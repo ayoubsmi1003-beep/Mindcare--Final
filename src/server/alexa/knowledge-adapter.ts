@@ -343,6 +343,24 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       }
       batches.push(result.data.filter(row => matchesRequestedBook(row, plan)));
     }
+    // One unknown word empties an AND query. Retry with fewer terms, stopping at the first hit.
+    // These lots are ranked against the whole question, so a partial match can't pass as a full one.
+    const lotReferences = [...plan.references];
+    if (batches.every(batch => batch.length === 0)) {
+      for (const recovery of plan.recoveryQueries ?? []) {
+        trace.lexical.calls += 1;
+        const result = await client.rpc<unknown[]>("search_knowledge_lexical", porteLexicale(recovery.query, plan.language, LIMITES.LEXICAL).args);
+        signal?.throwIfAborted();
+        if (result.error || !Array.isArray(result.data)) break;
+        trace.lexical.rows += result.data.length;
+        const rows = result.data.filter(row => matchesRequestedBook(row, plan));
+        if (!rows.length) continue;
+        lotReferences[batches.length] = recovery.reference;
+        batches.push(rows);
+        trace.fallbacks.push("lexical-recovery");
+        break;
+      }
+    }
     // A prefix can remove a dose qualifier or negation. Keep whole bounded chunks,
     // and flag approved oversized passages without exposing rejected-source existence.
     let omittedLongPassages = false;
@@ -363,7 +381,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       // Chaque lot est classé contre SA référence : c'est elle qui l'a fait
       // remonter. Un lot anglais issu de l'expansion bilingue ne doit pas être
       // mesuré contre une référence française (couverture ~0, preuve perdue).
-      lots.push({ reference: plan.references[index] ?? plan.relevanceQuery, lignes: complete });
+      lots.push({ reference: lotReferences[index] ?? plan.relevanceQuery, lignes: complete });
     }
 
     // ── Jambe vectorielle (hybride) ────────────────────────────────────────

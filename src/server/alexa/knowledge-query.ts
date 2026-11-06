@@ -130,6 +130,8 @@ export interface KnowledgeQueryPlan {
    */
   readonly references: readonly string[];
   readonly relevanceQuery: string;
+  /** Fewer-term retries for an empty lexical result, each ranked against the whole question. */
+  readonly recoveryQueries?: readonly { readonly query: string; readonly reference: string }[];
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
   /**
@@ -208,6 +210,9 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     // Connecteurs francais : « que dit le livre SUR … », « le livre DE LA … »
     "sur", "au", "aux", "en", "dans", "la", "le", "les", "un", "une", "du",
     "des", "que", "quoi", "quel", "quelle", "et", "ou", "mais", "donc", "alors",
+    // « selon les recommandations », « selon l'âge » : aucun de ces mots ne nomme un livre.
+    "recommandation", "recommandations", "guideline", "guidelines", "etudes", "etude", "experts", "expert", "auteurs",
+    "age", "sexe", "poids", "gravite", "severite", "indication", "situation", "cas", "type", "dose", "patient", "patiente", "patients", "l", "d", "vous", "toi",
     "مراجع", "معايير"]);
   for (const name of [named, namedBook]) {
     if (name && !generic.has(name) && !BOOKS.some(known => known.marker.test(name))) return null;
@@ -299,6 +304,18 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       references.push(requeteCoeur);
     }
   }
+  const recoveryQueries: { query: string; reference: string }[] = [];
+  if (book === undefined) {
+    const known = [...new Set(termes.map(token => ALIASES[token]?.[1] ?? token).filter(token => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
+    const unknown = termes.filter(token => ALIASES[token] === undefined && !anglaisConnus.has(token) && !UNITES_INVARIANTES.has(token) && !/^[+-]?\d/u.test(token));
+    const reference = [...known, ...unknown].join(" "), anchor = requestedMedicationNames(question)[0] ?? known[0];
+    const add = (query: string) => { if (query && !queries.includes(query) && !recoveryQueries.some(entry => entry.query === query) && recoveryQueries.length < 3) recoveryQueries.push({ query, reference }); };
+    if (unknown.length > 0 && known.length >= 2) add(known.join(" "));
+    if (anchor) {
+      for (const other of known.filter(token => token !== anchor).slice(0, 2)) add(`${anchor} ${other}`);
+      for (const other of unknown.slice(0, 1)) add(`${anchor} ${other}`);
+    }
+  }
   // The approved books often label monitoring requirements under "Tests".
   // Keep the literal monitoring query and add this bounded heading alternative.
   for (const query of [...queries]) {
@@ -379,7 +396,8 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   ];
   const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
   const locationRequest=isKnowledgeLocationQuestion(question)||/\b(?:localise|localiser|retrouve|trouve)\b[^.!?]{0,100}\b(?:passage|section|chapitre|page)\b/u.test(normalized)||/\blocalise\w*\b/u.test(normalized)||/\bou\s+est\s+(?:decrit|decrite|mentionne|mentionnee)\b/u.test(normalized);
-  const focusedContent=recognizedFocuses[0]==='trouble depressif caracterise';
+  // A treatment question about this disorder must still reach Maudsley and Stahl.
+  const focusedContent=recognizedFocuses[0]==='trouble depressif caracterise'&&/\b(?:criteres?|symptomes?|signes?|duree|seuils?|definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const drugLocationFocus=locationRequest&&requestedMedicationNames(question).length>0&&!/\b(?:renal\w*|rein\w*|kidney\w*|hematolog\w*|neutrophil\w*|qt)\b/u.test(normalized)
     ? (/\b(?:mecanism\w*|agit|action\w*|fonctionn\w*)\b/u.test(normalized)?'how the drug works'
       :/\b(?:posologie|dose)\b/u.test(normalized)?'dosing tips'
@@ -442,7 +460,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */

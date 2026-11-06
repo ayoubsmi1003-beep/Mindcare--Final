@@ -658,7 +658,7 @@ function directAgendaCountsWorkflow(text:string,clientTurnId:string,asOf:string)
  else if(!add("Arrivées aujourd'hui",today.from,today.to,['arrived'],'Arrivées aujourd’hui'))return null;
  return {parts,steps};
 }
-interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean;comparisonLabel?:string;build?: (prior: readonly AgentResult[]) => AgentCall | null}
+interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean;comparisonLabel?:string;build?: (prior: readonly AgentResult[]) => AgentCall | null;optional?:boolean}
 interface DirectWorkflow {parts:RequestPart[];steps:DirectWorkflowStep[];presentation?:{kind:'created-collected-difference';from:string}}
 function directFinanceComparisonWorkflow(text:string,clientTurnId:string,asOf:string):DirectWorkflow|null{
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),scope=frenchRequestAdmission(text,false,asOf);
@@ -735,18 +735,36 @@ function mixedRecordEntities(prior:readonly AgentResult[]):{medications:string[]
   diagnoses:[...new Set((diagnoses??[]).flatMap(item=>typeof item.label==='string'?[item.label]:[]))],
  };
 }
-function integratedMixedKnowledgeQuery(text:string,prior:readonly AgentResult[]):string|null{
+const MIXED_KNOWLEDGE_READS=3;
+/** "Sertraline 50 mg cp" searched as one AND query matches nothing: keep the drug name only. */
+export function canonicalMedicationName(recorded:string):string{
+ const known=requestedMedicationNames(recorded)[0];if(known)return known;
+ const words:string[]=[];
+ for(const word of recorded.trim().split(/\s+/u)){
+  if(/\d/u.test(word)||/^(?:cp|cpr|comprimes?|comprimés?|gel|gelules?|gélules?|sol|solution|sirop|inj|injectable|amp|ampoules?|lp|mg|ml|g)\.?$/iu.test(word))break;
+  words.push(word);
+ }
+ return words.slice(0,2).join(' ');
+}
+function mixedKnowledgeSubjects(text:string,prior:readonly AgentResult[]):string[]{
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),entities=mixedRecordEntities(prior),named=requestedMedicationNames(text);
+ if(/\bdsm/u.test(plain)&&entities.diagnoses.length)return entities.diagnoses.slice(0,MIXED_KNOWLEDGE_READS);
+ if(named.length)return [...named].slice(0,MIXED_KNOWLEDGE_READS);
+ const medications=[...new Set(entities.medications.map(canonicalMedicationName).filter(Boolean))];
+ return (medications.length?medications:entities.diagnoses).slice(0,MIXED_KNOWLEDGE_READS);
+}
+function integratedMixedKnowledgeQuery(text:string,prior:readonly AgentResult[],index=0):string|null{
  if(!prior.some(result=>['ok','empty','partial'].includes(result.status)))return null;
- const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),entities=mixedRecordEntities(prior);
- const subject=[...new Set([...requestedMedicationNames(text),...entities.medications])].join(', ')||entities.diagnoses.join(', ');
- if(/\binteraction/u.test(plain))return `${subject} interactions médicamenteuses ?`.trim();
- if(/\bsurveillances? biologiques?/u.test(plain))return `${subject} surveillance biologique ?`.trim();
- if(/\beffets? indesirables?/u.test(plain))return `${subject} effets indésirables ?`.trim();
- if(/\bcontre-indiqu/u.test(plain))return `${subject} contre-indications ${entities.diagnoses.join(', ')} ?`.trim();
- if(/\bdsm/u.test(plain))return `critères diagnostiques ${entities.diagnoses.join(', ')||subject} DSM-5 ?`.trim();
- if(/\bprecautions?/u.test(plain))return `${subject} précautions ?`.trim();
- if(/\b(?:recommandations?|sources?|references?)/u.test(plain))return `${subject} recommandations ?`.trim();
- return subject?`${subject} ${text}`.slice(0,500):null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),subject=mixedKnowledgeSubjects(text,prior)[index];
+ if(!subject)return index===0&&/\bdsm/u.test(plain)?'critères diagnostiques DSM-5 ?':null;
+ if(/\binteraction/u.test(plain))return `${subject} interactions médicamenteuses ?`;
+ if(/\bsurveillances? biologiques?/u.test(plain))return `${subject} surveillance biologique ?`;
+ if(/\beffets? indesirables?/u.test(plain))return `${subject} effets indésirables ?`;
+ if(/\bcontre-indiqu/u.test(plain))return `${subject} contre-indications ?`;
+ if(/\bdsm/u.test(plain))return `critères diagnostiques ${subject} DSM-5 ?`;
+ if(/\bprecautions?/u.test(plain))return `${subject} précautions ?`;
+ if(/\b(?:recommandations?|sources?|references?)/u.test(plain))return `${subject} recommandations ?`;
+ return `${subject} ${text}`.slice(0,500);
 }
 function directIntegratedMixedWorkflow(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):DirectWorkflow|null{
  if(!selectedPatientId||requestsCabinetWideScope(text))return null;
@@ -761,13 +779,15 @@ function directIntegratedMixedWorkflow(text:string,clientTurnId:string,selectedP
  const knowledgePart:RequestPart={id:'requested_2',goal:text,tools:['search_knowledge'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]};
  const knowledgeCall:AgentCall={id:`direct-${clientTurnId}-integrated-knowledge`,name:'search_knowledge',args:{partIds:[knowledgePart.id],query:text.slice(0,500)}};
  if(!agentSchemas.search_knowledge.safeParse(knowledgeCall.args).success)return null;
- return {parts:[patientPart,knowledgePart],steps:[
+ // One read per subject: one AND query across several drugs would match nothing.
+ const knowledgeParts=[knowledgePart,...Array.from({length:MIXED_KNOWLEDGE_READS-1},(_,index):RequestPart=>({...knowledgePart,id:`requested_${index+3}`}))];
+ return {parts:[patientPart,...knowledgeParts],steps:[
   {call:{id:`direct-${clientTurnId}-integrated-patient`,name:'get_patient_context',args:patientArgs},partIds:[patientPart.id],goal:text},
-  {call:knowledgeCall,partIds:[knowledgePart.id],goal:text,build:prior=>{
-   const query=integratedMixedKnowledgeQuery(text,prior);if(!query)return null;
-   const call={...knowledgeCall,args:{partIds:[knowledgePart.id],query:query.slice(0,500)}};
+  ...knowledgeParts.map((part,index):DirectWorkflowStep=>({call:{...knowledgeCall,id:`${knowledgeCall.id}-${index+1}`},partIds:[part.id],goal:text,optional:index>0,build:prior=>{
+   const query=integratedMixedKnowledgeQuery(text,prior,index);if(!query)return null;
+   const call={...knowledgeCall,id:`${knowledgeCall.id}-${index+1}`,args:{partIds:[part.id],query:query.slice(0,500)}};
    return agentSchemas.search_knowledge.safeParse(call.args).success?call:null;
-  }},
+  }})),
  ]};
 }
 function directExtendedCounts(contract:NonNullable<ReturnType<typeof frenchPatientCountContract>>,clientTurnId:string,asOf:string):DirectWorkflow|null {
@@ -1037,6 +1057,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
           continue;
         }
         const call=step.build?step.build(results):step.call;
+        if(!call&&step.optional){parts=parts.filter(part=>!step.partIds.includes(part.id));continue;}
         if(!call){for(const part of targets){part.status='failed';part.reason=copy.unavailable;}continue;}
         const built=!!step.build,original=built?String(call.args['query']??input.text):input.text,goal=built?original:step.goal;
         deps.observeCall?.(structuredClone(call));
