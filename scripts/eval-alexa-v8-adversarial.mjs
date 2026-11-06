@@ -249,10 +249,7 @@ async function preflightDatabase(inputs) {
     };
     const repositoryVersions = (await readdir(join(root, "supabase", "migrations")))
       .filter(file => file.endsWith(".sql"))
-      .map(file => file.slice(0, -4))
-      // 214 purges synthetic issued documents, which the frozen oracles read.
-      // Applying it to this snapshot would invalidate them, so it stays unapplied here.
-      .filter(version => version !== "214_purge_documents_synthetiques");
+      .map(file => file.slice(0, -4));
     const appliedVersions = (await client.query("SELECT version FROM app.schema_migrations ORDER BY version"))
       .rows.map(row => row.version);
     const acknowledgedHistoricalVersions = [];
