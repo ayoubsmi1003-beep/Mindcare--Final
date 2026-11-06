@@ -77,7 +77,7 @@ The older `services/jarvis-capacites.ts` registry serves `jarvis-boucle.ts`, not
 
 | Database | Use | Verified |
 |---|---|---|
-| `127.0.0.1:55445/alexa_eval_v8_intelligence_20261027` (container `mindcare-v8-intelligence-20261027`) | Main evaluation database, described by the user as test patients. **Unresolved:** `purge-synthetic.sql` calls these 1,558 records production records, so `is_synthetic` proves nothing. Handled as if real: local only, no identity in commits, docs or reports | 1,558 patients, 8,143 consultations, `is_cloud_dev()=true` on 2026-11-06 |
+| `127.0.0.1:55445/alexa_eval_v8_intelligence_20261027` (container `mindcare-v8-intelligence-20261027`) | Main evaluation database. The user confirmed on 2026-11-06 that it holds test data, even though `purge-synthetic.sql` calls these records production records; `is_synthetic` alone proves nothing. Identities still stay out of commits, docs and reports | 1,558 patients, 8,143 consultations, `is_cloud_dev()=true` on 2026-11-06 |
 | `alexa_eval_v9_fixture_20261030`, `alexa_eval_v9_actions_20261031` (same container) | Frozen fixture and action campaigns | Listed, not yet counted |
 | `tests/eval/alexa-rich-patients-fixture.json` | 2 fictional patients, 3 actors, 17 oracle entries | Refuses anything but its own disposable target |
 | `mc-p3` (55441) | Development database: 1,558 patients, 2 consultations | **Not an evaluation target** |

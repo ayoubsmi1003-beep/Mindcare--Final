@@ -31,6 +31,7 @@ export const ALEXA_CAPABILITIES: readonly AlexaCapability[] = [
   { id: "finance.query", domain: "finance", tool: "query_finance", mode: "read", status: "A", gates: ["get_finance_overview"], roles: clinical, limits: "Cash only: no invoices." },
   { id: "app.cabinet", domain: "settings", tool: "query_app", view: "cabinet", mode: "read", status: "C", gates: ["get_my_cabinet"], roles: all },
   { id: "app.notifications", domain: "notifications", tool: "query_app", view: "notifications", mode: "read", status: "C", gates: ["get_alexa_office_status"], roles: all, limits: "Counts only." },
+  { id: "messages.internal", domain: "messages", tool: "query_app", view: "internal_messages", mode: "read", status: "A", gates: ["list_internal_messages"], roles: all },
   { id: "medications.catalog", domain: "treatments", tool: "query_app", view: "medication_catalog", mode: "read", status: "A", gates: ["search_medications"], roles: all },
   { id: "knowledge.search", domain: "knowledge", tool: "search_knowledge", mode: "read", status: "A", gates: ["search_knowledge_lexical", "search_knowledge_vector_v2_768"], roles: all },
   { id: "general.answer", domain: "general", tool: "answer_general", mode: "read", status: "C", gates: [], roles: all, limits: "Non-clinical questions; factual reliability limited by the local model." },
