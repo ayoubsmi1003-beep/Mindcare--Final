@@ -141,11 +141,11 @@ export type AlexaGeneralInferenceResult = { readonly ok: true; readonly text: st
   readonly reference?: { readonly id: string; readonly label: string; readonly sourceUrl: string; readonly secondarySourceUrl?: string } }
   | { readonly ok: false; readonly code: "privacy" | "unavailable" | "invalid-response" | "cancelled" | "quota-exhausted" | "rate-limited"; readonly localFallback: true };
 
-const GENERAL_PRIVATE_OR_CLINICAL = /\b(?:patients?|patientes?|dossier\w*|records?|consult\w*|seances?|cabinet|agenda|planning|rendez[-\s]?vous|soap|notes?|ordonn\w*|diagnos\w*|symptom\w*|traitement\w*|treatm\w*|medic\w*|medical\w*|clin\w*|prescri\w*|posolog\w*|dosage\w*|dose\w*|therap\w*|psychi\w*|sante|health|malad\w*|disease\w*|depress\w*|anx\w*|suicid\w*|bipola\w*|schiz\w*|douleur\w*|pain|stress|sommeil|insomn\w*|dsm|icd|cim|phq|gad|ymrs|cbt|nom|prenom|identit\w*|adresse\w*|address\w*|telephone\w*|phone|contacts?|courriel|naissance|birth|factur\w*|paiement\w*|recettes?)\b|مريض|مريضة|مرضى|المرض|ملف|دوسيه|تشخيص|اعراض|علاج|دواء|دوائها|الدوا|اكتئاب|قلق|انتحار|الطبيب|طبي|الصحة|عيادة|موعد|جلسة|ملاحظ|اسم(?:ه|ها|ي|ك|هم|كم)|رقم|عنوان|هاتف|تلفون|الميلاد/u;
+const GENERAL_PRIVATE_OR_CLINICAL = /\b(?:patients?|patientes?|dossier\w*|records?|consult\w*|seances?|cabinet|agenda|planning|rendez[-\s]?vous|soap|ordonn\w*|diagnos\w*|symptom\w*|traitement\w*|treatm\w*|medic\w*|medical\w*|clin\w*|prescri\w*|posolog\w*|dosage\w*|dose\w*|therap\w*|psychi\w*|sante|health|malad\w*|disease\w*|depress\w*|anx\w*|suicid\w*|bipola\w*|schiz\w*|douleur\w*|pain|stress|sommeil|insomn\w*|dsm|icd|cim|phq|gad|ymrs|cbt|identit\w*|telephone\w*|phone|courriel|factur\w*|paiement\w*|recettes?)\b|مريض|مريضة|مرضى|المرض|ملف|دوسيه|تشخيص|اعراض|علاج|دواء|دوائها|الدوا|اكتئاب|قلق|انتحار|الطبيب|طبي|الصحة|عيادة|موعد|جلسة|ملاحظ|اسم(?:ه|ها|ي|ك|هم|كم)|رقم|عنوان|هاتف|تلفون|الميلاد/u;
 const GENERAL_DRUGS = /\b(?:xanax|prozac|zoloft|deroxat|lexomil|rivotril|paracetamol|ibuprofen|aspirin\w*|insulin\w*)\b|باراسيتامول|سيرترالين|اسيتالوبرام|فلوكسيتين|ريسبيريدون|اولانزابين|ليثيوم|زاناكس|بروزاك|انسولين/u;
 const GENERAL_MEDICAL_TERMS = /\b(?:doctors?|physician\w*|medecin\w*|soins?|illness\w*|fever\w*|fievre\w*|migraine\w*|diabet\w*|cancer\w*|hypertens\w*|vaccin\w*|pregnan\w*|grossesse|infection\w*|antibio\w*)\b|حمى|سكري|سرطان|ضغط\s+الدم|حمل|عدوى|لقاح|مضاد\s+حيوي/u;
 const GENERAL_ENGLISH_TERMS = /\b(?:the|and|with|because|causing|creating|engines?|systems?|stability|motion|stationary|orbiting|without|through)\b/u;
-const GENERAL_ACTION_OR_SOURCE = /\b(?:ignore|instructions?|system\s+prompt|role|envoi\w*|envoie\w*|transmet\w*|execut\w*|supprim\w*|commande\w*|ecri(?:s|vez|vons|re)\b|redige(?:s|z|r)\b|ouvre\w*|fais|lance\w*|copie\w*|shell|powershell|terminal|send|emails?|delete|execute|launch|save|update|write|open\w*|livres?|ouvrages?|citations?|bibliograph\w*|taylor|maudsley|stahl)\b|\[(?:source|book|livre)\b|\bpage\s+\d|(?:j['’]ai|je\s+viens\s+de|i\s+have|we\s+have)\s+(?:lu|ouvert|ajoute|cree|enregistre|modifie|read|saved|opened|updated|created)|\bi\s+(?:read|opened|saved|updated|created)\b|donnees\s+(?:locales?|du\s+cabinet)|local\s+data|تم\s+(?:حفظ|فتح|تعديل|ارسال)|حفظت|فتحت|عدلت|نفذت|ارسلت|تجاهل|تعليمات|نفذ|احذف/u;
+const GENERAL_ACTION_OR_SOURCE = /\b(?:ignore|instructions?|system\s+prompt|envoi\w*|envoie\w*|transmet\w*|execut\w*|supprim\w*|ecri(?:s|vez|vons|re)\b|redige(?:s|z|r)\b|ouvre\w*|shell|powershell|terminal|send|emails?|delete|execute|launch|save|update|write|open\w*|livres?|ouvrages?|citations?|bibliograph\w*|taylor|maudsley|stahl)\b|\[(?:source|book|livre)\b|\bpage\s+\d|(?:j['’]ai|je\s+viens\s+de|i\s+have|we\s+have)\s+(?:lu|ouvert|ajoute|cree|enregistre|modifie|read|saved|opened|updated|created)|\bi\s+(?:read|opened|saved|updated|created)\b|donnees\s+(?:locales?|du\s+cabinet)|local\s+data|تم\s+(?:حفظ|فتح|تعديل|ارسال)|حفظت|فتحت|عدلت|نفذت|ارسلت|تجاهل|تعليمات|نفذ|احذف/u;
 
 export function isFrenchQuotedInstructionPolicyQuestion(text:string):boolean{
  const value=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
@@ -162,6 +162,7 @@ function generalTextIsUnsafe(text: string, computerExplanation = false): boolean
   return /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]/u.test(text)
     || /\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b|https?:\/\//u.test(text)
     || /\b(?:my|your|his|her|their)\s+(?:names?|surnames?|identit(?:y|ies))\b/u.test(value)
+    || /\b(?:mon|ma|mes|ton|ta|tes|son|sa|ses|notre|votre|vos|leurs?)\s+(?:nom|prenom|adresse|naissance|contacts?)\b/u.test(value)
     || /\b(?:chiffre d.affaires|chiffre|soldes?|finances?|impayes?|depenses?|benefices?|revenus?|encaissements?|resultat net)\b/u.test(value)
     || GENERAL_PRIVATE_OR_CLINICAL.test(value) || GENERAL_MEDICAL_TERMS.test(value) || GENERAL_DRUGS.test(value) || GENERAL_ENGLISH_TERMS.test(value) || mentionsMedication(value)
     || GENERAL_ACTION_OR_SOURCE.test(actions) || /<\/?[a-z][^>]*>/i.test(value)
@@ -185,7 +186,7 @@ function isGeneralC4(value: unknown): boolean {
  * private, contact and action guards below remain the only relevant ones.
  */
 export function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boolean):boolean{
- const value=answer.trim(),lengthOk=value.length>0&&value.length<=500,scriptOk=!/[\p{Script=Arabic}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Cyrillic}]/u.test(value),englishOk=!GENERAL_ENGLISH_OUTPUT.test(value),safe=!generalTextIsUnsafe(value,computerExplanation);
+ const value=answer.trim(),lengthOk=value.length>0&&value.length<=900,scriptOk=!/[\p{Script=Arabic}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Cyrillic}]/u.test(value),englishOk=!GENERAL_ENGLISH_OUTPUT.test(value),safe=!generalTextIsUnsafe(value,computerExplanation);
  if(process.env["ALEXA_DEBUG_GENERAL"]==="1")console.warn("[alexa-general-admission]",JSON.stringify({lengthOk,scriptOk,englishOk,safe,characters:value.length}));
  return lengthOk&&scriptOk&&englishOk&&safe;
 }
@@ -220,7 +221,7 @@ export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Pr
   const computerExplanation=/ordinateur/iu.test(text);
   for(let attempt=0;attempt<2;attempt++){
    const system=attempt===0?ALEXA_GENERAL_PROMPTS.fr:`${ALEXA_GENERAL_PROMPTS.fr} Réponds en une phrase courte, avec des mots français courants. N’utilise aucun terme anglais, aucun caractère d’une autre langue, nom de médicament, nom de patient, mention de dossier, donnée personnelle, agenda ou rendez-vous, et n’affirme pas qu’une action a été exécutée. Si tu ne peux pas répondre ainsi, indique simplement la limite.`;
-   const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:160});
+   const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:320});
    if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};
    if(isValidFrenchGeneralAnswer(answer,computerExplanation))return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL};
   }
