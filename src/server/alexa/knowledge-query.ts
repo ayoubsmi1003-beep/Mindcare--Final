@@ -1,6 +1,7 @@
 import { jetoniser } from "@/server/knowledge/rerank";
 import { medicationNames } from "@/shared/alexa/medications";
 import {knowledgeComparisonRequested,requestedMedicationNames} from './knowledge-evidence-content';
+import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -132,6 +133,8 @@ export interface KnowledgeQueryPlan {
   readonly relevanceQuery: string;
   /** Fewer-term retries for an empty lexical result, each ranked against the whole question. */
   readonly recoveryQueries?: readonly { readonly query: string; readonly reference: string }[];
+  /** Section headings the question asks about. They order a drug's monograph, never filter it. */
+  readonly aspectRubrics?: readonly string[];
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
   /**
@@ -308,12 +311,15 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   if (book === undefined) {
     const known = [...new Set(termes.map(token => ALIASES[token]?.[1] ?? token).filter(token => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
     const unknown = termes.filter(token => ALIASES[token] === undefined && !anglaisConnus.has(token) && !UNITES_INVARIANTES.has(token) && !/^[+-]?\d/u.test(token));
-    const reference = [...known, ...unknown].join(" "), anchor = requestedMedicationNames(question)[0] ?? known[0];
+    // Only a drug the books know can anchor a retry, so a retry never loses the subject of a
+    // drug-less question: "dose de psilocybine" must not come back as another drug's dosing.
+    // Known limit: an unknown word next to a known drug is still dropped from the retry.
+    const reference = [...known, ...unknown].join(" "), anchor = requestedMedicationNames(question)[0] ?? requestedMonographNames(question)[0];
     const add = (query: string) => { if (query && !queries.includes(query) && !recoveryQueries.some(entry => entry.query === query) && recoveryQueries.length < 3) recoveryQueries.push({ query, reference }); };
-    if (unknown.length > 0 && known.length >= 2) add(known.join(" "));
     if (anchor) {
+      if (unknown.length > 0 && known.length >= 2) add(known.join(" "));
       for (const other of known.filter(token => token !== anchor).slice(0, 2)) add(`${anchor} ${other}`);
-      for (const other of unknown.slice(0, 1)) add(`${anchor} ${other}`);
+      for (const other of unknown.filter(token => token !== anchor).slice(0, 1)) add(`${anchor} ${other}`);
     }
   }
   // The approved books often label monitoring requirements under "Tests".
@@ -460,7 +466,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), ...(bilingue.rubriques?.length ? { aspectRubrics: bilingue.rubriques } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */

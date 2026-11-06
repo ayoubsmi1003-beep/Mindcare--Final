@@ -1,0 +1,18 @@
+{
+  "$comment": "Held out. Written on 2026-11-06 before any run against it, after the retrieval rules had been tuned on the other sets. Its first measure steered the review fixes, and a security review noted two questions use forms the same change added, so it is no longer independent: see fr-en-holdout-2.json. Don't edit its cases.",
+  "cases": [
+    { "id": "S-H01", "question": "Quels sont les effets indésirables de la paroxétine ?", "source": "Prescriber", "section": ["Paroxetine › Side Effects"] },
+    { "id": "S-H02", "question": "Quelle dose pour l'escitalopram ?", "source": "Prescriber", "section": ["Escitalopram › Dosing and Use"] },
+    { "id": "S-H03", "question": "La lamotrigine pendant la grossesse ?", "source": "Prescriber", "section": ["Lamotrigine › Special Populations"] },
+    { "id": "S-H04", "question": "Comment agit la duloxétine ?", "source": "Prescriber", "section": ["Duloxetine › Therapeutics"] },
+    { "id": "S-H05", "question": "La rispéridone chez le sujet âgé ?", "source": "Prescriber", "section": ["Risperidone › Special Populations"] },
+    { "id": "S-H06", "question": "L'halopéridol allonge-t-il le QT ?", "source": "Prescriber", "section": ["Haloperidol › Side Effects"] },
+    { "id": "S-H07", "question": "Quelles interactions avec la carbamazépine ?", "source": "Prescriber", "section": ["Carbamazepine › Dosing and Use"] },
+    { "id": "M-H01", "question": "Comment traiter la dépression résistante ?", "source": "Maudsley", "section": ["Part 1: Drug treatment of major psychiatric conditions › Chapter 3"] },
+    { "id": "M-H02", "question": "Que faire en cas de prise de poids sous antipsychotique ?", "source": "Maudsley", "section": ["Part 1: Drug treatment of major psychiatric conditions › Chapter 1"] },
+    { "id": "M-H03", "question": "Quel traitement pour le TDAH chez l'enfant ?", "source": "Maudsley", "section": ["Part 2: Drug treatment of special patient groups › Chapter 5"] },
+    { "id": "M-H04", "question": "Comment prendre en charge la dépendance aux opioïdes ?", "source": "Maudsley", "section": ["Part 1: Drug treatment of major psychiatric conditions › Chapter 4"] },
+    { "id": "M-H05", "question": "Quels psychotropes pendant l'allaitement ?", "source": "Maudsley", "section": ["Part 2: Drug treatment of special patient groups › Chapter 7"] },
+    { "id": "M-H06", "question": "Quelles précautions avec les antipsychotiques en cas d'insuffisance hépatique ?", "source": "Maudsley", "section": ["Part 2: Drug treatment of special patient groups › Chapter 8"] }
+  ]
+}

@@ -67,7 +67,7 @@ const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
 const MAX_REQUETES_BILINGUES = 6;
 
 /** Version de la table de terminologie — à changer à chaque évolution. */
-export const VERSION_TERMINOLOGIE = "fr-en-clinique-v2" as const;
+export const VERSION_TERMINOLOGIE = "fr-en-clinique-v3" as const;
 
 /**
  * Interrupteur global. `false` = aucune expansion, exactement le comportement
@@ -98,6 +98,8 @@ export interface CorrespondanceTerminologie {
    * donc effectivement matcher.
    */
   readonly rubriques: readonly string[];
+  /** The English heading can be a whole query, only when nothing else in the question restricts it. */
+  readonly autonome?: boolean;
   readonly origine: OrigineRealisation;
   /** Ce que la correspondance recouvre — pour la relecture, jamais pour la machine. */
   readonly note: string;
@@ -145,7 +147,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
     fr: ["comment doser", "comment dose t on", "comment l administrer",
       "comment administrer", "mode d administration"],
     en: ["how to dose"],
-    rubriques: ["How to Dose"],
+    rubriques: ["How to Dose", "Dosing Tips", "Usual Dosage Range"],
     origine: "livre",
     note: "rubrique « How to Dose » (50 monographies)",
   },
@@ -243,9 +245,13 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
     origine: "livre",
     note: "rubrique « Best Augmenting Agents for Side Effects »",
   },
+  // Topics a question can name without a drug. Each English heading can be a whole query (see `autonome`).
+  { id: "manie-aigue", fr: ["episode maniaque aigu", "episode maniaque", "manie aigue", "acces maniaque"], en: ["acute mania"], rubriques: ["Treatment of acute mania"], origine: "livre", autonome: true, note: "Maudsley, chapitre 2" },
+  { id: "sevrage-alcool", fr: ["sevrage alcoolique", "sevrage de l alcool", "sevrage a l alcool", "sevrage d alcool"], en: ["alcohol withdrawal"], rubriques: ["Alcohol withdrawal"], origine: "livre", autonome: true, note: "Maudsley, chapitre 4" },
+  { id: "psychotropes-sujet-age", fr: ["psychotropes chez le sujet age", "psychotropes chez la personne agee", "psychotropes chez les personnes agees"], en: ["prescribing in older people"], rubriques: ["Prescribing in older people"], origine: "livre", autonome: true, note: "Maudsley, chapitre 6" },
   {
     id: "prise-poids",
-    fr: ["prise de poids", "gain de poids"],
+    fr: ["prise de poids", "gain de poids", "prendre du poids", "fait grossir"],
     en: ["weight gain"],
     rubriques: ["Weight Gain"],
     origine: "livre",
@@ -271,7 +277,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   // ── Mécanisme, indication, action ────────────────────────────────────────
   {
     id: "mecanisme-action",
-    fr: ["mecanisme d action", "comment agit le medicament", "mode d action"],
+    fr: ["mecanisme d action", "comment agit le medicament", "mode d action", "comment agit", "comment fonctionne"],
     en: ["how the drug works", "mechanism of action", "how does it work"],
     rubriques: ["How the Drug Works"],
     origine: "livre",
@@ -287,7 +293,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "indications",
-    fr: ["indications", "indication principale", "pour quoi est prescrit"],
+    fr: ["indications", "indication principale", "pour quoi est prescrit", "quelles indications", "dans quels cas prescrit on", "dans quels cas prescrire"],
     en: ["commonly prescribed for", "indications"],
     rubriques: ["Commonly Prescribed for"],
     origine: "livre",
@@ -305,7 +311,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   // ── Populations spéciales ────────────────────────────────────────────────
   {
     id: "grossesse",
-    fr: ["grossesse", "pendant la grossesse"],
+    fr: ["grossesse", "pendant la grossesse", "femme enceinte", "femmes enceintes", "patiente enceinte", "patientes enceintes"],
     en: ["pregnancy", "in pregnancy"],
     rubriques: ["Pregnancy"],
     origine: "livre",
@@ -420,7 +426,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
     // la requete contient « monitoring ».
     fr: ["surveillance", "surveiller", "surveille", "surveillons", "surveillance apres l initiation", "monitoring"],
     en: ["monitoring after starting", "monitoring"],
-    rubriques: ["Monitoring after starting an atypical antipsychotic"],
+    rubriques: ["Tests", "Monitoring after starting an atypical antipsychotic"],
     origine: "livre",
     note: "rubrique « Monitoring after starting an atypical antipsychotic »",
   },
@@ -536,6 +542,8 @@ export interface PlanBilingue {
   readonly requetes: readonly string[];
   /** Identifiants des concepts reconnus (traçabilité). */
   readonly concepts: readonly string[];
+  /** Section headings of the recognized concepts: they order a drug's own monograph, never filter. */
+  readonly rubriques?: readonly string[];
   /** Version de la table qui a produit ce plan. */
   readonly version: string;
   /** `false` quand la couche est désactivée ou qu'aucun concept n'a été reconnu. */
@@ -593,6 +601,11 @@ function motifForme(forme: string): RegExp {
  *     pas rester dans la requête, il annulerait l'ET de la porte ;
  *   · les autres termes (médicament, population, quantité) sont conservés.
  */
+const MOTS_DE_PRISE_EN_CHARGE: ReadonlySet<string> = new Set([
+  "comment", "traiter", "traitement", "traitements", "soigner", "gerer", "prendre", "charge", "prise", "faire", "quoi",
+  "quel", "quelle", "quels", "quelles", "que", "est", "la", "le", "les", "de", "du", "des", "un", "une", "en", "cas", "psychotropes",
+]);
+
 export function planifierExpansionBilingue(
   questionNormalisee: string,
   jetonsQuestion: readonly string[],
@@ -612,6 +625,7 @@ export function planifierExpansionBilingue(
   const consommes = new Set<string>();
   const rubriques: string[] = [];
   const generiques: string[] = [];
+  const autonomes: string[] = [];
   const concepts: string[] = [];
   // Le RESTE de la question : on retire les formes reconnues, ET les mots
   // META du livre. Le reste porte le contenu : médicament, population,
@@ -642,6 +656,7 @@ export function planifierExpansionBilingue(
     consommes.add(c.id);
     concepts.push(c.id);
     for (const r of c.rubriques) if (!rubriques.includes(r)) rubriques.push(r);
+    if (c.autonome) autonomes.push(...c.rubriques, ...c.en);
     // La réalisation ANGLAISE générique (« side effects », « pregnancy ») est
     // une seconde clé de recherche : les intitulés de rubrique mesurés
     // appartiennent au Stahl, alors que Taylor est organisé en CHAPITRES.
@@ -676,7 +691,10 @@ export function planifierExpansionBilingue(
     if (/^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(j) && !contenu.includes(j)) contenu.push(j);
   }
 
-  const requetes: string[] = [];
+  // A heading alone would drop any other restriction: a population, a substance, a drug class.
+  // So it applies only when the rest of the question merely asks how to treat the topic.
+  // A second concept, such as a population, is a restriction too, and it has already left `contenu`.
+  const requetes: string[] = concepts.length === 1 && contenu.every(mot => MOTS_DE_PRISE_EN_CHARGE.has(mot)) ? [...new Set(autonomes)] : [];
   // Requête pleine (toutes les contraintes conservées) PUIS requête
   // « entité + quantité » : sur un livre anglais, un seul mot français
   // résiduel (« contre indiquee ») annule l'ET de la porte. La variante
@@ -694,7 +712,8 @@ export function planifierExpansionBilingue(
     const minimale = [rubrique, ...invariants].join(" ");
     return minimale === pleine || invariants.length === 0 ? [pleine] : [pleine, minimale];
   };
-  for (const r of [...rubriques, ...generiques]) {
+  // A whole-topic heading never gets the drug-plus-quantity variants: that would drop the same restrictions.
+  for (const r of [...rubriques, ...generiques].filter(entree => !autonomes.includes(entree))) {
     for (const requete of variantes(r)) {
       if (!requetes.includes(requete)) requetes.push(requete);
       if (requetes.length >= MAX_REQUETES_BILINGUES) break;
@@ -702,7 +721,7 @@ export function planifierExpansionBilingue(
     if (requetes.length >= MAX_REQUETES_BILINGUES) break;
   }
   if (requetes.length === 0) return PLAN_BILINGUE_VIDE;
-  return { requetes, concepts, version: VERSION_TERMINOLOGIE, actif: true };
+  return { requetes, concepts, rubriques: [...new Set([...rubriques, ...generiques])], version: VERSION_TERMINOLOGIE, actif: true };
 }
 
 /**

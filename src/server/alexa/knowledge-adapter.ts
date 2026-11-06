@@ -7,6 +7,8 @@ import { editionDe, type EditionOuvrage } from "@/server/knowledge/editions";
 import { carteDepuisJson, formaterLocalisation, localiserDepuisUnite, localiserExtrait, localisationDeLOuvrage, type CartePages } from "@/server/knowledge/pages";
 import pagesUnites from "@/server/knowledge/pages-unites.json";
 import { mapLimite } from "@/server/knowledge/parallele";
+import { monographPriorityNames, monographsFirst } from "./knowledge-monograph";
+import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
@@ -559,6 +561,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // Le dense complète donc la liste, il ne renverse pas une correspondance
     // exacte. Sans aucune preuve lexicale (mode vectoriel pur), rien n'est
     // plafonné : le comportement historique est conservé.
+    // One exception, below: a tied dense-only row can lead on an on-aspect section of its own monograph.
     const lexicales = tous.filter(({ preuve }) => idsLexicaux.has(preuve.chunkId));
     const meilleurLexical = lexicales.length === 0
       ? null
@@ -594,7 +597,17 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // vérifiée sur le texte normalisé, jamais sur le chunkId.
     const dejaCouvert = (texte: string): boolean => texte.length >= 80
       && textesVus.some((connu) => connu.includes(texte) || texte.includes(connu));
-    for (const { preuve } of ordonnes) {
+    const rubriquesAspect = plan.aspectRubrics ?? [];
+    const meilleurePertinence = Math.max(0, ...ordonnes.map(({ preuve }) => pertinenceEffective(preuve)));
+    const selection = monographsFirst(ordonnes, {
+      sectionOf: ({ preuve }) => preuve.section,
+      keyOf: ({ preuve }) => preuve.chunkId,
+      names: monographPriorityNames(question, requestedMonographNames(question), rubriquesAspect),
+      rubrics: rubriquesAspect,
+      // A dense-only row is capped at the best lexical score, so it can tie that row and lead it, only on an on-aspect section of its own monograph.
+      eligible: ({ preuve }) => pertinenceEffective(preuve) >= SEUIL_PERTINENCE && pertinenceEffective(preuve) >= meilleurePertinence * 0.6,
+    });
+    for (const { preuve } of selection) {
       if (preuves.length >= LIMITES.FINAL) break;
       if (vus.has(preuve.chunkId)) continue;
       const marque = empreinte(preuve);

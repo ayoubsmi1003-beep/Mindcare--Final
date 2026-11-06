@@ -40,12 +40,14 @@ async function fixture() {
 
 describe.skipIf(!ready || mode !== "retrieval")("L2 FR→EN retrieval", () => {
   it("measures recall without a book name", async () => {
-    const { actor } = await fixture(), cases = read("fr-en-retrieval.json").cases as { id: string; question: string; source: string; section: string[] }[];
+    const { actor } = await fixture(), cases = read(process.env["MINDCARE_ALEXA_TRANSFORM_DATASET"] ?? "fr-en-retrieval.json").cases as { id: string; question: string; source: string; section: string[] }[];
     const rows: unknown[] = [];
     for (const item of cases) {
       const started = Date.now();
       const found = await readKnowledge(clientSql(actor), item.question, undefined, dependancesReadKnowledge());
-      const rank = found.preuves.findIndex(proof => proof.titre.includes(item.source) && item.section.some(section => (proof.section ?? "").includes(section)));
+      // "Chapter 1" must not match Chapters 10 to 14.
+      const exact = (section: string, expected: string) => new RegExp(`${expected.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}(?!\\d)`, "u").test(section);
+      const rank = found.preuves.findIndex(proof => proof.titre.includes(item.source) && item.section.some(section => exact(proof.section ?? "", section)));
       const rankSource = found.preuves.findIndex(proof => proof.titre.includes(item.source));
       rows.push({ id: item.id, etat: found.etat, selected: found.preuves.length, rank: rank < 0 ? null : rank + 1, rankSource: rankSource < 0 ? null : rankSource + 1, ms: Date.now() - started });
     }
@@ -59,6 +61,34 @@ describe.skipIf(!ready || mode !== "retrieval")("L2 FR→EN retrieval", () => {
       stahl: metrics(typed.filter(row => row.id.startsWith("S"))), maudsley: metrics(typed.filter(row => row.id.startsWith("M"))), dsm: metrics(typed.filter(row => row.id.startsWith("D"))),
       p50Ms: ms[Math.floor(ms.length / 2)], p95Ms: ms[Math.floor(ms.length * 0.95)], rows });
     expect(rows).toHaveLength(cases.length);
+  }, 1_800_000);
+});
+
+// Same matcher as scripts/eval-book-rag.mjs, whose preflight needs read access to app.schema_migrations, which mindcare_app lacks.
+describe.skipIf(!ready || mode !== "golden")("L2 Golden v4", () => {
+  it("measures recall by source", async () => {
+    const fold = (value: unknown) => String(value ?? "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+    const useful = (section: string) => fold(section).split(/[›»]/u).map(part => part.trim()).filter(Boolean).slice(1);
+    interface Expected { source: string; section?: string[][]; sectionExclut?: string[]; texteContient?: string[] }
+    const satisfied = (proof: { titre: string; section?: string | null; extrait?: string }, expected: Expected) =>
+      fold(proof.titre).includes(fold(expected.source))
+      && !(expected.sectionExclut ?? []).some(word => fold(proof.section).includes(fold(word)))
+      && (!expected.section || expected.section.every(group => group.some(word => useful(proof.section ?? "").some(part => part.includes(fold(word))))))
+      && (!expected.texteContient || expected.texteContient.every(fragment => fold(proof.extrait).includes(fold(fragment))));
+    const { actor } = await fixture();
+    const golden = JSON.parse(readFileSync(join(root, "tests", "eval", "knowledge.books-v4-2026-10-28.json"), "utf8").replace(/^﻿/u, "")) as { cas: { id: string; question: string; answerable?: boolean; attendu: Expected }[] };
+    const rows: { id: string; source: string | null; answerable: boolean; etat: string; rank: number | null; ms: number }[] = [];
+    for (const item of golden.cas) {
+      const started = Date.now(), answerable = item.answerable !== false;
+      const found = await readKnowledge(clientSql(actor), item.question, undefined, dependancesReadKnowledge());
+      const index = answerable ? found.preuves.findIndex(proof => satisfied(proof as never, item.attendu)) : -1;
+      rows.push({ id: item.id, source: answerable ? item.attendu.source : null, answerable, etat: found.etat, rank: index < 0 ? null : index + 1, ms: Date.now() - started });
+    }
+    const metrics = (subset: typeof rows) => ({ n: subset.length, recallAt5: subset.filter(row => row.rank !== null).length / Math.max(1, subset.length), recallAt1: subset.filter(row => row.rank === 1).length / Math.max(1, subset.length), mrr: subset.reduce((sum, row) => sum + (row.rank ? 1 / row.rank : 0), 0) / Math.max(1, subset.length) });
+    const answerable = rows.filter(row => row.answerable), ms = rows.map(row => row.ms).sort((a, b) => a - b), sources = [...new Set(answerable.map(row => row.source))];
+    report("golden", { overall: metrics(answerable), bySource: Object.fromEntries(sources.map(source => [source, metrics(answerable.filter(row => row.source === source))])),
+      unanswerable: rows.filter(row => !row.answerable).map(row => ({ id: row.id, etat: row.etat })), p50Ms: ms[Math.floor(ms.length / 2)], p95Ms: ms[Math.floor(ms.length * 0.95)], rows });
+    expect(rows).toHaveLength(golden.cas.length);
   }, 1_800_000);
 });
 
