@@ -44,13 +44,19 @@ Paths are under `src/`.
 - Gemini and Groq free tiers need `app.is_cloud_dev()` and fail closed.
 - Classification (`egress/classification.ts`): C1, C2 and unknown are blocked. C3 needs the `alexa-clinical-minimal-v1` transform receipt. C4 is generic text or the issued book envelope.
 
-### Open risk R1: OpenRouter has no deployment gate
+### Risk R1: OpenRouter had no deployment gate (closed 2026-11-06)
 
-Legacy `app/api/jarvis/jarvis-chat/route.ts:1003` calls `llm()`. The OpenRouter branch at `egress/external-call.ts:1096-1100` runs on key presence, with no `is_cloud_dev()` check, and `OPENROUTER_API_KEY` is on the packaged allowlist (`electron/main/serveur-cabinet.ts`).
+Legacy `app/api/jarvis/jarvis-chat/route.ts:1003` calls `llm()`, whose OpenRouter branch ran on key presence alone. The classifier ran first and no usable free model was qualified, so this was never a confirmed leak. Every OpenRouter chat, quota and maintenance call now needs a passing `deploymentSynthetique`.
 
-**Status: not a confirmed leak.** The classifier still runs first (`autoriserInference`, line 1151), and the last real qualification found 0 usable free models. If a key were set on a real-patient install, though, doctor question text classified as C4 and book passages could leave the machine, and only the free-text classifier would stand in the way. Whether a key is set on the installed cabinet is unverified.
+### Risk R3: `is_cloud_dev()` doesn't identify synthetic data (open, needs a decision)
 
-**Recommended fix:** add the same synthetic-deployment gate to the OpenRouter branch. It is a one-branch change on a legacy path, proposed in Phase 6.
+- `resources/snapshot/purge-synthetic.sql` states that the 1,558 Syglab records are production records, flagged `is_synthetic = TRUE` only because they were imported under `cloud-dev`.
+- `electron/main/orchestrateur.ts:728-733` skips the switch to `self-hosted` when a snapshot is restored, and it's the only code path that sets it. A restored install therefore most likely stays `cloud-dev` while holding real records. By reading; the installed database was not inspected.
+- The same path also appears to skip the switch on a packaged standalone start, since `MINDCARE_ELECTRON_ENV` is only set for the cabinet server. Not proven reachable.
+
+**Mitigated for egress:** `deploymentSynthetique` now refuses on any packaged install before reading the database. That covers OpenRouter, Gemini and Groq. The voice path's `garderVoix` has its own check, but cloud voice is hard-disabled.
+
+**Not fixed:** the `environment` value itself stays wrong on such an install, and `is_synthetic` can't be trusted to mean "not real". Other code relying on either keeps that assumption. Correcting it changes installed data behaviour, so it needs a decision and its own review.
 
 ### Open risk R2: `appelGeminiDirect`
 

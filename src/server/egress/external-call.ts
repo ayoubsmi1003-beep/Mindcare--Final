@@ -47,6 +47,7 @@ import { AlexaQualificationError, type AlexaQualificationPhase } from "@/server/
 import { ALEXA_CLINICAL_TRANSFORM, createSafeClinicalPayload, safeClinicalMessages } from "@/server/alexa/privacy-boundary";
 import { validateAlexaResponse } from "@/server/alexa/response-validator";
 import { knowledgeAnswerJsonSchema, type LlmOutputContract } from "@/shared/alexa/knowledge-answer";
+import { localAssetLayout } from "@/server/alexa/local-model-assets";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
@@ -438,6 +439,10 @@ async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, sig
   if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
   // Final cost guard, including direct transport callers and qualification.
   if (!isFreeAlexaModelId(req.model)) throw new ErreurModele("CONFIGURATION", false, "request");
+  // Every OpenRouter chat request passes here, with the same check as Gemini and Groq: on each
+  // call, a packaged install refuses, and otherwise the database must say the deployment is
+  // synthetic. A key alone proves nothing; an unknown state or a database failure refuses.
+  if (!(await deploymentSynthetique(signal))) throw new ErreurModele("SECURITY_BLOCK", false, "request");
   return fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST", signal,
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "MindCare" },
@@ -477,7 +482,17 @@ async function confirmationGeminiValide(maintenance = false): Promise<boolean> {
       && proof.at <= Date.now() && Date.now() - proof.at < 86_400_000;
   } catch { return false; }
 }
+/**
+ * A restored snapshot keeps `environment = 'cloud-dev'`, and its Syglab records carry
+ * `is_synthetic = TRUE` although they are production records (purge-synthetic.sql). So on a
+ * delivered install the database state can't vouch for itself: being packaged refuses first.
+ */
+function installationLivree(): boolean {
+  const packaged = process.env["MINDCARE_PACKAGED"];
+  return packaged === "1" || packaged === "true" || localAssetLayout().packaged;
+}
 async function deploymentSynthetique(signal?: AbortSignal): Promise<boolean> {
+  if (installationLivree()) return false;
   try {
     signal?.throwIfAborted();
     return await withCaller(null, async q => {
@@ -1043,6 +1058,7 @@ export async function lireQuotaOpenRouter(signal?: AbortSignal): Promise<{ reado
   if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
   const key = env().OPENROUTER_API_KEY;
   if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
+  if (!(await deploymentSynthetique(signal))) throw new ErreurModele("SECURITY_BLOCK", false, "request");
   const response = await fetch("https://openrouter.ai/api/v1/key", { headers: { Authorization: `Bearer ${key}` },
     signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(3000)]) : AbortSignal.timeout(3000) });
   const body: unknown = await response.json().catch(() => null);
@@ -1057,6 +1073,7 @@ export async function lireQuotaOpenRouter(signal?: AbortSignal): Promise<{ reado
 export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: number; readonly maxModels?: number; readonly allModels?: boolean; readonly signal?: AbortSignal } = {}) {
   let phase: AlexaQualificationPhase = "catalog";
   try {
+    if (!(await deploymentSynthetique(opts.signal))) throw new ErreurModele("SECURITY_BLOCK", false, "request");
     await rafraichirCatalogue(opts.signal);
     phase = "quota";
     const quota = await lireQuotaOpenRouter(opts.signal);
@@ -1093,7 +1110,9 @@ async function candidatsInference(req: LlmRequest, streaming: boolean, provider:
   // Two already-qualified small providers need no unrelated catalogue round trip.
   if (req.preferSmallFreeModel && alternatives.length === 2) return alternatives;
   let modeles: string[] = [];
-  if (env().OPENROUTER_API_KEY) {
+  const openRouterPermis = !!env().OPENROUTER_API_KEY && (synthetique || await deploymentSynthetique(req.signal));
+  req.signal?.throwIfAborted();
+  if (openRouterPermis) {
     try {
       await rafraichirCatalogue(req.signal, Math.min(3000, req.timeoutMs ?? 3000));
       // Qualification is explicit maintenance, never an unbounded cold-turn delay.
@@ -1107,6 +1126,7 @@ async function candidatsInference(req: LlmRequest, streaming: boolean, provider:
   const compte = poolOpenRouter.statutCompte();
   if (compte.code !== null) throw new ErreurModele(compte.code, false, "account", compte.until - Date.now());
   if (!env().OPENROUTER_API_KEY) throw new ErreurModele("CONFIGURATION", false, "account");
+  if (!openRouterPermis) throw new ErreurModele("SECURITY_BLOCK", false, "request");
   return modeles.slice(0, 2);
 }
 
