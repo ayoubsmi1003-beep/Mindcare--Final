@@ -9,7 +9,7 @@ import { knowledgeSynthesisCopy,KNOWLEDGE_COMPACT_SYSTEM_PROMPT,KNOWLEDGE_COMPAC
 import {ALEXA_NATIVE_BUDGET,ALEXA_NATIVE_DEADLINE_MS} from '@/shared/alexa/agent';
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyRequested,knowledgeComparisonRequested,requestedMedicationNames,medicationSpanGrounded,medicationNumericQuoteGrounded,issuedQuoteChoices,copiedEnglishProse} from './knowledge-evidence-content';
 import {isIssuedKnowledgeResult} from "./knowledge-adapter";
-import { inferLocalText } from "./local-model";
+import { inferTextForTask } from "./inference/registry";
 import {localModelFailureCode} from './local-model-protocol';
 import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
 import { verifierCitations } from "@/server/knowledge/citations";
@@ -200,7 +200,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   signal.throwIfAborted();
   try {
     const answerSchema=options.compact?indexedKnowledgeAnswerSchema(choices,maxEvidence):knowledgeAnswerSchema;
-    const completion = await inferLocalText(localMessages, { jsonSchema:options.compact?z.toJSONSchema(answerSchema,{target:'draft-7'}):knowledgeAnswerJsonSchema,
+    const completion = await inferTextForTask("knowledge_selection",localMessages, { jsonSchema:options.compact?z.toJSONSchema(answerSchema,{target:'draft-7'}):knowledgeAnswerJsonSchema,
       // Direct native book reads may be the first inference of the turn, including integrity and startup.
       timeoutMs: options.compact?ALEXA_NATIVE_DEADLINE_MS-ALEXA_NATIVE_BUDGET.marginMs:60000,
       maxOutputTokens: options.compact?(extractiveCriteria?256:1024):1024, signal });
@@ -261,7 +261,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       frenchRenderings++;
       try{
         const schema=z.object({sentences:z.array(z.string().min(1).max(1600)).length(1)}).strict();
-        const completion=await inferLocalText([{role:'system',content:KNOWLEDGE_FRENCH_REFORMULATION_PROMPT},{role:'user',content:JSON.stringify({draft:quote})}],
+        const completion=await inferTextForTask("knowledge_french",[{role:'system',content:KNOWLEDGE_FRENCH_REFORMULATION_PROMPT},{role:'user',content:JSON.stringify({draft:quote})}],
           {jsonSchema:z.toJSONSchema(schema,{target:'draft-7'}),timeoutMs:ALEXA_NATIVE_BUDGET.inferenceMs,maxOutputTokens:1024,signal});
         signal.throwIfAborted();
         const french=schema.parse(JSON.parse(completion)).sentences[0]!.trim(),verdict=frenchAidAcceptable(quote,french);

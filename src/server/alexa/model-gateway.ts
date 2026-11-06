@@ -13,7 +13,7 @@ import { isIssuedPublicQuestion, type PublicQuestionAdmission } from "./semantic
 import { findVerifiedPublicFact,publicFactAnswerMatches } from "./general-reference";
 import { isFrenchAlexaCapabilityQuestion, isFrenchClarificationCapabilityQuestion, isFrenchMissingInformationPolicyQuestion } from "@/shared/alexa/request-contract";
 
-import { inferLocalText } from "./local-model";
+import { inferTextForTask } from "./inference/registry";
 /** Delivered text stays on the pinned local MiniCPM engine. Gemini voice remains separate. */
 export { ALEXA_CONVERSATION_MODEL as ALEXA_DIRECT_MODEL } from "./model-policy";
 
@@ -60,7 +60,7 @@ export async function inferAlexa(payload: SafeClinicalPayload, options: {
   // Fixed local MiniCPM; privacy admission and clinical response validation remain mandatory.
   let text: string;
   try {
-    text = await inferLocalText(request.messages, { jsonSchema: clinicalOutputSchema(payload), timeoutMs: request.timeoutMs, signal: options.signal });
+    text = await inferTextForTask("clinical_selection",request.messages, { jsonSchema: clinicalOutputSchema(payload), timeoutMs: request.timeoutMs, signal: options.signal });
   } catch {
     return { ok: false, code: options.signal?.aborted ? "cancelled" : "unavailable", localFallback: true };
   }
@@ -77,7 +77,7 @@ async function inferStreaming(payload: SafeClinicalPayload, request: { readonly 
   // The local answer is buffered before the existing sentence validator publishes it.
   let text: string;
   try {
-    text = await inferLocalText(request.messages, { jsonSchema: clinicalOutputSchema(payload), timeoutMs: request.timeoutMs, signal });
+    text = await inferTextForTask("clinical_selection",request.messages, { jsonSchema: clinicalOutputSchema(payload), timeoutMs: request.timeoutMs, signal });
   } catch {
     return { ok: false, code: signal?.aborted ? "cancelled" : "unavailable", localFallback: true };
   }
@@ -208,7 +208,7 @@ export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Pr
    for(let attempt=0;attempt<2;attempt++){
     const system=`${ALEXA_GENERAL_PROMPTS.fr} Reformule le fait vérifié en une phrase courte et naturelle. Conserve son phénomène et son mécanisme, n’ajoute aucun détail. Si tu hésites, reprends le fait fourni.`+(attempt?' Ne remplace pas le phénomène et ne crée pas de cause.':'');
     try{
-     const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:sourcedQuestion}],{signal,timeoutMs:240000,maxOutputTokens:160});
+     const answer=await inferTextForTask("general",[{role:"system",content:system},{role:"user",content:sourcedQuestion}],{signal,timeoutMs:240000,maxOutputTokens:160});
      if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};
      if(isValidFrenchGeneralAnswer(answer,false)&&publicFactAnswerMatches(answer,reference))return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL,reference:{id:reference.id,label:reference.label,sourceUrl:reference.sourceUrl,...(reference.secondarySourceUrl?{secondarySourceUrl:reference.secondarySourceUrl}:{})}};
     }catch{if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};break;}
@@ -221,7 +221,7 @@ export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Pr
   const computerExplanation=/ordinateur/iu.test(text);
   for(let attempt=0;attempt<2;attempt++){
    const system=attempt===0?ALEXA_GENERAL_PROMPTS.fr:`${ALEXA_GENERAL_PROMPTS.fr} Réponds en une phrase courte, avec des mots français courants. N’utilise aucun terme anglais, aucun caractère d’une autre langue, nom de médicament, nom de patient, mention de dossier, donnée personnelle, agenda ou rendez-vous, et n’affirme pas qu’une action a été exécutée. Si tu ne peux pas répondre ainsi, indique simplement la limite.`;
-   const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:320});
+   const answer=await inferTextForTask("general",[{role:"system",content:system},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:320});
    if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};
    if(isValidFrenchGeneralAnswer(answer,computerExplanation))return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL};
   }
@@ -264,7 +264,7 @@ export async function inferGeneralAlexa(text: string, options: {
         { role: "system", content: `${prompt} Réponds en une phrase courte et simple, sans nom de personne.` },
         { role: "user", content: text },
       ];
-      const answer = await inferLocalText(requestMessages, {
+      const answer = await inferTextForTask("general",requestMessages, {
         maxOutputTokens: 1024, timeoutMs: remaining, signal: options.signal,
       });
       if (options.signal?.aborted) return { ok: false, code: "cancelled", localFallback: true };

@@ -16,7 +16,10 @@ import type { AgentContinuationKind } from "./agent-continuation";
 import { agentCopy, agentPrompt, agentDescriptions,agentMetadataPrompt,agentDeclarationRecovery,agentActionDescriptions } from "@/i18n/alexa-agent";
 import {profileCopy} from '@/i18n/alexa-profile';
 import {actionArgumentKeys} from '@/shared/alexa/agent';
-import { inferLocalCompletion } from "./local-model";
+import type { inferLocalCompletion } from "./local-model";
+import { inferCompletionForTask } from "./inference/registry";
+import { absentFeatureRequested } from "@/shared/alexa/capabilities";
+import { absentFeatureCopy } from "@/i18n/alexa-capabilities";
 import {relativeClinicalDate} from './clinical-narrative';
 import { localModelFailureCode, type LocalCompletion, type LocalMessage, type LocalTool } from "./local-model-protocol";
 
@@ -849,6 +852,13 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
     const part:RequestPart={id:'requested_1',goal:input.text,tools:[],conditions:[],dependsOn:[],status:'unsupported',resultRefs:[id],reason:text};
     return {status:'partial',parts:[part],results:[result],sentences:[text],sources:[],patientId:null,tokensIn:0,tokensOut:0};
   }
+  const absentFeature=absentFeatureRequested(input.text);
+  if(absentFeature){
+    const id=`absent-${input.clientTurnId}`,text=absentFeatureCopy[absentFeature as keyof typeof absentFeatureCopy];
+    const result:AgentResult={callId:id,status:'unsupported',complete:false,text,evidence:[],conditionKeys:[],error:{code:'capability-absent',retryable:false}};
+    const part:RequestPart={id:'requested_1',goal:input.text,tools:[],conditions:[],dependsOn:[],status:'unsupported',resultRefs:[id],reason:text};
+    return {status:'partial',parts:[part],results:[result],sentences:[text],sources:[],patientId:null,tokensIn:0,tokensOut:0};
+  }
   const language = ALEXA_AGENT_LANGUAGE, copy = agentCopy[language];
   if(pendingPatientScopeClarification&&pendingTask){
     if(!input.appContext.patientId){
@@ -1038,7 +1048,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
   if(directWorkflow){parts=directWorkflow.parts;declared=true;}else if(directNamedReads){parts=directNamedReads.parts;declared=true;}else if(directCalls){parts=directCalls.flatMap(entry=>entry.parts??[entry.part]);declared=true;}
   else if(directDocumentModelRequest){parts=[{id:'requested_1',goal:input.text,tools:['query_documents'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]}];declared=true;}
   if(structuredPatientQuery&&queryContract.unsupported.length&&!directCalls?.length){parts=[{...extendedPart,tools:[],status:'unsupported',reason:copy.unsupported+' '+queryContract.unsupported.join(' ; ')}];declared=true;}
-  const infer = deps.infer ?? inferLocalCompletion;
+  const infer = deps.infer ?? ((messages:readonly LocalMessage[],options:Parameters<typeof inferLocalCompletion>[1])=>inferCompletionForTask("tool_selection",messages,options));
   const readTools=new Set(['query_patients','get_patient_context','query_consultations','query_agenda','query_documents','query_finance','query_app','search_knowledge']);
   // A small model may emit independent calls one at a time. Finish declared human
   // outputs within the same six-call/deadline caps; dependencies and actions keep three rounds.

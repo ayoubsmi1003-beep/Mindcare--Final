@@ -180,9 +180,14 @@ async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTe
     throw new Error("LocalModelUnavailable");
   }
   finally {
-    if (runtimeState.child) { runtimeState.idle = setTimeout(() => { void releaseLocalModel(); }, 60000); runtimeState.idle.unref(); }
+    if (runtimeState.child) { runtimeState.idle = setTimeout(() => { void releaseLocalModel(); }, localModelIdleMs(process.env["ALEXA_LOCAL_MODEL_IDLE_MS"])); runtimeState.idle.unref(); }
     releaseSlot();
   }
+}
+/** A reload re-hashes every artifact, so a follow-up shouldn't pay for it. Bounded: this model holds about 1.5 GB. */
+export function localModelIdleMs(configured: string | undefined): number {
+  const value = Number(configured);
+  return configured && Number.isInteger(value) && value >= 60_000 && value <= 1_800_000 ? value : 300_000;
 }
 export async function inferLocalText(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {
   return parseLocalAnswer(await inferLocalRaw(messages, options));

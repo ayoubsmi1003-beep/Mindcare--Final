@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import type { ClinicalContext, ClinicalConsultation } from "@/shared/alexa/clinical";
 import {SESSION_NARRATIVE_VERSION} from '@/shared/alexa/clinical';
-import { inferLocalText } from "./local-model";
+import { inferTextForTask } from "./inference/registry";
 import { localModelFailureCode } from "./local-model-protocol";
 import { consultationExcerpts } from "./note-excerpts";
 import { narrativeCopy as copy } from "@/i18n/alexa-narrative";
@@ -418,7 +418,7 @@ async function synthesizeNarrativeBatch(sources: readonly NarrativeSource[], sig
     const modelSources=validationSources.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
       ...source,...(selectedEvidence?.has(source.id)?{text:selectedEvidence.get(source.id)}:{}),id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),...(requiredSessionSource(source)?{required:true}:{}),
     })).filter(source=>!sessionEvidence||!validationSources.some(s=>s.scope==='current')||sessionEvidence.has(sourceAliases.get(source.id)!));
-    const raw = await inferLocalText([{ role: "system", content: systemPrompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(responseSchema), maxOutputTokens, timeoutMs: 900000, signal: boundedSignal });
+    const raw = await inferTextForTask("narrative",[{ role: "system", content: systemPrompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(responseSchema), maxOutputTokens, timeoutMs: 900000, signal: boundedSignal });
     lastRaw = raw;
     boundedSignal.throwIfAborted();
     const modelValue: unknown = JSON.parse(raw),parsedModel=responseSchema.safeParse(modelValue);
@@ -732,7 +732,7 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     if(!selectable.size)throw Error('CaseSummaryEvidenceUnavailable');
     const schema=z.object({selection:z.enum([...selectable.keys()] as [string,...string[]])}).strict();
     const selectionPrompt=options.comparison?copy.comparisonSelectionPrompt:options.chronological?copy.chronologySelectionPrompt:copy.caseSelectionPrompt;
-    const raw=await inferLocalText([{role:'system',content:selectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:promptedChoices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
+    const raw=await inferTextForTask("narrative",[{role:'system',content:selectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:promptedChoices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
     signal.throwIfAborted();
     const selected=selectable.get(schema.parse(JSON.parse(raw)).selection)!;
     if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-case-selection]',JSON.stringify({comparison:!!options.comparison,choices:choices.length,pairs:pairs.length,selectable:selectable.size,selected:selected.length,visits:new Set(selected.map(choice=>choice.visitId)).size}));
@@ -766,7 +766,7 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
       return result;
     };
     try{
-      const raw=await inferLocalText([{role:'system',content:copy.comparisonCandidatePrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text,visitId})=>({id,text,consultationOrder:visitOrder.get(visitId)}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:128,timeoutMs:900000,signal});
+      const raw=await inferTextForTask("narrative",[{role:'system',content:copy.comparisonCandidatePrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text,visitId})=>({id,text,consultationOrder:visitOrder.get(visitId)}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:128,timeoutMs:900000,signal});
       signal.throwIfAborted();
       const selected=schema.parse(JSON.parse(raw)).selections.map(id=>choices.find(choice=>choice.id===id)!);
       if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[alexa-case-candidates]',JSON.stringify({choices:choices.length,selected:selected.length,visits:orderedVisits.length}));
