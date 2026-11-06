@@ -317,6 +317,12 @@ if (residus.length > 0) {
 etape("copie de .next/static et public/…");
 cpSync(path.join(RACINE, ".next", "static"), path.join(CIBLE, ".next", "static"), { recursive: true });
 cpSync(path.join(RACINE, "public"), path.join(CIBLE, "public"), { recursive: true });
+// La recherche vectorielle lit sa recette épinglée depuis `knowledge/`, relatif au
+// serveur. Sans ces fichiers, activer le drapeau laisserait Alexa en lexical seul.
+mkdirSync(path.join(CIBLE, "knowledge"), { recursive: true });
+for (const recette of ["recette-embedding-secondaire.json", "recette-embedding-secondaire-768.json"]) {
+  cpSync(path.join(RACINE, "knowledge", recette), path.join(CIBLE, "knowledge", recette));
+}
 
 // ── 4bis. Élagage des fichiers sans rôle à l'exécution ───────────────────────
 //

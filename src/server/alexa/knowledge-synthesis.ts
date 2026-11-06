@@ -141,6 +141,20 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       messages: messages !== null, envelope: messages !== null && isIssuedKnowledgeEnvelope(messages), compact: options.compact === true,
     }));
   }
+  // A weak match is not an answer, but hiding it leaves the doctor with nothing to check.
+  // Show the closest literal passages, labelled as such, under the same per-quote rules.
+  if(options.compact&&result.etat==='faible'&&isIssuedKnowledgeResult(result)){
+    const requested=requestedMedicationNames(question);
+    const closest=result.preuves.flatMap(proof=>{
+      const quote=issuedQuoteChoices(proof.extrait,proof.langue).find(text=>!headingOnlyEvidence(text,proof.section)&&!hiddenControls.test(text)
+        &&!/\p{N}|±/u.test(numericFold(text).replace(/[0-9]/gu,''))&&(!requested.length||requested.some(name=>requestedMedicationNames(text).includes(name))||medicationBoundBySection(question,text,proof.section))
+        &&numericEvidenceAllowed(question,text,proof.langue,proof.section));
+      const excerpt=quote?knowledgeExcerptForSpeech(sansEnteteDeSection(quote,proof.section)):null;
+      return excerpt?[{proof,excerpt}]:[];
+    }).slice(0,2);
+    noteTurnCode('knowledge',closest.length?'faible-closest-shown':'faible-nothing-citable');
+    if(closest.length)return [{type:'sentence',text:[copy.weakKnowledge,...closest.map(({proof,excerpt})=>framedQuote(proof,excerpt))].join(' '),kind:'knowledge',sources:closest.map(({proof,excerpt})=>({...knowledgeSource(proof),excerpt}))}];
+  }
   // Local inference only: the evidence envelope is server-issued and frozen,
   // and no byte leaves the machine. The egress classifier's person-name
   // heuristic is not an egress control here and rejects book titles
