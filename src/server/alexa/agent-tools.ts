@@ -1,3 +1,4 @@
+import { noteTurnCode } from "./turn-trace";
 import {isDeepStrictEqual} from "node:util";
 import {appendLinkedAnswerLine} from '@/shared/alexa/answer-links';
 import {randomUUID} from "node:crypto";
@@ -514,6 +515,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const retrieval=required.sourceTitle&&!proposed.sourceTitle?requetePourLivreRequis(required,String(a['query'])):medicalQuestion;
    if(retrieval.length>500)return failure(call,'needs_input',copy.missing,'knowledge-query-budget');
    const found=await readKnowledge(knowledge,retrieval,signal,undefined,{traceOrigin:"agent_tool"});
+   noteTurnCode("knowledge",found.etat);
    result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
    result.data=found;result.evidence=found.preuves.map(p=>knowledgeSource(p));
    let synthesisComplete=false;

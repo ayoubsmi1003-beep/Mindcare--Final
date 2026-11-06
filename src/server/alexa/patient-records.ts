@@ -7,7 +7,7 @@ type Sentence = Extract<AlexaEvent, { type: "sentence" }>;
 const profile = z.object({ id: z.uuid(), first_name: z.string().min(1), last_name: z.string().min(1),
   record_number: z.string(), phone: z.string(), birth_date: z.preprocess(value=>value instanceof Date&&Number.isFinite(value.getTime())
     ?`${value.getFullYear()}-${String(value.getMonth()+1).padStart(2,"0")}-${String(value.getDate()).padStart(2,"0")}`:value,z.string().nullable()), age: z.number().int().nullable().optional() });
-const document = z.object({ document_id: z.uuid(), doc_type: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification"]),
+const document = z.object({ document_id: z.uuid(), doc_type: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]),
   issued_at: z.preprocess(value=>value instanceof Date?value.toISOString():value,z.iso.datetime({ offset: true })), printed_count: z.number().int().nonnegative(), status: z.enum(["issued", "voided"]).optional() });
 
 /** Existing audited doors, actor-bound DbPort. Never inspect HTML or execute document text. */

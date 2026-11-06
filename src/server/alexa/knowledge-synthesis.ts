@@ -1,4 +1,5 @@
 ﻿import {z} from 'zod';
+import { noteTurnCode } from "./turn-trace";
 import { knowledgeAnswerSchema, knowledgeAnswerJsonSchema,indexedKnowledgeAnswerSchema,resolveIndexedKnowledgeAnswer } from "@/shared/alexa/knowledge-answer";
 import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
@@ -124,6 +125,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   const EXTRACTIVE_REASONS = new Set(["citation", "quote", "quote-span", "quote-polarity", "schema", "parse", "empty-answer", "insufficient-nonempty", "coverage"]);
   const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "criteria-selection" | "unsafe-text" | "quote" | "quote-span" | "quote-polarity" | "unicode-number" | "number" | "quantity" | "citation" | "source-title" | "size" | "parse" = "parse") => {
     console.warn("[alexa-knowledge] source-fallback", reason);
+    noteTurnCode("knowledge", `source-fallback:${reason}`);
     if (EXTRACTIVE_REASONS.has(reason)) {
       const extracted = extractiveFallback();
       if (extracted) return extracted;

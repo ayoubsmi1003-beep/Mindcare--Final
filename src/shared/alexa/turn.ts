@@ -36,9 +36,11 @@ const sourceEvidenceSchema=z.object({
 const sourceEvidenceListSchema=z.array(sourceEvidenceSchema).max(2048);
 /** Shared admission for optional evidence details, compatible with existing source references. */
 export function validAlexaSources(value:unknown):value is AlexaSource[]{return sourceEvidenceListSchema.safeParse(value).success;}
+/** The one closed result of a turn, whatever path produced it. */
+export type TurnOutcome = "answered" | "partial" | "clarification" | "confirmation" | "capability_unavailable" | "insufficient_evidence" | "permission_denied" | "tool_failed" | "model_unavailable" | "cancelled";
 export type AlexaEvent =
   | ({ type: "proposal" } & AlexaProposal)
   | { type: "stage"; stage: "identity" | "context" | "knowledge" | "analysis" | "validation" }
   | { type: "sentence"; text: string; kind: "fact" | "inference" | "knowledge"; sources: AlexaSource[]; links?: import('./answer-links').AlexaAnswerLink[] }
-  | { type: "done"; patientId: string | null; patientScope?: "preserve" | "replace"; sourceRevision: string | null; coverage: { requested: number; returned: number; complete: boolean; hasMore: boolean } | null; limited: boolean; status?: import("./agent").AgentTerminal; parts?: import("./agent").RequestPart[]; tokensIn?: number; tokensOut?: number; speechAllowed?: boolean; persiste?: boolean; navigation?: AlexaNavigation; continuation?: { token: string; progress: { kind: "application" | "analysis" | "document" | "notes" | "calendar" | "timeline"; completedBatches: number; position: number } }; progress?: { completedBatches: number; complete: boolean } }
+  | { type: "done"; patientId: string | null; patientScope?: "preserve" | "replace"; sourceRevision: string | null; coverage: { requested: number; returned: number; complete: boolean; hasMore: boolean } | null; limited: boolean; status?: import("./agent").AgentTerminal; parts?: import("./agent").RequestPart[]; tokensIn?: number; tokensOut?: number; speechAllowed?: boolean; persiste?: boolean; navigation?: AlexaNavigation; continuation?: { token: string; progress: { kind: "application" | "analysis" | "document" | "notes" | "calendar" | "timeline"; completedBatches: number; position: number } }; progress?: { completedBatches: number; complete: boolean }; outcome?: TurnOutcome; traceId?: string }
   | { type: "error"; code: "unavailable" | "cancelled" | "stale" | "invalid"; message: string; partial?: boolean };
