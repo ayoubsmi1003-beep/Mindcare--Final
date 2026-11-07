@@ -1,4 +1,7 @@
 import { noteTurnCode } from "./turn-trace";
+import { caseSummaryStatusRead, medicationTimelineRead, medicationWorkloadRead, statisticsRead } from "./practice-reads";
+import { practiceReadCopy } from "@/i18n/alexa-practice-reads";
+import { aujourdHuiCabinet } from "@/services/finance-calendrier";
 import { isPatientSafetySection, PATIENT_SAFETY_GATES, patientSafetyRead } from "./patient-safety-reads";
 import { clinicalSafetyCopy } from "@/i18n/alexa-clinical-safety";
 import {isDeepStrictEqual} from "node:util";
@@ -312,6 +315,33 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
 
    if(a['view']==='medication_catalog'&&typeof a['query']==='string'&&!requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().includes(a['query'].normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',copy.unsupported,'unrequested-catalogue-query');
+   if(a['view']==='statistics'||a['view']==='medication_workload'){
+    // The planner can offer these views for any wording. Only the exact sentences may reach them, or a
+    // period or a patient in the question would be dropped without saying so.
+    // A pending question can prepend an earlier turn to the request text, so this turn's own words also count, and win.
+    const exactSentence=frenchRequestAdmission(input.text,false,asOf).applicationView===a['view']?input.text:frenchRequestAdmission(requestText,false,asOf).applicationView===a['view']?requestText:null;
+    if(exactSentence===null)return failure(call,'unsupported',copy.unsupported,'practice-read-not-exact');
+    const statistics=a['view']==='statistics',gate=statistics?'get_analysis_overview':'list_medication_workload';
+    const plainRequest=exactSentence.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),today=aujourdHuiCabinet(new Date(asOf));
+    let args:RpcArgs={p_query:'',p_limit:100,p_offset:0};
+    if(statistics){
+     // The route only admits this month, this week, this year or a named month and year; none means this month.
+     const named=/\b(?:semaine|annee|\d{4})\b/u.test(plainRequest),period=named?patientQueryPeriod(exactSentence,asOf)??explicitAgentPeriod(exactSentence,asOf):null;
+     if(named&&!period)return failure(call,'needs_input',practiceReadCopy.statistics.periodUnresolved,'unresolved-statistics-period');
+     const from=period?aujourdHuiCabinet(new Date(period.from)):`${today.slice(0,7)}-01`,end=period?aujourdHuiCabinet(new Date(Date.parse(period.to)-1)):today;
+     // A complete answer, not a question: nothing is pending for the next turn.
+     if(from>today)return {...result,status:'empty',complete:true,text:practiceReadCopy.statistics.periodFuture,data:{future:true},evidence:[]};
+     // Activity stops today, so "this month" and a bare request cover the same days.
+     const to=end>today?today:end;
+     if(Date.parse(to)-Date.parse(from)>365*86400000)return failure(call,'needs_input',practiceReadCopy.statistics.periodTooWide,'statistics-period-too-wide');
+     args={p_from:from,p_to:to};
+    }
+    const raw=await rpc(gate,args,signal,true);
+    if(raw===null)throw new AgentReadError('permission');
+    const attention=/\bsans posologie\b|\bposologies? (?:manquante|incomplete)/u.test(plainRequest)?'missing_dose' as const:/\b(?:a|de) (?:revoir|reviser)\b|\brevue\b/u.test(plainRequest)?'review' as const:null;
+    const read=statistics?statisticsRead(raw):medicationWorkloadRead(raw,{attention,today});
+    return {...result,status:read.empty?'empty':read.complete?'ok':'partial',complete:read.complete,text:read.text,data:read.data,evidence:[{id:call.id,type:'query',label:gate,provenance:{gate}}]};
+   }
    const applicationResult=await readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,name==='list_internal_messages',name==='search_medications'||name==='list_internal_messages'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
    if(String(a['view'])==='reception'&&/\battente\b/iu.test(requestText)&&/\bdemandes?\b/iu.test(requestText)&&applicationResult.data&&typeof applicationResult.data==='object'){
     const counts=applicationResult.data as {waiting?:unknown;requests?:unknown};
@@ -414,6 +444,13 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     }
     const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf,requestText);
     page.evidence.unshift(patientSource(patientId!));return page;
+   }
+   if(a["section"]==="medication_timeline"||a["section"]==="case_summary_status"){
+    if(frenchRequestAdmission(input.text,false,asOf).patientSection!==a["section"]&&frenchRequestAdmission(requestText,false,asOf).patientSection!==a["section"])return failure(call,'unsupported',copy.unsupported,'practice-read-not-exact');
+    const timeline=a["section"]==="medication_timeline",gate=timeline?"list_patient_medication_timeline":"get_alexa_case_summary";
+    const read=timeline?medicationTimelineRead(await rpc(gate,{p_id:patientId!,p_limit:21},signal,true,true)):caseSummaryStatusRead(await rpc(gate,{p_patient_id:patientId!},signal,true));
+    return {...result,status:read.empty?"empty":read.complete?"ok":"partial",complete:read.complete,text:read.text,data:{patientId,section:a["section"],...read.data},
+     evidence:[patientSource(patientId!),{id:call.id,type:"query",label:timeline?practiceReadCopy.medicationTimeline.source:practiceReadCopy.caseSummary.source,provenance:{gate,section:String(a["section"])}}]};
    }
    if(isPatientSafetySection(a["section"])){
     const section=a["section"],gate=PATIENT_SAFETY_GATES[section];

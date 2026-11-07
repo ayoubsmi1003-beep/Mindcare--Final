@@ -126,7 +126,7 @@ interface Turn { text: string; tool?: string; alsoTool?: string; noTool?: boolea
 
 describe.skipIf(!ready || mode !== "conversation")("L3 conversations", () => {
   it("measures multi-turn understanding", async () => {
-    const { actor, patient } = await fixture(), flows = read("conversation-flows.json").flows as { id: string; turns: Turn[] }[];
+    const { actor, patient } = await fixture(), flows = read(process.env["MINDCARE_ALEXA_TRANSFORM_DATASET"] ?? "conversation-flows.json").flows as { id: string; turns: Turn[] }[];
     const name = `${patient.first_name} ${patient.last_name}`, results: unknown[] = [];
     for (const flow of flows) {
       const conversationId = crypto.randomUUID();

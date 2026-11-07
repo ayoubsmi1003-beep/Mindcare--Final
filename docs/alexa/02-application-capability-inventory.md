@@ -82,3 +82,16 @@ The older `services/jarvis-capacites.ts` registry serves `jarvis-boucle.ts`, not
 | `tests/eval/alexa-rich-patients-fixture.json` | 2 fictional patients, 3 actors, 17 oracle entries | Refuses anything but its own disposable target |
 | `mc-p3` (55441) | Development database: 1,558 patients, 2 consultations | **Not an evaluation target** |
 | Native 5432, packaged 54333 | Not identified | **Never touched** |
+
+## Practice reads added on 2026-11-07
+
+Deterministic, no model, over existing gates. Each answers only an exact sentence, enforced at the route and again in the executor; any other wording keeps its previous route.
+
+| Read | Gate | Exact sentence | Limits |
+|---|---|---|---|
+| Statistics | `get_analysis_overview` | `Montre mes statistiques`, optionally this month, this week, this year, or a named month and year | Headline figures only, at most 366 days. Other periods, such as last month, aren't recognised |
+| Treatment workload | `list_medication_workload` | `Quels traitements à revoir ?`, `Traitements sans posologie`, `Charge des traitements` and close forms | Reads at most 100 patients and shows 20, and says so. Practice-wide, even with a patient selected |
+| Treatment timeline | `list_patient_medication_timeline` | `Montre la chronologie des traitements de ce patient` or of a name the parser recognises | 20 most recent events, no drug or date filter |
+| Case summary state | `get_alexa_case_summary` | `Le résumé du cas de ce patient est-il à jour ?` | State only; the generated text isn't read out |
+
+`list_medication_workload` has three arguments on the evaluation database and four in migration 211. Alexa's read works with both; the Traitements screen sends the fourth. To check on an installed database.
