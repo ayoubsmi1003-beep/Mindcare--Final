@@ -450,11 +450,15 @@ async function runCampaign() {
             status: check.status,
             ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
               .filter(key => typeof check[key] === "boolean").map(key => [key, check[key]])),
+            ...(check.originalRule ? { originalRule: check.originalRule } : {}),
           })) : [],
         })),
       } : {}),
     };
   };
+  // The amended rule is the default, so compare this figure, not tally.PASS, with the baseline.
+  const passingUnderOriginalRule = () => inputs.manifest.cases.map(reportRow)
+    .filter(row => row.status === "PASS" && !row.oracleChecks?.some(oracle => oracle.checks.some(check => check.originalRule))).length;
   const oracleStatusCounts = () => {
     const counts = {};
     for (const scenario of inputs.manifest.cases) {
@@ -481,6 +485,7 @@ async function runCampaign() {
       status: counts.FAIL || oracleFailure ? "FAIL" : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
       run,
       tally: counts,
+      passingUnderOriginalRule: passingUnderOriginalRule(),
       oracleStatusCounts: perOracle,
       knowledgeOriginCoverage: evaluateV8KnowledgeOriginCoverage(observedOrigins),
       rows: inputs.manifest.cases.map(reportRow),
@@ -593,6 +598,7 @@ async function runCampaign() {
         : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
       run,
       tally: counts,
+      passingUnderOriginalRule: passingUnderOriginalRule(),
       oracleStatusCounts: perOracle,
       knowledgeOriginCoverage: coverage,
       rows: inputs.manifest.cases.map(reportRow),

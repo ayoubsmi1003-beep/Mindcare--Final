@@ -72,6 +72,7 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   criteres: ["criteres", "criteria"], diagnostiquer: ["criteres", "criteria"],
   traitement: ["traitement", "treatment"], traitements: ["traitements", "treatments"],
   trouble: ["trouble", "disorder"], troubles: ["troubles", "disorders"], bipolaire: ["bipolaire", "bipolar"],
+  tdah: ["tdah", "adhd"], entretien: ["entretien", "maintenance"], enfant: ["enfant", "children"],
   schizophrenie: ["schizophrenie", "schizophrenia"], anxiete: ["anxiete", "anxiety"],
   manie: ["maniaque", "mania"], hypomanie: ["hypomaniaque", "hypomania"],
   symptomes: ["symptomes", "symptoms"], enfants: ["enfants", "children"], adulte: ["adulte", "adult"],

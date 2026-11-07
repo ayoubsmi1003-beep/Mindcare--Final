@@ -68,6 +68,8 @@ export function knowledgeResponseEvents(result: KnowledgeResult, language: Alexa
   const copy = dialogue(language);
   const message = (text: string): SentenceEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
   const omissions = "omittedLongPassages" in result && result.omittedLongPassages ? [message(copy.longKnowledge)] : [];
+  // Passages were found and left out for their length, so "no evidence" would be false.
+  if (result.etat === "sans-preuve" && omissions.length) return omissions;
   if (question && isKnowledgeLocationQuestion(question)) {
     if (result.etat !== "ok") return [message(result.etat === "faible" ? copy.weakKnowledge
       : result.etat === "panne" ? copy.knowledgeUnavailable : copy.noKnowledge), ...omissions];

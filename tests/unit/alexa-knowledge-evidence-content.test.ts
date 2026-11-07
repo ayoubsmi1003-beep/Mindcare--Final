@@ -1,3 +1,5 @@
+// These cases cover the model selection path, which ALEXA_KNOWLEDGE_SELECTION=model keeps available.
+process.env["ALEXA_KNOWLEDGE_SELECTION"]="model";
 import {expect,it,vi} from 'vitest';
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyRequested,bibliographyTextEvidence,unboundTableEvidence,medicationSpanGrounded,medicationNumericQuoteGrounded} from '@/server/alexa/knowledge-evidence-content';
 import {readKnowledge} from '@/server/alexa/knowledge-adapter';

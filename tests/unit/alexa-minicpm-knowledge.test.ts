@@ -1,4 +1,6 @@
-﻿import { afterEach, expect, it, vi } from "vitest";
+﻿// This file covers the model selection path, which ALEXA_KNOWLEDGE_SELECTION=model keeps available.
+process.env["ALEXA_KNOWLEDGE_SELECTION"] = "model";
+import { afterEach, expect, it, vi } from "vitest";
 const { local, cloud } = vi.hoisted(() => ({ local: vi.fn(), cloud: vi.fn(() => { throw new Error("UnexpectedCloudText"); }) }));
 vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: local }));
 vi.mock("@/server/egress/external-call", () => ({ llm: cloud }));

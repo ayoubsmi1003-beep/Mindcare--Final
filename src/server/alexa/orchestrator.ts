@@ -38,7 +38,7 @@ import { deterministicActionRequest, prepareActionProposal } from "./action-prop
 import {readPatientFinance,patientFinanceSentence} from "./patient-finance";
 import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
-import { explicitFrenchCurrentMonthRange, frenchRequestAdmission } from "@/shared/alexa/request-contract";
+import { explicitFrenchCurrentMonthRange, frenchRequestAdmission, isPracticeManagementQuestion, questionConcernsAPerson } from "@/shared/alexa/request-contract";
 import type { TurnTraceRecorder } from "./turn-trace";
 import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
 export { isKnowledgeFollowup, knowledgeFollowupQuestion };
@@ -332,7 +332,7 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     // agent produced no usable part, so normal routing is untouched.
     const unrouted=result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status));
     if(unrouted&&!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
-      &&parsePatientMention(input.text).status==="none"&&planKnowledgeQuery(turnInput.text)!==null){
+      &&parsePatientMention(input.text).status==="none"&&!questionConcernsAPerson(input.text)&&!isPracticeManagementQuestion(input.text)&&planKnowledgeQuery(turnInput.text)!==null){
       const found=await readKnowledge(dependencies.knowledge,turnInput.text,signal,undefined,{traceOrigin:"direct"});
       if(found.etat==="ok"&&found.preuves.length>0){
         dependencies.trace?.route('knowledge_fallback');

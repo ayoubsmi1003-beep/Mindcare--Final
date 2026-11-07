@@ -8,6 +8,7 @@ import { carteDepuisJson, formaterLocalisation, localiserDepuisUnite, localiserE
 import pagesUnites from "@/server/knowledge/pages-unites.json";
 import { mapLimite } from "@/server/knowledge/parallele";
 import { monographPriorityNames, monographsFirst } from "./knowledge-monograph";
+import { rowCanAnswer } from "./knowledge-source-fit";
 import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
@@ -369,6 +370,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const retenir = (candidate: unknown): unknown | null => {
       const row = validerLignePorte(candidate);
       if (row === null || !lignePorteRecuperable(row)) return null;
+      // Before ranking: measured, DSM rows filled every place and the filter then left nothing.
+      if (!rowCanAnswer(question, row.source_titre, row.section, isKnowledgeLocationQuestion(question))) return null;
       if(headingOnlyEvidence(row.texte,row.section)||unboundTableEvidence(row.texte)||(indexEvidence(row.section)&&!indexRequested(question))||(bibliographyEvidence(row.section)||bibliographyTextEvidence(row.texte))&&!bibliographyRequested(question))return null;
       if (Buffer.byteLength(row.texte, "utf8") > MAX_PASSAGE_UTF8_BYTES) { omittedLongPassages = true; return null; }
       return row;
@@ -502,7 +505,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         toutesLignes.push(ligne);
       }
       const search = await orchestrerRecherche(question, toutesLignes, [],
-        rerankerTrace, CALIBRATION_A3, "rang", LIMITES.FINAL);
+        // The budget applies once, below: here it would cut the first passage without saying so.
+        rerankerTrace, CALIBRATION_A3, "rang", LIMITES.FINAL, false);
       if (search.repliReranker) {
         repliReranker = true;
         trace.reranker.fallback = true;
@@ -637,7 +641,13 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // Budget d'évidence appliqué UNE seule fois, après la sélection finale.
     // L'appliquer par lot tronquait chaque liste avant la fusion (mesuré : le
     // bon passage d'un lot ciblé tombait au 3e rang de son propre lot).
-    const finales = appliquerBudgetOctets(preuves).retenues;
+    // Only whole passages leave here: a prefix can remove a negation, and the reader would not know.
+    // An oversized row must not hide the rows after it, which the budget would never reach. No exception
+    // for a location question: this is the retrieval query, and the answer may be built from another text.
+    const entieres = preuves.filter(preuve => preuve.texte.length <= LIMITES.BUDGET_OCTETS);
+    if (entieres.length < preuves.length) omittedLongPassages = true;
+    const budget = appliquerBudgetOctets(entieres);
+    const finales = budget.retenues;
     const issue = finales.length === 0 ? "aucune" as const
       : finales.some(p => p.evidence_relevance >= SEUIL_PERTINENCE) ? "pertinent" as const
       : finales.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
@@ -666,6 +676,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const result = { etat,
       ...(plan.sectionFocuses?.some(focus=>!finales.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
+      // Not too long in itself: the total ran out. The notice must not call it long.
+      ...(budget.tronque ? { omittedOverBudget: true as const } : {}),
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
       ...(!vectorielIndisponible && vectorielNonCalibre ? { vectoriel: "non-calibre" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),

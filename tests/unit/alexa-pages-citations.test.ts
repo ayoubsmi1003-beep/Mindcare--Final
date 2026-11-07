@@ -245,7 +245,7 @@ describe("diversité des sources : un seul livre ne remplit pas toutes les place
     const taylor = row(MAUDSLEY, "Management of acute agitation: antipsychotics and benzodiazepines. [maudsley-prescribing-guidelines-2021-taylor-14e p.42|src:60]",
       { chunk_id: "taylor-chunk", section: "Part 1: Drug treatment of major psychiatric conditions › Chapter 1: Schizophrenia and related psychoses › Acute agitation" });
     const { client } = clientAvec([...dsmRows, taylor]);
-    const result = await readKnowledge(client, "Quelle est la prise en charge de l'agitation aiguë ?");
+    const result = await readKnowledge(client, "Que décrit-on dans l'agitation aiguë ?");
     expect(result.etat).toBe("ok");
     expect(result.preuves).toHaveLength(5);
     const titres = result.preuves.map((p) => p.titre);

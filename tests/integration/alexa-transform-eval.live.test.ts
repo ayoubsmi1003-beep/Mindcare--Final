@@ -49,7 +49,7 @@ describe.skipIf(!ready || mode !== "retrieval")("L2 FR→EN retrieval", () => {
       const exact = (section: string, expected: string) => new RegExp(`${expected.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}(?!\\d)`, "u").test(section);
       const rank = found.preuves.findIndex(proof => proof.titre.includes(item.source) && item.section.some(section => exact(proof.section ?? "", section)));
       const rankSource = found.preuves.findIndex(proof => proof.titre.includes(item.source));
-      rows.push({ id: item.id, etat: found.etat, selected: found.preuves.length, rank: rank < 0 ? null : rank + 1, rankSource: rankSource < 0 ? null : rankSource + 1, ms: Date.now() - started });
+      rows.push({ id: item.id, etat: found.etat, selected: found.preuves.length, rank: rank < 0 ? null : rank + 1, rankSource: rankSource < 0 ? null : rankSource + 1, sections: found.preuves.map(proof => `${proof.titre.slice(0, 12)}: ${proof.section ?? ""}`.slice(0, 110)), ms: Date.now() - started });
     }
     const typed = rows as { id: string; rank: number | null; rankSource: number | null; ms: number }[];
     const metrics = (subset: typeof typed) => ({ n: subset.length,
@@ -90,6 +90,36 @@ describe.skipIf(!ready || mode !== "golden")("L2 Golden v4", () => {
       unanswerable: rows.filter(row => !row.answerable).map(row => ({ id: row.id, etat: row.etat })), p50Ms: ms[Math.floor(ms.length / 2)], p95Ms: ms[Math.floor(ms.length * 0.95)], rows });
     expect(rows).toHaveLength(golden.cas.length);
   }, 1_800_000);
+});
+
+// Retrieval can find the right passage and the answer can still quote another one, so this judges what is published.
+describe.skipIf(!ready || mode !== "answers")("Published answers", () => {
+  it("measures whether the answer cites the expected source", async () => {
+    const fold = (value: unknown) => String(value ?? "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+    const { actor } = await fixture(), cases = read(process.env["MINDCARE_ALEXA_TRANSFORM_DATASET"] ?? "fr-en-answers-holdout-4.json").cases as { id: string; question: string; source?: string; section?: string[]; answerable?: boolean }[];
+    const rows: { id: string; answerable: boolean; quotes: number; cited: boolean; first: boolean; fragments: number; status: string | null; ms: number }[] = [], answers: string[] = [];
+    for (const item of cases) {
+      const events: AlexaEvent[] = [], started = Date.now();
+      await runAlexa({ text: item.question, conversationId: crypto.randomUUID(), clientTurnId: crypto.randomUUID(), appContext: { patientId: null, page: "/jarvis" } },
+        { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true }, event => events.push(event), new AbortController().signal).catch(() => undefined);
+      const sentences = events.filter((event): event is Extract<AlexaEvent, { type: "sentence" }> => event.type === "sentence");
+      const answer = sentences.map(event => event.text).join(" "), done = events.find(event => event.type === "done") as Extract<AlexaEvent, { type: "done" }> | undefined;
+      const sources = sentences.flatMap(event => event.sources).filter(source => source.type === "knowledge");
+      const expected = (label: string) => fold(label).includes(fold(item.source)) && (item.section ?? []).every(part => fold(label).includes(fold(part)));
+      const quotes = [...answer.matchAll(/«\s*([^»]*?)\s*»/gu)].map(match => match[1] ?? "");
+      rows.push({ id: item.id, answerable: item.answerable !== false, quotes: quotes.length, cited: sources.some(source => expected(source.label)), first: !!sources[0] && expected(sources[0].label),
+        fragments: quotes.filter(quote => quote.split(/\s+/u).length < 5).length, status: done?.status ?? null, ms: Date.now() - started });
+      // Book questions with no patient, so this file holds book passages only. It stays in .eval-out.
+      answers.push(JSON.stringify({ id: item.id, question: item.question, answer, labels: sources.map(source => source.label) }));
+    }
+    const answerable = rows.filter(row => row.answerable), share = (subset: typeof rows, pick: (row: (typeof rows)[number]) => boolean) => subset.filter(pick).length / Math.max(1, subset.length);
+    const by = (prefix: string) => { const subset = answerable.filter(row => row.id.startsWith(prefix)); return { n: subset.length, cited: share(subset, row => row.cited), first: share(subset, row => row.first) }; };
+    report("answers", { overall: by("A-"), stahl: by("A-S"), maudsley: by("A-M"), dsm: by("A-D"), withQuote: share(answerable, row => row.quotes > 0), fragments: rows.reduce((sum, row) => sum + row.fragments, 0),
+      unanswerableCited: rows.filter(row => !row.answerable && row.quotes > 0).map(row => row.id), rows });
+    mkdirSync(out, { recursive: true });
+    writeFileSync(join(out, `answers-${label}.answers.jsonl`), answers.join("\n"));
+    expect(rows).toHaveLength(cases.length);
+  }, 3_600_000);
 });
 
 interface Turn { text: string; tool?: string; alsoTool?: string; noTool?: boolean; patient?: "target" | "not-target"; noPatientRead?: boolean; textMatches?: string; evidence?: string; cited?: boolean }

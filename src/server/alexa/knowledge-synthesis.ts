@@ -14,6 +14,7 @@ import {localModelFailureCode} from './local-model-protocol';
 import {isKnowledgeLocationQuestion,planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
 import { verifierCitations } from "@/server/knowledge/citations";
 import { knowledgeMessages, isIssuedKnowledgeEnvelope, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
+import { referencesToRead, withoutSectionHeading } from "./knowledge-references";
 import { knowledgeExcerptForSpeech, knowledgeResponseEvents, knowledgeSource, mentionsKnowledgeBookTitle, type KnowledgeResult } from "./knowledge-response";
 
 const fold = (value: string) => value.normalize("NFC").replace(/\s+/gu, " ").trim();
@@ -64,12 +65,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
    * carried by `proof.section`; repeating it inside the quoted sentence makes
    * the answer look like a raw index row. Strip an EXACT leading prefix only.
    */
-  const sansEnteteDeSection = (quote: string, section: string | null): string => {
-    if (!section) return quote;
-    const escaped = section.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
-    const stripped = quote.replace(new RegExp(`^${escaped}\\s*(?:—|–|-)\\s*`, "u"), "").trim();
-    return stripped.length ? stripped : quote;
-  };
+  const sansEnteteDeSection = withoutSectionHeading;
   // A number that relies on its heading must show that heading: drug or population may be there.
   const framedQuote = (proof: KnowledgeResult["preuves"][number], quote: string): string =>
     proof.section && (explicitNumbers(quote).length || quantities(quote).length) && !requestedMedicationNames(quote).length
@@ -133,6 +129,19 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   };
   if (isIssuedKnowledgeResult(result) && isKnowledgeLocationQuestion(question)) {
     return knowledgeResponseEvents(result, language, false, [], question);
+  }
+  // The closest passages to read, not an answer: no model chooses them and nothing claims they fit.
+  // ALEXA_KNOWLEDGE_SELECTION=model restores the model's selection.
+  if (options.compact && isIssuedKnowledgeResult(result) && (result.etat === "ok" || result.etat === "faible") && process.env["ALEXA_KNOWLEDGE_SELECTION"] !== "model") {
+    const { references, omitted, unshown } = referencesToRead(question, result.preuves);
+    noteTurnCode("knowledge", references.length ? "references-shown" : "references-none-readable");
+    const long = omitted || ("omittedLongPassages" in result && result.omittedLongPassages);
+    const notices = [...(long ? [copy.longKnowledge] : []), ...(unshown || ("omittedOverBudget" in result && result.omittedOverBudget) ? [copy.unshownKnowledge] : [])];
+    if (!references.length) return [{ type: "sentence", text: notices.length ? notices.join(" ") : copy.noKnowledge, kind: "knowledge", sources: [] }];
+    options.onCoverage?.("partial");
+    const passages = references.map(({ proof, excerpt }) => proof.section ? knowledgeSynthesisCopy.fr.quoteIn(proof.section, excerpt) : knowledgeSynthesisCopy[locale].quote(excerpt));
+    return [{ type: "sentence", text: [knowledgeSynthesisCopy[locale].references, ...passages, ...notices].join(" "), kind: "knowledge",
+      sources: references.map(({ proof, excerpt }) => ({ ...knowledgeSource(proof), excerpt })) }];
   }
   const messages = knowledgeMessages(result, taskFor(question), locale, focusFor(question));
   if (process.env["ALEXA_DEBUG_KNOWLEDGE"] === "1") {
