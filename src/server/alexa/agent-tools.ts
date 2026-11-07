@@ -1,4 +1,5 @@
 import { noteTurnCode } from "./turn-trace";
+import { alexaGoalCopy } from "@/i18n/alexa-practice-reads";
 import { caseSummaryStatusRead, medicationTimelineRead, medicationWorkloadRead, statisticsRead } from "./practice-reads";
 import { practiceReadCopy } from "@/i18n/alexa-practice-reads";
 import { aujourdHuiCabinet } from "@/services/finance-calendrier";
@@ -21,7 +22,7 @@ import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./pr
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead} from "@/shared/alexa/request-contract";
+import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
@@ -368,6 +369,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const proposedId=selected??(typeof a["patientId"]==="string"?a["patientId"]:input.appContext.patientId??undefined);
    const known=proposedId&&(proposedId===input.appContext.patientId||proposedId===selected||input.text.includes(proposedId)||prior.some(r=>r.patientId===proposedId||r.evidence.some(e=>e.type==="patient"&&e.id===proposedId)));
    if(!proposedName&&proposedId&&!known)return failure(call,"needs_input",copy.patient,"patient-reference-not-verified");
+   // The record in context is used only when the sentence points at no one else.
+   if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&!onlyTheRecordInContext(input.text))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-possessor");
    let resolutionFailure:AgentReadError|undefined;
    const resolutionDb:Pick<DbPort,"rpc">={rpc:async<T>(name:string,args:RpcArgs)=>{
     try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}

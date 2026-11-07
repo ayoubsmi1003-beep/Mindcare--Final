@@ -14,6 +14,8 @@ export interface PortsVoixLocale {
   tour: (turn: TourVoix) => void;
   navigate?: (target: AlexaNavigation) => void;
   speechLimitNotice?: (utterance: string) => string;
+  /** Said instead of an answer that may not be read aloud, so a partial or failed turn is never silent. */
+  speechWithheldNotice?: (utterance: string) => string;
 }
 /** Local VAD decisions have no tool authority. Only finalized STT enters the server turn. */
 export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
@@ -88,6 +90,10 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
         ...(speechLimited ? { speechLimited: true } : {}),
       });
       stage = "tts"; await queue;
+      if (alive(epoch, c) && !audioError && result.speechAllowed === false && count === 0 && ports.speechWithheldNotice) {
+        try { await ports.lire(ports.speechWithheldNotice(texte), c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
+        catch { if (alive(epoch, c)) { fail("tts"); return; } }
+      }
       if (alive(epoch, c) && !audioError && speechLimited && ports.speechLimitNotice) {
         try { await ports.lire(ports.speechLimitNotice(texte), c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
         catch { audioError = true; }

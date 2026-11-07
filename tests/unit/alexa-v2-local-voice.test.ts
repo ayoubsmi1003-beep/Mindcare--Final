@@ -72,6 +72,22 @@ describe("continuous local Alexa voice loop", () => {
     expect(spoken.length).toBeLessThanOrEqual(33);
     expect(h.loop.active()).toBe(true); h.loop.arreter();
   });
+  it("says the answer is on screen rather than staying silent when it may not be read", async () => {
+    const spoken: string[] = [];
+    const h = harness({ repondre: async () => ({ texte: "Réponse partielle avec identité.", speechAllowed: false }), lire: async value => { spoken.push(value); }, speechWithheldNotice: () => "Regardez l’écran." });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0);
+    for (let index = 0; index < 120; index++) await Promise.resolve();
+    expect(spoken).toEqual(["Regardez l’écran."]);
+    h.loop.arreter();
+  });
+  it("adds no notice to an answer that was read aloud", async () => {
+    const spoken: string[] = [];
+    const h = harness({ repondre: async () => ({ texte: "Réponse vérifiée.", speechAllowed: true }), lire: async value => { spoken.push(value); }, speechWithheldNotice: () => "Regardez l’écran." });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0);
+    for (let index = 0; index < 120; index++) await Promise.resolve();
+    expect(spoken).toEqual(["Réponse vérifiée."]);
+    h.loop.arreter();
+  });
   it("preserves decimal medication doses as one spoken sentence", async () => {
     const spoken: string[] = [];
     const text = "Dose enregistrée : 50.5 mg, sans modification.";

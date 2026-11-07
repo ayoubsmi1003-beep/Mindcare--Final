@@ -21,6 +21,7 @@ import { inferCompletionForTask } from "./inference/registry";
 import { absentFeatureRequested } from "@/shared/alexa/capabilities";
 import { absentFeatureCopy } from "@/i18n/alexa-capabilities";
 import {relativeClinicalDate} from './clinical-narrative';
+import { alexaGoalCopy } from "@/i18n/alexa-practice-reads";
 import { localModelFailureCode, type LocalCompletion, type LocalMessage, type LocalTool } from "./local-model-protocol";
 
 export const AGENT_LIMITS = { rounds:ALEXA_NATIVE_BUDGET.rounds, calls:ALEXA_NATIVE_BUDGET.calls, parallel:ALEXA_NATIVE_BUDGET.parallel, deadlineMs:ALEXA_NATIVE_DEADLINE_MS, ttlMs: 900000 } as const;
@@ -67,6 +68,21 @@ export function restoreAgentTask(actor:string,conversation:string,value:unknown)
  }
  tasks.set(JSON.stringify([actor,conversation]),parsed.data as AgentTask);
 }
+/**
+ * The model can attach two different goals to one read. Only the first counts as answered by it.
+ * Deterministic routes share a read on purpose, for a count and its list, and so does a declared metrics read.
+ * Only goals the model attached without declaring a tool for them are checked.
+ */
+export function releaseSharedReads(parts:RequestPart[]):void{
+  const answeredBy=new Set<string>();
+  for(const p of parts){
+    const only=p.status==='answered'&&p.resultRefs.length===1?p.resultRefs[0]!:null;
+    if(!only||only.startsWith('direct-')||p.tools?.length)continue;
+    if(answeredBy.has(only)){p.status='budget_limited';p.resultRefs=[];p.reason=alexaGoalCopy.sharedRead;}
+    answeredBy.add(only);
+  }
+}
+
 export interface AgentToolResultObservation {
  callId:string; name:string; status:AgentResult['status']; errorCode?:string; actionName?:string; rankedCandidateCount?:number; requiredInputWasMissing?:boolean;
  catalogIdentityVerified?:boolean; currentTreatmentReadVerified?:boolean; doseInferenceAbsent?:boolean; strengthInferenceAbsent?:boolean; formulationInferenceAbsent?:boolean; routeInferenceAbsent?:boolean; medicationEquivalenceInferenceAbsent?:boolean; knowledgeSourceCount?:number; knowledgeExcerptCount?:number;
@@ -95,7 +111,7 @@ export interface AgentLoopDependencies { actor: string; infer?: (messages: reado
   resumeCursor?: { cursorId: string; kind: AgentContinuationKind; patientId: string | null };
 }
 export interface AgentOutcome { status: AgentTerminal; parts: RequestPart[]; results: AgentResult[]; sentences: string[]; sources: AlexaSource[];
-  patientId: string | null; proposal?: AlexaProposal; navigation?: AlexaNavigation; speechAllowed?:boolean; tokensIn: number; tokensOut: number; }
+  patientId: string | null; proposal?: AlexaProposal; navigation?: AlexaNavigation; speechAllowed?:boolean; readFailed?:boolean; tokensIn: number; tokensOut: number; }
 function partAllowsTool(part:RequestPart,name:string):boolean {
   return part.tools===undefined?name==="query_patients"&&part.conditions.length>0:part.tools.some(tool=>tool===name);
 }
@@ -738,6 +754,8 @@ function mixedRecordEntities(prior:readonly AgentResult[]):{medications:string[]
   diagnoses:[...new Set((diagnoses??[]).flatMap(item=>typeof item.label==='string'?[item.label]:[]))],
  };
 }
+// Valid planner output peaked at 309 tokens over the 300-case campaign. Runaway output used the old limit of 512 and took 45 to 102 s to fail.
+const PLANNER_OUTPUT_TOKENS=360;
 const MIXED_KNOWLEDGE_READS=3;
 /** "Sertraline 50 mg cp" searched as one AND query matches nothing: keep the drug name only. */
 export function canonicalMedicationName(recorded:string):string{
@@ -930,6 +948,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const requestedOutputTools=requestedOutputs?.map(goal=>requestedReadTool(goal,input.text)).filter((tool):tool is NonNullable<typeof tool>=>tool!==undefined);
   const promptTools=requestedOutputTools?.length?requestedOutputTools:admittedTools?.length===1&&(admittedTools[0]==='answer_general'||directTreatmentAction)?admittedTools:undefined;
   const messages: LocalMessage[] = [{role:"system",content:agentMetadataPrompt(promptTools)+(admittedTools?"\nOutils de domaine admis pour cette demande : "+admittedTools.join(", ")+". Déclare uniquement l’un de ces outils.":"")+(countContract?"\nSorties et conditions explicites à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(countContractHints(countContract)):"")+(compoundContract?"\nSorties et conditions explicites de la population à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(compoundContractHints(compoundContract)):"")+(requestedOutputs?"\nSorties explicites : chaque goal doit reprendre exactement une clause, une fois : "+JSON.stringify(requestedOutputs):"")},{role:"user",content:requestText+"\nPatient sélectionné : "+(input.appContext.patientId?"oui":"non")+(prior?"\nDemande précédente : "+JSON.stringify(previousContext):"")}];
+  let directReadFailed=false;
   let parts: RequestPart[] = directTreatmentAction?[{id:'requested_1',goal:input.text,tools:['prepare_action','ask_doctor'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]}]:[], results: AgentResult[] = [], declared = directTreatmentAction, calls = 0, rounds = 0, steps = 0, tokensIn = 0, tokensOut = 0, finalText = "",inferenceFailed=false,resumingPatientQuery=false,resumingTimelineQuery=false,resumingApplicationQuery=false,resumingNoteQuery=false,resumingConsultationQuery=false,resumingFinanceQuery=false,resumingDocumentQuery=false,plainRecovery=0,noteContinuationBudget=0;
   const focus=input.text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase().trim().replace(/[?!.]+$/gu,'');
    const proposalDispositionRequest=/\b(?:refuse|rejette|repete|rejoue|relance|annule)\b[^.!?]{0,160}\bproposition\b|\bproposition\b[^.!?]{0,160}\b(?:refuse|rejette|repete|rejoue|relance|annule)\b/u.test(focus);
@@ -1106,7 +1125,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
           if(entry.status==='rejected'){
             const userStopped=externalSignal.aborted&&!(externalSignal.reason instanceof Error&&/Timeout/i.test(externalSignal.reason.name+externalSignal.reason.message));
             const failureCode=entry.reason instanceof AgentReadError?entry.reason.code:entry.reason instanceof z.ZodError?'malformed':'database';
-            observeResult({callId:scheduled.call.id,name:scheduled.call.name,status:'error',errorCode:failureCode});
+            observeResult({callId:scheduled.call.id,name:scheduled.call.name,status:'error',errorCode:failureCode});directReadFailed=true;
             for(const part of targets){part.status=userStopped?'cancelled':signal.aborted?'budget_limited':'failed';part.reason=userStopped?copy.cancelled:signal.aborted?copy.budget:copy.errors[failureCode];}
             return;
           }
@@ -1274,7 +1293,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
       }
       const wasDeclared=declared;
       const outputCount=countContract?.clauses.length??(compoundContract?(compoundContract.count?2:1):requestedOutputs?.length??Math.max(1,parts.length));
-      const completion = await infer(messages, { tools:catalogue, toolChoice:declared&&parts.some(p=>p.status==="pending"&&p.tools?.length)?"required":declared?"auto":"declare_request",signal, timeoutMs: Math.min(240000,ALEXA_NATIVE_BUDGET.inferenceMs*(steps===1?2:1), remaining), maxOutputTokens:directTreatmentAction||outputCount>1||input.text.length>300?1024:512 });
+      const completion = await infer(messages, { tools:catalogue, toolChoice:declared&&parts.some(p=>p.status==="pending"&&p.tools?.length)?"required":declared?"auto":"declare_request",signal, timeoutMs: Math.min(240000,ALEXA_NATIVE_BUDGET.inferenceMs*(steps===1?2:1), remaining), maxOutputTokens:directTreatmentAction||outputCount>1||input.text.length>300?1024:PLANNER_OUTPUT_TOKENS });
       tokensIn += completion.tokensIn; tokensOut += completion.tokensOut;
       if(process.env.ALEXA_DEBUG_TOOL_SHAPES==="1")console.info("[alexa-tool-shape]",completion.kind==="calls"?completion.calls.map(call=>({name:call.name,keys:Object.keys(call.args),action:typeof call.args["action"]==="string"?call.args["action"]:undefined,hasPartIds:Array.isArray(call.args["partIds"]),hasPatientName:typeof call.args["patientName"]==="string",hasTreatmentName:typeof call.args["treatmentName"]==="string",changeKeys:call.args["changes"]&&typeof call.args["changes"]==="object"&&!Array.isArray(call.args["changes"])?Object.keys(call.args["changes"] as Record<string,unknown>):[]})):{kind:completion.kind,characters:completion.text.length});
       if (completion.kind === "answer") {
@@ -1455,6 +1474,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
   if (!parts.length) parts = countContract?countContractParts(countContract):compoundContract?compoundContractParts(compoundContract):requestedOutputs?requestedOutputs.map((goal,i)=>({id:"requested_"+(i+1),goal,tools:[],conditions:[],dependsOn:[],status:"pending",resultRefs:[]})):[{ id: "request", goal: input.text, tools:[],conditions: [], dependsOn: [], status: "pending", resultRefs: [] }];
   const userCancelled=externalSignal.aborted&&!(externalSignal.reason instanceof Error&&/Timeout/i.test(externalSignal.reason.name+externalSignal.reason.message));
   for (const p of parts) if (p.status === "pending") { p.status = userCancelled ? "cancelled" : signal.aborted?"budget_limited":inferenceFailed||(!results.length&&finalText)?"failed":"budget_limited"; p.reason = userCancelled ? copy.cancelled : signal.aborted?copy.budget:inferenceFailed||(!results.length&&finalText)?copy.modelUnavailable:copy.budget; }
+  if(!countContract&&!compoundContract)releaseSharedReads(parts);
   const sentences: string[] = presentAgentResults(results,input.text);
   for (const p of parts) if (!p.resultRefs.length && p.reason) sentences.push(`${p.goal} — ${p.reason}`);
   const status: AgentTerminal = userCancelled ? "cancelled" : parts.every(p => p.status === "answered") ? "completed" : parts.some(p => p.status === "proposed") ? "needs_confirmation"
@@ -1471,5 +1491,5 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
   const taskOriginal=continuingClarification&&pendingTask?requestText:prior&&(resumingPatientQuery||resumingApplicationQuery||resumingTimelineQuery||resumingNoteQuery||resumingConsultationQuery||resumingFinanceQuery||resumingDocumentQuery)?prior.original:input.text;
   tasks.set(key, { original: taskOriginal, parts, results:stateResults, at: Date.now(), patientId: results.find(r=>r.patientId)?.patientId??input.appContext.patientId, page: input.appContext.page });
   return { status, parts, results, sentences, sources: results.flatMap(r => r.evidence), patientId: results.find(r => r.patientId)?.patientId ?? null,
-    ...(proposal ? { proposal } : {}), ...(navigation ? { navigation } : {}), ...(speakableKnowledge?{speechAllowed:true}:{}), tokensIn, tokensOut };
+    ...(proposal ? { proposal } : {}), ...(navigation ? { navigation } : {}), ...(speakableKnowledge?{speechAllowed:true}:{}), ...(directReadFailed||results.some(r=>r.status==='error')?{readFailed:true}:{}), tokensIn, tokensOut };
 }

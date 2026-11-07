@@ -90,7 +90,7 @@ export async function POST(request:Request):Promise<Response>{
     if(claim.data.state==="interrupted"){
      const reason=copy.interrupted;emit({type:"sentence",text:reason,kind:"fact",sources:[]});
      emit({type:"done",status:"failed",parts:[{id:"request",goal:input.text,conditions:[],dependsOn:[],status:"failed",resultRefs:[],reason}],patientId:null,patientScope:"preserve",coverage:null,sourceRevision:null,limited:true,speechAllowed:false});
-    }else await withTurnTrace(recorder,()=>runAlexa(resumeCursor?{...input,appContext:{...input.appContext,patientId:effectivePatientId}}:input,{actor,db:alexaDb(actor),knowledge:persistence,native:true,contextKey:context,trace:recorder,agentObserve:call=>recorder.call(call.id,call.name),agentObserveResult:result=>recorder.result(result.name,result.status,result.errorCode),...(resumeCursor?{resumeCursor}:{})},emit,controller.signal));
+    }else await withTurnTrace(recorder,()=>runAlexa(resumeCursor?{...input,appContext:{...input.appContext,patientId:effectivePatientId}}:input,{actor,db:alexaDb(actor),knowledge:persistence,native:true,contextKey:context,trace:recorder,agentObserve:call=>recorder.call(call.id,call.name),agentObserveResult:result=>recorder.result(result.name,result.actionName&&result.status==="ok"?"proposed":result.status,result.errorCode),...(resumeCursor?{resumeCursor}:{})},emit,controller.signal));
    }catch{emit({type:"sentence",text:copy.unavailable,kind:"fact",sources:[]});}
    finally{
     const done:Extract<AlexaEvent,{type:"done"}>=terminal??{type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:request.signal.aborted?"cancelled":"failed",speechAllowed:false};

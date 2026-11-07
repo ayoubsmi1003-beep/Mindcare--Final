@@ -3,6 +3,22 @@ const timelineActions: Readonly<Record<string, string>> = {
   prescription: "prescription", document_issued: "ordonnance émise", document_voided: "ordonnance annulée",
 };
 
+export const alexaGoalCopy = {
+  heading: (index: number, total: number) => `Demande ${index} sur ${total} :`,
+  notDone: (goal: string) => `Cette demande n’a pas été traitée : « ${goal} »`,
+  tooMany: "Je traite au plus trois demandes par message.",
+  partWithoutAction: "Une partie de cette demande n’existe pas comme action dans Alexa, par exemple supprimer un dossier : elle n’a été ni préparée ni faite.",
+  otherPossessor: "Je ne suis pas sûre que cette question vise le dossier ouvert. Dites « de ce patient », ou donnez le prénom et le nom du patient concerné.",
+  waiting: "Une question ou une confirmation attend votre réponse avant cette partie.",
+  sharedRead: "Cette partie n’a pas été établie : la lecture effectuée ne porte que sur une autre partie de la demande.",
+  nothingChanged: "Je n’ai rien modifié : cette demande n’a été ni exécutée ni préparée.",
+  noSuchAction: "Je ne peux pas faire cette modification et je n’ai rien changé. Elle se fait depuis l’écran concerné, s’il la permet.",
+};
+
+export const alexaIdentityCopy = {
+  thirdParty: "Cette demande semble viser une autre personne que le dossier en cours : un proche ou un autre patient. Je n’ai lu aucun dossier. Indiquez le prénom et le nom du patient concerné, s’il a un dossier. Pour l’histoire familiale de ce dossier, demandez ses antécédents familiaux.",
+};
+
 /** Wording of the practice and treatment reads. Every figure comes from a database gate. */
 export const practiceReadCopy = {
   statistics: {

@@ -38,6 +38,8 @@ import { deterministicActionRequest, prepareActionProposal } from "./action-prop
 import {readPatientFinance,patientFinanceSentence} from "./patient-finance";
 import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
+import { alexaGoalCopy, alexaIdentityCopy } from "@/i18n/alexa-practice-reads";
+import { understandTurn, understandingCodes } from "@/shared/alexa/turn-understanding";
 import { explicitFrenchCurrentMonthRange, frenchRequestAdmission, isPracticeManagementQuestion, questionConcernsAPerson } from "@/shared/alexa/request-contract";
 import type { TurnTraceRecorder } from "./turn-trace";
 import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
@@ -279,8 +281,60 @@ function uniqueExactPatientSearchResult(results:readonly {status:string;data?:un
  return null;
 }
 
+/** Each goal gets a full turn of its own. The turn is complete only when every goal is. */
+async function runSequencedGoals(input:TurnInput,sequence:{goals:string[];dropped:string[]},dependencies:OrchestratorDependencies,emit:(event:AlexaEvent)=>void,signal:AbortSignal):Promise<void>{
+  const parts:Extract<AlexaEvent,{type:"done"}>["parts"]=[],statuses:string[]=[];
+  let patientId=input.appContext.patientId??null,replaced=false,limited=false,speakable=true,stopped=false;
+  for(const [index,goal] of sequence.goals.entries()){
+    signal.throwIfAborted();
+    // A question or a proposal is waiting for the person: later goals must not run on a patient left unresolved.
+    if(stopped){emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});parts.push({id:`goal_${index+1}`,goal,conditions:[],dependsOn:[],status:"budget_limited",resultRefs:[],reason:alexaGoalCopy.waiting});statuses.push("partial");continue;}
+    let finished:Extract<AlexaEvent,{type:"done"}>|undefined,answered=false;
+    emit({type:"sentence",text:alexaGoalCopy.heading(index+1,sequence.goals.length),kind:"fact",sources:[]});
+    await runAlexa({...input,text:goal,clientTurnId:crypto.randomUUID(),appContext:{...input.appContext,patientId}},dependencies,event=>{
+      if(event.type==="done"){finished=event;return;}
+      if(event.type==="error"){emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});answered=true;return;}
+      if(event.type==="sentence"&&event.text.trim())answered=true;
+      emit(event);
+    },signal);
+    const done=finished;
+    if(!answered)emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    statuses.push(done?.status??"failed");limited||=done?.limited??true;speakable&&=done?.speechAllowed===true;
+    stopped=done?.status==="needs_input"||done?.status==="needs_confirmation";
+    if(done?.patientId){patientId=done.patientId;replaced=true;}
+    parts.push({id:`goal_${index+1}`,goal,conditions:[],dependsOn:[],status:done?.status==="completed"?"answered":done?.status==="needs_input"?"needs_input":done?.status==="needs_confirmation"?"proposed":done?.status==="partial"?"budget_limited":"failed",resultRefs:[]});
+  }
+  for(const goal of sequence.dropped){
+    emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    parts.push({id:`goal_${parts.length+1}`,goal,conditions:[],dependsOn:[],status:"budget_limited",resultRefs:[],reason:alexaGoalCopy.tooMany});
+    statuses.push("partial");
+  }
+  const status=statuses.includes("needs_confirmation")?"needs_confirmation":statuses.every(item=>item==="completed")?"completed":statuses.includes("needs_input")?"needs_input":statuses.some(item=>item==="completed"||item==="partial")?"partial":statuses.every(item=>item==="needs_input")?"needs_input":"failed";
+  emit({type:"done",patientId:replaced?patientId:null,patientScope:replaced?"replace":"preserve",sourceRevision:null,coverage:null,limited:limited||status!=="completed",status,speechAllowed:speakable&&!sequence.dropped.length,parts});
+}
+
 /** Native tool selection remains subject to server validation, identity and scope gates. */
 export async function runAlexa(input: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
+  // Before anything can read: a question about a relative or another patient must not be answered from the record in context.
+  const understanding=understandTurn(input.text,{selected:!!(input.appContext.patientId??conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),dependencies.contextKey??JSON.stringify(input.appContext))?.selectedPatientId),...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{})});
+  for(const code of understandingCodes(understanding))dependencies.trace?.code('understanding',code);
+  if(!dependencies.resumeCursor&&understanding.subject==="third_party"){
+    dependencies.trace?.route('closed');
+    emit({type:"sentence",text:alexaIdentityCopy.thirdParty,kind:"fact",sources:[]});
+    emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"needs_input",speechAllowed:true,parts:[{id:"third_party",goal:input.text,conditions:[],dependsOn:[],status:"needs_input",resultRefs:[],reason:alexaIdentityCopy.thirdParty}]});
+    return;
+  }
+  if(dependencies.native&&!dependencies.resumeCursor&&understanding.noChangeAction&&!deterministicActionRequest(input.text,input.appContext.documentId)){
+    dependencies.trace?.route('closed');
+    emit({type:"sentence",text:alexaGoalCopy.noSuchAction,kind:"fact",sources:[]});
+    for(const goal of understanding.goals.slice(1))emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"failed",speechAllowed:true,parts:[{id:"no_action",goal:input.text,conditions:[],dependsOn:[],status:"unsupported",resultRefs:[],reason:alexaGoalCopy.noSuchAction}]});
+    return;
+  }
+  const sequence=dependencies.native&&!dependencies.resumeCursor&&!understanding.contractOutputs&&understanding.goals.length>1?{goals:[...understanding.goals],dropped:[...understanding.dropped]}:null;
+  // Splits when one goal has a known route and every other stands alone, so "puis vérifie la page" stays attached.
+  const opensAScreen=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.includes('navigate'),admittedGoal=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.length,standsAlone=(goal:string)=>!/^(?:ne |n['’]|sans )/iu.test(goal)&&!/\b(?:sa|son|ses|leur|leurs|cette|celle|celui|cela)\b/iu.test(goal)&&(/\?\s*$/u.test(goal)||goal.split(/\s+/u).length>=4);
+  if(sequence&&sequence.goals.some(admittedGoal)&&sequence.goals.every(goal=>!opensAScreen(goal)&&!deterministicActionRequest(goal,input.appContext.documentId)&&!frenchRequestAdmission(goal,false,dependencies.agentAsOf).preparationAction&&(admittedGoal(goal)||standsAlone(goal))))return runSequencedGoals(input,sequence,dependencies,emit,signal);
   if (dependencies.native) {
     // Courtesies use the same closed dialogue grammar as the established UI.
     // A greeting never needs patient lookup or a model inference slot.
@@ -291,6 +345,7 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     if (!dependencies.resumeCursor&&plannedIntent.intent === 'safe_abstention') return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent });
     // Explicit document and internal-message requests remain reachable without
     // the local model. The model path still handles paraphrases and compounds.
+    if (!dependencies.resumeCursor&&understanding.partlyWithoutAction) emit({type:"sentence",text:alexaGoalCopy.partWithoutAction,kind:"fact",sources:[]});
     if (!dependencies.resumeCursor&&deterministicActionRequest(input.text,input.appContext.documentId)) return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: { intent: "proposal", count: 1, language: "fr" } });
     const contextKey=dependencies.contextKey??JSON.stringify(input.appContext),asOf=dependencies.agentAsOf??new Date().toISOString();
     const previous=conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
@@ -329,8 +384,9 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     // The 1B router can fail a book question outright ("capacité non
     // disponible") while approved evidence exists. Fall back to the governed
     // reader + compact synthesis instead of refusing. This runs only when the
-    // agent produced no usable part, so normal routing is untouched.
-    const unrouted=result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status));
+    // agent produced no usable part, so normal routing is untouched. A read that ran and failed is
+    // not a routing miss: a refused or broken read must be reported, never replaced by book passages.
+    const unrouted=!result.readFailed&&!understanding.wantsChange&&(result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status)));
     if(unrouted&&!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
       &&parsePatientMention(input.text).status==="none"&&!questionConcernsAPerson(input.text)&&!isPracticeManagementQuestion(input.text)&&planKnowledgeQuery(turnInput.text)!==null){
       const found=await readKnowledge(dependencies.knowledge,turnInput.text,signal,undefined,{traceOrigin:"direct"});
@@ -346,15 +402,20 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
         return;
       }
     }
-    const responses=result.results.filter(r=>r.text);
+    const responses=result.results.filter(r=>r.text),deferredNotices:string[]=[];
     if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
     const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>`${p.goal} — ${p.reason}`));
+    // A change that was asked for and not even proposed must not read as done.
+    // A sequence that couldn't be split must not lose a goal without saying so.
+    if(sequence&&result.parts.length<sequence.goals.length&&result.status!=="needs_input"){const real=sequence.goals.filter(goal=>!/^(?:ne |n['’]|sans |bonjour|bonsoir|merci|s['’]il)/iu.test(goal));for(const lost of real.slice(Math.max(result.parts.length,1)))deferredNotices.push(alexaGoalCopy.notDone(lost));for(const lost of sequence.dropped)deferredNotices.push(alexaGoalCopy.notDone(lost));}
+    if(understanding.wantsChange&&!result.proposal&&!["needs_confirmation","needs_input","cancelled"].includes(result.status))emit({type:"sentence",text:alexaGoalCopy.nothingChanged,kind:"fact",sources:[]});
     for(const [index,text] of result.sentences.entries()){
       const response=responses[index]?.text===text?responses[index]:undefined;
       const synthesis=!response&&text.startsWith(agentCopy.fr.synthesis+"\n");
       const kind=response?.presentation==="knowledge"?"knowledge":response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact";
       emit({type:"sentence",text,kind,sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
+    for(const notice of deferredNotices)emit({type:"sentence",text:notice,kind:"fact",sources:[]});
     if(result.proposal)emit({type:"proposal",...result.proposal});
     const nextPlan=dependencies.resumeCursor&&previous?previous:inheritedAgendaText&&previous?.agendaDay?{intent:'agenda' as const,count:previous.count,agendaDay:previous.agendaDay,...(previous.agendaRequestedOnly!==undefined?{agendaRequestedOnly:previous.agendaRequestedOnly}:{})}:planRequest(turnInput.text,previous,asOf);
     const explicitMention=parsePatientMention(input.text);

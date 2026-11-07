@@ -58,6 +58,7 @@ const messages = {
     addendum: (date: string, text: string) => `Addendum du ${date} : « ${text} »`,
     excerptLimit: "Certains passages ne sont pas affichés dans cette réponse. Ouvrez les sources pour lire les notes et addenda complets.",
     speechLimit: "La lecture à voix haute est limitée à une partie de la réponse. La réponse complète reste affichée à l’écran.",
+    speechWithheld: "La réponse est incomplète ou n’a pas pu être vérifiée. Je ne la lis pas à voix haute ; regardez l’écran.",
     focus: { sleep: "le sommeil", anxiety: "l’anxiété", mood: "l’humeur", risk: "le risque", symptoms: "les symptômes" },
   },
   ar: {
@@ -116,6 +117,7 @@ const messages = {
     addendum: (date: string, text: string) => `إضافة بتاريخ ${date}: « ${text} »`,
     excerptLimit: "بعض المقاطع ما تظهرش في هذه الإجابة. افتحي المصادر باش تقراي الملاحظات والإضافات كاملة.",
     speechLimit: "القراءة بالصوت مقتصرة على جزء من الإجابة. الإجابة الكاملة تبقى ظاهرة على الشاشة.",
+    speechWithheld: "الإجابة غير مكتملة أو لم يتم التحقق منها. لن أقرأها بصوت عالٍ؛ يرجى النظر إلى الشاشة.",
     focus: { sleep: "النوم", anxiety: "القلق", mood: "المزاج", risk: "الخطر", symptoms: "الأعراض" },
   },
 } as const;

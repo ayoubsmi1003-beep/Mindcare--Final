@@ -7,7 +7,15 @@ import type { TurnOutcome } from "@/shared/alexa/turn";
  * answer. It holds closed codes only: never question text, patient identity or evidence.
  */
 export type TurnRoute = "closed" | "direct" | "model_loop" | "knowledge_fallback" | "none";
-export interface TurnTraceTool { name: string; status: string; direct: boolean; errorCode?: string }
+/** What a tool call became. `authorized` is not here: confirming a proposal is a later request, recorded by confirmed_at in the database. */
+export type ToolState = "executing" | "proposed" | "succeeded" | "partial" | "needs_input" | "unsupported" | "failed" | "cancelled";
+export function toolStateOf(status: string): ToolState {
+  if (status === "ok" || status === "empty") return "succeeded";
+  if (status === "partial" || status === "needs_input" || status === "unsupported" || status === "cancelled") return status;
+  if (status === "proposed" || status === "needs_confirmation") return "proposed";
+  return status === "called" ? "executing" : "failed";
+}
+export interface TurnTraceTool { name: string; status: string; state: ToolState; direct: boolean; errorCode?: string }
 export interface TurnTraceCode { stage: string; code: string }
 export interface TurnTrace { traceId: string; route: TurnRoute; followup?: string; tools: TurnTraceTool[]; codes: TurnTraceCode[]; ms?: number; outcome?: TurnOutcome }
 
@@ -24,12 +32,13 @@ export class TurnTraceRecorder {
   call(callId: string, name: string): void {
     const direct = callId.startsWith("direct-") || callId.startsWith("deterministic_");
     if (this.trace.route === "none") this.trace.route = direct ? "direct" : "model_loop";
-    if (this.trace.tools.length < MAX_ENTRIES) this.trace.tools.push({ name: closed(name), status: "called", direct });
+    if (this.trace.tools.length < MAX_ENTRIES) this.trace.tools.push({ name: closed(name), status: "called", state: "executing", direct });
   }
   result(name: string, status: string, errorCode?: string): void {
     const tool = [...this.trace.tools].reverse().find(entry => entry.name === closed(name) && entry.status === "called");
     if (!tool) return;
     tool.status = closed(status);
+    tool.state = toolStateOf(status);
     if (errorCode) tool.errorCode = closed(errorCode);
   }
   code(stage: string, code: string): void {

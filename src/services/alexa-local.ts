@@ -125,6 +125,7 @@ const loop = creerBoucleVoixLocale({
   },
   navigate: navigateAlexa,
   speechLimitNotice: text => dialogue(planRequest(text, null).language).speechLimit,
+  speechWithheldNotice: text => dialogue(planRequest(text, null).language).speechWithheld,
   lire: lireLocalement,
   couper: arreterLecture,
   phase: (etat, error) => {
