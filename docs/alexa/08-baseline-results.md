@@ -106,3 +106,64 @@ The 3 unanswerable Golden cases still return `sans-preuve`. This measures whethe
 **24 of 38 turns pass** across 18 flows, with p50 28 s and p95 145 s. These flows were written with the fixes in mind, so they are a regression check for those fixes, not an independent score.
 
 Failures at baseline: turns that lose the patient after a neutral turn (F02, F03, F07, F16), a replaced drug that gets no new evidence (F04), absent features (F13), mixed and safety reads (F14, F17), and a general question that fails (F12).
+
+## L4 campaign after the references change
+
+| Field | Value |
+|---|---|
+| Run | `b30a6dba-b313-4f33-8b33-63e8b535d3b2` (report in `.eval-out/alexa-v8-upgrade/`, not committed) |
+| Code | `b589079` |
+| Comparison run | `2a169590-6613-435d-a402-d889503f7b23` on `b2f0d36`, before the references change |
+
+**Two scores, and only the second compares with the baseline.**
+
+| Measure | Baseline `8854321` | `b2f0d36` | `b589079` |
+|---|---:|---:|---:|
+| PASS, amended rule | n/a | n/a | **173** |
+| PASS, original rule | **158** | 145 | **138** |
+| FAIL | 72 | 67 | 57 |
+| NOT VERIFIED | 70 | 88 | 70 under the amended rule, 105 under the original |
+| Latency p50 / p95 / max (s) | 1 / 139 / 350 | 0.9 / 88 / 179 | 0.3 / 77 / 152 |
+| External egress | 0 | 0 | 0 |
+
+The ≥ 170 target from `07-evaluation-design.md` was fixed against the original rule, so **it is not met**. The figure of 173 does not meet it.
+
+Why the two scores differ: 35 cases pass only under the amended rule. An opening sentence and a list of passages are not a sentence built only from cited excerpts, so the original rule can't verify them. They become NOT VERIFIED under that rule, not FAIL.
+
+**What a PASS means in those 35 cases:** the expected passage was shown, with the right source and page. It does not mean the question was answered. Alexa now says so to the user.
+
+| Suite (P/F/NV) | Baseline | `b2f0d36` | `b589079` | PASS, original rule |
+|---|---:|---:|---:|---:|
+| Knowledge | 14/15/6 | 2/14/19 | 23/6/6 | 0 |
+| Mixed | 3/20/7 | 4/16/10 | 7/14/9 | 0 |
+| Model routing | 10/9/1 | 9/9/2 | 11/9/0 | 8 |
+| Retrieval | 5/15/0 | 3/15/2 | 5/15/0 | 3 |
+| Follow-ups | 23/3/4 | 24/3/3 | 24/3/3 | 24 |
+| Patient consultation | 40/0/0 | 40/0/0 | 40/0/0 | 40 |
+| Agenda | 26/2/2 | 26/2/2 | 26/2/2 | 26 |
+| Finance | 20/2/3 | 20/2/3 | 20/3/2 | 20 |
+| Actions | 0/3/37 | 0/3/37 | 0/3/37 | 0 |
+| Documents | 17/3/10 | 17/3/10 | 17/2/11 | 17 |
+
+Against the suite targets, on the amended rule: knowledge (≥ 22) is reached with 23. Mixed (≥ 15) and retrieval (≥ 10) are missed. On the original rule, all three are missed.
+
+### New failures, examined
+
+| Case | Before | Cause |
+|---|---|---|
+| ADV-523, finance | NOT VERIFIED | A real answer now, in the wrong shape: the case expects the September charge rows and gets a period summary. The charges figure, 105,833 DZD, was recomputed by hand from the charge rows and is correct |
+| ADV-362, mixed | NOT VERIFIED | Wrong route: a question about brand variants, followed by a book question, lists 20 patient names and never reaches the book question. No egress. Same failure family as the rest of the mixed suite |
+| ADV-352, mixed; ADV-367, routing | PASS on `b2f0d36` | Passages are shown, but not from the expected source and page |
+| ADV-324, knowledge | PASS at baseline | Right passage. The section label of another passage carries a book's running header, which holds its title. The title should be omitted, so this fails. It comes from the corpus section data and is not filtered |
+
+The turn status `partial` on quoted book answers is deliberate (`agent-tools.ts:540`): an answer made of quotes is not certified as complete.
+
+### Not investigated yet
+
+- `LocalModelTruncated` turns.
+- The 37 NOT VERIFIED action cases, unchanged since baseline.
+- ADV-516 and ADV-517, which ask about "the selected consultation" and get a list of consultations. These are older failures, in the suite with the strict finance gate, and no wrong figure is shown.
+
+## L3 conversation after the references change
+
+**34 of 38 turns pass** on `b589079`, against 24 at baseline and 33 on `b2f0d36`, with p50 0.35 s and p95 68 s (baseline 28 s and 145 s). These flows were written with the fixes in mind, so this checks those fixes and is not an independent score.
