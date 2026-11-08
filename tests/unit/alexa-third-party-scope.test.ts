@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { runAlexa } from "@/server/alexa/orchestrator";
-import { onlyTheRecordInContext, thirdPartyReference } from "@/shared/alexa/request-contract";
+import { onlyTheRecordInContext, thirdPartyReference, unknownWordRuns } from "@/shared/alexa/request-contract";
+import { namesAnotherPatient } from "@/server/alexa/patient-resolver";
 import type { AlexaEvent } from "@/shared/alexa/turn";
 
 const selected = "11111111-1111-4111-8111-111111111111";
@@ -82,5 +83,30 @@ describe("the record in context is used only when nobody else is named", () => {
   });
   it.each(["Allergies", "Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Dernière consultation de juin 2026", "Résume la dernière consultation de ce patient en séparant les faits des questions", "Évolution de son humeur depuis 3 mois", "Effets indésirables de la sertraline chez ce patient", "Antécédents familiaux de ce patient", "Allergies à la pénicilline", "Chronologie des traitements de ce patient", "Paiements de la semaine dernière", "Date de naissance", "Score de Hamilton", "Contact d'urgence", "Quelles allergies sont enregistrées ?", "Score de Hamilton de ce patient", "Téléphone", "Son traitement actuel", "Ses allergies connues", "Affiche son profil."])("%s may use the selected record", text => {
     expect(onlyTheRecordInContext(text)).toBe(true);
+  });
+});
+
+describe("words that may be another patient's name are looked up", () => {
+  it.each([
+    ["Karim Benali a-t-il des allergies ?", ["karim benali"]],
+    ["Karim Benali : ses allergies ?", ["karim benali"]],
+    ["Karim, ses allergies ?", ["karim"]],
+    ["Allergies : Karim Benali", ["karim benali"]],
+    ["Allergies selon Karim Benali", ["karim benali"]],
+    ["Allergies Karim Benali", ["karim benali"]],
+    ["Allergies de Mme Benali", ["benali"]],
+  ])("%s", (text, runs) => {
+    expect(unknownWordRuns(text)).toEqual(runs);
+  });
+  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Dernière consultation de juin 2026"])("%s looks nothing up", text => {
+    expect(unknownWordRuns(text)).toEqual([]);
+  });
+  it("finds another patient, ignores the selected one, and fails closed", async () => {
+    const rows = (ids: string[]) => ({ ok: true, data: ids.map(id => ({ id, first_name: "Karim", last_name: "Benali" })) });
+    const db = (reply: unknown) => { const port: unknown = { rpc: async () => reply }; return port as never; };
+    expect(await namesAnotherPatient(db(rows(["other"])), ["karim benali"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([selected])), ["karim benali"], selected)).toBe(false);
+    expect(await namesAnotherPatient(db(rows([])), ["situation"], selected)).toBe(false);
+    expect(await namesAnotherPatient(db({ ok: false, error: {} }), ["karim"], selected)).toBe(true);
   });
 });

@@ -22,7 +22,7 @@ import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./pr
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext} from "@/shared/alexa/request-contract";
+import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
@@ -40,7 +40,7 @@ import type { ClientSql } from "@/server/jarvis/client-sql";
 import type { TurnInput, AlexaSource, AlexaProposal } from "@/shared/alexa/turn";
 import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelineCursorSchema,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
 import { agentCopy, missingPatientFieldParagraph, patientListParagraph, patientListPageParagraph, patientPopulationCountParagraph } from "@/i18n/alexa-agent";
-import { resolvePatient } from "./patient-resolver";
+import { namesAnotherPatient, resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
 import { readPatientFinance, patientFinanceSentence } from "./patient-finance";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
@@ -371,6 +371,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(!proposedName&&proposedId&&!known)return failure(call,"needs_input",copy.patient,"patient-reference-not-verified");
    // The record in context is used only when the sentence points at no one else.
    if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&!onlyTheRecordInContext(input.text))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-possessor");
+   // A word that is another patient's name must not be answered from the record in context, read or action.
+   if(!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&await namesAnotherPatient(db,unknownWordRuns(input.text),proposedId,signal))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-patient-named");
    let resolutionFailure:AgentReadError|undefined;
    const resolutionDb:Pick<DbPort,"rpc">={rpc:async<T>(name:string,args:RpcArgs)=>{
     try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}
@@ -380,7 +382,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    signal.throwIfAborted();if(resolutionFailure)throw resolutionFailure;
    if(resolved.status!=="resolved"){
     const missing=failure(call,"needs_input",copy.patient,"patient-unresolved");
-    if(resolved.status==="ambiguous") {missing.text+="\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates};}
+    if(resolved.status==="ambiguous") {missing.text=resolved.suggested?alexaGoalCopy.didYouMean(resolved.candidates.map(p=>p.label)):missing.text+"\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates};}
     return missing;
    }
    patientId=resolved.patientId; result.patientId=patientId;patientLabels.set(call.id,resolved.identityTokens.reduce((longest,token)=>token.length>longest.length?token:longest,""));

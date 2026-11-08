@@ -4,7 +4,7 @@ import { z } from "zod";
 /** All labels and identity tokens are for local use; never include this result in egress. */
 export type PatientResolution =
   | { readonly status: "resolved"; readonly patientId: string; readonly identityTokens: readonly string[] }
-  | { readonly status: "ambiguous"; readonly candidates: readonly { readonly patientId: string; readonly label: string }[] }
+  | { readonly status: "ambiguous"; readonly candidates: readonly { readonly patientId: string; readonly label: string }[]; readonly suggested?: true }
   | { readonly status: "unavailable" }
   | { readonly status: "absent" }
   | { readonly status: "cancelled" };
@@ -47,6 +47,56 @@ function rankedCandidates(rows: readonly PatientRow[], name: string) {
     || left.row.id.localeCompare(right.row.id))
     .map(({ row }) => ({ patientId: row.id, label: fullName(row) }));
 }
+/**
+ * A spelling key that survives speech-to-text errors on French and Maghrebi names: "Karime Ben Ali",
+ * "Carim Benaly" and "Karim Benali" share "karimbenali".
+ */
+export function phoneticKey(value: string): string {
+  return normalise(value).replace(/[^\p{L} ]/gu, "").split(" ").filter(Boolean).map(word => word
+    .replace(/ph/gu, "f").replace(/qu/gu, "k").replace(/ck/gu, "k").replace(/c(?=[aou]|$)/gu, "k").replace(/q/gu, "k")
+    .replace(/(?<!c)h/gu, "").replace(/y/gu, "i").replace(/eau|au/gu, "o").replace(/ou/gu, "u").replace(/[ae]i/gu, "e")
+    .replace(/(\p{L})\1+/gu, "$1").replace(/(?<=..)[estx]$/u, "")).join("");
+}
+/** Names close enough to be offered for confirmation, best first, at most three. Nothing is read. */
+export function closeNames(rows: readonly PatientRow[], name: string): { patientId: string; label: string }[] {
+  const wanted = phoneticKey(name);
+  if (wanted.length < 3) return [];
+  const seen = new Set<string>();
+  return rows.filter(hasIdentity)
+    .map(row => ({ row, distance: Math.min(...[fullName(row), `${row.last_name} ${row.first_name}`].map(value => nameDistance(wanted, phoneticKey(value)))) }))
+    .filter(entry => entry.distance <= 0.2)
+    .sort((left, right) => left.distance - right.distance || left.row.id.localeCompare(right.row.id))
+    .filter(entry => !seen.has(entry.row.id) && !!seen.add(entry.row.id))
+    .slice(0, 3).map(({ row }) => ({ patientId: row.id, label: fullName(row) }));
+}
+/** When nothing matches as written, look for sound-alike names by the first letters of each word. */
+async function soundAlikeNames(db: Pick<DbPort, "rpc">, name: string, signal?: AbortSignal): Promise<{ patientId: string; label: string }[]> {
+  const rows: PatientRow[] = [];
+  for (const word of [...new Set(normalise(name).split(" ").filter(word => word.length >= 3))].slice(0, 3)) {
+    if (signal?.aborted) return [];
+    const page = await db.rpc<PatientRow>("search_patients", { p_query: word.slice(0, 3), p_limit: 100, p_offset: 0 });
+    if (page.ok) rows.push(...page.data);
+  }
+  return closeNames(rows, name);
+}
+
+/**
+ * Whether words of the request name a patient other than the one in context, through the audited search
+ * gate under the caller's rights. Only rows whose names start with every word count, since the gate also
+ * returns approximate rows. A failed search counts as a match: the caller is asked, nothing is read.
+ */
+export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, runs: readonly string[], patientId: string, signal?: AbortSignal): Promise<boolean> {
+  for (const run of runs) {
+    if (signal?.aborted) return true;
+    const search = await db.rpc<PatientRow>("search_patients", { p_query: run, p_limit: 10, p_offset: 0 });
+    if (!search.ok) return true;
+    const words = normalise(run).split(" ");
+    const named = (row: PatientRow) => { const parts = normalise(fullName(row)).split(" "); return words.every(word => parts.some(part => part.startsWith(word))); };
+    if (search.data.some(row => row.id !== patientId && named(row))) return true;
+  }
+  return false;
+}
+
 function searchCount(value: unknown): number | null {
   if (typeof value !== "number" && !(typeof value === "string" && /^[1-9]\d*$/.test(value))) return null;
   const count = Number(value);
@@ -110,6 +160,7 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
       }
       if (search.data.length === 0) {
         const archived=await resolveArchivedName(db,name,asOf??new Date().toISOString(),signal);
+        if(archived.status==="absent"){const close=await soundAlikeNames(db,name,signal);return close.length?{status:"ambiguous",candidates:close,suggested:true}:archived;}
         if(archived.status!=="resolved")return archived;
         target=archived.patientId;requestedName=normalise(name);
       } else {
@@ -133,6 +184,15 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
       const complete = candidates.length === rows.length && candidates.length <= 100
         && candidates.every((row) => searchCount(row.total_count) === candidates.length)
         && new Set(candidates.map((row) => row.id)).size === candidates.length;
+      // No row carries the name as written: offer the close ones for confirmation, or look by sound.
+      // A first or last name alone keeps the list to choose from. Otherwise the search door returned only
+      // approximate rows: offer the close ones as a question, never as an identity.
+      if (exact.length === 0) {
+        const words = normalise(name).split(" ");
+        const typed = candidates.some(row => { const parts = normalise(fullName(row)).split(" "); return words.every(word => parts.some(part => part.startsWith(word))); });
+        const close = typed ? [] : closeNames(candidates, name);
+        if (close.length) return { status: "ambiguous", candidates: close, suggested: true };
+      }
       if (!complete || exact.length !== 1) {
         return { status: "ambiguous", candidates: rankedCandidates(candidates, name) };
       }

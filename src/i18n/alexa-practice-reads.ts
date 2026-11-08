@@ -9,6 +9,9 @@ export const alexaGoalCopy = {
   tooMany: "Je traite au plus trois demandes par message.",
   partWithoutAction: "Une partie de cette demande n’existe pas comme action dans Alexa, par exemple supprimer un dossier : elle n’a été ni préparée ni faite.",
   otherPossessor: "Je ne suis pas sûre que cette question vise le dossier ouvert. Dites « de ce patient », ou donnez le prénom et le nom du patient concerné.",
+  didYouMean: (labels: readonly string[]) => labels.length === 1
+    ? `Je n’ai pas trouvé ce nom exactement. Vouliez-vous dire ${labels[0]} ? Répondez « oui » ou donnez le nom complet. Je n’ai rien lu.`
+    : `Je n’ai pas trouvé ce nom exactement. Vouliez-vous dire :\n${labels.map((label, index) => `${index + 1}. ${label}`).join("\n")}\nRépondez par le numéro ou le nom complet. Je n’ai rien lu.`,
   waiting: "Une question ou une confirmation attend votre réponse avant cette partie.",
   sharedRead: "Cette partie n’a pas été établie : la lecture effectuée ne porte que sur une autre partie de la demande.",
   nothingChanged: "Je n’ai rien modifié : cette demande n’a été ni exécutée ni préparée.",
