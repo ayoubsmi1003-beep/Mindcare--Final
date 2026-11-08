@@ -101,7 +101,7 @@ describe("words that may be another patient's name are looked up", () => {
   ])("%s", (text, words) => {
     expect(unknownWordRuns(text)).toEqual(words);
   });
-  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Ses allergies selon le Dr Larbi ?", "ما هي حساسية كريم بن علي؟"])("%s looks nothing up", text => {
+  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Ses allergies selon le Dr Larbi ?", "A-t-il exprimé l'envie de mourir ?", "ما هي حساسية كريم بن علي؟"])("%s looks nothing up", text => {
     expect(unknownWordRuns(text)).toEqual([]);
   });
   it("blocks on a whole name of another patient, ignores the selected one and partial words, and fails closed", async () => {
@@ -118,6 +118,11 @@ describe("words that may be another patient's name are looked up", () => {
     // The full name of the patient being read is no reason to refuse because a homonym shares its first name.
     expect(await namesAnotherPatient(db(rows([[selected, "Islam", "Adjina"], ["33333333-3333-4333-8333-333333333333", "Islam", "Haddad"]])), ["islam", "adjina"], selected)).toBe(false);
     expect(await namesAnotherPatient(db(rows([[selected, "Islam", "Adjina"], ["33333333-3333-4333-8333-333333333333", "Islam", "Haddad"]])), ["islam"], selected)).toBe(true);
+    // A near-namesake of the selected patient is compared even when the selected patient is named in full.
+    const family = rows([[selected, "Karim", "Benali"], ["33333333-3333-4333-8333-333333333333", "Karima", "Benali"]]);
+    expect(await namesAnotherPatient(db(family), ["karima", "benali"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(family), ["karim", "benali", "karima"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(family), ["karim", "benali"], selected)).toBe(false);
     expect(await namesAnotherPatient(db({ ok: false, error: {} }), ["karim"], selected)).toBe(true);
   });
 });

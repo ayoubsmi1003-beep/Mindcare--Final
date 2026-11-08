@@ -99,27 +99,28 @@ export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, words: readon
   const joined = (value: string) => normalise(value).replace(/[\s'’-]+/gu, "");
   const pieces = words.map(word => normalise(word));
   const pairs = pieces.slice(1).map((piece, index) => `${pieces[index]} ${piece}`);
-  const candidates = [...new Set([...pieces, ...pairs].map(joined))].filter(value => value.length >= 3);
-  const queries = [...new Set([...pairs, ...pieces].map(value => value.replace(/[-'’]+/gu, " ").trim()))].slice(0, 20);
-  // A heard name is close, not equal: the spelling key used for suggestions decides, so a misheard name
-  // of another patient blocks the read instead of falling back on the record in context.
+  const queries = [...new Set([...pairs, ...pieces].map(value => value.replace(/[-'’]+/gu, " ").trim()))].filter(value => joined(value).length >= 3).slice(0, 20);
+  // A heard name is close, not equal: the spelling key used for suggestions decides.
   const close = (left: string, right: string) => left === right || (left.length >= 4 && right.length >= 4 && nameDistance(phoneticKey(left), phoneticKey(right)) <= 0.2);
   const namesOf = (row: PatientRow) => [...normalise(fullName(row)).split(/[\s'’-]+/u), joined(row.first_name!), joined(row.last_name!)].filter(name => name.length >= 3);
-  const rows = new Map<string, PatientRow>();
+  // Each looked-up phrase is compared only with the rows its own search returned, so a word can't match
+  // a patient that another word of the sentence fetched ("mourir" next to a surname shared with a Mounir).
+  const found: { query: string; rows: PatientRow[] }[] = [];
   for (const query of queries) {
     if (signal?.aborted) return true;
     const search = await db.rpc<PatientRow>("search_patients", { p_query: query, p_limit: NAME_CHECK_LIMIT, p_offset: 0 });
     if (!search.ok) return true;
-    for (const row of search.data) if (hasIdentity(row)) rows.set(row.id, row);
+    found.push({ query: joined(query), rows: search.data.filter(hasIdentity) });
   }
-  // When the request gives the full name of the patient being read, its words name that patient: a homonym
-  // sharing one of them is no reason to refuse. A first name alone that others share still leads to a question.
-  const target = rows.get(patientId);
-  const ownName = target && [target.first_name!, target.last_name!].every(part => candidates.some(candidate => close(candidate, joined(part)))) ? namesOf(target) : [];
-  const remaining = candidates.filter(candidate => !ownName.some(name => close(candidate, name)));
-  for (const row of rows.values()) {
-    if (row.id === patientId) continue;
-    if (remaining.some(candidate => namesOf(row).some(name => close(candidate, name)))) return true;
+  // The patient being read counts as named in full only on an exact match of both names. Only the phrases
+  // that are exactly its names are then set aside: "Karima" next to "Karim Benali" is still compared.
+  const target = found.flatMap(entry => entry.rows).find(row => row.id === patientId);
+  const spoken = new Set(found.map(entry => entry.query));
+  const fullyNamed = !!target && [target.first_name!, target.last_name!].every(part => spoken.has(joined(part)));
+  const own = new Set(fullyNamed && target ? [joined(target.first_name!), joined(target.last_name!), joined(fullName(target))] : []);
+  for (const entry of found) {
+    if (own.has(entry.query)) continue;
+    if (entry.rows.some(row => row.id !== patientId && namesOf(row).some(name => close(entry.query, name)))) return true;
   }
   return false;
 }
