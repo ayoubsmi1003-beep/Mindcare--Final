@@ -95,10 +95,15 @@ describe("words that may be another patient's name are looked up", () => {
     ["Allergies selon Karim Benali", ["karim benali"]],
     ["Allergies Karim Benali", ["karim benali"]],
     ["Allergies de Mme Benali", ["benali"]],
+    ["allergies karim benali", ["karim benali"]],
+    ["est-ce que karim benali a des allergies ?", ["karim benali"]],
+    ["et karim benali, ses allergies ?", ["karim benali"]],
+    ["Allergies, karim", ["karim"]],
+    ["ما هي حساسية كريم بن علي؟", ["ما هي حساسية", "كريم بن علي"]],
   ])("%s", (text, runs) => {
     expect(unknownWordRuns(text)).toEqual(runs);
   });
-  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Dernière consultation de juin 2026"])("%s looks nothing up", text => {
+  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Dernière consultation de juin 2026", "Ses allergies selon le Dr Larbi ?", "Comment ses mesures ont-elles évolué ?"])("%s looks nothing up", text => {
     expect(unknownWordRuns(text)).toEqual([]);
   });
   it("finds another patient, ignores the selected one, and fails closed", async () => {

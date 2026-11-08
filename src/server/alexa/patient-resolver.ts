@@ -9,7 +9,7 @@ export type PatientResolution =
   | { readonly status: "absent" }
   | { readonly status: "cancelled" };
 
-interface PatientRow { readonly id: string; readonly first_name?: string; readonly last_name?: string; readonly total_count?: number | string }
+interface PatientRow { readonly id: string; readonly first_name?: string; readonly last_name?: string; readonly total_count?: number | string; readonly birth_date?: string | null; readonly record_number?: string | null }
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const normalise = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLocaleLowerCase("fr").replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/\s+/g, " ").trim();
 const fullName = (row: PatientRow) => `${row.first_name ?? ""} ${row.last_name ?? ""}`.trim();
@@ -67,14 +67,19 @@ export function closeNames(rows: readonly PatientRow[], name: string): { patient
     .filter(entry => entry.distance <= 0.2)
     .sort((left, right) => left.distance - right.distance || left.row.id.localeCompare(right.row.id))
     .filter(entry => !seen.has(entry.row.id) && !!seen.add(entry.row.id))
-    .slice(0, 3).map(({ row }) => ({ patientId: row.id, label: fullName(row) }));
+    .slice(0, 3).map(({ row }, _index, kept) => {
+      // Two people with the same name are told apart by what the screen shows: birth date or record number.
+      const twin = kept.some(other => other.row.id !== row.id && normalise(fullName(other.row)) === normalise(fullName(row)));
+      const detail = twin ? (row.birth_date ? ` (né·e le ${String(row.birth_date).slice(0, 10)})` : row.record_number ? ` (dossier ${row.record_number})` : "") : "";
+      return { patientId: row.id, label: fullName(row) + detail };
+    });
 }
 /** When nothing matches as written, look for sound-alike names by the first letters of each word. */
 async function soundAlikeNames(db: Pick<DbPort, "rpc">, name: string, signal?: AbortSignal): Promise<{ patientId: string; label: string }[]> {
   const rows: PatientRow[] = [];
-  for (const word of [...new Set(normalise(name).split(" ").filter(word => word.length >= 3))].slice(0, 3)) {
+  for (const word of [...new Set(normalise(name).split(" ").filter(word => word.length >= 3))].slice(0, 2)) {
     if (signal?.aborted) return [];
-    const page = await db.rpc<PatientRow>("search_patients", { p_query: word.slice(0, 3), p_limit: 100, p_offset: 0 });
+    const page = await db.rpc<PatientRow>("search_patients", { p_query: word.slice(0, 3), p_limit: 30, p_offset: 0 });
     if (page.ok) rows.push(...page.data);
   }
   return closeNames(rows, name);

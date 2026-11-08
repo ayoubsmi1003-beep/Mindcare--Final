@@ -37,9 +37,17 @@ describe("a misheard name", () => {
 
   it("confirms a single suggestion with a plain yes, and never with several", () => {
     const one = [{ patientId: id(1), label: "Karim Benali" }], two = [...one, { patientId: id(2), label: "Karima Benali" }];
-    expect(resolveListedReference("Oui", one)).toBe(id(1));
-    expect(resolveListedReference("oui", two)).toBeNull();
+    expect(resolveListedReference("Oui", one, { yesConfirms: true })).toBe(id(1));
+    expect(resolveListedReference("Oui", one)).toBeNull();
+    expect(resolveListedReference("oui", two, { yesConfirms: true })).toBeNull();
     expect(resolveListedReference("2", two)).toBe(id(2));
+  });
+});
+
+describe("homonyms in suggestions", () => {
+  it("shows the birth date when two suggested people share a name", () => {
+    const rows = [{ ...row(1, "Karim", "Benali"), birth_date: "1980-01-02" }, { ...row(2, "Karim", "Benali"), birth_date: "1991-03-04" }];
+    expect(closeNames(rows, "Karime Benaly").map(item => item.label)).toEqual(["Karim Benali (né·e le 1980-01-02)", "Karim Benali (né·e le 1991-03-04)"]);
   });
 });
 

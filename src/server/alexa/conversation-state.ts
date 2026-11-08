@@ -106,12 +106,12 @@ export class ConversationState {
 export const conversationState = new ConversationState();
 
 /** An ordinal is a local selection, never an instruction or an arbitrary identifier. */
-export function resolveListedReference(text:string,candidates:readonly {patientId:string;label:string}[]):string|null {
+export function resolveListedReference(text:string,candidates:readonly {patientId:string;label:string}[],options:{readonly yesConfirms?:boolean}={}):string|null {
   const value=text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase("fr").replace(/[?!.؟]/gu,"").trim();
   const normalized=value.replace(/^(?:le|la|patient|المريض)\s+/u,"");
   const ordinals:Record<string,number>={premier:1,premiere:1,deuxieme:2,second:2,seconde:2,troisieme:3,quatrieme:4,cinquieme:5,"الاول":1,"الثاني":2,"الثالث":3};
   // A single suggested name is confirmed by a plain yes.
-  if(candidates.length===1&&/^(?:oui|ouais|exact|exactement|c'est (?:ca|bien (?:ca|lui|elle))|c’est (?:ca|bien (?:ca|lui|elle))|d'accord|confirme|نعم|ايه)$/u.test(value))return candidates[0]!.patientId;
+  if(options.yesConfirms&&candidates.length===1&&/^(?:oui|ouais|exact|exactement|c'est (?:ca|bien (?:ca|lui|elle))|c’est (?:ca|bien (?:ca|lui|elle))|d'accord|confirme|نعم|ايه)$/u.test(value))return candidates[0]!.patientId;
   const index=/^\d{1,2}$/u.test(normalized)?Number(normalized):ordinals[normalized];
   if(index!==undefined)return candidates[index-1]?.patientId??null;
   const exact=candidates.filter(c=>c.label.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase("fr")===value);

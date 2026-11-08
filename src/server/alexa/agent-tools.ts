@@ -134,6 +134,9 @@ function requestsCurrentDocument(text:string):boolean {
 
 /** Only this closed catalogue reaches server-side, actor-bound SQL doors. No browser service imports. */
 export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:ClientSql) {
+  // The name check runs once per patient for the whole turn, so several reads don't repeat the audited search.
+  const nameChecks=new Map<string,Promise<boolean>>();
+  const nameCheck=(patientId:string,run:()=>Promise<boolean>)=>{let pending=nameChecks.get(patientId);if(!pending){pending=run();nameChecks.set(patientId,pending);}return pending;};
  const language=ALEXA_AGENT_LANGUAGE, copy=agentCopy[language],recordsCopy=alexaRecordCopy[language];
  const labels:Readonly<Record<string,string>>=recordsCopy.labels;
  const patientLabels=new Map<string,string>();
@@ -365,14 +368,17 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const normalize=(text:string)=>text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase();
    if(proposedName&&!explicitName&&!normalize(input.text+" "+(original??"")).includes(normalize(proposedName)))return failure(call,"needs_input",copy.patient,"patient-reference-not-supplied");
    const candidates=prior.flatMap(r=>r.data&&typeof r.data==="object"&&"candidates" in r.data?z.array(z.object({patientId:z.uuid(),label:z.string()})).safeParse(r.data.candidates).data??[]:[]);
-   const selected=resolveListedReference(input.text,candidates);
+   // A plain yes confirms only the latest question, and only when it offered one suggested name.
+   const latestQuestion=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"candidates" in r.data)?.data as Record<string,unknown>|undefined;
+   const selected=resolveListedReference(input.text,candidates,{yesConfirms:latestQuestion?.['suggested']===true&&Array.isArray(latestQuestion['candidates'])&&latestQuestion['candidates'].length===1});
    const proposedId=selected??(typeof a["patientId"]==="string"?a["patientId"]:input.appContext.patientId??undefined);
    const known=proposedId&&(proposedId===input.appContext.patientId||proposedId===selected||input.text.includes(proposedId)||prior.some(r=>r.patientId===proposedId||r.evidence.some(e=>e.type==="patient"&&e.id===proposedId)));
    if(!proposedName&&proposedId&&!known)return failure(call,"needs_input",copy.patient,"patient-reference-not-verified");
    // The record in context is used only when the sentence points at no one else.
    if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&!onlyTheRecordInContext(input.text))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-possessor");
-   // A word that is another patient's name must not be answered from the record in context, read or action.
-   if(!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&await namesAnotherPatient(db,unknownWordRuns(input.text),proposedId,signal))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-patient-named");
+   // A word that is another patient's name must not be answered from the record in context. Actions show the
+   // patient's name in their proposal and wait for a person, so only reads are checked here.
+   if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&await nameCheck(proposedId,()=>namesAnotherPatient(db,unknownWordRuns(input.text),proposedId,signal)))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-patient-named");
    let resolutionFailure:AgentReadError|undefined;
    const resolutionDb:Pick<DbPort,"rpc">={rpc:async<T>(name:string,args:RpcArgs)=>{
     try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}
@@ -382,7 +388,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    signal.throwIfAborted();if(resolutionFailure)throw resolutionFailure;
    if(resolved.status!=="resolved"){
     const missing=failure(call,"needs_input",copy.patient,"patient-unresolved");
-    if(resolved.status==="ambiguous") {missing.text=resolved.suggested?alexaGoalCopy.didYouMean(resolved.candidates.map(p=>p.label)):missing.text+"\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates};}
+    if(resolved.status==="ambiguous") {missing.text=resolved.suggested?alexaGoalCopy.didYouMean(resolved.candidates.map(p=>p.label)):missing.text+"\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates,...(resolved.suggested?{suggested:true}:{})};}
     return missing;
    }
    patientId=resolved.patientId; result.patientId=patientId;patientLabels.set(call.id,resolved.identityTokens.reduce((longest,token)=>token.length>longest.length?token:longest,""));
