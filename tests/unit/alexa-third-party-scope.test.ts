@@ -99,11 +99,14 @@ describe("words that may be another patient's name are looked up", () => {
     ["est-ce que karim benali a des allergies ?", ["karim benali"]],
     ["et karim benali, ses allergies ?", ["karim benali"]],
     ["Allergies, karim", ["karim"]],
-    ["ما هي حساسية كريم بن علي؟", ["ما هي حساسية", "كريم بن علي"]],
+    ["allergies karim", ["karim"]],
+    ["karim allergies ?", ["karim"]],
+    ["Allergies de Me Benali", ["benali"]],
+    ["Allergies selon le Pr Haddad", ["haddad"]],
   ])("%s", (text, runs) => {
     expect(unknownWordRuns(text)).toEqual(runs);
   });
-  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Dernière consultation de juin 2026", "Ses allergies selon le Dr Larbi ?", "Comment ses mesures ont-elles évolué ?"])("%s looks nothing up", text => {
+  it.each(["Ses allergies ?", "Allergies de ce patient", "Quels traitements prend-il ?", "Score de Hamilton", "Date de naissance", "Dernière consultation de juin 2026", "Ses allergies selon le Dr Larbi ?", "Comment ses mesures ont-elles évolué ?", "ما هي حساسية كريم بن علي؟", "Affiche son profil. ملاحظة"])("%s looks nothing up", text => {
     expect(unknownWordRuns(text)).toEqual([]);
   });
   it("finds another patient, ignores the selected one, and fails closed", async () => {
@@ -113,5 +116,6 @@ describe("words that may be another patient's name are looked up", () => {
     expect(await namesAnotherPatient(db(rows([selected])), ["karim benali"], selected)).toBe(false);
     expect(await namesAnotherPatient(db(rows([])), ["situation"], selected)).toBe(false);
     expect(await namesAnotherPatient(db({ ok: false, error: {} }), ["karim"], selected)).toBe(true);
+
   });
 });
