@@ -93,14 +93,33 @@ async function soundAlikeNames(db: Pick<DbPort, "rpc">, name: string, signal?: A
 /** The page size of the name check's lookups. Tests tell the name check's searches from other searches by it. */
 export const NAME_CHECK_LIMIT = 20;
 
-export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, runs: readonly string[], patientId: string, signal?: AbortSignal): Promise<boolean> {
-  for (const run of runs) {
+export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, words: readonly string[], patientId: string, signal?: AbortSignal): Promise<boolean> {
+  // Compound names are written several ways ("Ben Ali", "Benali", "Ben-Ali"), so single words, adjacent pairs
+  // and words with their hyphens removed are all compared, with spaces, hyphens and apostrophes ignored.
+  const joined = (value: string) => normalise(value).replace(/[\s'’-]+/gu, "");
+  const pieces = words.map(word => normalise(word));
+  const pairs = pieces.slice(1).map((piece, index) => `${pieces[index]} ${piece}`);
+  const candidates = [...new Set([...pieces, ...pairs].map(joined))].filter(value => value.length >= 3);
+  const queries = [...new Set([...pairs, ...pieces].map(value => value.replace(/[-'’]+/gu, " ").trim()))].slice(0, 20);
+  // A heard name is close, not equal: the spelling key used for suggestions decides, so a misheard name
+  // of another patient blocks the read instead of falling back on the record in context.
+  const close = (left: string, right: string) => left === right || (left.length >= 4 && right.length >= 4 && nameDistance(phoneticKey(left), phoneticKey(right)) <= 0.2);
+  const namesOf = (row: PatientRow) => [...normalise(fullName(row)).split(/[\s'’-]+/u), joined(row.first_name!), joined(row.last_name!)].filter(name => name.length >= 3);
+  const rows = new Map<string, PatientRow>();
+  for (const query of queries) {
     if (signal?.aborted) return true;
-    const search = await db.rpc<PatientRow>("search_patients", { p_query: run, p_limit: NAME_CHECK_LIMIT, p_offset: 0 });
+    const search = await db.rpc<PatientRow>("search_patients", { p_query: query, p_limit: NAME_CHECK_LIMIT, p_offset: 0 });
     if (!search.ok) return true;
-    const words = normalise(run).split(" ");
-    const named = (row: PatientRow) => { const parts = normalise(fullName(row)).split(/[\s'-]+/u); return words.every(word => parts.includes(word)); };
-    if (search.data.some(row => row.id !== patientId && named(row))) return true;
+    for (const row of search.data) if (hasIdentity(row)) rows.set(row.id, row);
+  }
+  // When the request gives the full name of the patient being read, its words name that patient: a homonym
+  // sharing one of them is no reason to refuse. A first name alone that others share still leads to a question.
+  const target = rows.get(patientId);
+  const ownName = target && [target.first_name!, target.last_name!].every(part => candidates.some(candidate => close(candidate, joined(part)))) ? namesOf(target) : [];
+  const remaining = candidates.filter(candidate => !ownName.some(name => close(candidate, name)));
+  for (const row of rows.values()) {
+    if (row.id === patientId) continue;
+    if (remaining.some(candidate => namesOf(row).some(name => close(candidate, name)))) return true;
   }
   return false;
 }

@@ -96,6 +96,8 @@ describe("words that may be another patient's name are looked up", () => {
     ["Allergies de Me Benali", ["benali"]],
     ["Allergies selon le Pr Haddad", ["haddad"]],
     ["allergies karim", ["karim"]],
+    ["allergies lisa", ["lisa"]],
+    ["allergies ben-ali", ["ben-ali"]],
   ])("%s", (text, words) => {
     expect(unknownWordRuns(text)).toEqual(words);
   });
@@ -105,9 +107,17 @@ describe("words that may be another patient's name are looked up", () => {
   it("blocks on a whole name of another patient, ignores the selected one and partial words, and fails closed", async () => {
     const rows = (list: [string, string, string][]) => ({ ok: true, data: list.map(([id, first_name, last_name]) => ({ id, first_name, last_name })) });
     const db = (reply: unknown) => { const port: unknown = { rpc: async () => reply }; return port as never; };
-    expect(await namesAnotherPatient(db(rows([["other", "Karim", "Haddad"]])), ["karim"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Karim", "Haddad"]])), ["karim"], selected)).toBe(true);
     expect(await namesAnotherPatient(db(rows([[selected, "Karim", "Benali"]])), ["karim"], selected)).toBe(false);
-    expect(await namesAnotherPatient(db(rows([["other", "Jeunet", "Ali"]])), ["jeune"], selected)).toBe(false);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Marc", "Jeunet"]])), ["situation"], selected)).toBe(false);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Karim", "Ben Ali"]])), ["benali"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Karim", "Benali"]])), ["ben", "ali"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Karim", "Ben Ali"]])), ["ben-ali"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Karim", "Benali"]])), ["karime", "benaly"], selected)).toBe(true);
+    expect(await namesAnotherPatient(db(rows([["33333333-3333-4333-8333-333333333333", "Lisa", "Haddad"]])), ["lisa"], selected)).toBe(true);
+    // The full name of the patient being read is no reason to refuse because a homonym shares its first name.
+    expect(await namesAnotherPatient(db(rows([[selected, "Islam", "Adjina"], ["33333333-3333-4333-8333-333333333333", "Islam", "Haddad"]])), ["islam", "adjina"], selected)).toBe(false);
+    expect(await namesAnotherPatient(db(rows([[selected, "Islam", "Adjina"], ["33333333-3333-4333-8333-333333333333", "Islam", "Haddad"]])), ["islam"], selected)).toBe(true);
     expect(await namesAnotherPatient(db({ ok: false, error: {} }), ["karim"], selected)).toBe(true);
   });
 });
