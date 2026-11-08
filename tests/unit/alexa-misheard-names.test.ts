@@ -56,6 +56,6 @@ describe("the name check counts names, not approximate rows", () => {
     const db = (rows: unknown[]) => { const port: unknown = { rpc: async () => ({ ok: true, data: rows }) }; return port as never; };
     expect(await namesAnotherPatient(db([row(2, "Sitou", "Ation")]), ["situation"], id(1))).toBe(false);
     expect(await namesAnotherPatient(db([row(2, "Karim", "Haddad")]), ["karim"], id(1))).toBe(true);
-    expect(await namesAnotherPatient(db([row(1, "Karim", "Benali")]), ["karim benali"], id(1))).toBe(false);
+    expect(await namesAnotherPatient(db([row(1, "Karim", "Benali")]), ["karim"], id(1))).toBe(false);
   });
 });

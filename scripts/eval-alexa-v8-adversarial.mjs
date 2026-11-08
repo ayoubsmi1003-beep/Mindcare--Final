@@ -165,7 +165,15 @@ async function writeAtomic(path, value) {
   await mkdir(dirname(path), { recursive: true });
   const temporary = `${path}.${process.pid}.tmp`;
   await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, { encoding: "utf8", mode: 0o600 });
-  await rename(temporary, path);
+  // On Windows a scanner or indexer can hold the target for a moment; the rename then fails with EPERM or
+  // EBUSY. Two campaigns stopped on it, so the rename is retried briefly before the run gives up.
+  for (let attempt = 0; ; attempt++) {
+    try { await rename(temporary, path); return; }
+    catch (error) {
+      if (attempt >= 8 || !["EPERM", "EBUSY", "EACCES"].includes(error?.code)) throw error;
+      await new Promise(resolve => setTimeout(resolve, 250 * (attempt + 1)));
+    }
+  }
 }
 
 function sourceCaseIds(scenario) {

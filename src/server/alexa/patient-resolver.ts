@@ -90,13 +90,16 @@ async function soundAlikeNames(db: Pick<DbPort, "rpc">, name: string, signal?: A
  * gate under the caller's rights. Only rows whose names start with every word count, since the gate also
  * returns approximate rows. A failed search counts as a match: the caller is asked, nothing is read.
  */
+/** The page size of the name check's lookups. Tests tell the name check's searches from other searches by it. */
+export const NAME_CHECK_LIMIT = 20;
+
 export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, runs: readonly string[], patientId: string, signal?: AbortSignal): Promise<boolean> {
   for (const run of runs) {
     if (signal?.aborted) return true;
-    const search = await db.rpc<PatientRow>("search_patients", { p_query: run, p_limit: 10, p_offset: 0 });
+    const search = await db.rpc<PatientRow>("search_patients", { p_query: run, p_limit: NAME_CHECK_LIMIT, p_offset: 0 });
     if (!search.ok) return true;
     const words = normalise(run).split(" ");
-    const named = (row: PatientRow) => { const parts = normalise(fullName(row)).split(" "); return words.every(word => parts.some(part => part.startsWith(word))); };
+    const named = (row: PatientRow) => { const parts = normalise(fullName(row)).split(/[\s'-]+/u); return words.every(word => parts.includes(word)); };
     if (search.data.some(row => row.id !== patientId && named(row))) return true;
   }
   return false;

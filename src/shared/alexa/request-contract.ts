@@ -451,10 +451,11 @@ const IN_RECORD_WORD=/^(?:\d[\d/.-]*|(?:janvier|fevrier|mars|avril|mai|juin|juil
 // Words of a question about the record in context. A sentence made only of these can't name anyone else.
 const QUESTION_WORD=/^(?:cliniques?|avant-derniere?s?|avant-dernier|antepenultieme|penultieme|un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|douze|quinze|vingt|trente|premiere?s?|deuxieme|troisieme|ouverte?s?|fermee?s?|evolu\w*|chronolog\w*|concis\w*|bref|breve?s?|court\w*|long\w*|paragraphe?s?|sources?|selection\w*|numeros?|emise?s?|emis|annulee?s?|programmee?s?|prevue?s?|reglee?s?|payee?s?|impayee?s?|financier\w*|situation|textes?|integra(?:l|le|les|ux)|contenus?|details?|detaillee?s?|lignes?|pages?|problemes?|principa(?:l|le|les|ux)|documente\w*|decrit\w*|evoque\w*|mentionne\w*|retenu\w*|actif\w*|active\w*|resolu\w*|courante?s?|habituel\w*|complete?s?|entiere?s?|signee?s?|brouillons?|parties?|rubriques?|themes?|difficultes?|ancienne?s?|nouvelle?s?|nouveaux?|precedent\w*|suivant\w*|versions?|de|du|des|d|l|la|le|les|un|une|et|ou|a|au|aux|en|dans|sur|sous|avec|par|pour|chez|sa|son|ses|leur|leurs|ce|cet|cette|ces|il|elle|ils|elles|lui|y|est|sont|ont|etait|ete|t|quel|quelle|quels|quelles|qui|que|qu|quoi|combien|comment|quand|ou|est-ce|est-il|est-elle|montre|montre-moi|affiche|affiche-moi|donne|donne-moi|ouvre|liste|indique|resume|resume-moi|rappelle|presente|lis|voir|moi|me|mes|mon|ma|nous|vous|tu|je|j|s'il|te|plait|merci|alexa|actuel\w*|actuellement|enregistre\w*|consigne\w*|note\w*|prescrit\w*|connu\w*|recent\w*|dernier\w*|derniere\w*|en cours|prend|prend-il|prend-elle|prennent|a-t-il|a-t-elle|y a-t-il|il y a|existe|existe-t-il|encore|toujours|deja|jamais|aucun\w*|tous|toutes|tout|plus|moins|depuis|entre|jusqu|apres|avant|naissance|identite|telephone|adresse|contact|urgence|coordonnees|profil|fiche|age|sexe|hamilton|madrs|phq\w*|gad\w*|beck|ymrs|panss|mmse|moca|hdrs|bprs|cgi|statut|etat|liste|nombre|total|vue|resume|synthese|chronologie|historique|calendrier|prochain\w*|ordre|chronologique)$/u;
 const knownQuestionWord=(word:string)=>QUESTION_WORD.test(word)||IN_RECORD_WORD.test(word)||CLINICAL_TOPIC.test(word)||mentionsMedication(word);
-const SEARCH_STOP=/^(?:(?:imprim|prepar|redig|envoi|envoy|cre|ajout|modifi|ouvr|relis|affich|montr|cherch|trouv|donn|rappel|verifi|compar|calcul|resum|expliqu|present|programm|planifi|reserv|annul|deplac|report|marqu|signal|encaiss|regl|fix|arret|reprend|renouvel|lis|lir|met|ecri|not|enregistr|clotur|ferm|valid|sign)\p{L}*|courant|actuel|actuelle|mme|mlle|madame|mademoiselle|monsieur|docteur|date|numero|situation|familiale|alors|aussi|bien|bon|donc|est-ce|fait|faire|merci|oui|non|peux|pouvez|peut|pourrais|pourriez|souhaite|voudrais|veux|dis|dites|stp|svp|sil|plait|elle|elles|ils|lui|leur|eux|avec|sans|selon|vers|entre|apres|avant|quelle|quelles|quels|comme|tres|trop|peu|beaucoup|moins|plus|ici|cela|ceci|celui|celle)$/u;
+const SEARCH_STOP=/^(?:euh|heu|hum|hmm|bah|bon|voila|enfin|genre|quoi|hein|ok|okay|dac|stp|svp|(?:imprim|prepar|redig|envoi|envoy|cre|ajout|modifi|ouvr|relis|affich|montr|cherch|trouv|donn|rappel|verifi|compar|calcul|resum|expliqu|present|programm|planifi|reserv|annul|deplac|report|marqu|signal|encaiss|regl|fix|arret|reprend|renouvel|lis|lir|met|ecri|not|enregistr|clotur|ferm|valid|sign)\p{L}*|courant|actuel|actuelle|mme|mlle|madame|mademoiselle|monsieur|docteur|date|numero|situation|familiale|alors|aussi|bien|bon|donc|est-ce|fait|faire|merci|oui|non|peux|pouvez|peut|pourrais|pourriez|souhaite|voudrais|veux|dis|dites|stp|svp|sil|plait|elle|elles|ils|lui|leur|eux|avec|sans|selon|vers|entre|apres|avant|quelle|quelles|quels|comme|tres|trop|peu|beaucoup|moins|plus|ici|cela|ceci|celui|celle)$/u;
 /**
- * Runs of words the vocabulary doesn't know, up to three words each and three runs, for a lookup in the
- * patient search: "Karim Benali a-t-il des allergies ?" gives ["karim benali"].
+ * The Latin words the vocabulary doesn't know, each looked up on its own in the patient search, so that a
+ * filler such as "euh" next to a name can't hide it: "Karim Benali a-t-il des allergies ?" gives
+ * ["karim", "benali"].
  */
 export function unknownWordRuns(text:string):string[]{
  const source=text.normalize('NFC').replace(SELECTED_REFERENCE_RAW,' ');
@@ -464,24 +465,10 @@ export function unknownWordRuns(text:string):string[]{
   return split?[{raw:split[0].slice(0,-1),start:match.index},{raw:raw.slice(split[0].length),start:match.index+split[0].length}]:[{raw,start:match.index}];
  }).map(token=>({...token,word:fold(token.raw).replace(/œ/gu,'oe').replace(/^[-']+|[-']+$/gu,'').replace(/-t-(?:il|elle)$/u,'').replace(/-(?:ils?|elles?|moi|tu|vous|nous|on)$/u,'')}));
  // Patient names are stored in Latin script only, so only Latin words can name one.
- const participle=(raw:string)=>/^\p{Ll}[\p{L}'’-]*(?:é|ée|és|ées)$/u.test(raw);
- const isUnknown=(word:string,raw='')=>!participle(raw)&&/^\p{Script=Latin}/u.test(word)&&word.length>=3&&!knownQuestionWord(word)&&!SEARCH_STOP.test(word)&&!NOT_A_PERSON.test(word);
- const runs:{words:string[];first:number;last:number}[]=[];
- tokens.forEach((token,index)=>{
-  const open=runs.at(-1);
-  if(isUnknown(token.word,token.raw)){if(open&&open.last===index-1&&open.words.length<3){open.words.push(token.word);open.last=index;}else runs.push({words:[token.word],first:index,last:index});}
- });
- // Only name-like places: a capital, right after a preposition with no article, or a name opening the sentence.
- const introducer=/^(?:de|d|du|chez|pour|selon|avec|concernant|sur|par|:|,|et|que|si)$/u;
+ const isUnknown=(word:string)=>/^\p{Script=Latin}/u.test(word)&&word.length>=3&&!knownQuestionWord(word)&&!SEARCH_STOP.test(word)&&!NOT_A_PERSON.test(word);
  // A colleague's title: "selon le Dr Larbi" is not a patient.
  const titled=(index:number)=>/^(?:dr|docteur|docteure)$/u.test(tokens[index-1]?.word??'');
- return runs.filter(run=>{
-  const before=tokens[run.first-1],after=tokens[run.last+1];
-  const capital=run.words.some((_,offset)=>{const token=tokens[run.first+offset]!;return /^\p{Lu}/u.test(token.raw)&&(run.first+offset>0&&!/^[.?!]$/u.test(tokens[run.first+offset-1]!.raw)||run.words.length>1);});
-  const opening=run.first===0&&(run.words.length>1||(after!==undefined&&/^[,:]$/u.test(after.raw))||/-(?:t-)?(?:il|elle)$/iu.test(tokens[run.last]!.raw));
-  void capital;void before;void opening;
-  return !titled(run.first);
- }).slice(0,3).map(run=>run.words.join(' '));
+ return [...new Set(tokens.filter((token,index)=>isUnknown(token.word)&&!titled(index)).map(token=>token.word))].slice(0,12);
 }
 const SELECTED_REFERENCE_RAW=/(?<![\p{L}])(?:de |du |pour |chez |à |a )?(?:(?:le |la |ce |cette )?patiente? s[ée]lectionn[ée]e?|(?:ce|le) (?:dossier|patient) (?:courant|actuel|en cours|ouvert|s[ée]lectionn[ée])|ce patient|cette patiente|le patient|la patiente|ce dossier|le dossier)(?![\p{L}])/giu;
 const SELECTED_REFERENCE=/\b(?:de |du |pour |chez |a )?(?:ce patient|cette patiente|le patient|la patiente|patiente? selectionnee?|ce dossier|le dossier (?:en cours|ouvert|selectionne))\b/gu;
