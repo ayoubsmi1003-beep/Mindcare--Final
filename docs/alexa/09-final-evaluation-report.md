@@ -4,8 +4,11 @@ Branch `claude/alexa-intelligence-transformation-9fc1d1`, nothing pushed. Evalua
 
 ## Verdict
 
-**Not ready to release.**
-- **Selected-patient check:** the security review of how Alexa decides that a question is about the selected patient has failed eight rounds in a row. A ninth is running on `4e4cbf7`. Each round closed the inputs it found and found new ones. The last two failed on name variants: compound spellings, misheard names, and real names caught by the stop list.
+**Not ready to release yet.**
+- **Selected-patient check:** the security review of how Alexa decides that a question is about the selected patient failed nine rounds. Round 10, on `e4dccbe`, found no high-severity path and judged it releasable with reservations.
+  - The two cases the reviewer asked to check on the real database both block, 3 out of 3 each: a compound surname written joined ("benali" for "Ben Ali"), and a misheard first name alone.
+  - The remaining low risks are listed in `10-known-limitations.md`.
+  - No full campaign has run on `e4dccbe`.
 - **Campaign:** on the original rule, it scores below its own baseline: 130 against 158. Part of that gap comes from fixes that refuse instead of guessing; part is the rule itself, which scores a correct list of passages as not verified.
 - **No clinician** has approved any expected clinical answer.
 
@@ -74,9 +77,9 @@ Branch `claude/alexa-intelligence-transformation-9fc1d1`, nothing pushed. Evalua
 | Feature | Implemented | Unit | Integration (live) | E2E | Security review after final change | Assistant role | Installed schema |
 |---|---|---|---|---|---|---|---|
 | Four practice reads | Yes | Yes | 6/6 | No | Failed rounds, not re-reviewed alone | Yes | Evaluation DB only |
-| Relatives and other patients | Yes | Yes | Probe 12/12 | No | Round 9 running | No | n/a |
-| Selected-patient name check | Yes | Yes | Yes | No | Round 9 running | No | n/a |
-| Misheard-name confirmation | Yes | Yes | Yes | No | Round 9 running | No | n/a |
+| Relatives and other patients | Yes | Yes | Probe 12/12 | No | Round 10: no high finding, releasable with reservations | No | n/a |
+| Selected-patient name check | Yes | Yes | Yes | No | Round 10: no high finding, releasable with reservations | No | n/a |
+| Misheard-name confirmation | Yes | Yes | Yes | No | Round 10: no high finding, releasable with reservations | No | n/a |
 | Multi-goal turns | Yes | Yes | Probe | No | Mostly passed in round 4 | No | n/a |
 | Change requests | Yes | Yes | Probe | No | Mostly passed in round 4 | No | n/a |
 | Refused reads not replaced by books | Yes | Yes | Role test | No | Passed | Yes | n/a |
@@ -86,7 +89,7 @@ Branch `claude/alexa-intelligence-transformation-9fc1d1`, nothing pushed. Evalua
 
 ## What remains
 
-- Pass the security review of the selected-patient check.
+- Run a full campaign and a real-model check of the selected-patient name check on the final commit.
 - Investigate the ADV-422 and ADV-432 follow-ups.
 - Run a full campaign on the final commit.
 - Rerun the L3 conversations.

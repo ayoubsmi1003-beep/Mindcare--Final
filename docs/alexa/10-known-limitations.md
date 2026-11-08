@@ -26,6 +26,21 @@ As of 2026-11-07, on branch `claude/alexa-intelligence-transformation-9fc1d1`, n
   - **The critical bug found by the review predates this work:** with a patient selected, "Allergies de Karim Benali" read the selected patient. It's now fixed and tested, but it shows the parser is a list of known forms, not an understanding.
 - **Speech-to-text:** whether Whisper writes `œ` or `oe` wasn't checked. Both are now handled.
 
+## Checking names before reading the selected patient
+
+Before a read falls back to the selected patient, every unknown Latin word, and each pair of adjacent words, is looked up in the audited patient search. A match with another patient leads to a question, and nothing is read.
+- **Matching:** names are compared with spaces, hyphens and apostrophes ignored, and a spelling key tolerates misheard names.
+- **The selected patient's own full name**, said exactly, is no reason to refuse.
+- **Arabic words:** never looked up, since patient names are stored only in Latin script.
+- **Risk vocabulary** (mourir, suicide and similar): never looked up, so a risk question is never refused because a patient bears a similar name.
+
+Remaining, after ten review rounds:
+- **Compound twins:** "Ben Ali" and "Benali" count as the same name. If the selected Salim Ben Ali has a homonym Salim Benali, the homonym isn't asked about. The same holds for an exact homonym of the selected patient.
+- **Threshold:** a misheard name relies on the search's trigram threshold. Three real cases blocked as they should, but a very short or very distorted first name may still find nothing.
+- **Actions** aren't name-checked: a proposal shows the patient's name and waits for a person.
+- **Audit log:** a read with name-like words writes 1 to 5 extra searches to it. An ordinary read writes none.
+- **Real model:** no model-driven turns were run against these checks; they guard whatever tool the model calls.
+
 ## Several requests in one message
 
 - Requests joined by "puis", "ensuite" or a new sentence run as separate turns, each answered or reported as not done. There are at most three per message; the rest are named as not done.

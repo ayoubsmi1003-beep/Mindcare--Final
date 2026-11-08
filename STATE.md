@@ -4,6 +4,19 @@ Dernière mise à jour : 2026-09-08 (session « transformation V9 »)
 
 ---
 
+## ▶ 2026-11-08 — Alexa : sécurité du dossier en cours, demandes multiples, campagne finale
+
+Branche claude/alexa-intelligence-transformation-9fc1d1, commits locaux non poussés (e11b03b → e4dccbe).
+
+- Une question sur un proche ou un autre patient ne lit plus le dossier sélectionné. Avant de lire le dossier en cours, chaque mot inconnu est cherché dans la recherche patient journalisée ; un autre patient trouvé mène à une question.
+- Nom mal transcrit : Alexa propose au plus trois noms proches (« Vouliez-vous dire ») et ne lit rien avant confirmation.
+- Demandes multiples : chacune est traitée ou signalée comme non traitée. Modification sans action Alexa : refus immédiat, « je n’ai rien changé ».
+- Revue de sécurité : 9 tours en échec, tour 10 sans constat grave (publiable avec réserves). Aucune campagne complète sur e4dccbe.
+- Campagne sur e1ff589 : 165 PASS (130 règle d’origine, référence 158). Rapport : docs/alexa/09-final-evaluation-report.md.
+- En attente : écriture « absent » (docs/alexa/12, accord requis), relecture clinique de docs/alexa/evaluation/practitioner-gold-worksheet.md, vérification de la migration 211 sur le poste du cabinet.
+
+---
+
 ## ▶ 2026-09-08 — V9 : LOT E (GRAPHIQUES) ET 089 (CIVILITÉ, SECONDE MOITIÉ)
 
 ### Lot E — deux défauts réels, dont une donnée invisible
