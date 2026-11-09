@@ -61,3 +61,11 @@ describe("activity frame: sessions, patients seen, new records, busiest days", (
     for (const text of ["Combien de patients aujourd'hui ?", "Combien de rendez-vous demain ?", "Combien a-t-il de consultations ?", "Combien avons-nous encaissé ce mois-ci ?", "Quels patients a-t-il vus ?"]) expect(activity(text), text).toBeNull();
   });
 });
+
+describe("activity frame: consultations that took place and month-on-month comparison of activity", () => {
+  it("reads them as the statistics of the period, which hold the previous period too", () => {
+    expect(activityQuestionFrame("Combien de consultations ont eu lieu ce mois-ci ?", ASOF)).toBe("Montre-moi les statistiques de ce mois");
+    expect(activityQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBe("Montre-moi les statistiques de ce mois");
+    expect(financeQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBeNull();
+  });
+});

@@ -67,8 +67,9 @@ describe("patient question frame: a name wins over the screen and is kept as wri
     expect(patientQuestionFrame("Dernière consultation de mohamed taki eddine araibia ?", nobody)?.subject).toEqual({ kind: "named", name: "mohamed taki eddine araibia" });
   });
   it("leaves a first name alone, or two different names, to the route that asks", () => {
-    expect(patientQuestionFrame("Je voudrais des nouvelles de Samir.", nobody)).toBeNull();
-    expect(patientQuestionFrame("Résume Samir.", onScreen)).toBeNull();
+    expect(patientQuestionFrame("Je voudrais des nouvelles de Samir.", nobody)?.subject).toEqual({ kind: "named", name: "Samir" });
+    expect(patientQuestionFrame("Résume Samir.", onScreen)?.subject).toEqual({ kind: "named", name: "Samir" });
+    expect(patientQuestionFrame("Parle-moi de la schizophrénie.", onScreen)).toBeNull();
     expect(patientQuestionFrame("Compare le traitement de Karim Benali et de Nadia Test.", nobody)).toBeNull();
   });
   it("restates a named question in a form the name parser still reads as that name", () => {
@@ -170,8 +171,16 @@ describe("patient question frame: stray vocabulary is tolerated, a first name is
     expect(section("Rappelle-moi ce qu'il prend comme gélules.")).toBe("treatments");
   });
   it("still refuses a first name alone, or a name in a group of unknown words", () => {
-    expect(patientQuestionFrame("Parle-moi de kouider.", onScreen)).toBeNull();
-    expect(patientQuestionFrame("Résume Samir.", onScreen)).toBeNull();
+    expect(patientQuestionFrame("Parle-moi de kouider.", onScreen)?.subject).toEqual({ kind: "named", name: "kouider" });
+    expect(patientQuestionFrame("Résume Samir.", onScreen)?.subject).toEqual({ kind: "named", name: "Samir" });
+    expect(patientQuestionFrame("Parle-moi de la schizophrénie.", onScreen)).toBeNull();
     expect(patientQuestionFrame("Combien de consultations a Karim Benali, et Nadia Test ?", onScreen)).toBeNull();
+  });
+});
+
+describe("patient question frame: more everyday wordings", () => {
+  it("reads \"ce qu'on a sur\" as a request for the record", () => {
+    expect(section("Qu'est-ce qu'on a sur Karim Benali ?", nobody)).toBe("summary");
+    expect(patientQuestionFrame("Qu'est-ce qu'on a sur sabri ?", nobody)?.subject).toEqual({ kind: "named", name: "sabri" });
   });
 });

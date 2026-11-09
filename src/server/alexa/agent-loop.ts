@@ -577,7 +577,7 @@ function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:
  const nextSlot=/\b(?:prochain|prochaine)\s+(?:horaire|creneau|disponibilite)\b|\b(?:horaire|creneau)\s+disponible\b/u.test(plain),slotWindow=nextSlot?explicitAgentPeriod("aujourd'hui",asOf):null;
  const dayWord=/\b(?:du jour|ce jour|de la journee|dans la journee|aujourd'hui)\b/u.test(plain),dayWindow=dayWord?cabinetDayWindow(asOf):null;
  const firstOfDay=/\b(?:premier|premiere|ouverture)\b[^.!?]{0,40}\b(?:rendez[- ]vous|rdv|journee|agenda)\b/u.test(plain);
- const nextWindow=nextAppointment&&!window&&!slotWindow&&!dayWindow?(()=>{const base=cabinetDayWindow(asOf);if(!base)return null;const end=new Date(base.to);end.setUTCDate(end.getUTCDate()+6);return {from:base.from,to:`${end.toISOString().slice(0,10)}T00:00:00+01:00`};})():null;
+ const nextWindow=nextAppointment&&!window&&!slotWindow&&!dayWindow?(()=>{const base=cabinetDayWindow(asOf);if(!base)return null;const end=new Date(base.to);end.setUTCDate(end.getUTCDate()+6);return {from:asOf,to:`${end.toISOString().slice(0,10)}T00:00:00+01:00`};})():null;
  const upcomingPatientWindow=selectedPatientId&&!window&&!/\b(?:aujourd.hui|demain|hier|semaine|mois|annee)\b/u.test(plain)&&/\b(?:prevus?|prevues?|a venir|prochains?|prochaines?)\b/u.test(plain)?(()=>{const from=z.iso.datetime({offset:true}).parse(asOf),to=new Date(Date.parse(from)+364*86400000).toISOString();return {from,to};})():null;
  const effectiveWindow=window??slotWindow??dayWindow??nextWindow??upcomingPatientWindow;
  if(scope.tools?.length!==1||scope.tools[0]!=='query_agenda'||(!effectiveWindow&&!nextAppointment)||mention.status==='ambiguous'||!statusContract.complete)return null;

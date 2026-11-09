@@ -53,7 +53,7 @@ describe("agenda frame: periods are counted from the clock of the turn", () => {
   it("keeps the words the period parser knows and spells out the others", () => {
     expect(canonicalPeriod("aujourd'hui", ASOF)).toBe("aujourd'hui");
     expect(canonicalPeriod("cette semaine", ASOF)).toBe("cette semaine");
-    expect(canonicalPeriod("cet apres-midi", ASOF)).toBe("cet après-midi");
+    expect(canonicalPeriod("cet apres-midi", ASOF)).toBe("aujourd'hui après-midi");
     expect(canonicalPeriod("apres-demain", ASOF)).toBe("le 28 octobre 2026");
     expect(canonicalPeriod("la semaine derniere", ASOF)).toBe("du 19 octobre 2026 au 25 octobre 2026");
     expect(canonicalPeriod("le mois dernier", ASOF)).toBe("du 1 septembre 2026 au 30 septembre 2026");
@@ -91,5 +91,30 @@ describe("period follow-up: 'Et demain ?' repeats the last question for another 
   });
   it("keeps accents of the rest of the question", () => {
     expect(periodFollowup("Et demain ?", "Quels sont les rendez-vous annulés aujourd'hui ?", day, ASOF)).toBe("Quels sont les rendez-vous annulés demain ?");
+  });
+});
+
+describe("agenda frame: this morning and this afternoon mean today", () => {
+  it("spells the day part with today so the clock window can be read", () => {
+    expect(canonicalPeriod("cet apres-midi", ASOF)).toBe("aujourd'hui après-midi");
+    expect(canonicalPeriod("ce matin", ASOF)).toBe("aujourd'hui matin");
+    expect(frame("Ai-je des rendez-vous cet après-midi ?")).toBe("Combien de rendez-vous aujourd'hui après-midi ?");
+    expect(frenchRequestAdmission(frame("Est-ce que j'ai du monde ce matin ?")!, false, ASOF).tools).toEqual(["query_agenda"]);
+  });
+});
+
+describe("agenda frame: a named day beats 'ma journée', past consultations are not the agenda, 'Combien ?' counts the same period", () => {
+  it("reads the day that is named", () => {
+    expect(frame("À quelle heure commence ma journée demain ?")).toBe("Quel est le premier rendez-vous demain ?");
+  });
+  it("leaves consultations that already took place to the consultation count", () => {
+    expect(frame("Combien de consultations la semaine dernière ?")).toBeNull();
+    expect(frame("Combien de consultations ont eu lieu hier ?")).toBeNull();
+    expect(frame("Combien de consultations ai-je cette semaine ?")).toBe("Combien de rendez-vous cette semaine ?");
+  });
+  it("counts the period of the previous agenda question", () => {
+    expect(periodFollowup("Combien ?", "Combien de rendez-vous aujourd'hui ?", "2026-10-26", ASOF)).toBe("Combien de rendez-vous aujourd'hui ?");
+    expect(periodFollowup("Combien ?", "Quels sont les rendez-vous demain ?", "2026-10-26", ASOF)).toBe("Combien de rendez-vous demain ?");
+    expect(periodFollowup("Combien ?", "Quel est le traitement de Karim Benali ?", "2026-10-26", ASOF)).toBeNull();
   });
 });

@@ -19,6 +19,7 @@ export const alexaGoalCopy = {
 };
 
 export const alexaIdentityCopy = {
+  whichPatient: (labels: readonly string[], more: boolean) => `Plusieurs patients correspondent : ${labels.join(" ; ")}${more ? " ; et d’autres" : ""}. Lequel voulez-vous ?`,
   thirdParty: "Cette demande semble viser une autre personne que le dossier en cours : un proche ou un autre patient. Je n’ai lu aucun dossier. Indiquez le prénom et le nom du patient concerné, s’il a un dossier. Pour l’histoire familiale de ce dossier, demandez ses antécédents familiaux.",
 };
 

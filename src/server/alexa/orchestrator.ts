@@ -11,7 +11,8 @@ import { dialogue } from "@/i18n/alexa-dialogue";
 import { ALEXA_GENERAL_SOURCE } from "@/i18n/alexa-general";
 import { resolvePatient } from "./patient-resolver";
 import { withConsultationPatient } from "./consultation-context";
-import { patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient } from "@/shared/alexa/patient-question";
+import { firstNameMatches } from "./first-name-search";
+import { patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
 import { agendaQuestionFrame, periodFollowup } from "@/shared/alexa/agenda-frame";
 import { activityQuestionFrame, financeQuestionFrame } from "@/shared/alexa/practice-frame";
 import { buildClinicalContext } from "./clinical-context";
@@ -353,7 +354,7 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     if (!dependencies.resumeCursor&&plannedIntent.intent === 'safe_abstention') return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent });
     // "Patient suivant": the next patient comes from the agenda gate and the patient gate (never recomputed here),
     // the screen opens, and the working patient changes only once that patient is verified.
-    if (!dependencies.resumeCursor&&requestsNextPatient(input.text)&&plannedIntent.intent==='agenda') { dependencies.trace?.route('closed'); return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent }); }
+    if (!dependencies.resumeCursor&&requestsNextPatient(input.text)&&plannedIntent.intent==='agenda'&&!/\b(?:heure|quand|horaire)\b/iu.test(input.text.normalize('NFKD').replace(/\p{M}/gu,''))) { dependencies.trace?.route('closed'); return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent }); }
     // Explicit document and internal-message requests remain reachable without
     // the local model. The model path still handles paraphrases and compounds.
     if (!dependencies.resumeCursor&&understanding.partlyWithoutAction) emit({type:"sentence",text:alexaGoalCopy.partWithoutAction,kind:"fact",sources:[]});
@@ -374,9 +375,9 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     const patientFollowup=workingPatient&&!appliedToPatient?resolvePatientFollowup(input.text):{kind:'none' as const};
     // Everyday agenda questions ("Combien de patients aujourd'hui ?", "J'ai du monde ce matin ?"), read by meaning.
     // A frame only helps what the closed admission does not already understand: its own wording keeps its own routes (and follow-ups).
-    const admittedTools=dependencies.resumeCursor?undefined:frenchRequestAdmission(agentInput.text,false,asOf).tools;
-    const admittedAs=(tool:string)=>admittedTools?.length===1&&admittedTools[0]===tool;
-    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient||admittedAs('query_agenda')?null:agendaQuestionFrame(agentInput.text,asOf);
+    const admission=dependencies.resumeCursor?undefined:frenchRequestAdmission(agentInput.text,false,asOf),admittedTools=admission?.tools;
+    const admittedAs=(tool:string)=>admittedTools?.length===1&&admittedTools[0]===tool&&(tool!=='query_app'||admission?.applicationView==='statistics');
+    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(agentInput.text,asOf);
     // Any other everyday question about a patient: read by meaning, restated as the closed question the gates answer.
     // Money and activity of the practice: "Combien avons-nous gagné hier ?", "Quels sont les jours les plus chargés ?".
     const practiceFrame=dependencies.resumeCursor||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=admittedAs('query_finance')?null:financeQuestionFrame(agentInput.text,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(agentInput.text,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
@@ -384,10 +385,25 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     // Words no vocabulary knows are taken for a name only when the patient search agrees; otherwise they are vocabulary the lists lack.
     if(switchFollowup&&(await resolvePatient(dependencies.db,{name:switchFollowup.name},signal,asOf)).status==='absent')switchFollowup=null;
     const frameOptions={contextPatient:!!input.appContext.patientId,followup:!!previous?.selectedPatientId};
-    let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient||patientFollowup.kind!=='none'?null
+    let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
       :patientQuestionFrame(agentInput.text,frameOptions);
-    if(patientFrame?.subject.kind==='named'&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
-    const frameText=appliedToPatient??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??patientFrame?.text??null;
+    // One word that may be a first name: one patient reads, several are a question for the doctor, none is vocabulary.
+    if(patientFrame?.subject.kind==='named'&&!/\s/u.test(patientFrame.subject.name)){
+      const found=await firstNameMatches(dependencies.db,patientFrame.subject.name,signal);
+      if(found&&found.matches.length===1&&!found.truncated){const match=found.matches[0]!,full=`${match.first} ${match.last}`;patientFrame={...patientFrame,subject:{kind:'named',name:full},text:renderPatientQuestion({section:patientFrame.section,n:3},{kind:'named',name:full})};}
+      else if(found&&(found.matches.length>1||found.truncated)){
+        const choices=found.matches.slice(0,5).map(match=>({patientId:match.patientId,label:`${match.first} ${match.last}`}));
+        dependencies.trace?.route('closed');dependencies.trace?.followup('first-name-choice');
+        emit({type:"sentence",text:alexaIdentityCopy.whichPatient(choices.map(choice=>choice.label),found.truncated||found.matches.length>5),kind:"fact",sources:[]});
+        const asking=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
+        conversationState.finish(asking,{intent:'clarify',count:1,patients:choices,lastRequest:agentInput.text,...(previous?.selectedPatientId?{selectedPatientId:previous.selectedPatientId}:{})});
+        emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"needs_input",speechAllowed:true,parts:[{id:"which_patient",goal:input.text,conditions:[],dependsOn:[],status:"needs_input",resultRefs:[],reason:alexaIdentityCopy.whichPatient([],false)}]});
+        return;
+      }
+      else if(found&&found.matches.length===0)patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+    }
+    if(patientFrame?.subject.kind==='named'&&/\s/u.test(patientFrame.subject.name)&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+    const frameText=appliedToPatient??patientFrame?.text??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??null;
 
     const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:reaskForSelectedPatient(previous?.lastRequest)??'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');else if(patientFrame)dependencies.trace?.followup('patient-frame');else if(agendaFrame)dependencies.trace?.followup('agenda-frame');else if(practiceFrame)dependencies.trace?.followup('practice-frame');
     const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context';

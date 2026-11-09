@@ -113,6 +113,8 @@ async function resolveMainRoles(client, anchorTs) {
       and (select count(*) from app.consultations c where c.patient_id=b.id and c.status='closed')>=3
       and (select count(*) from app.patients q where lower(q.first_name||' '||q.last_name)=lower(a.first_name||' '||a.last_name))=1
       and (select count(*) from app.patients q where lower(q.first_name||' '||q.last_name)=lower(b.first_name||' '||b.last_name))=1
+      -- not the same words in another order: "A B" and "B A" cannot be told apart, and the application rightly asks which is meant
+      and (select array_agg(t order by t) from unnest(string_to_array(lower(a.first_name||' '||a.last_name),' ')) t) <> (select array_agg(t order by t) from unnest(string_to_array(lower(b.first_name||' '||b.last_name),' ')) t)
     order by similarity(lower(a.first_name||' '||a.last_name), lower(b.first_name||' '||b.last_name)) desc, a.id limit 1`)).rows[0];
   if (similar) { roles.SA = { id: similar.aid, first_name: similar.af, last_name: similar.al }; roles.SB = { id: similar.bid, first_name: similar.bf, last_name: similar.bl }; }
   const dup = (await client.query(`select "full" from (select lower(first_name)||' '||lower(last_name) "full" from app.patients group by 1 having count(*)=2) t order by md5("full")`)).rows;

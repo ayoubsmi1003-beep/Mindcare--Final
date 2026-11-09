@@ -67,6 +67,8 @@ export function canonicalPeriod(folded: string, asOf: string): string | null {
   }
   if (folded === "ma semaine") return "cette semaine";
   if (folded === "ma journee") return "aujourd'hui";
+  if (/^(?:cet apres-midi|cet aprem)$/u.test(folded)) return "aujourd'hui après-midi";
+  if (folded === "ce matin") return "aujourd'hui matin";
   if (/^(?:aujourd'hui|demain|hier|ce matin|cet apres-midi|cet aprem|ce soir|cette semaine|ce mois(?:-ci)?|cette annee)/u.test(folded) || /^\d|^le \d/u.test(folded)) return keep(folded.replace(/^(\d)/u, "le $1"));
   return null;
 }
@@ -77,21 +79,23 @@ const COUNT_ANY = /\bcombien\b|\bnombre (?:de|d')\s*(?:patients?|monde|personnes
 const WHO = /\bqui (?:ai-je|avons-nous|a-t-on|est attendu|sont attendus|attends-je|vient|viennent|vais-je (?:voir|recevoir)|vois-je|reste|restent|avais-je|est (?:mon|le|ma) (?:premier|dernier|prochain)|etait (?:mon|le) (?:premier|dernier))\b/u;
 const HAVE_PEOPLE = /\b(?:j'ai|ai-je|on a|avons-nous|nous avons)\s+(?:du monde|des patients|beaucoup de patients|des consultations|des rendez-vous|des rdv|de la visite|du monde)\b/u;
 const CANCELLED = /\bqui (?:a|ont)\s+(?:annule|reporte|decale)\w*\b|\b(?:annulations?|rendez-vous annules)\b/u;
-const OVERVIEW = /\b(?:apercu|a quoi ressemble|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme)\b/u;
+const OVERVIEW = /\b(?:apercu|a quoi ressemble|les rendez-vous|les rdv|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme)\b/u;
 const NEXT = /\b(?:prochain|prochaine)\s+(?:patient|rendez-vous|rdv|consultation)\b|\bqui est le prochain\b|\ba quelle heure est (?:mon|le|ma) prochain\w*\b/u;
 const FIRSTLAST = /\b(?:premier|premiere|dernier|derniere)\s+(?:patient|patiente|rendez-vous|rdv|consultation)\b|\ba quelle heure commence ma journee\b/u;
 const FREE = /\b(?:suis-je libre|libre|disponible|creneaux? (?:libre|disponible))\b/u;
 const BARE_PEOPLE = /^(?:les )?patients?\s*(?:attendus?\s*)?$/u;
 // Words that make it a question about the clinic's population or about one person, not about the agenda.
 const NOT_AGENDA = /\b(?:son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
-const AGENDA_WORDS = /\b(?:combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
+const AGENDA_WORDS = /\b(?:ressemble|quoi|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
 
 export type AgendaIntent = "count" | "list" | "cancelled" | "next" | "first" | "last" | "free";
 
 /** What the question asks of the agenda. Null when it is not clearly an agenda question. */
 export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; period: string | null } | null {
   const { out } = foldWithMap(text);
-  const period = PERIOD.exec(out)?.[0] ?? null;
+  const found = [...out.matchAll(new RegExp(PERIOD_SOURCE, "gu"))].map(match => match[0]);
+  // "À quelle heure commence ma journée demain ?": the day named wins over "ma journée".
+  const period = found.find(value => !/^ma (?:journee|semaine)$/u.test(value)) ?? found[0] ?? null;
   if (NOT_AGENDA.test(out) && !CANCELLED.test(out)) return null;
   if (CANCELLED.test(out) && period) return { intent: "cancelled", period };
   if (NEXT.test(out)) return { intent: "next", period: null };
@@ -99,6 +103,7 @@ export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; pe
   if (FREE.test(out)) return { intent: "free", period };
   if (/\b(?:premier|premiere)\b/u.test(out) && FIRSTLAST.test(out) || /\ba quelle heure commence ma journee\b/u.test(out)) return { intent: "first", period };
   if (/\b(?:dernier|derniere)\b/u.test(out) && FIRSTLAST.test(out)) return { intent: "last", period };
+  if (/\bconsultations?|seances?\b/u.test(out) && /\b(?:hier|avant-hier|la semaine (?:derniere|passee)|semaine (?:derniere|passee)|le mois (?:dernier|precedent)|ont eu lieu|ete (?:realisees|faites|terminees))\b/u.test(out)) return null;
   if (COUNT_PEOPLE.test(out) || (COUNT_ANY.test(out) && /\b(?:patients?|monde|rendez-vous|rdv)\b/u.test(out)) || /\bj'ai combien\b/u.test(out) || (HAVE_PEOPLE.test(out) && /\bcombien\b/u.test(out))) return { intent: "count", period };
   if (WHO.test(out) || OVERVIEW.test(out) || BARE_PEOPLE.test(out.replace(period, "").replace(/[?.!]/gu, "").trim())) return { intent: "list", period };
   if (HAVE_PEOPLE.test(out)) return { intent: "count", period };
@@ -135,6 +140,11 @@ export function periodFollowup(text: string, previousRequest: string | undefined
   if (!previousRequest) return null;
   const { out } = foldWithMap(text.trim());
   const bare = out.replace(/\s+/gu, " ").trim();
+  if (/^(?:et )?combien\s*\??$/u.test(bare)) {
+    const before = classifyAgendaQuestion(previousRequest);
+    const when = before?.period ? canonicalPeriod(before.period, asOf) : null;
+    return before && when ? `Combien de rendez-vous ${when} ?` : null;
+  }
   if (!WHOLE_FOLLOWUP.test(bare)) return null;
   let periodText = PERIOD.exec(bare)?.[0] ?? null;
   const relative = /le lendemain|le jour d'apres|la veille|le jour d'avant/u.exec(bare)?.[0];

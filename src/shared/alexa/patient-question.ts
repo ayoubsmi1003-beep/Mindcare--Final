@@ -1,4 +1,4 @@
-import { mayBeAName } from "./request-contract";
+import { mayBeAName, mentionsClinicalTopic } from "./request-contract";
 
 /**
  * A doctor asks about a patient in many ways ("Il prend quoi comme cachets ?", "Depuis quand je le suis ?",
@@ -32,7 +32,7 @@ const DATE_CUE = /\b(?:quand|date|dates|quel jour|a quelle date)\b/u;
 const TREAT = /\b(?:traitements?|medicaments?|medocs?|ordonnances?|prescriptions?|prescrit\w*|cachets?|comprimes?|gelules?|posologie|doses?|molecules?|prend\w*|prenait|prenaient|prendre|pris|sous quoi)\b/u;
 const HISTORY = /\b(?:historiques?|parcours|retrace\w*|antecedents?)\b/u;
 const EVOLVE = /\b(?:evolu\w*|evolution)\b/u;
-const SUMMARY = /\b(?:resum\w*|synthese|essentiel|points? (?:importants?|cles?)|a retenir|sait|savons[- ]nous|savez[- ]vous|informations?|infos?|dossier|presente\w*|ou en est|quoi de neuf|nouvelles|petit point|le point|fiche|parle(?:s|z)?(?:-moi)?|ce que (?:tu|vous) (?:as|avez))\b/u;
+const SUMMARY = /\b(?:resum\w*|synthese|essentiel|points? (?:importants?|cles?)|a retenir|sait|on a sur|qu'a-t-on|avons[- ]nous sur|savons[- ]nous|savez[- ]vous|informations?|infos?|dossier|presente\w*|ou en est|quoi de neuf|nouvelles|petit point|le point|fiche|parle(?:s|z)?(?:-moi)?|ce que (?:tu|vous) (?:as|avez))\b/u;
 const DOCS = /\b(?:documents?|certificats?)\b/u;
 const SCALES = /\b(?:echelles?|scores?|phq|gad|questionnaires?)\b/u;
 const DIAG = /\bdiagnostics?\b/u;
@@ -125,14 +125,18 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
   if (names.length > 1 || runs.some(run => run.words.length > 4)) return null;
   const name = names[0];
   if (name) return runs.length === 1 ? { kind: "named", name: name.words.join(" ") } : null;
-  // One unknown word alone: after "de", "sur", "chez"... or capitalised it is a first name (the clarifying route asks); elsewhere it is vocabulary the lists lack.
-  if (runs.some(run => run.upper || /^(?:de|du|des|d|sur|chez|pour|a|avec|concernant|propos)$/u.test(run.before))) return null;
+  // One unknown word alone: after "de", "sur", "chez"... or capitalised it is a first name. It is passed on as a name; the patient search
+  // then finds one patient (read) or several (the doctor is asked which), and finds none for vocabulary the lists lack (caller falls back).
+  const firstNames = runs.filter(run => run.upper || /^(?:de|du|des|d|sur|chez|pour|a|avec|concernant|propos)$/u.test(run.before));
+  if (firstNames.length > 1) return null;
+  if (firstNames.length === 1) return { kind: "named", name: firstNames[0]!.words.join(" ") };
   if (!options.contextPatient && !options.followup) return null;
   const cue = PRONOUN_CUE.test(p);
   // "au cabinet" with nobody in the sentence asks about the clinic, not about the patient on screen.
   if (/\bcabinet\b/u.test(p) && !cue) return null;
   if (cue) return { kind: "context" };
   // Without a pronoun, only questions that no book could answer may speak of the patient on screen.
+  if (mentionsClinicalTopic(text) && section !== "treatments" && section !== "diagnoses") return null;
   if (COLLIDES_WITH_BOOKS.has(section)) return null;
   const short = text.trim().split(/\s+/u).length <= 14;
   return short && (options.contextPatient || options.followup) ? { kind: "context" } : null;

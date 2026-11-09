@@ -873,3 +873,6 @@ export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:str
 }
 
 
+
+/** True when the text names a condition, a drug or a clinical notion: it may then be about a book, whatever its sentence form. */
+export function mentionsClinicalTopic(text:string):boolean{return CLINICAL_TOPIC.test(fold(text));}

@@ -50,7 +50,7 @@ function period(p: string, asOf: string): { kind: "day" | "week" | "month" | "ye
 export type PracticeFrame = { readonly text: string; readonly cashOnlyNotice: boolean };
 
 /** Activity of the practice: sessions, patients seen, new records, busiest days. */
-const ACTIVITY = /\b(?:patients?\b[^?]*\b(?:vus?|recus?)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
+const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
 export function activityQuestionFrame(text: string, asOf: string): string | null {
   const p = fold(text), q = withoutBusy(p);
   if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
