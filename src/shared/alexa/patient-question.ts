@@ -9,8 +9,9 @@ import { mayBeAName, mentionsClinicalTopic } from "./request-contract";
  *   concept words  →  one patient section (and a count)      who it is about  →  context patient | named patient
  *
  * It only rewrites. Every read still goes through its own gate, under the caller's rights, and the
- * canonical sentence is re-checked by the same name parser: a doubt falls back to the previous route,
- * which asks. It never decides that a word is NOT a name unless a closed vocabulary knows that word.
+ * canonical sentence is re-checked by the same name parser. A doubt returns no frame (the previous route, which asks); a name
+ * the patient search does not know never becomes "the patient on screen" (capitalised, or no pronoun: no frame).
+ * It never decides that a word is NOT a name unless a closed vocabulary knows that word.
  */
 export type PatientSectionKey =
   | "summary" | "history" | "treatments" | "treatchanges" | "bounds" | "count" | "lastdate" | "firstdate" | "lastnote" | "prev"
@@ -119,6 +120,9 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
   const p = fold(text);
   if (NOT_THE_PATIENT.test(p) || OTHER_SCOPE.test(p)) return null;
   // The caller found no patient of that name: the unknown words are vocabulary the lists lack ("changé récemment"), not a name.
+  // A capitalised unknown word is a name by every reading; if the search found nobody of that name, the question is not about the
+  // patient on screen either (it must never turn into a read of the patient already selected): the previous route asks.
+  if (options.ignoreUnknownWords && unknownRuns(text).some((run) => run.upper)) return null;
   const runs = options.ignoreUnknownWords ? [] : unknownRuns(text);
   // Two to four unknown words in a row can only be a name; two separate groups of them are two names or a muddle.
   const names = runs.filter(run => run.words.length >= 2);
@@ -135,6 +139,8 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
   // "au cabinet" with nobody in the sentence asks about the clinic, not about the patient on screen.
   if (/\bcabinet\b/u.test(p) && !cue) return null;
   if (cue) return { kind: "context" };
+  // Words that were taken for a name and found nobody: without a pronoun or "ce patient", nothing says the question is about the patient on screen.
+  if (options.ignoreUnknownWords) return null;
   // Without a pronoun, only questions that no book could answer may speak of the patient on screen.
   if (mentionsClinicalTopic(text) && section !== "treatments" && section !== "diagnoses") return null;
   if (COLLIDES_WITH_BOOKS.has(section)) return null;

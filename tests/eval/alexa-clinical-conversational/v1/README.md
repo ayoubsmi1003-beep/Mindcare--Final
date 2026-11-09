@@ -29,6 +29,17 @@ référence de régression intacte. Français uniquement ; aucune question de li
 1. Dates écrites en forme courte par l'application (« 18 oct. 2026 ») et relatives dans l'agenda (« aujourd'hui », « dans 3 jours ») : acceptées.
    Les premiers FAIL concernés (C012, C046–C049) étaient des défauts de l'oracle, pas d'Alexa.
 
+2. Preuve des livres (évaluateur d'origine → corrigé), **les deux lectures sont conservées et rapportées** :
+   - `results-final.jsonl` (preuve v1) : livres 1/35 PASS, passages mot pour mot 36 %. Cause : la recherche des chunks candidats n'utilisait qu'une
+     paire de mots (« population générale » correspond à des centaines de chunks, limite 60) et appariait des mots rendus voisins par
+     l'élimination des mots courts. Ce n'était pas un défaut d'Alexa.
+   - Preuve v2 (`results-final2.jsonl`) : trois paires de mots réellement voisines (début, milieu, fin du corps du passage) imposées ensemble ;
+     le test mot pour mot reste exact sur le texte du chunk. La page de l'étiquette est comparée aux marqueurs de page du chunk **de la section du passage**
+     (v1 comparait la page de la première étiquette de la réponse à tous les passages).
+   Aucun critère de pertinence n'a été touché : le passage doit toujours contenir les faits attendus, être mot pour mot dans un chunk approuvé et porter la bonne page.
+3. Questions financières du jour/semaine/année : leurs tours dépassaient 240 s (le modèle choisissait l'outil) ; la reformulation écrit désormais des dates explicites,
+   et la réponse vient de la porte en quelques millisecondes. Les critères sont inchangés.
+
 ## Exécution
 
 ```bash

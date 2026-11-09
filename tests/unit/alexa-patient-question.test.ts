@@ -184,3 +184,15 @@ describe("patient question frame: more everyday wordings", () => {
     expect(patientQuestionFrame("Qu'est-ce qu'on a sur sabri ?", nobody)?.subject).toEqual({ kind: "named", name: "sabri" });
   });
 });
+
+describe("a name nobody has never becomes the patient on screen", () => {
+  const unknown = { ...onScreen, ignoreUnknownWords: true };
+  it("gives no frame, so the previous route asks", () => {
+    for (const text of ["Résumé de Lina Kaci", "Résumé de Lina", "Combien de consultations pour Lina Kaci ?", "Montre les documents de Karim Zed", "résumé de lina kaci"]) {
+      expect(patientQuestionFrame(text, unknown), text).toBeNull();
+    }
+  });
+  it("still reads the patient on screen when a pronoun says so", () => {
+    expect(patientQuestionFrame("Quels changements de traitement récents a-t-il ?", unknown)?.subject.kind).toBe("context");
+  });
+});

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { activityQuestionFrame, financeQuestionFrame } from "@/shared/alexa/practice-frame";
+import { activityQuestionFrame, financePeriodFollowup, financeQuestionFrame } from "@/shared/alexa/practice-frame";
 import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
 
 const ASOF = "2026-10-26T09:30:00+01:00";
@@ -8,12 +8,12 @@ const activity = (text: string) => activityQuestionFrame(text, ASOF);
 
 describe("finance frame: money questions in everyday words", () => {
   it("reads gained, received and collected as collected cash", () => {
-    expect(money("Combien avons-nous gagné hier ?")?.text).toBe("Combien le cabinet a-t-il encaissé hier ?");
-    expect(money("Combien le cabinet a-t-il encaissé aujourd'hui ?")?.text).toBe("Combien le cabinet a-t-il encaissé aujourd'hui ?");
-    expect(money("Combien d'argent avons-nous encaissé cette semaine ?")?.text).toBe("Combien le cabinet a-t-il encaissé cette semaine ?");
+    expect(money("Combien avons-nous gagné hier ?")?.text).toBe("Quel montant représentent les paiements encaissés du 25 octobre 2026 au 25 octobre 2026 ?");
+    expect(money("Combien le cabinet a-t-il encaissé aujourd'hui ?")?.text).toBe("Quel montant représentent les paiements encaissés du 26 octobre 2026 au 26 octobre 2026 ?");
+    expect(money("Combien d'argent avons-nous encaissé cette semaine ?")?.text).toBe("Quel montant représentent les paiements encaissés du 26 octobre 2026 au 1 novembre 2026 ?");
     expect(money("Quelles sont les recettes de ce mois ?")?.text).toBe("Quelles sont les recettes de ce mois ?");
     expect(money("Combien avons-nous touché en septembre ?")?.text).toBe("Quelles sont les recettes de septembre 2026 ?");
-    expect(money("Quel est le chiffre d'affaires de cette année ?")?.text).toBe("Quel est le chiffre d'affaires de cette année ?");
+    expect(money("Quel est le chiffre d'affaires de cette année ?")?.text).toBe("Quel est le chiffre d'affaires du 1 janvier 2026 au 31 décembre 2026 ?");
   });
   it("reads expenses and the net result for a month, not for a day", () => {
     expect(money("Quelles sont les dépenses du cabinet ce mois-ci ?")?.text).toBe("Quelles sont les dépenses du cabinet ce mois-ci ?");
@@ -31,11 +31,18 @@ describe("finance frame: money questions in everyday words", () => {
     expect(financeQuestionFrame("Compare ce mois avec le mois dernier.", "2026-01-12T09:00:00+01:00")).toBeNull();
   });
   it("leaves unpaid balances, one patient and the agenda to their own routes", () => {
-    for (const text of ["Quels sont les impayés ?", "Combien a payé ce patient ?", "Combien de rendez-vous demain ?", "Combien a gagné Karim Benali ?"]) expect(money(text), text).toBeNull();
+    for (const text of ["Combien a payé ce patient ?", "Combien de rendez-vous demain ?", "Combien a gagné Karim Benali ?"]) expect(money(text), text).toBeNull();
+  });
+  it("reads unpaid money as what is left to collect over the whole practice", () => {
+    expect(money("Quels sont les impayés ?")?.text).toBe("Quel reste à encaisser pour l’ensemble du cabinet ?");
+    expect(money("Quels sont les impayés de Karim Benali ?")).toBeNull();
+    expect(frenchRequestAdmission(money("Quels sont les impayés ?")!.text, false, ASOF).financeState).toBe("all");
   });
   it("restates each question in a form the finance gate admits", () => {
     for (const text of ["Combien avons-nous gagné hier ?", "Combien d'argent avons-nous encaissé cette semaine ?", "Combien avons-nous touché en septembre ?", "Combien avons-nous dépensé en septembre ?", "Quel est le résultat net de ce mois ?"]) {
-      expect(frenchRequestAdmission(money(text)!.text, false, ASOF).tools, text).toEqual(["query_finance"]);
+      const admission = frenchRequestAdmission(money(text)!.text, false, ASOF);
+      expect(admission.tools, text).toEqual(["query_finance"]);
+      if (/hier|semaine/u.test(text)) expect(admission.from && admission.to, text).toBeTruthy();
     }
   });
 });
@@ -67,5 +74,19 @@ describe("activity frame: consultations that took place and month-on-month compa
     expect(activityQuestionFrame("Combien de consultations ont eu lieu ce mois-ci ?", ASOF)).toBe("Montre-moi les statistiques de ce mois");
     expect(activityQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBe("Montre-moi les statistiques de ce mois");
     expect(financeQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBeNull();
+  });
+});
+
+describe("finance period follow-up", () => {
+  const previous = financeQuestionFrame("Combien avons-nous encaissé aujourd'hui ?", ASOF)!.text;
+  it("asks the same money question for the new period", () => {
+    expect(financePeriodFollowup("Et hier ?", previous, ASOF)).toBe("Quel montant représentent les paiements encaissés du 25 octobre 2026 au 25 octobre 2026 ?");
+    expect(financePeriodFollowup("Et cette semaine ?", previous, ASOF)).toBe("Quel montant représentent les paiements encaissés du 26 octobre 2026 au 1 novembre 2026 ?");
+    expect(financePeriodFollowup("Et ce mois-ci ?", previous, ASOF)).toBe("Quelles sont les recettes de ce mois ?");
+  });
+  it("leaves other previous questions and other follow-ups alone", () => {
+    expect(financePeriodFollowup("Et hier ?", "Combien de rendez-vous aujourd'hui ?", ASOF)).toBeNull();
+    expect(financePeriodFollowup("Et son traitement ?", previous, ASOF)).toBeNull();
+    expect(financePeriodFollowup("Et hier ?", undefined, ASOF)).toBeNull();
   });
 });

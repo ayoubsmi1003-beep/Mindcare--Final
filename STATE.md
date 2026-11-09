@@ -3470,3 +3470,8 @@ sienne dans son en-tête.
 Aucun verdict de routage mesuré ne bouge. **NON CORRIGÉ** : chaque entrée demande un
 arbitrage sur ce que l'anglais doit encore rendre, et la famille M le DIT explicitement
 plutôt que de faire croire l'invariant complet.
+
+## Alexa C200 — idées hors périmètre notées (règle 10), 2026-11-09
+Campagne C200 : 193/200 (docs/alexa/14-c200-results-and-recommendation.md). Non codé, à arbitrer : horaires d'ouverture du cabinet (« créneaux libres »),
+comptage des séances payées, comparaison au mois civil dans la porte statistique, classement des chunks de critères diagnostiques (dépression majeure, bipolaire II),
+porte plus étroite que `get_consultation` pour le contexte d'écran (aujourd'hui : notes brutes lues et ligne d'audit à chaque tour).

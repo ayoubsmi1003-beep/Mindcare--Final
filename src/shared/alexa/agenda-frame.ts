@@ -85,10 +85,10 @@ const FIRSTLAST = /\b(?:premier|premiere|dernier|derniere)\s+(?:patient|patiente
 const FREE = /\b(?:suis-je libre|libre|disponible|creneaux? (?:libre|disponible))\b/u;
 const BARE_PEOPLE = /^(?:les )?patients?\s*(?:attendus?\s*)?$/u;
 // Words that make it a question about the clinic's population or about one person, not about the agenda.
-const NOT_AGENDA = /\b(?:son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
-const AGENDA_WORDS = /\b(?:ressemble|quoi|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
+const NOT_AGENDA = /\b(?:son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|pay(?:e|ee|es|ees|er)s?|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
+const AGENDA_WORDS = /\b(?:ressemble|quoi|ont|eu|lieu|ete|realisees|faites|terminees|passee|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
 
-export type AgendaIntent = "count" | "list" | "cancelled" | "next" | "first" | "last" | "free";
+export type AgendaIntent = "count" | "list" | "cancelled" | "next" | "first" | "last" | "free" | "pastcount";
 
 /** What the question asks of the agenda. Null when it is not clearly an agenda question. */
 export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; period: string | null } | null {
@@ -103,7 +103,7 @@ export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; pe
   if (FREE.test(out)) return { intent: "free", period };
   if (/\b(?:premier|premiere)\b/u.test(out) && FIRSTLAST.test(out) || /\ba quelle heure commence ma journee\b/u.test(out)) return { intent: "first", period };
   if (/\b(?:dernier|derniere)\b/u.test(out) && FIRSTLAST.test(out)) return { intent: "last", period };
-  if (/\bconsultations?|seances?\b/u.test(out) && /\b(?:hier|avant-hier|la semaine (?:derniere|passee)|semaine (?:derniere|passee)|le mois (?:dernier|precedent)|ont eu lieu|ete (?:realisees|faites|terminees))\b/u.test(out)) return null;
+  if (/\bconsultations?|seances?\b/u.test(out) && /\b(?:hier|avant-hier|la semaine (?:derniere|passee)|semaine (?:derniere|passee)|le mois (?:dernier|precedent)|ont eu lieu|ete (?:realisees|faites|terminees))\b/u.test(out) && /\bcombien\b/u.test(out)) return { intent: "pastcount", period };
   if (COUNT_PEOPLE.test(out) || (COUNT_ANY.test(out) && /\b(?:patients?|monde|rendez-vous|rdv)\b/u.test(out)) || /\bj'ai combien\b/u.test(out) || (HAVE_PEOPLE.test(out) && /\bcombien\b/u.test(out))) return { intent: "count", period };
   if (WHO.test(out) || OVERVIEW.test(out) || BARE_PEOPLE.test(out.replace(period, "").replace(/[?.!]/gu, "").trim())) return { intent: "list", period };
   if (HAVE_PEOPLE.test(out)) return { intent: "count", period };
@@ -127,7 +127,9 @@ export function agendaQuestionFrame(text: string, asOf: string): string | null {
     case "count": return `Combien de rendez-vous ${period} ?`;
     case "list": case "last": case "free": return `Quels sont les rendez-vous ${period} ?`;
     case "cancelled": return `Quels sont les rendez-vous annulés ${period} ?`;
-    case "first": return `Quel est le premier rendez-vous ${period} ?`;
+    // The period reader refuses "premier" beside a day other than today; the day's list holds the first row as well.
+    case "first": return period === "aujourd'hui" ? `Quel est le premier rendez-vous ${period} ?` : `Quels sont les rendez-vous ${period} ?`;
+    case "pastcount": return `Combien de consultations terminées ${period} ?`;
     case "next": return "Quel est le prochain rendez-vous du cabinet ?";
   }
 }
@@ -170,4 +172,14 @@ function replacePeriod(request: string, replacement: string): string | null {
   // "recettes de ce mois" -> "recettes du 1 septembre au 30 septembre": no doubled "de du".
   const before = /\bde\s+$/u.test(request.slice(0, start)) && /^du\s/u.test(replacement) ? request.slice(0, start).replace(/\bde\s+$/u, "") : request.slice(0, start);
   return `${before}${replacement}${request.slice(end)}`;
+}
+
+/**
+ * The same instant written in the clinic's own calendar (Africa/Algiers, UTC+1 all year): every "today", "yesterday", "this month" the frames
+ * and the gates derive from the leading date of this stamp is then the clinic's day, not the UTC one (a one-hour error every night).
+ */
+export function algiersTimestamp(instant: Date): string {
+  const part = Object.fromEntries(new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Algiers", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" })
+    .formatToParts(instant).map((piece) => [piece.type, piece.value]));
+  return `${part["year"]}-${part["month"]}-${part["day"]}T${part["hour"]}:${part["minute"]}:${part["second"]}+01:00`;
 }

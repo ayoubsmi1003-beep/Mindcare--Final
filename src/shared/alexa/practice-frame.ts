@@ -47,7 +47,22 @@ function period(p: string, asOf: string): { kind: "day" | "week" | "month" | "ye
   return null;
 }
 
-export type PracticeFrame = { readonly text: string; readonly cashOnlyNotice: boolean };
+/** A calendar day, written the way the closed finance question reads dates ("9 novembre 2026"). */
+function frenchDay(date: Date): string {
+  return `${date.getUTCDate()} ${label(MONTHS[date.getUTCMonth()]!)} ${date.getUTCFullYear()}`;
+}
+/** Today, yesterday, tomorrow or the Monday-to-Sunday week, as two explicit days (the clinic's own calendar, Africa/Algiers). */
+function dayRange(phrase: string, asOf: string): { from: string; to: string } | null {
+  const [year, month, day] = asOf.slice(0, 10).split("-").map(Number) as [number, number, number];
+  const today = new Date(Date.UTC(year, month - 1, day));
+  if (Number.isNaN(today.getTime())) return null;
+  const shift = (days: number) => new Date(today.getTime() + days * 86_400_000);
+  if (/semaine/u.test(phrase)) { const monday = shift(-((today.getUTCDay() + 6) % 7)); return { from: frenchDay(monday), to: frenchDay(new Date(monday.getTime() + 6 * 86_400_000)) }; }
+  const offset = phrase === "hier" ? -1 : phrase === "demain" ? 1 : 0;
+  return { from: frenchDay(shift(offset)), to: frenchDay(shift(offset)) };
+}
+
+export type PracticeFrame ={ readonly text: string; readonly cashOnlyNotice: boolean };
 
 /** Activity of the practice: sessions, patients seen, new records, busiest days. */
 const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
@@ -69,7 +84,9 @@ export function financeQuestionFrame(text: string, asOf: string): PracticeFrame 
   const money = MONEY_VERB.test(p) || RECEIVED_MONEY(p), expenses = EXPENSES.test(p), net = NET.test(p), methods = METHODS.test(p);
   // "Compare ce mois avec le mois dernier" names no subject: money is what a doctor means by it.
   const bareCompare = COMPARE.test(p) && !/\b(?:consultations?|seances?|patients?|activite|rendez-vous)\b/u.test(p);
-  if (!money && !expenses && !net && !methods && !bareCompare) return null;
+  if (!money && !expenses && !net && !methods && !bareCompare && !/\bimpayes?\b/u.test(p)) return null;
+  // Unpaid money has one closed reading: what is left to collect, over the whole practice.
+  if (/\bimpayes?\b/u.test(p) && !/\b(?:reste a encaisser|solde)\b/u.test(p) && !unknownNameRuns(p.replace(/\b(?:impayes?|les|des|quels|quelles|sont|combien|y|a-t-il|a-t-on|nous|avons|avez|on)\b/gu, " ")).length) return { text: "Quel reste à encaisser pour l’ensemble du cabinet ?", cashOnlyNotice: false };
   if (/\b(?:impayes?|reste a encaisser|solde)\b/u.test(p)) return null;
   const rest = p.replace(/\b(?:combien|le|la|les|l|de|du|des|d|cabinet|avons-nous|a-t-il|a-t-on|nous|avons|on|a|ete|payes?|paye|recu|recus|gagne|gagnes|encaisse|encaisses|touche|touches|rentre|rentres|depense|depenses|perçu|percu|en|par|un|une|autre|autres|moyen|moyens|mode|modes|que|qu|especes?|cash|liquide|ce|cette|mois|mois-ci|annee|semaine|hier|aujourd'hui|demain|dernier|precedent|et|avec|compare|comparer|comparaison|rapport|au|aux|quel|quels|quelle|quelles|est|sont|montant|total|depenses?|charges?|recettes?|resultat|net|situation|apercu|donne|donne-moi|dis|dis-moi|argent|sous|chiffre|affaires|financiere?)\b/gu, " ").replace(/\b(?:19|20)\d{2}\b/gu, " ");
   if (unknownNameRuns(rest).length) return null;
@@ -84,9 +101,20 @@ export function financeQuestionFrame(text: string, asOf: string): PracticeFrame 
   if (!found) return methods ? { text: "Quelles sont les recettes de ce mois ?", cashOnlyNotice: true } : null;
   if (expenses && !money) return found.kind === "day" ? null : { text: `Quelles sont les dépenses du cabinet ${found.kind === "named" ? `de ${found.phrase}` : found.kind === "year" ? "de cette année" : found.phrase === "cette semaine" ? "de cette semaine" : "ce mois-ci"} ?`, cashOnlyNotice: false };
   if (net) return found.kind === "day" ? null : { text: `Quel est le résultat net de ${found.phrase} ?`, cashOnlyNotice: false };
-  const asked = found.kind === "day" || found.kind === "week"
-    ? `Combien le cabinet a-t-il encaissé ${found.phrase} ?`
-    : found.kind === "year" ? "Quel est le chiffre d'affaires de cette année ?"
+  // A day, a week or a year is spelled as explicit dates: the closed finance question only derives the month by itself.
+  const range = found.kind === "day" || found.kind === "week" ? dayRange(found.phrase, asOf) : null;
+  const asked = range
+    ? `Quel montant représentent les paiements encaissés du ${range.from} au ${range.to} ?`
+    : found.kind === "year" ? `Quel est le chiffre d'affaires du 1 janvier ${found.year} au 31 décembre ${found.year} ?`
     : found.kind === "named" ? `Quelles sont les recettes de ${found.phrase} ?` : "Quelles sont les recettes de ce mois ?";
   return { text: asked, cashOnlyNotice: methods };
+}
+
+/** "Et hier ?", "Et cette semaine ?" after a money question this frame wrote: the same question for the new period. */
+export function financePeriodFollowup(text: string, previousRequest: string | undefined, asOf: string): string | null {
+  if (!previousRequest || !/^(?:Quel montant représentent les paiements encaissés du |Quel est le chiffre d'affaires du |Quelles sont les recettes de ce mois)/u.test(previousRequest)) return null;
+  const bare = fold(text).replace(/[?!.\s]+$/u, "");
+  const match = /^(?:et )?(aujourd'hui|hier|demain|cette semaine|ce mois(?:-ci)?|cette annee)$/u.exec(bare);
+  if (!match) return null;
+  return financeQuestionFrame(`Combien avons-nous encaissé ${match[1]} ?`, asOf)?.text ?? null;
 }

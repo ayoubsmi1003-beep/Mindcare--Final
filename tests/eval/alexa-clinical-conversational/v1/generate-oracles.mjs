@@ -331,7 +331,9 @@ export async function generate({ mainUrl, fixtureUrl }) {
   const anchorTs = DEFAULT_AS_OF;
   const roles = { main: main.client ? await resolveMainRoles(main.client, anchorTs) : {}, fixture: {} };
   if (fixture.client) {
-    const day = "2026-11-10";
+    // The next-patient read asks the gate for the REAL current day of the cabinet (it does not take the campaign's anchor), and the
+    // gate itself compares with the database clock: the truth is computed the same way, on the day the campaign runs.
+    const day = new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(new Date());
     const next = (await asOwner(fixture.client, "select app.dashboard_today($1::date)->'suivant' s", [day]))[0].s;
     if (next?.patient_id) {
       const row = (await fixture.client.query("select id, first_name, last_name from app.patients where id=$1", [next.patient_id])).rows[0];

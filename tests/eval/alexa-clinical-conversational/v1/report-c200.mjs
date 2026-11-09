@@ -29,7 +29,7 @@ for (const label of labels) {
 }
 
 const rollUp = (verdicts) => verdicts.includes("FAIL") ? "FAIL" : verdicts.includes("BLOCKED") ? "BLOCKED" : verdicts.includes("NOT VERIFIED") ? "NOT VERIFIED" : "PASS";
-const table = {}, reasons = {}, times = [];
+const table = {}, reasons = {}, times = [], fidelity = { total: 0, body: 0, strict: 0 };
 let notRun = 0;
 for (const item of cases) {
   const rows = turns.get(item.id);
@@ -39,6 +39,7 @@ for (const item of cases) {
   for (const row of rows) {
     domain.turns++; if (row.verdict === "PASS") domain.turnsPass++;
     times.push(row.ms);
+    for (const quote of row.quoteChecks ?? []) { fidelity.total++; if (quote.verbatim) fidelity.body++; if (quote.strict) fidelity.strict++; }
     for (const reason of row.reasons) { const key = `${item.domain}:${reason.replace(/:.*/u, "")}`; reasons[key] = (reasons[key] ?? 0) + 1; }
   }
 }
@@ -49,6 +50,7 @@ const pct = (n, d) => (d ? `${Math.round((100 * n) / d)}%` : "-");
 console.log(`C200 results (${labels.join(" + ")}): ${JSON.stringify(total)}`);
 for (const [name, d] of Object.entries(table)) console.log(`  ${name.padEnd(10)} PASS ${d.PASS} / FAIL ${d.FAIL} / NV ${d["NOT VERIFIED"]} / BLOCKED ${d.BLOCKED} / NOT RUN ${d["NOT RUN"]}   (turns ${d.turnsPass}/${d.turns} = ${pct(d.turnsPass, d.turns)})`);
 if (times.length) console.log(`timing per turn: p50 ${(times[Math.floor(times.length / 2)] / 1000).toFixed(1)} s, p95 ${(times[Math.floor(times.length * 0.95)] / 1000).toFixed(1)} s, max ${(times.at(-1) / 1000).toFixed(0)} s`);
+if (fidelity.total) console.log(`book passages shown: ${fidelity.total}; word for word from an approved chunk (body) ${fidelity.body} (${pct(fidelity.body, fidelity.total)}); whole quotation incl. heading ${fidelity.strict} (${pct(fidelity.strict, fidelity.total)})`);
 console.log("failure reasons (turns):");
 for (const [key, n] of Object.entries(reasons).sort((a, b) => b[1] - a[1]).slice(0, 25)) console.log(`  ${String(n).padStart(3)}  ${key}`);
 const failing = [...turns].filter(([, rows]) => rows.some((row) => row.verdict !== "PASS")).map(([id, rows]) => `${id}${rows.length > 1 ? `#${rows.filter((r) => r.verdict !== "PASS").map((r) => r.turn).join("/")}` : ""}`);

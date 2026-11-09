@@ -105,16 +105,34 @@ describe("agenda frame: this morning and this afternoon mean today", () => {
 
 describe("agenda frame: a named day beats 'ma journée', past consultations are not the agenda, 'Combien ?' counts the same period", () => {
   it("reads the day that is named", () => {
-    expect(frame("À quelle heure commence ma journée demain ?")).toBe("Quel est le premier rendez-vous demain ?");
+    expect(frame("À quelle heure commence ma journée demain ?")).toBe("Quels sont les rendez-vous demain ?");
   });
   it("leaves consultations that already took place to the consultation count", () => {
-    expect(frame("Combien de consultations la semaine dernière ?")).toBeNull();
-    expect(frame("Combien de consultations ont eu lieu hier ?")).toBeNull();
+    expect(frame("Combien de consultations la semaine dernière ?")).toBe("Combien de consultations terminées du 19 octobre 2026 au 25 octobre 2026 ?");
+    expect(frame("Combien de consultations ont eu lieu hier ?")).toBe("Combien de consultations terminées hier ?");
     expect(frame("Combien de consultations ai-je cette semaine ?")).toBe("Combien de rendez-vous cette semaine ?");
   });
   it("counts the period of the previous agenda question", () => {
     expect(periodFollowup("Combien ?", "Combien de rendez-vous aujourd'hui ?", "2026-10-26", ASOF)).toBe("Combien de rendez-vous aujourd'hui ?");
     expect(periodFollowup("Combien ?", "Quels sont les rendez-vous demain ?", "2026-10-26", ASOF)).toBe("Combien de rendez-vous demain ?");
     expect(periodFollowup("Combien ?", "Quel est le traitement de Karim Benali ?", "2026-10-26", ASOF)).toBeNull();
+  });
+});
+
+describe("agenda frame: the first appointment of another day is read from that day's list", () => {
+  it("keeps 'premier' only beside today, where the period reader accepts it", () => {
+    expect(frame("Qui est le premier patient aujourd'hui ?")).toBe("Quel est le premier rendez-vous aujourd'hui ?");
+    expect(frame("À quelle heure commence ma journée demain ?")).toBe("Quels sont les rendez-vous demain ?");
+  });
+  it("restates past consultations as an explicit consultation count the consultation read admits", () => {
+    expect(frenchRequestAdmission(frame("Combien de consultations la semaine dernière ?")!, false, ASOF).tools).toEqual(["query_consultations"]);
+  });
+});
+
+describe("the clinic's own calendar", () => {
+  it("writes an instant as the Africa/Algiers day, not the UTC one", async () => {
+    const { algiersTimestamp } = await import("@/shared/alexa/agenda-frame");
+    expect(algiersTimestamp(new Date("2026-11-30T23:30:00Z"))).toBe("2026-12-01T00:30:00+01:00");
+    expect(algiersTimestamp(new Date("2026-10-26T08:30:00Z"))).toBe("2026-10-26T09:30:00+01:00");
   });
 });

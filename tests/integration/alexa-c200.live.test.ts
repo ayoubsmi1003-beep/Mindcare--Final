@@ -94,22 +94,49 @@ if (ready) {
 }
 
 const MARKER_PAGE = /\[[^\]]*?\bp\.(\d+)[^\]]*\]/u;
-const NORM = (x: string) => `regexp_replace(regexp_replace(translate(lower(unaccent(${x})),'’‘“”«»','''''"""'),'\\[[^\\]]*\\bp\\.[0-9]+[^\\]]*\\]','','g'),'\\s+',' ','g')`;
 
-/** Where does a quoted passage really come from? SQL on the approved chunks, never trusting the answer's own label. */
+/**
+ * Where does a quoted passage really come from? SQL on the approved chunks, never trusting the answer's own label.
+ * `strict`: the whole quotation, heading included, is a word-for-word part of one chunk.
+ * `verbatim`: the body of the quotation is (the breadcrumb Alexa assembles in front of it, "Titre — Sous-section —", is her labelling, not the
+ * book's text). The campaign reports both, so the looser reading never hides how often the strict one holds.
+ */
 async function checkQuote(admin: Client, quote: string, labels: string[]) {
-  const rows = (await admin.query(
+  // Cheap regexes pick the candidate chunks (three word pairs, near the start, the middle and the end of the quotation, all required: a
+  // single common pair such as "population générale" matches hundreds of chunks); the exact word-for-word test is then done on those alone
+  // (a whole-table normalisation per quote took minutes on this PC).
+  // Pairs are neighbours in the text itself (two long words side by side), never words made adjacent by dropping the short ones between.
+  const labelEnd = quote.slice(0, 160).lastIndexOf(" — ");
+  const tokens = (labelEnd >= 0 ? quote.slice(labelEnd + 3) : quote).split(/\s+/u), long = (word: string | undefined) => !!word && /^[\p{L}]{4,}$/u.test(word);
+  const neighbours = tokens.flatMap((word, index) => (long(word) && long(tokens[index + 1]) ? [[word, tokens[index + 1]!]] : []));
+  const words = neighbours;
+  const escape = (word: string) => word.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+  const pairs = words.length >= 3 ? [words[0]!, words[Math.floor(words.length / 2)]!, words[words.length - 1]!] : words.slice(0, 1);
+  const patterns = pairs.filter((pair) => pair.length === 2).map((pair) => `${escape(pair[0]!)}\\s+${escape(pair[1]!)}`);
+  if (!patterns.length) patterns.push(escape(quote.slice(0, 30)));
+  const candidates = (await admin.query(
     `select s.titre, c.section, c.texte from app.knowledge_chunks c join app.knowledge_sources s on s.id=c.source_id
-      where s.statut='active' and strpos(${NORM("c.texte")}, ${NORM("$1::text")}) > 0 limit 5`, [quote])).rows as { titre: string; section: string | null; texte: string }[];
-  if (!rows.length) return { quote: quote.slice(0, 80), verbatim: false };
+      where s.statut='active' and ${patterns.map((_, index) => `c.texte ~* $${index + 1}`).join(" and ")} limit 300`, patterns)).rows as { titre: string; section: string | null; texte: string }[];
+  const strip = (text: string) => fold(text.replace(/\[[^\]]*\bp\.\d+[^\]]*\]/gu, " ")).replace(/\s*—\s*/gu, " ");
+  const dash = quote.slice(0, 160).lastIndexOf(" — ");
+  const body = dash >= 0 && quote.length - dash - 3 >= 40 ? quote.slice(dash + 3) : quote;
+  const wantedStrict = strip(quote), wantedBody = strip(body);
+  const strictRows = candidates.filter((row) => strip(row.texte).includes(wantedStrict));
+  const rows = strictRows.length ? strictRows : candidates.filter((row) => strip(row.texte).includes(wantedBody));
+  if (!rows.length) return { quote: quote.slice(0, 80), verbatim: false, strict: false };
   const row = rows[0]!;
-  const marker = MARKER_PAGE.exec(row.texte);
-  const labelWithPage = labels.find((value) => /\bp(?:age|\.)?\s*\d+/iu.test(value));
-  const pageInLabel = labelWithPage ? Number(/\bp(?:age|\.)?\s*(\d+)/iu.exec(labelWithPage)![1]) : null;
+  const markerPages = [...row.texte.matchAll(/\[[^\]]*?\bp\.(\d+)[^\]]*\]/gu)].map((match) => Number(match[1]));
+  // The answer lists one source label per passage: the labels of this passage's own section are the ones that must carry its page
+  // (taking the first label of the answer for every quotation judged each passage by another passage's page).
+  const sectionTail = fold((row.section ?? "").split("›").pop() ?? "").trim();
+  const ownLabels = sectionTail ? labels.filter((value) => fold(value).includes(sectionTail)) : [];
+  const labelPages = (ownLabels.length ? ownLabels : labels).flatMap((value) => { const page = /\bp(?:age|\.)?\s*(\d+)/iu.exec(value)?.[1]; return page ? [Number(page)] : []; });
+  const pageInLabel = labelPages.find((page) => markerPages.includes(page)) ?? labelPages[0] ?? null;
   const head = fold(row.titre).slice(0, 14);
   return {
-    quote: quote.slice(0, 80), verbatim: true, sourceTitle: row.titre, section: row.section ?? "", chunkHead: row.texte.slice(0, 240), chunkText: row.texte,
-    markerPage: marker ? Number(marker[1]) : null, pageInLabel, sourceLabelMatches: labels.some((value) => fold(value).includes(head)),
+    quote: quote.slice(0, 80), verbatim: true, strict: strictRows.length > 0, sourceTitle: row.titre, section: row.section ?? "", chunkHead: row.texte.slice(0, 240), chunkText: row.texte,
+    // A chunk can span pages: a label page is wrong only when it is none of the chunk's own page markers.
+    markerPage: pageInLabel !== null && markerPages.includes(pageInLabel) ? pageInLabel : markerPages[0] ?? null, pageInLabel, sourceLabelMatches: labels.some((value) => fold(value).includes(head)),
   };
 }
 
