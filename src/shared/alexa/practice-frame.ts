@@ -24,6 +24,8 @@ const MONEY_VERB = /\b(?:encaiss\w*|gagn\w*|rentre\w*|touche\w*|recettes?|revenu
 const RECEIVED_MONEY = (p: string) => /\brecu\w*\b/u.test(p) && !/\b(?:patients?|consultations?|seances?|dossiers?)\b/u.test(p);
 // "a-t-il" in "le cabinet a-t-il encaissé" is grammar, not a person.
 const withoutInversion = (p: string) => p.replace(/\b(?:a|est)-t-(?:il|elle|on)\b/gu, " ").replace(/\b(?:a|est)-(?:il|elle|on)\b/gu, " ");
+// "How many sessions were paid" counts payments collected in the period: the finance gate's own figure ("Paiements encaissés de la période").
+const SESSION_PAID = /\b(?:seances?|consultations?)\b[^?]*\b(?:payees?|reglees?|encaissees?|facturees?)\b/u;
 const EXPENSES = /\b(?:depenses?|charges?)\b/u;
 const NET = /\b(?:resultat net|benefice net|benefice)\b/u;
 const METHODS = /\b(?:especes?|cash|liquide|carte|cheques?|virements?|mode de paiement|modes de paiement|moyens? de paiement|autres? moyens?|autres? modes?)\b/u;
@@ -68,11 +70,13 @@ export type PracticeFrame ={ readonly text: string; readonly cashOnlyNotice: boo
 const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
 export function activityQuestionFrame(text: string, asOf: string): string | null {
   const p = fold(text), q = withoutBusy(p);
-  if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
+  if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || SESSION_PAID.test(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
   if (!ACTIVITY.test(p)) return null;
   // "Patients suivis" and "jours les plus chargés" with no period speak of the current month.
   const found = period(p, asOf) ?? { kind: "month" as const, phrase: "ce mois" };
   if (found.kind === "day") return null;
+  // This month against the last one: two calendar months, each read over its own days.
+  if (COMPARE.test(p) && MONTH_NOW.test(p) && MONTH_LAST.test(p)) return "Montre-moi les statistiques de ce mois par rapport au mois dernier";
   const phrase = found.kind === "named" ? found.phrase : found.phrase;
   return `Montre-moi les statistiques de ${phrase}`;
 }
@@ -81,14 +85,14 @@ export function activityQuestionFrame(text: string, asOf: string): string | null
 export function financeQuestionFrame(text: string, asOf: string): PracticeFrame | null {
   const p = withoutBusy(fold(text));
   if (NOT_THE_CLINIC.test(withoutInversion(p))) return null;
-  const money = MONEY_VERB.test(p) || RECEIVED_MONEY(p), expenses = EXPENSES.test(p), net = NET.test(p), methods = METHODS.test(p);
+  const money = MONEY_VERB.test(p) || RECEIVED_MONEY(p) || SESSION_PAID.test(p), expenses = EXPENSES.test(p), net = NET.test(p), methods = METHODS.test(p);
   // "Compare ce mois avec le mois dernier" names no subject: money is what a doctor means by it.
   const bareCompare = COMPARE.test(p) && !/\b(?:consultations?|seances?|patients?|activite|rendez-vous)\b/u.test(p);
   if (!money && !expenses && !net && !methods && !bareCompare && !/\bimpayes?\b/u.test(p)) return null;
   // Unpaid money has one closed reading: what is left to collect, over the whole practice.
   if (/\bimpayes?\b/u.test(p) && !/\b(?:reste a encaisser|solde)\b/u.test(p) && !unknownNameRuns(p.replace(/\b(?:impayes?|les|des|quels|quelles|sont|combien|y|a-t-il|a-t-on|nous|avons|avez|on)\b/gu, " ")).length) return { text: "Quel reste à encaisser pour l’ensemble du cabinet ?", cashOnlyNotice: false };
   if (/\b(?:impayes?|reste a encaisser|solde)\b/u.test(p)) return null;
-  const rest = p.replace(/\b(?:combien|le|la|les|l|de|du|des|d|cabinet|avons-nous|a-t-il|a-t-on|nous|avons|on|a|ete|payes?|paye|recu|recus|gagne|gagnes|encaisse|encaisses|touche|touches|rentre|rentres|depense|depenses|perçu|percu|en|par|un|une|autre|autres|moyen|moyens|mode|modes|que|qu|especes?|cash|liquide|ce|cette|mois|mois-ci|annee|semaine|hier|aujourd'hui|demain|dernier|precedent|et|avec|compare|comparer|comparaison|rapport|au|aux|quel|quels|quelle|quelles|est|sont|montant|total|depenses?|charges?|recettes?|resultat|net|situation|apercu|donne|donne-moi|dis|dis-moi|argent|sous|chiffre|affaires|financiere?)\b/gu, " ").replace(/\b(?:19|20)\d{2}\b/gu, " ");
+  const rest = p.replace(/\b(?:combien|le|la|les|l|de|du|des|d|cabinet|avons-nous|a-t-il|a-t-on|nous|avons|on|a|ete|payes?|payees?|paye|seances?|consultations?|facturees?|reglees?|encaissees?|recu|recus|gagne|gagnes|encaisse|encaisses|touche|touches|rentre|rentres|depense|depenses|perçu|percu|en|par|un|une|autre|autres|moyen|moyens|mode|modes|que|qu|especes?|cash|liquide|ce|cette|mois|mois-ci|annee|semaine|hier|aujourd'hui|demain|dernier|precedent|et|avec|compare|comparer|comparaison|rapport|au|aux|quel|quels|quelle|quelles|est|sont|montant|total|depenses?|charges?|recettes?|resultat|net|situation|apercu|donne|donne-moi|dis|dis-moi|argent|sous|chiffre|affaires|financiere?)\b/gu, " ").replace(/\b(?:19|20)\d{2}\b/gu, " ");
   if (unknownNameRuns(rest).length) return null;
   const found = period(p, asOf);
   if (COMPARE.test(p) && !methods) {

@@ -40,6 +40,17 @@ export function statisticsRead(raw: unknown): PracticeRead {
   };
 }
 
+/** This month against the last full calendar month: two reads of the same gate, each over its own days; nothing is computed here but the gap. */
+export function statisticsComparisonRead(currentRaw: unknown, previousRaw: unknown): PracticeRead {
+  const current = overview.parse(currentRaw), previous = overview.parse(previousRaw), s = copy.statistics;
+  const block = (read: z.infer<typeof overview>) => [s.heading(read.periode.du, read.periode.au), s.sessions(read.pulse.seances), s.patientsSeen(read.pulse.patientes_vues), s.newRecords(read.pulse.nouveaux), s.noShows(read.pulse.absences)];
+  return {
+    complete: true, empty: false,
+    data: { du: current.periode.du, au: current.periode.au, seances: current.pulse.seances, precedente_du: previous.periode.du, precedente_au: previous.periode.au, precedente_seances: previous.pulse.seances },
+    text: [s.compareHeading, ...block(current), ...block(previous), s.compareDifference(current.pulse.seances, previous.pulse.seances)].join("\n"),
+  };
+}
+
 const workload = z.object({
   total: count,
   resume: z.object({ patients: count, actifs: count, revue: count, changements: count }).passthrough(),

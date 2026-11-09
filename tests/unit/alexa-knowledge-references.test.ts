@@ -45,7 +45,7 @@ describe("what is listed", () => {
     }
   });
   it("too long to show is reported, not silent", () => {
-    const { references, omitted } = referencesToRead("Quel traitement ?", [proof("A", textOf(10_300))]);
+    const { references, omitted } = referencesToRead("Quel traitement ?", [proof("A", textOf(10_500))]);
     expect(references).toEqual([]);
     expect(omitted).toBe(true);
   });

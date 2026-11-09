@@ -9,7 +9,7 @@ type Proof = KnowledgeResult["preuves"][number];
 export type KnowledgeReference = { readonly proof: Proof; readonly excerpt: string };
 
 // The adapter's evidence budget decides how much arrives, and reports what it leaves out.
-const MAX_REFERENCE_CHARS = 10_000;
+const MAX_REFERENCE_CHARS = 10_400;
 const MIN_REFERENCES = 3;
 const MAX_REFERENCES = 5;
 

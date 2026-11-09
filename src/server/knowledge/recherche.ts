@@ -34,7 +34,7 @@ export const LIMITES = {
   /** Évidences finales. */
   FINAL: 5,
   /** Budget total du texte d'évidence, en caractères. */
-  BUDGET_OCTETS: 10_000,
+  BUDGET_OCTETS: 10_400,
 } as const;
 
 /** Un candidat brut, tel que rendu par une porte (lexicale ou vectorielle). */

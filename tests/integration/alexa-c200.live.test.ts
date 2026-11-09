@@ -124,7 +124,16 @@ async function checkQuote(admin: Client, quote: string, labels: string[]) {
   const strictRows = candidates.filter((row) => strip(row.texte).includes(wantedStrict));
   const rows = strictRows.length ? strictRows : candidates.filter((row) => strip(row.texte).includes(wantedBody));
   if (!rows.length) return { quote: quote.slice(0, 80), verbatim: false, strict: false };
-  const row = rows[0]!;
+  // The same words can stand in several chunks (every Stahl monograph repeats "Monitoring after starting an atypical antipsychotic"):
+  // the quotation is judged against the chunk whose own page marker agrees with the label when one does, never against an arbitrary twin.
+  const pagesOf = (candidate: { section: string | null; texte: string }) => {
+    const markers = [...candidate.texte.matchAll(/\[[^\]]*?\bp\.(\d+)[^\]]*\]/gu)].map((match) => Number(match[1]));
+    const tail = fold((candidate.section ?? "").split("›").pop() ?? "").trim();
+    const own = tail ? labels.filter((value) => fold(value).includes(tail)) : [];
+    const wanted = (own.length ? own : labels).flatMap((value) => { const page = /\bp(?:age|\.)?\s*(\d+)/iu.exec(value)?.[1]; return page ? [Number(page)] : []; });
+    return wanted.some((page) => markers.includes(page));
+  };
+  const row = rows.find((candidate) => pagesOf(candidate)) ?? rows[0]!;
   const markerPages = [...row.texte.matchAll(/\[[^\]]*?\bp\.(\d+)[^\]]*\]/gu)].map((match) => Number(match[1]));
   // The answer lists one source label per passage: the labels of this passage's own section are the ones that must carry its page
   // (taking the first label of the answer for every quotation judged each passage by another passage's page).

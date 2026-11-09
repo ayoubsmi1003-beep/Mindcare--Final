@@ -72,7 +72,7 @@ describe("activity frame: sessions, patients seen, new records, busiest days", (
 describe("activity frame: consultations that took place and month-on-month comparison of activity", () => {
   it("reads them as the statistics of the period, which hold the previous period too", () => {
     expect(activityQuestionFrame("Combien de consultations ont eu lieu ce mois-ci ?", ASOF)).toBe("Montre-moi les statistiques de ce mois");
-    expect(activityQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBe("Montre-moi les statistiques de ce mois");
+    expect(activityQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBe("Montre-moi les statistiques de ce mois par rapport au mois dernier");
     expect(financeQuestionFrame("Compare le nombre de consultations de ce mois avec le mois dernier.", ASOF)).toBeNull();
   });
 });
@@ -88,5 +88,22 @@ describe("finance period follow-up", () => {
     expect(financePeriodFollowup("Et hier ?", "Combien de rendez-vous aujourd'hui ?", ASOF)).toBeNull();
     expect(financePeriodFollowup("Et son traitement ?", previous, ASOF)).toBeNull();
     expect(financePeriodFollowup("Et hier ?", undefined, ASOF)).toBeNull();
+  });
+});
+
+describe("sessions that were paid, and this month against last month", () => {
+  it("reads paid sessions as the payments collected in the period", () => {
+    expect(money("Combien de séances ont été payées ce mois-ci ?")?.text).toBe("Quelles sont les recettes de ce mois ?");
+    expect(money("Combien de consultations ont été payées cette semaine ?")?.text).toBe("Quel montant représentent les paiements encaissés du 26 octobre 2026 au 1 novembre 2026 ?");
+  });
+  it("keeps the agenda and the activity frames away from paid sessions", () => {
+    expect(activity("Combien de séances ont été payées ce mois-ci ?")).toBeNull();
+    expect(frenchRequestAdmission("Quelles sont les recettes de ce mois ?", false, ASOF).tools).toEqual(["query_finance"]);
+  });
+  it("admits the statistics of this month against the last as one statistics read", () => {
+    const sentence = activity("Compare le nombre de consultations de ce mois avec le mois dernier.")!;
+    const admission = frenchRequestAdmission(sentence, false, ASOF);
+    expect(admission.tools).toEqual(["query_app"]);
+    expect(admission.applicationView).toBe("statistics");
   });
 });

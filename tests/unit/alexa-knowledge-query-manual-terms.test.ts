@@ -19,3 +19,31 @@ describe("retrieval: the doctor's word and the manual's word both get searched",
     expect(plan?.queries.some((query) => /major/u.test(query) && /criteria/u.test(query))).toBe(true);
   });
 });
+
+describe("retrieval: a disorder named in everyday words still reaches its own criteria section", () => {
+  const plan = (question: string) => planKnowledgeQuery(question)!;
+  it.each([
+    ["Quels sont les critères diagnostiques de la dépression majeure ?", "trouble depressif caracterise"],
+    ["Quels sont les critères du trouble dépressif majeur ?", "trouble depressif caracterise"],
+    ["Quels sont les critères du trouble bipolaire de type II ?", "trouble bipolaire de type ii"],
+    ["Quels sont les critères du bipolaire 2 ?", "trouble bipolaire de type ii"],
+    ["Quels sont les critères du trouble bipolaire de type I ?", "trouble bipolaire de type i"],
+  ])("reads the section of the disorder, leaf 'critères diagnostiques': %s", (question, focus) => {
+    const result = plan(question);
+    expect(result.sectionFocus).toBe(focus);
+    expect(result.sectionLeaf).toBe("criteres diagnostiques");
+  });
+  it("leaves a comparison of the two bipolar types to its own two queries", () => {
+    expect(plan("Quel critère permet de distinguer le trouble bipolaire de type I du type II dans le DSM-5 ?").sectionFocus).toBeUndefined();
+  });
+  it("does not let 'Qu'est-ce que' keep the English question from being asked", () => {
+    expect(plan("Qu'est-ce que le syndrome sérotoninergique ?").queries).toContain("syndrome serotonin");
+  });
+  it("asks the books for 'withdrawal' alone when the doctor says 'withdrawal syndrome'", () => {
+    const queries = plan("Comment arrêter une benzodiazépine sans syndrome de sevrage ?").queries;
+    expect(queries).toContain("benzodiazepine withdrawal");
+  });
+  it("reads metabolic effects and monitoring of antipsychotics in English too", () => {
+    expect(plan("Quels sont les effets métaboliques des antipsychotiques et comment les surveiller ?").queries).toContain("effects metabolic antipsychotics monitoring");
+  });
+});

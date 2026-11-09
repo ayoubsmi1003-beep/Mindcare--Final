@@ -43,6 +43,11 @@ export const practiceReadCopy = {
     treatmentChanges: (n: number) => `Événements de traitement enregistrés, démarrages, ajustements, pauses et arrêts compris : ${n}`,
     followed: (n: number) => `Patients suivis, avec une séance close dans les douze mois précédant la fin de la période : ${n}`,
     previous: (from: string, to: string, n: number) => `Période précédente, du ${from} au ${to} : ${n} séance(s) close(s).`,
+    compareHeading: "Comparaison de deux mois civils (le mois en cours est compté jusqu’à aujourd’hui) :",
+    compareDifference: (current: number, previous: number) => {
+      const gap = current - previous;
+      return `Écart de séances closes : ${gap > 0 ? "+" : gap < 0 ? "−" : ""}${Math.abs(gap)} (${current} contre ${previous}).`;
+    },
     currentHeading: "À cet instant, quelle que soit la période :",
     totalRecords: (n: number) => `Dossiers dans votre périmètre : ${n}`,
     upcoming: (n: number) => `Rendez-vous à venir : ${n}`,

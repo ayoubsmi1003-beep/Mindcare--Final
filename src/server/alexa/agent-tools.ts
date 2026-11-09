@@ -1,8 +1,8 @@
 import { noteTurnCode } from "./turn-trace";
 import { alexaGoalCopy } from "@/i18n/alexa-practice-reads";
-import { caseSummaryStatusRead, medicationTimelineRead, medicationWorkloadRead, statisticsRead } from "./practice-reads";
+import { caseSummaryStatusRead, medicationTimelineRead, medicationWorkloadRead, statisticsComparisonRead, statisticsRead } from "./practice-reads";
 import { practiceReadCopy } from "@/i18n/alexa-practice-reads";
-import { aujourdHuiCabinet } from "@/services/finance-calendrier";
+import { ajouterJours, aujourdHuiCabinet } from "@/services/finance-calendrier";
 import { isPatientSafetySection, PATIENT_SAFETY_GATES, patientSafetyRead } from "./patient-safety-reads";
 import { clinicalSafetyCopy } from "@/i18n/alexa-clinical-safety";
 import {isDeepStrictEqual} from "node:util";
@@ -328,7 +328,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(exactSentence===null)return failure(call,'unsupported',copy.unsupported,'practice-read-not-exact');
     const statistics=a['view']==='statistics',gate=statistics?'get_analysis_overview':'list_medication_workload';
     const plainRequest=exactSentence.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),today=aujourdHuiCabinet(new Date(asOf));
-    let args:RpcArgs={p_query:'',p_limit:100,p_offset:0};
+    let args:RpcArgs={p_query:'',p_limit:100,p_offset:0},previousArgs:RpcArgs|null=null;
     if(statistics){
      // The route only admits this month, this week, this year or a named month and year; none means this month.
      const named=/\b(?:semaine|annee|\d{4})\b/u.test(plainRequest),period=named?patientQueryPeriod(exactSentence,asOf)??explicitAgentPeriod(exactSentence,asOf):null;
@@ -340,11 +340,13 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      const to=end>today?today:end;
      if(Date.parse(to)-Date.parse(from)>365*86400000)return failure(call,'needs_input',practiceReadCopy.statistics.periodTooWide,'statistics-period-too-wide');
      args={p_from:from,p_to:to};
+     // "This month against last month": the last full calendar month is read with its own days (the gate's own "previous period" is a window of the same length).
+     if(/par rapport au mois dernier$/u.test(plainRequest.replace(/[?.!\s]+$/u,''))&&!period){const previousEnd=ajouterJours(`${today.slice(0,7)}-01`,-1);previousArgs={p_from:`${previousEnd.slice(0,7)}-01`,p_to:previousEnd};}
     }
-    const raw=await rpc(gate,args,signal,true);
+    const raw=await rpc(gate,args,signal,true),previousRaw=previousArgs&&raw!==null?await rpc(gate,previousArgs,signal,true):undefined;
     if(raw===null)throw new AgentReadError('permission');
     const attention=/\bsans posologie\b|\bposologies? (?:manquante|incomplete)/u.test(plainRequest)?'missing_dose' as const:/\b(?:a|de) (?:revoir|reviser)\b|\brevue\b/u.test(plainRequest)?'review' as const:null;
-    const read=statistics?statisticsRead(raw):medicationWorkloadRead(raw,{attention,today});
+    const read=statistics?(previousArgs?(previousRaw?statisticsComparisonRead(raw,previousRaw):(()=>{throw new AgentReadError('permission');})()):statisticsRead(raw)):medicationWorkloadRead(raw,{attention,today});
     return {...result,status:read.empty?'empty':read.complete?'ok':'partial',complete:read.complete,text:read.text,data:read.data,evidence:[{id:call.id,type:'query',label:gate,provenance:{gate}}]};
    }
    const applicationResult=await readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,name==='list_internal_messages',name==='search_medications'||name==='list_internal_messages'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});

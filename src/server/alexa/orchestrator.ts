@@ -322,7 +322,7 @@ async function runSequencedGoals(input:TurnInput,sequence:{goals:string[];droppe
 export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
   // On a consultation screen the client reports only the consultation id. The patient comes from the audited gates,
   // so "ce patient" and "son traitement" refer to the person on screen, and a stale or forged patient id cannot override it.
-  const {input,context:consultationContext}=await withConsultationPatient(rawInput,dependencies.db,signal);
+  const {input,context:consultationContext}=await withConsultationPatient(rawInput,dependencies.db,signal,dependencies.actor);
   if(consultationContext.status!=="none")dependencies.trace?.code('consultation-context',consultationContext.status);
   // Before anything can read: a question about a relative or another patient must not be answered from the record in context.
   const understanding=understandTurn(input.text,{selected:!!(input.appContext.patientId??conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),dependencies.contextKey??JSON.stringify(input.appContext))?.selectedPatientId),...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{})});

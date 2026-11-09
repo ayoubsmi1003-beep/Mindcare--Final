@@ -629,7 +629,9 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
           .find((preuve) => !vus.has(preuve.chunkId)
             && !livres.has(livre(preuve))
             && preuve.evidence_relevance >= SEUIL_PERTINENCE
-            && preuve.evidence_relevance >= meilleure * 0.6);
+            // A passage found by the words alone scores at most 0.55 (coverage, no dense term), the other manual's dense neighbours up to 1.0:
+            // the ratio compares two scales. A word hit above the relevance threshold stands on its own; a dense-only row keeps the ratio.
+            && (idsLexicaux.has(preuve.chunkId) || preuve.evidence_relevance >= meilleure * 0.6));
         if (autre !== undefined) {
           const retiree = preuves.pop();
           if (retiree !== undefined) vus.delete(retiree.chunkId);

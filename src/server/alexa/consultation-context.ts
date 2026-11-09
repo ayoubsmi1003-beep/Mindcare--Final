@@ -55,12 +55,40 @@ export async function verifyConsultationContext(
  * and wins over a different patient reported by the client: the screen cannot show one patient while
  * the question is read against another. An unverifiable consultation changes nothing.
  */
+/**
+ * `get_consultation` returns the whole row (raw notes included) and leaves an audit line each time it is read: asking it on every turn of a
+ * conversation over-reads and adds noise. The patient of a consultation never changes, so a verified answer is kept for this actor, this
+ * conversation and this consultation for a few minutes. It only decides which patient the question is about: every read that follows still
+ * goes through `get_patient` and the other gates under the caller's own rights. A failure is never kept.
+ */
+const VERIFIED_FOR_MS = 10 * 60_000;
+const MAX_VERIFIED = 500;
+const verified = new Map<string, { readonly patientId: string; readonly until: number }>();
+
+export function forgetVerifiedConsultations(): void { verified.clear(); }
+
 export async function withConsultationPatient(
   input: TurnInput,
   db: Pick<DbPort, "rpc">,
   signal?: AbortSignal,
+  actor?: string,
+  now: number = Date.now(),
 ): Promise<{ readonly input: TurnInput; readonly context: ConsultationContext }> {
-  const context = await verifyConsultationContext(db, input.appContext, signal);
+  const consultationId = input.appContext.consultationId;
+  const key = actor && consultationId ? `${actor}|${input.conversationId}|${consultationId}` : null;
+  const kept = key ? verified.get(key) : undefined;
+  let context: ConsultationContext;
+  if (key && kept && kept.until > now && consultationId) context = { status: "verified", patientId: kept.patientId, consultationId };
+  else {
+    context = await verifyConsultationContext(db, input.appContext, signal);
+    if (key) {
+      verified.delete(key);
+      if (context.status === "verified") {
+        if (verified.size >= MAX_VERIFIED) verified.delete(verified.keys().next().value as string);
+        verified.set(key, { patientId: context.patientId, until: now + VERIFIED_FOR_MS });
+      }
+    }
+  }
   if (context.status !== "verified" || input.appContext.patientId === context.patientId) return { input, context };
   return { input: { ...input, appContext: { ...input.appContext, patientId: context.patientId } }, context };
 }

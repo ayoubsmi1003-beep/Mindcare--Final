@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { verifyConsultationContext, withConsultationPatient } from "@/server/alexa/consultation-context";
+import { forgetVerifiedConsultations, verifyConsultationContext, withConsultationPatient } from "@/server/alexa/consultation-context";
 import type { TurnInput } from "@/shared/alexa/turn";
 
 const CONSULTATION = "11111111-1111-4111-8111-111111111111";
@@ -83,5 +83,41 @@ describe("consultation context", () => {
     controller.abort();
     expect((await verifyConsultationContext(db, input({ consultationId: CONSULTATION }).appContext, controller.signal)).status).toBe("unavailable");
     expect(calls).toEqual([]);
+  });
+});
+
+describe("the consultation is read once per conversation, not once per turn", () => {
+  const gates = () => fakeDb({ get_consultation: [{ id: CONSULTATION, patient_id: PATIENT }], get_patient: patientRow(PATIENT), search_patients: patientRow(PATIENT) });
+  it("reads the consultation gate on the first turn only", async () => {
+    forgetVerifiedConsultations();
+    const { db, calls } = gates();
+    const first = await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 1_000);
+    const second = await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 60_000);
+    expect(first.input.appContext.patientId).toBe(PATIENT);
+    expect(second.input.appContext.patientId).toBe(PATIENT);
+    expect(calls.filter((name) => name === "get_consultation")).toHaveLength(1);
+  });
+  it("asks again after ten minutes, for another conversation, another doctor or another consultation", async () => {
+    forgetVerifiedConsultations();
+    const { db, calls } = gates();
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 0);
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 11 * 60_000);
+    await withConsultationPatient({ ...input({ consultationId: CONSULTATION }), conversationId: "other" }, db as never, undefined, "doctor-a", 11 * 60_000);
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-b", 11 * 60_000);
+    expect(calls.filter((name) => name === "get_consultation")).toHaveLength(4);
+  });
+  it("never keeps a failure: the next turn tries again", async () => {
+    forgetVerifiedConsultations();
+    const { db, calls } = fakeDb({ get_consultation: "fail" });
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 0);
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never, undefined, "doctor-a", 1_000);
+    expect(calls.filter((name) => name === "get_consultation")).toHaveLength(2);
+  });
+  it("keeps nothing without an actor", async () => {
+    forgetVerifiedConsultations();
+    const { db, calls } = gates();
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never);
+    await withConsultationPatient(input({ consultationId: CONSULTATION }), db as never);
+    expect(calls.filter((name) => name === "get_consultation")).toHaveLength(2);
   });
 });

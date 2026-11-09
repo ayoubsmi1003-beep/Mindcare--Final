@@ -43,7 +43,7 @@ const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
 // de ces mots dans la requete suffit a la faire echouer. Ils sont donc
 // retires AVANT la porte, jamais du texte source.
 const SCAFFOLD = new Set([
-  "quels", "quelles", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
+  "quels", "quelles", "qu", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
   "definit", "definir", "decrit", "decrire", "decris", "donne", "donner", "presente", "presenter",
   "resume", "resumer", "figurent", "figure", "enumere", "enumerer", "distingue", "distinguer", "precise", "preciser",
   "montre", "selon", "apres", "livre", "livres", "ouvrage", "manuel", "references", "reference",
@@ -98,6 +98,9 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   decrits: ["decrits", "described"], decrit: ["decrit", "described"],
   serotoninergique: ["serotoninergique", "serotonin"],
   serotonine: ["serotonine", "serotonin"],
+  // Same word in both languages once the accents are gone: without them the English variant is refused ("a content word stays untranslated").
+  benzodiazepine: ["benzodiazepine", "benzodiazepine"], benzodiazepines: ["benzodiazepines", "benzodiazepines"],
+  surveiller: ["surveiller", "monitoring"], antipsychotique: ["antipsychotique", "antipsychotic"],
   arreter: ["arreter", "stop"], arret: ["arret", "discontinuation"], eviter: ["eviter", "avoid"],
   antidepresseur: ["antidepresseur", "antidepressant"], antidepresseurs: ["antidepresseurs", "antidepressants"],
   titrer: ["titrer", "titrate"], titration: ["titration", "titration"],
@@ -195,6 +198,11 @@ const MANUAL_TERMS: readonly (readonly [RegExp, string])[] = [
   [/\btdah\b/gu, "deficit attention hyperactivite"],
   [/\btoc\b/gu, "trouble obsessionnel compulsif"],
   [/\btspt\b/gu, "trouble stress post traumatique"],
+];
+/** Names a doctor gives a disorder whose section the focus rules know; used to recognise the focus only, never to rewrite a query. */
+const FOCUS_ONLY_TERMS: readonly (readonly [RegExp, string])[] = [
+  [/\b(?:troubles?\s+)?bipolaires?\s+(?:de\s+)?(?:type\s+)?(?:ii|2|deux)\b/gu, "trouble bipolaire de type ii"],
+  [/\b(?:troubles?\s+)?bipolaires?\s+(?:de\s+)?(?:type\s+)?(?:i|1)\b/gu, "trouble bipolaire de type i"],
 ];
 export function frenchManualTerms(normalized: string): string | null {
   let changed = normalized;
@@ -324,6 +332,15 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       references.push(requeteCoeur);
     }
   }
+  // "Withdrawal syndrome" is written "withdrawal" or "discontinuation" in the books: without the noun "syndrome" the same question finds the section.
+  if (book === undefined) {
+    const sansSyndrome = [...new Set(termes.map(token => ALIASES[token]?.[1] ?? token).filter(token => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token) && !VERBES_ANGLAIS_FAIBLES.has(token) && token !== 'syndrome'))];
+    const requeteSansSyndrome = sansSyndrome.join(' ');
+    if (sansSyndrome.length >= 2 && /\b(?:withdrawal|discontinuation)\b/u.test(requeteSansSyndrome) && !queries.includes(requeteSansSyndrome)) {
+      queries.push(requeteSansSyndrome);
+      references.push(requeteSansSyndrome);
+    }
+  }
   // The doctor says "dépression majeure", the French manual writes "trouble dépressif caractérisé": a lexical gate in ET finds nothing
   // under the doctor's word. Add the manual's own term as one more query, never in place of the doctor's.
   if (book === undefined) {
@@ -419,6 +436,8 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const focusRules:readonly (readonly [RegExp,string])[]=[
     [/\btrouble depressif caracterise\b/u,'trouble depressif caracterise'],
     [/\bepisode depressif(?: caracterise)?\b/u,'trouble depressif caracterise'],
+    [/\btrouble bipolaire de type ii\b/u,'trouble bipolaire de type ii'],
+    [/\btrouble bipolaire de type i\b/u,'trouble bipolaire de type i'],
     [/\btrouble panique\b/u,'trouble panique'],
     [/\b(?:hypomanie|hypomaniaque)\b/u,'episode hypomaniaque'],
     [/\b(?:manie|maniaque)\b/u,'episode maniaque'],
@@ -430,10 +449,14 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     [/\bdysphorique premenstruel\b/u,'trouble dysphorique premenstruel'],
     [/\b(?:trouble lie a l[’']usage|trouble de l[’']usage|usage d[’']une substance)\b/u,"troubles de l'usage d'une substance"],
   ];
-  const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
+  // The manual's own name for the condition ("dépression majeure" → "trouble dépressif caractérisé"): the focus is a section of that manual.
+  const focusNormalized=FOCUS_ONLY_TERMS.reduce((text,[pattern,term])=>text.replace(pattern,term),frenchManualTerms(normalized)??normalized);
+  // Naming both bipolar types is a comparison, which keeps its own two queries: neither type is then "the" focus.
+  const bothBipolarTypes=/\btypes?\s+i\b/u.test(normalized)&&/(?:\btypes?\s+ii\b|\b(?:de|du|et|vs|versus)\s+(?:type\s+)?ii\b)/u.test(normalized);
+  const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(focusNormalized)).map(([,focus])=>focus).filter(focus=>!(bothBipolarTypes&&focus.startsWith('trouble bipolaire de type')));
   const locationRequest=isKnowledgeLocationQuestion(question)||/\b(?:localise|localiser|retrouve|trouve)\b[^.!?]{0,100}\b(?:passage|section|chapitre|page)\b/u.test(normalized)||/\blocalise\w*\b/u.test(normalized)||/\bou\s+est\s+(?:decrit|decrite|mentionne|mentionnee)\b/u.test(normalized);
   // A treatment question about this disorder must still reach Maudsley and Stahl.
-  const focusedContent=recognizedFocuses[0]==='trouble depressif caracterise'&&/\b(?:criteres?|symptomes?|signes?|duree|seuils?|definit|definir|definition|decrit|decrire)\b/u.test(normalized);
+  const focusedContent=['trouble depressif caracterise','trouble bipolaire de type ii','trouble bipolaire de type i'].includes(recognizedFocuses[0]??'')&&/\b(?:criteres?|symptomes?|signes?|duree|seuils?|definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const drugLocationFocus=locationRequest&&requestedMedicationNames(question).length>0&&!/\b(?:renal\w*|rein\w*|kidney\w*|hematolog\w*|neutrophil\w*|qt)\b/u.test(normalized)
     ? (/\b(?:mecanism\w*|agit|action\w*|fonctionn\w*)\b/u.test(normalized)?'how the drug works'
       :/\b(?:posologie|dose)\b/u.test(normalized)?'dosing tips'

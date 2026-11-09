@@ -293,3 +293,32 @@ describe("a partial list survives a restart", () => {
     expect(next.sentences.join(" ")).toContain("Aucune suite de lecture");
   });
 });
+
+describe("this month against the last calendar month", () => {
+  const sentence = "Montre-moi les statistiques de ce mois par rapport au mois dernier";
+  const overviewFor = (du: string, au: string, seances: number) => ({ ...overview, periode: { ...overview.periode, du, au }, pulse: { ...overview.pulse, seances } });
+  const executor = (calls: Record<string, unknown>[]) => {
+    const rpc = (_gate: string, args: Record<string, unknown>) => {
+      calls.push(args);
+      return Promise.resolve({ ok: true, data: [args["p_from"] === "2026-10-01" ? overviewFor("2026-10-01", "2026-10-31", 20) : overviewFor(String(args["p_from"]), String(args["p_to"]), 12)] });
+    };
+    return agentExecutor({ text: sentence, conversationId: crypto.randomUUID(), clientTurnId: crypto.randomUUID(), appContext: { patientId: null, page: "/jarvis" } }, { rpc } as never, {} as never);
+  };
+  it("is one admitted statistics read", () => {
+    expect(frenchRequestAdmission(sentence, false, "2026-11-07T10:00:00+01:00")).toMatchObject({ tools: ["query_app"], applicationView: "statistics" });
+  });
+  it("reads each month over its own days and states the gap", async () => {
+    const calls: Record<string, unknown>[] = [];
+    const result = await executor(calls)({ id: "c", name: "query_app", args: { partIds: ["requested_1"], view: "statistics" } }, "2026-11-07T10:00:00+01:00", [], new AbortController().signal);
+    expect(calls).toEqual([{ p_from: "2026-11-01", p_to: "2026-11-07" }, { p_from: "2026-10-01", p_to: "2026-10-31" }]);
+    expect(result.text).toContain("du 2026-11-01 au 2026-11-07");
+    expect(result.text).toContain("du 2026-10-01 au 2026-10-31");
+    expect(result.text).toContain("Écart de séances closes : −8 (12 contre 20).");
+  });
+  it("a plain 'this month' stays a single read", async () => {
+    const calls: Record<string, unknown>[] = [];
+    const execute = agentExecutor({ text: "Montre-moi les statistiques de ce mois", conversationId: crypto.randomUUID(), clientTurnId: crypto.randomUUID(), appContext: { patientId: null, page: "/jarvis" } }, { rpc: (_gate: string, args: Record<string, unknown>) => { calls.push(args); return Promise.resolve({ ok: true, data: [overview] }); } } as never, {} as never);
+    await execute({ id: "c", name: "query_app", args: { partIds: ["requested_1"], view: "statistics" } }, "2026-11-07T10:00:00+01:00", [], new AbortController().signal);
+    expect(calls).toHaveLength(1);
+  });
+});
