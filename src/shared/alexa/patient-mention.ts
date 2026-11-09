@@ -38,7 +38,7 @@ for (const word of [
   "anorexie", "boulimie", "personnalite", "limite", "borderline", "adaptation", "phobie", "phobies", "agoraphobie", "sevrage", "syndrome", "serotoninergique", "resistante", "resistant", "resistantes", "resistants",
   "antipsychotique", "antipsychotiques", "antidepresseur", "antidepresseurs", "benzodiazepine", "benzodiazepines", "metabolique", "metaboliques", "effet", "duree", "criteres", "critere", "post-traumatique", "traumatique", "stress",
   "schizophrenie", "schizophrene", "schizoaffectif", "bipolaire", "delirant", "delirants", "insomnie", "dysthymie", "hyperactivite", "attention", "deficit", "alimentaires", "alimentaire", "prescription", "prescriptions",
-  "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
+  "parler", "durer", "diagnostiquer", "definir", "identifier", "evoquer", "poser", "reconnaitre", "distinguer", "ii", "iii", "iv", "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
 ]) common.add(word);
 const folded = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const scaleNames = new Set(["hamilton", "madrs"]);
@@ -51,7 +51,8 @@ function candidateName(value: string | undefined): string | undefined {
     const lexical = folded(clean).replace(/^[ld]['’]/u, "");
     if (!/^[\p{L}][\p{L}\p{M}'’-]{1,}$/u.test(clean) || common.has(lexical)) break;
     name.push(clean);
-    if (name.length === 3) break;
+    // Four words: compound Algerian names ("Mohamed Taki Eddine Araibia") are common.
+    if (name.length === 4) break;
   }
   const candidate = name.join(" ");
   return candidate.length >= 2 && candidate.length <= 80 ? candidate : undefined;
@@ -178,7 +179,7 @@ export function parsePatientMention(text: string): PatientMention {
   }
   // Look ahead for candidate words without consuming a later name introducer
   // (e.g. "de Hamilton pour Nadia Test" or "de Nadia pour Karim").
-  const matches = text.matchAll(/(?:\b(?:pour|chez|de|du|ta3|t3|dyal)\s+(?:(?:la|le)\s+|l['’]\s*)?|\bsi\s+|\bd['’]\s*|(?:تاع|للمريض|للمريضة)\s+)(?=([\p{L}][\p{L}\p{M}'’-]{1,}(?:\s+[\p{L}][\p{L}\p{M}'’-]{1,}){0,2})(?![\p{L}\p{M}\p{N}'’-]))/giu);
+  const matches = text.matchAll(/(?:\b(?:pour|chez|de|du|ta3|t3|dyal)\s+(?:(?:la|le)\s+|l['’]\s*)?|\bsi\s+|\bd['’]\s*|(?:تاع|للمريض|للمريضة)\s+)(?=([\p{L}][\p{L}\p{M}'’-]{1,}(?:\s+[\p{L}][\p{L}\p{M}'’-]{1,}){0,3})(?![\p{L}\p{M}\p{N}'’-]))/giu);
   for (const match of matches) {
     if (nameRanges.some(([start, end]) => match.index >= start && match.index < end)) continue;
     // French possessive grammar alone does not establish a dossier scope.

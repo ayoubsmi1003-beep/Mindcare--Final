@@ -13,7 +13,7 @@ import { mayBeAName } from "./request-contract";
  * which asks. It never decides that a word is NOT a name unless a closed vocabulary knows that word.
  */
 export type PatientSectionKey =
-  | "summary" | "history" | "treatments" | "count" | "lastdate" | "firstdate" | "lastnote" | "prev"
+  | "summary" | "history" | "treatments" | "treatchanges" | "bounds" | "count" | "lastdate" | "firstdate" | "lastnote" | "prev"
   | "nextappt" | "documents" | "scales" | "diagnoses" | "evolution" | "identity";
 export interface PatientQuestion { readonly section: PatientSectionKey; readonly n?: number }
 export type PatientSubject = { readonly kind: "context" } | { readonly kind: "named"; readonly name: string };
@@ -26,7 +26,7 @@ const PLURAL_VISIT = /\b(?:consultations|seances|visites|passages|rendez-vous|rd
 const COUNT = /\b(?:combien|nombre|total)\b/u;
 const ALREADY = /\bdeja\b/u;
 const LAST = /\b(?:derni(?:er|ere|eres|ers)|la derniere fois|recent\w*|dernierement)\b/u;
-const FIRST = /\b(?:premi(?:er|ere|eres|ers)|toute premiere|depuis quand|au debut|commence\w*)\b/u;
+const FIRST = /\b(?:premi(?:er|ere|eres|ers)|toute premiere|depuis quand|au debut)\b/u;
 const PREVIOUS = /\b(?:precedent\w*|d'avant|anterieur\w*|passees?|d'hier)\b/u;
 const DATE_CUE = /\b(?:quand|date|dates|quel jour|a quelle date)\b/u;
 const TREAT = /\b(?:traitements?|medicaments?|medocs?|ordonnances?|prescriptions?|prescrit\w*|cachets?|comprimes?|gelules?|posologie|doses?|molecules?|prend\w*|prenait|prenaient|prendre|pris|sous quoi)\b/u;
@@ -37,14 +37,15 @@ const DOCS = /\b(?:documents?|certificats?)\b/u;
 const SCALES = /\b(?:echelles?|scores?|phq|gad|questionnaires?)\b/u;
 const DIAG = /\bdiagnostics?\b/u;
 const NEXT = /\b(?:prochain\w*|revient|reviendra|reconvoqu\w*|reprogramm\w*|programme\w*)\b/u;
-const WHO = /\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
+const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|precedemment|auparavant)\b/u;
+const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
 
 // ── Who it is about ───────────────────────────────────────────────────────────
 const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b/u;
 const NOT_THE_PATIENT = /\b(?:mere|pere|frere|soeur|epoux|epouse|conjoint\w*|fils|fille|famille|parents?|enfants?|amis?|proches?)\b/u;
 const OTHER_SCOPE = /\b(?:patients|patientes|(?:du|de tout le|dans tout le|de l'ensemble du|pour tout le) cabinet|agenda|planning|tous|toutes|aujourd'hui|demain|hier|semaine|semaines|mois|annee|matin|soir|midi|apres-midi|recettes?|impayes?)\b/u;
 /** Words of the frame itself; anything else Latin and unknown to the question vocabularies may be a name. */
-const FRAME_WORDS = /^(?:alexa|dis|dites|moi|me|stp|svp|plait|merci|oui|non|et|ou|mais|donc|alors|aussi|bien|bon|ben|euh|ah|tu|vous|peux|pouvez|peut|pourrais|pourriez|voudrais|veux|souhaite|sais|savez|sait|dire|rappelle|rappeler|rappelez|montre|montrer|affiche|afficher|donne|donner|fais|faire|fait|vois|voir|trouve|cherche|ouvre|passe|passons|reviens|revenons|maintenant|encore|aussi|toujours|petit|petite|gros|grand|beaucoup|peu|moins|plus|tres|trop|ici|la|là|quoi|comme|comment|quand|combien|quel|quelle|quels|quelles|qui|que|qu|dont|ceci|cela|ca|ce|cet|cette|ces|celui|celle|ceux|celles|mon|ma|mes|notre|nos|votre|vos|son|sa|ses|leur|leurs|il|elle|ils|elles|lui|eux|je|j|nous|on|y|en|le|les|un|une|des|du|de|d|au|aux|sur|sous|dans|chez|par|pour|avec|sans|selon|vers|entre|apres|avant|depuis|pendant|jusqu|est|sont|etait|etaient|ete|etre|a|ai|as|avons|avez|ont|avait|avaient|eu|eues|eue|aurait|va|vont|faut|doit|dois|dit|dire|ces|temps|fois|moment|jour|jours|toute|tous|tout|toutes|rien|chose|choses|truc|machin|cas|monde|gens|personne|personnes|mme|mlle|madame|mademoiselle|monsieur|docteur|dr|patient|patiente|patients|malade|dossier|fiche|etat|situation|nouvelles|essentiel|point|points|resume|synthese|informations|information|infos|info|historique|parcours|traitement|traitements|medicament|medicaments|medocs|cachets|comprimes|gelules|ordonnance|prescription|posologie|dose|doses|molecule|molecules|consultation|consultations|seance|seances|visite|visites|rendez|vous|rdv|dernier|derniere|dernieres|derniers|premier|premiere|premieres|premiers|precedent|precedente|precedentes|precedents|recent|recente|recentes|recents|prochain|prochaine|actuel|actuelle|actuellement|avant|apres|deja|jamais|evolue|evolution|diagnostic|diagnostics|echelle|echelles|score|scores|document|documents|certificat|certificats|venu|venue|venus|vu|vue|vus|passe|suis|suit|suivi|suivre|sais|savoir|parle|parler|raconte|retrace|prend|prends|prenait|pris|sous|noter|note|dit|dits|parle|parles|vient|revient|reviendra|deux|trois|quatre|cinq)$/u;
+const FRAME_WORDS = /^(?:alexa|cabinet|clinique|dates|periode|dis|dites|moi|me|stp|svp|plait|merci|oui|non|et|ou|mais|donc|alors|aussi|bien|bon|ben|euh|ah|tu|vous|peux|pouvez|peut|pourrais|pourriez|voudrais|veux|souhaite|sais|savez|sait|dire|rappelle|rappeler|rappelez|montre|montrer|affiche|afficher|donne|donner|fais|faire|fait|vois|voir|trouve|cherche|ouvre|passe|passons|reviens|revenons|maintenant|encore|aussi|toujours|petit|petite|gros|grand|beaucoup|peu|moins|plus|tres|trop|ici|la|là|quoi|comme|comment|quand|combien|quel|quelle|quels|quelles|qui|que|qu|dont|ceci|cela|ca|ce|cet|cette|ces|celui|celle|ceux|celles|mon|ma|mes|notre|nos|votre|vos|son|sa|ses|leur|leurs|il|elle|ils|elles|lui|eux|je|j|nous|on|y|en|le|les|un|une|des|du|de|d|au|aux|sur|sous|dans|chez|par|pour|avec|sans|selon|vers|entre|apres|avant|depuis|pendant|jusqu|est|sont|etait|etaient|ete|etre|a|ai|as|avons|avez|ont|avait|avaient|eu|eues|eue|aurait|va|vont|faut|doit|dois|dit|dire|ces|temps|fois|moment|jour|jours|toute|tous|tout|toutes|rien|chose|choses|truc|machin|cas|monde|gens|personne|personnes|mme|mlle|madame|mademoiselle|monsieur|docteur|dr|patient|patiente|patients|malade|dossier|fiche|etat|situation|nouvelles|essentiel|point|points|resume|synthese|informations|information|infos|info|historique|parcours|traitement|traitements|medicament|medicaments|medocs|cachets|comprimes|gelules|ordonnance|prescription|posologie|dose|doses|molecule|molecules|consultation|consultations|seance|seances|visite|visites|rendez|vous|rdv|dernier|derniere|dernieres|derniers|premier|premiere|premieres|premiers|precedent|precedente|precedentes|precedents|recent|recente|recentes|recents|prochain|prochaine|actuel|actuelle|actuellement|avant|apres|deja|jamais|evolue|evolution|diagnostic|diagnostics|echelle|echelles|score|scores|document|documents|certificat|certificats|venu|venue|venus|vu|vue|vus|passe|suis|suit|suivi|suivre|sais|savoir|parle|parler|raconte|retrace|prend|prends|prenait|pris|sous|noter|note|dit|dits|parle|parles|presente|presentes|resume|resumes|explique|dresse|indique|indiquer|vient|revient|reviendra|deux|trois|quatre|cinq)$/u;
 
 const NUMBER_WORDS: Record<string, number> = { deux: 2, trois: 3, quatre: 4, cinq: 5, "2": 2, "3": 3, "4": 4, "5": 5 };
 const requestedCount = (plain: string) => {
@@ -60,11 +61,15 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   if (DIAG.test(p)) return { section: "diagnoses" };
   if (DOCS.test(p)) return { section: "documents" };
   if (NEXT.test(p) && /\b(?:rendez-vous|rdv|seance|consultation|visite|revient|reviendra|reconvoqu\w*|revoir)\b/u.test(p)) return { section: "nextappt" };
+  // "son traitement précédent", "a-t-il changé de traitement", "il prenait quoi avant": the recorded changes, not the current state.
+  if (TREAT.test(p) && (PREVIOUS.test(p) || CHANGED.test(p))) return { section: "treatchanges" };
   if (TREAT.test(p)) return { section: "treatments" };
+  if ((LAST.test(p) || PREVIOUS.test(p)) && VISIT.test(p) && /\b(?:deux|trois|quatre|cinq|[2-5])\s+derni\w*/u.test(p)) return { section: "prev", n: requestedCount(p) };
   if (HISTORY.test(p)) return { section: "history" };
   if (EVOLVE.test(p)) return { section: "evolution" };
   if (COUNT.test(p) && VISIT.test(p)) return { section: "count" };
   if (ALREADY.test(p) && /\b(?:eu|venu\w*|vu|vue)\b/u.test(p) && VISIT.test(p)) return { section: "count" };
+  if (FIRST.test(p) && LAST.test(p) && VISIT.test(p)) return { section: "bounds" };
   if (FIRST.test(p) && (VISIT.test(p) || /\bdepuis quand\b/u.test(p))) return { section: "firstdate" };
   if ((LAST.test(p) || PREVIOUS.test(p)) && VISIT.test(p)) {
     const asksDate = DATE_CUE.test(p);
@@ -88,8 +93,10 @@ function unknownRuns(text: string): Run[] {
     return split ? [{ raw: raw.slice(split[0].length), index: match.index + split[0].length }] : [{ raw, index: match.index }];
   });
   const unknown = (raw: string) => {
-    const word = fold(raw).replace(/^[-']+|[-']+$/gu, "");
-    return !FRAME_WORDS.test(word) && !FRAME_WORDS.test(word.replace(/-(?:t-)?(?:il|elle|ils|elles|on|je|tu|vous|nous|moi)$/u, "")) && mayBeAName(raw);
+    // "Présente-moi", "Rappelle-lui", "prend-il": a verb with its pronoun is vocabulary, not a name.
+    const stripped = raw.replace(/-(?:t-)?(?:il|elle|ils|elles|on|je|tu|vous|nous|moi|toi|lui|le|la|les|leur)$/iu, "");
+    const word = fold(stripped).replace(/^[-']+|[-']+$/gu, "");
+    return !FRAME_WORDS.test(word) && mayBeAName(stripped);
   };
   const runs: Run[] = [];
   let current: { words: string[]; upper: boolean; before: string; end: number } | null = null;
@@ -108,16 +115,18 @@ function unknownRuns(text: string): Run[] {
  * Who the question is about. `named` when two to four unknown words in a row can only be a name; `context` when it
  * speaks of the patient on screen or in the conversation; null when unsure (the previous route then asks).
  */
-export function patientSubject(text: string, options: { contextPatient: boolean; followup: boolean }, section: PatientSectionKey): PatientSubject | null {
+export function patientSubject(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }, section: PatientSectionKey): PatientSubject | null {
   const p = fold(text);
   if (NOT_THE_PATIENT.test(p) || OTHER_SCOPE.test(p)) return null;
-  const runs = unknownRuns(text);
-  if (runs.length > 1) return null;
-  const run = runs[0];
-  if (run && run.words.length >= 2 && run.words.length <= 4) return { kind: "named", name: run.words.join(" ") };
-  if (run && run.words.length > 4) return null;
-  // One unknown word: a first name alone is for the clarifying route; a stray lowercase word is vocabulary noise.
-  if (run && run.upper) return null;
+  // The caller found no patient of that name: the unknown words are vocabulary the lists lack ("changé récemment"), not a name.
+  const runs = options.ignoreUnknownWords ? [] : unknownRuns(text);
+  // Two to four unknown words in a row can only be a name; two separate groups of them are two names or a muddle.
+  const names = runs.filter(run => run.words.length >= 2);
+  if (names.length > 1 || runs.some(run => run.words.length > 4)) return null;
+  const name = names[0];
+  if (name) return runs.length === 1 ? { kind: "named", name: name.words.join(" ") } : null;
+  // One unknown word alone: after "de", "sur", "chez"... or capitalised it is a first name (the clarifying route asks); elsewhere it is vocabulary the lists lack.
+  if (runs.some(run => run.upper || /^(?:de|du|des|d|sur|chez|pour|a|avec|concernant|propos)$/u.test(run.before))) return null;
   if (!options.contextPatient && !options.followup) return null;
   const cue = PRONOUN_CUE.test(p);
   // "au cabinet" with nobody in the sentence asks about the clinic, not about the patient on screen.
@@ -138,21 +147,24 @@ export function renderPatientQuestion(question: PatientQuestion, subject: Patien
     case "history": return named ? `Quel est l'historique médical de ${named} ?` : "Montre l'historique du patient sélectionné.";
     case "treatments": return named ? `Quel est le traitement de ${named} ?` : "Quels traitements sont en cours pour le patient sélectionné ?";
     case "count": return named ? `Nombre de consultations pour ${named}.` : "Combien de consultations a le patient sélectionné ?";
-    case "lastdate": return named ? `Date de la dernière consultation de ${named} ?` : "Quelle est la date de la dernière consultation du patient sélectionné ?";
-    case "firstdate": return named ? `Date de la première consultation de ${named} ?` : `Date de la première consultation ${SELECTED} ?`;
+    // The first and the last visit are read together: the audited read answers both, and says so when the record is too long to read whole.
+    case "bounds": case "lastdate": case "firstdate": return named ? `Quelles sont les dates de la première à la dernière consultation de ${named} ?` : `Quelles sont les dates de la première à la dernière consultation ${SELECTED} ?`;
+    case "treatchanges": return named ? `Quels changements de traitement sont enregistrés pour ${named} ?` : "Quels changements de traitement sont enregistrés pour le patient sélectionné ?";
     case "lastnote": return named ? `Résume la dernière consultation de ${named}.` : "Résume la dernière consultation du patient sélectionné.";
-    case "prev": return named ? `Les ${question.n ?? 3} dernières consultations de ${named}.` : `Montre les ${question.n ?? 3} dernières consultations ${SELECTED}.`;
+    // The model-free history lists the dates of the five latest visits, which covers up to five requested: no wording of "N dernières consultations", it would also read as a consultation list.
+    case "prev": return named ? `Quel est l'historique médical de ${named} ?` : "Montre l'historique du patient sélectionné.";
     case "nextappt": return named ? `Quel est le prochain rendez-vous de ${named} ?` : "Quel est le prochain rendez-vous du patient sélectionné ?";
     case "documents": return named ? `Quels documents de ${named} ?` : "Quels documents du patient sélectionné ?";
     case "scales": return named ? `Montre les résultats d’échelles de ${named}.` : "Montre les résultats d’échelles pour le patient sélectionné.";
     case "diagnoses": return named ? `Quels diagnostics actifs pour ${named} ?` : "Quels diagnostics actifs pour le patient sélectionné ?";
-    case "evolution": return named ? `Fais un résumé de l'évolution clinique de ${named}.` : "Fais un résumé de l'évolution clinique du patient sélectionné.";
+    // The evolution of a record is read from the same recorded fields as its summary: dates, treatment, latest notes, no interpretation.
+    case "evolution": return renderPatientQuestion({ section: "summary" }, subject);
     case "identity": return named ? `Affiche le profil de ${named}.` : "Affiche le profil du patient sélectionné.";
   }
 }
 
 /** The whole step: the closed question for this utterance, or null when the utterance is not clearly one. */
-export function patientQuestionFrame(text: string, options: { contextPatient: boolean; followup: boolean }): { text: string; subject: PatientSubject; section: PatientSectionKey } | null {
+export function patientQuestionFrame(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }):{ text: string; subject: PatientSubject; section: PatientSectionKey } | null {
   const question = classifyPatientQuestion(text);
   if (!question) return null;
   const subject = patientSubject(text, options, question.section);
@@ -165,14 +177,15 @@ export function patientQuestionFrame(text: string, options: { contextPatient: bo
  * name asks the previous question again, for that patient. Nothing is carried over if the sentence asks something itself,
  * speaks of a relative, or holds anything else a name could be.
  */
-export function patientSwitchFollowup(text: string, previousRequest: string | undefined): { text: string; section: PatientSectionKey } | null {
+export function patientSwitchFollowup(text: string, previousRequest: string | undefined): { text: string; section: PatientSectionKey; name: string } | null {
   if (!previousRequest || classifyPatientQuestion(text)) return null;
   const previous = classifyPatientQuestion(previousRequest);
   if (!previous || NOT_THE_PATIENT.test(fold(text))) return null;
   const runs = unknownRuns(text);
   const run = runs[0];
   if (runs.length !== 1 || !run || run.words.length < 2 || run.words.length > 4) return null;
-  return { text: renderPatientQuestion(previous, { kind: "named", name: run.words.join(" ") }), section: previous.section };
+  const name = run.words.join(" ");
+  return { text: renderPatientQuestion(previous, { kind: "named", name }), section: previous.section, name };
 }
 
 /** The question asked before a patient was chosen from a list, restated for the chosen patient. */

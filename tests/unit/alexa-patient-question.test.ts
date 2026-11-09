@@ -28,6 +28,9 @@ describe("patient question frame: the same intention in many registers reads as 
     ["Il est passé quand la dernière fois, lui ?", "lastdate"],
     ["Depuis quand je le suis ?", "firstdate"],
     ["Quand l'ai-je vu pour la première fois ?", "firstdate"],
+    ["Quel était son traitement précédent ?", "treatchanges"],
+    ["Son traitement a-t-il changé récemment ?", "treatchanges"],
+    ["Quelle est la première et la dernière consultation de ce patient ?", "bounds"],
     ["De quoi avons-nous parlé à la dernière séance ?", "lastnote"],
     ["Résume sa dernière consultation.", "lastnote"],
     ["Qu'est-ce que j'ai noté la dernière fois ?", "lastnote"],
@@ -104,8 +107,8 @@ describe("patient question frame: every restatement is understood by the determi
   const expected: Record<string, { tool: string; section?: string; mode?: string }> = {
     summary: { tool: "get_patient_context", section: "summary" }, history: { tool: "get_patient_context", section: "history" },
     treatments: { tool: "get_patient_context", section: "treatments" }, count: { tool: "query_consultations", mode: "count" },
-    lastdate: { tool: "query_consultations" }, lastnote: { tool: "get_patient_context", section: "summary" },
-    prev: { tool: "query_consultations" }, nextappt: { tool: "query_agenda" }, documents: { tool: "query_documents" },
+    lastdate: { tool: "get_patient_context", section: "summary" }, firstdate: { tool: "get_patient_context", section: "summary" }, bounds: { tool: "get_patient_context", section: "summary" }, treatchanges: { tool: "get_patient_context", section: "treatments" }, lastnote: { tool: "get_patient_context", section: "summary" },
+    prev: { tool: "get_patient_context", section: "history" }, nextappt: { tool: "query_agenda" }, documents: { tool: "query_documents" },
     scales: { tool: "get_patient_context", section: "scales" }, diagnoses: { tool: "get_patient_context", section: "diagnoses" },
     evolution: { tool: "get_patient_context", section: "summary" }, identity: { tool: "get_patient_context", section: "profile" },
   };
@@ -128,7 +131,7 @@ describe("patient question frame: every restatement is understood by the determi
 import { patientSwitchFollowup, reaskForSelectedPatient } from "@/shared/alexa/patient-question";
 
 describe("patient question frame: a restatement keeps its meaning when read again", () => {
-  const sections = ["summary", "history", "treatments", "count", "lastdate", "firstdate", "lastnote", "prev", "nextappt", "documents", "scales", "diagnoses", "evolution", "identity"] as const;
+  const sections = ["summary", "history", "treatments", "treatchanges", "bounds", "count", "lastnote", "nextappt", "documents", "scales", "diagnoses", "identity"] as const;
   for (const key of sections) {
     for (const subject of [{ kind: "context" as const }, { kind: "named" as const, name: "Karim Benali" }]) {
       it(`${key} (${subject.kind}) classifies as itself`, () => {
@@ -143,7 +146,7 @@ describe("patient switch: a bare name asks the previous question again, for that
   it("restates the previous question for the new name", () => {
     expect(patientSwitchFollowup("Et celui de Nazim Hamza ?", "Quel est le traitement de Karim Benali ?")?.text).toBe("Quel est le traitement de Nazim Hamza ?");
     expect(patientSwitchFollowup("Passons à Imed Zarat.", "Résumé de Karim Benali.")?.text).toBe("Résumé de Imed Zarat.");
-    expect(patientSwitchFollowup("Pour Tabelait Adadaine maintenant.", "Date de la dernière consultation de Karim Benali ?")?.text).toBe("Date de la dernière consultation de Tabelait Adadaine ?");
+    expect(patientSwitchFollowup("Pour Tabelait Adadaine maintenant.", "Date de la dernière consultation de Karim Benali ?")?.text).toBe("Quelles sont les dates de la première à la dernière consultation de Tabelait Adadaine ?");
     expect(patientSwitchFollowup("Maintenant celles de Mohamed Taki Eddine Araibia.", "Montre les résultats d’échelles de Karim Benali.")?.text).toContain("Mohamed Taki Eddine Araibia");
   });
   it("does nothing when the sentence asks something itself, names nobody, or the last turn asked about no patient", () => {
@@ -158,5 +161,17 @@ describe("patient switch: a bare name asks the previous question again, for that
     expect(reaskForSelectedPatient("Je voudrais des nouvelles de Kouider.")).toBe("Résume le dossier du patient sélectionné.");
     expect(reaskForSelectedPatient("Bonjour")).toBeNull();
     expect(reaskForSelectedPatient(undefined)).toBeNull();
+  });
+});
+
+describe("patient question frame: stray vocabulary is tolerated, a first name is not", () => {
+  it("reads past words no list knows when nobody is named", () => {
+    expect(section("Donne-moi les points importants avant que je commence la consultation.")).toBe("summary");
+    expect(section("Rappelle-moi ce qu'il prend comme gélules.")).toBe("treatments");
+  });
+  it("still refuses a first name alone, or a name in a group of unknown words", () => {
+    expect(patientQuestionFrame("Parle-moi de kouider.", onScreen)).toBeNull();
+    expect(patientQuestionFrame("Résume Samir.", onScreen)).toBeNull();
+    expect(patientQuestionFrame("Combien de consultations a Karim Benali, et Nadia Test ?", onScreen)).toBeNull();
   });
 });

@@ -10,6 +10,8 @@
 export const VERDICTS = ["PASS", "FAIL", "NOT VERIFIED", "BLOCKED"];
 
 const MONTHS = ["janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre"];
+// The application also writes dates in the short form of Intl's "medium" style: "18 oct. 2026", "5 janv. 2025".
+const MONTH_ABBREVIATIONS = ["janv", "fevr", "mars", "avr", "mai", "juin", "juil", "aout", "sept", "oct", "nov", "dec"];
 
 /** Same folding as the app: no accents, lower case, one kind of apostrophe, single spaces. */
 export function fold(value) {
@@ -35,6 +37,7 @@ export function dateAlternatives(isoDay) {
   return [
     `\\b${day}/${month}/${year}\\b`, `\\b${d}/${Number(month)}/${year}\\b`, `\\b${year}-${month}-${day}\\b`, `\\b${day}-${month}-${year}\\b`,
     `\\b(?:1er|${d}|${day}) ${name}(?: ${year})?\\b`,
+    `\\b(?:1er|${d}|${day}) ${MONTH_ABBREVIATIONS[Number(month) - 1]}\\.?(?: ${year})?(?![\\p{L}])`,
   ];
 }
 
@@ -157,4 +160,13 @@ export function rollUp(verdicts) {
   if (verdicts.includes("BLOCKED")) return "BLOCKED";
   if (verdicts.includes("NOT VERIFIED")) return "NOT VERIFIED";
   return verdicts.length ? "PASS" : "NOT VERIFIED";
+}
+
+/** The agenda writes near days relatively: "aujourd'hui à 15 h", "demain", "dans 3 jours". */
+export function relativeDayAlternatives(isoDay, anchorDay) {
+  const diff = Math.round((Date.parse(`${isoDay.slice(0, 10)}T00:00:00Z`) - Date.parse(`${anchorDay.slice(0, 10)}T00:00:00Z`)) / 86400000);
+  if (diff === 0) return ["\\baujourd'hui\\b"];
+  if (diff === 1) return ["\\bdemain\\b"];
+  if (diff === -1) return ["\\bhier\\b"];
+  return diff > 1 ? [`\\bdans ${diff} jours?\\b`] : [`\\bil y a ${-diff} jours?\\b`];
 }

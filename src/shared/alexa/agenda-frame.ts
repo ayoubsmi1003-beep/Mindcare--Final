@@ -83,7 +83,7 @@ const FIRSTLAST = /\b(?:premier|premiere|dernier|derniere)\s+(?:patient|patiente
 const FREE = /\b(?:suis-je libre|libre|disponible|creneaux? (?:libre|disponible))\b/u;
 const BARE_PEOPLE = /^(?:les )?patients?\s*(?:attendus?\s*)?$/u;
 // Words that make it a question about the clinic's population or about one person, not about the agenda.
-const NOT_AGENDA = /\b(?:actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
+const NOT_AGENDA = /\b(?:son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
 const AGENDA_WORDS = /\b(?:combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
 
 export type AgendaIntent = "count" | "list" | "cancelled" | "next" | "first" | "last" | "free";
@@ -157,5 +157,7 @@ function replacePeriod(request: string, replacement: string): string | null {
   // A day part ("demain après-midi") is one period; two separate periods are ambiguous.
   if (matches.length !== 1) return null;
   const match = matches[0]!, start = map[match.index!]!, end = (map[match.index! + match[0].length - 1] ?? request.length - 1) + 1;
-  return `${request.slice(0, start)}${replacement}${request.slice(end)}`;
+  // "recettes de ce mois" -> "recettes du 1 septembre au 30 septembre": no doubled "de du".
+  const before = /\bde\s+$/u.test(request.slice(0, start)) && /^du\s/u.test(replacement) ? request.slice(0, start).replace(/\bde\s+$/u, "") : request.slice(0, start);
+  return `${before}${replacement}${request.slice(end)}`;
 }

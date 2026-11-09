@@ -7,6 +7,7 @@ vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: local }));
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { referencesToRead } from "@/server/alexa/knowledge-references";
+import { LIMITES } from "@/server/knowledge/recherche";
 import { synthesizeKnowledge } from "@/server/alexa/knowledge-synthesis";
 import { knowledgeSynthesisCopy } from "@/i18n/alexa-knowledge";
 import { dialogue } from "@/i18n/alexa-dialogue";
@@ -15,6 +16,8 @@ import type { KnowledgeResult } from "@/server/alexa/knowledge-response";
 const dialogueCopy = dialogue("fr");
 type Proof = KnowledgeResult["preuves"][number];
 const WORDS = "first line treatment with careful monitoring of the plasma level every week";
+/** A text of exactly n characters, so the thresholds follow the configured evidence budget. */
+const textOf = (n: number) => `${WORDS} `.repeat(Math.ceil(n / (WORDS.length + 1))).slice(0, n);
 const proof = (section: string | null, extrait = WORDS, chunkId = section ?? "none"): Proof => ({ chunkId, sourceId: "s", titre: "Guide", section, version: "v1", extrait, langue: "en", versionChunk: 1, unitId: "u", parentTexteHash: "h", enfantIndex: 0, enfantsTotal: 1 }) as unknown as Proof;
 const sections = (question: string, proofs: Proof[]) => referencesToRead(question, proofs).references.map(entry => entry.proof.section);
 
@@ -42,7 +45,7 @@ describe("what is listed", () => {
     }
   });
   it("too long to show is reported, not silent", () => {
-    const { references, omitted } = referencesToRead("Quel traitement ?", [proof("A", `${WORDS} `.repeat(120))]);
+    const { references, omitted } = referencesToRead("Quel traitement ?", [proof("A", textOf(10_300))]);
     expect(references).toEqual([]);
     expect(omitted).toBe(true);
   });
@@ -86,20 +89,20 @@ describe("the answer", () => {
     expect(local).not.toHaveBeenCalled();
   });
   it("a passage over the evidence budget is left out and reported, never cut", async () => {
-    const whole = `${WORDS} `.repeat(106).slice(0, 8100);
+    const whole = textOf(LIMITES.BUDGET_OCTETS + 100);
     const found = await readKnowledge(client([{ section: "Mania › Treatment", texte: `${whole} mania`, chunk: "a" }]), question);
-    expect(found.preuves.some(item => item.extrait.length === 8000)).toBe(false);
+    expect(found.preuves.some(item => item.extrait.length === LIMITES.BUDGET_OCTETS)).toBe(false);
     expect("omittedLongPassages" in found && found.omittedLongPassages).toBe(true);
   });
   it("an oversized passage doesn't hide the shorter ones after it, and only it is called long", async () => {
-    const long = `${WORDS} `.repeat(106).slice(0, 8100);
+    const long = textOf(LIMITES.BUDGET_OCTETS + 100);
     const found = await readKnowledge(client([{ section: "Mania › Long", texte: `${long} mania`, chunk: "a" }, { section: "Mania › Short", texte: `second ${WORDS} mania`, chunk: "b" }]), question);
     expect(found.preuves.map(item => item.section)).toEqual(["Mania › Short"]);
     expect("omittedLongPassages" in found && found.omittedLongPassages).toBe(true);
     expect("omittedOverBudget" in found).toBe(false);
   });
   it("a passage that doesn't fit the total isn't called long", async () => {
-    const big = `${WORDS} `.repeat(95).slice(0, 7500);
+    const big = textOf(LIMITES.BUDGET_OCTETS - 500);
     const found = await readKnowledge(client([{ section: "Mania › Big", texte: `${big} mania`, chunk: "a" }, { section: "Mania › Next", texte: `third ${"careful review of mania care plans over several weeks ".repeat(20)}`, chunk: "b" }]), question);
     const [event] = await synthesizeKnowledge(found, question, "fr", new AbortController().signal, { compact: true });
     const text = (event as { text: string }).text;
@@ -107,12 +110,12 @@ describe("the answer", () => {
     expect(text).not.toContain(dialogueCopy.longKnowledge);
   });
   it("the reranker path doesn't cut a passage either", async () => {
-    const long = `${WORDS} `.repeat(106).slice(0, 8100);
+    const long = textOf(LIMITES.BUDGET_OCTETS + 100);
     const called = vi.fn();
     const rerankerLocal = { nom: "test-cross-encoder", version: "v-test", reranker: () => [], rerankerAsync: async (_query: string, candidats: readonly unknown[], topN = 5) => { called(); return candidats.slice(0, topN).map(candidat => ({ candidat, score: 0.9, apparies: [] })); } };
     const found = await readKnowledge(client([{ section: "Mania › Long", texte: `${long} mania`, chunk: "a" }, { section: "Mania › Short", texte: `second ${WORDS} mania`, chunk: "b" }]), question, undefined, { vectorActif: false, rerankerLocal } as never);
     expect(called).toHaveBeenCalled();
-    expect(found.preuves.some(item => item.extrait.length >= 8000)).toBe(false);
+    expect(found.preuves.some(item => item.extrait.length >= LIMITES.BUDGET_OCTETS)).toBe(false);
     expect("omittedLongPassages" in found && found.omittedLongPassages).toBe(true);
   });
   it("the model comes back only on request", async () => {

@@ -345,7 +345,7 @@ const CLOSED_DRUG_QUESTION=new RegExp(`${CLOSED_TOPIC}|${CLOSED_POPULATION}|${CL
 export function isClosedDrugQuestion(text:string):boolean{
  return CLOSED_DRUG_QUESTION.test(fold(text).replace(/\s+/gu,' ').trim());
 }
-const NOT_A_PERSON=/^(?:traiter|soigner|prevenir|eviter|stabiliser|obtenir|calmer|commencer|debuter|arreter|sevrer|reduire|diminuer|augmenter|dormir|adultes?|enfants?|adolescents?|nourrissons?|femmes?|hommes?|tdah|toc|tag|tspt|tca|manie|psychose|alcool|sevrage|insomnie|agitation|hospitalisation|personnes?|sujets?)$/u;
+const NOT_A_PERSON=/^(?:types?|ii|iii|iv|parler|durer|diagnostiquer|definir|identifier|evoquer|poser|reconnaitre|distinguer|traiter|soigner|prevenir|eviter|stabiliser|obtenir|calmer|commencer|debuter|arreter|sevrer|reduire|diminuer|augmenter|dormir|adultes?|enfants?|adolescents?|nourrissons?|femmes?|hommes?|tdah|toc|tag|tspt|tca|manie|psychose|alcool|sevrage|insomnie|agitation|hospitalisation|personnes?|sujets?)$/u;
 const EPONYM=/^(?:parkinson|alzheimer|huntington|hamilton|lewy|tourette|cotard|creutzfeldt|korsakoff|wernicke|asperger|cushing|capgras|stevens|johnson|ramadan|trouble|stahl|maudsley|taylor|prescriber|guide|kaplan|manuel)$/u;
 const NOT_A_SUBJECT=/^(?:quel|quelle|quels|quelles|comment|pourquoi|quand|ou|qui|que|combien)$/u;
 /**
@@ -500,7 +500,8 @@ export function isClinicalKnowledgeQuestion(text:string):boolean{
  if(/\b(?:prix|tarif|cout|coute|remboursement|pharmacie|stock)\b/u.test(plain))return false;
  if(isPracticeManagementQuestion(text))return false;
  if(questionConcernsAPerson(text))return false;
- if(mentionsAFullName(text)||/\b(?:de|d')\s*([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse)$/u.test(word)))return false;
+ // "de" must be the word itself: as a prefix it read "dépression majeure" as the name "pression majeure".
+ if(mentionsAFullName(text)||/\b(?:de\s+|d')([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse)$/u.test(word)))return false;
  if(isClosedDrugQuestion(text))return true;
  // "Risque de lithium pendant la grossesse": a drug and a clinical subject need no question word.
  if(mentionsMedication(plain)&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
@@ -725,7 +726,9 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  const comparisonQuestion=/^\s*(?:alexa[, :]\s*)?qu['’]est[- ]ce qui a chang\w*\b/u.test(plain);
  const noMutation=/\b(?:sans|ne\s+pas|n['’]\s*pas)\s+(?:ajouter|ajoute|modifier|modifie|changer|change|supprimer|supprime|creer|cree|enregistrer|enregistre|arreter|arrete|suspendre|suspends|reprendre|reprends)\b/u.test(plain);
  const write=!noMutation&&!receivableRead&&!comparisonQuestion&&/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|changer|change|changez|ajuster|ajuste|ajustez|augmenter|augmente|augmentez|diminuer|diminue|diminuez|arreter|arrete|arretez|cesser|cesse|cessez|interrompre|interrompt|interrompez|stopper|stoppe|stoppez|corriger|corrige|corrigez|rectifier|rectifie|rectifiez|passer|passe|passez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|generez|genere(?=\s+(?:un|une|le|la|les|des|du|ce|cette|mon|ma|mes|son|sa|ses)\b)|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
- if(write)return {profileOnly:false};
+ // "Comment arrêter une benzodiazépine ?" asks what the references say; it stops nothing.
+ const howToQuestion=/^(?:alexa\W+)?comment\s+(?:faut-il\s+|peut-on\s+|doit-on\s+)?(?:arreter|stopper|interrompre|cesser|sevrer|reduire|diminuer|augmenter|passer)\b/u.test(plain)&&isClinicalKnowledgeQuestion(text);
+ if(write&&!howToQuestion)return {profileOnly:false};
  const clinical=/\b(?:notes?|historique|consult\w*|seances?|diagnosti\w*|traitements?|echelles?|symptom\w*|analyse\w*|ordonn\w*|certificats?|medic\w*|prescri\w*|therap\w*|stress|sommeil|risques?|humeur|sante|dsm|cim|icd|taylor|maudsley)\b/u.test(plain);
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);
  if(clinical&&finance)return {profileOnly:false};

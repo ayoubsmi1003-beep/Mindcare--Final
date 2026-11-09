@@ -19,7 +19,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import pg from "pg";
-import { dateAlternatives, fold, numberAlternatives } from "./evaluate.mjs";
+import { dateAlternatives, fold, numberAlternatives, relativeDayAlternatives } from "./evaluate.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, "..", "..", "..", "..");
@@ -158,7 +158,7 @@ const drugRegexes = (row) => {
 };
 
 // ── Oracle builders ────────────────────────────────────────────────────────────
-function patientOracle(kind, expect, role, facts) {
+function patientOracle(kind, expect, role, facts, anchorDay) {
   const base = { patientId: role.id };
   const last = facts.closed[0]?.d, first = facts.closed.at(-1)?.d;
   const recent = facts.closed.slice(0, 5).map((row) => row.d);
@@ -197,7 +197,7 @@ function patientOracle(kind, expect, role, facts) {
       return { ...base, groups: [{ label: "previous-dose", any: numberAlternatives(String(change.previous_values.dose).replace(/[^\d.]/gu, "") || "0") }, { label: "drug", any: drugRegexes(change) }] };
     }
     case "nextappt": return facts.next
-      ? { ...base, groups: [{ label: "next-date", any: dateAlternatives(facts.next.d) }] }
+      ? { ...base, groups: [{ label: "next-date", any: [...dateAlternatives(facts.next.d), ...relativeDayAlternatives(facts.next.d, anchorDay)] }] }
       : { ...base, emptyState: true };
     case "documents": return facts.docs ? { ...base, groups: [{ label: "documents", any: numberAlternatives(facts.docs) }] } : { ...base, emptyState: true };
     case "diag": return facts.diag ? { ...base, notVerified: "diagnosis-wording-not-modelled" } : { ...base, emptyState: true };
@@ -369,7 +369,7 @@ export async function generate({ mainUrl, fixtureUrl }) {
           oracle = role ? { patientId: role.id, groups: [{ label: "next-patient-name", any: [escapeRegex(fold(role.first_name)), escapeRegex(fold(role.last_name))] }] } : { notVerified: "no-next-patient-in-fixture-agenda" };
         } else if (expect.r) {
           const role = roles[item.db][expect.r];
-          oracle = role ? patientOracle(expect.k, expect, role, await factsFor(item.db, role)) : { blocked: `role-unresolved:${expect.r}` };
+          oracle = role ? patientOracle(expect.k, expect, role, await factsFor(item.db, role), anchorDay) : { blocked: `role-unresolved:${expect.r}` };
         } else if (expect.k.startsWith("a_")) oracle = await agendaOracle(handle.client, expect, anchorDay, anchor);
         else if (expect.k.startsWith("f_")) oracle = await financeOracle(handle.client, expect, anchorDay);
         else if (expect.k.startsWith("n_")) oracle = await activityOracle(handle.client, expect, anchorDay);

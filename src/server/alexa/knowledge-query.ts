@@ -109,6 +109,8 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   frequence: ["frequence", "frequency"], signes: ["signes", "signs"], signe: ["signe", "sign"],
   agit: ["agit", "works"], agir: ["agir", "works"],
   action: ["action", "action"],
+  diagnostiques: ["diagnostiques", "criteria"], diagnostique: ["diagnostique", "criteria"],
+  majeure: ["majeure", "major"], majeur: ["majeur", "major"], generalisee: ["generalisee", "generalized"], generalise: ["generalise", "generalized"],
   messager: ["messager", "messenger"], messagers: ["messagers", "messenger"],
   intracellulaire: ["intracellulaire", "intracellular"], intracellulaires: ["intracellulaires", "intracellular"],
   mecanisme: ["mecanisme", "mechanism"], mecanismes: ["mecanismes", "mechanism"],
@@ -185,6 +187,20 @@ export function isKnowledgeLocationQuestion(question: string): boolean {
 }
 
 /** Local query planning only. SQL still decides approval, lifecycle and access. */
+/** The French manual's own wording for the conditions a doctor names in other words. Closed list; null when nothing applies. */
+const MANUAL_TERMS: readonly (readonly [RegExp, string])[] = [
+  [/\b(?:episodes?\s+depressifs?\s+majeurs?|troubles?\s+depressifs?\s+majeurs?|depressions?\s+(?:majeures?|caracterisees?|unipolaires?))\b/gu, "trouble depressif caracterise"],
+  [/\b(?:troubles?\s+anxieux\s+generalises?|anxietes?\s+generalisees?)\b/gu, "anxiete generalisee"],
+  [/\bdysthymies?\b/gu, "trouble depressif persistant"],
+  [/\btdah\b/gu, "deficit attention hyperactivite"],
+  [/\btoc\b/gu, "trouble obsessionnel compulsif"],
+  [/\btspt\b/gu, "trouble stress post traumatique"],
+];
+export function frenchManualTerms(normalized: string): string | null {
+  let changed = normalized;
+  for (const [pattern, term] of MANUAL_TERMS) changed = changed.replace(pattern, term);
+  return changed !== normalized ? changed : null;
+}
 export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null {
   // Never truncate away a final book, population, dose or other restriction.
   if (question.length > 500) return null;
@@ -306,6 +322,19 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       && !queries.includes(requeteCoeur)) {
       queries.push(requeteCoeur);
       references.push(requeteCoeur);
+    }
+  }
+  // The doctor says "dépression majeure", the French manual writes "trouble dépressif caractérisé": a lexical gate in ET finds nothing
+  // under the doctor's word. Add the manual's own term as one more query, never in place of the doctor's.
+  if (book === undefined) {
+    const manualTerms = frenchManualTerms(normalized);
+    if (manualTerms) {
+      const lexemesVariant = manualTerms.match(/[\p{L}]+/gu) ?? [];
+      const termsVariant = [...new Set(lexemesVariant.flatMap(token => jetoniser(token)).filter(token => !SCAFFOLD.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
+      const variant = [...new Set(termsVariant.map(token => ALIASES[token]?.[0] ?? token))].join(" ");
+      // First: the manual's own term is the query most likely to find the passage, and the doctor's wording finds noise beside it.
+      // The French manual does not contain the doctor's wording, so that query can only add noise: it is replaced, the English one stays.
+      if (variant && !queries.includes(variant)) { queries[0] = variant; references[0] = variant; }
     }
   }
   const recoveryQueries: { query: string; reference: string }[] = [];

@@ -1,3 +1,5 @@
+// These tests cover the model-selection summary path, which ALEXA_SUMMARY_MODEL=1 keeps available; the default plain summary is model-free (see alexa-plain-summary.test.ts).
+process.env["ALEXA_SUMMARY_MODEL"] = "1";
 import { expect, it, vi } from 'vitest';
 vi.mock("@/server/alexa/local-model",async importOriginal=>({...await importOriginal<typeof import("@/server/alexa/local-model")>(),inferLocalText:vi.fn()}));
 import { agentExecutor, isolatePreviousClinicalConsultation } from '@/server/alexa/agent-tools';

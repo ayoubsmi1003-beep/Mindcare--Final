@@ -66,7 +66,7 @@ export interface PreuveAlexa {
 
 // Allow a complete UTF-8 passage slightly above the 8,000-character aggregate
 // budget. `orchestrerRecherche` still enforces that unchanged aggregate cap.
-const MAX_PASSAGE_UTF8_BYTES = 8_192;
+const MAX_PASSAGE_UTF8_BYTES = 12_000;
 
 // Le pool vaut 10 connexions : quatre portes simultanées laissent de la marge
 // à une lecture clinique concurrente (voir `parallele.ts`).

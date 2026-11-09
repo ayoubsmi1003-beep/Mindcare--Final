@@ -18,7 +18,9 @@ describe("C200 evaluator: numbers and dates never match by accident", () => {
   });
   it("accepts each way the app writes a day, and no other day", () => {
     const alternatives = dateAlternatives("2026-10-05");
-    for (const text of ["le 05/10/2026", "le 5 octobre 2026", "2026-10-05", "le 5 octobre"]) expect(matches(alternatives, text)).toBe(true);
+    for (const text of ["le 05/10/2026", "le 5 octobre 2026", "2026-10-05", "le 5 octobre", "5 oct. 2026", "5 oct 2026"]) expect(matches(alternatives, text)).toBe(true);
+    expect(matches(dateAlternatives("2025-01-05"), "dernière consultation du 5 janv. 2025")).toBe(true);
+    expect(matches(alternatives, "15 oct. 2026")).toBe(false);
     expect(matches(alternatives, "le 15 octobre 2026")).toBe(false);
     expect(matches(alternatives, "le 5 novembre 2026")).toBe(false);
   });
@@ -108,5 +110,17 @@ describe("C200 campaign file", () => {
     const { all, problems } = buildCases();
     expect(problems).toEqual([]);
     expect(all).toHaveLength(200);
+  });
+});
+
+import { relativeDayAlternatives } from "../eval/alexa-clinical-conversational/v1/evaluate.mjs";
+describe("C200 evaluator: relative days as the agenda writes them", () => {
+  it("matches today, tomorrow and n days ahead, and nothing else", () => {
+    const text = (day: string) => matches(relativeDayAlternatives(day, "2026-10-26"), "1 rendez-vous prévu : aujourd’hui à 15 h, demain, dans 3 jours à 9 h");
+    expect(text("2026-10-26")).toBe(true);
+    expect(text("2026-10-27")).toBe(true);
+    expect(text("2026-10-29")).toBe(true);
+    expect(text("2026-10-30")).toBe(false);
+    expect(matches(relativeDayAlternatives("2026-10-24", "2026-10-26"), "il y a 2 jours")).toBe(true);
   });
 });

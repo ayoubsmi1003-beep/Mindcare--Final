@@ -22,15 +22,18 @@ const overview = z.object({
     patients_total: count, patients_suivis: count, rdv_a_venir: count, rdv_non_clotures: count, traitements_actifs: count,
   }).passthrough(),
   comparaison: z.object({ seances: count }).passthrough(),
+  // ISO weekday (1 = Monday) with its closed sessions. Optional: an older gate may not return it.
+  jours_semaine: z.array(z.object({ cle: z.union([z.number(), z.string()]), n: count }).passthrough()).max(7).optional(),
 }).passthrough();
 
 export function statisticsRead(raw: unknown): PracticeRead {
-  const { periode, pulse, comparaison } = overview.parse(raw), s = copy.statistics;
+  const { periode, pulse, comparaison, jours_semaine } = overview.parse(raw), s = copy.statistics;
+  const busiest = (jours_semaine ?? []).map(day => ({ name: s.weekdays[Number(day.cle) - 1] ?? "", n: day.n })).filter(day => day.name && day.n > 0).sort((a, b) => b.n - a.n).slice(0, 3);
   return {
     complete: true, empty: false,
     data: { du: periode.du, au: periode.au, seances: pulse.seances, absences: pulse.absences, nouveaux: pulse.nouveaux },
     text: [
-      s.heading(periode.du, periode.au), s.sessions(pulse.seances), s.patientsSeen(pulse.patientes_vues), s.returning(pulse.retours), s.newRecords(pulse.nouveaux), s.noShows(pulse.absences), s.cancellations(pulse.annulations),
+      s.heading(periode.du, periode.au), s.sessions(pulse.seances), ...(busiest.length ? [s.busiestDays(busiest)] : []), s.patientsSeen(pulse.patientes_vues), s.returning(pulse.retours), s.newRecords(pulse.nouveaux), s.noShows(pulse.absences), s.cancellations(pulse.annulations),
       s.signedNotes(pulse.notes_signees), s.unsignedSessions(pulse.notes_manquantes), s.scales(pulse.echelles), s.treatmentChanges(pulse.changements_traitement), s.followed(pulse.patients_suivis), s.previous(periode.precedente_du, periode.precedente_au, comparaison.seances),
       s.currentHeading, s.totalRecords(pulse.patients_total), s.upcoming(pulse.rdv_a_venir), s.unclosed(pulse.rdv_non_clotures), s.activeTreatments(pulse.traitements_actifs),
     ].join("\n"),

@@ -19,7 +19,8 @@ import {applicationReadCopy} from "@/i18n/alexa-application";
 import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
-import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
+import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate, type ClinicalNarrative } from "./clinical-narrative";
+import { buildConsultationNoteDetails, buildStructuredSummaryNarrative } from "./case-summary";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns} from "@/shared/alexa/request-contract";
@@ -497,7 +498,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      if(!first||!last)return {...result,status:'empty',complete:true,text:applicationReadCopy.extended.empty,evidence:[patientSource(patientId!)]};
      const date=(at:string)=>new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers',day:'numeric',month:'long',year:'numeric'}).format(new Date(at));
      result.data={patientId,sourceRevision:authorizedContext.sourceRevision,consultationBounds:{first:{id:first.id,startedAt:first.startedAt},last:{id:last.id,startedAt:last.startedAt,endedAt:last.endedAt}},coverage:authorizedContext.coverage};
-     result.text=`La première consultation du dossier est datée du ${date(first.startedAt)} ; la dernière consultation ${last.endedAt===null?'en cours a commencé':'est datée du'} ${date(last.startedAt)}.`;
+     const lastClause=`la dernière consultation ${last.endedAt===null?'en cours a commencé':'est datée du'} ${date(last.startedAt)}.`;
+     // Never present the oldest of a partial read as the first visit of the record.
+     result.text=authorizedContext.coverage.complete&&!authorizedContext.coverage.hasMore
+       ?`La première consultation du dossier est datée du ${date(first.startedAt)} ; ${lastClause}`
+       :narrativeCopy.boundsPartial(lastClause.charAt(0).toUpperCase()+lastClause.slice(1),visits.length,date(first.startedAt));
      result.evidence=[patientSource(patientId!),{id:first.id,type:'consultation',label:date(first.startedAt)},{id:last.id,type:'consultation',label:date(last.startedAt)}];
      result.complete=authorizedContext.coverage.complete;
      result.status=result.complete?'ok':'partial';
@@ -541,7 +546,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     }
     const boundedSummary=section==='summary'&&!rangedSummary&&requestedSummaryCount!==undefined;
       const singleVisitFocus:'concerns'|'visit_summary'|undefined=requestedSummaryCount===1?(requestsCurrentVisitConcern(requestText)?'concerns':'visit_summary'):undefined;
-      const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
+      // A plain "résumé du dossier" is built from the recorded fields alone: no model, so it is immediate whatever the size of the
+      // record, and every sentence is a recorded field or a quotation of one. ALEXA_SUMMARY_MODEL=1 restores the model's selection.
+      const plainWholeSummary=!previousConsultationRequest&&!recurringThemeRequest&&!chronologicalSummary&&!latestConsultationComparison&&!rangedSummary&&!boundedSummary&&!requestedSummaryScope&&process.env["ALEXA_SUMMARY_MODEL"]!=="1";
+      // "Résume la dernière consultation": the recorded note areas of that visit, quoted with their date. No model either.
+      const lastVisitItems=boundedSummary&&requestedSummaryCount===1&&singleVisitFocus==='visit_summary'&&!recurringThemeRequest&&!latestConsultationComparison&&process.env["ALEXA_SUMMARY_MODEL"]!=="1"?buildConsultationNoteDetails(context,[]):[];
+      const plainLastVisit=lastVisitItems.length>0;
+      const structuredItems=plainWholeSummary?buildStructuredSummaryNarrative(context,[]):lastVisitItems;
+      const narrative:ClinicalNarrative = plainWholeSummary||plainLastVisit
+        ? {text:structuredItems.map(item=>item.texte).join(" "),complete:context.coverage.complete,generated:true,method:"structured",sourceIds:[...new Set(structuredItems.flatMap(item=>item.sources.map(source=>source.id)))]}
+        : (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
         ?? (chronologicalSummary||latestConsultationComparison?await summarizeClinicalContext(comparisonContext,signal,!requestedSummaryScope,true,{chronological:true,includeDates:latestConsultationComparison,...(latestConsultationComparison?{comparison:true}:{})}):rangedSummary?await summarizeClinicalConsultations(context,signal):boundedSummary?await summarizeClinicalContext(context,signal,false,true,{includeDates:false,...(singleVisitFocus?{focus:singleVisitFocus}:{})}):!requestedSummaryScope?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
     summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
@@ -557,7 +571,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      result.text = narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (summaryLimit ? " " + summaryLimit : "");
     const latest = context.consultations[0];
     if (latest && !rangedSummary && narrative.method !== "structured" && requestsClinicalDate(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
-    result.presentation = "inference";
+    // Recorded fields and their quotations are facts; only a model's selection is an inference to verify.
+    if (!plainWholeSummary&&!plainLastVisit) result.presentation = "inference";
      if (!completeForRequest) { result.complete=false; result.status="partial"; return result; }
    }
     result.complete=section==="summary"?clinicalSummaryComplete(context,summaryComplete,requestedSummaryScope):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;

@@ -24,9 +24,13 @@ export const alexaIdentityCopy = {
 
 /** Wording of the practice and treatment reads. Every figure comes from a database gate. */
 export const practiceReadCopy = {
+  /** Only cash exists as a payment method (ADR-010): a question about another method gets this, never a guess. */
+  cashOnly: "L’application n’enregistre que les paiements en espèces : aucun autre mode de paiement n’est enregistré, donc il n’y a rien à séparer.",
   statistics: {
     heading: (from: string, to: string) => `Activité enregistrée du ${from} au ${to}, dans votre périmètre d’accès :`,
     sessions: (n: number) => `Séances closes : ${n}`,
+    weekdays: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"] as readonly string[],
+    busiestDays: (days: readonly { name: string; n: number }[]) => `Jours les plus chargés, par séances closes : ${days.map(day => `${day.name} (${day.n})`).join(", ")}`,
     patientsSeen: (n: number) => `Patients vus, avec au moins une séance close : ${n}`,
     returning: (n: number) => `Retours, patients vus dont le dossier existait déjà avant la période : ${n}`,
     newRecords: (n: number) => `Nouveaux dossiers ouverts : ${n}`,
