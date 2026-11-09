@@ -30,6 +30,16 @@ const common = new Set([
   "النوم", "القلق", "الاعراض", "اعراض", "الملاحظات", "ملاحظات", "المزاج", "تاع",
 ]);
 for(const word of ['premier','premiere','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','douze','treize','quatorze','quinze','seize','dix-sept','dix-huit','dix-neuf','vingt','vingt-et-un','vingt-et-une','vingt-deux','vingt-trois','vingt-quatre','vingt-cinq','vingt-six','vingt-sept','vingt-huit','vingt-neuf','trente','trente-et-un','trente-et-une'])common.add(word);
+// Names of conditions and of clinical notions are never a person: "critères de la dépression majeure" names nobody.
+for (const word of [
+  "majeure", "majeur", "majeures", "majeurs", "persistant", "persistante", "persistants", "persistantes", "type", "types", "generalisee", "generalise", "generalisees", "anxieux", "anxieuse", "anxieuses",
+  "depressif", "depressive", "depressifs", "depressives", "obsessionnel", "obsessionnelle", "obsessionnels", "obsessionnelles", "compulsif", "compulsive", "compulsifs", "compulsives",
+  "panique", "paniques", "manie", "maniaque", "maniaques", "hypomaniaque", "hypomaniaques", "episode", "episodes", "psychotique", "psychotiques", "psychose", "psychoses", "autisme", "tdah", "toc", "tspt", "tag",
+  "anorexie", "boulimie", "personnalite", "limite", "borderline", "adaptation", "phobie", "phobies", "agoraphobie", "sevrage", "syndrome", "serotoninergique", "resistante", "resistant", "resistantes", "resistants",
+  "antipsychotique", "antipsychotiques", "antidepresseur", "antidepresseurs", "benzodiazepine", "benzodiazepines", "metabolique", "metaboliques", "effet", "duree", "criteres", "critere", "post-traumatique", "traumatique", "stress",
+  "schizophrenie", "schizophrene", "schizoaffectif", "bipolaire", "delirant", "delirants", "insomnie", "dysthymie", "hyperactivite", "attention", "deficit", "alimentaires", "alimentaire", "prescription", "prescriptions",
+  "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
+]) common.add(word);
 const folded = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const scaleNames = new Set(["hamilton", "madrs"]);
 function candidateName(value: string | undefined): string | undefined {

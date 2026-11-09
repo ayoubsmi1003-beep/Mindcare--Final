@@ -46,7 +46,7 @@ export function agendaSelection(text: string, inheritedDay?: string, asOf = new 
     return { day: civil, requestedOnly: /\ba confirmer\b|\ben attente (?:de confirmation|d.approbation)\b/u.test(normalized) };
   }
   const mentions = [...normalized.matchAll(days)].map(match => match[0]);
-  const unqualified = normalized.replace(/\b(?:prochain\s+patient|patient\s+suivant)\b|المريض\s+(?:التالي|الجاي)/gu, "");
+  const unqualified = normalized.replace(/\b(?:prochain\s+patient|patient\s+suivant)\b|المريض\s+(?:التالي|الجاي)|\bqui\s+(?:est|vient)\s+(?:le\s+|la\s+)?(?:prochain|prochaine|suivant|suivante)\b|^\s*(?:(?:et|alors|bon|ben)[,\s]+)*(?:le\s+)?(?:prochain|suivant)\s*[?!.]*\s*$|\bau\s+suivant\b|\bpass(?:e|ons)\s+au\s+(?:patient\s+)?suivant\b/gu, "");
   if (mentions.length > 1 || unsupported.test(normalized.replace(days, ""))
     || /\b(?:apres[- ]demain|avant[- ]hier|dernier|derniere|precedent|precedente|prochain|prochaine)\b|(?:بعد|قبل)\s+(?:غدوة|غدوه|غدا|اليوم|البارح)|الماضي|القادم|الجاي|الفايت/u.test(unqualified)) return null;
   const explicitToday = /\b(?:du jour|ma journee)\b/u.test(normalized);

@@ -1,0 +1,4371 @@
+{
+ "version": 1,
+ "campaign": "C200",
+ "frozenOn": "2026-11-09",
+ "language": "fr",
+ "cases": [
+  {
+   "id": "C001",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Fais-moi un résumé de ce patient.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C002",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qu'on sait sur {R2} ?",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C003",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi les points importants avant que je commence la consultation.",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C004",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Je le vois dans une minute, rappelle-moi l'essentiel de son dossier.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C005",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Synthèse clinique de {R5}, s'il te plaît.",
+     "expect": {
+      "k": "summary",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C006",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Où en est ce patient ?",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C007",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Présente-moi le dossier de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C008",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Un petit point sur lui ?",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C009",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi son historique.",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C010",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est l'historique médical de {R4} ?",
+     "expect": {
+      "k": "history",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C011",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Retrace son parcours dans le cabinet.",
+     "expect": {
+      "k": "history",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C012",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi l'historique des consultations de {R6}.",
+     "expect": {
+      "k": "history",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C013",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Il est venu combien de fois depuis le début ?",
+     "expect": {
+      "k": "count",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C014",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Depuis quand je le suis ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C015",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "De quoi avons-nous parlé à la dernière séance ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C016",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle était la dernière consultation de {R4} ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C017",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Résume sa dernière consultation.",
+     "expect": {
+      "k": "lastnote",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C018",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce que j'ai noté la dernière fois ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C019",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi la dernière séance de {R1}.",
+     "expect": {
+      "k": "lastnote",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C020",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "C'est quand, sa dernière visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C021",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "À quelle date est-il venu pour la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C022",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "La dernière consultation de {R4}, c'était quand ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C023",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Il prend quoi comme traitement en ce moment ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C024",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels médicaments {T2} prend-il actuellement ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C025",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Quel est son traitement actuel ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C026",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T4"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi son ordonnance en cours.",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C027",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T5"
+   },
+   "turns": [
+    {
+     "say": "À quelle dose est-il actuellement ?",
+     "expect": {
+      "k": "treat",
+      "r": "T5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C028",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "N1"
+   },
+   "turns": [
+    {
+     "say": "Quel traitement suit ce patient ?",
+     "expect": {
+      "k": "treat",
+      "r": "N1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C029",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Quel était son traitement précédent ?",
+     "expect": {
+      "k": "prevtreat",
+      "r": "T1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C030",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce que {N2} prenait avant ?",
+     "expect": {
+      "k": "prevtreat",
+      "r": "N2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C031",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "Son traitement a-t-il changé récemment ?",
+     "expect": {
+      "k": "prevtreat",
+      "r": "T2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C032",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations a-t-il eues ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C033",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de fois {R5} est-il venu au cabinet ?",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C034",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Quel est le nombre total de séances ?",
+     "expect": {
+      "k": "count",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C035",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Combien de fois l'ai-je vu en tout ?",
+     "expect": {
+      "k": "count",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C036",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nombre de consultations pour {R2}.",
+     "expect": {
+      "k": "count",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C037",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Quand l'ai-je vu pour la première fois ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C038",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Date de la première consultation de {R4} ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C039",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "F1"
+   },
+   "turns": [
+    {
+     "say": "Il a déjà eu une consultation ?",
+     "expect": {
+      "k": "count",
+      "r": "F1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C040",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "Z1"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations a ce patient ?",
+     "expect": {
+      "k": "count",
+      "r": "Z1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C041",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les trois dernières dates de visite de {R5} ?",
+     "expect": {
+      "k": "prev",
+      "r": "R5",
+      "n": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "C042",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi ses consultations précédentes.",
+     "expect": {
+      "k": "prev",
+      "r": "R6",
+      "n": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "C043",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qui s'est dit pendant les séances d'avant ?",
+     "expect": {
+      "k": "prev",
+      "r": "R1",
+      "n": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "C044",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Les deux dernières consultations de {R2}, s'il te plaît.",
+     "expect": {
+      "k": "prev",
+      "r": "R2",
+      "n": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "C045",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi sa récente histoire de consultations.",
+     "expect": {
+      "k": "prev",
+      "r": "R3",
+      "n": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "C046",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U1"
+   },
+   "turns": [
+    {
+     "say": "A-t-il un prochain rendez-vous ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C047",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quand revient {U2} ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C048",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Est-ce que je l'ai programmé pour une prochaine séance ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C049",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U3"
+   },
+   "turns": [
+    {
+     "say": "Quel est son prochain rendez-vous ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C050",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Comment a-t-il évolué ces derniers temps ?",
+     "expect": {
+      "k": "evolution",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C051",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Fais-moi un résumé de l'évolution clinique de {R6}.",
+     "expect": {
+      "k": "evolution",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C052",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Quoi de neuf sur ce patient ?",
+     "expect": {
+      "k": "evolution",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C053",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Quels documents a-t-il dans son dossier ?",
+     "expect": {
+      "k": "documents",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C054",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "S1"
+   },
+   "turns": [
+    {
+     "say": "A-t-il des échelles enregistrées ?",
+     "expect": {
+      "k": "scales",
+      "r": "S1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C055",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Quels diagnostics sont enregistrés pour lui ?",
+     "expect": {
+      "k": "diag",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C056",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Quels sont ses derniers médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C057",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Combien de fois est-il venu ?",
+     "expect": {
+      "k": "count",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C058",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Son historique, s'il te plaît.",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C059",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Il a déjà pris quoi ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C060",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Résume ce malade.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C061",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "C'est quand, sa dernière visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C062",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Son traitement actuel ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C063",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R6",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qu'on sait sur ce malade ?",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C064",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Qui est ce patient ?",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C065",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Depuis quand il vient chez nous ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "OPEN"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C066",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi les informations de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Et son dernier traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Et ses consultations précédentes ?",
+     "expect": {
+      "k": "prev",
+      "r": "R1",
+      "n": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "C067",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Parle-moi de {T1}.",
+     "expect": {
+      "k": "summary",
+      "r": "T1"
+     }
+    },
+    {
+     "say": "Et ses médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    },
+    {
+     "say": "Combien de fois est-il venu ?",
+     "expect": {
+      "k": "count",
+      "r": "T1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C068",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais le dossier de {R2}.",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     }
+    },
+    {
+     "say": "Quand est-il venu la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     }
+    },
+    {
+     "say": "Et la première fois ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C069",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que sait-on sur {R3} ?",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     }
+    },
+    {
+     "say": "Son historique ?",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     }
+    },
+    {
+     "say": "Et sa dernière consultation ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C070",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Informations sur {T2}.",
+     "expect": {
+      "k": "summary",
+      "r": "T2"
+     }
+    },
+    {
+     "say": "Quels médicaments prend-il ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     }
+    },
+    {
+     "say": "Depuis quand je le suis ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "T2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C071",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Résume {R4}.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     }
+    },
+    {
+     "say": "Et combien de séances ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     }
+    },
+    {
+     "say": "Quelle est sa dernière date de visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C072",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dis-moi ce que tu as sur {N1}.",
+     "expect": {
+      "k": "summary",
+      "r": "N1"
+     }
+    },
+    {
+     "say": "Il prend un traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "N1"
+     }
+    },
+    {
+     "say": "Et ses documents ?",
+     "expect": {
+      "k": "documents",
+      "r": "N1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C073",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi le dossier de {R5}.",
+     "expect": {
+      "k": "summary",
+      "r": "R5"
+     }
+    },
+    {
+     "say": "Et son traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R5"
+     }
+    },
+    {
+     "say": "Et sa dernière consultation ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R5"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C074",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Parle-moi de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Maintenant, parle-moi de {R2}.",
+     "expect": {
+      "k": "summary",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     }
+    },
+    {
+     "say": "Et son dernier traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C075",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le traitement de {T1} ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    },
+    {
+     "say": "Et celui de {T2} ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2",
+      "decoys": [
+       "T1"
+      ]
+     }
+    },
+    {
+     "say": "Combien de consultations a-t-il eues ?",
+     "expect": {
+      "k": "count",
+      "r": "T2",
+      "decoys": [
+       "T1"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C076",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations a {R3} ?",
+     "expect": {
+      "k": "count",
+      "r": "R3"
+     }
+    },
+    {
+     "say": "Et {R4} ?",
+     "expect": {
+      "k": "count",
+      "r": "R4",
+      "decoys": [
+       "R3"
+      ]
+     }
+    },
+    {
+     "say": "Reviens à {R3} : quand est-il venu la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3",
+      "decoys": [
+       "R4"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C077",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dernière consultation de {R5}.",
+     "expect": {
+      "k": "lastdate",
+      "r": "R5"
+     }
+    },
+    {
+     "say": "Pour {R6} maintenant.",
+     "expect": {
+      "k": "lastdate",
+      "r": "R6",
+      "decoys": [
+       "R5"
+      ]
+     }
+    },
+    {
+     "say": "Et sa première visite ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R6",
+      "decoys": [
+       "R5"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C078",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Son historique ?",
+     "expect": {
+      "k": "history",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Et {R2} ?",
+     "expect": {
+      "k": "summary",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     }
+    },
+    {
+     "say": "Son traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C079",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi les infos de {R3}.",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     }
+    },
+    {
+     "say": "Maintenant celles de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1",
+      "decoys": [
+       "R3"
+      ]
+     }
+    },
+    {
+     "say": "Et sa dernière date de visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R1",
+      "decoys": [
+       "R3"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C080",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Traitement de {N1} ?",
+     "expect": {
+      "k": "treat",
+      "r": "N1"
+     }
+    },
+    {
+     "say": "Maintenant celui de {T3}.",
+     "expect": {
+      "k": "treat",
+      "r": "T3",
+      "decoys": [
+       "N1"
+      ]
+     }
+    },
+    {
+     "say": "Combien de visites ?",
+     "expect": {
+      "k": "count",
+      "r": "T3",
+      "decoys": [
+       "N1"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C081",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Résumé de {R2}.",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     }
+    },
+    {
+     "say": "Passons à {R5}.",
+     "expect": {
+      "k": "summary",
+      "r": "R5",
+      "decoys": [
+       "R2"
+      ]
+     }
+    },
+    {
+     "say": "Qu'est-ce qu'on a dit à sa dernière séance ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R5",
+      "decoys": [
+       "R2"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C082",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais des nouvelles de {HA.first}.",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     }
+    },
+    {
+     "say": "{HA}.",
+     "expect": {
+      "k": "summary",
+      "r": "HA",
+      "decoys": [
+       "HB"
+      ]
+     }
+    },
+    {
+     "say": "Et son traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "HA",
+      "decoys": [
+       "HB"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C083",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qu'on a sur {HC.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     }
+    },
+    {
+     "say": "Je parle de {HC}.",
+     "expect": {
+      "k": "summary",
+      "r": "HC",
+      "decoys": [
+       "HD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C084",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dernière consultation de {HB.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     }
+    },
+    {
+     "say": "{HB}.",
+     "expect": {
+      "k": "lastdate",
+      "r": "HB",
+      "decoys": [
+       "HA"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C085",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations a {HD.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     }
+    },
+    {
+     "say": "C'est {HD}.",
+     "expect": {
+      "k": "count",
+      "r": "HD",
+      "decoys": [
+       "HC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C086",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Informations sur {SA}.",
+     "expect": {
+      "k": "summary",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C087",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Informations sur {SB}.",
+     "expect": {
+      "k": "summary",
+      "r": "SB",
+      "decoys": [
+       "SA"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C088",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la dernière consultation de {SA} ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C089",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi le dossier de {DA}.",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "DA",
+       "DB"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C090",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations a {DB} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "DA",
+       "DB"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C091",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Résumé de {R1.up}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C092",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que sait-on sur {R2.rev} ?",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C093",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dernière visite de {R3.plain} ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C094",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Parle-moi de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Quel est son dernier traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     },
+     "page": {
+      "type": "consultation",
+      "role": "R2",
+      "which": "last"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C095",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Son historique ?",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     }
+    },
+    {
+     "say": "Ce patient prend quoi ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4",
+      "decoys": [
+       "R3"
+      ]
+     },
+     "page": {
+      "type": "consultation",
+      "role": "T4",
+      "which": "last"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C096",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Ce patient a combien de consultations ?",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     }
+    },
+    {
+     "say": "Combien de consultations a ce patient ?",
+     "expect": {
+      "k": "count",
+      "r": "R6",
+      "decoys": [
+       "R5"
+      ]
+     },
+     "page": {
+      "type": "consultation",
+      "role": "R6",
+      "which": "last"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C097",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dernière consultation de {R1} ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R1"
+     }
+    },
+    {
+     "say": "Quelle heure est-il ?",
+     "expect": {
+      "k": "plain",
+      "noPatientRead": true
+     }
+    },
+    {
+     "say": "Merci.",
+     "expect": {
+      "k": "plain"
+     }
+    },
+    {
+     "say": "Et son dernier traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C098",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Résumé de {T1}.",
+     "expect": {
+      "k": "summary",
+      "r": "T1"
+     }
+    },
+    {
+     "say": "Combien de patients ai-je aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today",
+      "noPatientRead": true
+     }
+    },
+    {
+     "say": "Et ses médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C099",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Patient suivant.",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     }
+    },
+    {
+     "say": "Quels sont ses derniers médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "NP1"
+     }
+    },
+    {
+     "say": "Son historique ?",
+     "expect": {
+      "k": "history",
+      "r": "NP1"
+     }
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "C100",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est le prochain ?",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     }
+    },
+    {
+     "say": "Combien de fois est-il venu ?",
+     "expect": {
+      "k": "count",
+      "r": "NP1"
+     }
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "C101",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui ai-je aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C102",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C103",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C104",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est mon prochain rendez-vous ?",
+     "expect": {
+      "k": "a_next"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C105",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quelle heure est mon prochain patient ?",
+     "expect": {
+      "k": "a_next"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C106",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ai-je des rendez-vous cet après-midi ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "pm"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C107",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui a annulé son rendez-vous cette semaine ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C108",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui a annulé ses rendez-vous ce mois-ci ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C109",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quoi ressemble ma semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C110",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Suis-je libre demain matin ?",
+     "expect": {
+      "k": "a_free",
+      "day": "tomorrow",
+      "part": "am"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C111",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est le premier patient aujourd'hui ?",
+     "expect": {
+      "k": "a_first",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C112",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations ai-je cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C113",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi un aperçu de l'agenda d'aujourd'hui.",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C114",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont mes rendez-vous de demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C115",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients hier ?",
+     "expect": {
+      "k": "a_count",
+      "day": "yesterday"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C116",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui avais-je hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C117",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous la semaine dernière ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastweek"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C118",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est mon dernier patient aujourd'hui ?",
+     "expect": {
+      "k": "a_last",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C119",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Est-ce que j'ai du monde ce matin ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "am"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C120",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous le 28 octobre ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-28"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C121",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Mon planning du 29 octobre ?",
+     "expect": {
+      "k": "a_list",
+      "day": "2026-10-29"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C122",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quelle heure commence ma journée demain ?",
+     "expect": {
+      "k": "a_first",
+      "day": "tomorrow"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C123",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    },
+    {
+     "say": "Et demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     }
+    },
+    {
+     "say": "Et cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C124",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients ai-je demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     }
+    },
+    {
+     "say": "Et après-demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-28"
+     }
+    },
+    {
+     "say": "Et hier ?",
+     "expect": {
+      "k": "a_count",
+      "day": "yesterday"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C125",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui ai-je aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     }
+    },
+    {
+     "say": "Et demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C126",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous confirmés aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today",
+      "status": "confirmed"
+     }
+    },
+    {
+     "say": "Et demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow",
+      "status": "confirmed"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C127",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     }
+    },
+    {
+     "say": "Et la semaine dernière ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastweek"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C128",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous cet après-midi ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "pm"
+     }
+    },
+    {
+     "say": "Et demain après-midi ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "tomorrow",
+      "part": "pm"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C129",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est attendu demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     }
+    },
+    {
+     "say": "Et le lendemain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "2026-10-28"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C130",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ai-je des rendez-vous aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    },
+    {
+     "say": "Combien ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C131",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien le cabinet a-t-il encaissé aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C132",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les recettes de ce mois ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C133",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien d'argent avons-nous encaissé cette semaine ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C134",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les impayés ?",
+     "expect": {
+      "k": "f_outstanding",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C135",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien avons-nous reçu en espèces ce mois-ci ?",
+     "expect": {
+      "k": "f_cash",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C136",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien a été payé par un autre moyen que les espèces ?",
+     "expect": {
+      "k": "f_other_methods",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C137",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les dépenses du cabinet ce mois-ci ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C138",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare ce mois avec le mois dernier.",
+     "expect": {
+      "k": "f_compare",
+      "a": "month",
+      "b": "lastmonth"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C139",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le chiffre d'affaires de cette année ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "year"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C140",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi un aperçu de la situation financière du cabinet.",
+     "expect": {
+      "k": "f_overview",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C141",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien avons-nous gagné hier ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "yesterday"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C142",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le résultat net de ce mois ?",
+     "expect": {
+      "k": "f_net",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C143",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le montant total des charges de septembre ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C144",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de séances ont été payées ce mois-ci ?",
+     "expect": {
+      "k": "f_sessions",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C145",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien avons-nous encaissé aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     }
+    },
+    {
+     "say": "Et hier ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "yesterday"
+     }
+    },
+    {
+     "say": "Et cette semaine ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     }
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "C146",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients avons-nous reçus ce mois-ci ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C147",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations ont eu lieu ce mois-ci ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C148",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations la semaine dernière ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "lastweek"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C149",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de nouveaux patients se sont inscrits ce mois-ci ?",
+     "expect": {
+      "k": "n_new",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C150",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les jours les plus chargés ?",
+     "expect": {
+      "k": "n_busiest",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C151",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare le nombre de consultations de ce mois avec le mois dernier.",
+     "expect": {
+      "k": "n_compare",
+      "a": "month",
+      "b": "lastmonth"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C152",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients différents avons-nous vus en septembre ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "lastmonth"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C153",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations y a-t-il eu en août ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "2026-08"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C154",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients sont suivis au cabinet ?",
+     "expect": {
+      "k": "n_active_patients"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C155",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi un aperçu de l'activité du cabinet ce mois-ci.",
+     "expect": {
+      "k": "n_overview",
+      "range": "month"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C156",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères diagnostiques de la dépression majeure ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Trouble dépressif caractérisé — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C157",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du trouble anxieux généralisé ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Troubles anxieux",
+         "Anxiété généralisée"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C158",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment définit-on une attaque de panique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Attaque de panique"
+        ]
+       },
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Trouble panique"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C159",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères diagnostiques de la schizophrénie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Schizophrénie — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C160",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qui définit un épisode maniaque ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Épisode maniaque — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C161",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du TDAH ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Déficit de l",
+         "Critères diagnostiques"
+        ]
+       },
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Déficit de l’attention/hyperactivité — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C162",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment diagnostique-t-on un trouble obsessionnel-compulsif ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Trouble obsessionnel-compulsif"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C163",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du stress post-traumatique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "stress post-traumatique"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C164",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères de l'anorexie mentale ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Anorexie mentale — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C165",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de temps les symptômes doivent-ils durer pour parler de schizophrénie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Schizophrénie — critères diagnostiques",
+         "6 mois"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C166",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle durée faut-il pour un trouble dépressif persistant ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Trouble dépressif persistant (dysthymie) — critères diagnostiques",
+         "2 ans"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C167",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la différence entre un épisode maniaque et un épisode hypomaniaque ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Épisode hypomaniaque — critères diagnostiques"
+        ]
+       },
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Épisode maniaque — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C168",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce que l'agoraphobie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Agoraphobie"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C169",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les symptômes de la boulimie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "sectionAll": [
+         "Boulimie"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C170",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du trouble bipolaire de type II ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "DSM",
+        "textAll": [
+         "Trouble bipolaire de type II — critères diagnostiques"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C171",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le mécanisme d'action de la fluoxétine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Fluoxetine",
+         "How the Drug Works"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C172",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment agit l'aripiprazole ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Aripiprazole",
+         "How the Drug Works"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C173",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la dose habituelle de sertraline ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Sertraline",
+         "Dosing and Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C174",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les contre-indications de l'halopéridol ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Haloperidol",
+         "Do Not Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C175",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les effets indésirables graves de la lamotrigine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Lamotrigine",
+         "Side Effects"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C176",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles précautions prendre avec le méthylphénidate ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Methylphenidate",
+         "Precautions"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C177",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment doser l'escitalopram ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Escitalopram",
+         "Dosing and Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C178",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les effets secondaires notables de la quétiapine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Quetiapine",
+         "Side Effects"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C179",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels effets indésirables l'olanzapine provoque-t-elle ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Olanzapine",
+         "Side Effects"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C180",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les contre-indications du bupropion ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Bupropion",
+         "Do Not Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C181",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les contre-indications de la carbamazépine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Carbamazepine",
+         "Do Not Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C182",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les doses de rispéridone ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Prescriber",
+        "sectionAll": [
+         "Risperidone",
+         "Dosing and Use"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C183",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle surveillance faut-il pour un patient sous lithium ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sectionAll": [
+         "Lithium"
+        ],
+        "textAll": [
+         "monitor"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C184",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que faire en cas de neutropénie sous clozapine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Maudsley",
+        "sectionAll": [
+         "Clozapine"
+        ],
+        "textAll": [
+         "neutropenia"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C185",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les risques du valproate pendant la grossesse ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sectionAll": [
+         "Valpro"
+        ],
+        "textAll": [
+         "pregnan"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C186",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment arrêter une benzodiazépine sans syndrome de sevrage ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "sourceLike": "Maudsley",
+        "textAll": [
+         "benzodiazepine",
+         "withdrawal"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C187",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le risque d'allongement du QT avec les antipsychotiques ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "QT",
+         "prolong",
+         "antipsychotic"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C188",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les effets métaboliques des antipsychotiques et comment les surveiller ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "antipsychotic",
+         "metabolic"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C189",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce que le syndrome sérotoninergique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "serotonin syndrome"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C190",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que faire en cas de dépression résistante au traitement ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "treatment-resistant depression"
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "C191",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer le traitement médicamenteux actuellement suivi par ce patient ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C192",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "Il prend quoi comme cachets en ce moment ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C193",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Ses médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C194",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T4"
+   },
+   "turns": [
+    {
+     "say": "Dis, tu peux me rappeler ce qu'il prend comme traitement ces temps-ci ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C195",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer le nombre de patients attendus aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C196",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "J'ai combien de monde aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C197",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Patients aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C198",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dis-moi, j'ai beaucoup de patients aujourd'hui ? Combien exactement ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     }
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "C199",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous me rappeler la date de la dernière visite de ce patient ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "C200",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Il est passé quand la dernière fois, lui ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     }
+    }
+   ]
+  }
+ ]
+}
