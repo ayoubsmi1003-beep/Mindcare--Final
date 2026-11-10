@@ -54,6 +54,10 @@ export function requestedMedicationNames(text:string):readonly string[]{
  const words=new Set(text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().match(/\p{L}+/gu)??[]);
  return medicationNames.filter(name=>words.has(name));
 }
+/** A cut sentence or a bare reference says nothing, and without its subject it can mislead. */
+export function substantiveQuote(text:string):boolean{
+ return (text.match(/\p{L}{2,}/gu)?.length??0)>=5&&!/\bet al\.?\s*$/u.test(text)&&!/(?:^|—)\W*\d{4}\s*[;)]/u.test(text);
+}
 /** Necessary entity binding, in addition to quote/quantity checks and independent clinical review. */
 export function medicationSpanGrounded(question:string,sentence:string,quote:string):boolean{
  const requested=requestedMedicationNames(question);if(!requested.length)return true;

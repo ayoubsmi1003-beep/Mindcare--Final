@@ -152,7 +152,7 @@ it("speaks a grounded book passage without its title through the native knowledg
     !!event && typeof event === "object" && "type" in event && event.type === "sentence") as { type: "sentence"; kind: string; text: string; sources: unknown[] } | undefined;
   const done = events.find((event): event is Record<string, unknown> =>
     !!event && typeof event === "object" && "type" in event && event.type === "done");
-  expect(answer?.text).toContain(`Passage cité : « ${sentence} »`);
+  expect(answer?.text).toContain(`: « ${sentence} »`);
   expect(answer?.text).not.toContain(DSM);
   expect(answer?.kind).toBe("knowledge");
   expect(answer?.sources.length).toBeGreaterThan(0);
@@ -272,7 +272,7 @@ it.each(nativeBookCases)("answers $name through the native knowledge path withou
     !!event && typeof event === "object" && "type" in event && event.type === "sentence") as { type: "sentence"; kind: string; text: string; sources: Array<{label:string;provenance?:Record<string,unknown>}> } | undefined;
   const done = events.find((event): event is Record<string, unknown> =>
     !!event && typeof event === "object" && "type" in event && event.type === "done");
-  expect(answer?.text).toContain("Passage cité : « " + book.quote + " »");
+  expect(answer?.text).toContain(": « " + book.quote + " »");
   expect(answer?.text).not.toContain(book.title);
   expect(answer?.kind).toBe("knowledge");
   expect(answer?.sources[0]?.label).toContain(book.title);

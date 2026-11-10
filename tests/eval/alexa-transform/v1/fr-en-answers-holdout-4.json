@@ -1,0 +1,22 @@
+{
+  "$comment": "Fourth set, answer level. Written on 2026-11-07 before any run against it, once the quote selection bug was found and before its fix. It judges what is published, not what is retrieved. Its answers and retrieval were read to find the causes of the failures, so it's a development set now, not an independent score. Set 5 is the independent one. Don't edit its cases.",
+  "cases": [
+    { "id": "A-S01", "question": "Quels sont les effets secondaires de l'aripiprazole ?", "source": "Prescriber", "section": ["Aripiprazole", "Side Effects"] },
+    { "id": "A-S02", "question": "Quelle est la posologie de la venlafaxine ?", "source": "Prescriber", "section": ["Venlafaxine", "Dosing and Use"] },
+    { "id": "A-S03", "question": "La fluoxétine pendant la grossesse ?", "source": "Prescriber", "section": ["Fluoxetine", "Special Populations"] },
+    { "id": "A-S04", "question": "Comment agit la mirtazapine ?", "source": "Prescriber", "section": ["Mirtazapine", "Therapeutics"] },
+    { "id": "A-S05", "question": "Quelle surveillance sous quétiapine ?", "source": "Prescriber", "section": ["Quetiapine"] },
+    { "id": "A-S06", "question": "Effets indésirables de la duloxétine ?", "source": "Prescriber", "section": ["Duloxetine", "Side Effects"] },
+    { "id": "A-S07", "question": "Posologie de la rispéridone ?", "source": "Prescriber", "section": ["Risperidone", "Dosing and Use"] },
+    { "id": "A-S08", "question": "L'escitalopram chez le sujet âgé ?", "source": "Prescriber", "section": ["Escitalopram", "Special Populations"] },
+    { "id": "A-M01", "question": "Que faire en cas de dyskinésie tardive ?", "source": "Maudsley", "section": ["Chapter 1"] },
+    { "id": "A-M02", "question": "Quel traitement d'entretien pour le trouble bipolaire ?", "source": "Maudsley", "section": ["Chapter 2"] },
+    { "id": "A-M03", "question": "Que faire devant une dépression résistante ?", "source": "Maudsley", "section": ["Chapter 3"] },
+    { "id": "A-M04", "question": "Comment traiter la dépendance aux opioïdes ?", "source": "Maudsley", "section": ["Chapter 4"] },
+    { "id": "A-M05", "question": "Quel traitement du TDAH chez l'enfant ?", "source": "Maudsley", "section": ["Chapter 5"] },
+    { "id": "A-D01", "question": "Quels sont les critères du trouble panique ?", "source": "DSM", "section": ["Trouble panique"] },
+    { "id": "A-D02", "question": "Quels sont les critères de la schizophrénie ?", "source": "DSM", "section": ["Schizophrénie"] },
+    { "id": "A-N01", "question": "Quel est le prix de la sertraline en Algérie ?", "answerable": false },
+    { "id": "A-N02", "question": "Quelle dose de psilocybine pour la dépression ?", "answerable": false }
+  ]
+}

@@ -7,12 +7,15 @@ import { editionDe, type EditionOuvrage } from "@/server/knowledge/editions";
 import { carteDepuisJson, formaterLocalisation, localiserDepuisUnite, localiserExtrait, localisationDeLOuvrage, type CartePages } from "@/server/knowledge/pages";
 import pagesUnites from "@/server/knowledge/pages-unites.json";
 import { mapLimite } from "@/server/knowledge/parallele";
+import { monographPriorityNames, monographsFirst } from "./knowledge-monograph";
+import { rowCanAnswer } from "./knowledge-source-fit";
+import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { recetteSecondaireGelee } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus } from "./knowledge-query";
+import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus, textOpensWithAspect } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
@@ -63,7 +66,7 @@ export interface PreuveAlexa {
 
 // Allow a complete UTF-8 passage slightly above the 8,000-character aggregate
 // budget. `orchestrerRecherche` still enforces that unchanged aggregate cap.
-const MAX_PASSAGE_UTF8_BYTES = 8_192;
+const MAX_PASSAGE_UTF8_BYTES = 12_000;
 
 // Le pool vaut 10 connexions : quatre portes simultanées laissent de la marge
 // à une lecture clinique concurrente (voir `parallele.ts`).
@@ -343,12 +346,32 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       }
       batches.push(result.data.filter(row => matchesRequestedBook(row, plan)));
     }
+    // One unknown word empties an AND query. Retry with fewer terms, stopping at the first hit.
+    // These lots are ranked against the whole question, so a partial match can't pass as a full one.
+    const lotReferences = [...plan.references];
+    if (batches.every(batch => batch.length === 0)) {
+      for (const recovery of plan.recoveryQueries ?? []) {
+        trace.lexical.calls += 1;
+        const result = await client.rpc<unknown[]>("search_knowledge_lexical", porteLexicale(recovery.query, plan.language, LIMITES.LEXICAL).args);
+        signal?.throwIfAborted();
+        if (result.error || !Array.isArray(result.data)) break;
+        trace.lexical.rows += result.data.length;
+        const rows = result.data.filter(row => matchesRequestedBook(row, plan));
+        if (!rows.length) continue;
+        lotReferences[batches.length] = recovery.reference;
+        batches.push(rows);
+        trace.fallbacks.push("lexical-recovery");
+        break;
+      }
+    }
     // A prefix can remove a dose qualifier or negation. Keep whole bounded chunks,
     // and flag approved oversized passages without exposing rejected-source existence.
     let omittedLongPassages = false;
     const retenir = (candidate: unknown): unknown | null => {
       const row = validerLignePorte(candidate);
       if (row === null || !lignePorteRecuperable(row)) return null;
+      // Before ranking: measured, DSM rows filled every place and the filter then left nothing.
+      if (!rowCanAnswer(question, row.source_titre, row.section, isKnowledgeLocationQuestion(question))) return null;
       if(headingOnlyEvidence(row.texte,row.section)||unboundTableEvidence(row.texte)||(indexEvidence(row.section)&&!indexRequested(question))||(bibliographyEvidence(row.section)||bibliographyTextEvidence(row.texte))&&!bibliographyRequested(question))return null;
       if (Buffer.byteLength(row.texte, "utf8") > MAX_PASSAGE_UTF8_BYTES) { omittedLongPassages = true; return null; }
       return row;
@@ -363,7 +386,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       // Chaque lot est classé contre SA référence : c'est elle qui l'a fait
       // remonter. Un lot anglais issu de l'expansion bilingue ne doit pas être
       // mesuré contre une référence française (couverture ~0, preuve perdue).
-      lots.push({ reference: plan.references[index] ?? plan.relevanceQuery, lignes: complete });
+      lots.push({ reference: lotReferences[index] ?? plan.relevanceQuery, lignes: complete });
     }
 
     // ── Jambe vectorielle (hybride) ────────────────────────────────────────
@@ -482,7 +505,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         toutesLignes.push(ligne);
       }
       const search = await orchestrerRecherche(question, toutesLignes, [],
-        rerankerTrace, CALIBRATION_A3, "rang", LIMITES.FINAL);
+        // The budget applies once, below: here it would cut the first passage without saying so.
+        rerankerTrace, CALIBRATION_A3, "rang", LIMITES.FINAL, false);
       if (search.repliReranker) {
         repliReranker = true;
         trace.reranker.fallback = true;
@@ -526,7 +550,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const indiceFocus = (preuve: Preuve): number =>
       plan.focusHints?.some(focus => matchesSectionFocus(preuve.section, focus)) ? 1 : 0;
     const indiceFeuille = (preuve: Preuve): number =>
-      plan.leafHint !== undefined && matchesLeafHint(preuve.section, plan.leafHint) ? 1 : 0;
+      plan.leafHint !== undefined && (matchesLeafHint(preuve.section, plan.leafHint) || textOpensWithAspect(preuve.texte, plan.leafHint)) ? 1 : 0;
     // À pertinence ÉGALE, la correspondance lexicale exacte passe avant un
     // voisin purement dense. Mesuré : le bon passage de « surveillance
     // hématologique clozapine » était rang 1 lexical, mais des voisins denses
@@ -541,6 +565,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // Le dense complète donc la liste, il ne renverse pas une correspondance
     // exacte. Sans aucune preuve lexicale (mode vectoriel pur), rien n'est
     // plafonné : le comportement historique est conservé.
+    // One exception, below: a tied dense-only row can lead on an on-aspect section of its own monograph.
     const lexicales = tous.filter(({ preuve }) => idsLexicaux.has(preuve.chunkId));
     const meilleurLexical = lexicales.length === 0
       ? null
@@ -549,7 +574,12 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       idsLexicaux.has(preuve.chunkId) || meilleurLexical === null
         ? preuve.evidence_relevance
         : Math.min(preuve.evidence_relevance, meilleurLexical);
-    const ordonnes = [...tous].sort((a, b) => pertinenceEffective(b.preuve) - pertinenceEffective(a.preuve)
+    // A criteria question is answered by the chunk of that very aspect ("<Disorder> — critères diagnostiques —"), found by the words, and relevant
+    // enough to count. It leads: other chunks of the same disorder (differential diagnosis, comorbidity) mention the same words and tie with it.
+    const feuilleDecisive = (preuve: Preuve): number =>
+      idsLexicaux.has(preuve.chunkId) && pertinenceEffective(preuve) >= SEUIL_PERTINENCE ? indiceFeuille(preuve) : 0;
+    const ordonnes = [...tous].sort((a, b) => feuilleDecisive(b.preuve) - feuilleDecisive(a.preuve)
+      || pertinenceEffective(b.preuve) - pertinenceEffective(a.preuve)
       || indiceFeuille(b.preuve) - indiceFeuille(a.preuve)
       || indiceFocus(b.preuve) - indiceFocus(a.preuve)
       || indiceLexical(b.preuve) - indiceLexical(a.preuve)
@@ -576,7 +606,17 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // vérifiée sur le texte normalisé, jamais sur le chunkId.
     const dejaCouvert = (texte: string): boolean => texte.length >= 80
       && textesVus.some((connu) => connu.includes(texte) || texte.includes(connu));
-    for (const { preuve } of ordonnes) {
+    const rubriquesAspect = plan.aspectRubrics ?? [];
+    const meilleurePertinence = Math.max(0, ...ordonnes.map(({ preuve }) => pertinenceEffective(preuve)));
+    const selection = monographsFirst(ordonnes, {
+      sectionOf: ({ preuve }) => preuve.section,
+      keyOf: ({ preuve }) => preuve.chunkId,
+      names: monographPriorityNames(question, requestedMonographNames(question), rubriquesAspect),
+      rubrics: rubriquesAspect,
+      // A dense-only row is capped at the best lexical score, so it can tie that row and lead it, only on an on-aspect section of its own monograph.
+      eligible: ({ preuve }) => pertinenceEffective(preuve) >= SEUIL_PERTINENCE && pertinenceEffective(preuve) >= meilleurePertinence * 0.6,
+    });
+    for (const { preuve } of selection) {
       if (preuves.length >= LIMITES.FINAL) break;
       if (vus.has(preuve.chunkId)) continue;
       const marque = empreinte(preuve);
@@ -594,7 +634,9 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
           .find((preuve) => !vus.has(preuve.chunkId)
             && !livres.has(livre(preuve))
             && preuve.evidence_relevance >= SEUIL_PERTINENCE
-            && preuve.evidence_relevance >= meilleure * 0.6);
+            // A passage found by the words alone scores at most 0.55 (coverage, no dense term), the other manual's dense neighbours up to 1.0:
+            // the ratio compares two scales. A word hit above the relevance threshold stands on its own; a dense-only row keeps the ratio.
+            && (idsLexicaux.has(preuve.chunkId) || preuve.evidence_relevance >= meilleure * 0.6));
         if (autre !== undefined) {
           const retiree = preuves.pop();
           if (retiree !== undefined) vus.delete(retiree.chunkId);
@@ -606,7 +648,13 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // Budget d'évidence appliqué UNE seule fois, après la sélection finale.
     // L'appliquer par lot tronquait chaque liste avant la fusion (mesuré : le
     // bon passage d'un lot ciblé tombait au 3e rang de son propre lot).
-    const finales = appliquerBudgetOctets(preuves).retenues;
+    // Only whole passages leave here: a prefix can remove a negation, and the reader would not know.
+    // An oversized row must not hide the rows after it, which the budget would never reach. No exception
+    // for a location question: this is the retrieval query, and the answer may be built from another text.
+    const entieres = preuves.filter(preuve => preuve.texte.length <= LIMITES.BUDGET_OCTETS);
+    if (entieres.length < preuves.length) omittedLongPassages = true;
+    const budget = appliquerBudgetOctets(entieres);
+    const finales = budget.retenues;
     const issue = finales.length === 0 ? "aucune" as const
       : finales.some(p => p.evidence_relevance >= SEUIL_PERTINENCE) ? "pertinent" as const
       : finales.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
@@ -635,6 +683,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const result = { etat,
       ...(plan.sectionFocuses?.some(focus=>!finales.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
+      // Not too long in itself: the total ran out. The notice must not call it long.
+      ...(budget.tronque ? { omittedOverBudget: true as const } : {}),
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
       ...(!vectorielIndisponible && vectorielNonCalibre ? { vectoriel: "non-calibre" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),

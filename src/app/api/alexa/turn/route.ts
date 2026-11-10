@@ -11,6 +11,7 @@ import { turnInput,type AlexaEvent } from "@/shared/alexa/turn";
 import { alexa } from "@/i18n/alexa";
 import { agentCopy } from "@/i18n/alexa-agent";
 import { isSameOriginRequest } from "@/server/auth/same-origin";
+import { deriveTurnOutcome, TurnTraceRecorder, withTurnTrace } from "@/server/alexa/turn-trace";
 import { z } from "zod";
 
 export const runtime="nodejs";
@@ -72,6 +73,7 @@ export async function POST(request:Request):Promise<Response>{
  request.signal.addEventListener("abort",abort,{once:true});if(request.signal.aborted)abort();
  const timer=setTimeout(()=>controller.abort(new DOMException("Deadline", "TimeoutError")),ALEXA_NATIVE_DEADLINE_MS);
  let answer="",events:AlexaEvent[]=[],overflow=false,disconnected=false,terminal:Extract<AlexaEvent,{type:"done"}>|null=null;
+ const recorder=new TurnTraceRecorder();
  const stream=new ReadableStream<Uint8Array>({start(sink){
   const send=(event:AlexaEvent)=>{if(!request.signal.aborted&&!disconnected)sink.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));};
   const emit=(event:AlexaEvent)=>{
@@ -88,11 +90,15 @@ export async function POST(request:Request):Promise<Response>{
     if(claim.data.state==="interrupted"){
      const reason=copy.interrupted;emit({type:"sentence",text:reason,kind:"fact",sources:[]});
      emit({type:"done",status:"failed",parts:[{id:"request",goal:input.text,conditions:[],dependsOn:[],status:"failed",resultRefs:[],reason}],patientId:null,patientScope:"preserve",coverage:null,sourceRevision:null,limited:true,speechAllowed:false});
-    }else await runAlexa(resumeCursor?{...input,appContext:{...input.appContext,patientId:effectivePatientId}}:input,{actor,db:alexaDb(actor),knowledge:persistence,native:true,contextKey:context,...(resumeCursor?{resumeCursor}:{})},emit,controller.signal);
+    }else await withTurnTrace(recorder,()=>runAlexa(resumeCursor?{...input,appContext:{...input.appContext,patientId:effectivePatientId}}:input,{actor,db:alexaDb(actor),knowledge:persistence,native:true,contextKey:context,trace:recorder,agentObserve:call=>recorder.call(call.id,call.name),agentObserveResult:result=>recorder.result(result.name,result.actionName&&result.status==="ok"?"proposed":result.status,result.errorCode),...(resumeCursor?{resumeCursor}:{})},emit,controller.signal));
    }catch{emit({type:"sentence",text:copy.unavailable,kind:"fact",sources:[]});}
    finally{
     const done:Extract<AlexaEvent,{type:"done"}>=terminal??{type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:request.signal.aborted?"cancelled":"failed",speechAllowed:false};
-    if(!answer){answer=copy.unavailable;const event:AlexaEvent={type:"sentence",text:answer,kind:"fact",sources:[]};events.push(event);send(event);}
+    const answered=!!answer;
+    if(!answer){answer=copy.unavailable;const event:AlexaEvent={type:"sentence",text:answer,kind:"fact",sources:[]};events.push(event);send(event);
+     // "Unavailable" is not an answer: the turn must not stay recorded as completed.
+     if(done.status==="completed"||done.status===undefined){done.status="failed";done.limited=true;done.speechAllowed=false;}
+    }
     if(overflow){done.status="partial";done.limited=true;done.speechAllowed=false;if(done.parts)done.parts=done.parts.map(p=>p.status==="answered"?{...p,status:"budget_limited",reason:copy.budget}:p);}
     const task=claim.data.state==="interrupted"?null:savedAgentTask(actor,input.conversationId);
     const cursor=task?describePendingAgentCursor(task):null;
@@ -102,11 +108,13 @@ export async function POST(request:Request):Promise<Response>{
     const batchesCompleted=nextContinuation?.completedBatches??(resumeCursor?completedBatches+1:cursor?1:undefined);
     if(batchesCompleted!==undefined)done.progress={completedBatches:batchesCompleted,complete:!nextContinuation};
     if(nextContinuation)done.continuation={token:nextContinuation.token,progress:{kind:nextContinuation.kind,completedBatches:nextContinuation.completedBatches,position:nextContinuation.position}};
+    done.outcome=deriveTurnOutcome(done.status,done.parts,recorder.trace,answered);done.traceId=recorder.trace.traceId;
+    const trace=recorder.finish(done.outcome);
     const persistedEvents=[...events,{...done,persiste:true}];
     const reference=conversationState.read(actor,input.conversationId,effectivePatientId,input.appContext.page,Date.now(),context);
     const persistedReference=reference?referenceForPersistence(reference):undefined;
     const persistenceStartedAt=Date.now();
-    const saved=await persistence.rpc("complete_jarvis_turn",{p_conversation_id:input.conversationId,p_client_turn_id:input.clientTurnId,p_chemin:"patient",p_contenu:answer,p_statut:done.status==="completed"?"complet":"interrompu",p_outil:JSON.stringify({version:3,events:persistedEvents,task,...(persistedReference?{reference:persistedReference}:{}),continuation:nextContinuation})}).catch(()=>({error:true,data:false}));
+    const saved=await persistence.rpc("complete_jarvis_turn",{p_conversation_id:input.conversationId,p_client_turn_id:input.clientTurnId,p_chemin:"patient",p_contenu:answer,p_statut:done.status==="completed"?"complet":"interrompu",p_outil:JSON.stringify({version:4,trace,events:persistedEvents,task,...(persistedReference?{reference:persistedReference}:{}),continuation:nextContinuation})}).catch(()=>({error:true,data:false}));
     const persisted=!saved.error&&saved.data===true;
     if(!persisted)console.error("[alexa-turn] persistence outcome",JSON.stringify({operation:"complete_jarvis_turn",outcome:saved.error?"rpc_error":saved.data===false?"gate_rejected":"invalid_response",elapsedMs:Date.now()-persistenceStartedAt}));
     send({...done,persiste:persisted});

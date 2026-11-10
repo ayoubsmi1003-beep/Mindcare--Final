@@ -57,6 +57,8 @@ export const narrativeCopy = {
   measuresMissing: 'Mesures de la séance non renseignées.',
   comparisonMissing: 'Comparaison des mesures indisponible : pas assez de séances avec des scores renseignés.',
   olderSessionMissing: 'Aucune consultation précédente n’est enregistrée pour ce patient.',
+  /** A record longer than one read: the latest visit is certain, the earliest is not, and the answer says so. */
+  boundsPartial: (lastText: string, read: number, oldestReadDate: string) => `${lastText} Ce dossier compte plus de ${read} consultations : je n’en lis que les ${read} plus récentes, la plus ancienne lue date du ${oldestReadDate}, mais ce n’est pas forcément la toute première.`,
   nextAppointmentMissing: 'Aucun rendez-vous à venir n’est enregistré pour ce patient.',
   measuresHistory: (count:number)=>`Évolution des scores de difficulté sur les ${count} séances enregistrées :`,
   comparisonDates: (before:string,after:string)=>`Du ${before} au ${after} :`,

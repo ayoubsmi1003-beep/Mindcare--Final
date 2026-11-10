@@ -1,0 +1,18 @@
+{
+  "$comment": "Second held-out set. Written on 2026-11-07 after the security review fixes and before any run against it. Its questions avoid the wording of the term table where possible, and it covers drugs and chapters not used in earlier sets. Measure once on old and new code, and don't tune against it or edit its cases.",
+  "cases": [
+    { "id": "S-K01", "question": "Quels problèmes peut causer la vortioxétine ?", "source": "Prescriber", "section": ["Vortioxetine › Side Effects"] },
+    { "id": "S-K02", "question": "Combien de milligrammes de citalopram par jour ?", "source": "Prescriber", "section": ["Citalopram › Dosing and Use"] },
+    { "id": "S-K03", "question": "Peut-on donner de la quétiapine à une femme qui allaite ?", "source": "Prescriber", "section": ["Quetiapine › Special Populations"] },
+    { "id": "S-K04", "question": "Le bupropion chez un insuffisant rénal ?", "source": "Prescriber", "section": ["Bupropion › Special Populations"] },
+    { "id": "S-K05", "question": "À quoi sert la trazodone ?", "source": "Prescriber", "section": ["Trazodone › Therapeutics"] },
+    { "id": "S-K06", "question": "Au bout de combien de temps la fluvoxamine fait-elle effet ?", "source": "Prescriber", "section": ["Fluvoxamine › Therapeutics"] },
+    { "id": "S-K07", "question": "Le topiramate fait-il perdre du poids ?", "source": "Prescriber", "section": ["Topiramate › Side Effects"] },
+    { "id": "M-K01", "question": "Comment prendre en charge les troubles du comportement alimentaire ?", "source": "Maudsley", "section": ["Part 1: Drug treatment of major psychiatric conditions", "Chapter 9"] },
+    { "id": "M-K02", "question": "Comment arrêter les benzodiazépines ?", "source": "Maudsley", "section": ["Chapter 3", "Chapter 4"] },
+    { "id": "M-K03", "question": "Quel traitement pour la maladie d'Alzheimer ?", "source": "Maudsley", "section": ["Chapter 6"] },
+    { "id": "M-K04", "question": "Que faire devant une hyperprolactinémie sous antipsychotique ?", "source": "Maudsley", "section": ["Chapter 1"] },
+    { "id": "M-K05", "question": "Les antipsychotiques chez l'adolescent ?", "source": "Maudsley", "section": ["Chapter 5"] },
+    { "id": "M-K06", "question": "Psychotropes et épilepsie : quelles précautions ?", "source": "Maudsley", "section": ["Chapter 10", "Chapter 13"] }
+  ]
+}

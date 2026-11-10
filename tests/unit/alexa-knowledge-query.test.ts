@@ -280,9 +280,9 @@ describe("bounded Alexa lexical question planning", () => {
 });
 
 it("measures the whole passage budget in UTF-8 bytes for Arabic text", async () => {
-  const text = `Dose sertraline. ${"ع".repeat(Math.ceil(8192 / 2))}`;
+  const text = `Dose sertraline. ${"ع".repeat(Math.ceil(12_000 / 2))}`;
   expect(text.length).toBeLessThan(LIMITES.BUDGET_OCTETS);
-  expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(8192);
+  expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(12_000);
   const { client } = boundary([row(MAUDSLEY, text)]);
   expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({ etat: "sans-preuve", preuves: [], omittedLongPassages: true });
 });

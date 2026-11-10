@@ -1,0 +1,51 @@
+{
+ "campaign": "C200",
+ "casesSha256": "de274c84630e9395881d79663dd81597e6c5ab4352f59c25235dcd74bc44090f",
+ "oraclesSha256": "d84c51dba19e07a9e94ce5366a1f80ac6fc21439160b5500f697984f822803e5",
+ "databases": {
+  "main": {
+   "patients": 1558
+  },
+  "fixture": {
+   "patients": 12
+  }
+ },
+ "anchor": "2026-10-26T09:30:00+01:00",
+ "rolesResolved": {
+  "main": [
+   "DA",
+   "DB",
+   "F1",
+   "HA",
+   "HB",
+   "HC",
+   "HD",
+   "N1",
+   "N2",
+   "OPEN",
+   "R1",
+   "R2",
+   "R3",
+   "R4",
+   "R5",
+   "R6",
+   "S1",
+   "SA",
+   "SB",
+   "T1",
+   "T2",
+   "T3",
+   "T4",
+   "T5",
+   "U1",
+   "U2",
+   "U3",
+   "Z1"
+  ],
+  "fixture": []
+ },
+ "turns": 260,
+ "blocked": 3,
+ "notVerified": 2,
+ "note": "Hashes only. The oracle file holds patient identities and stays in .eval-out/ (git-ignored)."
+}

@@ -9,6 +9,9 @@ import { synthesizeKnowledge } from "@/server/alexa/knowledge-synthesis";
 import { mentionsKnowledgeBookTitle } from "@/server/alexa/knowledge-response";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 
+// These cases cover the model selection path, which ALEXA_KNOWLEDGE_SELECTION=model keeps available.
+process.env["ALEXA_KNOWLEDGE_SELECTION"] = "model";
+
 const DSM = "DSM-5 — Manuel diagnostique et statistique des troubles mentaux";
 const DSM_VERSION = "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53";
 const MAUDSLEY = "The Maudsley Prescribing Guidelines in Psychiatry";

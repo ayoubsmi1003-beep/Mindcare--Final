@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+vi.mock("@/server/db/withCaller", () => ({ withCaller: async (_actor: unknown, fn: (q: unknown) => Promise<unknown>) => fn({ query: async () => [{ cloud: true }] }) })); // Transport tests run as the synthetic deployment; closed states: alexa-openrouter-deployment-gate.test.ts
 import { openRouterProvider } from "../../src/server/egress/external-call";
 import { reinitialiserEnv } from "../../src/server/env";
 

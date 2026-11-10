@@ -36,6 +36,15 @@ export async function readApplication(callId:string,view:string,rpc:Rpc,signal:A
   ],'reception_board');
   r.status=complete?(members.length?'ok':'empty'):'partial';r.complete=complete;return r;
  }
+ if(view==='internal_messages'){
+  // The gate returns messages received in the caller's cabinet, not those they sent. Unread counts use its flag.
+  const date=z.preprocess(value=>value instanceof Date?value.toISOString():value,z.string());
+  const rows=z.array(z.object({id:z.uuid(),sender_name:z.string().max(300),corps:z.string().max(20000),cree_le:date,non_lu:z.boolean().nullable()}).passthrough()).max(21).parse(await rpc('list_internal_messages',{p_limit:21},signal));
+  const shown=rows.slice(0,20),unread=shown.filter(row=>row.non_lu===true).length,complete=rows.length<=20;
+  const lines=shown.length?[copy.extended.messagesCount(shown.length,unread,!complete),...shown.map(row=>copy.extended.message(row.sender_name,row.cree_le.slice(0,10),row.corps,row.non_lu===true))]:[copy.extended.noMessages];
+  const r=result(callId,{total:shown.length,unread,hasMore:!complete},lines,'list_internal_messages');
+  r.complete=complete;r.status=!complete?'partial':shown.length?'ok':'empty';return r;
+ }
  if(view==='notifications'||view==='system'){
   const gate='get_alexa_office_status',raw=await rpc(gate,{p_view:view,p_offset:options.offset??0,p_revision:options.revision??null},signal);
   if(view==='system'){

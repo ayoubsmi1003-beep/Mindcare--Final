@@ -4,12 +4,12 @@ import { z } from "zod";
 /** All labels and identity tokens are for local use; never include this result in egress. */
 export type PatientResolution =
   | { readonly status: "resolved"; readonly patientId: string; readonly identityTokens: readonly string[] }
-  | { readonly status: "ambiguous"; readonly candidates: readonly { readonly patientId: string; readonly label: string }[] }
+  | { readonly status: "ambiguous"; readonly candidates: readonly { readonly patientId: string; readonly label: string }[]; readonly suggested?: true }
   | { readonly status: "unavailable" }
   | { readonly status: "absent" }
   | { readonly status: "cancelled" };
 
-interface PatientRow { readonly id: string; readonly first_name?: string; readonly last_name?: string; readonly total_count?: number | string }
+interface PatientRow { readonly id: string; readonly first_name?: string; readonly last_name?: string; readonly total_count?: number | string; readonly birth_date?: string | null; readonly record_number?: string | null }
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const normalise = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLocaleLowerCase("fr").replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/\s+/g, " ").trim();
 const fullName = (row: PatientRow) => `${row.first_name ?? ""} ${row.last_name ?? ""}`.trim();
@@ -47,6 +47,84 @@ function rankedCandidates(rows: readonly PatientRow[], name: string) {
     || left.row.id.localeCompare(right.row.id))
     .map(({ row }) => ({ patientId: row.id, label: fullName(row) }));
 }
+/**
+ * A spelling key that survives speech-to-text errors on French and Maghrebi names: "Karime Ben Ali",
+ * "Carim Benaly" and "Karim Benali" share "karimbenali".
+ */
+export function phoneticKey(value: string): string {
+  return normalise(value).replace(/[^\p{L} ]/gu, "").split(" ").filter(Boolean).map(word => word
+    .replace(/ph/gu, "f").replace(/qu/gu, "k").replace(/ck/gu, "k").replace(/c(?=[aou]|$)/gu, "k").replace(/q/gu, "k")
+    .replace(/(?<!c)h/gu, "").replace(/y/gu, "i").replace(/eau|au/gu, "o").replace(/ou/gu, "u").replace(/[ae]i/gu, "e")
+    .replace(/(\p{L})\1+/gu, "$1").replace(/(?<=..)[estx]$/u, "")).join("");
+}
+/** Names close enough to be offered for confirmation, best first, at most three. Nothing is read. */
+export function closeNames(rows: readonly PatientRow[], name: string): { patientId: string; label: string }[] {
+  const wanted = phoneticKey(name);
+  if (wanted.length < 3) return [];
+  const seen = new Set<string>();
+  return rows.filter(hasIdentity)
+    .map(row => ({ row, distance: Math.min(...[fullName(row), `${row.last_name} ${row.first_name}`].map(value => nameDistance(wanted, phoneticKey(value)))) }))
+    .filter(entry => entry.distance <= 0.2)
+    .sort((left, right) => left.distance - right.distance || left.row.id.localeCompare(right.row.id))
+    .filter(entry => !seen.has(entry.row.id) && !!seen.add(entry.row.id))
+    .slice(0, 3).map(({ row }, _index, kept) => {
+      // Two people with the same name are told apart by what the screen shows: birth date or record number.
+      const twin = kept.some(other => other.row.id !== row.id && normalise(fullName(other.row)) === normalise(fullName(row)));
+      const detail = twin ? (row.birth_date ? ` (né·e le ${String(row.birth_date).slice(0, 10)})` : row.record_number ? ` (dossier ${row.record_number})` : "") : "";
+      return { patientId: row.id, label: fullName(row) + detail };
+    });
+}
+/** When nothing matches as written, look for sound-alike names by the first letters of each word. */
+async function soundAlikeNames(db: Pick<DbPort, "rpc">, name: string, signal?: AbortSignal): Promise<{ patientId: string; label: string }[]> {
+  const rows: PatientRow[] = [];
+  for (const word of [...new Set(normalise(name).split(" ").filter(word => word.length >= 3))].slice(0, 2)) {
+    if (signal?.aborted) return [];
+    const page = await db.rpc<PatientRow>("search_patients", { p_query: word.slice(0, 3), p_limit: 30, p_offset: 0 });
+    if (page.ok) rows.push(...page.data);
+  }
+  return closeNames(rows, name);
+}
+
+/**
+ * Whether words of the request name a patient other than the one in context, through the audited search
+ * gate under the caller's rights. Only rows whose names start with every word count, since the gate also
+ * returns approximate rows. A failed search counts as a match: the caller is asked, nothing is read.
+ */
+/** The page size of the name check's lookups. Tests tell the name check's searches from other searches by it. */
+export const NAME_CHECK_LIMIT = 20;
+
+export async function namesAnotherPatient(db: Pick<DbPort, "rpc">, words: readonly string[], patientId: string, signal?: AbortSignal): Promise<boolean> {
+  // Compound names are written several ways ("Ben Ali", "Benali", "Ben-Ali"), so single words, adjacent pairs
+  // and words with their hyphens removed are all compared, with spaces, hyphens and apostrophes ignored.
+  const joined = (value: string) => normalise(value).replace(/[\s'’-]+/gu, "");
+  const pieces = words.map(word => normalise(word));
+  const pairs = pieces.slice(1).map((piece, index) => `${pieces[index]} ${piece}`);
+  const queries = [...new Set([...pairs, ...pieces].map(value => value.replace(/[-'’]+/gu, " ").trim()))].filter(value => joined(value).length >= 3).slice(0, 20);
+  // A heard name is close, not equal: the spelling key used for suggestions decides.
+  const close = (left: string, right: string) => left === right || (left.length >= 4 && right.length >= 4 && nameDistance(phoneticKey(left), phoneticKey(right)) <= 0.2);
+  const namesOf = (row: PatientRow) => [...normalise(fullName(row)).split(/[\s'’-]+/u), joined(row.first_name!), joined(row.last_name!)].filter(name => name.length >= 3);
+  // Each looked-up phrase is compared only with the rows its own search returned, so a word can't match
+  // a patient that another word of the sentence fetched ("mourir" next to a surname shared with a Mounir).
+  const found: { query: string; rows: PatientRow[] }[] = [];
+  for (const query of queries) {
+    if (signal?.aborted) return true;
+    const search = await db.rpc<PatientRow>("search_patients", { p_query: query, p_limit: NAME_CHECK_LIMIT, p_offset: 0 });
+    if (!search.ok) return true;
+    found.push({ query: joined(query), rows: search.data.filter(hasIdentity) });
+  }
+  // The patient being read counts as named in full only on an exact match of both names. Only the phrases
+  // that are exactly its names are then set aside: "Karima" next to "Karim Benali" is still compared.
+  const target = found.flatMap(entry => entry.rows).find(row => row.id === patientId);
+  const spoken = new Set(found.map(entry => entry.query));
+  const fullyNamed = !!target && [target.first_name!, target.last_name!].every(part => spoken.has(joined(part)));
+  const own = new Set(fullyNamed && target ? [joined(target.first_name!), joined(target.last_name!), joined(fullName(target))] : []);
+  for (const entry of found) {
+    if (own.has(entry.query)) continue;
+    if (entry.rows.some(row => row.id !== patientId && namesOf(row).some(name => close(entry.query, name)))) return true;
+  }
+  return false;
+}
+
 function searchCount(value: unknown): number | null {
   if (typeof value !== "number" && !(typeof value === "string" && /^[1-9]\d*$/.test(value))) return null;
   const count = Number(value);
@@ -110,6 +188,7 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
       }
       if (search.data.length === 0) {
         const archived=await resolveArchivedName(db,name,asOf??new Date().toISOString(),signal);
+        if(archived.status==="absent"){const close=await soundAlikeNames(db,name,signal);return close.length?{status:"ambiguous",candidates:close,suggested:true}:archived;}
         if(archived.status!=="resolved")return archived;
         target=archived.patientId;requestedName=normalise(name);
       } else {
@@ -133,6 +212,15 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
       const complete = candidates.length === rows.length && candidates.length <= 100
         && candidates.every((row) => searchCount(row.total_count) === candidates.length)
         && new Set(candidates.map((row) => row.id)).size === candidates.length;
+      // No row carries the name as written: offer the close ones for confirmation, or look by sound.
+      // A first or last name alone keeps the list to choose from. Otherwise the search door returned only
+      // approximate rows: offer the close ones as a question, never as an identity.
+      if (exact.length === 0) {
+        const words = normalise(name).split(" ");
+        const typed = candidates.some(row => { const parts = normalise(fullName(row)).split(" "); return words.every(word => parts.some(part => part.startsWith(word))); });
+        const close = typed ? [] : closeNames(candidates, name);
+        if (close.length) return { status: "ambiguous", candidates: close, suggested: true };
+      }
       if (!complete || exact.length !== 1) {
         return { status: "ambiguous", candidates: rankedCandidates(candidates, name) };
       }

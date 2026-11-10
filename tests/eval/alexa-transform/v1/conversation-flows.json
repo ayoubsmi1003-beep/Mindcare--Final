@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "frozenOn": "2026-11-06",
+  "rule": "Multi-turn conversations over real capabilities only. {name} is a synthetic patient chosen at run time by SQL. Never edit an expectation to make a run pass.",
+  "flows": [
+    { "id": "F01-patient-then-pronoun", "turns": [
+      { "text": "Résume la dernière consultation de {name}.", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Et son traitement actuel ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Elle a combien de rendez-vous cette semaine ?", "tool": "query_agenda" }
+    ] },
+    { "id": "F02-neutral-turn-keeps-patient", "turns": [
+      { "text": "Quels sont les diagnostics de {name} ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Merci.", "noTool": true },
+      { "text": "Et son traitement ?", "tool": "get_patient_context", "patient": "target" }
+    ] },
+    { "id": "F03-clock-keeps-patient", "turns": [
+      { "text": "Quels sont les diagnostics de {name} ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Quelle heure est-il ?", "noTool": true },
+      { "text": "Et ses allergies ?", "tool": "get_patient_context", "patient": "target" }
+    ] },
+    { "id": "F04-drug-replaced", "turns": [
+      { "text": "Quelle est la posologie de la sertraline ?", "tool": "search_knowledge" },
+      { "text": "Et la clozapine ?", "tool": "search_knowledge", "evidence": "Clozapine" }
+    ] },
+    { "id": "F05-condition-replaced", "turns": [
+      { "text": "Quelle est la posologie du lithium ?", "tool": "search_knowledge" },
+      { "text": "Et pendant la grossesse ?", "tool": "search_knowledge" },
+      { "text": "Et en cas d'insuffisance rénale ?", "tool": "search_knowledge" }
+    ] },
+    { "id": "F06-aspect-replaced", "turns": [
+      { "text": "Quelle est la posologie du lithium ?", "tool": "search_knowledge" },
+      { "text": "Et ses effets ?", "tool": "search_knowledge", "evidence": "Lithium" }
+    ] },
+    { "id": "F07-knowledge-to-patient", "turns": [
+      { "text": "Résume la dernière consultation de {name}.", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Quels sont les effets indésirables de la sertraline ?", "tool": "search_knowledge", "noPatientRead": true },
+      { "text": "Et chez cette patiente ?", "tool": "get_patient_context", "patient": "target" }
+    ] },
+    { "id": "F08-cabinet-question-does-not-read-patient", "turns": [
+      { "text": "Quels sont les diagnostics de {name} ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Au fait, combien j'ai encaissé aujourd'hui ?", "noPatientRead": true }
+    ] },
+    { "id": "F09-no-patient-asks", "turns": [
+      { "text": "Et son traitement ?", "noPatientRead": true, "textMatches": "patient|dossier|préciser" }
+    ] },
+    { "id": "F10-other-patient-does-not-inherit", "turns": [
+      { "text": "Quels sont les diagnostics de {name} ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Et le traitement de Patient Inexistant Zzz ?", "patient": "not-target" }
+    ] },
+    { "id": "F11-book-question-no-book-name", "turns": [
+      { "text": "Quels sont les symptômes négatifs de la schizophrénie ?", "tool": "search_knowledge", "cited": true },
+      { "text": "Comment différencier une attaque de panique d'un trouble panique ?", "tool": "search_knowledge", "cited": true }
+    ] },
+    { "id": "F12-general", "turns": [
+      { "text": "Explique-moi ce qu'est la photosynthèse.", "tool": "answer_general", "noPatientRead": true },
+      { "text": "C'est quoi une éclipse ?", "tool": "answer_general", "noPatientRead": true }
+    ] },
+    { "id": "F13-absent-features", "turns": [
+      { "text": "Montre les factures du mois.", "noTool": true, "textMatches": "factur" },
+      { "text": "Rembourse le dernier paiement.", "noTool": true, "textMatches": "rembours" }
+    ] },
+    { "id": "F14-mixed", "turns": [
+      { "text": "Quels effets indésirables des traitements de {name} sont documentés dans les sources ?", "tool": "search_knowledge", "alsoTool": "get_patient_context" }
+    ] },
+    { "id": "F15-finance-then-agenda", "turns": [
+      { "text": "Combien j'ai encaissé ce mois-ci ?", "noPatientRead": true, "textMatches": "DZD|DA|aucun" },
+      { "text": "Quels sont les rendez-vous de demain ?", "tool": "query_agenda" }
+    ] },
+    { "id": "F16-summary-follow-up", "turns": [
+      { "text": "Quels sont les diagnostics de {name} ?", "tool": "get_patient_context", "patient": "target" },
+      { "text": "Résume-moi tout ça.", "tool": "get_patient_context", "patient": "target" }
+    ] },
+    { "id": "F17-safety-reads", "turns": [
+      { "text": "Quelles sont les allergies de {name} ?", "tool": "get_patient_context", "patient": "target", "textMatches": "allergie" },
+      { "text": "Et ses effets indésirables ?", "tool": "get_patient_context", "patient": "target", "textMatches": "indésirable" }
+    ] },
+    { "id": "F18-recommendations-wording", "turns": [
+      { "text": "Quelle est la posologie du lithium selon les recommandations ?", "tool": "search_knowledge", "cited": true }
+    ] }
+  ]
+}

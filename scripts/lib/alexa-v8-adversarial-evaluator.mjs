@@ -27,6 +27,7 @@ const NON_EVIDENCE_FRAMING = new Set([
   normalize("La synthèse vérifiée est indisponible. Les références retrouvées restent consultables dans les sources."),
   normalize("La synthèse est indisponible ; voici les passages sources."),
   normalize("Certains passages trop longs ne sont pas affichés : ils sont conservés entiers pour garder leurs précautions et leur contexte."),
+  normalize("Certains passages n’ont pas pu être affichés : consultez-les directement dans le livre."),
 ]);
 const object = value => value !== null && typeof value === "object" && !Array.isArray(value) ? value : {};
 
@@ -79,7 +80,15 @@ function citationHasResolvedPage(source) {
     .some(page => Number.isInteger(page) && page > 0);
 }
 
-function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected) {
+// Amended 2026-11-07, after the campaign on b2f0d36. A number that relies on its heading shows that
+// heading, by a safety rule: "Passage cité (<section>) :". It passes only right before an excerpt of
+// the source that owns that section. acceptSection=false is the rule the baseline ran under, reported
+// as originalRule on the check. The campaign report totals it as passingUnderOriginalRule, the figure to
+// compare with the baseline.
+// Amended again the same day: the opening sentence of a list of references is framing, under the same
+// flag. A PASS on these answers means the expected passage was shown, not that the question was answered.
+const REFERENCES_FRAMING = normalize("Voici les passages les plus proches de votre question. Ils viennent des livres, pas d’un dossier patient, et je n’ai pas vérifié qu’ils y répondent ni qu’ils s’appliquent à votre cas : lisez-les dans le livre, avec leur contexte.");
+function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected, acceptSection = true) {
   if (typeof event?.text !== "string" || !Array.isArray(event.sources)) return false;
   if (NON_EVIDENCE_FRAMING.has(normalize(event.text))) return true;
   const citations = event.sources.filter(source => source?.type === "knowledge");
@@ -95,7 +104,19 @@ function knowledgeSentenceUsesOnlyCitedExcerpts(event, expected) {
   const normalizedExcerpts = excerpts.map(normalize).filter(Boolean).sort((left, right) => right.length - left.length);
   if (!normalizedExcerpts.length) return false;
 
-  let remainder = normalize(event.text);
+  let framedText = normalize(event.text);
+  if (acceptSection) {
+    framedText = framedText.split(REFERENCES_FRAMING).join("");
+    for (const source of citations) {
+      const section = normalize(String(source.label ?? "").split(" · ")[1] ?? "");
+      // With no section, the label's second part is the edition or the version.
+      if (!section || [source.version, source.provenance?.edition].some(value => normalize(String(value ?? "")) === section)) continue;
+      for (const excerpt of String(source.excerpt ?? "").split(/\n{2,}/u).map(normalize).filter(Boolean)) {
+        framedText = framedText.split(`passage cite (${section}) : « ${excerpt}`).join(`passage cite : « ${excerpt}`);
+      }
+    }
+  }
+  let remainder = framedText;
   for (const excerpt of normalizedExcerpts) {
     const index = remainder.indexOf(excerpt);
     if (index < 0) return false;
@@ -179,7 +200,8 @@ export function evaluateV8KnowledgeOracle({ oracle, sourceCase, observations: in
     ? "PASS" : "NOT VERIFIED";
   const checks = [
     { id: "answer_present", status: answerText.trim() && !ABSTENTION.test(normalize(answerText)) ? "PASS" : "FAIL" },
-    { id: "answer_evidence", status: answerEvidenceStatus },
+    { id: "answer_evidence", status: answerEvidenceStatus,
+      ...(answerEvidenceStatus === "PASS" && !groundedAnswerEvents.every(event => knowledgeSentenceUsesOnlyCitedExcerpts(event, sourceCase.attendu, false)) ? { originalRule: "NOT VERIFIED" } : {}) },
     { id: "source", status: citationMatched ? "PASS" : "FAIL", sourceTitleMatched, sourceSectionMatched, citationMatched },
     { id: "page", status: pageResolved ? "PASS" : "FAIL", citationMatched, pageResolved },
   ];
@@ -1323,6 +1345,7 @@ export function evaluateV8AdversarialScenario({ scenario, observations: input, k
         status: check.status,
         ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
           .filter(key => typeof check[key] === "boolean").map(key => [key, check[key]])),
+        ...(check.originalRule ? { originalRule: check.originalRule } : {}),
       })),
     };
   });

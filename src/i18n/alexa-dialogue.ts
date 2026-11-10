@@ -24,6 +24,7 @@ const messages = {
     weakKnowledge: "Les preuves disponibles sont faibles ; aucune conclusion clinique n’en est déduite.",
     knowledgeUnavailable: "La recherche dans les sources approuvées est indisponible.",
     longKnowledge: "Certains passages trop longs ne sont pas affichés : ils sont conservés entiers pour garder leurs précautions et leur contexte.",
+    unshownKnowledge: "Certains passages n’ont pas pu être affichés : consultez-les directement dans le livre.",
     separateKnowledge: "Références générales : ces extraits ne constituent pas une conclusion ou une recommandation pour ce dossier.",
     agenda: "Le planning reste accessible dans l’agenda du cabinet.",
     emptyAgenda: "Aucun rendez-vous visible dans la période demandée.",
@@ -57,6 +58,7 @@ const messages = {
     addendum: (date: string, text: string) => `Addendum du ${date} : « ${text} »`,
     excerptLimit: "Certains passages ne sont pas affichés dans cette réponse. Ouvrez les sources pour lire les notes et addenda complets.",
     speechLimit: "La lecture à voix haute est limitée à une partie de la réponse. La réponse complète reste affichée à l’écran.",
+    speechWithheld: "La réponse est incomplète ou n’a pas pu être vérifiée. Je ne la lis pas à voix haute ; regardez l’écran.",
     focus: { sleep: "le sommeil", anxiety: "l’anxiété", mood: "l’humeur", risk: "le risque", symptoms: "les symptômes" },
   },
   ar: {
@@ -81,6 +83,7 @@ const messages = {
     weakKnowledge: "الأدلة المتاحة ضعيفة؛ لا نستنتج منها قراراً سريرياً.",
     knowledgeUnavailable: "البحث في المراجع المعتمدة غير متاح حالياً.",
     longKnowledge: "بعض المقاطع الطويلة لا تُعرض؛ تُحفظ كاملة حتى لا تضيع الاحتياطات أو سياق الكلام.",
+    unshownKnowledge: "تعذر عرض بعض المقاطع: راجعها مباشرة في الكتاب.",
     separateKnowledge: "مراجع عامة: هذه المقاطع ليست استنتاجاً أو توصية تخص هذا الملف.",
     agenda: "المواعيد متاحة في أجندة العيادة.",
     emptyAgenda: "ما كاين حتى موعد ظاهر في الفترة المطلوبة.",
@@ -114,6 +117,7 @@ const messages = {
     addendum: (date: string, text: string) => `إضافة بتاريخ ${date}: « ${text} »`,
     excerptLimit: "بعض المقاطع ما تظهرش في هذه الإجابة. افتحي المصادر باش تقراي الملاحظات والإضافات كاملة.",
     speechLimit: "القراءة بالصوت مقتصرة على جزء من الإجابة. الإجابة الكاملة تبقى ظاهرة على الشاشة.",
+    speechWithheld: "الإجابة غير مكتملة أو لم يتم التحقق منها. لن أقرأها بصوت عالٍ؛ يرجى النظر إلى الشاشة.",
     focus: { sleep: "النوم", anxiety: "القلق", mood: "المزاج", risk: "الخطر", symptoms: "الأعراض" },
   },
 } as const;

@@ -163,7 +163,9 @@ const agendaRequest = /agenda|prochain patient|patient suivant|المريض ال
 export function requestsNextPatient(text: string): boolean {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
   return /prochain\s+patient|patient\s+suivant|المريض\s+التالي|المريض\s+الجاي|patient\s+(?:jaya|jay|jاي)/iu.test(normalized)
-    || /^\s*qui\s+(?:arrive|vient)\s+(?:ensuite|apres)\s*[?!.]*\s*$/u.test(normalized);
+    || /^\s*qui\s+(?:arrive|vient|passe)\s+(?:ensuite|apres|maintenant)\s*[?!.]*\s*$/u.test(normalized)
+    // "Qui est le prochain ?", "Au suivant !", "On passe au suivant" — the patient is implied.
+    || /^\s*(?:(?:et|alors|bon|ben)[,\s]+)*(?:qui\s+(?:est|vient)\s+(?:le\s+|la\s+)?(?:prochain|prochaine|suivant|suivante)|c'est\s+(?:quoi|qui)\s+(?:le\s+)?(?:prochain|suivant)|(?:on\s+)?pass(?:e|ons)\s+au\s+(?:patient\s+)?suivant|au\s+suivant|(?:le\s+)?(?:prochain|suivant))\s*(?:s'il\s+(?:te|vous)\s+plait)?\s*[?!.]*\s*$/u.test(normalized.replace(/[’‘]/gu, "'"));
 }
 // The audited dashboard only supports today. An explicit other period cannot
 // be silently replaced by today's appointments, including in a mixed request.

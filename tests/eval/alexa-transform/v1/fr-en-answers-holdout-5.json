@@ -1,0 +1,22 @@
+{
+  "$comment": "Fifth held-out set, answer level. Written on 2026-11-07 before any run against it and before the fix for the failures read in set 4. Only its aggregate scores are read, never its answers, until the fix is final. Don't tune against it or edit its cases.",
+  "cases": [
+    { "id": "A-S01", "question": "Quels effets indésirables de la sertraline ?", "source": "Prescriber", "section": ["Sertraline", "Side Effects"] },
+    { "id": "A-S02", "question": "Posologie de l'olanzapine ?", "source": "Prescriber", "section": ["Olanzapine", "Dosing and Use"] },
+    { "id": "A-S03", "question": "La paroxétine pendant la grossesse ?", "source": "Prescriber", "section": ["Paroxetine", "Special Populations"] },
+    { "id": "A-S04", "question": "Comment agit le bupropion ?", "source": "Prescriber", "section": ["Bupropion", "Therapeutics"] },
+    { "id": "A-S05", "question": "Quelle est la posologie de la lamotrigine ?", "source": "Prescriber", "section": ["Lamotrigine", "Dosing and Use"] },
+    { "id": "A-S06", "question": "Effets indésirables de l'amitriptyline ?", "source": "Prescriber", "section": ["Amitriptyline", "Side Effects"] },
+    { "id": "A-S07", "question": "Le lorazépam chez l'insuffisant rénal ?", "source": "Prescriber", "section": ["Lorazepam", "Special Populations"] },
+    { "id": "A-S08", "question": "Posologie de la clomipramine ?", "source": "Prescriber", "section": ["Clomipramine", "Dosing and Use"] },
+    { "id": "A-M01", "question": "Comment traiter un syndrome malin des neuroleptiques ?", "source": "Maudsley", "section": ["Chapter 1"] },
+    { "id": "A-M02", "question": "Que faire en cas de manie aiguë ?", "source": "Maudsley", "section": ["Chapter 2"] },
+    { "id": "A-M03", "question": "Comment gérer une hyponatrémie sous antidépresseur ?", "source": "Maudsley", "section": ["Chapter 3"] },
+    { "id": "A-M04", "question": "Comment prendre en charge le sevrage des benzodiazépines ?", "source": "Maudsley", "section": ["Chapter 4"] },
+    { "id": "A-M05", "question": "Psychotropes et insuffisance hépatique ?", "source": "Maudsley", "section": ["Chapter 8"] },
+    { "id": "A-D01", "question": "Quels sont les critères de l'anorexie mentale ?", "source": "DSM", "section": ["Anorexie mentale"] },
+    { "id": "A-D02", "question": "Quels sont les critères du trouble obsessionnel-compulsif ?", "source": "DSM", "section": ["obsessionnel"] },
+    { "id": "A-N01", "question": "La fluoxétine est-elle disponible à Oran ?", "answerable": false },
+    { "id": "A-N02", "question": "Quelle dose d'ayahuasca pour l'anxiété ?", "answerable": false }
+  ]
+}

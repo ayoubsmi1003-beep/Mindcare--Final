@@ -30,6 +30,16 @@ const common = new Set([
   "النوم", "القلق", "الاعراض", "اعراض", "الملاحظات", "ملاحظات", "المزاج", "تاع",
 ]);
 for(const word of ['premier','premiere','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','douze','treize','quatorze','quinze','seize','dix-sept','dix-huit','dix-neuf','vingt','vingt-et-un','vingt-et-une','vingt-deux','vingt-trois','vingt-quatre','vingt-cinq','vingt-six','vingt-sept','vingt-huit','vingt-neuf','trente','trente-et-un','trente-et-une'])common.add(word);
+// Names of conditions and of clinical notions are never a person: "critères de la dépression majeure" names nobody.
+for (const word of [
+  "majeure", "majeur", "majeures", "majeurs", "persistant", "persistante", "persistants", "persistantes", "type", "types", "generalisee", "generalise", "generalisees", "anxieux", "anxieuse", "anxieuses",
+  "depressif", "depressive", "depressifs", "depressives", "obsessionnel", "obsessionnelle", "obsessionnels", "obsessionnelles", "compulsif", "compulsive", "compulsifs", "compulsives",
+  "panique", "paniques", "manie", "maniaque", "maniaques", "hypomaniaque", "hypomaniaques", "episode", "episodes", "psychotique", "psychotiques", "psychose", "psychoses", "autisme", "tdah", "toc", "tspt", "tag",
+  "anorexie", "boulimie", "personnalite", "limite", "borderline", "adaptation", "phobie", "phobies", "agoraphobie", "sevrage", "syndrome", "serotoninergique", "resistante", "resistant", "resistantes", "resistants",
+  "antipsychotique", "antipsychotiques", "antidepresseur", "antidepresseurs", "benzodiazepine", "benzodiazepines", "metabolique", "metaboliques", "effet", "duree", "criteres", "critere", "post-traumatique", "traumatique", "stress",
+  "schizophrenie", "schizophrene", "schizoaffectif", "bipolaire", "delirant", "delirants", "insomnie", "dysthymie", "hyperactivite", "attention", "deficit", "alimentaires", "alimentaire", "prescription", "prescriptions",
+  "parler", "durer", "diagnostiquer", "definir", "identifier", "evoquer", "poser", "reconnaitre", "distinguer", "ii", "iii", "iv", "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
+]) common.add(word);
 const folded = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const scaleNames = new Set(["hamilton", "madrs"]);
 function candidateName(value: string | undefined): string | undefined {
@@ -41,7 +51,8 @@ function candidateName(value: string | undefined): string | undefined {
     const lexical = folded(clean).replace(/^[ld]['’]/u, "");
     if (!/^[\p{L}][\p{L}\p{M}'’-]{1,}$/u.test(clean) || common.has(lexical)) break;
     name.push(clean);
-    if (name.length === 3) break;
+    // Four words: compound Algerian names ("Mohamed Taki Eddine Araibia") are common.
+    if (name.length === 4) break;
   }
   const candidate = name.join(" ");
   return candidate.length >= 2 && candidate.length <= 80 ? candidate : undefined;
@@ -59,7 +70,7 @@ export function parsePatientMention(text: string): PatientMention {
     if (candidate?.includes(" ")) return { status: "named", name: candidate };
   }
   const explicitPatient = /\b(?:patiente?s?|dossiers?|fiches?)\b|المريض|المريضة|ملف/u.test(normalized);
-  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossiers?|fiches?|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|justificatifs?|brouillons?|suivis?\s+medic(?:al|ale|aux|ales)|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
+  const localFieldPattern = /\b(?:allergies?|resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossiers?|fiches?|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|justificatifs?|brouillons?|suivis?\s+medic(?:al|ale|aux|ales)|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
   const localFieldRead = [...normalized.matchAll(localFieldPattern)].length > 0;
   // A single noun in a general symptom/diagnosis question is a topic.
   // Named single patients remain explicit through patient/dossier or quotes.
@@ -168,7 +179,7 @@ export function parsePatientMention(text: string): PatientMention {
   }
   // Look ahead for candidate words without consuming a later name introducer
   // (e.g. "de Hamilton pour Nadia Test" or "de Nadia pour Karim").
-  const matches = text.matchAll(/(?:\b(?:pour|chez|de|du|ta3|t3|dyal)\s+(?:(?:la|le)\s+|l['’]\s*)?|\bsi\s+|\bd['’]\s*|(?:تاع|للمريض|للمريضة)\s+)(?=([\p{L}][\p{L}\p{M}'’-]{1,}(?:\s+[\p{L}][\p{L}\p{M}'’-]{1,}){0,2})(?![\p{L}\p{M}\p{N}'’-]))/giu);
+  const matches = text.matchAll(/(?:\b(?:pour|chez|de|du|ta3|t3|dyal)\s+(?:(?:la|le)\s+|l['’]\s*)?|\bsi\s+|\bd['’]\s*|(?:تاع|للمريض|للمريضة)\s+)(?=([\p{L}][\p{L}\p{M}'’-]{1,}(?:\s+[\p{L}][\p{L}\p{M}'’-]{1,}){0,3})(?![\p{L}\p{M}\p{N}'’-]))/giu);
   for (const match of matches) {
     if (nameRanges.some(([start, end]) => match.index >= start && match.index < end)) continue;
     // French possessive grammar alone does not establish a dossier scope.

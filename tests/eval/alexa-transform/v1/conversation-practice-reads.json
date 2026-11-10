@@ -1,0 +1,9 @@
+{
+  "flows": [
+    { "id": "P01-statistics", "turns": [{ "text": "Montre mes statistiques de septembre 2026", "tool": "query_app", "textMatches": "du 2026-09-01 au 2026-09-30[\\s\\S]*Séances closes" }, { "text": "Quelles sont les statistiques de ce mois ?", "tool": "query_app", "textMatches": "Séances closes" }] },
+    { "id": "P02-workload", "turns": [{ "text": "Quels traitements à revoir ?", "tool": "query_app", "textMatches": "Patients à revoir|Aucun traitement actif" }] },
+    { "id": "P03-timeline", "turns": [{ "text": "Montre la chronologie des traitements de {name}.", "tool": "get_patient_context", "patient": "target", "textMatches": "événement" }] },
+    { "id": "P04-case-summary", "turns": [{ "text": "Le résumé du cas de {name} est-il à jour ?", "tool": "get_patient_context", "patient": "target", "textMatches": "(?:résumé du cas|Résumé du cas)" }] },
+    { "id": "P05-messages", "turns": [{ "text": "Montre mes messages internes.", "tool": "query_app", "textMatches": "message" }] }
+  ]
+}

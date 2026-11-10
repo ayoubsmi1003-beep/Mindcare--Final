@@ -10,6 +10,11 @@ import type { ClinicalContext } from "@/shared/alexa/clinical";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import { ALEXA_GENERAL_SOURCE } from "@/i18n/alexa-general";
 import { resolvePatient } from "./patient-resolver";
+import { withConsultationPatient } from "./consultation-context";
+import { firstNameMatches } from "./first-name-search";
+import { patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
+import { agendaQuestionFrame, algiersTimestamp, periodFollowup } from "@/shared/alexa/agenda-frame";
+import { activityQuestionFrame, financePeriodFollowup, financeQuestionFrame } from "@/shared/alexa/practice-frame";
 import { buildClinicalContext } from "./clinical-context";
 import { conversationState, resolveListedReference, type TurnLease } from "./conversation-state";
 import { splitAlexaQuestions } from "@/shared/alexa/questions";
@@ -38,7 +43,12 @@ import { deterministicActionRequest, prepareActionProposal } from "./action-prop
 import {readPatientFinance,patientFinanceSentence} from "./patient-finance";
 import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
-import { explicitFrenchCurrentMonthRange, frenchRequestAdmission } from "@/shared/alexa/request-contract";
+import { alexaGoalCopy, alexaIdentityCopy, practiceReadCopy } from "@/i18n/alexa-practice-reads";
+import { understandTurn, understandingCodes } from "@/shared/alexa/turn-understanding";
+import { explicitFrenchCurrentMonthRange, frenchRequestAdmission, isPracticeManagementQuestion, questionConcernsAPerson } from "@/shared/alexa/request-contract";
+import type { TurnTraceRecorder } from "./turn-trace";
+import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
+export { isKnowledgeFollowup, knowledgeFollowupQuestion };
 import { z } from "zod";
 
 /** Deterministic application aggregates that the local 1B router often misses. */
@@ -73,6 +83,7 @@ export interface OrchestratorDependencies {
   agentObserveData?: AgentLoopDependencies["observeData"];
   agentAsOf?:string;
   contextKey?:string;
+  trace?:TurnTraceRecorder;
   resumeCursor?:{cursorId:string;kind:AgentContinuationKind;patientId:string|null};
   build?: typeof buildClinicalContext;
   infer?: typeof inferAlexa;
@@ -135,22 +146,6 @@ function replacedPatientCountFollowup(text:string,previous:WorkingReference|null
  return previous.lastRequest.replace(priorMention.name,nextName);
 }
 const FRENCH_MONTHS=["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre"];
-export function knowledgeFollowupQuestion(previous:string,text:string):string|null{
- const tail=text.trim().replace(/[?.!]+$/u,'').trim();
- const condition=/^et\s+pour\s+(?:la\s+)?grossesse$/iu.test(tail)?'pendant la grossesse'
-  :/^et\s+pour\s+(?:la\s+)?allaitement$/iu.test(tail)?'pendant l’allaitement'
-  :tail.replace(/^et\s+/iu,'');
- const stem=previous.trim().replace(/[?.!]+$/u,'').trim();
- return `${stem} ${condition} ?`;
-}
-export function isKnowledgeFollowup(previous:string,text:string):boolean{
- return text.length<=80
-  &&requestedMedicationNames(previous).length>0
-  &&!/\b(?:patient|patients|combien|dossier|dossiers)\b/iu.test(previous)
-  &&planKnowledgeQuery(previous)!==null
-  &&/^(?:et|pour|en cas de|quid|et si|chez)\b/iu.test(text.trim())
-  &&!/\b(?:patient|dossier|consultation|agenda|rendez|paiement|document)\b/iu.test(text);
-}
 function agendaDayFollowup(text:string,previous:WorkingReference|null):string|null{
  if(!previous?.agendaDay)return null;
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').trim();
@@ -198,7 +193,7 @@ function consultationComparisonFollowup(text:string,previous:WorkingReference|nu
  if(!/^(?:et\s+)?qu[' ]?est[- ]ce\s+qui\s+a\s+change\s+entre\s+(?:les\s+deux|elles|eux|ces\s+deux)\s*[?!.]*$/u.test(plain))return null;
  const admission=frenchRequestAdmission(previous.lastRequest,false,asOf);
  if(admission.tools?.length!==1||admission.tools[0]!=='get_patient_context'||admission.patientSection!=='summary')return null;
- return 'Compare les deux derni?res consultations du patient s?lectionn?.';
+ return 'Compare les deux dernières consultations du patient sélectionné.';
 }
 function consultationStatusFollowup(text:string,previous:WorkingReference|null,asOf:string):string|null {
  if(!previous?.lastRequest)return null;
@@ -291,28 +286,129 @@ function uniqueExactPatientSearchResult(results:readonly {status:string;data?:un
  return null;
 }
 
+/** Each goal gets a full turn of its own. The turn is complete only when every goal is. */
+async function runSequencedGoals(input:TurnInput,sequence:{goals:string[];dropped:string[]},dependencies:OrchestratorDependencies,emit:(event:AlexaEvent)=>void,signal:AbortSignal):Promise<void>{
+  const parts:Extract<AlexaEvent,{type:"done"}>["parts"]=[],statuses:string[]=[];
+  let patientId=input.appContext.patientId??null,replaced=false,limited=false,speakable=true,stopped=false;
+  for(const [index,goal] of sequence.goals.entries()){
+    signal.throwIfAborted();
+    // A question or a proposal is waiting for the person: later goals must not run on a patient left unresolved.
+    if(stopped){emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});parts.push({id:`goal_${index+1}`,goal,conditions:[],dependsOn:[],status:"budget_limited",resultRefs:[],reason:alexaGoalCopy.waiting});statuses.push("partial");continue;}
+    let finished:Extract<AlexaEvent,{type:"done"}>|undefined,answered=false;
+    emit({type:"sentence",text:alexaGoalCopy.heading(index+1,sequence.goals.length),kind:"fact",sources:[]});
+    await runAlexa({...input,text:goal,clientTurnId:crypto.randomUUID(),appContext:{...input.appContext,patientId}},dependencies,event=>{
+      if(event.type==="done"){finished=event;return;}
+      if(event.type==="error"){emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});answered=true;return;}
+      if(event.type==="sentence"&&event.text.trim())answered=true;
+      emit(event);
+    },signal);
+    const done=finished;
+    if(!answered)emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    statuses.push(done?.status??"failed");limited||=done?.limited??true;speakable&&=done?.speechAllowed===true;
+    stopped=done?.status==="needs_input"||done?.status==="needs_confirmation";
+    if(done?.patientId){patientId=done.patientId;replaced=true;}
+    parts.push({id:`goal_${index+1}`,goal,conditions:[],dependsOn:[],status:done?.status==="completed"?"answered":done?.status==="needs_input"?"needs_input":done?.status==="needs_confirmation"?"proposed":done?.status==="partial"?"budget_limited":"failed",resultRefs:[]});
+  }
+  for(const goal of sequence.dropped){
+    emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    parts.push({id:`goal_${parts.length+1}`,goal,conditions:[],dependsOn:[],status:"budget_limited",resultRefs:[],reason:alexaGoalCopy.tooMany});
+    statuses.push("partial");
+  }
+  const status=statuses.includes("needs_confirmation")?"needs_confirmation":statuses.every(item=>item==="completed")?"completed":statuses.includes("needs_input")?"needs_input":statuses.some(item=>item==="completed"||item==="partial")?"partial":statuses.every(item=>item==="needs_input")?"needs_input":"failed";
+  emit({type:"done",patientId:replaced?patientId:null,patientScope:replaced?"replace":"preserve",sourceRevision:null,coverage:null,limited:limited||status!=="completed",status,speechAllowed:speakable&&!sequence.dropped.length,parts});
+}
+
 /** Native tool selection remains subject to server validation, identity and scope gates. */
-export async function runAlexa(input: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
+export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
+  // On a consultation screen the client reports only the consultation id. The patient comes from the audited gates,
+  // so "ce patient" and "son traitement" refer to the person on screen, and a stale or forged patient id cannot override it.
+  const {input,context:consultationContext}=await withConsultationPatient(rawInput,dependencies.db,signal,dependencies.actor);
+  if(consultationContext.status!=="none")dependencies.trace?.code('consultation-context',consultationContext.status);
+  // Before anything can read: a question about a relative or another patient must not be answered from the record in context.
+  const understanding=understandTurn(input.text,{selected:!!(input.appContext.patientId??conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),dependencies.contextKey??JSON.stringify(input.appContext))?.selectedPatientId),...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{})});
+  for(const code of understandingCodes(understanding))dependencies.trace?.code('understanding',code);
+  if(!dependencies.resumeCursor&&understanding.subject==="third_party"){
+    dependencies.trace?.route('closed');
+    emit({type:"sentence",text:alexaIdentityCopy.thirdParty,kind:"fact",sources:[]});
+    emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"needs_input",speechAllowed:true,parts:[{id:"third_party",goal:input.text,conditions:[],dependsOn:[],status:"needs_input",resultRefs:[],reason:alexaIdentityCopy.thirdParty}]});
+    return;
+  }
+  if(dependencies.native&&!dependencies.resumeCursor&&understanding.noChangeAction&&!deterministicActionRequest(input.text,input.appContext.documentId)){
+    dependencies.trace?.route('closed');
+    emit({type:"sentence",text:alexaGoalCopy.noSuchAction,kind:"fact",sources:[]});
+    for(const goal of understanding.goals.slice(1))emit({type:"sentence",text:alexaGoalCopy.notDone(goal),kind:"fact",sources:[]});
+    emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"failed",speechAllowed:true,parts:[{id:"no_action",goal:input.text,conditions:[],dependsOn:[],status:"unsupported",resultRefs:[],reason:alexaGoalCopy.noSuchAction}]});
+    return;
+  }
+  const sequence=dependencies.native&&!dependencies.resumeCursor&&!understanding.contractOutputs&&understanding.goals.length>1?{goals:[...understanding.goals],dropped:[...understanding.dropped]}:null;
+  // Splits when one goal has a known route and every other stands alone, so "puis vérifie la page" stays attached.
+  const opensAScreen=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.includes('navigate'),admittedGoal=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.length,standsAlone=(goal:string)=>!/^(?:ne |n['’]|sans )/iu.test(goal)&&!/\b(?:sa|son|ses|leur|leurs|cette|celle|celui|cela)\b/iu.test(goal)&&(/\?\s*$/u.test(goal)||goal.split(/\s+/u).length>=4);
+  if(sequence&&sequence.goals.some(admittedGoal)&&sequence.goals.every(goal=>!opensAScreen(goal)&&!deterministicActionRequest(goal,input.appContext.documentId)&&!frenchRequestAdmission(goal,false,dependencies.agentAsOf).preparationAction&&(admittedGoal(goal)||standsAlone(goal))))return runSequencedGoals(input,sequence,dependencies,emit,signal);
   if (dependencies.native) {
     // Courtesies use the same closed dialogue grammar as the established UI.
     // A greeting never needs patient lookup or a model inference slot.
     const plannedIntent=planRequest(input.text, null, dependencies.agentAsOf);
+    if (!dependencies.resumeCursor&&['dialogue','clock','safe_abstention'].includes(plannedIntent.intent)) dependencies.trace?.route('closed');
     if (!dependencies.resumeCursor&&plannedIntent.intent === 'dialogue') return runAlexaSingle(input, dependencies, emit, signal);
     if (!dependencies.resumeCursor&&plannedIntent.intent === 'clock') return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent });
     if (!dependencies.resumeCursor&&plannedIntent.intent === 'safe_abstention') return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent });
+    // "Patient suivant": the next patient comes from the agenda gate and the patient gate (never recomputed here),
+    // the screen opens, and the working patient changes only once that patient is verified.
+    if (!dependencies.resumeCursor&&requestsNextPatient(input.text)&&plannedIntent.intent==='agenda'&&!/\b(?:heure|quand|horaire)\b/iu.test(input.text.normalize('NFKD').replace(/\p{M}/gu,''))) { dependencies.trace?.route('closed'); return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: plannedIntent }); }
     // Explicit document and internal-message requests remain reachable without
     // the local model. The model path still handles paraphrases and compounds.
+    if (!dependencies.resumeCursor&&understanding.partlyWithoutAction) emit({type:"sentence",text:alexaGoalCopy.partWithoutAction,kind:"fact",sources:[]});
     if (!dependencies.resumeCursor&&deterministicActionRequest(input.text,input.appContext.documentId)) return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: { intent: "proposal", count: 1, language: "fr" } });
-    const contextKey=dependencies.contextKey??JSON.stringify(input.appContext),asOf=dependencies.agentAsOf??new Date().toISOString();
+    const contextKey=dependencies.contextKey??JSON.stringify(input.appContext),asOf=dependencies.agentAsOf??algiersTimestamp(new Date());
     const previous=conversationState.read(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
     const agentInput=dependencies.resumeCursor?{...input,text:agentContinuationText(dependencies.resumeCursor.kind)}:input;
     const listedReferenceText=agentInput.text.replace(/^\s*(?:montre|affiche|ouvre|présente|presente|sélectionne|selectionne)\s+/iu,'');
     const selectedListedPatient=previous?.patients?resolveListedReference(listedReferenceText,previous.patients):null;
-    const inheritedAgendaNextDayText=dependencies.resumeCursor?null:agendaDayFollowup(agentInput.text,previous),inheritedAgendaText=inheritedAgendaNextDayText??(dependencies.resumeCursor?null:agendaStatusFollowup(agentInput.text,previous)),inheritedTreatmentText=inheritedAgendaText||dependencies.resumeCursor?null:treatmentPauseFollowup(agentInput.text,previous),inheritedFinanceText=inheritedAgendaText||inheritedTreatmentText||dependencies.resumeCursor?null:previousMonthFollowup(agentInput.text,previous,asOf),inheritedPatientCountText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||dependencies.resumeCursor?null:replacedPatientCountFollowup(agentInput.text,previous,asOf),inheritedPatientCorrectionText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||dependencies.resumeCursor?null:patientCorrectionFollowup(agentInput.text,previous),inheritedPreviousConsultationText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||dependencies.resumeCursor?null:previousConsultationFollowup(agentInput.text,previous,asOf),inheritedConsultationStatusText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||dependencies.resumeCursor?null:consultationStatusFollowup(agentInput.text,previous,asOf),inheritedGroupedMinorText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||dependencies.resumeCursor?null:groupedMinorFollowup(agentInput.text,previous,asOf),inheritedMonthlyChargesText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||dependencies.resumeCursor?null:monthlyChargesFollowup(agentInput.text,previous),inheritedOrdinalPhoneText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||dependencies.resumeCursor?null:ordinalPhoneFollowup(agentInput.text,previous),inheritedTreatmentFrequencyText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||dependencies.resumeCursor?null:treatmentFrequencyFollowup(agentInput.text,previous,asOf),inheritedLatestScaleText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||dependencies.resumeCursor?null:latestScaleFollowup(agentInput.text,previous,asOf),inheritedComparisonText=dependencies.resumeCursor?null:consultationComparisonFollowup(agentInput.text,previous,asOf),inheritedDiagnosisStateText=dependencies.resumeCursor?null:diagnosisStateFollowup(agentInput.text,previous,asOf),inheritedPaymentsTotalText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||inheritedLatestScaleText||dependencies.resumeCursor?null:patientPaymentsTotalFollowup(agentInput.text,previous),inheritedText=inheritedAgendaText??inheritedTreatmentText??inheritedFinanceText??inheritedPatientCountText??inheritedPatientCorrectionText??inheritedPreviousConsultationText??inheritedConsultationStatusText??inheritedGroupedMinorText??inheritedMonthlyChargesText??inheritedOrdinalPhoneText??inheritedTreatmentFrequencyText??inheritedLatestScaleText??inheritedComparisonText??inheritedDiagnosisStateText??inheritedPaymentsTotalText;
-    const knowledgeFollowup=!dependencies.resumeCursor&&previous?.lastRequest&&isKnowledgeFollowup(previous.lastRequest,input.text)
+    const inheritedPeriodText=dependencies.resumeCursor?null:financePeriodFollowup(agentInput.text,previous?.lastRequest,asOf)??periodFollowup(agentInput.text,previous?.lastRequest,previous?.agendaDay,asOf);
+    const inheritedAgendaNextDayText=dependencies.resumeCursor?null:agendaDayFollowup(agentInput.text,previous),inheritedAgendaText=inheritedAgendaNextDayText??(dependencies.resumeCursor?null:agendaStatusFollowup(agentInput.text,previous)),inheritedTreatmentText=inheritedAgendaText||dependencies.resumeCursor?null:treatmentPauseFollowup(agentInput.text,previous),inheritedFinanceText=inheritedAgendaText||inheritedTreatmentText||dependencies.resumeCursor?null:previousMonthFollowup(agentInput.text,previous,asOf),inheritedPatientCountText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||dependencies.resumeCursor?null:replacedPatientCountFollowup(agentInput.text,previous,asOf),inheritedPatientCorrectionText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||dependencies.resumeCursor?null:patientCorrectionFollowup(agentInput.text,previous),inheritedPreviousConsultationText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||dependencies.resumeCursor?null:previousConsultationFollowup(agentInput.text,previous,asOf),inheritedConsultationStatusText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||dependencies.resumeCursor?null:consultationStatusFollowup(agentInput.text,previous,asOf),inheritedGroupedMinorText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||dependencies.resumeCursor?null:groupedMinorFollowup(agentInput.text,previous,asOf),inheritedMonthlyChargesText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||dependencies.resumeCursor?null:monthlyChargesFollowup(agentInput.text,previous),inheritedOrdinalPhoneText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||dependencies.resumeCursor?null:ordinalPhoneFollowup(agentInput.text,previous),inheritedTreatmentFrequencyText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||dependencies.resumeCursor?null:treatmentFrequencyFollowup(agentInput.text,previous,asOf),inheritedLatestScaleText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||dependencies.resumeCursor?null:latestScaleFollowup(agentInput.text,previous,asOf),inheritedComparisonText=dependencies.resumeCursor?null:consultationComparisonFollowup(agentInput.text,previous,asOf),inheritedDiagnosisStateText=dependencies.resumeCursor?null:diagnosisStateFollowup(agentInput.text,previous,asOf),inheritedPaymentsTotalText=inheritedAgendaText||inheritedTreatmentText||inheritedFinanceText||inheritedPatientCountText||inheritedPatientCorrectionText||inheritedPreviousConsultationText||inheritedConsultationStatusText||inheritedGroupedMinorText||inheritedMonthlyChargesText||inheritedOrdinalPhoneText||inheritedTreatmentFrequencyText||inheritedLatestScaleText||dependencies.resumeCursor?null:patientPaymentsTotalFollowup(agentInput.text,previous),inheritedText=inheritedAgendaText??inheritedTreatmentText??inheritedFinanceText??inheritedPatientCountText??inheritedPatientCorrectionText??inheritedPreviousConsultationText??inheritedConsultationStatusText??inheritedGroupedMinorText??inheritedMonthlyChargesText??inheritedOrdinalPhoneText??inheritedTreatmentFrequencyText??inheritedLatestScaleText??inheritedComparisonText??inheritedDiagnosisStateText??inheritedPaymentsTotalText??inheritedPeriodText;
+    const knowledgeFollowup=!dependencies.resumeCursor&&previous?.lastRequest&&isKnowledgeFollowup(previous.lastRequest,input.text,previous.intent==='knowledge',question=>planKnowledgeQuery(question)!==null)
       ?knowledgeFollowupQuestion(previous.lastRequest,input.text):null;
+    // Short references to the working patient. Without an established patient these stay
+    // unchanged, so the existing scope gate still asks which patient is meant.
+    const workingPatient=!dependencies.resumeCursor&&!inheritedText&&!knowledgeFollowup&&!selectedListedPatient&&previous?.selectedPatientId?previous.selectedPatientId:null;
+    const appliedToPatient=workingPatient&&previous?.intent==='knowledge'&&previous.lastRequest?knowledgeAppliedToPatient(previous.lastRequest,input.text):null;
+    const patientFollowup=workingPatient&&!appliedToPatient?resolvePatientFollowup(input.text):{kind:'none' as const};
+    // Everyday agenda questions ("Combien de patients aujourd'hui ?", "J'ai du monde ce matin ?"), read by meaning.
+    // A frame only helps what the closed admission does not already understand: its own wording keeps its own routes (and follow-ups).
+    const admission=dependencies.resumeCursor?undefined:frenchRequestAdmission(agentInput.text,false,asOf),admittedTools=admission?.tools;
+    const admittedAs=(tool:string)=>admittedTools?.length===1&&admittedTools[0]===tool&&(tool!=='query_app'||admission?.applicationView==='statistics');
+    // A finance question counts as understood only when the gate has everything it needs (a period, or the all-time balance): otherwise the model would be asked to finish it.
+    const financeClosed=admittedAs('query_finance')&&!!admission&&(!!(admission.from&&admission.to)||(admission.financeMode==='totals'&&(admission.financeState==='all'||admission.financeState==='pending')));
+    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(agentInput.text,asOf);
+    // Any other everyday question about a patient: read by meaning, restated as the closed question the gates answer.
+    // Money and activity of the practice: "Combien avons-nous gagné hier ?", "Quels sont les jours les plus chargés ?".
+    const practiceFrame=dependencies.resumeCursor||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=financeClosed?null:financeQuestionFrame(agentInput.text,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(agentInput.text,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
+    let switchFollowup=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||knowledgeFollowup||selectedListedPatient?null:patientSwitchFollowup(agentInput.text,previous?.lastRequest);
+    // Words no vocabulary knows are taken for a name only when the patient search agrees; otherwise they are vocabulary the lists lack.
+    if(switchFollowup&&(await resolvePatient(dependencies.db,{name:switchFollowup.name},signal,asOf)).status==='absent')switchFollowup=null;
+    const frameOptions={contextPatient:!!input.appContext.patientId,followup:!!previous?.selectedPatientId};
+    let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
+      :patientQuestionFrame(agentInput.text,frameOptions);
+    // One word that may be a first name: one patient reads, several are a question for the doctor, none is vocabulary.
+    if(patientFrame?.subject.kind==='named'&&!/\s/u.test(patientFrame.subject.name)){
+      const found=await firstNameMatches(dependencies.db,patientFrame.subject.name,signal);
+      if(found&&found.matches.length===1&&!found.truncated){const match=found.matches[0]!,full=`${match.first} ${match.last}`;patientFrame={...patientFrame,subject:{kind:'named',name:full},text:renderPatientQuestion({section:patientFrame.section,n:3},{kind:'named',name:full})};}
+      else if(found&&found.matches.length>=1&&(found.matches.length>1||found.truncated)){
+        const choices=found.matches.slice(0,5).map(match=>({patientId:match.patientId,label:`${match.first} ${match.last}`}));
+        dependencies.trace?.route('closed');dependencies.trace?.followup('first-name-choice');
+        emit({type:"sentence",text:alexaIdentityCopy.whichPatient(choices.map(choice=>choice.label),found.truncated||found.matches.length>5),kind:"fact",sources:[]});
+        const asking=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
+        conversationState.finish(asking,{intent:'clarify',count:1,patients:choices,lastRequest:agentInput.text,...(previous?.selectedPatientId?{selectedPatientId:previous.selectedPatientId}:{})});
+        emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"needs_input",speechAllowed:true,parts:[{id:"which_patient",goal:input.text,conditions:[],dependsOn:[],status:"needs_input",resultRefs:[],reason:alexaIdentityCopy.whichPatient([],false)}]});
+        return;
+      }
+      else if(found&&found.matches.length===0)patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+    }
+    if(patientFrame?.subject.kind==='named'&&/\s/u.test(patientFrame.subject.name)&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+    const frameText=appliedToPatient??patientFrame?.text??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??null;
 
-    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:agentInput;    const reusePatient=continuesPatientReference(turnInput.text,previous);
+    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:reaskForSelectedPatient(previous?.lastRequest)??'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');else if(patientFrame)dependencies.trace?.followup('patient-frame');else if(agendaFrame)dependencies.trace?.followup('agenda-frame');else if(practiceFrame)dependencies.trace?.followup('practice-frame');
+    const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context';
     const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
     const deterministicAggregate=!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
@@ -321,7 +417,7 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
       const result=await agentExecutor(scopedInput,dependencies.db,dependencies.knowledge)(deterministicAggregate,asOf,[],signal,input.text);
       if(result.text&&["ok","empty","partial"].includes(result.status)){
         emit({type:"sentence",text:result.text,kind:"fact",sources:result.evidence});
-        conversationState.finish(lease,{intent:deterministicAggregate.name==="query_consultations"?"history":"patient_search",count:1,lastRequest:turnInput.text});
+        conversationState.finish(lease,{intent:deterministicAggregate.name==="query_consultations"?"history":"patient_search",count:1,lastRequest:turnInput.text,...(previous?.selectedPatientId?{selectedPatientId:previous.selectedPatientId}:{})});
         emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,
           limited:!result.complete,status:result.complete?"completed":"partial",speechAllowed:true,
           parts:[{id:"deterministic",goal:input.text,conditions:[],dependsOn:[],status:"answered",resultRefs:[]}]});
@@ -333,36 +429,48 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     // The 1B router can fail a book question outright ("capacité non
     // disponible") while approved evidence exists. Fall back to the governed
     // reader + compact synthesis instead of refusing. This runs only when the
-    // agent produced no usable part, so normal routing is untouched.
-    const unrouted=result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status));
+    // agent produced no usable part, so normal routing is untouched. A read that ran and failed is
+    // not a routing miss: a refused or broken read must be reported, never replaced by book passages.
+    const unrouted=!result.readFailed&&!understanding.wantsChange&&(result.status==="failed"||result.parts.every(part=>["unsupported","failed","cancelled"].includes(part.status)));
     if(unrouted&&!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
-      &&parsePatientMention(input.text).status==="none"&&planKnowledgeQuery(turnInput.text)!==null){
+      &&parsePatientMention(input.text).status==="none"&&!questionConcernsAPerson(input.text)&&!isPracticeManagementQuestion(input.text)&&planKnowledgeQuery(turnInput.text)!==null){
       const found=await readKnowledge(dependencies.knowledge,turnInput.text,signal,undefined,{traceOrigin:"direct"});
       if(found.etat==="ok"&&found.preuves.length>0){
+        dependencies.trace?.route('knowledge_fallback');
         emit({type:"stage",stage:"knowledge"});
         const events=await synthesizeKnowledge(found,turnInput.text,"fr",signal,{compact:true});
         for(const event of events)emit(event);
-        conversationState.finish(lease,{intent:"knowledge",count:1,lastRequest:turnInput.text});
+        conversationState.finish(lease,{intent:"knowledge",count:1,lastRequest:turnInput.text,...(previous?.selectedPatientId?{selectedPatientId:previous.selectedPatientId}:{})});
         emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,
           status:"partial",speechAllowed:true,
           parts:[{id:"knowledge_fallback",goal:input.text,conditions:[],dependsOn:[],status:"answered",resultRefs:[]}]});
         return;
       }
     }
-    const responses=result.results.filter(r=>r.text);
+    const responses=result.results.filter(r=>r.text),deferredNotices:string[]=[];
     if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
     const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>`${p.goal} — ${p.reason}`));
+    // A change that was asked for and not even proposed must not read as done.
+    // A sequence that couldn't be split must not lose a goal without saying so.
+    if(sequence&&result.parts.length<sequence.goals.length&&result.status!=="needs_input"){const real=sequence.goals.filter(goal=>!/^(?:ne |n['’]|sans |bonjour|bonsoir|merci|s['’]il)/iu.test(goal));for(const lost of real.slice(Math.max(result.parts.length,1)))deferredNotices.push(alexaGoalCopy.notDone(lost));for(const lost of sequence.dropped)deferredNotices.push(alexaGoalCopy.notDone(lost));}
+    if(understanding.wantsChange&&!result.proposal&&!["needs_confirmation","needs_input","cancelled"].includes(result.status))emit({type:"sentence",text:alexaGoalCopy.nothingChanged,kind:"fact",sources:[]});
     for(const [index,text] of result.sentences.entries()){
       const response=responses[index]?.text===text?responses[index]:undefined;
       const synthesis=!response&&text.startsWith(agentCopy.fr.synthesis+"\n");
       const kind=response?.presentation==="knowledge"?"knowledge":response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact";
       emit({type:"sentence",text,kind,sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
+    for(const notice of deferredNotices)emit({type:"sentence",text:notice,kind:"fact",sources:[]});
+    if(practiceFrame?.cashOnlyNotice)emit({type:"sentence",text:practiceReadCopy.cashOnly,kind:"fact",sources:[]});
     if(result.proposal)emit({type:"proposal",...result.proposal});
     const nextPlan=dependencies.resumeCursor&&previous?previous:inheritedAgendaText&&previous?.agendaDay?{intent:'agenda' as const,count:previous.count,agendaDay:previous.agendaDay,...(previous.agendaRequestedOnly!==undefined?{agendaRequestedOnly:previous.agendaRequestedOnly}:{})}:planRequest(turnInput.text,previous,asOf);
-    const explicitMention=parsePatientMention(input.text);
+    // A restated question names its patient exactly; the raw wording may hold a word the parser mistakes for a name.
+    const explicitMention=parsePatientMention(patientFrame||switchFollowup?turnInput.text:input.text);
     const exactSearchPatientId=uniqueExactPatientSearchResult(result.results,input.text);
-    const selectedPatientId=result.patientId??exactSearchPatientId??(explicitMention.status==='none'&&!requestsCabinetWideScope(input.text)?(reusePatient?previous?.selectedPatientId:input.appContext.patientId):undefined);
+    // A turn that names nobody keeps the working patient for later follow-ups: being
+    // kept here grants no read, since each read is re-verified by its own gate. Naming
+    // another patient clears it, so an unresolved name never falls back on the previous one.
+    const selectedPatientId=result.patientId??exactSearchPatientId??(explicitMention.status==='none'?(previous?.selectedPatientId??input.appContext.patientId??undefined):undefined);
     const reference:WorkingReference={...(previous??{}),...nextPlan,lastRequest:dependencies.resumeCursor?previous?.lastRequest??input.text:turnInput.text};
     const newPatients=listedPatients(result.results);
     if(newPatients)reference.patients=newPatients;else if(selectedListedPatient&&previous?.patients)reference.patients=previous.patients;else if(!inheritedText)delete reference.patients;
@@ -468,11 +576,14 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
 
 async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal, sharedLease?: TurnLease, semantic?: SemanticPlan): Promise<void> {
   const { actor, db } = dependencies;
-  const previous = conversationState.read(actor, input.conversationId, input.appContext.patientId, input.appContext.page);
+  // Native turns key the working reference on the full app context. Using another
+  // key here would silently discard that reference on any turn routed through this path.
+  const stateKey = dependencies.native ? dependencies.contextKey ?? JSON.stringify(input.appContext) : "";
+  const previous = conversationState.read(actor, input.conversationId, input.appContext.patientId, input.appContext.page, Date.now(), stateKey);
   const plan = semantic?.plan ?? planRequest(input.text, previous, dependencies.agentAsOf);
   const mention = parsePatientMention(input.text);
   const copy = dialogue(plan.language);
-  const lease = sharedLease ?? conversationState.begin(actor, input.conversationId, input.appContext.patientId, input.appContext.page);
+  const lease = sharedLease ?? conversationState.begin(actor, input.conversationId, input.appContext.patientId, input.appContext.page, Date.now(), stateKey);
   const active = () => {
     signal.throwIfAborted();
     if (!conversationState.isCurrent(lease)) throw new Error("ScopeChanged");
@@ -578,7 +689,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
         active();
         if (resolution.status !== "resolved") { rejectPatientSelection(copy.patient); return; }
         patientId = resolution.patientId;
-        if (patientId !== input.appContext.patientId) Object.assign(lease, conversationState.begin(actor, input.conversationId, patientId, input.appContext.page));
+        if (patientId !== input.appContext.patientId) Object.assign(lease, conversationState.begin(actor, input.conversationId, patientId, input.appContext.page, Date.now(), stateKey));
       }
       emit({ type: "stage", stage: "context" });
       const agenda = next ? await readAgenda(dependencies.knowledge, signal)
@@ -600,7 +711,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
         active();
         const time = new Intl.DateTimeFormat(plan.language === "fr" ? "fr-DZ" : "ar-DZ", { timeZone: "Africa/Algiers", hourCycle: "h23", hour: "2-digit", minute: "2-digit" }).format(new Date(appointment.starts_at));
         const name = "first_name" in appointment ? [appointment.first_name, appointment.last_name].filter(Boolean).join(" ") || null : null;
-        emit({ type: "sentence", text: next ? copy.appointment(time, appointment.status as "confirmed" | "arrived" | "in_session" | "completed" | "no_show") : copy.agendaEntry(name, time, appointment.status), kind: "fact", sources: [{ id: appointment.id, type: "appointment", label: time }] });
+        emit({ type: "sentence", text: next ? (name ? copy.agendaEntry(name, time, appointment.status) : copy.appointment(time, appointment.status as "confirmed" | "arrived" | "in_session" | "completed" | "no_show")) : copy.agendaEntry(name, time, appointment.status), kind: "fact", sources: [{ id: appointment.id, type: "appointment", label: time }] });
       }
       limited = false;
     }
@@ -625,7 +736,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
         sentence(wording.choose);
         for(const [index,candidate] of resolution.candidates.entries())sentence(`${index+1}. ${candidate.label}`);
         conversationState.clear(actor,input.conversationId);
-        const pending=conversationState.begin(actor,input.conversationId,null,input.appContext.page);
+        const pending=conversationState.begin(actor,input.conversationId,null,input.appContext.page,Date.now(),stateKey);
         conversationState.finish(pending,{intent:plan.intent,count:plan.count,patients:resolution.candidates,pendingPlan:{...plan}});
         emit({type:"done",patientId:null,patientScope:"replace",sourceRevision:null,coverage:null,limited:true});return;
       }
@@ -642,7 +753,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
       }
       // A name resolving to a different dossier gets a new lease and no old cursor.
       if (patientId !== lease.patientId) {
-        const replacement = conversationState.begin(actor, input.conversationId, patientId, input.appContext.page);
+        const replacement = conversationState.begin(actor, input.conversationId, patientId, input.appContext.page, Date.now(), stateKey);
         Object.assign(lease, replacement);
         delete plan.before;
       }
@@ -710,8 +821,12 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
       conversationState.finish(lease, { intent: plan.intent, count: plan.count, ...(plan.patients?{patients:plan.patients,selectedPatientId:patientId}:{}), ...(cursor ? { cursor } : {}), ...(plan.before ? { selectionBefore: plan.before } : {}), ...(plan.operation ? { operation: plan.operation } : {}), ...(plan.focus ? { focus: plan.focus } : {}) });
     }
     active();
-    if (context === null) conversationState.finish(lease, resultReference??{ intent: plan.intent, count: plan.count,
+    // A courtesy, the time or an abstention says nothing about the working subject.
+    const neutralTurn = dependencies.native && ["dialogue", "clock", "safe_abstention"].includes(plan.intent);
+    if (neutralTurn && previous) conversationState.finish(lease, previous);
+    else if (context === null) conversationState.finish(lease, resultReference??{ intent: plan.intent, count: plan.count,
       ...(previous?.patients && !input.patientName && mention.status==="none" ? {patients:previous.patients,...(previous.patientFilter?{patientFilter:previous.patientFilter}:{}),...(previous.listOffset!==undefined?{listOffset:previous.listOffset}:{}),...(previous.listTotal!==undefined?{listTotal:previous.listTotal}:{}),...(previous.pendingPlan?{pendingPlan:previous.pendingPlan}:{}),...(previous.selectedPatientId?{selectedPatientId:previous.selectedPatientId}:{})}:{}),
+      ...(requestsNextPatient(input.text) && patientId ? { selectedPatientId: patientId } : {}),
       ...(plan.agendaDay ? { agendaDay: plan.agendaDay, agendaRequestedOnly: plan.agendaRequestedOnly } : {}) });
     // No patient used by a global answer does not mean the working dossier was
     // rejected. Explicit identity failures and next-patient reads replace scope.

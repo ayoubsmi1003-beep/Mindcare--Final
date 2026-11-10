@@ -1,6 +1,7 @@
 import { jetoniser } from "@/server/knowledge/rerank";
 import { medicationNames } from "@/shared/alexa/medications";
 import {knowledgeComparisonRequested,requestedMedicationNames} from './knowledge-evidence-content';
+import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -42,7 +43,7 @@ const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
 // de ces mots dans la requete suffit a la faire echouer. Ils sont donc
 // retires AVANT la porte, jamais du texte source.
 const SCAFFOLD = new Set([
-  "quels", "quelles", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
+  "quels", "quelles", "qu", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
   "definit", "definir", "decrit", "decrire", "decris", "donne", "donner", "presente", "presenter",
   "resume", "resumer", "figurent", "figure", "enumere", "enumerer", "distingue", "distinguer", "precise", "preciser",
   "montre", "selon", "apres", "livre", "livres", "ouvrage", "manuel", "references", "reference",
@@ -71,6 +72,7 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   criteres: ["criteres", "criteria"], diagnostiquer: ["criteres", "criteria"],
   traitement: ["traitement", "treatment"], traitements: ["traitements", "treatments"],
   trouble: ["trouble", "disorder"], troubles: ["troubles", "disorders"], bipolaire: ["bipolaire", "bipolar"],
+  tdah: ["tdah", "adhd"], entretien: ["entretien", "maintenance"], enfant: ["enfant", "children"],
   schizophrenie: ["schizophrenie", "schizophrenia"], anxiete: ["anxiete", "anxiety"],
   manie: ["maniaque", "mania"], hypomanie: ["hypomaniaque", "hypomania"],
   symptomes: ["symptomes", "symptoms"], enfants: ["enfants", "children"], adulte: ["adulte", "adult"],
@@ -96,6 +98,9 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   decrits: ["decrits", "described"], decrit: ["decrit", "described"],
   serotoninergique: ["serotoninergique", "serotonin"],
   serotonine: ["serotonine", "serotonin"],
+  // Same word in both languages once the accents are gone: without them the English variant is refused ("a content word stays untranslated").
+  benzodiazepine: ["benzodiazepine", "benzodiazepine"], benzodiazepines: ["benzodiazepines", "benzodiazepines"],
+  surveiller: ["surveiller", "monitoring"], antipsychotique: ["antipsychotique", "antipsychotic"],
   arreter: ["arreter", "stop"], arret: ["arret", "discontinuation"], eviter: ["eviter", "avoid"],
   antidepresseur: ["antidepresseur", "antidepressant"], antidepresseurs: ["antidepresseurs", "antidepressants"],
   titrer: ["titrer", "titrate"], titration: ["titration", "titration"],
@@ -107,6 +112,8 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   frequence: ["frequence", "frequency"], signes: ["signes", "signs"], signe: ["signe", "sign"],
   agit: ["agit", "works"], agir: ["agir", "works"],
   action: ["action", "action"],
+  diagnostiques: ["diagnostiques", "criteria"], diagnostique: ["diagnostique", "criteria"],
+  majeure: ["majeure", "major"], majeur: ["majeur", "major"], generalisee: ["generalisee", "generalized"], generalise: ["generalise", "generalized"],
   messager: ["messager", "messenger"], messagers: ["messagers", "messenger"],
   intracellulaire: ["intracellulaire", "intracellular"], intracellulaires: ["intracellulaires", "intracellular"],
   mecanisme: ["mecanisme", "mechanism"], mecanismes: ["mecanismes", "mechanism"],
@@ -130,6 +137,10 @@ export interface KnowledgeQueryPlan {
    */
   readonly references: readonly string[];
   readonly relevanceQuery: string;
+  /** Fewer-term retries for an empty lexical result, each ranked against the whole question. */
+  readonly recoveryQueries?: readonly { readonly query: string; readonly reference: string }[];
+  /** Section headings the question asks about. They order a drug's monograph, never filter it. */
+  readonly aspectRubrics?: readonly string[];
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
   /**
@@ -179,6 +190,25 @@ export function isKnowledgeLocationQuestion(question: string): boolean {
 }
 
 /** Local query planning only. SQL still decides approval, lifecycle and access. */
+/** The French manual's own wording for the conditions a doctor names in other words. Closed list; null when nothing applies. */
+const MANUAL_TERMS: readonly (readonly [RegExp, string])[] = [
+  [/\b(?:episodes?\s+depressifs?\s+majeurs?|troubles?\s+depressifs?\s+majeurs?|depressions?\s+(?:majeures?|caracterisees?|unipolaires?))\b/gu, "trouble depressif caracterise"],
+  [/\b(?:troubles?\s+anxieux\s+generalises?|anxietes?\s+generalisees?)\b/gu, "anxiete generalisee"],
+  [/\bdysthymies?\b/gu, "trouble depressif persistant"],
+  [/\btdah\b/gu, "deficit attention hyperactivite"],
+  [/\btoc\b/gu, "trouble obsessionnel compulsif"],
+  [/\btspt\b/gu, "trouble stress post traumatique"],
+];
+/** Names a doctor gives a disorder whose section the focus rules know; used to recognise the focus only, never to rewrite a query. */
+const FOCUS_ONLY_TERMS: readonly (readonly [RegExp, string])[] = [
+  [/\b(?:troubles?\s+)?bipolaires?\s+(?:de\s+)?(?:type\s+)?(?:ii|2|deux)\b/gu, "trouble bipolaire de type ii"],
+  [/\b(?:troubles?\s+)?bipolaires?\s+(?:de\s+)?(?:type\s+)?(?:i|1)\b/gu, "trouble bipolaire de type i"],
+];
+export function frenchManualTerms(normalized: string): string | null {
+  let changed = normalized;
+  for (const [pattern, term] of MANUAL_TERMS) changed = changed.replace(pattern, term);
+  return changed !== normalized ? changed : null;
+}
 export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null {
   // Never truncate away a final book, population, dose or other restriction.
   if (question.length > 500) return null;
@@ -208,6 +238,9 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     // Connecteurs francais : « que dit le livre SUR … », « le livre DE LA … »
     "sur", "au", "aux", "en", "dans", "la", "le", "les", "un", "une", "du",
     "des", "que", "quoi", "quel", "quelle", "et", "ou", "mais", "donc", "alors",
+    // « selon les recommandations », « selon l'âge » : aucun de ces mots ne nomme un livre.
+    "recommandation", "recommandations", "guideline", "guidelines", "etudes", "etude", "experts", "expert", "auteurs",
+    "age", "sexe", "poids", "gravite", "severite", "indication", "situation", "cas", "type", "dose", "patient", "patiente", "patients", "l", "d", "vous", "toi",
     "مراجع", "معايير"]);
   for (const name of [named, namedBook]) {
     if (name && !generic.has(name) && !BOOKS.some(known => known.marker.test(name))) return null;
@@ -299,6 +332,48 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       references.push(requeteCoeur);
     }
   }
+  // "Withdrawal syndrome" is written "withdrawal" or "discontinuation" in the books: without the noun "syndrome" the same question finds the section.
+  if (book === undefined) {
+    const sansSyndrome = [...new Set(termes.map(token => ALIASES[token]?.[1] ?? token).filter(token => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token) && !VERBES_ANGLAIS_FAIBLES.has(token) && token !== 'syndrome'))];
+    const requeteSansSyndrome = sansSyndrome.join(' ');
+    if (sansSyndrome.length >= 2 && /\b(?:withdrawal|discontinuation)\b/u.test(requeteSansSyndrome) && !queries.includes(requeteSansSyndrome)) {
+      queries.push(requeteSansSyndrome);
+      references.push(requeteSansSyndrome);
+    }
+  }
+  // The doctor says "dépression majeure", the French manual writes "trouble dépressif caractérisé": a lexical gate in ET finds nothing
+  // under the doctor's word. Add the manual's own term as one more query, never in place of the doctor's.
+  if (book === undefined) {
+    const manualTerms = frenchManualTerms(normalized);
+    if (manualTerms) {
+      const lexemesVariant = manualTerms.match(/[\p{L}]+/gu) ?? [];
+      const termsVariant = [...new Set(lexemesVariant.flatMap(token => jetoniser(token)).filter(token => !SCAFFOLD.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
+      const variant = [...new Set(termsVariant.map(token => ALIASES[token]?.[0] ?? token))].join(" ");
+      // First: the manual's own term is the query most likely to find the passage, and the doctor's wording finds noise beside it.
+      // The French manual does not contain the doctor's wording, so that query can only add noise: it is replaced, the English one stays.
+      if (variant && !queries.includes(variant)) { queries[0] = variant; references[0] = variant; }
+    }
+  }
+  const recoveryQueries: { query: string; reference: string }[] = [];
+  if (book === undefined) {
+    const known = [...new Set(termes.map(token => ALIASES[token]?.[1] ?? token).filter(token => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
+    const unknown = termes.filter(token => ALIASES[token] === undefined && !anglaisConnus.has(token) && !UNITES_INVARIANTES.has(token) && !/^[+-]?\d/u.test(token));
+    // Only a drug the books know can anchor a retry, so a retry never loses the subject of a
+    // drug-less question: "dose de psilocybine" must not come back as another drug's dosing.
+    // Known limit: an unknown word next to a known drug is still dropped from the retry.
+    const reference = [...known, ...unknown].join(" "), anchor = requestedMedicationNames(question)[0] ?? requestedMonographNames(question)[0];
+    const add = (query: string) => { if (query && !queries.includes(query) && !recoveryQueries.some(entry => entry.query === query) && recoveryQueries.length < 3) recoveryQueries.push({ query, reference }); };
+    if (anchor) {
+      if (unknown.length > 0 && known.length >= 2) add(known.join(" "));
+      for (const other of known.filter(token => token !== anchor).slice(0, 2)) add(`${anchor} ${other}`);
+      for (const other of unknown.filter(token => token !== anchor).slice(0, 1)) add(`${anchor} ${other}`);
+    }
+    // One filler word ("permettent", "retenir", "évoquent"...) empties the lexical AND. Retry once without question filler only
+    // (verbs and connectors, never a medical word), so the retry never loses the subject.
+    const FILLER = /^(?:permett\w*|retenir|evoqu\w*|equivau\w*|exist\w*|homolog\w*|provoqu\w*|frequent\w*|avant|debut\w*|faire|donner?|propos\w*|utilis\w*|attend\w*|reconnai\w*|correspond\w*|caracteris\w*|associe\w*|souvent|forcement|entrain\w*|peut|peuvent|doit|faut|ete|etre|avoir)$/u;
+    const core = tokens.filter(token => !FILLER.test(token)), coreQuery = core.join(" ");
+    if (core.length >= 2 && core.length < tokens.length && !queries.includes(coreQuery) && !recoveryQueries.some(entry => entry.query === coreQuery) && recoveryQueries.length < 3) recoveryQueries.push({ query: coreQuery, reference: tokens.join(" ") });
+  }
   // The approved books often label monitoring requirements under "Tests".
   // Keep the literal monitoring query and add this bounded heading alternative.
   for (const query of [...queries]) {
@@ -366,6 +441,8 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const focusRules:readonly (readonly [RegExp,string])[]=[
     [/\btrouble depressif caracterise\b/u,'trouble depressif caracterise'],
     [/\bepisode depressif(?: caracterise)?\b/u,'trouble depressif caracterise'],
+    [/\btrouble bipolaire de type ii\b/u,'trouble bipolaire de type ii'],
+    [/\btrouble bipolaire de type i\b/u,'trouble bipolaire de type i'],
     [/\btrouble panique\b/u,'trouble panique'],
     [/\b(?:hypomanie|hypomaniaque)\b/u,'episode hypomaniaque'],
     [/\b(?:manie|maniaque)\b/u,'episode maniaque'],
@@ -377,9 +454,14 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     [/\bdysphorique premenstruel\b/u,'trouble dysphorique premenstruel'],
     [/\b(?:trouble lie a l[’']usage|trouble de l[’']usage|usage d[’']une substance)\b/u,"troubles de l'usage d'une substance"],
   ];
-  const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
+  // The manual's own name for the condition ("dépression majeure" → "trouble dépressif caractérisé"): the focus is a section of that manual.
+  const focusNormalized=FOCUS_ONLY_TERMS.reduce((text,[pattern,term])=>text.replace(pattern,term),frenchManualTerms(normalized)??normalized);
+  // Naming both bipolar types is a comparison, which keeps its own two queries: neither type is then "the" focus.
+  const bothBipolarTypes=/\btypes?\s+i\b/u.test(normalized)&&/(?:\btypes?\s+ii\b|\b(?:de|du|et|vs|versus)\s+(?:type\s+)?ii\b)/u.test(normalized);
+  const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(focusNormalized)).map(([,focus])=>focus).filter(focus=>!(bothBipolarTypes&&focus.startsWith('trouble bipolaire de type')));
   const locationRequest=isKnowledgeLocationQuestion(question)||/\b(?:localise|localiser|retrouve|trouve)\b[^.!?]{0,100}\b(?:passage|section|chapitre|page)\b/u.test(normalized)||/\blocalise\w*\b/u.test(normalized)||/\bou\s+est\s+(?:decrit|decrite|mentionne|mentionnee)\b/u.test(normalized);
-  const focusedContent=recognizedFocuses[0]==='trouble depressif caracterise';
+  // A treatment question about this disorder must still reach Maudsley and Stahl.
+  const focusedContent=['trouble depressif caracterise','trouble bipolaire de type ii','trouble bipolaire de type i'].includes(recognizedFocuses[0]??'')&&/\b(?:criteres?|symptomes?|signes?|duree|seuils?|definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const drugLocationFocus=locationRequest&&requestedMedicationNames(question).length>0&&!/\b(?:renal\w*|rein\w*|kidney\w*|hematolog\w*|neutrophil\w*|qt)\b/u.test(normalized)
     ? (/\b(?:mecanism\w*|agit|action\w*|fonctionn\w*)\b/u.test(normalized)?'how the drug works'
       :/\b(?:posologie|dose)\b/u.test(normalized)?'dosing tips'
@@ -433,7 +515,15 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
           if (criteriaRequested) return 'criteres diagnostiques';
           return /\b(?:definit|definir|definition)\b/u.test(normalized) ? 'caracteristiques diagnostiques' : undefined;
         })()
-      : undefined);
+      // A criteria question with no named disorder still prefers the "Critères diagnostiques" leaf (a tie-break, never a filter).
+      : (!comparison && recognizedFocuses.length === 0 && (criteriaRequested || descriptionRequested || /\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized)) ? 'criteres diagnostiques' : undefined));
+  // A criteria or description question about a disorder no focus rule names: the DSM chunk to find opens "<Disorder> — critères diagnostiques —",
+  // so ask for the subject words together with that aspect (the plain subject query fills its twenty places with other chunks).
+  if(book===undefined&&!sectionFocus&&!comparison&&(criteriaRequested||descriptionRequested||/\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized))){
+    const aspectWords=/^(?:criteres?|symptomes?|signes?|defini\w*|caracteris\w*|reconnai\w*|correspond\w*|repos\w*|diagnostic\w*|quoi|comment|qui|que|permett\w*|retenir|evoqu\w*)$/u;
+    const subject=tokens.filter(token=>!aspectWords.test(token));
+    if(subject.length>=1&&subject.length<=4){const aspectQuery=[...subject,'criteres diagnostiques'].join(' ');if(!queries.includes(aspectQuery)){queries.push(aspectQuery);references.push(aspectQuery);}}
+  }
   if(sectionFocus){
     const primary=[sectionFocus,embeddedCriteria&&criteriaRequested?'criteres diagnostiques':sectionLeaf].filter(Boolean).join(' ');
     if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
@@ -442,10 +532,12 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), ...(bilingue.rubriques?.length ? { aspectRubrics: bilingue.rubriques } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */
+/** The DSM chunks open with "<Disorder> — <aspect> — …" (the aspect is not always the section leaf): true when that aspect is the one asked for. */
+export const textOpensWithAspect=(text:string,aspect:string)=>new RegExp(`^[^—]{2,120}—\\s*${aspect}\\b`,'u').test(normalize(text));
 export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
 
 /**

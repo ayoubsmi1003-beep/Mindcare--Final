@@ -16,6 +16,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "eval:jarvis": "bash scripts/checkpoint-jarvis-couche.sh",
+    "eval:alexa": "vitest run tests/unit/alexa-conversation-continuity.test.ts tests/unit/alexa-conversation-frame.test.ts tests/unit/alexa-turn-trace.test.ts tests/unit/alexa-knowledge-french.test.ts tests/unit/alexa-minicpm-knowledge.test.ts tests/unit/alexa-knowledge-recovery.test.ts tests/unit/alexa-patient-safety-reads.test.ts tests/unit/alexa-capabilities.test.ts tests/unit/alexa-hybrid-packaging.test.ts tests/unit/alexa-general-ordinary-words.test.ts",
     "eval:golden": "node scripts/eval-golden.mjs",
     "eval:replay": "node scripts/replay-golden.mjs",
     "import:medicaments": "node scripts/import-medicaments.mjs --file docs/Médicaments.xlsx",

@@ -1,3 +1,5 @@
+// These tests cover the model-selection summary path, which ALEXA_SUMMARY_MODEL=1 keeps available; the default plain summary is model-free (see alexa-plain-summary.test.ts).
+process.env["ALEXA_SUMMARY_MODEL"] = "1";
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
 import {afterEach,expect,it,vi} from 'vitest';
 vi.mock('@/server/alexa/clinical-narrative',async original=>({...await original<object>(),summarizeClinicalContext:vi.fn(),summarizeClinicalCaseContext:vi.fn()}));

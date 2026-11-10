@@ -1,0 +1,4651 @@
+{
+ "version": 3,
+ "campaign": "C202",
+ "frozenOn": "2026-11-10",
+ "language": "fr",
+ "note": "French only. Wording written before any run; never tuned against results.",
+ "cases": [
+  {
+   "id": "W001",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Peux-tu me préparer une synthèse du dossier de ce patient avant la séance ?",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W002",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Allez, balance-moi l'essentiel sur {R2}.",
+     "expect": {
+      "k": "summary",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W003",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Synthèse.",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W004",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "J'ai oublié où on en était avec lui, tu peux me remettre au clair ?",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W005",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Sur {R5}, je voudrais un tour d'horizon.",
+     "expect": {
+      "k": "summary",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W006",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "syntese du patien {R6}",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "W007",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "Fais-moi un état des lieux de sa prise en charge.",
+     "expect": {
+      "k": "summary",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W008",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "Les grandes lignes ?",
+     "expect": {
+      "k": "summary",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "W009",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "Liste ses consultations passées.",
+     "expect": {
+      "k": "history",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W010",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "J'aimerais revoir toutes les séances qu'a eues {R10} avec nous.",
+     "expect": {
+      "k": "history",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W011",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Chronologie.",
+     "expect": {
+      "k": "history",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W012",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R6",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Veuillez afficher la chronologie complète de ses consultations.",
+     "expect": {
+      "k": "history",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W013",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ça remonte à quand et ça a donné quoi, le suivi de {R3} ?",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W014",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Le déroulé de son suivi depuis le début ?",
+     "expect": {
+      "k": "history",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W015",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R10"
+   },
+   "turns": [
+    {
+     "say": "Au bout du compte, combien de séances ce patient a-t-il à son actif ?",
+     "expect": {
+      "k": "count",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W016",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R4}, on l'a vu combien de fois en tout ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W017",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "Total des séances ?",
+     "expect": {
+      "k": "count",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W018",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "En tout, combien de séances a-t-il eues ?",
+     "expect": {
+      "k": "count",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W019",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "combien de seances a eu {R8} ?",
+     "expect": {
+      "k": "count",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "W020",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Dis-moi, il en est à combien de consultations depuis qu'il vient ?",
+     "expect": {
+      "k": "count",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W021",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Ça représente combien de passages cumulés ?",
+     "expect": {
+      "k": "count",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W022",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer la date de sa consultation la plus récente ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W023",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Date de la dernière consultation de {R9} ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W024",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Sa dernière apparition au cabinet, c'était quel jour ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W025",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R10"
+   },
+   "turns": [
+    {
+     "say": "Dernière séance ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W026",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quand {R7} a-t-il été reçu en dernier ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W027",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "date de sa derniere consultaton",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "W028",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R8",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais la date de sa dernière visite, s'il te plaît.",
+     "expect": {
+      "k": "lastdate",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W029",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Le jour de sa toute première venue ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W030",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quelle date {R6} a-t-il été reçu pour la première fois ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W031",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "Il a débuté son suivi chez nous quand ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W032",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Début du suivi ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W033",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Affiche les trois séances les plus récentes de ce patient.",
+     "expect": {
+      "k": "prev",
+      "r": "R2",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W034",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi les dernières fois où j'ai vu {R10}, les trois dernières.",
+     "expect": {
+      "k": "prev",
+      "r": "R10",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W035",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Trois dernières séances ?",
+     "expect": {
+      "k": "prev",
+      "r": "R5",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W036",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R7",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous lister les trois consultations les plus récentes de ce patient ?",
+     "expect": {
+      "k": "prev",
+      "r": "R7",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W037",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Affiche ma dernière note clinique pour ce patient.",
+     "expect": {
+      "k": "lastnote",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W038",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Sur {R1}, quelles observations avais-je consignées lors de la séance précédente ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W039",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "Note de la dernière séance ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W040",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R10",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Remets-moi sous les yeux mon compte rendu de sa précédente visite.",
+     "expect": {
+      "k": "lastnote",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W041",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Que lui a-t-on prescrit pour le moment ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W042",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Côté ordonnance, {T4} est sous quelles molécules ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W043",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T5"
+   },
+   "turns": [
+    {
+     "say": "Sa prescription courante ?",
+     "expect": {
+      "k": "treat",
+      "r": "T5"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W044",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Quelles substances lui prescrit-on à l'heure actuelle ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W045",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "traitment en cour de {T2}",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "W046",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T4"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la prescription médicamenteuse actuelle de ce patient ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W047",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Je ne me rappelle plus ce qu'il prend, tu peux me le dire ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W048",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U2"
+   },
+   "turns": [
+    {
+     "say": "Pour quelle date l'ai-je reprogrammé ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U2"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W049",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{U1} revient à quelle date ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U1"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W050",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U3"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer la date de sa prochaine consultation programmée ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U3"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W051",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Nombre de documents au dossier ?",
+     "expect": {
+      "k": "documents",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W052",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R7} a des papiers dans son dossier ? Combien ?",
+     "expect": {
+      "k": "documents",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W053",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "S1"
+   },
+   "turns": [
+    {
+     "say": "Quels scores d'échelles ont été relevés pour lui ?",
+     "expect": {
+      "k": "scales",
+      "r": "S1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W054",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "S1"
+   },
+   "turns": [
+    {
+     "say": "A-t-il passé des échelles d'évaluation ?",
+     "expect": {
+      "k": "scales",
+      "r": "S1"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W055",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi le nom du patient dont je consulte le dossier.",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W056",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Combien de fois on l'a vu ?",
+     "expect": {
+      "k": "count",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "W057",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Traitement en cours ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "W058",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Date de dernière venue ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W059",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Il est suivi ici depuis quelle époque ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W060",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R6",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais un point sur ce patient avant d'entrer.",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W061",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer ses médicaments actuels ?",
+     "expect": {
+      "k": "treat",
+      "r": "T5"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W062",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R8",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "De ce patient, l'historique complet, s'il te plaît.",
+     "expect": {
+      "k": "history",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W063",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R10",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Quel est le dernier compte rendu de séance ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W064",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'a-t-on dans le dossier de {R5} ?",
+     "expect": {
+      "k": "summary",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Il a eu combien de séances ?",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    },
+    {
+     "say": "C'était pour quel jour, la plus récente ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W065",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{T1} : traitement actuel ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et sa plus récente venue, à quelle date ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W066",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais des informations sur {R3}.",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et son historique ?",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W067",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dossier de {R6}, résumé rapide.",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Combien de consultations a-t-il à son actif ?",
+     "expect": {
+      "k": "count",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "W068",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Fais-moi le point sur le suivi de {R9}.",
+     "expect": {
+      "k": "summary",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et la toute première consultation ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W069",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Quelles molécules a-t-on prescrites en ce moment ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "À combien de séances est-ce que ça monte ?",
+     "expect": {
+      "k": "count",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W070",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi les dernières nouvelles de {R4}.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    },
+    {
+     "say": "Montre-moi ses deux dernières consultations.",
+     "expect": {
+      "k": "prev",
+      "r": "R4",
+      "n": 2
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W071",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R7} : à quelle date a-t-il été reçu pour la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    },
+    {
+     "say": "Et à ses débuts chez nous ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W072",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Laisse celui-là, ouvre plutôt le dossier de {R2}.",
+     "expect": {
+      "k": "summary",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W073",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais plutôt savoir combien de séances a eues {R4}.",
+     "expect": {
+      "k": "count",
+      "r": "R4",
+      "decoys": [
+       "R3"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W074",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Ce n'est pas lui que je veux : donne-moi la dernière visite de {R6}.",
+     "expect": {
+      "k": "lastdate",
+      "r": "R6",
+      "decoys": [
+       "R5"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W075",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "Change de patient : le traitement de {T2}, s'il te plaît.",
+     "expect": {
+      "k": "treat",
+      "r": "T2",
+      "decoys": [
+       "R7"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W076",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Maintenant je veux voir {R9} : historique de ses consultations.",
+     "expect": {
+      "k": "history",
+      "r": "R9",
+      "decoys": [
+       "T1"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W077",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "Pour {R10} et non pour celui-ci : résume son dossier.",
+     "expect": {
+      "k": "summary",
+      "r": "R10",
+      "decoys": [
+       "R9"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W078",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Oublie ce dossier, c'est {R3} : quelle est sa première consultation ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R3",
+      "decoys": [
+       "R2"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "W079",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je voudrais des informations sur {HA.first}.",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W080",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{HC.first} : on l'a reçu en dernier quel jour ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "{HC} bien sûr.",
+     "expect": {
+      "k": "lastdate",
+      "r": "HC",
+      "decoys": [
+       "HD"
+      ]
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W081",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi le profil de {HB.first}",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W082",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nombre de séances de {HD.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W083",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Résume le dossier de {DA}.",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "DA",
+       "DB"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W084",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Un aperçu de {SA}, s'il vous plaît.",
+     "expect": {
+      "k": "summary",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W085",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pour {SB}, quel est le total de séances déjà faites ?",
+     "expect": {
+      "k": "count",
+      "r": "SB",
+      "decoys": [
+       "SA"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W086",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Date de la dernière séance de {SA} ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W087",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Une vue d'ensemble de {R1}.",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Dis-moi bonjour.",
+     "expect": {
+      "k": "plain"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Quelle était sa dernière visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "W088",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est l'ordonnance de {T3} ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Combien de consultations aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today",
+      "noPatientRead": true
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et son nombre de séances ?",
+     "expect": {
+      "k": "count",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W089",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi ce qu'on sait de {R8}.",
+     "expect": {
+      "k": "summary",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Merci, c'est noté.",
+     "expect": {
+      "k": "plain"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et ses trois dernières consultations ?",
+     "expect": {
+      "k": "prev",
+      "r": "R8",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "W090",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est mon patient suivant ?",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Résume-moi son dossier.",
+     "expect": {
+      "k": "summary",
+      "r": "NP1"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "W091",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Passe au patient suivant.",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "informal"
+    },
+    {
+     "say": "Et qu'est-ce qu'on lui prescrit ?",
+     "expect": {
+      "k": "treat",
+      "r": "NP1"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "W092",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "C'est quoi le prochain dossier à ouvrir ?",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    },
+    {
+     "say": "Combien de séances a-t-il eues ?",
+     "expect": {
+      "k": "count",
+      "r": "NP1"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "W093",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Peux-tu me redonner l'identité du patient affiché ?",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W094",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "De qui parle-t-on ici ?",
+     "expect": {
+      "k": "who",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W095",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles sont les consultations de {F1} ?",
+     "expect": {
+      "k": "prev",
+      "r": "F1",
+      "n": 2
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W096",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{Z1} a-t-il été reçu au moins une fois ici ?",
+     "expect": {
+      "k": "count",
+      "r": "Z1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W097",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "Z1"
+   },
+   "turns": [
+    {
+     "say": "Quel est son nombre de passages ici ?",
+     "expect": {
+      "k": "count",
+      "r": "Z1"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W098",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "Peux-tu me dire ce qu'il prend comme médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W099",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R7",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "En quelques phrases, qui est ce patient et où en est-il ?",
+     "expect": {
+      "k": "summary",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W100",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quand {T5} est-il venu en dernier ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "T5"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W101",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui dois-je recevoir aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W102",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nombre de patients prévus demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W103",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Mon planning de la journée, s'il te plaît.",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W104",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Il y a du monde cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W105",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients sont inscrits à l'agenda cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W106",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous ce mois-ci ?",
+     "expect": {
+      "k": "a_count",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W107",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Agenda d'hier",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W108",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui avais-je comme patients hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W109",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "La semaine passée, mon agenda comptait combien de patients ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W110",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui sont mes patients de demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W111",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Mon prochain rendez-vous, c'est avec qui ?",
+     "expect": {
+      "k": "a_next"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W112",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Mon prochain rendez-vous, à quelle heure ?",
+     "expect": {
+      "k": "a_next"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W113",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est mon tout premier rendez-vous de demain ?",
+     "expect": {
+      "k": "a_first",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W114",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est mon dernier rendez-vous d'aujourd'hui ?",
+     "expect": {
+      "k": "a_last",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W115",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ai-je des rendez-vous demain matin ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "tomorrow",
+      "part": "am"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W116",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Y a-t-il des consultations cet après-midi ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "pm"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W117",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous ce matin ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "am"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W118",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels rendez-vous ont été annulés ce mois-ci ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W119",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui s'est désisté cette semaine ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W120",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Suis-je libre demain après-midi ?",
+     "expect": {
+      "k": "a_free",
+      "day": "tomorrow",
+      "part": "pm"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W121",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous ai-je jeudi ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-29"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W122",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui vais-je recevoir mercredi ?",
+     "expect": {
+      "k": "a_list",
+      "day": "2026-10-28"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W123",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients le 29 octobre ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-29"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W124",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est prévu demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W125",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Aujourd'hui, j'ai combien de personnes à voir ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et pour mercredi ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-28"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W126",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous sont prévus cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et celle qui précède ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W127",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui ai-je reçu hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W128",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pour demain, quel est le nombre de patients au programme ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    },
+    {
+     "say": "Et le jour d'après ?",
+     "expect": {
+      "k": "a_count",
+      "day": "2026-10-28"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W129",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels rendez-vous aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et hier, c'était qui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W130",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients prévus ce mois-ci ?",
+     "expect": {
+      "k": "a_count",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et le mois précédent ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W131",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le montant encaissé aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W132",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles ont été nos recettes cette semaine ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W133",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien est rentré dans la caisse ce mois-ci ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W134",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chiffre d'affaires du mois ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W135",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Où en sont les paiements en attente ?",
+     "expect": {
+      "k": "f_outstanding",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W136",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le total de nos charges ce mois-ci ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W137",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qu'on a dépensé ce mois ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W138",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le solde net du mois ?",
+     "expect": {
+      "k": "f_net",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W139",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels modes de paiement les patients utilisent-ils ?",
+     "expect": {
+      "k": "f_other_methods",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W140",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien le cabinet a-t-il généré depuis le début de l'année ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "year"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W141",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Recettes de la semaine ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et celles de la semaine précédente ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W142",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien d'argent est entré aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    },
+    {
+     "say": "Et la veille ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "yesterday"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W143",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nos dépenses de ce mois ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et le mois précédent ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W144",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare les recettes d'août et de septembre.",
+     "expect": {
+      "k": "f_compare",
+      "a": "2026-08",
+      "b": "2026-09"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W145",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations ont été payées cette semaine ?",
+     "expect": {
+      "k": "f_sessions",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "W146",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients différents sont venus ce mois-ci ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W147",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de nouveaux dossiers ce mois-ci ?",
+     "expect": {
+      "k": "n_new",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W148",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de consultations ont été réalisées cette semaine ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W149",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle journée est la plus remplie chez nous ?",
+     "expect": {
+      "k": "n_busiest",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W150",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nombre de séances réalisées en octobre ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "2026-10"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W151",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Où en est l'activité du cabinet ce mois-ci ?",
+     "expect": {
+      "k": "n_overview",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W152",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de dossiers actifs au cabinet ?",
+     "expect": {
+      "k": "n_active_patients"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W153",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "La semaine passée, on a réalisé combien de séances ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Même chose pour la semaine en cours.",
+     "expect": {
+      "k": "n_consults",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W154",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare l'activité de la semaine dernière avec celle de cette semaine.",
+     "expect": {
+      "k": "n_compare",
+      "a": "lastweek",
+      "b": "week"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W155",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients ont été vus en septembre ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "2026-09"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "W156",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment définit-on la personnalité histrionique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "reponses emotionnelles excessives",
+         "quete d'attention"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "reponses emotionnelles excessives",
+       "quete d'attention"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W157",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment reconnaît-on une personnalité évitante ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "inhibition sociale",
+         "hypersensibilite"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "inhibition sociale",
+       "hypersensibilite"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W158",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quoi correspond la personnalité narcissique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "comportements grandioses",
+         "besoin d'etre admire"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "comportements grandioses",
+       "besoin d'etre admire"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W159",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Critères d'une personnalité schizoïde",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "detachement par rapport aux relations sociales"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "detachement par rapport aux relations sociales"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W160",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qui caractérise la personnalité dépendante ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "besoin general et excessif d'etre pris en charge"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "besoin general et excessif d'etre pris en charge"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W161",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Sur quoi repose le diagnostic de personnalité paranoïaque ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "soupconneuse envahissante envers les autres"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "soupconneuse envahissante envers les autres"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W162",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères de la kleptomanie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "impossibilite repetee de resister a l'impulsion de voler"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "impossibilite repetee de resister a l'impulsion de voler"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W163",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment diagnostique-t-on une pyromanie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "allumage delibere et reflechi d'incendies"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "allumage delibere et reflechi d'incendies"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W164",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels critères permettent de retenir la crainte excessive d'avoir une maladie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "preoccupation concernant le fait d'avoir ou de developper une maladie grave"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "preoccupation concernant le fait d'avoir ou de developper une maladie grave"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W165",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères des troubles de l'adaptation ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "reponse a un ou plusieurs facteurs de stress identifiables"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "reponse a un ou plusieurs facteurs de stress identifiables"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W166",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels critères pour un trouble lié à des douleurs génito-pelviennes ou à la pénétration ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "difficultes persistantes ou repetees"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "difficultes persistantes ou repetees"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W167",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels signes associés évoquent un trouble de l'usage du tabac ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "fumer dans les 30 minutes suivant le reveil"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "fumer dans les 30 minutes suivant le reveil"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W168",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la cause de la narcolepsie avec cataplexie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "perte cellulaire de neurones hypothalamiques",
+         "hypocretine"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "perte cellulaire de neurones hypothalamiques",
+       "hypocretine"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W169",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle dose de lorazépam équivaut à 10 mg de diazépam ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "diazepam equivalent",
+         "lorazepam 1mg"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "diazepam equivalent",
+       "lorazepam 1mg"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W170",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle dose quotidienne initiale ne dépasse-t-on pas pour traiter une dépendance aux opiacés en service de psychiatrie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "initial daily dose",
+         "30mg",
+         "naloxone"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "initial daily dose",
+       "30mg",
+       "naloxone"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W171",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le traitement de première intention de la boulimie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "first line for bulimia",
+         "fluoxetine"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "first line for bulimia",
+       "fluoxetine"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W172",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Existe-t-il un médicament homologué pour l'anorexie mentale ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "none is currently licensed",
+         "anorexia nervosa"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "none is currently licensed",
+       "anorexia nervosa"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W173",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pourquoi le valproate peut-il provoquer léthargie et confusion ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "hyperammonaemia",
+         "750mg/day"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "hyperammonaemia",
+       "750mg/day"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W174",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Un antidépresseur est-il à l'abri de l'hyponatrémie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "linked with hyponatraemia"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "linked with hyponatraemia"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W175",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel bilan faire avant de débuter le lithium ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "pre-lithium workup",
+         "egfr and tfts"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "pre-lithium workup",
+       "egfr and tfts"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W176",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Un inhibiteur de la cholinestérase est-il préférable pour limiter la bradycardie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "none of the ache-is",
+         "chronotropic"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "none of the ache-is",
+       "chronotropic"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W177",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels effets cardiovasculaires a-t-on rapportés avec la mémantine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "memantine",
+         "bradycardia"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "memantine",
+       "bradycardia"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W178",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que propose-t-on par injection contre l'hypersalivation sous clozapine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "parotid gland",
+         "sialorrhoea"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "parotid gland",
+       "sialorrhoea"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W179",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels médicaments élèvent le seuil convulsif lors d'une sismothérapie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "elevate seizure threshold",
+         "higher stimuli"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "elevate seizure threshold",
+       "higher stimuli"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W180",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle prise de poids attend-on avec la lurasidone ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "weight gain greater than placebo",
+         "52-week"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "weight gain greater than placebo",
+       "52-week"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W181",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Les fortes doses de lurasidone sont-elles plus efficaces dans la dépression bipolaire ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "20 and 60 mg/day",
+         "60 and 120 mg/day"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "20 and 60 mg/day",
+       "60 and 120 mg/day"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W182",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que donner contre l'akathisie sous ziprasidone ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "ziprasidone",
+         "akathisia",
+         "beta blockers"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "ziprasidone",
+       "akathisia",
+       "beta blockers"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W183",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "L'allongement du QTc avec la ziprasidone injectable dépasse-t-il celui de l'halopéridol ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "intramuscular ziprasidone",
+         "haloperidol"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "intramuscular ziprasidone",
+       "haloperidol"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W184",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels effets secondaires fréquents provoque la mirtazapine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "mirtazapine",
+         "increased appetite",
+         "weight gain"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "mirtazapine",
+       "increased appetite",
+       "weight gain"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W185",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Le sevrage de la venlafaxine est-il plus sévère que celui des autres antidépresseurs ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "more severe with venlafaxine"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "more severe with venlafaxine"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W186",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle dose de clonazépam peut être nécessaire dans le trouble panique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "panic patients may require 4 mg/day"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "panic patients may require 4 mg/day"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W187",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Demi-vie de la naltrexone orale ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "oral naltrexone is approximately 13 hours"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "oral naltrexone is approximately 13 hours"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W188",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le principal avantage de la forme à libération contrôlée de la paroxétine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "main advantage of cr",
+         "reduced side effects"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "main advantage of cr",
+       "reduced side effects"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W189",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels récepteurs contribuent à l'effet de la clozapine sur les symptômes cognitifs et affectifs ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "5ht2c and 5ht1a"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "5ht2c and 5ht1a"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W190",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Le modafinil modifie-t-il la pharmacocinétique de la dextroamphétamine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "dextroamphetamine",
+         "pharmacokinetics"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "dextroamphetamine",
+       "pharmacokinetics"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W191",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Je souhaiterais connaître la posologie actuelle suivie par ce patient.",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W192",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Ça date de quand sa première fois chez nous ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "W193",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Séances ?",
+     "expect": {
+      "k": "count",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W194",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Allez, fais-moi un topo rapide, il arrive.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "W195",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Quel nombre de passages totalise ce patient ?",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "W196",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Cachets ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "W197",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "La date de sa venue la plus récente, c'est quoi ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "W198",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "Que contient ma dernière note ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "W199",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel jour a-t-on revu {R9} pour la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "W200",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Quelle médication reçoit ce patient aujourd'hui ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  }
+ ]
+}

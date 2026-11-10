@@ -6,7 +6,8 @@ const appointment = z.object({
   id: z.uuid(), patient_id: z.uuid().nullable(), starts_at: z.iso.datetime({ offset: true }),
   ends_at: z.iso.datetime({ offset: true }), status: z.enum(["confirmed", "arrived", "in_session", "completed", "no_show"]),
 });
-const dashboard = z.object({ suivant: appointment.nullable(), journee: z.array(appointment).max(500) });
+// The next patient's gate already returns the name (under the caller's rights); the schema used to drop it, so "Patient suivant" never said who.
+const dashboard = z.object({ suivant: appointment.extend({ first_name: z.string().nullish(), last_name: z.string().nullish() }).nullable(), journee: z.array(appointment).max(500) });
 const pgTimestamp = z.preprocess(value => value instanceof Date && Number.isFinite(value.getTime()) ? value.toISOString() : value,
   z.iso.datetime({ offset: true }));
 const agendaEntry = appointment.extend({ status: z.enum(["requested", "confirmed", "arrived", "in_session", "completed", "no_show"]),

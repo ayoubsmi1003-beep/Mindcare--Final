@@ -42,6 +42,7 @@ describe("audited reversed full patient names", () => {
   it("does not reverse a single incomplete name or reuse an older patient", async () => {
     const { db, queries } = door({});
     expect((await resolvePatient(db, { name: "Belkacem", patientId: id })).status).toBe("absent");
-    expect(queries).toEqual(["Belkacem"]);
+    // The only extra query is the sound-alike lookup on its first letters; no rotation, no older patient.
+    expect(queries).toEqual(["Belkacem", "bel"]);
   });
 });

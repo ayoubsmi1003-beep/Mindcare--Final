@@ -221,9 +221,9 @@ describe("PatientResolver fail closed local names", () => {
 
     const result = await resolvePatient(f.db, { name: "Nadia Benali" });
 
-    expect(result).toEqual({ status: "ambiguous", candidates: [
+    // A close spelling is offered as a question, and a distant row is not offered at all.
+    expect(result).toEqual({ status: "ambiguous", suggested: true, candidates: [
       { patientId: closeId, label: "Nadia Benaali" },
-      { patientId: otherId, label: "Sabrina Cherif" },
     ] });
     expect(f.calls.map((call) => call.name)).toEqual(["search_patients"]);
   });

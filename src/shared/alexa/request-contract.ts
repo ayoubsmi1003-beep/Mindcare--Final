@@ -1,6 +1,6 @@
 ﻿import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations} from "./request-plan";
 import {parsePatientMention} from "./patient-mention";
-import {mentionsMedication} from "./medications";
+import {mentionsMedication,medicationNames} from "./medications";
 import type {RequestPart,SupportedCondition} from './agent';
 const fold=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLocaleLowerCase();
 export function isFrenchAlexaCapabilityQuestion(text:string):boolean{
@@ -312,7 +312,7 @@ export function constrainCountDeclaration(parts:RequestPart[],contract:FrenchCou
 }
 
 export type FrenchReadTool='query_agenda'|'query_patients'|'query_consultations'|'get_patient_context'|'query_documents'|'query_finance'|'query_app'|'search_knowledge'|'prepare_action'|'navigate';
-export interface FrenchReadTarget {tool:FrenchReadTool;navigationTarget?:'patient'|'patients'|'agenda'|'dashboard'|'documents'|'finances'|'parametres'|'jarvis';consultationCount?:number;messageKind?:'rappel_rendez_vous'|'document_pret';applicationView?:'cabinet'|'practitioner'|'notifications'|'system'|'message_draft'|'reception'|'medication_catalog';financeMode?:'charges'|'overview'|'calendar'|'totals'|'composition';financeState?:'all'|'pending'|'collected';financeConsultationStatus?:'closed';patientSection?:'summary'|'history'|'treatments'|'profile'|'diagnoses'|'scales'|'current'|'notes'|'timeline';consultationMode?:'count'|'list';consultationStatus?:'all'|'open'|'closed'|'unsigned';dateAxis?:'started_at'|'ended_at';unboundedPeriod?:boolean;from?:string;to?:string;noteArea?:'working'|'subjective'|'objective'|'assessment'|'plan'|'amendment'|'structured';noteQuery?:string;diagnosisState?:'all'|'active'|'resolved';diagnosisRole?:'all'|'primary'|'secondary';treatmentState?:'all'|'active'|'paused'|'stopped';documentKind?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance';documentStatus?:'issued'|'draft';documentAllKinds?:boolean;}
+export interface FrenchReadTarget {tool:FrenchReadTool;navigationTarget?:'patient'|'patients'|'agenda'|'dashboard'|'documents'|'finances'|'parametres'|'jarvis';consultationCount?:number;messageKind?:'rappel_rendez_vous'|'document_pret';applicationView?:'cabinet'|'practitioner'|'notifications'|'system'|'message_draft'|'reception'|'medication_catalog'|'internal_messages'|'statistics'|'medication_workload';financeMode?:'charges'|'overview'|'calendar'|'totals'|'composition';financeState?:'all'|'pending'|'collected';financeConsultationStatus?:'closed';patientSection?:'summary'|'history'|'treatments'|'profile'|'diagnoses'|'scales'|'current'|'notes'|'timeline'|'allergies'|'adverse_events'|'adherence'|'measurements'|'medication_timeline'|'case_summary_status';consultationMode?:'count'|'list';consultationStatus?:'all'|'open'|'closed'|'unsigned';dateAxis?:'started_at'|'ended_at';unboundedPeriod?:boolean;from?:string;to?:string;noteArea?:'working'|'subjective'|'objective'|'assessment'|'plan'|'amendment'|'structured';noteQuery?:string;diagnosisState?:'all'|'active'|'resolved';diagnosisRole?:'all'|'primary'|'secondary';treatmentState?:'all'|'active'|'paused'|'stopped';documentKind?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance';documentStatus?:'issued'|'draft';documentAllKinds?:boolean;}
 export type FrenchRequestAdmission=Omit<FrenchReadTarget,'tool'>&{tools?:readonly string[];profileOnly:boolean;preparationAction?:'create_appointment'|'reschedule_appointment'|'cancel_appointment'|'mark_patient_arrived'|'set_consultation_price'|'record_payment_collected'|'close_consultation'|'create_editable_document_draft'|'update_editable_document_draft'|'print_issued_document'|'update_treatment'|'pause_treatment'|'resume_treatment'|'stop_treatment'|'create_charge'|'update_charge'|'deactivate_charge'|'send_internal_message';preparationDocumentType?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance'};
 const PREPARATION_ACTIONS=new Set<NonNullable<FrenchRequestAdmission['preparationAction']>>(['create_appointment','reschedule_appointment','cancel_appointment','mark_patient_arrived','set_consultation_price','record_payment_collected','close_consultation','create_editable_document_draft','update_editable_document_draft','print_issued_document','update_treatment','pause_treatment','resume_treatment','stop_treatment','create_charge','update_charge','deactivate_charge','send_internal_message']);
 const patientAnchor=(plain:string,text:string)=>{
@@ -333,14 +333,196 @@ export function isFrenchNamedLatestConsultationComparison(text:string):boolean{
  const latestPair=/\b(?:les?\s+)?(?:deux|2)\s+dernieres?\s+(?:consultations?|seances?)\b/u.test(plain);
  return mention.status==='named'&&explicitCommand&&latestPair&&/\b(?:compar\w*|differenc\w*|chang\w*|evolu\w*)\b/u.test(plain);
 }
+const CLOSED_DRUG=`(?:${medicationNames.join("|")})`;
+const CLOSED_TOPIC=/^(?:(?:la|le|les) |l')?(?:posologie|dose|dosage|effets? (?:indesirables?|secondaires?)|mecanisme(?: d'action)?|surveillance|contre-indications?|interactions?) (?:de la |du |de l'|de |d'|des |sous |avec )DRUG ?\?$/u.source.replace('DRUG',CLOSED_DRUG);
+const CLOSED_POPULATION=/^(?:(?:la|le|les) |l')?DRUG (?:chez |pendant |durant |en cas d'|en cas de )(?:(?:la|le|les|une|un) |l')?(?:sujets? ages?|personnes? agees?|enfants?|adolescents?|grossesse|femmes? enceintes?|allaitement|insuffisant renal|insuffisance renale|insuffisant hepatique|insuffisance hepatique) ?\?$/u.source.replace('DRUG',CLOSED_DRUG);
+const CLOSED_CARE=/^(?:comment (?:traiter|soigner|prendre en charge)|que faire (?:devant|en cas de|en cas d')|quel traitement (?:de|du|pour)) ?(?:(?:la|le|les|une|un) |l')?(?:dependance (?:aux|a l')(?: ?opioides| ?opiaces| ?alcool| ?benzodiazepines)|addiction (?:aux|a l')(?: ?opioides| ?opiaces| ?alcool| ?benzodiazepines)|dyskinesies? tardives?|akathisie|tdah(?: chez l'enfant)?) ?\?$/u.source;
+const CLOSED_DRUG_QUESTION=new RegExp(`${CLOSED_TOPIC}|${CLOSED_POPULATION}|${CLOSED_CARE}`,'u');
+/**
+ * A short question can leave its verb out: "Posologie de la rispéridone ?". Only this closed grammar,
+ * anchored on both ends. A free-form one sent "Lithium chez Benali ?" and "Bilan du cabinet ?" to the books.
+ */
+export function isClosedDrugQuestion(text:string):boolean{
+ return CLOSED_DRUG_QUESTION.test(fold(text).replace(/\s+/gu,' ').trim());
+}
+const NOT_A_PERSON=/^(?:types?|ii|iii|iv|parler|durer|diagnostiquer|definir|identifier|evoquer|poser|reconnaitre|distinguer|traiter|soigner|prevenir|eviter|stabiliser|obtenir|calmer|commencer|debuter|arreter|sevrer|reduire|diminuer|augmenter|dormir|adultes?|enfants?|adolescents?|nourrissons?|femmes?|hommes?|tdah|toc|tag|tspt|tca|manie|psychose|alcool|sevrage|insomnie|agitation|hospitalisation|personnes?|sujets?)$/u;
+const EPONYM=/^(?:parkinson|alzheimer|huntington|hamilton|lewy|tourette|cotard|creutzfeldt|korsakoff|wernicke|asperger|cushing|capgras|stevens|johnson|ramadan|trouble|stahl|maudsley|taylor|prescriber|guide|kaplan|manuel)$/u;
+const NOT_A_SUBJECT=/^(?:quel|quelle|quels|quelles|comment|pourquoi|quand|ou|qui|que|combien)$/u;
+/**
+ * A person's case, told apart from a book question: "Quelle dose de lithium pour Benali ?". French puts
+ * an article before a condition ("pour la dépression"), not before a name. Getting this wrong only
+ * sends a book question to the model router, while the opposite answers about a patient from a book.
+ * Phrasings this misses, such as a lowercase first name, still get the opening sentence of a list of
+ * references, which says the passages come from books and not from a record.
+ */
+const WRITE_COMMAND=/^(?:(?:alexa|s'il (?:te|vous) plait|merci de|peux-tu|pouvez-vous|tu peux|vous pouvez|je veux que tu|je voudrais que tu|je veux|je voudrais|j'aimerais|je souhaite|je souhaiterais|il faut|il faudrait|est-ce que tu peux|est-ce que vous pouvez|pourrais-tu|pourriez-vous)[, ]+)*(?:marque[rzs]?|supprime[rzs]?|efface[rzs]?|archive[rzs]?|annule[rzs]?|cloture[rzs]?|modifie[rzs]?|change[rzs]?|ajoute[rzs]?|cree[rzs]?|enregistre[rzs]?|envoie|envoyer|envoyez|valide[rzs]?|signe[rzs]?|confirme[rzs]?|remplace[rzs]?|retire[rzs]?|desactive[rzs]?|reactive[rzs]?|met(?:s|tre|tez)? a jour|corrige[rzs]?|deplace[rzs]?|reporte[rzs]?|encaisse[rzs]?|renouvelle[rzs]?|arrete[rzs]?)\b/u;
+/** Changes no Alexa action exists for. Answered at once: the model can't reach an action that isn't there. */
+export function hasNoChangeAction(text:string):boolean{
+ const plain=fold(text).trim();
+ if(!WRITE_COMMAND.test(plain))return false;
+ return /^(?:\S+[, ]+)*?(?:marque[rz]?|supprime[rz]?|efface[rz]?|archive[rz]?)\b.*\bmessages?\b/u.test(plain)||/^(?:\S+[, ]+)*?(?:supprime[rz]?|efface[rz]?)\b.*\b(?:patiente?|dossier|consultation|note|paiement|ordonnance|certificat)\b/u.test(plain);
+}
+/** The request asks for a change. Answering it with a read has to say that nothing changed. */
+export function asksForAChange(text:string):boolean{
+ const plain=fold(text).trim();
+ if(/^change d'avis\b/u.test(plain)||/\?\s*$/u.test(plain)&&/\b(?:quel(?:le|s|les)?|comment|pourquoi)\b/u.test(plain))return false;
+ return WRITE_COMMAND.test(plain)&&!/\b(?:sans|ne pas|n'[a-z]+ pas)\s+(?:rien\s+)?(?:modifier|changer|supprimer|enregistrer)\b/u.test(plain);
+}
+/**
+ * Splits a request into goals only on explicit sequence words or a new sentence. "et" only splits in
+ * front of a new request, because "les allergies et les traitements de X" share one patient.
+ * Returns null for a single goal, and caps at three so a long list can't multiply the turn's budget.
+ */
+export function sequencedGoals(text:string):{goals:string[];dropped:string[]}|null{
+ const clean=text.trim();
+ if(clean.length>500)return null;
+ // A condition or a filter may govern every part: splitting would drop it.
+ if(/\b(?:si|sauf|sans|uniquement|seulement|lorsque|lorsqu|quand|hormis|excepte|en cas)\b/u.test(fold(clean)))return null;
+ const parts=clean.split(/\s*[;,]?\s+(?:puis|ensuite|apres (?:ca|cela))[, ]+|(?<=[.?!;])\s+(?:(?:puis|ensuite|et aussi|et)[, ]+)?|[,]?\s+et (?=(?:montre|affiche|liste)\b)/iu).map(part=>part.trim()).filter(part=>part.length>1);
+ if(parts.length<2)return null;
+ // "Montre l'accueil puis les traitements à revoir": the verb applies to both.
+ const verb=/^(?:alexa\W+)?((?:montre|affiche|donne|liste)(?:[- ]moi)?)\b/iu.exec(parts[0]!)?.[1];
+ // "Consultations de juin 2026 puis les paiements": whether the period carries over isn't known, so it isn't guessed.
+ const period=/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|\d{4}|semaine|mois|annee|hier|demain|aujourd'hui|derniere?|prochaine?|depuis|entre)\b/u;
+ if(period.test(fold(parts[0]!))&&parts.slice(1).some(part=>!period.test(fold(part))))return null;
+ const capitalized=parts.map((part,index)=>{const whole=index>0&&verb&&/^(?:l['’]|les?\b|la\b|mes\b|mon\b|ma\b|des?\b|du\b)/iu.test(part)?`${verb} ${part}`:part;return whole.charAt(0).toLocaleUpperCase('fr')+whole.slice(1);});
+ return {goals:capitalized.slice(0,3),dropped:capitalized.slice(3)};
+}
+
+const RELATIVE='(?:mere|pere|maman|papa|mari|epoux|epouse|femme|conjointe?|compagne|compagnon|copine|copain|frere|soeur|fils|fille|enfants?|cousine?|oncle|tante|neveu|niece|belle-mere|beau-pere|belle-soeur|beau-frere|belle-fille|beau-fils|gendre|bru|grand-mere|grand-pere|parents?|voisine?|amie?|collegue)';
+const RECORD_WORD=/\b(?:traitements?|prescriptions?|ordonnances?|dossiers?|allergies?|diagnostics?|consultations?|seances?|rendez[- ]?vous|rdv|soldes?|paiements?|chronologie|notes?|antecedents?|certificats?|documents?|resume|dose|posologie|prend|suivie?)\b/u;
+/**
+ * The question is about someone other than the record being read: a patient's relative or another
+ * patient. Without this, "les allergies de son père" reads the selected patient's allergies and
+ * answers under that patient's name. "selected" says whether a patient is already in context.
+ */
+export function thirdPartyReference(text:string,selected:boolean):boolean{
+ const plain=fold(text).replace(/œ/gu,'oe');
+ if(/\b(?:l'|cet |un |une |cette )autre patiente?\b|\bcet autre\b|\bquelqu'un d'autre\b|\bune autre personne\b/u.test(plain))return true;
+ const named=parsePatientMention(text);
+ const of=new RegExp(`\\b${RELATIVE} (?:de|du) (?:ce patient|cette patiente|(?:le |la )?patiente?\\b)`,'u');
+ if(of.test(plain))return true;
+ if(named.status==='named'&&new RegExp(`\\b${RELATIVE} (?:de |du |d')${fold(named.name).replace(/[.*+?^${}()|[\]\\]/gu,'\\$&')}\\b`,'u').test(plain))return true;
+ if(!new RegExp(`\\b(?:son|sa|ses|leur|leurs) (?:[\\p{L}-]+ )?${RELATIVE}\\b`,'u').test(plain))return false;
+ return selected||RECORD_WORD.test(plain);
+}
+
+export function questionConcernsAPerson(text:string):boolean{
+ const plain=fold(text);
+ if(new RegExp(`\\b(?:son|sa|ses|leur|leurs)\\s+${CLOSED_DRUG}\\b`,'u').test(plain))return true;
+ if(/\b(?:son|sa|ses|leur|leurs)\s+(?:dose|posologie|traitement|ordonnance|lithemie|taux|bilan|dossier)\b/u.test(plain))return true;
+ if(/\b(?:mon|ma|mes|notre|nos|ce|cette|ces)\s+(?:patiente?s?|malades?)\b/u.test(plain))return true;
+ if(/\b(?:(?:pour|chez|a|de)\s+(?:la|le)|du|au)\s+patiente?\s*[?.!]*\s*$/u.test(plain))return true;
+ if(/\b(?:le|la)\s+patiente?\s+(?:prend|souffre|presente)\b/u.test(plain))return true;
+ if(/\b(?:mon|ma)\s+(?:fils|fille|mari|femme|epouse|epoux|mere|pere|frere|soeur|cousin|cousine|oncle|tante|neveu|niece|belle-mere|beau-pere|belle-soeur|beau-frere|gendre|bru)\b/u.test(plain))return true;
+ if(/\b(?:monsieur|madame|mademoiselle|mme|mlle)\s+\S/u.test(plain)||/(?:^|\s)m\.\s*\p{L}/u.test(plain)||/\bMr?\.?\s+\p{Lu}/u.test(text))return true;
+ const mention=parsePatientMention(text);
+ // "a-t-elle un trouble", "sa grossesse": a person is the subject even with no name.
+ if(/\b(?:a|prend|souffre|presente|suit)-t-(?:il|elle)\b|\b(?:est|prend|souffre|fait|suit)-(?:il|elle)\b/u.test(plain)&&!mentionsMedication(plain))return true;
+ if(/\b(?:son|sa|ses|leur|leurs)\s+(?:grossesse|allaitement|maladie|depression|anxiete|trouble|diagnostic|etat|fonction|insuffisance|age|poids)\b/u.test(plain))return true;
+ // "de durée et de symptômes" parses as two names. Two clinical measures are a topic; anything else stays two people.
+ if(mention.status==='ambiguous'&&!/\b(?:duree|temps|nombre|symptomes?|criteres?)\b[^?.!]*\bet (?:de |du |des |la |le |les )?(?:duree|temps|nombre|symptomes?|criteres?)\b/u.test(plain))return true;
+ if(mention.status==='named'){
+  const name=fold(mention.name),first=name.split(/\s+/u)[0]??'';
+  if(!NOT_A_PERSON.test(name)&&!mentionsMedication(name)&&new RegExp(`\\b(?:pour|chez)\\s+${name.replace(/[.*+?^${}()|[\]\\]/gu,'\\$&')}\\b`,'u').test(plain)&&!EPONYM.test(first))return true;
+ }
+ // "Comment traiter l'anxiété de Karim ?": a capital inside the sentence is the only sign left, so
+ // eponyms and drugs are set aside. A brand name the lists don't know is taken for a person, the safe way.
+ const named=(word:string)=>!EPONYM.test(fold(word))&&!mentionsMedication(fold(word));
+ if([...text.matchAll(/(?<![.!?:]\s)(?<=[\s'’])\p{Lu}\p{Ll}+/gu)].some(match=>named(match[0])))return true;
+ // "Benali prend du lithium, quelle dose ?"
+ const subject=text.match(/^\s*(\p{Lu}\p{Ll}+)\s+(?:prend|a|est|fait|souffre|présente|presente|reste)\b/u)?.[1]??text.match(/^\s*(\p{L}+)\s+(?:prend|souffre)\b/u)?.[1];
+ return !!subject&&!NOT_A_SUBJECT.test(fold(subject))&&named(subject);
+}
+const PRACTICE_MANAGEMENT=/\b(?:cabinet|encaiss\w*|recettes?|chiffre d'affaires|impayes?|remplissage|absenteisme|bilan (?:du mois|du jour|de la semaine|de l'annee|financier|comptable|mensuel|hebdomadaire|annuel)|tva|comptab\w*|remises?|occupation|taux de presence|rendez-vous|factur\w*|paiements?|recus?|salaires?|depenses?)\b/u;
+/** The running of the practice, not medicine. A named drug makes it medicine: "remise en route de la clozapine". */
+export function isPracticeManagementQuestion(text:string):boolean{
+ const plain=fold(text);
+ return PRACTICE_MANAGEMENT.test(plain)&&!mentionsMedication(plain);
+}
+// Words that may follow "de", "du", "des" or "d'" in a request about the record in context without naming
+// anyone else: time, record parts and clinical subjects. Anything else could be a person.
+const IN_RECORD_WORD=/^(?:\d[\d/.-]*|(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|semaines?|mois|annees?|ans?|jours?|journee|hier|demain|aujourd'hui|matin|soir|derniere?s?|precedente?s?|recente?s?|prochaine?s?|plus|moins|consultations?|seances?|visites?|traitements?|medicaments?|prescriptions?|rendez-vous|rdv|notes?|documents?|ordonnances?|certificats?|dossier|suivi|doses?|posologies?|questions?|faits?|plans?|mesures?|objectifs?|resume|synthese|humeur|sommeil|poids|tension|analyses?|bilans?|resultats?|scores?|echelles?|allergies?|effets?|evenements?|changements?|modifications?|reponse|tolerance|observance|diagnostics?|antecedents?|familiaux|personnels|evolution|debut|fin|cours|paiements?|soldes?|tarifs?|honoraires?|seance|duree|frequence|cas|ages?|agees?|grossesse|population|bonne|sante|mentale|medicale?|premiere?|cette|ce|cet|ces|ceux|celle|celui|celles|chaque|tous|toutes|tout)$)/u;
+/**
+ * Whether a request may be answered from the patient in context. "Allergies de Karim", "Poids de sa
+ * demi-sœur" or "Allergies de la belle-mère d'Amine" point at someone else. A possessor the lists don't
+ * know leads to a question, never to the selected record.
+ */
+// Words of a question about the record in context. A sentence made only of these can't name anyone else.
+const QUESTION_WORD=/^(?:mourir|meurt|mort|morte|morts|deces|suicidw*|tuer|tue|envie|envies|idees?|noires?|vouloir|veut|voulait|dit|dire|disait|exprimew*|pensew*|parlew*|plainte?s?|douleurs?|peurs?|crises?|cliniques?|dates?|situation|familiale|matrimoniale|sexe|nom|noms|prenom|prenoms|numero|numeros|carte|piece|domicile|email|courriel|profession|metier|avant-derniere?s?|avant-dernier|antepenultieme|penultieme|un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|douze|quinze|vingt|trente|premiere?s?|deuxieme|troisieme|ouverte?s?|fermee?s?|evolu\w*|chronolog\w*|concis\w*|bref|breve?s?|court\w*|long\w*|paragraphe?s?|sources?|selection\w*|numeros?|emise?s?|emis|annulee?s?|programmee?s?|prevue?s?|reglee?s?|payee?s?|impayee?s?|financier\w*|situation|textes?|integra(?:l|le|les|ux)|contenus?|details?|detaillee?s?|lignes?|pages?|problemes?|principa(?:l|le|les|ux)|documente\w*|decrit\w*|evoque\w*|mentionne\w*|retenu\w*|actif\w*|active\w*|resolu\w*|courante?s?|habituel\w*|complete?s?|entiere?s?|signee?s?|brouillons?|parties?|rubriques?|themes?|difficultes?|ancienne?s?|nouvelle?s?|nouveaux?|precedent\w*|suivant\w*|versions?|de|du|des|d|l|la|le|les|un|une|et|ou|a|au|aux|en|dans|sur|sous|avec|par|pour|chez|sa|son|ses|leur|leurs|ce|cet|cette|ces|il|elle|ils|elles|lui|y|est|sont|ont|etait|ete|t|quel|quelle|quels|quelles|qui|que|qu|quoi|combien|comment|quand|ou|est-ce|est-il|est-elle|montre|montre-moi|affiche|affiche-moi|donne|donne-moi|ouvre|liste|indique|resume|resume-moi|rappelle|presente|lis|voir|moi|me|mes|mon|ma|nous|vous|tu|je|j|s'il|te|plait|merci|alexa|actuel\w*|actuellement|enregistre\w*|consigne\w*|note\w*|prescrit\w*|connu\w*|recent\w*|dernier\w*|derniere\w*|en cours|prend|prend-il|prend-elle|prennent|a-t-il|a-t-elle|y a-t-il|il y a|existe|existe-t-il|encore|toujours|deja|jamais|aucun\w*|tous|toutes|tout|plus|moins|depuis|entre|jusqu|apres|avant|naissance|identite|telephone|adresse|contact|urgence|coordonnees|profil|fiche|age|sexe|hamilton|madrs|phq\w*|gad\w*|beck|ymrs|panss|mmse|moca|hdrs|bprs|cgi|statut|etat|liste|nombre|total|vue|resume|synthese|chronologie|historique|calendrier|prochain\w*|ordre|chronologique)$/u;
+const knownQuestionWord=(word:string)=>QUESTION_WORD.test(word)||IN_RECORD_WORD.test(word)||CLINICAL_TOPIC.test(word)||mentionsMedication(word);
+/** True when a Latin word belongs to no question vocabulary, so it may be a person's name. */
+export function mayBeAName(rawWord:string):boolean{
+ const word=fold(rawWord).replace(/œ/gu,'oe').replace(/^[-']+|[-']+$/gu,'');
+ return /^\p{Script=Latin}/u.test(word)&&word.length>=3&&!knownQuestionWord(word)&&!SEARCH_STOP.test(word)&&!NOT_A_PERSON.test(word);
+}
+const SEARCH_STOP=/^(?:euh|heu|hum|hmm|bah|bon|voila|enfin|genre|quoi|hein|ok|okay|dac|stp|svp|(?:imprim|prepar|redig|envoy|ajout|modifi|ouvr|affich|montr|cherch|trouv|donn|rappel|verifi|compar|calcul|resum|expliqu|present|programm|planifi|reserv|annul|deplac|report|marqu|signal|encaiss|regl|fix|arret|renouvel|enregistr|clotur|ferm|valid)(?:e|es|er|ez|ons|ent|ee|ees|ant|ais|ait)?|envoie|envoies|cree|creer|creez|relis|relire|lis|lisez|lire|mets|mettre|mettez|met|ecris|ecrire|ecrivez|note|noter|notez|signe|signer|signez|reprends|reprendre|reprenez|courant|actuel|actuelle|mme|mlle|madame|mademoiselle|monsieur|docteur|date|numero|situation|familiale|alors|aussi|bien|bon|donc|est-ce|fait|faire|merci|oui|non|peux|pouvez|peut|pourrais|pourriez|souhaite|voudrais|veux|dis|dites|stp|svp|sil|plait|elle|elles|ils|lui|leur|eux|avec|sans|selon|vers|entre|apres|avant|quelle|quelles|quels|comme|tres|trop|peu|beaucoup|moins|plus|ici|cela|ceci|celui|celle)$/u;
+/**
+ * The Latin words the vocabulary doesn't know, each looked up on its own in the patient search, so that a
+ * filler such as "euh" next to a name can't hide it: "Karim Benali a-t-il des allergies ?" gives
+ * ["karim", "benali"].
+ */
+export function unknownWordRuns(text:string):string[]{
+ const source=text.normalize('NFC').replace(SELECTED_REFERENCE_RAW,' ');
+ const tokens=[...source.matchAll(/[\p{L}][\p{L}'’-]*|[:,;?!.]/gu)].flatMap(match=>{
+  const raw=match[0];
+  const split=/^(?:d|l|qu|j|s|n|c)['’]/iu.exec(raw);
+  return split?[{raw:split[0].slice(0,-1),start:match.index},{raw:raw.slice(split[0].length),start:match.index+split[0].length}]:[{raw,start:match.index}];
+ }).map(token=>({...token,word:fold(token.raw).replace(/œ/gu,'oe').replace(/^[-']+|[-']+$/gu,'').replace(/-t-(?:il|elle)$/u,'').replace(/-(?:ils?|elles?|moi|tu|vous|nous|on)$/u,'')}));
+ // Patient names are stored in Latin script only, so only Latin words can name one.
+ const isUnknown=(word:string)=>/^\p{Script=Latin}/u.test(word)&&word.length>=3&&!knownQuestionWord(word)&&!SEARCH_STOP.test(word)&&!NOT_A_PERSON.test(word);
+ // A colleague's title: "selon le Dr Larbi" is not a patient.
+ const titled=(index:number)=>/^(?:dr|docteur|docteure)$/u.test(tokens[index-1]?.word??'');
+ return [...new Set(tokens.filter((token,index)=>isUnknown(token.word)&&!titled(index)).map(token=>token.word))].slice(0,12);
+}
+const SELECTED_REFERENCE_RAW=/(?<![\p{L}])(?:de |du |pour |chez |à |a )?(?:(?:le |la |ce |cette )?patiente? s[ée]lectionn[ée]e?|(?:ce|le) (?:dossier|patient) (?:courant|actuel|en cours|ouvert|s[ée]lectionn[ée])|ce patient|cette patiente|le patient|la patiente|ce dossier|le dossier)(?![\p{L}])/giu;
+const SELECTED_REFERENCE=/\b(?:de |du |pour |chez |a )?(?:ce patient|cette patiente|le patient|la patiente|patiente? selectionnee?|ce dossier|le dossier (?:en cours|ouvert|selectionne))\b/gu;
+export function onlyTheRecordInContext(text:string):boolean{
+ const folded=fold(text).replace(/œ/gu,'oe');
+ // "Karim Benali, ses allergies ?": an unknown pair of words opening the sentence is a name.
+ const opening=/^\s*([\p{L}-]+)\s+([\p{L}-]+)\s*,/u.exec(folded);
+ if(opening&&opening.slice(1).every(word=>!knownQuestionWord(word)))return false;
+ // "Son petit-fils a-t-il…", "sa demi-sœur": a possessive must be followed by a word of the record.
+ for(const match of folded.matchAll(/\b(?:son|sa|ses|leur|leurs)\s+([\p{L}][\p{L}-]*)/gu))if(!knownQuestionWord(match[1]!))return false;
+ const plain=folded.replace(/\b(?:de |du |pour |chez |a )?(?:ce patient|cette patiente|le patient|la patiente|patiente? selectionnee?|ce dossier|le dossier (?:en cours|ouvert|selectionne))\b/gu,' ');
+ for(const match of plain.matchAll(/(?:\b(?:de|du|des|chez|pour|concernant|sur|au sujet de|a propos de)\s+|\bd')(?:(?:la|le|les|sa|son|ses|leur|leurs|un|une|mon|ma|mes|ce|cette|ces)\s+|l')?([\p{L}][\p{L}'-]*)/gu)){
+  const word=match[1]!.replace(/^l'/u,'');
+  if(knownQuestionWord(word))continue;
+  return false;
+ }
+ return true;
+}
+/** "que donne le bilan de karim benali": two lowercase words the parser reads as a name are never a book topic. */
+function mentionsAFullName(text:string):boolean{const mention=parsePatientMention(text),name=fold(mention.status==='named'?mention.name:'');return mention.status==='named'&&name.includes(' ')&&!NOT_A_PERSON.test(name)&&!mentionsMedication(name)&&!CLINICAL_TOPIC.test(name)&&!/\b(?:sujets?|ages?|agees?|enfants?|adolescents?|adultes?|femmes?|hommes?|personnes?|nourrissons?|patients?)\b/u.test(name);}
 /** General clinical knowledge is source-backed even when the question does not name a book. */
 export function isClinicalKnowledgeQuestion(text:string):boolean{
  const plain=fold(text);
  if(/\b(?:prix|tarif|cout|coute|remboursement|pharmacie|stock)\b/u.test(plain))return false;
- if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou)\b/u.test(plain))return false;
- return /\b(?:criter\w*|symptom\w*|diagnost\w*|trouble\w*|episode\w*|duree\w*|seuil\w*|posolog\w*|dose\w*|mecanism\w*|effet\w*|indesirable\w*|surveillance\w*|bilan\w*|lithemie\w*|taux|interaction\w*|contre[- ]indication\w*|precaution\w*|sevrage\w*|titration\w*|traitement\w*|antidepresseur\w*|antipsychotique\w*|thymoregulateur\w*|benzodiazepine\w*|anxiolytique\w*|hypnotique\w*|stimulant\w*|lithium|clozapine|olanzapine|risperidone|sertraline|valproate|lamotrigine|aripiprazole|haloperidol|quetiapine|mirtazapine|lorazepam|zolpidem|hydroxyzine|methylphenidate|atomoxetine|agoraphobie|panique|maniaque|bipolaire|depressif|psychose|schizophrenie|anxiete|stress|post[- ]traumatique|tdpm|premenstruel|toc|obsession\w*|compulsion\w*|serotoninergique|qt|renal\w*|hepatique\w*|metabolique\w*)\b/u.test(plain);
+ if(isPracticeManagementQuestion(text))return false;
+ if(questionConcernsAPerson(text))return false;
+ // "de" must be the word itself: as a prefix it read "dépression majeure" as the name "pression majeure".
+ if(mentionsAFullName(text)||/\b(?:de\s+|d')([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse)$/u.test(word)))return false;
+ if(isClosedDrugQuestion(text))return true;
+ // "Risque de lithium pendant la grossesse": a drug and a clinical subject need no question word.
+ if(mentionsMedication(plain)&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
+ if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique)\b/u.test(plain))return false;
+ return CLINICAL_TOPIC.test(plain)||(CLINICAL_STEMS.test(plain)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
 }
+/** Psychiatric and pharmacological stems the closed topic list below misses: a question about one of them belongs to the books, never to the general model. */
+export const CLINICAL_STEMS=/\b(?:personnalit\w*|phobi\w*|\w*manie|narcolep\w*|cataplex\w*|anorex\w*|boulim\w*|hyperphag\w*|hyponatr\w*|bradycard\w*|tachycard\w*|cholinesterase\w*|memantine|donepezil\w*|pharmaco\w*|recepteur\w*|demi-vie|demence\w*|alzheimer|parkinson\w*|huntington|prion\w*|catatoni\w*|deliri\w*|confusionnel\w*|paranoi\w*|schizoid\w*|schizotyp\w*|histrion\w*|narcissi\w*|evitante?s?|dependante?s?|tabac\w*|nicotin\w*|alcool\w*|cannabis|cocaine|amphetamine\w*|psychostimulant\w*|hallucinogene\w*|methadone|buprenorphine|naltrexone|naloxone|varenicline|bupropion|antiepileptique\w*|anticonvuls\w*|sismotherapie|electroconvuls\w*|seuil convulsif|akathisie|dyskinesie\w*|hypersalivation|sialorrh\w*|qtc|ejaculat\w*|dyspareunie|vaginisme|genito-pelvien\w*|apnee\w*|cauchemar\w*|jambes sans repos|dissociati\w*|amnesie\w*|depersonnalisation|derealisation|somati\w*|hypocondri\w*|explosif\w*|paraphili\w*|fetichis\w*|voyeuris\w*|exhibitionnis\w*|pedophili\w*|dysphorie|autisme|tdah|handicap intellectuel|tics?|tourette|neuroleptique\w*|duloxetine|venlafaxine|paroxetine|fluoxetine|escitalopram|citalopram|trazodone|modafinil|pregabaline|gabapentine|clonazepam|diazepam|clonidine|prazosin|propranolol|lurasidone|ziprasidone|paliperidone|asenapine|brexpiprazole|cariprazine|amisulpride|pimozide|chlorpromazine|esketamine|ketamine|brexanolone|lisdexamfetamine|isrs|irsn|imao|tricyclique\w*|valproat\w*|carbamazepine|oxcarbazepine|topiramate|melatonine)\b/u;
+const CLINICAL_TOPIC=/\b(?:criter\w*|symptom\w*|diagnost\w*|trouble\w*|episode\w*|duree\w*|seuil\w*|posolog\w*|dose\w*|mecanism\w*|effet\w*|indesirable\w*|surveillance\w*|bilan\w*|lithemie\w*|taux|interaction\w*|contre[- ]indication\w*|precaution\w*|sevrage\w*|titration\w*|traitement\w*|antidepresseur\w*|antipsychotique\w*|thymoregulateur\w*|benzodiazepine\w*|anxiolytique\w*|hypnotique\w*|stimulant\w*|lithium|clozapine|olanzapine|risperidone|sertraline|valproate|lamotrigine|aripiprazole|haloperidol|quetiapine|mirtazapine|lorazepam|zolpidem|hydroxyzine|methylphenidate|atomoxetine|agoraphobie|panique|maniaque|bipolaire|depressif|psychose|schizophrenie|anxiete|stress|post[- ]traumatique|tdpm|premenstruel|toc|obsession\w*|compulsion\w*|serotoninergique|qt|renal\w*|hepatique\w*|metabolique\w*)\b/u;
 
+// Only at the end of the question, so "Dossier de l'enfant Karim Benali" keeps its name.
+const POPULATION_ENDING=/\s+chez\s+(?:l['’]\s*(?:enfant|adulte|adolescent)|les\s+(?:enfants|adultes|adolescents)|(?:le|la|les)\s+(?:sujets?|patients?|personnes?)\s+[aâ]g[eé]e?s?)\s*[?.!]*\s*$/iu;
+const STORED_MEDICAL_SCOPE=/\b(?:dossiers?|ce patient|cette patiente|patients? selectionne\w*|patient courant|notes?|consultations?|quels? patients|combien de patients|liste les patients)\b/u;
+const SHOW_VERB=String.raw`(?:alexa\W+)?(?:(?:montre|affiche|donne|presente)(?:[- ]moi)? )?`;
+// A name, or the selected patient. A relative, an earlier patient or a topic with an article is neither.
+const PATIENT_TAIL=String.raw`(?:ce patient|cette patiente|(?:le |la )?patiente? selectionnee?|(?!(?:sa|son|ses|mon|ma|mes|leur|leurs|notre|nos|votre|vos|la|le|les|l|du|de|des|un|une|ce|cet|cette|ces|patient|patiente|patients|patientes|dernier|derniere|precedent|precedente|autre|ancien|ancienne|nouveau|nouvelle)\b)[\p{L}'-]+(?: [\p{L}'-]+){1,2})`;
+const MONTHS='janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre';
+const STATISTICS_REQUEST=new RegExp(`^${SHOW_VERB}(?:(?:quelles sont )?(?:mes|les|nos) )?statistiques(?: (?:du cabinet|d.activite|de l.activite(?: du cabinet)?))?(?: (?:de ce mois|ce mois|de cette semaine|cette semaine|de cette annee|cette annee|(?:de |d.|en )?(?:${MONTHS}) \\d{4}))?(?: par rapport au mois dernier)?$`,'u');
+const MEDICATION_WORKLOAD_REQUEST=new RegExp(`^${SHOW_VERB}(?:quels |quelles |mes |les |la )?(?:traitements a revoir|traitements a reviser|traitements sans posologie|posologies manquantes|posologies incompletes|charge des traitements|revue des traitements)$`,'u');
+const MEDICATION_TIMELINE_REQUEST=new RegExp(`^${SHOW_VERB}(?:la |sa )?(?:chronologie|frise) (?:des|de ses) traitements (?:de |du )${PATIENT_TAIL}$`,'u');
+const CASE_SUMMARY_STATUS_REQUEST=new RegExp(`^(?:alexa\\W+)?le resume du cas (?:de |du )${PATIENT_TAIL} est[- ]il (?:a jour|perime)$`,'u');
 function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const plain=fold(text),anchor=patientAnchor(plain,text),targets:FrenchReadTarget[]=[];
  const documentedTreatmentRequest=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)&&/\b(?:documente\w*|note\w*|suspendu\w*|en pause|arrete\w*|stopp\w*|interrompu\w*|cesse\w*)\b/u.test(plain);
@@ -365,14 +547,29 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const dayRange=explicitFrenchDayRange(periodText,asOf);
  const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
  const chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain);
+ // Exact sentences only, tested before the book and record rules. Any other wording keeps its usual route:
+ // a name, a topic, a filter, a second request or a write can't be mistaken for one of these reads.
+ const exactRead=plain.replace(/[?.!]+\s*$/u,'').trim();
+ if(STATISTICS_REQUEST.test(exactRead))return [{tool:'query_app',applicationView:'statistics'}];
+ if(MEDICATION_WORKLOAD_REQUEST.test(exactRead))return [{tool:'query_app',applicationView:'medication_workload'}];
+ // The parser that resolves the name decides it is one. Otherwise the read would fall back to the selected patient.
+ const selectedPatient=/\b(?:de|du|pour) (?:ce patient|cette patiente|(?:le |la )?patiente? selectionnee?)(?: est[- ]il (?:a jour|perime))?$/u.test(exactRead);
+ const parsedName=mention.status==='named'&&!/\bpatient(?:e)?s?\b/u.test(exactRead)&&new RegExp(`(?:de|du|pour) ${fold(mention.name).replace(/[.*+?^${}()|[\]\\]/gu,'\\$&')}(?: est[- ]il (?:a jour|perime))?$`,'u').test(exactRead);
+ const namedOrSelected=selectedPatient||parsedName;
+ if(namedOrSelected&&MEDICATION_TIMELINE_REQUEST.test(exactRead))return [{tool:'get_patient_context',patientSection:'medication_timeline',unboundedPeriod:true}];
+ if(namedOrSelected&&CASE_SUMMARY_STATUS_REQUEST.test(exactRead))return [{tool:'get_patient_context',patientSection:'case_summary_status',unboundedPeriod:true}];
  if(chronology&&!unboundedPeriod&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(plain))return [{tool:'get_patient_context',patientSection:'summary',unboundedPeriod:true}];
  if(chronology&&anchor)return [{tool:'get_patient_context',patientSection:'timeline',unboundedPeriod:true}];
  const knowledge=/\b(?:dsm(?:\s*[- ]?5)?|cim(?:\s*[- ]?11)?|icd(?:\s*[- ]?11)?|taylor|maudsley|stahl|selon (?:la|le|les) (?:reference|livre|ouvrage|manuel)|dans (?:le|les) livres?)\b/u.test(plain);
  if(knowledge)add({tool:'search_knowledge'});
- const storedMedicalScope=/\b(?:dossiers?|ce patient|cette patiente|patients? selectionne\w*|patient courant|notes?|consultations?|quels? patients|combien de patients|liste les patients)\b/u.test(plain)||mention.status==='named'&&/\bpatient(?:e)?\b/u.test(plain);
+ const storedMedicalScope=STORED_MEDICAL_SCOPE.test(plain)||mention.status==='named'&&/\bpatient(?:e)?\b/u.test(plain);
+ // The name parser reads "chez l'enfant" as a person: a book question, once the population is set aside,
+ // unless it asks about the record. Judged on the topic: "patient âgé" is no reference to a record.
+ const topic=text.replace(POPULATION_ENDING,' ?');
+ if(topic!==text&&!STORED_MEDICAL_SCOPE.test(fold(topic))&&!documentedTreatmentRequest&&!treatmentStateRequest&&!diagnosisRecordRequest&&isClinicalKnowledgeQuestion(topic))return [{tool:'search_knowledge'}];
  if(knowledge&&!storedMedicalScope)return [{tool:'search_knowledge'}];
  const namedPatient=mention.status==='named'&&mention.name.includes(' ')&&!/\b(?:episode|depressif|depressive|trouble|symptom\w*|stress|clozapine|seuil\w*|duree|groupe\w*|surveillance|traitement\w*|maladie|diagnosti\w*|echelle\w*|score\w*|patient\w*|dossier\w*)\b/u.test(fold(mention.name));
- if(!storedMedicalScope&&!documentedTreatmentRequest&&!treatmentStateRequest&&!diagnosisRecordRequest&&!namedPatient&&isClinicalKnowledgeQuestion(text))return [{tool:'search_knowledge'}];
+ if(!storedMedicalScope&&!documentedTreatmentRequest&&!treatmentStateRequest&&!diagnosisRecordRequest&&(isClosedDrugQuestion(text)||(!namedPatient&&isClinicalKnowledgeQuestion(text))))return [{tool:'search_knowledge'}];
  const patientAttendeesQuestion=/\bpatients?\b[^.!?]{0,35}\b(?:attendus?|prevus?)\b/u.test(plain)&&/\b(?:demain|aujourd.hui|matin\w*|apres[- ]?midi|aprem|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain);
  const whoIsExpected=/\bqui\s+(?:est|sont)\s+attendus?\b/u.test(plain)&&/\b(?:demain|aujourd.hui|matin\w*|midi|apres[- ]?midi|aprem|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain);
  const nextSlot=/\b(?:prochain|prochaine)\s+(?:horaire|creneau|disponibilite)\b|\b(?:horaire|creneau)\s+disponible\b/u.test(plain);
@@ -430,6 +627,7 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
   add({tool:'query_finance',...(financeMode?{financeMode}:{}),...(financeState?{financeState}:{}),...(unpricedQuestion?{financeConsultationStatus:'closed' as const}:{}),...(financePeriod??{})});
  }
  if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
+ if(/\bmessages? internes?\b/u.test(plain)&&!/\b(?:envoi\w*|envoy\w*|redig\w*|ecri\w*|prepar\w*|transmet\w*)\b/u.test(plain))add({tool:'query_app',applicationView:'internal_messages'});
  if(/\b(?:etat|statut|environnement|heure|date)\b/u.test(plain)&&/\b(?:systeme|serveur|deploiement|cabinet)\b/u.test(plain))add({tool:'query_app',applicationView:'system'});
  const specificOffice=targets.some(t=>t.tool==='query_app'&&['notifications','system'].includes(t.applicationView??''));
  const cabinetView=!specificOffice&&!targets.length&&(/\bcabinet\b/u.test(plain)||(/\bclinique\b/u.test(plain)&&/\b(?:adresse|telephone|coordonnees|horaires|situee?|se trouve)\b/u.test(plain))||/\b(?:adresse|telephone|coordonnees)\s+professionnel\w*/u.test(plain))?'cabinet' as const:undefined;
@@ -437,7 +635,9 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested||documentedTreatmentRequest||treatmentStateRequest||diagnosisRecordRequest||antecedentsRequest||consultationBounds||scalesRequest||longitudinalRequest){
    const selectedPatientName=/\b(?:noms?|prenoms?)\b/u.test(plain)&&/\b(?:patient\s+(?:selectionne\w*|courant)|(?:ce|cette)\s+patient(?:e)?|dossier\s+(?:actuellement\s+)?(?:ouvert|courant|actif)|son dossier)\b/u.test(plain)&&!/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain);
-   const patientSection:FrenchReadTarget['patientSection']=longitudinalRequest?'summary':summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':scalesRequest?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|identite nationale|identification nationale|carte nationale|cni|cin|situation familiale|contact d.urgence|numero national|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)||selectedPatientName?'profile':undefined;
+   // Recorded safety data. A book question about a drug's effects has no patient anchor, so it never lands here.
+   const safetySection:FrenchReadTarget['patientSection']=/\ballerg\w*/u.test(plain)?'allergies':/\beffets? (?:indesirables?|secondaires?)\b/u.test(plain)&&!/\btraitements?\b/u.test(plain)?'adverse_events':/\b(?:observance|observant\w*|adherence)\b/u.test(plain)?'adherence':/\b(?:poids|imc|tension arterielle|constantes?|lithiemie|glycemie|bilan biologique)\b/u.test(plain)?'measurements':undefined;
+   const patientSection:FrenchReadTarget['patientSection']=safetySection?safetySection:longitudinalRequest?'summary':summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':scalesRequest?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|identite nationale|identification nationale|carte nationale|cni|cin|situation familiale|contact d.urgence|numero national|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)||selectedPatientName?'profile':undefined;
   const resolvedMention=/\bresolu\w*\b/u.test(plain),activeMention=/\b(?:actif\w*|actuel\w*|actuellement|en cours)\b/u.test(plain);
   const diagnosisStates=[...(!resolvedMention&&activeMention?['active' as const]:[]),...(resolvedMention?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
@@ -528,7 +728,9 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  const comparisonQuestion=/^\s*(?:alexa[, :]\s*)?qu['’]est[- ]ce qui a chang\w*\b/u.test(plain);
  const noMutation=/\b(?:sans|ne\s+pas|n['’]\s*pas)\s+(?:ajouter|ajoute|modifier|modifie|changer|change|supprimer|supprime|creer|cree|enregistrer|enregistre|arreter|arrete|suspendre|suspends|reprendre|reprends)\b/u.test(plain);
  const write=!noMutation&&!receivableRead&&!comparisonQuestion&&/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|changer|change|changez|ajuster|ajuste|ajustez|augmenter|augmente|augmentez|diminuer|diminue|diminuez|arreter|arrete|arretez|cesser|cesse|cessez|interrompre|interrompt|interrompez|stopper|stoppe|stoppez|corriger|corrige|corrigez|rectifier|rectifie|rectifiez|passer|passe|passez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|generez|genere(?=\s+(?:un|une|le|la|les|des|du|ce|cette|mon|ma|mes|son|sa|ses)\b)|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
- if(write)return {profileOnly:false};
+ // "Comment arrêter une benzodiazépine ?" asks what the references say; it stops nothing.
+ const howToQuestion=/^(?:alexa\W+)?comment\s+(?:faut-il\s+|peut-on\s+|doit-on\s+)?(?:arreter|stopper|interrompre|cesser|sevrer|reduire|diminuer|augmenter|passer)\b/u.test(plain)&&isClinicalKnowledgeQuestion(text);
+ if(write&&!howToQuestion)return {profileOnly:false};
  const clinical=/\b(?:notes?|historique|consult\w*|seances?|diagnosti\w*|traitements?|echelles?|symptom\w*|analyse\w*|ordonn\w*|certificats?|medic\w*|prescri\w*|therap\w*|stress|sommeil|risques?|humeur|sante|dsm|cim|icd|taylor|maudsley)\b/u.test(plain);
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);
  if(clinical&&finance)return {profileOnly:false};
@@ -538,7 +740,7 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  if(publicAllowed&&isFrenchAlexaCapabilityQuestion(text)&&targets.every(target=>target.tool==='query_app'&&target.applicationView==='cabinet'))return {tools:['answer_general'],profileOnly:false};
  if(domains.length===1){const scopes=targets.filter(target=>target.tool===domains[0]);const common=Object.fromEntries(['messageKind','navigationTarget','consultationCount','applicationView','financeMode','financeState','financeConsultationStatus','patientSection','consultationMode','consultationStatus','dateAxis','unboundedPeriod','from','to','noteArea','noteQuery','diagnosisState','diagnosisRole','treatmentState','documentKind','documentStatus','documentAllKinds'].flatMap(key=>{const values=new Set(scopes.map(target=>target[key as keyof FrenchReadTarget]).filter(value=>value!==undefined));return values.size===1?[[key,[...values][0]]]:[]}));return {tools:domains,profileOnly:scopes.length===1&&scopes[0]?.tool==='get_patient_context'&&scopes[0].patientSection==='profile',...common};}
  const appReference=/\b(?:mindcare|alexa|application|logiciel|systeme|serveur|notifications?|messages?|factures?|recus?|frais|caisse|mois|semaine|periode|aujourd.hui|hier|demain|ceci|cela|ca)\b/u.test(plain);
- if(publicAllowed&&!targets.length&&!appReference&&/^(?:pourquoi\b|comment\b|qu.est-ce\s+que\b|qu.est-ce\s+qu[' ]\w+|quel(?:le)?s?\b|explique(?:-moi)?\b|dis[- ]moi\b|aide[- ]moi\b|donne[- ]moi\b)/u.test(plain)&&!/[;\n]/u.test(plain))return {tools:['answer_general'],profileOnly:false};
+ if(publicAllowed&&!targets.length&&!appReference&&/^(?:pourquoi\b|comment\b|qu.est-ce\s+que\b|qu.est-ce\s+qu[' ]\w+|quel(?:le)?s?\b|explique(?:-moi)?\b|dis[- ]moi\b|aide[- ]moi\b|donne[- ]moi\b|c.est\s+quoi\b|que\s+signifie\b|que\s+veut\s+dire\b|peux[- ]tu\s+(?:m.)?expliquer\b|peux[- ]tu\s+me\s+donner\s+un\s+exemple\b)/u.test(plain)&&!/[;\n]/u.test(plain))return {tools:['answer_general'],profileOnly:false};
  return {profileOnly:false};
 }
 /** Lexical hints contain requested slots only, never inferred records, values or dispatch authority. */
@@ -673,3 +875,6 @@ export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:str
 }
 
 
+
+/** True when the text names a condition, a drug or a clinical notion: it may then be about a book, whatever its sentence form. */
+export function mentionsClinicalTopic(text:string):boolean{return CLINICAL_TOPIC.test(fold(text));}

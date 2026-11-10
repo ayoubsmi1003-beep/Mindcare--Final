@@ -1,0 +1,20 @@
+{
+  "$comment": "Third held-out set. Written on 2026-11-07 before any run against it, once the second security review's rule changes were written, with exact chapters and drugs outside the closed medication list. Its results are recorded in docs/alexa/08-baseline-results.md. Don't tune against it or edit its cases.",
+  "cases": [
+    { "id": "S-N01", "question": "Quels sont les effets secondaires de la lurasidone ?", "source": "Prescriber", "section": ["Lurasidone › Side Effects"] },
+    { "id": "S-N02", "question": "Quelle posologie pour la cariprazine ?", "source": "Prescriber", "section": ["Cariprazine › Dosing and Use"] },
+    { "id": "S-N03", "question": "La brexpiprazole pendant la grossesse ?", "source": "Prescriber", "section": ["Brexpiprazole › Special Populations"] },
+    { "id": "S-N04", "question": "Comment agit le modafinil ?", "source": "Prescriber", "section": ["Modafinil › Therapeutics"] },
+    { "id": "S-N05", "question": "Effets indésirables du zolpidem ?", "source": "Prescriber", "section": ["Zolpidem › Side Effects"] },
+    { "id": "S-N06", "question": "Posologie de la prégabaline ?", "source": "Prescriber", "section": ["Pregabalin › Dosing and Use"] },
+    { "id": "S-N07", "question": "La mémantine chez le sujet âgé ?", "source": "Prescriber", "section": ["Memantine › Special Populations"] },
+    { "id": "S-N08", "question": "Surveillance sous valproate ?", "source": "Prescriber", "section": ["Valproate › Therapeutics"] },
+    { "id": "M-N01", "question": "Comment traiter un épisode dépressif bipolaire ?", "source": "Maudsley", "section": ["Chapter 2"] },
+    { "id": "M-N02", "question": "Que faire devant une akathisie sous antipsychotique ?", "source": "Maudsley", "section": ["Chapter 1"] },
+    { "id": "M-N03", "question": "Comment traiter le trouble panique ?", "source": "Maudsley", "section": ["Chapter 3"] },
+    { "id": "M-N04", "question": "Quel traitement pour la dépendance à l'alcool ?", "source": "Maudsley", "section": ["Chapter 4"] },
+    { "id": "M-N05", "question": "Quels antidépresseurs chez l'enfant ?", "source": "Maudsley", "section": ["Chapter 5"] },
+    { "id": "M-N06", "question": "Antidépresseurs pendant la grossesse ?", "source": "Maudsley", "section": ["Chapter 7"] },
+    { "id": "M-N07", "question": "Psychotropes en cas d'insuffisance rénale ?", "source": "Maudsley", "section": ["Chapter 8"] }
+  ]
+}

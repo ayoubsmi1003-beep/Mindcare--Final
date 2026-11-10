@@ -1,3 +1,10 @@
+import { noteTurnCode } from "./turn-trace";
+import { alexaGoalCopy } from "@/i18n/alexa-practice-reads";
+import { caseSummaryStatusRead, medicationTimelineRead, medicationWorkloadRead, statisticsComparisonRead, statisticsRead } from "./practice-reads";
+import { practiceReadCopy } from "@/i18n/alexa-practice-reads";
+import { ajouterJours, aujourdHuiCabinet } from "@/services/finance-calendrier";
+import { isPatientSafetySection, PATIENT_SAFETY_GATES, patientSafetyRead } from "./patient-safety-reads";
+import { clinicalSafetyCopy } from "@/i18n/alexa-clinical-safety";
 import {isDeepStrictEqual} from "node:util";
 import {appendLinkedAnswerLine} from '@/shared/alexa/answer-links';
 import {randomUUID} from "node:crypto";
@@ -12,10 +19,11 @@ import {applicationReadCopy} from "@/i18n/alexa-application";
 import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
-import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
+import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate, type ClinicalNarrative } from "./clinical-narrative";
+import { buildConsultationNoteDetails, buildStructuredSummaryNarrative } from "./case-summary";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead} from "@/shared/alexa/request-contract";
+import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
@@ -33,7 +41,7 @@ import type { ClientSql } from "@/server/jarvis/client-sql";
 import type { TurnInput, AlexaSource, AlexaProposal } from "@/shared/alexa/turn";
 import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelineCursorSchema,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
 import { agentCopy, missingPatientFieldParagraph, patientListParagraph, patientListPageParagraph, patientPopulationCountParagraph } from "@/i18n/alexa-agent";
-import { resolvePatient } from "./patient-resolver";
+import { namesAnotherPatient, resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
 import { readPatientFinance, patientFinanceSentence } from "./patient-finance";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
@@ -127,6 +135,9 @@ function requestsCurrentDocument(text:string):boolean {
 
 /** Only this closed catalogue reaches server-side, actor-bound SQL doors. No browser service imports. */
 export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:ClientSql) {
+  // The name check runs once per patient for the whole turn, so several reads don't repeat the audited search.
+  const nameChecks=new Map<string,Promise<boolean>>();
+  const nameCheck=(patientId:string,run:()=>Promise<boolean>)=>{let pending=nameChecks.get(patientId);if(!pending){pending=run();nameChecks.set(patientId,pending);}return pending;};
  const language=ALEXA_AGENT_LANGUAGE, copy=agentCopy[language],recordsCopy=alexaRecordCopy[language];
  const labels:Readonly<Record<string,string>>=recordsCopy.labels;
  const patientLabels=new Map<string,string>();
@@ -309,7 +320,36 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
 
    if(a['view']==='medication_catalog'&&typeof a['query']==='string'&&!requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().includes(a['query'].normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',copy.unsupported,'unrequested-catalogue-query');
-   const applicationResult=await readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,false,name==='search_medications'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
+   if(a['view']==='statistics'||a['view']==='medication_workload'){
+    // The planner can offer these views for any wording. Only the exact sentences may reach them, or a
+    // period or a patient in the question would be dropped without saying so.
+    // A pending question can prepend an earlier turn to the request text, so this turn's own words also count, and win.
+    const exactSentence=frenchRequestAdmission(input.text,false,asOf).applicationView===a['view']?input.text:frenchRequestAdmission(requestText,false,asOf).applicationView===a['view']?requestText:null;
+    if(exactSentence===null)return failure(call,'unsupported',copy.unsupported,'practice-read-not-exact');
+    const statistics=a['view']==='statistics',gate=statistics?'get_analysis_overview':'list_medication_workload';
+    const plainRequest=exactSentence.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),today=aujourdHuiCabinet(new Date(asOf));
+    let args:RpcArgs={p_query:'',p_limit:100,p_offset:0},previousArgs:RpcArgs|null=null;
+    if(statistics){
+     // The route only admits this month, this week, this year or a named month and year; none means this month.
+     const named=/\b(?:semaine|annee|\d{4})\b/u.test(plainRequest),period=named?patientQueryPeriod(exactSentence,asOf)??explicitAgentPeriod(exactSentence,asOf):null;
+     if(named&&!period)return failure(call,'needs_input',practiceReadCopy.statistics.periodUnresolved,'unresolved-statistics-period');
+     const from=period?aujourdHuiCabinet(new Date(period.from)):`${today.slice(0,7)}-01`,end=period?aujourdHuiCabinet(new Date(Date.parse(period.to)-1)):today;
+     // A complete answer, not a question: nothing is pending for the next turn.
+     if(from>today)return {...result,status:'empty',complete:true,text:practiceReadCopy.statistics.periodFuture,data:{future:true},evidence:[]};
+     // Activity stops today, so "this month" and a bare request cover the same days.
+     const to=end>today?today:end;
+     if(Date.parse(to)-Date.parse(from)>365*86400000)return failure(call,'needs_input',practiceReadCopy.statistics.periodTooWide,'statistics-period-too-wide');
+     args={p_from:from,p_to:to};
+     // "This month against last month": the last full calendar month is read with its own days (the gate's own "previous period" is a window of the same length).
+     if(/par rapport au mois dernier$/u.test(plainRequest.replace(/[?.!\s]+$/u,''))&&!period){const previousEnd=ajouterJours(`${today.slice(0,7)}-01`,-1);previousArgs={p_from:`${previousEnd.slice(0,7)}-01`,p_to:previousEnd};}
+    }
+    const raw=await rpc(gate,args,signal,true),previousRaw=previousArgs&&raw!==null?await rpc(gate,previousArgs,signal,true):undefined;
+    if(raw===null)throw new AgentReadError('permission');
+    const attention=/\bsans posologie\b|\bposologies? (?:manquante|incomplete)/u.test(plainRequest)?'missing_dose' as const:/\b(?:a|de) (?:revoir|reviser)\b|\brevue\b/u.test(plainRequest)?'review' as const:null;
+    const read=statistics?(previousArgs?(previousRaw?statisticsComparisonRead(raw,previousRaw):(()=>{throw new AgentReadError('permission');})()):statisticsRead(raw)):medicationWorkloadRead(raw,{attention,today});
+    return {...result,status:read.empty?'empty':read.complete?'ok':'partial',complete:read.complete,text:read.text,data:read.data,evidence:[{id:call.id,type:'query',label:gate,provenance:{gate}}]};
+   }
+   const applicationResult=await readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,name==='list_internal_messages',name==='search_medications'||name==='list_internal_messages'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
    if(String(a['view'])==='reception'&&/\battente\b/iu.test(requestText)&&/\bdemandes?\b/iu.test(requestText)&&applicationResult.data&&typeof applicationResult.data==='object'){
     const counts=applicationResult.data as {waiting?:unknown;requests?:unknown};
     if(typeof counts.waiting==='number'&&typeof counts.requests==='number')applicationResult.text=`Patients en attente : ${counts.waiting}. Demandes à l'accueil : ${counts.requests}.`;
@@ -331,10 +371,17 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const normalize=(text:string)=>text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase();
    if(proposedName&&!explicitName&&!normalize(input.text+" "+(original??"")).includes(normalize(proposedName)))return failure(call,"needs_input",copy.patient,"patient-reference-not-supplied");
    const candidates=prior.flatMap(r=>r.data&&typeof r.data==="object"&&"candidates" in r.data?z.array(z.object({patientId:z.uuid(),label:z.string()})).safeParse(r.data.candidates).data??[]:[]);
-   const selected=resolveListedReference(input.text,candidates);
+   // A plain yes confirms only the latest question, and only when it offered one suggested name.
+   const latestQuestion=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"candidates" in r.data)?.data as Record<string,unknown>|undefined;
+   const selected=resolveListedReference(input.text,candidates,{yesConfirms:latestQuestion?.['suggested']===true&&Array.isArray(latestQuestion['candidates'])&&latestQuestion['candidates'].length===1});
    const proposedId=selected??(typeof a["patientId"]==="string"?a["patientId"]:input.appContext.patientId??undefined);
    const known=proposedId&&(proposedId===input.appContext.patientId||proposedId===selected||input.text.includes(proposedId)||prior.some(r=>r.patientId===proposedId||r.evidence.some(e=>e.type==="patient"&&e.id===proposedId)));
    if(!proposedName&&proposedId&&!known)return failure(call,"needs_input",copy.patient,"patient-reference-not-verified");
+   // The record in context is used only when the sentence points at no one else.
+   if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&!onlyTheRecordInContext(input.text))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-possessor");
+   // A word that is another patient's name must not be answered from the record in context. Actions show the
+   // patient's name in their proposal and wait for a person, so only reads are checked here.
+   if(call.name!=="prepare_action"&&!proposedName&&proposedId&&!selected&&!input.text.includes(proposedId)&&await nameCheck(proposedId,()=>namesAnotherPatient(db,unknownWordRuns(input.text),proposedId,signal)))return failure(call,"needs_input",alexaGoalCopy.otherPossessor,"other-patient-named");
    let resolutionFailure:AgentReadError|undefined;
    const resolutionDb:Pick<DbPort,"rpc">={rpc:async<T>(name:string,args:RpcArgs)=>{
     try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}
@@ -344,7 +391,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    signal.throwIfAborted();if(resolutionFailure)throw resolutionFailure;
    if(resolved.status!=="resolved"){
     const missing=failure(call,"needs_input",copy.patient,"patient-unresolved");
-    if(resolved.status==="ambiguous") {missing.text+="\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates};}
+    if(resolved.status==="ambiguous") {missing.text=resolved.suggested?alexaGoalCopy.didYouMean(resolved.candidates.map(p=>p.label)):missing.text+"\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates,...(resolved.suggested?{suggested:true}:{})};}
     return missing;
    }
    patientId=resolved.patientId; result.patientId=patientId;patientLabels.set(call.id,resolved.identityTokens.reduce((longest,token)=>token.length>longest.length?token:longest,""));
@@ -412,6 +459,23 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf,requestText);
     page.evidence.unshift(patientSource(patientId!));return page;
    }
+   if(a["section"]==="medication_timeline"||a["section"]==="case_summary_status"){
+    if(frenchRequestAdmission(input.text,false,asOf).patientSection!==a["section"]&&frenchRequestAdmission(requestText,false,asOf).patientSection!==a["section"])return failure(call,'unsupported',copy.unsupported,'practice-read-not-exact');
+    const timeline=a["section"]==="medication_timeline",gate=timeline?"list_patient_medication_timeline":"get_alexa_case_summary";
+    const read=timeline?medicationTimelineRead(await rpc(gate,{p_id:patientId!,p_limit:21},signal,true,true)):caseSummaryStatusRead(await rpc(gate,{p_patient_id:patientId!},signal,true));
+    return {...result,status:read.empty?"empty":read.complete?"ok":"partial",complete:read.complete,text:read.text,data:{patientId,section:a["section"],...read.data},
+     evidence:[patientSource(patientId!),{id:call.id,type:"query",label:timeline?practiceReadCopy.medicationTimeline.source:practiceReadCopy.caseSummary.source,provenance:{gate,section:String(a["section"])}}]};
+   }
+   if(isPatientSafetySection(a["section"])){
+    const section=a["section"],gate=PATIENT_SAFETY_GATES[section];
+    const rows=section==="allergies"?await rpc("list_patient_allergies",{p_id:patientId!},signal,true,true)
+     :section==="adverse_events"?await rpc("list_patient_adverse_events",{p_id:patientId!,p_limit:100},signal,true,true)
+     :section==="adherence"?await rpc("list_patient_adherence",{p_id:patientId!},signal,true,true)
+     :await rpc("list_patient_measurements",{p_id:patientId!,p_kind:null,p_limit:200},signal,true,true);
+    const read=patientSafetyRead(section,rows??[]);
+    return {...result,status:read.empty?"empty":read.complete?"ok":"partial",complete:read.complete,text:read.text,data:{patientId,section,rows:read.rows},
+     evidence:[patientSource(patientId!),{id:call.id,type:"query",label:clinicalSafetyCopy.source,provenance:{gate,section,rows:read.rows}}]};
+   }
    if(a["section"]==="profile"){
     const row=await rpc("get_patient",{p_id:patientId!},signal);
     const p=patientProfileSchema.parse(row);
@@ -436,7 +500,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      if(!first||!last)return {...result,status:'empty',complete:true,text:applicationReadCopy.extended.empty,evidence:[patientSource(patientId!)]};
      const date=(at:string)=>new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers',day:'numeric',month:'long',year:'numeric'}).format(new Date(at));
      result.data={patientId,sourceRevision:authorizedContext.sourceRevision,consultationBounds:{first:{id:first.id,startedAt:first.startedAt},last:{id:last.id,startedAt:last.startedAt,endedAt:last.endedAt}},coverage:authorizedContext.coverage};
-     result.text=`La première consultation du dossier est datée du ${date(first.startedAt)} ; la dernière consultation ${last.endedAt===null?'en cours a commencé':'est datée du'} ${date(last.startedAt)}.`;
+     const lastClause=`la dernière consultation ${last.endedAt===null?'en cours a commencé':'est datée du'} ${date(last.startedAt)}.`;
+     // Never present the oldest of a partial read as the first visit of the record.
+     result.text=authorizedContext.coverage.complete&&!authorizedContext.coverage.hasMore
+       ?`La première consultation du dossier est datée du ${date(first.startedAt)} ; ${lastClause}`
+       :narrativeCopy.boundsPartial(lastClause.charAt(0).toUpperCase()+lastClause.slice(1),visits.length,date(first.startedAt));
      result.evidence=[patientSource(patientId!),{id:first.id,type:'consultation',label:date(first.startedAt)},{id:last.id,type:'consultation',label:date(last.startedAt)}];
      result.complete=authorizedContext.coverage.complete;
      result.status=result.complete?'ok':'partial';
@@ -480,7 +548,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     }
     const boundedSummary=section==='summary'&&!rangedSummary&&requestedSummaryCount!==undefined;
       const singleVisitFocus:'concerns'|'visit_summary'|undefined=requestedSummaryCount===1?(requestsCurrentVisitConcern(requestText)?'concerns':'visit_summary'):undefined;
-      const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
+      // A plain "résumé du dossier" is built from the recorded fields alone: no model, so it is immediate whatever the size of the
+      // record, and every sentence is a recorded field or a quotation of one. ALEXA_SUMMARY_MODEL=1 restores the model's selection.
+      const plainWholeSummary=!previousConsultationRequest&&!recurringThemeRequest&&!chronologicalSummary&&!latestConsultationComparison&&!rangedSummary&&!boundedSummary&&!requestedSummaryScope&&process.env["ALEXA_SUMMARY_MODEL"]!=="1";
+      // "Résume la dernière consultation": the recorded note areas of that visit, quoted with their date. No model either.
+      const lastVisitItems=boundedSummary&&requestedSummaryCount===1&&singleVisitFocus==='visit_summary'&&!recurringThemeRequest&&!latestConsultationComparison&&process.env["ALEXA_SUMMARY_MODEL"]!=="1"?buildConsultationNoteDetails(context,[]):[];
+      const plainLastVisit=lastVisitItems.length>0;
+      const structuredItems=plainWholeSummary?buildStructuredSummaryNarrative(context,[]):lastVisitItems;
+      const narrative:ClinicalNarrative = plainWholeSummary||plainLastVisit
+        ? {text:structuredItems.map(item=>item.texte).join(" "),complete:context.coverage.complete,generated:true,method:"structured",sourceIds:[...new Set(structuredItems.flatMap(item=>item.sources.map(source=>source.id)))]}
+        : (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
         ?? (chronologicalSummary||latestConsultationComparison?await summarizeClinicalContext(comparisonContext,signal,!requestedSummaryScope,true,{chronological:true,includeDates:latestConsultationComparison,...(latestConsultationComparison?{comparison:true}:{})}):rangedSummary?await summarizeClinicalConsultations(context,signal):boundedSummary?await summarizeClinicalContext(context,signal,false,true,{includeDates:false,...(singleVisitFocus?{focus:singleVisitFocus}:{})}):!requestedSummaryScope?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
     summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
@@ -496,7 +573,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      result.text = narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (summaryLimit ? " " + summaryLimit : "");
     const latest = context.consultations[0];
     if (latest && !rangedSummary && narrative.method !== "structured" && requestsClinicalDate(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
-    result.presentation = "inference";
+    // Recorded fields and their quotations are facts; only a model's selection is an inference to verify.
+    if (!plainWholeSummary&&!plainLastVisit) result.presentation = "inference";
      if (!completeForRequest) { result.complete=false; result.status="partial"; return result; }
    }
     result.complete=section==="summary"?clinicalSummaryComplete(context,summaryComplete,requestedSummaryScope):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;
@@ -514,6 +592,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const retrieval=required.sourceTitle&&!proposed.sourceTitle?requetePourLivreRequis(required,String(a['query'])):medicalQuestion;
    if(retrieval.length>500)return failure(call,'needs_input',copy.missing,'knowledge-query-budget');
    const found=await readKnowledge(knowledge,retrieval,signal,undefined,{traceOrigin:"agent_tool"});
+   noteTurnCode("knowledge",found.etat);
    result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
    result.data=found;result.evidence=found.preuves.map(p=>knowledgeSource(p));
    let synthesisComplete=false;

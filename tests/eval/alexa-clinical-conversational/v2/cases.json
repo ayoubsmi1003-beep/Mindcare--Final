@@ -1,0 +1,4669 @@
+{
+ "version": 2,
+ "campaign": "C201",
+ "frozenOn": "2026-11-10",
+ "note": "Wording written before any run; never tuned against results.",
+ "cases": [
+  {
+   "id": "V001",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi un peu qui est ce patient avant qu'il entre.",
+     "expect": {
+      "k": "summary",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V002",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dossier de {R8}",
+     "expect": {
+      "k": "summary",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V003",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "Goulli chnou kayen f dossier dyal had l patient",
+     "expect": {
+      "k": "summary",
+      "r": "R9"
+     },
+     "lang": "la",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V004",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "عطيني فكرة على المريض {R10}",
+     "expect": {
+      "k": "summary",
+      "r": "R10"
+     },
+     "lang": "ar",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V005",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Fais-moi un petit résumé dyal {R3} stp",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V006",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "resume moi le dosier de {R5} svp",
+     "expect": {
+      "k": "summary",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "V007",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Globalement, de ce monsieur, qu'est-ce que je dois savoir ?",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V008",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Fais le point.",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "V009",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Résumé dyal had l mrid",
+     "expect": {
+      "k": "summary",
+      "r": "R1"
+     },
+     "lang": "la",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V010",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Retrace le parcours de {R2} au cabinet",
+     "expect": {
+      "k": "history",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "V011",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous me présenter l'historique des consultations de ce patient ?",
+     "expect": {
+      "k": "history",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V012",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R10"
+   },
+   "turns": [
+    {
+     "say": "3tini l'historique kamel dyalou",
+     "expect": {
+      "k": "history",
+      "r": "R10"
+     },
+     "lang": "la",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V013",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "تاريخ المريض",
+     "expect": {
+      "k": "history",
+      "r": "R3"
+     },
+     "lang": "ar",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V014",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Tout ce qui s'est passé avec {R7} jusqu'ici, ça donne quoi ?",
+     "expect": {
+      "k": "history",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V015",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Son historique complet, 3afak",
+     "expect": {
+      "k": "history",
+      "r": "R5"
+     },
+     "lang": "mx",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V016",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Nombre de passages au cabinet pour ce patient ?",
+     "expect": {
+      "k": "count",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "V017",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R9} est passé combien de fois chez nous ?",
+     "expect": {
+      "k": "count",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V018",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Kayen chhal men consultation 3and had l patient ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V019",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "شحال من مرة جا عندنا هاد المريض",
+     "expect": {
+      "k": "count",
+      "r": "R6"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V020",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "En tout il a fait chhal de séances avec nous ?",
+     "expect": {
+      "k": "count",
+      "r": "R1"
+     },
+     "lang": "mx",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V021",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "cmbien de consultatons pour {R5}",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "V022",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "Au total ça fait combien de visites ?",
+     "expect": {
+      "k": "count",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "V023",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R10"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la date de sa dernière séance ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V024",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R6} est venu la dernière fois quand déjà ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R6"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V025",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Wakteh kanet akhir consultation dyalou ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     },
+     "lang": "la",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V026",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "إمتى كانت آخر زيارة ديال {R4}؟",
+     "expect": {
+      "k": "lastdate",
+      "r": "R4"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V027",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R7",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Sa dernière visite kanet wakteh ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "mx",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V028",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "La dernière fois qu'on l'a vu, c'était quand ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V029",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "derniere visite de {R9} stp",
+     "expect": {
+      "k": "lastdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "V030",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "À quelle date a-t-il commencé à venir au cabinet ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V031",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Men wakteh w howa kayji 3andna ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R5"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V032",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Première consultation de {R2} ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V033",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R9",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Depuis quand il est suivi hna ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R9"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V034",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous me rappeler les trois dernières consultations de {R6} ?",
+     "expect": {
+      "k": "prev",
+      "r": "R6",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V035",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Ses deux dernières visites, c'étaient quand ?",
+     "expect": {
+      "k": "prev",
+      "r": "R4",
+      "n": 2
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V036",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "3tini ghir akhir 3 consultations dyalou",
+     "expect": {
+      "k": "prev",
+      "r": "R7",
+      "n": 3
+     },
+     "lang": "la",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V037",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "عطيني آخر جوج استشارات ديالو",
+     "expect": {
+      "k": "prev",
+      "r": "R8",
+      "n": 2
+     },
+     "lang": "ar",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V038",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R10"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce que j'avais noté la dernière fois ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V039",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi la dernière note de consultation de {R3}",
+     "expect": {
+      "k": "lastnote",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V040",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Chnou ktebt f akhir note dyalou ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "R2"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V041",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Relis-moi mes observations de la séance précédente",
+     "expect": {
+      "k": "lastnote",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "V042",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Quelles molécules prend-il en ce moment ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "V043",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{T2} il est sous quoi comme médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V044",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Chnou men dwa kayakhod had l patient daba ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V045",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T4"
+   },
+   "turns": [
+    {
+     "say": "شنو من دوا كيشرب المريض هذا دابا",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V046",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Il prend quels médicaments daba, w b'chhal ?",
+     "expect": {
+      "k": "treat",
+      "r": "T5"
+     },
+     "lang": "mx",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V047",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "ordonance actuel de {T1}",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "V048",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous m'indiquer son traitement médicamenteux en cours ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V049",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U1"
+   },
+   "turns": [
+    {
+     "say": "Il revient quand ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V050",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "U2"
+   },
+   "turns": [
+    {
+     "say": "Wakteh l maw3id jay dyalou ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U2"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V051",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Le prochain rendez-vous de {U3}, c'est pour quand ?",
+     "expect": {
+      "k": "nextappt",
+      "r": "U3"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V052",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Combien de documents dans son dossier ?",
+     "expect": {
+      "k": "documents",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V053",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R6"
+   },
+   "turns": [
+    {
+     "say": "Kayen chhal men document f dossier ?",
+     "expect": {
+      "k": "documents",
+      "r": "R6"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V054",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "S1"
+   },
+   "turns": [
+    {
+     "say": "A-t-il passé des échelles ? Quels scores ?",
+     "expect": {
+      "k": "scales",
+      "r": "S1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V055",
+   "domain": "patient",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Je suis sur quel dossier là ?",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V056",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Et côté médicaments, il est sous quoi ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "V057",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R6",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Chhal dar men consultation ?",
+     "expect": {
+      "k": "count",
+      "r": "R6"
+     },
+     "lang": "la",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V058",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R8",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "شحال من استشارة دار هاد المريض",
+     "expect": {
+      "k": "count",
+      "r": "R8"
+     },
+     "lang": "ar",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V059",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Dernier passage ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V060",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Wach kaykhod chi dwa ? Lesquels ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "mx",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V061",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R9",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Depuis combien de temps on le suit ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V062",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R10",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Remets-moi dans le bain pour ce patient",
+     "expect": {
+      "k": "summary",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V063",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R2",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Akhir ziara dyalou ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R2"
+     },
+     "lang": "la",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V064",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je cherche des infos sur {R4}",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    },
+    {
+     "say": "Ça fait combien de passages au total ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    },
+    {
+     "say": "Et depuis quelle date ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V065",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{T3} : quels médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "On l'a vu pour la dernière fois quand ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V066",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "3tini ma3lomat 3la {T1}",
+     "expect": {
+      "k": "summary",
+      "r": "T1"
+     },
+     "lang": "la",
+     "form": "direct"
+    },
+    {
+     "say": "Chnou kayakhod daba ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "la",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V067",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "ملخص على {R7}",
+     "expect": {
+      "k": "summary",
+      "r": "R7"
+     },
+     "lang": "ar",
+     "form": "short"
+    },
+    {
+     "say": "وآخر زيارة إمتى كانت؟",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "ar",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V068",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dossier dyal {R8}",
+     "expect": {
+      "k": "summary",
+      "r": "R8"
+     },
+     "lang": "mx",
+     "form": "short"
+    },
+    {
+     "say": "Chhal men consultation 3ando ?",
+     "expect": {
+      "k": "count",
+      "r": "R8"
+     },
+     "lang": "mx",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V069",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Parle-moi de {R9}.",
+     "expect": {
+      "k": "summary",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Donne-moi ses trois dernières consultations",
+     "expect": {
+      "k": "prev",
+      "r": "R9",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V070",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T4"
+   },
+   "turns": [
+    {
+     "say": "Que prend-il ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et combien de fois est-il venu ?",
+     "expect": {
+      "k": "count",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "followup"
+    },
+    {
+     "say": "Dernière note ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V071",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{R10}, dernière date de visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    },
+    {
+     "say": "Sa première aussi",
+     "expect": {
+      "k": "firstdate",
+      "r": "R10"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V072",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi plutôt le dossier de {R2}",
+     "expect": {
+      "k": "summary",
+      "r": "R2",
+      "decoys": [
+       "R1"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V073",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R3",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Et {R4}, combien de fois est-il venu ?",
+     "expect": {
+      "k": "count",
+      "r": "R4",
+      "decoys": [
+       "R3"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V074",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Pas lui : {R6}, quelle est sa dernière visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R6",
+      "decoys": [
+       "R5"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V075",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "Chouf li {R8} : chhal men consultation 3ando ?",
+     "expect": {
+      "k": "count",
+      "r": "R8",
+      "decoys": [
+       "R7"
+      ]
+     },
+     "lang": "mx",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V076",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Et {T2}, il prend quoi ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2",
+      "decoys": [
+       "T1"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V077",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R9"
+   },
+   "turns": [
+    {
+     "say": "لا، بغيت ملف {R10}",
+     "expect": {
+      "k": "summary",
+      "r": "R10",
+      "decoys": [
+       "R9"
+      ]
+     },
+     "lang": "ar",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V078",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Wakha, daba 3tini l'historique dyal {R3}",
+     "expect": {
+      "k": "history",
+      "r": "R3",
+      "decoys": [
+       "R2"
+      ]
+     },
+     "lang": "la",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "V079",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Tu as quoi sur {HA.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     },
+     "lang": "fr",
+     "form": "informal"
+    },
+    {
+     "say": "Celui qui s'appelle {HA.last}",
+     "expect": {
+      "k": "summary",
+      "r": "HA",
+      "decoys": [
+       "HB"
+      ]
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V080",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dossier de {HC.first}",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "{HC}, sa dernière visite ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "HC",
+      "decoys": [
+       "HD"
+      ]
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V081",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "3tini dossier dyal {HB.first}",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V082",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "عطيني معلومات على {HD.first}",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HC",
+       "HD"
+      ]
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V083",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Il y a {DA} dans la base, montre-moi ce qu'on a",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "DA",
+       "DB"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V084",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Montre-moi {SA} stp",
+     "expect": {
+      "k": "summary",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V085",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{SB} il a été vu quand pour la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "SB",
+      "decoys": [
+       "SA"
+      ]
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V086",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men consultation 3and {SA} ?",
+     "expect": {
+      "k": "count",
+      "r": "SA",
+      "decoys": [
+       "SB"
+      ]
+     },
+     "lang": "mx",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V087",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Parle-moi de {R3}.",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "On est quel jour aujourd'hui ?",
+     "expect": {
+      "k": "plain",
+      "noPatientRead": true
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et ses deux dernières visites ?",
+     "expect": {
+      "k": "prev",
+      "r": "R3",
+      "n": 2
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ]
+  },
+  {
+   "id": "V088",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{T2} : médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Il y a combien de consultations prévues demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow",
+      "noPatientRead": true
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et sa dernière note ?",
+     "expect": {
+      "k": "lastnote",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V089",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dossier dyal {R6}",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "mx",
+     "form": "short"
+    },
+    {
+     "say": "Ok parfait, merci beaucoup",
+     "expect": {
+      "k": "plain"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Wakteh akhir mara ja ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R6"
+     },
+     "lang": "mx",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V090",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Patient suivant s'il vous plaît",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "formal"
+    },
+    {
+     "say": "Son dossier en résumé",
+     "expect": {
+      "k": "summary",
+      "r": "NP1"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "V091",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chkoun l patient li jay ?",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "la",
+     "form": "direct"
+    },
+    {
+     "say": "Chnou kayakhod men dwa ?",
+     "expect": {
+      "k": "treat",
+      "r": "NP1"
+     },
+     "lang": "la",
+     "form": "pronoun"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "V092",
+   "domain": "context",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est-ce que je vois après ?",
+     "expect": {
+      "k": "nextpatient",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "informal"
+    },
+    {
+     "say": "Et ses derniers médicaments ?",
+     "expect": {
+      "k": "treat",
+      "r": "NP1"
+     },
+     "lang": "fr",
+     "form": "followup"
+    }
+   ],
+   "asOf": "2026-11-10T08:00:00+01:00"
+  },
+  {
+   "id": "V093",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Peux-tu me dire le nom du patient en cours ?",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V094",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "OPEN",
+    "which": "open"
+   },
+   "turns": [
+    {
+     "say": "Chkoun had l mrid ?",
+     "expect": {
+      "k": "who",
+      "r": "OPEN"
+     },
+     "lang": "la",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V095",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Les consultations de {F1}, c'est quand ?",
+     "expect": {
+      "k": "prev",
+      "r": "F1",
+      "n": 2
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V096",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "{Z1} est déjà venu au cabinet ?",
+     "expect": {
+      "k": "count",
+      "r": "Z1"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V097",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "Z1"
+   },
+   "turns": [
+    {
+     "say": "3ando chi consultation ?",
+     "expect": {
+      "k": "count",
+      "r": "Z1"
+     },
+     "lang": "mx",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "V098",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "شنو الدوا اللي كياخد؟",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "ar",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V099",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R7",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Résume-moi son dossier en trois phrases",
+     "expect": {
+      "k": "summary",
+      "r": "R7"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V100",
+   "domain": "context",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Akhir ziara dyal {T5} wakteh kanet ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "T5"
+     },
+     "lang": "la",
+     "form": "wordorder"
+    }
+   ]
+  },
+  {
+   "id": "V101",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels patients sont prévus aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V102",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "J'ai combien de monde demain ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V103",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men patient 3andi lyoum ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V104",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "شحال من مريض عندي غدا",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V105",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Demain 3andi chkoun ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "mx",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V106",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Agenda de demain",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V107",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "qui je vois aujourdhui",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V108",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous me donner le nombre de consultations prévues cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V109",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Cette semaine, combien de rendez-vous au programme ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V110",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Had simana chhal men rendez-vous 3andi ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "la",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V111",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "شكون عندي اليوم",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V112",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est mon planning de demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V113",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Hier j'ai vu combien de personnes ?",
+     "expect": {
+      "k": "a_count",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V114",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est passé hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V115",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Rendez-vous dyal lyoum",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "mx",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V116",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "C'est qui mon prochain, et à quelle heure ?",
+     "expect": {
+      "k": "a_next"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V117",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chkoun l patient jay w fwa9tach ?",
+     "expect": {
+      "k": "a_next"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V118",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Premier rendez-vous demain ?",
+     "expect": {
+      "k": "a_first",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V119",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui est le dernier patient de la journée aujourd'hui ?",
+     "expect": {
+      "k": "a_last",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V120",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ce matin j'ai du monde ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "am"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V121",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "عندي مواعيد هاد العشية؟",
+     "expect": {
+      "k": "a_daypart",
+      "day": "today",
+      "part": "pm"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V122",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Demain après-midi, des rendez-vous ?",
+     "expect": {
+      "k": "a_daypart",
+      "day": "tomorrow",
+      "part": "pm"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V123",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles personnes ont décommandé cette semaine ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V124",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chkoun lgha rendez-vous dyalou had chhar ?",
+     "expect": {
+      "k": "a_cancelled",
+      "range": "month"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V125",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Je suis disponible demain matin ?",
+     "expect": {
+      "k": "a_free",
+      "day": "tomorrow",
+      "part": "am"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V126",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Aujourd'hui, ça fait combien de patients ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Pareil pour demain.",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V127",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels rendez-vous demain ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Même question pour hier",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V128",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men rendez-vous lyoum ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     },
+     "lang": "mx",
+     "form": "direct"
+    },
+    {
+     "say": "W ghedda ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "la",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V129",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "J'ai combien de consultations cette semaine ?",
+     "expect": {
+      "k": "a_count",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et pour la semaine précédente ?",
+     "expect": {
+      "k": "a_count",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V130",
+   "domain": "agenda",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui ai-je vu hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et avant-hier ?",
+     "expect": {
+      "k": "a_list",
+      "day": "2026-10-24"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V131",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "On a gagné combien aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V132",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Les rentrées d'argent de septembre, ça fait combien ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V133",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal dkhel lcabinet had simana ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V134",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "شحال دخل للعيادة هاد الشهر",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V135",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal khlasso les patients lyoum ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     },
+     "lang": "mx",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V136",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Impayés ?",
+     "expect": {
+      "k": "f_outstanding",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V137",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Ce mois-ci, nos dépenses s'élèvent à combien ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V138",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel bénéfice net ce mois ?",
+     "expect": {
+      "k": "f_net",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V139",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Et par chèque ou par carte, on a eu quelque chose ?",
+     "expect": {
+      "k": "f_other_methods",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V140",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Pourriez-vous me donner le chiffre d'affaires de l'année en cours ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "year"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V141",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien a-t-on encaissé ce mois-ci ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Et le mois passé ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V142",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Les dépenses de ce mois ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et le mois dernier ?",
+     "expect": {
+      "k": "f_expenses",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V143",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal dkhel had chhar ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "la",
+     "form": "direct"
+    },
+    {
+     "say": "W chhar li fat ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "lastmonth"
+     },
+     "lang": "la",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V144",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare septembre et août pour moi",
+     "expect": {
+      "k": "f_compare",
+      "a": "2026-09",
+      "b": "2026-08"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V145",
+   "domain": "finance",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de séances ont été réglées ce mois ?",
+     "expect": {
+      "k": "f_sessions",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "V146",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de personnes différentes ai-je reçues ce mois-ci ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V147",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "On a pris combien de nouveaux dossiers ce mois ?",
+     "expect": {
+      "k": "n_new",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V148",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men consultation tdarou had chhar ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "month"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V149",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "شحال من استشارة دارو هاد الشهر",
+     "expect": {
+      "k": "n_consults",
+      "range": "month"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V150",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel jour de la semaine est le plus chargé ce mois-ci ?",
+     "expect": {
+      "k": "n_busiest",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V151",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de séances ont été réalisées en septembre ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "2026-09"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V152",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Activité du cabinet cette semaine",
+     "expect": {
+      "k": "n_overview",
+      "range": "week"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V153",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men patient kaynin f cabinet en tout ?",
+     "expect": {
+      "k": "n_active_patients"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V154",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de séances ce mois-ci ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Et le mois dernier ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V155",
+   "domain": "finance",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Compare le nombre de séances de ce mois à celui du mois dernier",
+     "expect": {
+      "k": "n_compare",
+      "a": "month",
+      "b": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "V156",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères de la personnalité borderline ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "instabilite des relations interpersonnelles",
+         "impulsivite marquee"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "instabilite des relations interpersonnelles",
+       "impulsivite marquee"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V157",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "C'est quoi les critères d'une personnalité antisociale ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "mepris et de transgression des droits",
+         "tromper pour un profit personnel"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "mepris et de transgression des droits",
+       "tromper pour un profit personnel"
+      ]
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V158",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quoi reconnaît-on une personnalité schizotypique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "deficit social et interpersonnel",
+         "gene aigue"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "deficit social et interpersonnel",
+       "gene aigue"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V159",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du délirium ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "perturbation de l'attention",
+         "quelques heures a quelques jours"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "perturbation de l'attention",
+       "quelques heures a quelques jours"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V160",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels critères faut-il pour parler de trouble neurocognitif dû à la maladie d'Alzheimer ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "debut insidieux et une progression graduelle",
+         "maladie d'alzheimer"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "debut insidieux et une progression graduelle",
+       "maladie d'alzheimer"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V161",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Critères du trouble fétichisme",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "objets",
+         "parties non genitales du corps"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "objets",
+       "parties non genitales du corps"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V162",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment diagnostique-t-on une phobie spécifique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "peur ou anxiete intenses a propos d'un objet ou d'une situation",
+         "avoir une injection"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "peur ou anxiete intenses a propos d'un objet ou d'une situation",
+       "avoir une injection"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V163",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la caractéristique essentielle de l'anxiété de séparation ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "caracteristique essentielle",
+         "separation d'avec la maison"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "caracteristique essentielle",
+       "separation d'avec la maison"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V164",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle est la prévalence du mutisme sélectif ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "relativement rare",
+         "0,03 et 1 %"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "relativement rare",
+       "0,03 et 1 %"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V165",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Avec quels autres troubles le mutisme sélectif est-il souvent associé ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "mutisme selectif",
+         "anxiete sociale",
+         "anxiete de separation"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "mutisme selectif",
+       "anxiete sociale",
+       "anxiete de separation"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V166",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Un enfant immigré qui refuse de parler la nouvelle langue a-t-il forcément un mutisme sélectif ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "refuser de parler la nouvelle langue",
+         "comprehension de la nouvelle langue"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "refuser de parler la nouvelle langue",
+       "comprehension de la nouvelle langue"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V167",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Dans quels troubles peut-on utiliser la spécification catatonique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "neurodeveloppemental, psychotique, bipolaire, depressif"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "neurodeveloppemental, psychotique, bipolaire, depressif"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V168",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels sont les critères du trouble neurocognitif lié à la maladie de Huntington ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "maladie de huntington est cliniquement etablie",
+         "debut insidieux et une progression graduelle"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "maladie de huntington est cliniquement etablie",
+       "debut insidieux et une progression graduelle"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V169",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment pose-t-on le diagnostic d'un trouble neurocognitif dû à une maladie à prions ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "myoclonies ou une ataxie",
+         "progression rapide"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "myoclonies ou une ataxie",
+       "progression rapide"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V170",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel risque cardiaque associe-t-on au lithium pendant la grossesse ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "ebstein"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "ebstein"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V171",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Existe-t-il des données sur le linaclotide pour la constipation due aux antipsychotiques ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "linaclotide",
+         "constipation"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "linaclotide",
+       "constipation"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V172",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment prescrire le bupropion pour arrêter de fumer ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "150mg po bupropion daily",
+         "stopping date"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "150mg po bupropion daily",
+       "stopping date"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V173",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Peut-on prolonger la varénicline pour maintenir l'abstinence tabagique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "varenicline",
+         "additional 12 weeks"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "varenicline",
+       "additional 12 weeks"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V174",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels médicaments sont autorisés en première intention pour le TDAH de l'adulte ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "atomoxetine, lisdexamfetamine",
+         "first-time use in adults"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "atomoxetine, lisdexamfetamine",
+       "first-time use in adults"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V175",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel traitement intraveineux existe pour la dépression du post-partum ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "brexanolone",
+         "postpartum depression"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "brexanolone",
+       "postpartum depression"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V176",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que se passe-t-il avec le lithium après une chirurgie bariatrique ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "lithium toxicity",
+         "sleeve gastrectomy"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "lithium toxicity",
+       "sleeve gastrectomy"
+      ]
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V177",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels mécanismes expliquent le risque de thrombose avec les antipsychotiques ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "venous thromboembolism",
+         "platelet aggregation"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "venous thromboembolism",
+       "platelet aggregation"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V178",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Faut-il surveiller la calcémie sous lithium au long cours ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "hyperparathyroidism",
+         "calcium levels"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "hyperparathyroidism",
+       "calcium levels"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V179",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quand utiliser un schéma de sevrage alcoolique déclenché par les symptômes ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "symptom-triggered",
+         "ciwa-ar"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "symptom-triggered",
+       "ciwa-ar"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V180",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment traiter un delirium tremens par rapport à la tranquillisation rapide habituelle ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "delirium tremens",
+         "rapid tranquillisation"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "delirium tremens",
+       "rapid tranquillisation"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V181",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Sur quelle cible agit la prégabaline ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "alpha 2 delta",
+         "calcium channels"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "alpha 2 delta",
+       "calcium channels"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V182",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment le valproate agit-il sur les canaux ioniques ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "voltage-sensitive sodium channels"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "voltage-sensitive sodium channels"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V183",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelle région du cerveau le modafinil active-t-il pour favoriser l'éveil ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "tuberomammillary",
+         "histamine"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "tuberomammillary",
+       "histamine"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V184",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment la lamotrigine agit-elle sur les canaux sodiques ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "use-dependent blocker",
+         "voltage-sensitive sodium channels"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "use-dependent blocker",
+       "voltage-sensitive sodium channels"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V185",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Classe pharmacologique de l'atomoxétine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "strattera",
+         "norepinephrine reuptake inhibitor"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "strattera",
+       "norepinephrine reuptake inhibitor"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V186",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que provoque l'antagonisme des récepteurs sérotoninergiques 3 de la vortioxétine ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "serotonin 3 receptors",
+         "nausea"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "serotonin 3 receptors",
+       "nausea"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V187",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels anti-inflammatoires font monter le taux de lithium ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "nonsteroidal anti-inflammatory",
+         "plasma lithium concentrations"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "nonsteroidal anti-inflammatory",
+       "plasma lithium concentrations"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V188",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quel moment faut-il doser le lithium dans le sang ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "trough",
+         "12 hours after the last dose"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "trough",
+       "12 hours after the last dose"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V189",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Comment arrêter la paroxétine quand le sevrage est sévère ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "more severe with paroxetine",
+         "slowly taper paroxetine"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "more severe with paroxetine",
+       "slowly taper paroxetine"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V190",
+   "domain": "book",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Le zolpidem peut-il entraîner une dépendance ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "zolpidem is a schedule iv drug",
+         "dependence"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "zolpidem is a schedule iv drug",
+       "dependence"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "V191",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T1"
+   },
+   "turns": [
+    {
+     "say": "Auriez-vous l'obligeance de me communiquer la liste des médicaments actuellement prescrits à ce patient ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "V192",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Bon alors lui, il vient depuis longtemps ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V193",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R3"
+   },
+   "turns": [
+    {
+     "say": "Visites ?",
+     "expect": {
+      "k": "count",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V194",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Dis-moi tout ce que tu sais sur lui, j'ai cinq minutes.",
+     "expect": {
+      "k": "summary",
+      "r": "R4"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "V195",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R5"
+   },
+   "turns": [
+    {
+     "say": "Had l patient ja bzaf d l marat ?",
+     "expect": {
+      "k": "count",
+      "r": "R5"
+     },
+     "lang": "mx",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V196",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T3"
+   },
+   "turns": [
+    {
+     "say": "Dwa dyalou ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "la",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "V197",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R7"
+   },
+   "turns": [
+    {
+     "say": "آخر مرة جا فيها إمتى؟",
+     "expect": {
+      "k": "lastdate",
+      "r": "R7"
+     },
+     "lang": "ar",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "V198",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "kel est sa derniere note",
+     "expect": {
+      "k": "lastnote",
+      "r": "R8"
+     },
+     "lang": "fr",
+     "form": "typo"
+    }
+   ]
+  },
+  {
+   "id": "V199",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quand est-ce que {R9} a été examiné pour la dernière fois ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R9"
+     },
+     "lang": "fr",
+     "form": "synonym"
+    }
+   ]
+  },
+  {
+   "id": "V200",
+   "domain": "variation",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T4",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Aujourd'hui, à ce patient, quels médicaments sont donnés ?",
+     "expect": {
+      "k": "treat",
+      "r": "T4"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ]
+  }
+ ]
+}

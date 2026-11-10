@@ -165,7 +165,15 @@ async function writeAtomic(path, value) {
   await mkdir(dirname(path), { recursive: true });
   const temporary = `${path}.${process.pid}.tmp`;
   await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, { encoding: "utf8", mode: 0o600 });
-  await rename(temporary, path);
+  // On Windows a scanner or indexer can hold the target for a moment; the rename then fails with EPERM or
+  // EBUSY. Two campaigns stopped on it, so the rename is retried briefly before the run gives up.
+  for (let attempt = 0; ; attempt++) {
+    try { await rename(temporary, path); return; }
+    catch (error) {
+      if (attempt >= 8 || !["EPERM", "EBUSY", "EACCES"].includes(error?.code)) throw error;
+      await new Promise(resolve => setTimeout(resolve, 250 * (attempt + 1)));
+    }
+  }
 }
 
 function sourceCaseIds(scenario) {
@@ -450,11 +458,15 @@ async function runCampaign() {
             status: check.status,
             ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
               .filter(key => typeof check[key] === "boolean").map(key => [key, check[key]])),
+            ...(check.originalRule ? { originalRule: check.originalRule } : {}),
           })) : [],
         })),
       } : {}),
     };
   };
+  // The amended rule is the default, so compare this figure, not tally.PASS, with the baseline.
+  const passingUnderOriginalRule = () => inputs.manifest.cases.map(reportRow)
+    .filter(row => row.status === "PASS" && !row.oracleChecks?.some(oracle => oracle.checks.some(check => check.originalRule))).length;
   const oracleStatusCounts = () => {
     const counts = {};
     for (const scenario of inputs.manifest.cases) {
@@ -481,6 +493,7 @@ async function runCampaign() {
       status: counts.FAIL || oracleFailure ? "FAIL" : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
       run,
       tally: counts,
+      passingUnderOriginalRule: passingUnderOriginalRule(),
       oracleStatusCounts: perOracle,
       knowledgeOriginCoverage: evaluateV8KnowledgeOriginCoverage(observedOrigins),
       rows: inputs.manifest.cases.map(reportRow),
@@ -593,6 +606,7 @@ async function runCampaign() {
         : counts["NOT RUN"] ? "PARTIAL" : "NOT VERIFIED",
       run,
       tally: counts,
+      passingUnderOriginalRule: passingUnderOriginalRule(),
       oracleStatusCounts: perOracle,
       knowledgeOriginCoverage: coverage,
       rows: inputs.manifest.cases.map(reportRow),

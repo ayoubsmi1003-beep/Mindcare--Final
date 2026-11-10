@@ -184,6 +184,7 @@ function safeRow(value) {
             status: value.status,
             ...Object.fromEntries(["sourceTitleMatched", "sourceSectionMatched", "citationMatched", "pageResolved"]
               .filter(key => typeof value[key] === "boolean").map(key => [key, value[key]])),
+            ...(oracleStatuses.includes(value.originalRule) ? { originalRule: value.originalRule } : {}),
           }] : [];
       }),
     }];
@@ -378,6 +379,7 @@ export function sanitizeAlexaEvaluationArtifact(value) {
     status: status(report.status),
     run: safeRun(report.run),
     ...(Object.keys(tally).length ? { tally } : {}),
+    ...(Number.isSafeInteger(report.passingUnderOriginalRule) ? { passingUnderOriginalRule: report.passingUnderOriginalRule } : {}),
     ...(Object.keys(oracleStatusCounts).length ? { oracleStatusCounts } : {}),
     ...(knowledgeOriginCoverage ? { knowledgeOriginCoverage } : {}),
     rows: list(report.rows).map(safeRow),
