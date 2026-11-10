@@ -121,5 +121,15 @@ export function auditSnapshotPreservation(manifest) {
   if (!manifest || !Number.isInteger(manifest.patient_count) || manifest.patient_count < 0 || manifest.fixtures_exclues !== 0 || manifest.patient_count !== manifest.patients_total_source || manifest.patient_count !== manifest.counts?.['app.patients']) {
     return ['snapshot excludes source patients; production release requires every source record'];
   }
+  // A doctor snapshot without the governed book corpus fails closed: the
+  // installed Alexa would answer "no approved evidence" to every book
+  // question (seen 2026-11-04 — an empty snapshot shipped while every gate
+  // stayed green because only patient counts were checked). Floor values
+  // cover the six R1/A-B corpora plus DSM-5, Maudsley/Taylor and Stahl.
+  const sources = manifest.counts?.['app.knowledge_sources'];
+  const chunks = manifest.counts?.['app.knowledge_chunks'];
+  if (!Number.isInteger(sources) || sources < 9 || !Number.isInteger(chunks) || chunks < 20000) {
+    return ['snapshot lacks the governed book corpus; production release requires app.knowledge_sources and app.knowledge_chunks'];
+  }
   return [];
 }

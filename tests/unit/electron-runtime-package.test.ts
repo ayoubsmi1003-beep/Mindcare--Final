@@ -45,8 +45,14 @@ describe('Electron production runtime dependency gates', () => {
     }
   });
   it('rejects a snapshot reducing 1559 source patients to 1558', () => {
-    expect(auditSnapshotPreservation({patient_count:1558,patients_total_source:1559,fixtures_exclues:1,counts:{'app.patients':1559}})).toHaveLength(1);
-    expect(auditSnapshotPreservation({patient_count:1559,patients_total_source:1559,fixtures_exclues:0,counts:{'app.patients':1559}})).toEqual([]);
+    const books = { 'app.knowledge_sources': 9, 'app.knowledge_chunks': 25000 };
+    expect(auditSnapshotPreservation({patient_count:1558,patients_total_source:1559,fixtures_exclues:1,counts:{'app.patients':1559, ...books}})).toHaveLength(1);
+    expect(auditSnapshotPreservation({patient_count:1559,patients_total_source:1559,fixtures_exclues:0,counts:{'app.patients':1559, ...books}})).toEqual([]);
+  });
+  it('rejects a snapshot without the governed book corpus', () => {
+    const patients = {patient_count:0,patients_total_source:0,fixtures_exclues:0,counts:{'app.patients':0,'app.consultations':0,'app.documents':0,'app.profiles':2,'auth.users':2}};
+    expect(auditSnapshotPreservation({...patients, counts:{...patients.counts,'app.knowledge_sources':0,'app.knowledge_chunks':0}})).toHaveLength(1);
+    expect(auditSnapshotPreservation({...patients, counts:{...patients.counts,'app.knowledge_sources':9,'app.knowledge_chunks':40901}})).toEqual([]);
   });
   it('refuses any clinical, server or secret resource in the Assistant artifact', () => {
     const disk = ['MindCare Assistant.exe', 'resources/app.asar', 'resources/cabinet/configurer-cabinet.ps1', 'resources/cabinet/deploiement-cabinet.md'];

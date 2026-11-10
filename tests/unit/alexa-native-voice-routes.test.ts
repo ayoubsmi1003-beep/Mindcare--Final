@@ -131,6 +131,21 @@ describe("local voice API boundary", () => {
     });
   });
 
+  it("serves the packaged Kokoro wake acknowledgement without waiting for the voice worker", async () => {
+    const response = await tts(request({ ...ids, texte: "Oui docteur, je vous écoute." }));
+    const audio = Buffer.from(await response.arrayBuffer());
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get("X-Alexa-Voice-Provider")).toBe("local");
+    expect(response.headers.get("X-Alexa-Voice-Model")).toBe("kokoro-82m-v1.0-ff_siwis");
+    expect(response.headers.get("Content-Type")).toBe("audio/wav");
+    expect(response.headers.get("Cache-Control")).toBe("no-store");
+    expect(audio.subarray(0, 4).toString()).toBe("RIFF");
+    expect(audio.subarray(8, 12).toString()).toBe("WAVE");
+    expect(audio.byteLength).toBeGreaterThan(44);
+    expect(native).not.toHaveBeenCalled();
+  });
+
   it("synthesizes French text with the local Kokoro French voice at 24 kHz", async () => {
     native.mockResolvedValue({
       audioBase64: wav().toString("base64"),

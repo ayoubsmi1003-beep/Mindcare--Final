@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { randomUUID } from "node:crypto";
 
 import { alexa as alexaCognitive } from "@/i18n/alexa";
@@ -51,6 +53,32 @@ export async function POST(req: Request): Promise<Response> {
   if (segments.length === 0 || segments.length > 32 || segments.some((segment) => segment.langue === "ar")) {
     return echec("synthese-indisponible", alexaCognitive.syntheseLocaleIndisponible);
   }
+
+  if (v.data.texte === alexaCognitive.reveilAccuse) {
+    try {
+      const audio = readFileSync(join(process.cwd(), "public", "wake-ack-fr.wav"));
+      if (
+        audio.length > 44 &&
+        audio.toString("ascii", 0, 4) === "RIFF" &&
+        audio.toString("ascii", 8, 12) === "WAVE"
+      ) {
+        return new Response(new Uint8Array(audio), {
+          headers: {
+            "X-Alexa-Voice-Provider": "local",
+            "X-Alexa-Voice-Model": "kokoro-82m-v1.0-ff_siwis",
+            "X-Alexa-Sample-Rate": String(audio.readUInt32LE(24)),
+            "Content-Type": "audio/wav",
+            "Cache-Control": "no-store",
+            "X-Alexa-Run-ID": v.data.runId,
+            "X-Alexa-Utterance-ID": v.data.utteranceId,
+          },
+        });
+      }
+    } catch {
+      // The packaged verifier requires this clip; keep the existing Kokoro fallback for development.
+    }
+  }
+
   const sessionId = await sessionVoix();
   if (sessionId === null) return echec("non-authentifie", alexaCognitive.voixIndisponible);
 
