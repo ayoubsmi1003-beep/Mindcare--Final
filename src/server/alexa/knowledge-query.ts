@@ -368,6 +368,11 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       for (const other of known.filter(token => token !== anchor).slice(0, 2)) add(`${anchor} ${other}`);
       for (const other of unknown.filter(token => token !== anchor).slice(0, 1)) add(`${anchor} ${other}`);
     }
+    // One filler word ("permettent", "retenir", "évoquent"...) empties the lexical AND. Retry once without question filler only
+    // (verbs and connectors, never a medical word), so the retry never loses the subject.
+    const FILLER = /^(?:permett\w*|retenir|evoqu\w*|equivau\w*|exist\w*|homolog\w*|provoqu\w*|frequent\w*|avant|debut\w*|faire|donner?|propos\w*|utilis\w*|attend\w*|reconnai\w*|correspond\w*|caracteris\w*|associe\w*|souvent|forcement|entrain\w*|peut|peuvent|doit|faut|ete|etre|avoir)$/u;
+    const core = tokens.filter(token => !FILLER.test(token)), coreQuery = core.join(" ");
+    if (core.length >= 2 && core.length < tokens.length && !queries.includes(coreQuery) && !recoveryQueries.some(entry => entry.query === coreQuery) && recoveryQueries.length < 3) recoveryQueries.push({ query: coreQuery, reference: tokens.join(" ") });
   }
   // The approved books often label monitoring requirements under "Tests".
   // Keep the literal monitoring query and add this bounded heading alternative.
@@ -510,7 +515,15 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
           if (criteriaRequested) return 'criteres diagnostiques';
           return /\b(?:definit|definir|definition)\b/u.test(normalized) ? 'caracteristiques diagnostiques' : undefined;
         })()
-      : undefined);
+      // A criteria question with no named disorder still prefers the "Critères diagnostiques" leaf (a tie-break, never a filter).
+      : (!comparison && recognizedFocuses.length === 0 && (criteriaRequested || descriptionRequested || /\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized)) ? 'criteres diagnostiques' : undefined));
+  // A criteria or description question about a disorder no focus rule names: the DSM chunk to find opens "<Disorder> — critères diagnostiques —",
+  // so ask for the subject words together with that aspect (the plain subject query fills its twenty places with other chunks).
+  if(book===undefined&&!sectionFocus&&!comparison&&(criteriaRequested||descriptionRequested||/\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized))){
+    const aspectWords=/^(?:criteres?|symptomes?|signes?|defini\w*|caracteris\w*|reconnai\w*|correspond\w*|repos\w*|diagnostic\w*|quoi|comment|qui|que|permett\w*|retenir|evoqu\w*)$/u;
+    const subject=tokens.filter(token=>!aspectWords.test(token));
+    if(subject.length>=1&&subject.length<=4){const aspectQuery=[...subject,'criteres diagnostiques'].join(' ');if(!queries.includes(aspectQuery)){queries.push(aspectQuery);references.push(aspectQuery);}}
+  }
   if(sectionFocus){
     const primary=[sectionFocus,embeddedCriteria&&criteriaRequested?'criteres diagnostiques':sectionLeaf].filter(Boolean).join(' ');
     if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
@@ -523,6 +536,8 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */
+/** The DSM chunks open with "<Disorder> — <aspect> — …" (the aspect is not always the section leaf): true when that aspect is the one asked for. */
+export const textOpensWithAspect=(text:string,aspect:string)=>new RegExp(`^[^—]{2,120}—\\s*${aspect}\\b`,'u').test(normalize(text));
 export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
 
 /**

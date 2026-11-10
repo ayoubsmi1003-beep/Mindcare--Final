@@ -15,7 +15,7 @@ import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-s
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { recetteSecondaireGelee } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus } from "./knowledge-query";
+import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus, textOpensWithAspect } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
@@ -550,7 +550,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const indiceFocus = (preuve: Preuve): number =>
       plan.focusHints?.some(focus => matchesSectionFocus(preuve.section, focus)) ? 1 : 0;
     const indiceFeuille = (preuve: Preuve): number =>
-      plan.leafHint !== undefined && matchesLeafHint(preuve.section, plan.leafHint) ? 1 : 0;
+      plan.leafHint !== undefined && (matchesLeafHint(preuve.section, plan.leafHint) || textOpensWithAspect(preuve.texte, plan.leafHint)) ? 1 : 0;
     // À pertinence ÉGALE, la correspondance lexicale exacte passe avant un
     // voisin purement dense. Mesuré : le bon passage de « surveillance
     // hématologique clozapine » était rang 1 lexical, mais des voisins denses
@@ -574,7 +574,12 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       idsLexicaux.has(preuve.chunkId) || meilleurLexical === null
         ? preuve.evidence_relevance
         : Math.min(preuve.evidence_relevance, meilleurLexical);
-    const ordonnes = [...tous].sort((a, b) => pertinenceEffective(b.preuve) - pertinenceEffective(a.preuve)
+    // A criteria question is answered by the chunk of that very aspect ("<Disorder> — critères diagnostiques —"), found by the words, and relevant
+    // enough to count. It leads: other chunks of the same disorder (differential diagnosis, comorbidity) mention the same words and tie with it.
+    const feuilleDecisive = (preuve: Preuve): number =>
+      idsLexicaux.has(preuve.chunkId) && pertinenceEffective(preuve) >= SEUIL_PERTINENCE ? indiceFeuille(preuve) : 0;
+    const ordonnes = [...tous].sort((a, b) => feuilleDecisive(b.preuve) - feuilleDecisive(a.preuve)
+      || pertinenceEffective(b.preuve) - pertinenceEffective(a.preuve)
       || indiceFeuille(b.preuve) - indiceFeuille(a.preuve)
       || indiceFocus(b.preuve) - indiceFocus(a.preuve)
       || indiceLexical(b.preuve) - indiceLexical(a.preuve)

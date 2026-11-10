@@ -10,7 +10,8 @@ export type KnowledgeReference = { readonly proof: Proof; readonly excerpt: stri
 
 // The adapter's evidence budget decides how much arrives, and reports what it leaves out.
 const MAX_REFERENCE_CHARS = 10_400;
-const MIN_REFERENCES = 3;
+// Whatever retrieval kept is shown: a passage found and not displayed is not an answer (the evidence budget already bounds the total).
+const MIN_REFERENCES = 5;
 const MAX_REFERENCES = 5;
 
 /**

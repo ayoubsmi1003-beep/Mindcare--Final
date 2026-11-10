@@ -7,6 +7,7 @@ import { ALEXA_CONVERSATION_MODEL as ALEXA_DIRECT_MODEL } from "./model-policy";
 import { SentenceStream } from "./sentence-stream";
 import { classerCharge } from "@/server/egress/classification";
 import { mentionsMedication } from "@/shared/alexa/medications";
+import { CLINICAL_STEMS } from "@/shared/alexa/request-contract";
 import { ALEXA_GENERAL_PROMPTS } from "@/i18n/alexa-general";
 import { isBoundedPublicQuestion } from "@/shared/alexa/public-question";
 import { isIssuedPublicQuestion, type PublicQuestionAdmission } from "./semantic-planner";
@@ -164,7 +165,7 @@ function generalTextIsUnsafe(text: string, computerExplanation = false): boolean
     || /\b(?:my|your|his|her|their)\s+(?:names?|surnames?|identit(?:y|ies))\b/u.test(value)
     || /\b(?:mon|ma|mes|ton|ta|tes|son|sa|ses|notre|votre|vos|leurs?)\s+(?:nom|prenom|adresse|naissance|contacts?)\b/u.test(value)
     || /\b(?:chiffre d.affaires|chiffre|soldes?|finances?|impayes?|depenses?|benefices?|revenus?|encaissements?|resultat net)\b/u.test(value)
-    || GENERAL_PRIVATE_OR_CLINICAL.test(value) || GENERAL_MEDICAL_TERMS.test(value) || GENERAL_DRUGS.test(value) || GENERAL_ENGLISH_TERMS.test(value) || mentionsMedication(value)
+    || GENERAL_PRIVATE_OR_CLINICAL.test(value) || GENERAL_MEDICAL_TERMS.test(value) || GENERAL_DRUGS.test(value) || CLINICAL_STEMS.test(value) || GENERAL_ENGLISH_TERMS.test(value) || mentionsMedication(value)
     || GENERAL_ACTION_OR_SOURCE.test(actions) || /<\/?[a-z][^>]*>/i.test(value)
     || /(?:\+|00)\s*\d(?:[\s().-]*\d){6,}|\b\d{7,}\b|\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b\d{4}-\d{2}-\d{2}\b/u.test(value);
 }

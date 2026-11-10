@@ -22,8 +22,9 @@ const proof = (section: string | null, extrait = WORDS, chunkId = section ?? "no
 const sections = (question: string, proofs: Proof[]) => referencesToRead(question, proofs).references.map(entry => entry.proof.section);
 
 describe("what is listed", () => {
-  it("keeps retrieval's order and three places", () => {
-    expect(sections("Quel traitement de la manie ?", ["A", "B", "C", "D"].map(name => proof(name)))).toEqual(["A", "B", "C"]);
+  it("keeps retrieval's order and shows every passage retrieval kept, up to five", () => {
+    expect(sections("Quel traitement de la manie ?", ["A", "B", "C", "D"].map(name => proof(name)))).toEqual(["A", "B", "C", "D"]);
+    expect(sections("Quel traitement de la manie ?", ["A", "B", "C", "D", "E", "F"].map(name => proof(name)))).toEqual(["A", "B", "C", "D", "E"]);
   });
   it("one drug with its own monograph: neighbours take no place", () => {
     expect(sections("Posologie de la sertraline ?", [proof("Lithium › Dosing"), proof("Sertraline › Dosing"), proof("Sertraline › Side Effects")])).toEqual(["Sertraline › Dosing", "Sertraline › Side Effects"]);
@@ -31,7 +32,7 @@ describe("what is listed", () => {
   it("each drug asked for gets a place", () => {
     const listed = sections("Lithium ou sertraline, quelle posologie ?", [proof("Lithium › A"), proof("Lithium › B"), proof("Lithium › C"), proof("Sertraline › A")]);
     expect(listed).toContain("Sertraline › A");
-    expect(listed).toHaveLength(3);
+    expect(listed).toHaveLength(4);
   });
   it("no veto on a number, an excluded drug, or a population: the reader judges from the heading", () => {
     const numbers = proof("Lithium › Dosing", "Adults usual dose is 900 mg per day in divided doses");

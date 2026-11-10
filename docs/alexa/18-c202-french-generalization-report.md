@@ -65,3 +65,12 @@ Le français de C201 et celui de C202 se ressemblent (63 % des tours contre 57 %
 
 ## Limites
 Le modèle 1B est lent et non déterministe ; l'oracle des livres exige des mots exacts du passage (une réponse correcte autrement formulée serait refusée) ; pas de revue clinique ; la vérité terrain « Patient suivant » est sensible à l'heure (voir ci-dessus).
+
+## Suite : correctifs « livres » (après la campagne ; la campagne ci-dessus reste le résultat mesuré sur `3180fc5`)
+Causes trouvées en traçant où le passage vérifié se perd, puis corrigées par classe (aucune question codée en dur) :
+1. **Texte du modèle pour une question de livre** : une question psychiatrique hors de la liste fermée de sujets (personnalité, phobie, narcolepsie, lurasidone…) était admise comme « question publique générale » et rédigée par le modèle. `CLINICAL_STEMS` (racines psychiatriques et pharmacologiques) l'envoie aux livres et interdit au modèle d'y répondre. Une question à pronom possessif (« son TDAH ») reste celle du patient.
+2. **ET lexical vide** : un seul mot parasite (« permettent », « retenir », « évoquent ») vide la recherche. Un second essai retire les seuls mots de remplissage, jamais un mot médical.
+3. **Le bon passage trouvé mais écarté** : une question de critères ou de description cherche aussi « <sujet> critères diagnostiques » (les chunks du DSM s'ouvrent par « <Trouble> — critères diagnostiques — »), et le chunk de cette rubrique, trouvé par les mots et pertinent, passe en tête.
+4. **Trouvé et non affiché** : seuls 3 passages sur les 5 retenus étaient montrés ; tous le sont maintenant (le budget de preuves borne déjà le total).
+Résultats après correctifs (labels `books4`, `booksfix`, `books-reg`, séparés) : **C202 livres 23/35** (14 avant), **C201 livres 20/35** (19), **C200 complète 200/200** (non-régression ; le syndrome sérotoninergique C189 réussit maintenant). Tests unitaires Alexa et connaissance : 4 607 réussis, 1 échec préexistant (+ `knowledge-stahl-chunker`, fichiers absents du worktree).
+**Reste 12 cas de C202** : 11 sur des livres anglais (Maudsley, Stahl), où une question française doit retrouver un passage anglais : la recherche par mots exige des équivalents anglais exacts (« bilan » → « workup », « sismothérapie » → « ECT », pluriels comme « doses »), et la recherche vectorielle française→anglaise ne ramène pas ces passages. Prochain levier : élargir le glossaire français-anglais gouverné (`terminologie-bilingue.ts`) et gérer le singulier/pluriel des requêtes anglaises.

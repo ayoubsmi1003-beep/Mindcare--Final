@@ -47,3 +47,23 @@ describe("retrieval: a disorder named in everyday words still reaches its own cr
     expect(plan("Quels sont les effets métaboliques des antipsychotiques et comment les surveiller ?").queries).toContain("effects metabolic antipsychotics monitoring");
   });
 });
+
+describe("retrieval: a question's filler words and unlisted psychiatric terms", () => {
+  it("retries without question filler only, keeping every medical word", () => {
+    const plan = planKnowledgeQuery("Quels critères permettent de retenir la crainte excessive d'avoir une maladie ?")!;
+    expect(plan.recoveryQueries?.map((entry) => entry.query)).toContain("criteres crainte excessive maladie");
+  });
+  it("a criteria question with no named disorder prefers the criteria leaf (a tie-break)", () => {
+    expect(planKnowledgeQuery("Quels sont les critères des troubles de l'adaptation ?")!.leafHint).toBe("criteres diagnostiques");
+  });
+});
+describe("a psychiatric question the topic list misses still goes to the books, not to the general model", () => {
+  it.each(["Comment définit-on la personnalité histrionique ?", "Comment reconnaît-on une personnalité évitante ?", "Quelle est la cause de la narcolepsie avec cataplexie ?", "Quelle prise de poids attend-on avec la lurasidone ?"])("%s", async (question) => {
+    const { isClinicalKnowledgeQuestion } = await import("@/shared/alexa/request-contract");
+    expect(isClinicalKnowledgeQuestion(question)).toBe(true);
+  });
+  it("a question about a patient's own condition stays with the patient", async () => {
+    const { isClinicalKnowledgeQuestion } = await import("@/shared/alexa/request-contract");
+    expect(isClinicalKnowledgeQuestion("Que faire pour son TDAH ?")).toBe(false);
+  });
+});
