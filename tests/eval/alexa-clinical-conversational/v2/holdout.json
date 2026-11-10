@@ -1,0 +1,697 @@
+{
+ "version": 2,
+ "campaign": "C201",
+ "frozenOn": "2026-11-10",
+ "note": "Wording written before any run; never tuned against results.",
+ "set": "holdout",
+ "cases": [
+  {
+   "id": "H001",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R1"
+   },
+   "turns": [
+    {
+     "say": "Il en est à combien de séances jusqu'à maintenant ?",
+     "expect": {
+      "k": "count",
+      "r": "R1"
+     },
+     "lang": "fr",
+     "form": "implicit"
+    }
+   ]
+  },
+  {
+   "id": "H002",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Donne-moi un coup d'œil rapide sur {R3}",
+     "expect": {
+      "k": "summary",
+      "r": "R3"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "H003",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "T2"
+   },
+   "turns": [
+    {
+     "say": "Qu'est-ce qu'il avale comme comprimés ?",
+     "expect": {
+      "k": "treat",
+      "r": "T2"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "H004",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "R5",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Quand l'ai-je reçu pour la première fois ?",
+     "expect": {
+      "k": "firstdate",
+      "r": "R5"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "H005",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quelles ont été les trois dernières entrevues avec {R7} ?",
+     "expect": {
+      "k": "prev",
+      "r": "R7",
+      "n": 3
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "H006",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R2"
+   },
+   "turns": [
+    {
+     "say": "Rappelle-moi ce que j'ai écrit après sa dernière visite",
+     "expect": {
+      "k": "lastnote",
+      "r": "R2"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "H007",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R4"
+   },
+   "turns": [
+    {
+     "say": "Chhal men mara dkhel l consultation had l mrid ?",
+     "expect": {
+      "k": "count",
+      "r": "R4"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "H008",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "المعلومات ديال {R6} لو سمحتي",
+     "expect": {
+      "k": "summary",
+      "r": "R6"
+     },
+     "lang": "ar",
+     "form": "formal"
+    }
+   ]
+  },
+  {
+   "id": "H009",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "consultation",
+    "role": "T1",
+    "which": "last"
+   },
+   "turns": [
+    {
+     "say": "Daba chnou kayakhod mn dwa w ch7al ?",
+     "expect": {
+      "k": "treat",
+      "r": "T1"
+     },
+     "lang": "mx",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "H010",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "patient",
+    "role": "R8"
+   },
+   "turns": [
+    {
+     "say": "Et {R9} ? Quelle est sa dernière date de présence ?",
+     "expect": {
+      "k": "lastdate",
+      "r": "R9",
+      "decoys": [
+       "R8"
+      ]
+     },
+     "lang": "fr",
+     "form": "otherpatient"
+    }
+   ]
+  },
+  {
+   "id": "H011",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que sait-on de {T3} ?",
+     "expect": {
+      "k": "summary",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Il suit quoi comme traitement ?",
+     "expect": {
+      "k": "treat",
+      "r": "T3"
+     },
+     "lang": "fr",
+     "form": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "H012",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Des nouvelles de {HA.first} ?",
+     "expect": {
+      "k": "clarify",
+      "decoys": [
+       "HA",
+       "HB"
+      ]
+     },
+     "lang": "fr",
+     "form": "short"
+    }
+   ]
+  },
+  {
+   "id": "H013",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de rendez-vous m'attendent aujourd'hui ?",
+     "expect": {
+      "k": "a_count",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H014",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Mes patients de demain, la liste ?",
+     "expect": {
+      "k": "a_list",
+      "day": "tomorrow"
+     },
+     "lang": "fr",
+     "form": "wordorder"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H015",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "À quelle heure arrive mon prochain patient ?",
+     "expect": {
+      "k": "a_next"
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H016",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Chhal men maw3id 3andi ghedda ?",
+     "expect": {
+      "k": "a_count",
+      "day": "tomorrow"
+     },
+     "lang": "la",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H017",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Qui vois-je aujourd'hui ?",
+     "expect": {
+      "k": "a_list",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    },
+    {
+     "say": "Même chose pour hier",
+     "expect": {
+      "k": "a_list",
+      "day": "yesterday"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H018",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le tout dernier rendez-vous aujourd'hui ?",
+     "expect": {
+      "k": "a_last",
+      "day": "today"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H019",
+   "domain": "holdout",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quel est le montant total des encaissements d'aujourd'hui ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "today"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "H020",
+   "domain": "holdout",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que doit-on encore recevoir ?",
+     "expect": {
+      "k": "f_outstanding",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "H021",
+   "domain": "holdout",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "شحال خلصو المرضى هاد الأسبوع",
+     "expect": {
+      "k": "f_revenue",
+      "range": "week"
+     },
+     "lang": "ar",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "H022",
+   "domain": "holdout",
+   "db": "fixture",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Recettes du mois ?",
+     "expect": {
+      "k": "f_revenue",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "short"
+    },
+    {
+     "say": "Pareil pour le mois précédent",
+     "expect": {
+      "k": "f_revenue",
+      "range": "lastmonth"
+     },
+     "lang": "fr",
+     "form": "period"
+    }
+   ],
+   "asOf": "2026-09-27T18:00:00+01:00"
+  },
+  {
+   "id": "H023",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien de patients distincts ont été vus ce mois-ci ?",
+     "expect": {
+      "k": "n_patients_seen",
+      "range": "month"
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H024",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Nombre de consultations réalisées la semaine dernière ?",
+     "expect": {
+      "k": "n_consults",
+      "range": "lastweek"
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ],
+   "asOf": "2026-10-26T09:30:00+01:00"
+  },
+  {
+   "id": "H025",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Que dit-on de la prévalence du mutisme sélectif chez l'enfant ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "relativement rare",
+         "0,03 et 1 %"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "relativement rare",
+       "0,03 et 1 %"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "H026",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Y a-t-il un lien entre lithium et malformation cardiaque du fœtus ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "ebstein"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "ebstein"
+      ]
+     },
+     "lang": "fr",
+     "form": "informal"
+    }
+   ]
+  },
+  {
+   "id": "H027",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Jusqu'à quand continuer la varénicline chez quelqu'un qui a arrêté de fumer ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "varenicline",
+         "additional 12 weeks"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "varenicline",
+       "additional 12 weeks"
+      ]
+     },
+     "lang": "fr",
+     "form": "conversational"
+    }
+   ]
+  },
+  {
+   "id": "H028",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Combien d'heures après la dernière prise faut-il faire la lithémie ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "trough",
+         "12 hours after the last dose"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "trough",
+       "12 hours after the last dose"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "H029",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Quels symptômes caractérisent une personnalité borderline ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "instabilite des relations interpersonnelles",
+         "impulsivite marquee"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "instabilite des relations interpersonnelles",
+       "impulsivite marquee"
+      ]
+     },
+     "lang": "fr",
+     "form": "direct"
+    }
+   ]
+  },
+  {
+   "id": "H030",
+   "domain": "holdout",
+   "db": "main",
+   "page": {
+    "type": "global"
+   },
+   "turns": [
+    {
+     "say": "Sur quelles structures la prégabaline se fixe-t-elle ?",
+     "expect": {
+      "k": "book",
+      "alts": [
+       {
+        "textAll": [
+         "alpha 2 delta",
+         "calcium channels"
+        ]
+       }
+      ],
+      "quoteFacts": [
+       "alpha 2 delta",
+       "calcium channels"
+      ]
+     },
+     "lang": "fr",
+     "form": "formal"
+    }
+   ]
+  }
+ ]
+}
