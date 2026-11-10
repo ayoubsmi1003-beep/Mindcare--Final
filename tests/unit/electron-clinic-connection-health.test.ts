@@ -1,5 +1,17 @@
 import { describe, expect, it, vi } from 'vitest';
-import { creerSessionSondeCabinet, essayerConnexionCabinetConnu, creerStabiliteSondeCabinet } from '../../electron/main/connexion-cabinet';
+import { creerSessionSondeCabinet, essayerConnexionCabinetConnu, creerStabiliteSondeCabinet, origineSondeCabinet } from '../../electron/main/connexion-cabinet';
+
+describe('health probe origin selection', () => {
+  it('uses the loopback application origin on the doctor host', () => {
+    expect(origineSondeCabinet('host', 'https://doctor.local:43118', 'http://127.0.0.1:43117'))
+      .toBe('http://127.0.0.1:43117');
+  });
+
+  it('keeps the pinned cabinet origin on assistant clients', () => {
+    expect(origineSondeCabinet('client', 'https://doctor.local:43118', 'http://127.0.0.1:43117'))
+      .toBe('https://doctor.local:43118');
+  });
+});
 
 describe('connexion d’un poste déjà approuvé', () => {
   it('essaie directement l’origine approuvée avant de demander une découverte réseau', async () => {

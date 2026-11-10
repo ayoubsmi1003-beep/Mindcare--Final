@@ -23,7 +23,7 @@ const VARIABLES_SERVEUR = new Set([
   "COMM_WEBHOOK_SECRET", "COMPOSIO_API_KEY", "COMPOSIO_BASE_URL", "COMPOSIO_ENTITY_ID", "COMPOSIO_LIST_PATH",
   "ELEVENLABS_API_KEY", "ELEVENLABS_VOICE_ID", "GEMINI_API_KEY", "GEMINI_FREE_QUALIFICATION_FILE", "GOOGLE_API_KEY", "GROQ_API_KEY", "GROQ_FREE_QUALIFICATION_FILE",
   "INTENT_CLASSIFIER_ENABLED", "JARVIS_CHAT_MODEL", "JARVIS_ENABLED", "JARVIS_JEV_ENABLED", "JARVIS_RESOLUTION_ENABLED", "JARVIS_RESUME_MODEL", "JARVIS_STREAMING", "JARVIS_VOICE_ENABLED", "JEV_MODEL", "LLM_MODEL",
-  "KNOWLEDGE_VECTOR", "KNOWLEDGE_VECTOR_RECETTE",
+  "KNOWLEDGE_VECTOR", "KNOWLEDGE_VECTOR_RECETTE", "KNOWLEDGE_RERANK",
   "OPENROUTER_API_KEY", "OPENROUTER_MODEL", "OPENROUTER_MODEL_TIMEOUT_MS", "OPENROUTER_QUALIFICATION_FILE", "STT_MODEL", "TTS_MODEL", "VOICE_PROVIDER",
 ]);
 
@@ -34,19 +34,22 @@ const VARIABLES_ANCIEN_RELAIS = new Set([
 ]);
 
 /** Fichier optionnel serveur uniquement; pas de variables de processus ou de base. */
-export function lireVariablesServeur(texte: string): Record<string, string> {
+export function lireVariablesServeur(texte: string, options: { paquet?: boolean } = {}): Record<string, string> {
   const variables: Record<string, string> = {};
+  const vues = new Set<string>();
   for (const ligne of texte.replace(/^\uFEFF/, "").split(/\r?\n/)) {
     if (!ligne.trim() || ligne.trimStart().startsWith("#")) continue;
     const egal = ligne.indexOf("=");
     const nom = ligne.slice(0, egal).trim();
     if (egal > 0 && VARIABLES_ANCIEN_RELAIS.has(nom)) continue;
-    if (egal < 1 || !VARIABLES_SERVEUR.has(nom) || Object.hasOwn(variables, nom)) throw new Error("CONFIGURATION_CABINET: variable serveur inconnue ou dupliquée dans private/runtime.env.");
+    if (egal < 1 || !VARIABLES_SERVEUR.has(nom) || vues.has(nom)) throw new Error("CONFIGURATION_CABINET: variable serveur inconnue ou dupliquée dans private/runtime.env.");
     let valeur = ligne.slice(egal + 1).trim();
     if ((valeur.startsWith('"') && valeur.endsWith('"')) || (valeur.startsWith("'") && valeur.endsWith("'"))) valeur = valeur.slice(1, -1);
+    if (nom === "KNOWLEDGE_RERANK" && valeur !== "mmarco") throw new Error("CONFIGURATION_CABINET: valeur de reranker non prise en charge.");
     variables[nom] = valeur;
+    vues.add(nom);
   }
-  return variables;
+  return options.paquet ? { KNOWLEDGE_VECTOR: "1", KNOWLEDGE_VECTOR_RECETTE: "e5-base", ...variables } : variables;
 }
 
 export function chargerServeurCabinet(fichier: string): { origin: string; resourcesDir: string; racineDonnees: string } {
@@ -82,10 +85,10 @@ async function demarrerServeur(fichier: string): Promise<void> {
   createSecureContext({ pfx, passphrase, minVersion: "TLSv1.2" });
   for (const nom of VARIABLES_SERVEUR) delete process.env[nom];
   const runtime = path.join(prive, "runtime.env");
-  if (existsSync(runtime)) {
-    if (statSync(runtime).size > 64 * 1024) throw new Error("CONFIGURATION_CABINET: runtime.env trop volumineux.");
-    Object.assign(process.env, lireVariablesServeur(readFileSync(runtime, "utf8")));
-  }
+  if (existsSync(runtime) && statSync(runtime).size > 64 * 1024) throw new Error("CONFIGURATION_CABINET: runtime.env trop volumineux.");
+  const texteRuntime = existsSync(runtime) ? readFileSync(runtime, "utf8") : "";
+  const paquet = existsSync(path.join(config.resourcesDir, "serveur", "server.js"));
+  Object.assign(process.env, lireVariablesServeur(texteRuntime, { paquet }));
   delete process.env["MINDCARE_DATABASE_URL"];
   delete process.env["MINDCARE_START_URL"];
   delete process.env["NODE_OPTIONS"];

@@ -81,6 +81,37 @@ describe("machine à états de démarrage", () => {
     expect(m.cause).toBe("migration-manquante");
   });
 
+  it("base momentanément indisponible pendant la vérification du schéma → reprise bornée", () => {
+    const migrations = joue([
+      { type: "RUNTIME_PRESENT" },
+      { type: "CLUSTER_PRESENT" },
+      { type: "SERVICE_DEMARRE" },
+      { type: "BASE_JOIGNABLE" },
+    ]);
+    expect(migrations.etat).toBe("RUNNING_MIGRATIONS");
+
+    const recuperation = reduire(migrations, { type: "BASE_INJOIGNABLE", detail: "connexion locale indisponible" });
+    expect(recuperation).toMatchObject({
+      etat: "RECOVERY",
+      tentativesRecuperation: BUDGET_RECUPERATION,
+      cause: "base-injoignable",
+    });
+
+    const echecFinal = [
+      { type: "REESSAYER" as const },
+      { type: "RUNTIME_PRESENT" as const },
+      { type: "CLUSTER_PRESENT" as const },
+      { type: "SERVICE_DEMARRE" as const },
+      { type: "BASE_JOIGNABLE" as const },
+      { type: "BASE_INJOIGNABLE" as const, detail: "connexion locale indisponible" },
+    ].reduce(reduire, recuperation);
+    expect(echecFinal).toMatchObject({
+      etat: "FAILED",
+      tentativesRecuperation: BUDGET_RECUPERATION,
+      cause: "base-injoignable",
+    });
+  });
+
   it("base injoignable : une reprise bornée, puis échec terminal", () => {
     const m1 = joue([
       { type: "RUNTIME_PRESENT" },

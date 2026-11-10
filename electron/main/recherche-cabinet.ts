@@ -31,9 +31,9 @@ import { lookup } from "node:dns/promises";
 /** Nombre de recherches rapides avant de proposer « ce PC est le PC médecin ». */
 export const RECHERCHES_RAPIDES = 3;
 
-/** A doctor-specific delivery may initialize only a genuinely unconfigured PC. */
-export function initialiserHoteDocteur(marqueur: boolean, configuration: boolean, base: boolean, confiance: boolean): boolean {
-  return marqueur && !configuration && !base && !confiance;
+/** A doctor delivery initializes a fresh PC or repairs a missing task on its trusted host. */
+export function initialiserHoteDocteur(marqueur: boolean, configuration: boolean, base: boolean, confiance: boolean, tacheHotePresente = true): boolean {
+  return marqueur && ((!configuration && !base && !confiance) || (configuration && base && confiance && !tacheHotePresente));
 }
 
 /** Fenêtre d'écoute d'une découverte rapide, puis d'une découverte lente. */

@@ -136,6 +136,7 @@ export function reduire(m: EtatMachine, e: Evenement): EtatMachine {
 
     case "RUNNING_MIGRATIONS":
       if (e.type === "MIGRATIONS_A_JOUR") return { ...m, etat: "STARTING_BACKEND" };
+      if (e.type === "BASE_INJOIGNABLE") return echecOuRecuperation(m, "base-injoignable", e.detail);
       if (e.type === "MIGRATIONS_MANQUANTES") return echec(m, "migration-manquante", e.detail);
       if (e.type === "MIGRATION_ECHOUEE") return echec(m, "migration-echouee", e.detail);
       break;

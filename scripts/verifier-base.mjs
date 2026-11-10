@@ -44,7 +44,7 @@ import { fileURLToPath } from "node:url";
 
 import pg from "pg";
 
-import { garantirBaseLocale } from "./lib/base-locale.mjs";
+import { garantirBaseLocale, viseConteneurDev } from "./lib/base-locale.mjs";
 import { requiredAlexaMigrations } from "./lib/alexa-migrations.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -168,6 +168,31 @@ if (url === undefined || url.trim() === "") {
   );
 }
 
+// The packaged SYSTEM task may use only its bundled PostgreSQL 16 cluster.
+// Reject stale development URLs before creating a client, starting Docker,
+// or attempting any network connection. Never print the URL.
+if (process.env["MINDCARE_ELECTRON_ENV"] === "production") {
+  let targetIsMindCarePostgres16 = false;
+  try {
+    const parsed = new URL(url);
+    targetIsMindCarePostgres16 =
+      (parsed.protocol === "postgresql:" || parsed.protocol === "postgres:") &&
+      parsed.hostname === "127.0.0.1" &&
+      parsed.port === "54333" &&
+      parsed.pathname === "/mindcare" &&
+      parsed.search === "" &&
+      parsed.hash === "";
+  } catch {
+    // A malformed URL gets the same sanitized refusal.
+  }
+  if (!targetIsMindCarePostgres16) {
+    refuser(
+      "Configuration PostgreSQL invalide pour le serveur packagé.",
+      "Cible requise : PostgreSQL 16 local sur 127.0.0.1:54333/mindcare. L'URL est masquée.",
+    );
+  }
+}
+
 let attendues;
 try {
   attendues = requiredAlexaMigrations(readdirSync(path.join(RACINE, "supabase", "migrations")),process.env.ALEXA_NATIVE_AGENT_ENABLED==="1")
@@ -208,18 +233,6 @@ const client = new pg.Client({ connectionString: url, connectionTimeoutMillis: 5
  *   3. une erreur PostgreSQL (rôle, mot de passe, base absente) est un
  *      refus ferme immédiat : attendre ne réparerait rien.
  */
-function viseConteneurDev(u) {
-  try {
-    const parsed = new URL(u);
-    return (
-      (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost") &&
-      parsed.port === "55441"
-    );
-  } catch {
-    return false;
-  }
-}
-
 async function connecterAvecAttente() {
   if (!SKIP_DB_WAIT && viseConteneurDev(url)) {
     const garantie = await garantirBaseLocale(url);

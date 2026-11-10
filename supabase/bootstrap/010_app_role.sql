@@ -109,6 +109,9 @@ BEGIN
     -- être nommé quelque part — c'est la contrepartie assumée de NOINHERIT.
     GRANT USAGE ON SCHEMA auth TO mindcare_app;
     GRANT EXECUTE ON FUNCTION auth.verify_password(text, text) TO mindcare_app;
+    IF to_regprocedure('auth.verify_login(text,text)') IS NOT NULL THEN
+      GRANT EXECUTE ON FUNCTION auth.verify_login(text, text) TO mindcare_app;
+    END IF;
     GRANT EXECUTE ON FUNCTION auth.create_session(uuid, bytea) TO mindcare_app;
     GRANT EXECUTE ON FUNCTION auth.resolve_session(bytea)      TO mindcare_app;
     GRANT EXECUTE ON FUNCTION auth.destroy_session(bytea)      TO mindcare_app;
@@ -217,6 +220,11 @@ BEGIN
       RAISE EXCEPTION
         'mindcare_app ne peut pas franchir les portes d''authentification.'
         USING HINT = 'Aucune connexion ne serait possible : permission denied for schema auth.';
+    END IF;
+
+    IF to_regprocedure('auth.verify_login(text,text)') IS NOT NULL
+       AND NOT has_function_privilege('mindcare_app', 'auth.verify_login(text,text)', 'EXECUTE') THEN
+      RAISE EXCEPTION 'mindcare_app ne peut pas utiliser la connexion par identifiant.';
     END IF;
 
     -- Et il ne doit toujours pas voir ce qu''elles protègent.

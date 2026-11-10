@@ -86,7 +86,10 @@ export async function demarrerProxyCabinet(options: OptionsProxyCabinet): Promis
       reponse.pipe(sortant);
     });
     // Un SSE actif renouvelle le délai d'inactivité. Aucun tampon de contenu.
-    interne.setTimeout(120_000, () => interne.destroy(new Error("upstream-timeout")));
+    // Alexa inference may stay silent on a slow computer.
+    const voixLocale = ["/api/jarvis/jarvis-voice-out", "/api/jarvis/jarvis-voice-in", "/api/jarvis/jarvis-wake"].includes(pathname);
+    const delaiAmont = pathname === "/api/alexa/turn" ? 540_000 : voixLocale ? 330_000 : 120_000;
+    interne.setTimeout(delaiAmont, () => interne.destroy(new Error("upstream-timeout")));
     interne.on("error", () => { if (!sortant.headersSent && !sortant.destroyed) refuser(503); else sortant.destroy(); });
     entrant.on("aborted", () => interne.destroy());
     entrant.on("error", () => interne.destroy());

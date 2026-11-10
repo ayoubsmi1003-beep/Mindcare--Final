@@ -90,17 +90,24 @@ describe("verifier-base.mjs — la panne LM54.3 ne peut plus se reproduire", () 
     expect(r.sortie + r.erreur).not.toContain("degraded");
   });
 
-  it("base injoignable (cible dev mc-p3) → le message nomme mc-p3 et Docker", async () => {
-    // Le conseil suit la CIBLE : une URL sur 127.0.0.1:55441 parle au
-    // conteneur de développement — c'est LUI que le message doit nommer.
+  it("classifies the development URL without connecting to it", async () => {
+    const bl = await import(path.join(RACINE, "scripts", "lib", "base-locale.mjs"));
+    expect(bl.viseConteneurDev(URL_MORTE_DEV)).toBe(true);
+    expect(bl.viseConteneurDev(URL_MORTE)).toBe(false);
+  });
+
+  it("rejects a development target in packaged mode before network or Docker", async () => {
     const r = await executerScript({
       MINDCARE_DATABASE_URL: URL_MORTE_DEV,
+      MINDCARE_ELECTRON_ENV: "production",
       MINDCARE_SKIP_DB_WAIT: "1",
     });
     expect(r.code).toBe(1);
     const texte = r.sortie + r.erreur;
-    expect(texte).toContain("mc-p3");
-    expect(texte).toContain("Docker");
+    expect(texte).toContain("Configuration PostgreSQL invalide pour le serveur packagé");
+    expect(texte).toContain("127.0.0.1:54333/mindcare");
+    expect(texte).not.toContain("mc-p3");
+    expect(texte).not.toContain("Docker");
   });
 
   it("base injoignable (cible service Windows du paquet) → le message nomme le service, PAS Docker", async () => {

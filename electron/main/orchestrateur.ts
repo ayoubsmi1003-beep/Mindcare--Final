@@ -33,6 +33,12 @@ import {
   versionCluster,
 } from "./pg-cluster.js";
 import { urlDepart, PORT_BACKEND } from "./config.js";
+import {
+  cibleBasePostgresProductionValide,
+  HOTE_POSTGRES_CABINET,
+  NOM_BASE_CABINET,
+  PORT_POSTGRES_CABINET,
+} from "./cible-base.js";
 import { etatInitial, reduire, type CauseEchec, type Etat, type EtatMachine } from "./etat-demarrage.js";
 import {
   avecFichierMotDePasseTemporaire,
@@ -47,9 +53,9 @@ import { arreterBackend, observerSortieBackend } from "./processus-backend.js";
 
 // ── Constantes packagées ────────────────────────────────────────────────────
 
-export const PORT_PG = 54333;
-export const HOTE_PG = "127.0.0.1";
-export const NOM_BASE = "mindcare";
+export const PORT_PG = PORT_POSTGRES_CABINET;
+export const HOTE_PG = HOTE_POSTGRES_CABINET;
+export const NOM_BASE = NOM_BASE_CABINET;
 export const SUPER_UTILISATEUR = "postgres";
 export const BUDGET_PG_MS = 30_000;
 // Measured cold Windows start: 46.1 s; bounded health/readiness checks remain.
@@ -295,6 +301,17 @@ async function sonderPreparation(origine: string, timeoutMs = 5000): Promise<boo
   }
 }
 
+/** Attend que la page réponde après un démarrage froid, sans relancer le serveur. */
+export async function attendrePreparation(origine: string, budgetMs: number, signal?: AbortSignal): Promise<boolean> {
+  const echeance = Date.now() + budgetMs;
+  while (Date.now() < echeance && !signal?.aborted) {
+    const restant = echeance - Date.now();
+    if (await sonderPreparation(origine, Math.max(1, Math.min(5000, restant)))) return true;
+    if (signal?.aborted || Date.now() >= echeance) break;
+    await new Promise((resolve) => setTimeout(resolve, Math.min(1000, Math.max(0, echeance - Date.now()))));
+  }
+  return false;
+}
 // ── Vérification migrations (comme verifier-base.mjs, via psql empaqueté) ────
 //
 // ⚠️ PAS DE PILOTE `pg` DANS LE PROCESSUS PRINCIPAL — TROUVÉ PAR ÉCHEC RÉEL
@@ -350,6 +367,15 @@ export async function verifierMigrations(
   }
   if (url === undefined || url.trim() === "") {
     return { ok: false, detail: "MINDCARE_DATABASE_URL est absente." };
+  }
+  if (
+    process.env["MINDCARE_ELECTRON_ENV"] === "production" &&
+    !cibleBasePostgresProductionValide(url)
+  ) {
+    return {
+      ok: false,
+      detail: "La configuration PostgreSQL du serveur packagé doit cibler 127.0.0.1:54333/mindcare (URL masquée).",
+    };
   }
 
   // L'URL ne transite que décomposée en variables PG* du fils — jamais en
@@ -524,6 +550,16 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
   // Propager MINDCARE_DATABASE_URL si MINDCARE_ENV_FILE contient déjà la variable
   // (le serveur Next ne lit pas MINDCARE_ENV_FILE lui-même — voir src/server/db/pool.ts)
   const urlFichier = lireUrlDepuisFichier(fichierEnv);
+  const urlEffective = env["MINDCARE_DATABASE_URL"] ?? urlFichier;
+  if (
+    env["MINDCARE_ELECTRON_ENV"] === "production" &&
+    urlEffective !== undefined &&
+    !cibleBasePostgresProductionValide(urlEffective)
+  ) {
+    throw new Error(
+      "La configuration PostgreSQL du serveur packagé doit cibler 127.0.0.1:54333/mindcare (URL masquée).",
+    );
+  }
   if (urlFichier !== undefined && env["MINDCARE_DATABASE_URL"] === undefined) {
     (env as Record<string, string>)["MINDCARE_DATABASE_URL"] = urlFichier;
   }
@@ -797,11 +833,7 @@ export async function orchestrerDemarrage(
               // Par défaut, toute anomalie de schéma → migration-echouee (refus de démarrer sur schéma partiel)
               // Sauf si base injoignable → mapper en base-injoignable pour RECOVERY
               if (d.toLowerCase().includes("ne répond pas") || d.toLowerCase().includes("ne repond pas")) {
-                const base: EtatMachine = { etat: "RUNNING_MIGRATIONS", tentativesRecuperation: machine.tentativesRecuperation };
-                machine = reduire(base, {
-                  type: "MIGRATION_ECHOUEE",
-                  detail: d,
-                });
+                machine = reduire(machine, { type: "BASE_INJOIGNABLE", detail: d });
               } else {
                 machine = reduire(machine, { type: "MIGRATION_ECHOUEE", detail: d });
               }
@@ -887,7 +919,7 @@ export async function orchestrerDemarrage(
           ok = await sonderSante(santeUrl, 3000);
         }
         if (ok) {
-          ok = await sonderPreparation(urlDepart());
+          ok = await attendrePreparation(urlDepart(), 60_000, signal);
         }
         if (ok) machine = reduire(machine, { type: "SANTE_OK" });
         else machine = reduire(machine, { type: "SANTE_ECHEC", detail: `GET ${santeUrl} → non-OK` });
