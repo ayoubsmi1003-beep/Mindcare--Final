@@ -2,7 +2,7 @@
  "campaign": "C201",
  "set": "cases",
  "casesSha256": "0a426352703b6fbf79616f8d9049068729da7a3852eec32c1c6ac7ecfcf66583",
- "oraclesSha256": "1b2dc884928d24903b33dec407205a2c47e0d912d41d0c48e6d22e60f706cadb",
+ "oraclesSha256": "8462d8c4f59d88ecfd4daac97ddf8ad15c80210a43d3831f5bdf2d3cd3d277b3",
  "databases": {
   "main": {
    "patients": 1558
