@@ -17,7 +17,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
   appliquées sur la base d'évaluation SEULEMENT, pas encore appelées par l'application.
 
 **En cours / à faire, dans l'ordre**
-1. C202 `base71` fait ; C270 `base` en cours dans `_eval-71bb162`. Rien d'autre sur le CPU pendant ces passes.
+1. C202 `base71` fait ; **C270 `base` faite : 105/270 tours** (patients 23/55, contexte 19/45, agenda 12/40, finance 14/35,
+   livres 28/80, variation 9/15) ; 128 tours passent par le modèle 1B (médiane 74 s), 19 réussis seulement — la cible de la
+   lecture par le sens. Livres : 203/204 passages mot pour mot. Rien d'autre sur le CPU pendant ces passes.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

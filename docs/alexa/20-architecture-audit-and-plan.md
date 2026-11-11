@@ -66,3 +66,26 @@ security and output; 218 says so. Not yet called by the application. Second revi
 ## 5. Novelty threshold of C270, corrected
 The plan set e5 cosine 0.92 as "same question". It flagged 186 of 330 new turns; reading the pairs, most were the same record
 section in other words or for another period. 0.97 was kept; every pair from 0.97 up (25) was reworded; none remains.
+
+## 6. C270 baseline on the unchanged code (`71bb162`, label `base`, 2026-11-11)
+**105 PASS / 163 FAIL / 1 BLOCKED / 1 not verified, of 270 turns** (cases: 84 of 233). Run alone on the i3 PC, 2 h 42 min in total.
+
+| Category | PASS / turns |
+|---|---:|
+| Patients | 23 / 55 |
+| Identité et contexte | 19 / 45 |
+| Agenda | 12 / 40 |
+| Finance et activité | 14 / 35 |
+| Livres | 28 / 80 |
+| Variation de formulation | 9 / 15 |
+
+- **The 1B model path is the main cause.** 128 turns reached the local model (median 74 s per turn); 19 of them pass, 8 of 87
+  outside books. Turns that never reach it take a median 0.9 s. This is what the meaning layer (§3) replaces for reads.
+- **Patient identity**: 41 turns read no patient or the wrong one. One turn answered about another patient (X003#2: after a
+  named other patient, a follow-up went back to the screen patient).
+- **Books**: 28/79 questions answered by the right passage; 204 passages shown, 203 word for word, 203/203 pages right. The
+  failures are retrieval (no passage 26, wrong passage 26) and 9 book questions sent to the model instead of the books.
+- **Naturalness** (notes, not in the verdict): question echoed 63, generic no-answer 37, raw template 27, internal token 7.
+- Latency: median 2.9 s, p95 138 s, worst 246 s.
+- Reporter fix found while reading this run: the count of model turns looked for a call the code never makes and printed 0; it
+  now reads the trace's model stage (`report-c270.mjs`). No case or verdict changed.

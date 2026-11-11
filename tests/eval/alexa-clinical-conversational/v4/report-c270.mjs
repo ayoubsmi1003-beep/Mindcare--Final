@@ -58,7 +58,8 @@ for (const item of spec) {
     bump(byLang, turn.lang ?? "?", row.verdict); bump(byForm, turn.form ?? "?", row.verdict); bump(byDomainTurns, item.domain, row.verdict);
     if (row.verdict !== "BLOCKED") { judged++; for (const [key, pattern] of Object.entries(DIMENSIONS)) if (row.reasons.some((reason) => pattern.test(reason))) dimFails[key]++; }
     for (const note of row.notes ?? []) { if (note.startsWith("nat:")) quality[note.slice(4)] = (quality[note.slice(4)] ?? 0) + 1; if (note === "route-unobserved") unobserved++; }
-    if ((row.calls ?? []).includes("declare_request")) modelTurns++;
+    // A turn reached the local model when its trace holds a model stage (tool selection, intent choice).
+    if ((row.trace?.codes ?? []).some((c) => c.stage === "model")) modelTurns++;
     times.push(row.ms);
     for (const reason of row.reasons) { const key = reason.replace(/:.*/u, ""); reasons[key] = (reasons[key] ?? 0) + 1; }
     for (const quote of row.quoteChecks ?? []) {
