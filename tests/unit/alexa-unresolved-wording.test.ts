@@ -15,7 +15,7 @@ describe("what an unanswered part says to the doctor", () => {
   });
   it("repeats only the doctor's own words, never a code the model produced", () => {
     expect(withDoctorsWords(UNSUPPORTED, ["email:missing"], "J'ai oublié où on en était avec lui")).toBe(UNSUPPORTED);
-    expect(withDoctorsWords(UNSUPPORTED, ["nadir_mazouni"], "Ça remonte à quand, le suivi de NADJAT MAZOUNI ?")).toBe(UNSUPPORTED);
+    expect(withDoctorsWords(UNSUPPORTED, ["samir_belkacem"], "Ça remonte à quand, le suivi de SAMIRA BELKACEM ?")).toBe(UNSUPPORTED);
     expect(withDoctorsWords(UNSUPPORTED, ["sans email"], "Liste les patients sans email")).toBe(`${UNSUPPORTED} sans email`);
   });
 });

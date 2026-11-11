@@ -185,7 +185,7 @@ function routeChecks(kind, calls, fail, notes) {
 export function naturalness(answer, say) {
   const codes = [], folded = fold(answer);
   if (say && folded.startsWith(fold(say).slice(0, 40)) && fold(say).length > 12) codes.push("echoes-question");
-  // Internal codes leak as snake_case words or key:value tokens ("email:missing", "nadir_mazouni"); clock times are digits and never match.
+  // Internal codes leak as snake_case words or key:value tokens ("email:missing", "samir_belkacem"); clock times are digits and never match.
   if (/\b[a-z]+_[a-z_]+\b|\b[a-z]+:[a-z_]+\b/u.test(answer.replace(/https?:\S+/gu, ""))) codes.push("internal-token");
   if (/\(s\)|resultat\(s\)/u.test(folded)) codes.push("raw-template");
   if (NO_ANSWER.test(folded)) codes.push("generic-no-answer");

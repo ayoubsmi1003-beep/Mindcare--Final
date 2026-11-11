@@ -18,7 +18,7 @@ passages (`knowledge-references.ts`), never model text.
 | Intent is a word list; unknown wording falls to the slow 1B loop | frames, `agent-loop.ts` | 59 of 98 failing turns |
 | Follow-up state readable only on an identical `appContext` string | `conversation-state.ts:72` | follow-ups lost after a page change |
 | A name the parser misses falls back to the screen patient | `patient-mention.ts` stop list | 2 cross-patient reads |
-| The question is echoed and model tokens leak (`email:missing`, `nadir_mazouni`) | `agent-loop.ts` unresolved parts | visible in many failed answers |
+| The question is echoed and model tokens leak (`email:missing`, `samir_belkacem`) | `agent-loop.ts` unresolved parts | visible in many failed answers |
 | Lexical book gate needs EVERY word, no stemming | `123_knowledge_lexical_reader.sql` | one stray word = no passage |
 | Book vectors built from 128 tokens, no heading | recipe `e5-base` | French→English misses |
 | Glossary alias check disabled expansion on any English token | `terminologie-bilingue.ts:649` | expansion silently off |
