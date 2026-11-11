@@ -120,3 +120,29 @@ On the catalogue's 168 development paraphrases (`MINDCARE_SEMANTIC_CALIBRATION=1
   into "none" (2 right answers became "none", the misread negative too); the agreement run itself gave 80 / 1 / 87 / 1.
 - **Optimistic by construction:** e5's centroids are built from these same paraphrases. The real measure is C270, which the
   catalogue never saw. The layer stays behind `ALEXA_MEANING=1` until C270 has measured it.
+
+## 9. C270 `p2`: book routing + reading by meaning (`ALEXA_MEANING=1`, `cd741a0`, 2026-11-11)
+Same frozen 270 turns, same eval DB, run alone on the i3.
+| | base | p2 |
+|---|---:|---:|
+| Turns passed | 105 | **118** |
+| Patients / contexte / agenda / finance / livres / variation | 23 / 19 / 12 / 14 / 28 / 9 | 25 / 21 / 12 / 16 / 35 / 9 |
+| Turns that reached the 1B planner | 128 | 106 |
+| Latency median / p95 | 2.9 s / 138 s | 2.0 s / 141 s |
+| Wrong or missing patient | 41 | 36 |
+| Routing / tools failing | 15 | 8 |
+| Book questions answered by the right passage | 28 / 79 | 35 / 79 |
+| Passages shown, word for word | 203 / 204 | 245 / 246 |
+| Echoed question / internal token in the answer | 63 / 7 | 0 / 0 |
+- **14 turns gained, 1 lost.** Books gave 7 (routing, §7); the meaning layer 7 (an age, allergies, "on le revoit quand",
+  "plus court", "il s'agit de quel patient", two outstanding-balance wordings).
+- **The meaning layer executed 13 reads.** 7 passed. One was the wrong intent and cost a turn that passed before: "combien
+  a-t-il réglé" read as the patient's consultation count. No catalogue intent covers one patient's payments, so a patient read
+  is now refused when the question carries a money word (`PATIENT_MONEY`, unit test). One more was a near miss ("ma matinée
+  est chargée" → free slots, not a count; it failed in `base` too). The other 4 chose the right intent and failed on the patient
+  (context, Phase 3). 12 more turns were shortlisted but needed a patient or a period nobody gave, and went on as before.
+- **A book question reached the layer**: a criteria request with no question word ("<trouble> critères diagnostic") was
+  shortlisted as the patient's diagnoses; with a patient on screen it would have read the record. "critères"/"définition" with a
+  book topic now count as a book question anywhere in the sentence, not only as the first word.
+- Remaining failures are mostly the patient (36), facts the deterministic readers do not give yet (99), and book retrieval (30
+  "no relevant passage", 30 "passage does not answer"): Phases 3 and 5.

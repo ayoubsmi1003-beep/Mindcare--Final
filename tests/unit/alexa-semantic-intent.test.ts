@@ -37,6 +37,13 @@ describe("reading a request by meaning", () => {
     expect(await intentByMeaning(text, toyEmbed, async () => { throw new Error("LocalModelTimeout"); }, signal)).toBeNull();
     expect(await intentByMeaning(text, async () => null, pick("agenda.count"), signal)).toBeNull();
   });
+  it("never reads a question about a patient's money as another patient read", async () => {
+    const money = "Combien de dinars nous a-t-elle donnés depuis le début ?";
+    const count = byId("patient.count").examples.map(maskNames)[0]!;
+    const embed: Embed = async (text) => toyEmbed(text === money ? count : text);
+    expect((await shortlistIntents(money, embed))![0]!.id).toBe("patient.count");
+    expect(await intentByMeaning(money, embed, async () => "patient.count", signal)).toBeNull();
+  });
 });
 
 describe("writing the closed question for a chosen intent", () => {

@@ -97,11 +97,15 @@ export const chooseWithLocalModel: Choose = async (text, shortlist, signal) => {
  * development paraphrases (doc 20 §8): agreement gave 80 right and 1 wrong of 168; any of the 8 gave 85 right and 30 wrong.
  * The model sees all 8, so its choice is not steered by the order.
  */
+const PATIENT_MONEY = /\b(?:regl[ea]\w*|payee?s?|payer|paiements?|argent|montants?|dinars?|soldes?|dettes?|impaye\w*|encaiss\w*|factur\w*)\b/u;
+
 export async function intentByMeaning(text: string, embed: Embed, choose: Choose, signal: AbortSignal): Promise<CatalogueIntent | null> {
   // A question for the books is never a record read, whoever calls this (measured: "dose maximale de sertraline" → treatments).
   if (isClinicalKnowledgeQuestion(text)) return null;
   const shortlist = await shortlistIntents(text, embed);
   if (!shortlist?.length) return null;
+  // No catalogue intent reads one patient's payments: "combien a-t-il réglé" must not become his consultation count (C270 p2).
+  if (shortlist[0]!.target.family === "patient" && PATIENT_MONEY.test(text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase())) return null;
   const id = await choose(text, shortlist, signal).catch(() => null);
   return id !== null && id === shortlist[0]!.id ? shortlist[0]! : null;
 }

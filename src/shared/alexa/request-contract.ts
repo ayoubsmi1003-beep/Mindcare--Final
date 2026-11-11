@@ -509,7 +509,7 @@ export function isClinicalKnowledgeQuestion(text:string):boolean{
  if((mentionsMedication(plain)||mentionsBookTopic(plain))&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
  const bookTopic=mentionsBookTopic(text);
  // "Donépézil, dose de départ ?": a topic the books treat, asked as a question, needs no question word.
- if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
+ if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$|\b(?:criteres?|definition)\b/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
  return CLINICAL_TOPIC.test(plain)||((CLINICAL_STEMS.test(plain)||bookTopic)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
 }
 /** Psychiatric and pharmacological stems the closed topic list below misses: a question about one of them belongs to the books, never to the general model. */

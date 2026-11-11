@@ -29,6 +29,7 @@ describe("a question about a book topic goes to the books, a question about a pe
     "Le lofexidine a-t-il un intérêt dans le sevrage des opiacés ?",
     "Comment le trouble schizotypique est-il décrit ?",
     "Critères du mutisme sélectif",
+    "pyromanie définition et critères",
   ])("books: %s", (text) => expect(isClinicalKnowledgeQuestion(text)).toBe(true));
   it.each([
     "Est-ce qu'il prend de la tiagabine ?",
