@@ -57,11 +57,12 @@ const requestedCount = (plain: string) => {
 /** What the question asks about the patient, from its concepts only. Null when it asks about no patient section. */
 export function classifyPatientQuestion(text: string): PatientQuestion | null {
   const p = fold(text);
-  if (WHO.test(p) || /\b(?:profil|identite)\b/u.test(p)) return { section: "identity" };
+  if (WHO.test(p) || /\b(?:profil|identite|age)\b/u.test(p)) return { section: "identity" };
   if (SCALES.test(p)) return { section: "scales" };
   if (DIAG.test(p)) return { section: "diagnoses" };
   if (DOCS.test(p)) return { section: "documents" };
-  if (NEXT.test(p) && /\b(?:rendez-vous|rdv|seance|consultation|visite|revient|reviendra|reconvoqu\w*|revoir)\b/u.test(p)) return { section: "nextappt" };
+  // Any word of a visit ("la prochaine fois qu'il vient", "son prochain passage", "attendu quand") names the next appointment.
+  if (NEXT.test(p) && (VISIT.test(p) || /\b(?:revien\w*|repass\w*|reconvoqu\w*|attendue?s?)\b/u.test(p))) return { section: "nextappt" };
   // "son traitement précédent", "a-t-il changé de traitement", "il prenait quoi avant": the recorded changes, not the current state.
   if (TREAT.test(p) && (PREVIOUS.test(p) || CHANGED.test(p))) return { section: "treatchanges" };
   if (TREAT.test(p)) return { section: "treatments" };
@@ -140,7 +141,9 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
   const names = runs.filter(run => run.words.length >= 2);
   if (names.length > 1 || runs.some(run => run.words.length > 4)) return null;
   const name = names[0];
-  if (name) return runs.length === 1 ? { kind: "named", name: name.words.join(" ") } : null;
+  // Beside one full name, a lone lower-case word ("a consulté", "les passages") or the capitalised first word of the sentence is
+  // vocabulary the lists lack, not a second name. The patient search still has to find the name (caller).
+  if (name) return runs.every((run) => run === name || (run.words.length === 1 && (!run.upper || run.before === ""))) ? { kind: "named", name: name.words.join(" ") } : null;
   // One unknown word alone: after "de", "sur", "chez"... or capitalised it is a first name. It is passed on as a name; the patient search
   // then finds one patient (read) or several (the doctor is asked which), and finds none for vocabulary the lists lack (caller falls back).
   const firstNames = runs.filter(run => run.upper || /^(?:de|du|des|d|sur|chez|pour|a|avec|concernant|propos)$/u.test(run.before));

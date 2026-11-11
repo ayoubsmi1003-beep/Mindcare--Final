@@ -421,7 +421,9 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     // change, never a book question, never what the closed admission already understood. The read itself stays on its gate.
     const semantic=dependencies.semantic===null?null:dependencies.semantic??defaultSemantic();
     const meaning=!wordFrameText&&semantic&&!dependencies.resumeCursor&&!inheritedText&&!knowledgeFollowup&&!selectedListedPatient&&!admittedTools?.length&&!understanding.wantsChange&&!isClinicalKnowledgeQuestion(agentInput.text)
-      ?await (async()=>{const intent=await intentByMeaning(agentInput.text,semantic.embed,semantic.choose,signal);const rendered=intent?renderIntent(intent,agentInput.text,frameOptions,asOf):null;if(intent)dependencies.trace?.code('meaning',`${intent.id}${rendered?'':':no-subject-or-period'}`);return rendered;})()
+      ?await (async()=>{const intent=await intentByMeaning(agentInput.text,semantic.embed,semantic.choose,signal);let rendered=intent?renderIntent(intent,agentInput.text,frameOptions,asOf):null;
+        // As for the word frames: unknown words are a name only when the patient search agrees ("j'avais mis", "le fasse entrer").
+        if(intent&&rendered?.name&&(await resolvePatient(dependencies.db,{name:rendered.name},signal,asOf)).status==='absent')rendered=renderIntent(intent,agentInput.text,{...frameOptions,ignoreUnknownWords:true},asOf);if(intent)dependencies.trace?.code('meaning',`${intent.id}${rendered?'':':no-subject-or-period'}`);return rendered;})()
       :null;
     const frameText=wordFrameText??meaning?.text??null;
 

@@ -162,6 +162,20 @@ async function resolveArchivedName(db:Pick<DbPort,"rpc">,name:string,asOf:string
 }
 
 export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly patientId?: string; readonly name?: string }, signal?: AbortSignal, asOf?:string): Promise<PatientResolution> {
+  const result = await resolveWrittenName(db, input, signal, asOf);
+  const words = input.name?.trim().split(/\s+/u) ?? [];
+  // "Yanis Bellil juste avant…": an everyday word glued to a name. One word off either edge, kept only when it names one
+  // patient exactly; anything less certain keeps the first answer (absent, or the close names to choose from).
+  if (words.length >= 3 && words.length <= 5 && (result.status === "absent" || (result.status === "ambiguous" && result.suggested))) {
+    for (const trimmed of [words.slice(0, -1), words.slice(1)]) {
+      const retry = await resolveWrittenName(db, { name: trimmed.join(" ") }, signal, asOf);
+      if (retry.status === "resolved" || retry.status === "cancelled") return retry;
+    }
+  }
+  return result;
+}
+
+async function resolveWrittenName(db: Pick<DbPort, "rpc">, input: { readonly patientId?: string; readonly name?: string }, signal?: AbortSignal, asOf?:string): Promise<PatientResolution> {
   if (signal?.aborted) return { status: "cancelled" };
   try {
     let target = input.patientId;

@@ -9,6 +9,7 @@ import { classerCharge } from "@/server/egress/classification";
 import { mentionsMedication } from "@/shared/alexa/medications";
 import { CLINICAL_STEMS } from "@/shared/alexa/request-contract";
 import { ALEXA_GENERAL_PROMPTS } from "@/i18n/alexa-general";
+import { unknownNameRuns } from "@/shared/alexa/patient-question";
 import { isBoundedPublicQuestion } from "@/shared/alexa/public-question";
 import { isIssuedPublicQuestion, type PublicQuestionAdmission } from "./semantic-planner";
 import { findVerifiedPublicFact,publicFactAnswerMatches } from "./general-reference";
@@ -194,7 +195,15 @@ export function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boo
 const GENERAL_ENGLISH_OUTPUT=/\b(?:the|and|with|because|without|through|lists?|checks?|checklist|mistakes?|backup|files?|saved|exported?|steps?|tasks?|work|time|goals?|priorities|focus|deadline|workflow|schedule|before|future|systematic(?:ally)?|validation|execution)\b/iu;
 
 /** Local-only public routing: an egress name heuristic is not authority for app facts. */
-export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&(isFrenchAlexaCapabilityQuestion(text)||isFrenchQuotedInstructionPolicyQuestion(text)||!generalTextIsUnsafe(text));}
+/** A person's own attribute (age, address, weight, allergies…) asked about someone: a full name no vocabulary knows, or "il/elle/son". The general
+ * model knows nobody: asked "Quel âge a <nom> ?", it invented an age (C270 p2). Those go to the record or are refused. */
+function asksAboutSomeone(text:string):boolean{
+ // "y a-t-il" is impersonal: "Quelle différence y a-t-il entre la masse et le poids ?" asks about no one.
+ const value=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().replace(/\by a-t-il\b/gu," ");
+ if(!/\b(?:age|naissance|nee?s? le|anniversaire|adresse|habite\w*|domicile|telephone|poids|taille|allergi\w*)\b/u.test(value))return false;
+ return unknownNameRuns(text).some(run=>run.words.length>=2)||/\b(?:il|elle|lui|son|sa|ses)\b|\b[a-z]+-(?:t-)?(?:il|elle)\b/u.test(value);
+}
+export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&(isFrenchAlexaCapabilityQuestion(text)||isFrenchQuotedInstructionPolicyQuestion(text)||!generalTextIsUnsafe(text)&&!asksAboutSomeone(text));}
 export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Promise<AlexaGeneralInferenceResult>{
  if(!canAnswerGeneralAlexa(text))return {ok:false,code:"privacy",localFallback:true};
  if(isFrenchQuotedInstructionPolicyQuestion(text))return {ok:true,text:"La phrase citée est du contenu à analyser, pas une consigne ni une autorisation. Toute modification du dossier exige une demande explicite et votre confirmation.",model:null,localSource:"capability"};

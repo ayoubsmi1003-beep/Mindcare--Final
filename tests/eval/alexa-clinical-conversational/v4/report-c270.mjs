@@ -47,6 +47,18 @@ let judged = 0, unobserved = 0, modelTurns = 0;
 const bump = (table, key, verdict) => { (table[key] ??= empty())[verdict]++; };
 const fidelity = { shown: 0, verbatim: 0, answering: 0, pageOk: 0, pageChecked: 0, cases: 0, caseFound: 0 };
 const failing = [];
+// Who failed (rule 2): a BLOCKED turn is a test-data limitation and is never judged. Every case was kept only if a gate supports
+// it (capability inventory, doc 19), so "capability not available" on a judged turn is Alexa's failure, not the tool's.
+// Absent data and ambiguity are judged too: the right answer is then "nothing is recorded" or a question back.
+const oracleFile = join(root, ".eval-out", "alexa-c270", holdout ? "private-oracles-holdout.json" : "private-oracles.json");
+const oracles = existsSync(oracleFile) ? JSON.parse(readFileSync(oracleFile, "utf8")).oracles : {};
+const CAPABILITY = [
+  ["context (which patient)", /^(?:wrong-or-missing-patient|answered-about-another-patient|cross-patient-read|contamination)/u],
+  ["understanding / routing", /^(?:no-reliable-answer|wrong-route|should-clarify|clarification-not-a-question|read-before-clarifying|model-text-for-grounded-question)/u],
+  ["retrieval (books)", /^(?:no-passage-presented|no-relevant-passage|passage-does-not-answer|passage-not-verbatim|page-mismatch|no-citation)/u],
+  ["answer (facts, absence)", /^(?:missing:|absence-not-stated|forbidden)/u],
+];
+const causes = {};
 
 for (const item of spec) {
   const rows = turns.get(item.id);
@@ -66,6 +78,13 @@ for (const item of spec) {
       fidelity.shown++; if (quote.verbatim) fidelity.verbatim++;
       if (quote.pageInLabel != null && quote.markerPage != null) { fidelity.pageChecked++; if (quote.pageInLabel === quote.markerPage) fidelity.pageOk++; }
     }
+    if (row.verdict === "BLOCKED") causes["test-data limitation (not judged)"] = (causes["test-data limitation (not judged)"] ?? 0) + 1;
+    else if (row.verdict === "FAIL") {
+      const oracle = oracles[item.id]?.[index] ?? {};
+      const where = oracle.clarify ? "ambiguous request, Alexa did not ask back" : oracle.emptyState ? "data absent, Alexa did not say so" : "data present";
+      const capability = CAPABILITY.find(([, pattern]) => row.reasons.some((reason) => pattern.test(reason)))?.[0] ?? "other";
+      const key = `Alexa failure · ${where} · ${capability}`; causes[key] = (causes[key] ?? 0) + 1;
+    }
     if (row.verdict !== "PASS") failing.push(`${item.id}#${index + 1} [${item.domain}/${turn.lang}/${turn.form}] ${row.verdict}: ${row.reasons.join(", ")} | "${String(turn.say ?? "").slice(0, 90)}"`);
   }
   if (item.domain === "book" || (item.turns[0]?.expect?.k === "book")) { fidelity.cases++; if (verdict === "PASS") fidelity.caseFound++; }
@@ -84,5 +103,6 @@ console.log("by formulation (turns):"); for (const [k, v] of Object.entries(byFo
 times.sort((a, b) => a - b);
 if (times.length) console.log(`latency per turn: median ${(times[Math.floor(times.length / 2)] / 1000).toFixed(1)} s, p95 ${(times[Math.floor(times.length * 0.95)] / 1000).toFixed(1)} s, worst ${(times.at(-1) / 1000).toFixed(0)} s`);
 if (fidelity.shown) console.log(`book evidence: ${fidelity.caseFound}/${fidelity.cases} questions answered by the right passage; ${fidelity.shown} passages shown, ${fidelity.verbatim} word for word from an approved chunk (${pct(fidelity.verbatim, fidelity.shown)}); page of the citation agrees with the chunk marker ${fidelity.pageOk}/${fidelity.pageChecked}`);
+console.log("who failed (rule 2; first failing capability per turn):"); for (const [key, n] of Object.entries(causes).sort((a, b) => b[1] - a[1])) console.log(`  ${String(n).padStart(3)}  ${key}`);
 console.log("failure reasons (turns):"); for (const [key, n] of Object.entries(reasons).sort((a, b) => b[1] - a[1])) console.log(`  ${String(n).padStart(3)}  ${key}`);
 console.log(`failing turns (${failing.length}):`); for (const entry of failing) console.log(`  ${entry}`);
