@@ -31,6 +31,9 @@ describe("reading a request by meaning", () => {
     const listed = new Set((await shortlistIntents(text, toyEmbed))!.map((intent) => intent.id));
     const outside = INTENT_CATALOGUE.find((entry) => !listed.has(entry.id))!.id;
     expect(await intentByMeaning(text, toyEmbed, pick(outside), signal)).toBeNull();
+    // A listed intent that is not e5's closest is refused too: the two judges must agree.
+    const second = (await shortlistIntents(text, toyEmbed))![1]!.id;
+    expect(await intentByMeaning(text, toyEmbed, pick(second), signal)).toBeNull();
     expect(await intentByMeaning(text, toyEmbed, async () => { throw new Error("LocalModelTimeout"); }, signal)).toBeNull();
     expect(await intentByMeaning(text, async () => null, pick("agenda.count"), signal)).toBeNull();
   });

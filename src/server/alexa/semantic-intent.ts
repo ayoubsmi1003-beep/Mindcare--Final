@@ -19,6 +19,7 @@
 import { z } from "zod";
 import { INTENT_CATALOGUE, type CatalogueIntent } from "@/shared/alexa/intent-catalogue";
 import { readFamily, unknownNameRuns } from "@/shared/alexa/patient-question";
+import { isClinicalKnowledgeQuestion } from "@/shared/alexa/request-contract";
 import { intentChoicePrompt } from "@/i18n/alexa-agent";
 import { inferTextForTask } from "./inference/registry";
 
@@ -90,10 +91,17 @@ export const chooseWithLocalModel: Choose = async (text, shortlist, signal) => {
   return parsed.success && parsed.data.intent !== "none" ? parsed.data.intent : null;
 };
 
-/** The intent a request means, or null (then nothing changes for this turn). */
+/**
+ * The intent a request means, or null (then nothing changes for this turn).
+ * Two independent judges must agree: the model's choice counts only when it is also e5's closest intent. Measured on the
+ * development paraphrases (doc 20 §8): agreement gave 80 right and 1 wrong of 168; any of the 8 gave 85 right and 30 wrong.
+ * The model sees all 8, so its choice is not steered by the order.
+ */
 export async function intentByMeaning(text: string, embed: Embed, choose: Choose, signal: AbortSignal): Promise<CatalogueIntent | null> {
+  // A question for the books is never a record read, whoever calls this (measured: "dose maximale de sertraline" → treatments).
+  if (isClinicalKnowledgeQuestion(text)) return null;
   const shortlist = await shortlistIntents(text, embed);
   if (!shortlist?.length) return null;
   const id = await choose(text, shortlist, signal).catch(() => null);
-  return shortlist.find((intent) => intent.id === id) ?? null;
+  return id !== null && id === shortlist[0]!.id ? shortlist[0]! : null;
 }

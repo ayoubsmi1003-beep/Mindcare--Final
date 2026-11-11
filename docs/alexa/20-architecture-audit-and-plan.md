@@ -105,12 +105,18 @@ name. Result on the 28 baseline turns: 21 now routed to the books (4 before); th
 sous…") or a word no heading holds (thiamine). Record questions stay off the books (tests: `alexa-book-topics.test.ts`; all
 4,599 Alexa unit tests pass, the one failure is the pre-existing V8 manifest hash).
 
-## 8. Closed choice with the 1B model: calibrated, NOT enabled
-On the catalogue's 168 development paraphrases (`MINDCARE_SEMANTIC_CALIBRATION=1`), 14 s per choice on the i3:
-| Run | Shortlist holds the intent | Right | Wrong | "none" | Non-record questions misread (of 6) |
+## 8. Closed choice with the 1B model: three measured rounds
+On the catalogue's 168 development paraphrases (`MINDCARE_SEMANTIC_CALIBRATION=1`), local model on the i3:
+| Rule | Right | Wrong | "none" | Non-record questions misread (of 6) | s / choice |
 |---|---:|---:|---:|---:|---:|
-| e5 shortlist + model choice | 168 | 94 | 45 | 29 | 4 |
-A wrong closed read answers confidently about the wrong thing; 27 % is not acceptable, so `ALEXA_MEANING` stays off.
-30 of the 45 wrong choices crossed families (a patient question read as agenda or the reverse). The words decide that family
-without any model: `readFamily` (one person named or referred to → patient reads; a day, a period or "les patients" → practice;
-otherwise open) now narrows the shortlist. On the catalogue it files 152 examples, all in their own family, and leaves 16 open.
+| model picks any of e5's 8 closest | 94 | 45 | 29 | 4 | 14 |
+| + `readFamily`: only the family the words name | 85 | 30 | 53 | 1 | 7 |
+| + **the model must agree with e5's closest**; book questions refused by the layer itself | **78** | **1** | 89 | **0** | 7 |
+- 30 of the first round's 45 errors crossed families; `readFamily` (one person named or referred to → patient reads; a day, a
+  period or "les patients" → practice; otherwise open) decides that from the words. On the catalogue it files 152 examples, all
+  in their own family, and leaves 16 open.
+- Agreement of two independent judges is what removed the rest: alone, each is wrong far too often.
+- The last row is derived from the second-to-last run's logged choices plus the knowledge check, which can only turn an answer
+  into "none" (2 right answers became "none", the misread negative too); the agreement run itself gave 80 / 1 / 87 / 1.
+- **Optimistic by construction:** e5's centroids are built from these same paraphrases. The real measure is C270, which the
+  catalogue never saw. The layer stays behind `ALEXA_MEANING=1` until C270 has measured it.
