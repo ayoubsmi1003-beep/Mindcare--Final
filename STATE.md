@@ -17,10 +17,12 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
   appliquées sur la base d'évaluation SEULEMENT, pas encore appelées par l'application.
 
 **En cours / à faire, dans l'ordre**
-1. Rejeu C202 sur `71bb162` (worktree `_eval-71bb162`, label `base71`) — puis C270 `base` au même endroit. Rien d'autre sur le CPU pendant ces passes.
+1. C202 `base71` fait ; C270 `base` en cours dans `_eval-71bb162`. Rien d'autre sur le CPU pendant ces passes.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
-4. Contexte et isolation patient ; médicaments (migration 222 : champs d'arrêt) ; C270 finale ; H270 ; régressions.
+4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.
+   Reporté : exposer `stopped_reason`/`stopped_at` à Alexa — aucune base d'essai ne contient de traitement arrêté avec un motif, la migration ne serait pas mesurable.
+   Rejeu C202 sur `71bb162` (`base71`) : **119/200** (livres 22/35 ; passages 133/133 mot pour mot ; latence médiane 2 s, p95 245 s).
 
 ⚠️ Échecs unitaires préexistants (identiques sur `71bb162`) : manifeste V8 adversarial, `lecture-auto`, inventaire voix, `knowledge-stahl-chunker`.
 
