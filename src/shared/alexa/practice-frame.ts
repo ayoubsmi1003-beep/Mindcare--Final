@@ -1,4 +1,5 @@
 import { unknownNameRuns } from "./patient-question";
+import { relativeFrenchPeriod } from "./civil-period";
 
 /**
  * Everyday questions about the clinic's money and activity ("Combien avons-nous gagné hier ?", "Combien de patients avons-nous
@@ -72,8 +73,11 @@ export function activityQuestionFrame(text: string, asOf: string): string | null
   const p = fold(text), q = withoutBusy(p);
   if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || SESSION_PAID.test(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
   if (!ACTIVITY.test(p)) return null;
-  // "Patients suivis" and "jours les plus chargés" with no period speak of the current month.
-  const found = period(p, asOf) ?? { kind: "month" as const, phrase: "ce mois" };
+  // "Patients suivis" and "jours les plus chargés" with no period speak of the current month. A period this frame cannot write
+  // ("la semaine dernière", "l'an passé") is never replaced by the current month: the turn keeps its other routes.
+  const read = period(p, asOf);
+  if (!read && relativeFrenchPeriod(p, asOf)) return null;
+  const found = read ?? { kind: "month" as const, phrase: "ce mois" };
   if (found.kind === "day") return null;
   // This month against the last one: two calendar months, each read over its own days.
   if (COMPARE.test(p) && MONTH_NOW.test(p) && MONTH_LAST.test(p)) return "Montre-moi les statistiques de ce mois par rapport au mois dernier";

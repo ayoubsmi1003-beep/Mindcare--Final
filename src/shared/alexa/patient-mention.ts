@@ -12,6 +12,7 @@ const common = new Set([
   "naissance", "numero", "carte", "piece", "identite", "cni", "cin", "telephone", "telephones", "adresse", "adresses", "coordonnees", "sexe", "administratif", "administrative", "administratifs", "administratives",
   "selectionne", "selectionnee", "selectionnes", "selectionnees", "courant", "courante", "courants", "courantes", "actuel", "actuelle", "actuels", "actuellement", "precedent", "precedente", "recent", "recente", "cette", "semaine", "mois", "jour", "aujourd'hui", "hier", "demain", "aujourd’hui",
   "passe", "passee", "passes", "passees", "ancien", "ancienne", "anciens", "anciennes",
+  "avant-hier", "apres-demain", "trimestre", "trimestres", "semestre", "semestres",
   "avant", "apres", "depuis", "entre", "dans", "avec", "sans", "et", "pour", "chez", "de", "du", "en", "au", "a", "il", "elle", "par", "nom", "complet", "que", "qui", "restent", "reste", "restant", "attente", "encore", "matin", "matinee", "apres-midi", "aprem", "soir", "soiree", "journee", "creneau", "creneaux", "semaine", "annee", "voulais", "voulait", "plutot", "plutôt",
   "selon", "dsm", "livre", "livres", "reference", "references",
   "diagnostic", "diagnostics", "note", "notes", "cliniques", "symptome", "symptomes", "anxiete", "depression", "sommeil", "humeur", "dose", "posologie", "frequence",

@@ -2,6 +2,7 @@
 import {parsePatientMention} from "./patient-mention";
 import {mentionsMedication,medicationNames} from "./medications";
 import {mentionsBookTopic} from "./book-topics";
+import {relativeFrenchPeriod} from "./civil-period";
 import type {RequestPart,SupportedCondition} from './agent';
 const fold=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLocaleLowerCase();
 export function isFrenchAlexaCapabilityQuestion(text:string):boolean{
@@ -31,6 +32,8 @@ export function frenchFinanceRecordState(text:string):'all'|'pending'|'collected
  return pending&&collected?'all':pending?'pending':collected?'collected':'all';
 }
 /** One explicit civil date only; comparisons, open ranges and invalid dates stay unresolved. */
+/** "la dernière séance", "les 3 dernières consultations", "la prochaine fois": a rank among visits, not a period of the calendar. */
+const ORDINAL_VISIT=/\b(?:\d+ )?(?:avant-)?(?:derni\w*|preced\w*|prochain\w*|premi\w*)\s+(?:seances?|consultations?|visites?|fois|rendez-vous|rdv|notes?|entretiens?|passages?)\b/gu;
 export function explicitFrenchDayRange(text:string,asOf?:string):{from:string;to:string}|null{
  const plain=fold(text);
  if(hasExplicitClockRestriction(text)||/\b(?:depuis|avant|apres|jusqu\w*|entre|a partir)\b/u.test(plain))return null;
@@ -554,7 +557,7 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const dateRange=explicitFrenchDateRange(periodText,asOf);
  const monthRange=explicitFrenchMonthRange(periodText);
  const dayRange=explicitFrenchDayRange(periodText,asOf);
- const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
+ const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|trimestres?|semestres?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText.replace(ORDINAL_VISIT,' '));
  const chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain);
  // Exact sentences only, tested before the book and record rules. Any other wording keeps its usual route:
  // a name, a topic, a filter, a second request or a write can't be mistaken for one of these reads.
@@ -604,7 +607,7 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  if(document&&!knowledge){
   const documentKind:FrenchReadTarget['documentKind']=/\bcertificats?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'certificat_medical':/\bordonn?ances?\b/u.test(plain)?'ordonnance':/\bjustificati(?:on|ons|f|fs)\b/u.test(plain)?'justification':/\bsuivis?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'suivi_medical':/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':undefined;
   const documentStatus:FrenchReadTarget['documentStatus']=/\b(?:emis(?:e|es)?|delivre(?:e|es)?s?|signe(?:e|es)?s?)\b/u.test(plain)?'issued':/\b(?:brouillons?|non signes?)\b/u.test(plain)?'draft':undefined;
-  add({tool:'query_documents',unboundedPeriod,...(dateRange??dayRange??{}),documentAllKinds:!documentKind,...(documentKind?{documentKind}:{}),...(documentStatus?{documentStatus}:{})});
+  add({tool:'query_documents',unboundedPeriod,...(dateRange??dayRange??relativeFrenchPeriod(periodText,asOf)??{}),documentAllKinds:!documentKind,...(documentKind?{documentKind}:{}),...(documentStatus?{documentStatus}:{})});
  }
  const consultationText=notes&&noteQuery?plain.replace(fold(noteQuery),''):plain;
  const requestedConsultationStatus=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*)\b/u.test(consultationText)?'closed' as const:/\b(?:ouvert\w*|en cours)\b/u.test(consultationText)?'open' as const:undefined;
@@ -616,7 +619,7 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
   const detail=/\b(?:details?|duree|analys\w*)\b/u.test(plain);
   const consultationMode:FrenchReadTarget['consultationMode']=detail?undefined:monthlyComparison?'count':/\b(?:liste\w*|historique)\b/u.test(plain)?'list':/\b(?:combien|nombre|total|compte|comptabilise)\b/u.test(plain)?'count':'list';
   const consultationStatus:FrenchReadTarget['consultationStatus']=detail?undefined:/\b(?:non signe\w*|sans signature)\b/u.test(plain)?'unsigned':requestedConsultationStatus??'all';
-  const consultationRange=monthlyComparison?null:dateRange??dayRange??explicitFrenchMonthRange(periodText)??explicitFrenchSingleMonthRange(periodText,asOf)??explicitFrenchCurrentMonthRange(text,asOf);
+  const consultationRange=monthlyComparison?null:dateRange??dayRange??explicitFrenchMonthRange(periodText)??explicitFrenchSingleMonthRange(periodText,asOf)??explicitFrenchCurrentMonthRange(text,asOf)??relativeFrenchPeriod(periodText,asOf);
   const dateAxis=/\bdate (?:de )?(?:cloture|fin)\b/u.test(plain)?'ended_at' as const:'started_at' as const;
   add({tool:'query_consultations',unboundedPeriod,...(consultationMode?{consultationMode}:{}),...(consultationStatus?{consultationStatus}:{}),...(consultationRange?{...consultationRange,dateAxis}:monthlyComparison?{dateAxis}:{})});
  }
@@ -632,7 +635,7 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
   const financeMode:FrenchReadTarget['financeMode']=/\bcalendrier financier\b/u.test(plain)?'calendar':financeSituation||createdCollectedComparison||unpricedQuestion||paymentAmountQuestion||allTimeBalance||receivableTotal?'totals':chargeComposition?'composition':anchor?undefined:/\b(?:charges?|depenses?)\b/u.test(plain)?'charges':/\b(?:benefice net|chiffre d.affaires|resultat net|bilan financier|recettes?|revenus?|indicateurs? financiers?|synthese de caisse)\b/u.test(plain)?'overview':undefined;
   const financeState=financeMode==='totals'?(financeSituation?'all':receivableTotal&&!allTimeBalance?'pending':createdCollectedComparison||unpricedQuestion||allTimeBalance?'all':frenchFinanceRecordState(text)??'all'):financeMode?null:frenchFinanceRecordState(text);
   const financeMonthText=createdCollectedComparison?periodText.replace(/\bentre\b/u,' '):periodText;
-  const financePeriod=dateRange??dayRange??explicitFrenchMonthRange(financeMonthText)??explicitFrenchSingleMonthRange(financeMonthText,asOf)??explicitFrenchCurrentMonthRange(financeMonthText,asOf);
+  const financePeriod=dateRange??dayRange??explicitFrenchMonthRange(financeMonthText)??explicitFrenchSingleMonthRange(financeMonthText,asOf)??explicitFrenchCurrentMonthRange(financeMonthText,asOf)??relativeFrenchPeriod(financeMonthText,asOf);
   add({tool:'query_finance',...(financeMode?{financeMode}:{}),...(financeState?{financeState}:{}),...(unpricedQuestion?{financeConsultationStatus:'closed' as const}:{}),...(financePeriod??{})});
  }
  if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
