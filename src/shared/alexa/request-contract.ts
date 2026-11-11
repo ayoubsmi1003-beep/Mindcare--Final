@@ -1,6 +1,7 @@
 ﻿import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations} from "./request-plan";
 import {parsePatientMention} from "./patient-mention";
 import {mentionsMedication,medicationNames} from "./medications";
+import {mentionsBookTopic} from "./book-topics";
 import type {RequestPart,SupportedCondition} from './agent';
 const fold=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLocaleLowerCase();
 export function isFrenchAlexaCapabilityQuestion(text:string):boolean{
@@ -345,9 +346,9 @@ const CLOSED_DRUG_QUESTION=new RegExp(`${CLOSED_TOPIC}|${CLOSED_POPULATION}|${CL
 export function isClosedDrugQuestion(text:string):boolean{
  return CLOSED_DRUG_QUESTION.test(fold(text).replace(/\s+/gu,' ').trim());
 }
-const NOT_A_PERSON=/^(?:types?|ii|iii|iv|parler|durer|diagnostiquer|definir|identifier|evoquer|poser|reconnaitre|distinguer|traiter|soigner|prevenir|eviter|stabiliser|obtenir|calmer|commencer|debuter|arreter|sevrer|reduire|diminuer|augmenter|dormir|adultes?|enfants?|adolescents?|nourrissons?|femmes?|hommes?|tdah|toc|tag|tspt|tca|manie|psychose|alcool|sevrage|insomnie|agitation|hospitalisation|personnes?|sujets?)$/u;
+const NOT_A_PERSON=/^(?:quoi|types?|ii|iii|iv|parler|durer|diagnostiquer|definir|identifier|evoquer|poser|reconnaitre|distinguer|traiter|soigner|prevenir|eviter|stabiliser|obtenir|calmer|commencer|debuter|arreter|sevrer|reduire|diminuer|augmenter|dormir|adultes?|enfants?|adolescents?|nourrissons?|femmes?|hommes?|tdah|toc|tag|tspt|tca|manie|psychose|alcool|sevrage|insomnie|agitation|hospitalisation|personnes?|sujets?)$/u;
 const EPONYM=/^(?:parkinson|alzheimer|huntington|hamilton|lewy|tourette|cotard|creutzfeldt|korsakoff|wernicke|asperger|cushing|capgras|stevens|johnson|ramadan|trouble|stahl|maudsley|taylor|prescriber|guide|kaplan|manuel)$/u;
-const NOT_A_SUBJECT=/^(?:quel|quelle|quels|quelles|comment|pourquoi|quand|ou|qui|que|combien)$/u;
+const NOT_A_SUBJECT=/^(?:quoi|quel|quelle|quels|quelles|comment|pourquoi|quand|ou|qui|que|combien)$/u;
 /**
  * A person's case, told apart from a book question: "Quelle dose de lithium pour Benali ?". French puts
  * an article before a condition ("pour la dépression"), not before a name. Getting this wrong only
@@ -418,7 +419,8 @@ export function questionConcernsAPerson(text:string):boolean{
  if(/\b(?:monsieur|madame|mademoiselle|mme|mlle)\s+\S/u.test(plain)||/(?:^|\s)m\.\s*\p{L}/u.test(plain)||/\bMr?\.?\s+\p{Lu}/u.test(text))return true;
  const mention=parsePatientMention(text);
  // "a-t-elle un trouble", "sa grossesse": a person is the subject even with no name.
- if(/\b(?:a|prend|souffre|presente|suit)-t-(?:il|elle)\b|\b(?:est|prend|souffre|fait|suit)-(?:il|elle)\b/u.test(plain)&&!mentionsMedication(plain))return true;
+ const inverted=/\b(?:a|prend|souffre|presente|suit)-t-(?:il|elle)\b|\b(?:est|prend|souffre|fait|suit)-(?:il|elle)\b/u.exec(plain);
+ if(inverted&&!mentionsMedication(plain)&&!topicSubject(plain.slice(0,inverted.index)))return true;
  if(/\b(?:son|sa|ses|leur|leurs)\s+(?:grossesse|allaitement|maladie|depression|anxiete|trouble|diagnostic|etat|fonction|insuffisance|age|poids)\b/u.test(plain))return true;
  // "de durée et de symptômes" parses as two names. Two clinical measures are a topic; anything else stays two people.
  if(mention.status==='ambiguous'&&!/\b(?:duree|temps|nombre|symptomes?|criteres?)\b[^?.!]*\bet (?:de |du |des |la |le |les )?(?:duree|temps|nombre|symptomes?|criteres?)\b/u.test(plain))return true;
@@ -428,7 +430,7 @@ export function questionConcernsAPerson(text:string):boolean{
  }
  // "Comment traiter l'anxiété de Karim ?": a capital inside the sentence is the only sign left, so
  // eponyms and drugs are set aside. A brand name the lists don't know is taken for a person, the safe way.
- const named=(word:string)=>!EPONYM.test(fold(word))&&!mentionsMedication(fold(word));
+ const named=(word:string)=>!EPONYM.test(fold(word))&&!mentionsMedication(fold(word))&&!mentionsBookTopic(word);
  if([...text.matchAll(/(?<![.!?:]\s)(?<=[\s'’])\p{Lu}\p{Ll}+/gu)].some(match=>named(match[0])))return true;
  // "Benali prend du lithium, quelle dose ?"
  const subject=text.match(/^\s*(\p{Lu}\p{Ll}+)\s+(?:prend|a|est|fait|souffre|présente|presente|reste)\b/u)?.[1]??text.match(/^\s*(\p{L}+)\s+(?:prend|souffre)\b/u)?.[1];
@@ -493,7 +495,7 @@ export function onlyTheRecordInContext(text:string):boolean{
  return true;
 }
 /** "que donne le bilan de karim benali": two lowercase words the parser reads as a name are never a book topic. */
-function mentionsAFullName(text:string):boolean{const mention=parsePatientMention(text),name=fold(mention.status==='named'?mention.name:'');return mention.status==='named'&&name.includes(' ')&&!NOT_A_PERSON.test(name)&&!mentionsMedication(name)&&!CLINICAL_TOPIC.test(name)&&!/\b(?:sujets?|ages?|agees?|enfants?|adolescents?|adultes?|femmes?|hommes?|personnes?|nourrissons?|patients?)\b/u.test(name);}
+function mentionsAFullName(text:string):boolean{const mention=parsePatientMention(text),name=fold(mention.status==='named'?mention.name:'');return mention.status==='named'&&name.includes(' ')&&!NOT_A_PERSON.test(name)&&!mentionsMedication(name)&&!mentionsBookTopic(name)&&!CLINICAL_TOPIC.test(name)&&!CLINICAL_STEMS.test(name)&&!NOT_A_SUBJECT.test(name.split(' ')[0]??'')&&!/\b(?:sujets?|ages?|agees?|enfants?|adolescents?|adultes?|femmes?|hommes?|personnes?|nourrissons?|patients?)\b/u.test(name);}
 /** General clinical knowledge is source-backed even when the question does not name a book. */
 export function isClinicalKnowledgeQuestion(text:string):boolean{
  const plain=fold(text);
@@ -504,14 +506,21 @@ export function isClinicalKnowledgeQuestion(text:string):boolean{
  if(mentionsAFullName(text)||/\b(?:de\s+|d')([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse)$/u.test(word)))return false;
  if(isClosedDrugQuestion(text))return true;
  // "Risque de lithium pendant la grossesse": a drug and a clinical subject need no question word.
- if(mentionsMedication(plain)&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
- if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique)\b/u.test(plain))return false;
- return CLINICAL_TOPIC.test(plain)||(CLINICAL_STEMS.test(plain)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
+ if((mentionsMedication(plain)||mentionsBookTopic(plain))&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
+ const bookTopic=mentionsBookTopic(text);
+ // "Donépézil, dose de départ ?": a topic the books treat, asked as a question, needs no question word.
+ if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
+ return CLINICAL_TOPIC.test(plain)||((CLINICAL_STEMS.test(plain)||bookTopic)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
 }
 /** Psychiatric and pharmacological stems the closed topic list below misses: a question about one of them belongs to the books, never to the general model. */
 export const CLINICAL_STEMS=/\b(?:personnalit\w*|phobi\w*|\w*manie|narcolep\w*|cataplex\w*|anorex\w*|boulim\w*|hyperphag\w*|hyponatr\w*|bradycard\w*|tachycard\w*|cholinesterase\w*|memantine|donepezil\w*|pharmaco\w*|recepteur\w*|demi-vie|demence\w*|alzheimer|parkinson\w*|huntington|prion\w*|catatoni\w*|deliri\w*|confusionnel\w*|paranoi\w*|schizoid\w*|schizotyp\w*|histrion\w*|narcissi\w*|evitante?s?|dependante?s?|tabac\w*|nicotin\w*|alcool\w*|cannabis|cocaine|amphetamine\w*|psychostimulant\w*|hallucinogene\w*|methadone|buprenorphine|naltrexone|naloxone|varenicline|bupropion|antiepileptique\w*|anticonvuls\w*|sismotherapie|electroconvuls\w*|seuil convulsif|akathisie|dyskinesie\w*|hypersalivation|sialorrh\w*|qtc|ejaculat\w*|dyspareunie|vaginisme|genito-pelvien\w*|apnee\w*|cauchemar\w*|jambes sans repos|dissociati\w*|amnesie\w*|depersonnalisation|derealisation|somati\w*|hypocondri\w*|explosif\w*|paraphili\w*|fetichis\w*|voyeuris\w*|exhibitionnis\w*|pedophili\w*|dysphorie|autisme|tdah|handicap intellectuel|tics?|tourette|neuroleptique\w*|duloxetine|venlafaxine|paroxetine|fluoxetine|escitalopram|citalopram|trazodone|modafinil|pregabaline|gabapentine|clonazepam|diazepam|clonidine|prazosin|propranolol|lurasidone|ziprasidone|paliperidone|asenapine|brexpiprazole|cariprazine|amisulpride|pimozide|chlorpromazine|esketamine|ketamine|brexanolone|lisdexamfetamine|isrs|irsn|imao|tricyclique\w*|valproat\w*|carbamazepine|oxcarbazepine|topiramate|melatonine)\b/u;
 const CLINICAL_TOPIC=/\b(?:criter\w*|symptom\w*|diagnost\w*|trouble\w*|episode\w*|duree\w*|seuil\w*|posolog\w*|dose\w*|mecanism\w*|effet\w*|indesirable\w*|surveillance\w*|bilan\w*|lithemie\w*|taux|interaction\w*|contre[- ]indication\w*|precaution\w*|sevrage\w*|titration\w*|traitement\w*|antidepresseur\w*|antipsychotique\w*|thymoregulateur\w*|benzodiazepine\w*|anxiolytique\w*|hypnotique\w*|stimulant\w*|lithium|clozapine|olanzapine|risperidone|sertraline|valproate|lamotrigine|aripiprazole|haloperidol|quetiapine|mirtazapine|lorazepam|zolpidem|hydroxyzine|methylphenidate|atomoxetine|agoraphobie|panique|maniaque|bipolaire|depressif|psychose|schizophrenie|anxiete|stress|post[- ]traumatique|tdpm|premenstruel|toc|obsession\w*|compulsion\w*|serotoninergique|qt|renal\w*|hepatique\w*|metabolique\w*)\b/u;
 
+/** "Le propranolol a-t-il…", "Comment le trouble cauchemars est-il…": the words before an inverted verb name a topic, not a person. */
+function topicSubject(before:string):boolean{
+ if(!before.trim()||/\b(?:il|elle|on|patiente?s?|malades?|son|sa|ses|leur|leurs|mon|ma|mes|monsieur|madame)\b/u.test(before)||new RegExp(`\\b${RELATIVE}\\b`,'u').test(before))return false;
+ return CLINICAL_TOPIC.test(before)||CLINICAL_STEMS.test(before)||mentionsBookTopic(before);
+}
 // Only at the end of the question, so "Dossier de l'enfant Karim Benali" keeps its name.
 const POPULATION_ENDING=/\s+chez\s+(?:l['’]\s*(?:enfant|adulte|adolescent)|les\s+(?:enfants|adultes|adolescents)|(?:le|la|les)\s+(?:sujets?|patients?|personnes?)\s+[aâ]g[eé]e?s?)\s*[?.!]*\s*$/iu;
 const STORED_MEDICAL_SCOPE=/\b(?:dossiers?|ce patient|cette patiente|patients? selectionne\w*|patient courant|notes?|consultations?|quels? patients|combien de patients|liste les patients)\b/u;

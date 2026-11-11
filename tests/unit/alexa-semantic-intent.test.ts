@@ -1,8 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { INTENT_CATALOGUE, type CatalogueIntent } from "@/shared/alexa/intent-catalogue";
+import { INTENT_CATALOGUE } from "@/shared/alexa/intent-catalogue";
 import { renderIntent } from "@/shared/alexa/intent-render";
+import { readFamily } from "@/shared/alexa/patient-question";
 import { intentByMeaning, maskNames, shortlistIntents, SHORTLIST, type Choose, type Embed } from "@/server/alexa/semantic-intent";
 
 const ASOF = "2026-10-26T09:30:00+01:00";
@@ -52,6 +53,15 @@ describe("writing the closed question for a chosen intent", () => {
 });
 
 describe("the catalogue", () => {
+  it("files every example in its own family, or leaves it open", () => {
+    for (const intent of INTENT_CATALOGUE) for (const example of intent.examples) {
+      const family = readFamily(example);
+      if (family !== null) expect(`${family} | ${example}`).toBe(`${intent.target.family === "patient" ? "patient" : "practice"} | ${example}`);
+    }
+    expect(readFamily("Le patient suivant arrive à quelle heure ?")).not.toBe("patient");
+    expect(readFamily("Il nous reste combien en caisse ce mois ?")).toBe("practice");
+    expect(readFamily("Combien de séances pour Karim Benali cette année ?")).toBe("patient");
+  });
   it("holds read intents only, with unique ids, labels and examples", () => {
     const ids = INTENT_CATALOGUE.map((entry) => entry.id);
     expect(new Set(ids).size).toBe(ids.length);
@@ -69,7 +79,7 @@ describe("the catalogue", () => {
     const holdout = join(process.cwd(), ".eval-out", "alexa-c270", "holdout.json");
     const turns = [base, ...(existsSync(holdout) ? [holdout] : [])].flatMap((file) => (JSON.parse(readFileSync(file, "utf8")) as { cases: { turns: { say: string }[] }[] }).cases.flatMap((item) => item.turns.map((turn) => norm(turn.say))));
     const close: string[] = [];
-    for (const entry of INTENT_CATALOGUE as readonly CatalogueIntent[]) for (const example of entry.examples) {
+    for (const entry of INTENT_CATALOGUE) for (const example of entry.examples) {
       const mine = norm(example);
       if (mine.size >= 3 && turns.some((turn) => turn.size >= 3 && jaccard(mine, turn) >= 0.7)) close.push(example);
     }

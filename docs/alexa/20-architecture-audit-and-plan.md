@@ -89,3 +89,28 @@ section in other words or for another period. 0.97 was kept; every pair from 0.9
 - Latency: median 2.9 s, p95 138 s, worst 246 s.
 - Reporter fix found while reading this run: the count of model turns looked for a call the code never makes and printed 0; it
   now reads the trace's model stage (`report-c270.mjs`). No case or verdict changed.
+
+## 7. Book questions that never reached the books (from the baseline traces)
+Of the 52 failing book turns, 28 showed no passage at all: Alexa did not recognise them as book questions and sent them to the
+1B model (14–98 s), which found nothing or, 5 times, wrote its own text. Two causes, both in `request-contract.ts`:
+- **Closed word lists.** The rules know about 40 drugs and a few dozen disorders; lemborexant, pitolisant, valbénazine, pica,
+  mérycisme, énurésie were unknown. A vocabulary is now **generated from the approved books' own headings**
+  (`scripts/gen-book-topics.mjs` → `book-topics.generated.ts`): 149 drug monographs of the prescriber's guide and 228 head terms
+  of the DSM's index, minus 70 everyday, record or scaffolding words, listed with their reason in the generator. It is used only
+  to send a question to the books; the drug list that guards the egress boundary and the unknown-word patient lookup are untouched.
+- **"est-il / a-t-il" always read as a person.** "Comment le trouble cauchemars est-il défini ?" was a patient question. The
+  words before an inverted verb now decide: a clinical topic or a book topic with no person word is the subject.
+Also: "c'est quoi" / "pour quoi" count as questions; "Critères de…" / "Définition de…" requests too; an interrogative is never a
+name. Result on the 28 baseline turns: 21 now routed to the books (4 before); the 7 left are clinical vignettes ("si un patient
+sous…") or a word no heading holds (thiamine). Record questions stay off the books (tests: `alexa-book-topics.test.ts`; all
+4,599 Alexa unit tests pass, the one failure is the pre-existing V8 manifest hash).
+
+## 8. Closed choice with the 1B model: calibrated, NOT enabled
+On the catalogue's 168 development paraphrases (`MINDCARE_SEMANTIC_CALIBRATION=1`), 14 s per choice on the i3:
+| Run | Shortlist holds the intent | Right | Wrong | "none" | Non-record questions misread (of 6) |
+|---|---:|---:|---:|---:|---:|
+| e5 shortlist + model choice | 168 | 94 | 45 | 29 | 4 |
+A wrong closed read answers confidently about the wrong thing; 27 % is not acceptable, so `ALEXA_MEANING` stays off.
+30 of the 45 wrong choices crossed families (a patient question read as agenda or the reverse). The words decide that family
+without any model: `readFamily` (one person named or referred to → patient reads; a day, a period or "les patients" → practice;
+otherwise open) now narrows the shortlist. On the catalogue it files 152 examples, all in their own family, and leaves 16 open.

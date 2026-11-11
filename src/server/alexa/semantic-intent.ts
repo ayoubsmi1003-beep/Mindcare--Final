@@ -18,7 +18,7 @@
  */
 import { z } from "zod";
 import { INTENT_CATALOGUE, type CatalogueIntent } from "@/shared/alexa/intent-catalogue";
-import { unknownNameRuns } from "@/shared/alexa/patient-question";
+import { readFamily, unknownNameRuns } from "@/shared/alexa/patient-question";
 import { intentChoicePrompt } from "@/i18n/alexa-agent";
 import { inferTextForTask } from "./inference/registry";
 
@@ -63,14 +63,20 @@ async function bank(embed: Embed): Promise<Bank | null> {
   return bankPromise;
 }
 
-/** The SHORTLIST catalogue intents closest to the request, best first; null when no vector can be computed. */
+/**
+ * The SHORTLIST catalogue intents closest to the request, best first; null when no vector can be computed.
+ * When the words tell the family (one person, or a day/period/the patients as a group), only that family is offered.
+ * Measured (doc 20): without this, 30 of the model's 45 wrong choices crossed from one family to the other.
+ */
 export async function shortlistIntents(text: string, embed: Embed, size = SHORTLIST): Promise<readonly CatalogueIntent[] | null> {
   const loaded = await bank(embed);
   if (!loaded) return null;
   const v = await embed(maskNames(text));
   if (!v) return null;
   const centred = unit(v.map((x, i) => x - loaded.mean[i]!));
-  return loaded.centroids.map((entry) => ({ intent: entry.intent, s: dot(centred, entry.c) })).sort((a, b) => b.s - a.s).slice(0, size).map((entry) => entry.intent);
+  const family = readFamily(text);
+  return loaded.centroids.filter((entry) => family === null || (entry.intent.target.family === "patient") === (family === "patient"))
+    .map((entry) => ({ intent: entry.intent, s: dot(centred, entry.c) })).sort((a, b) => b.s - a.s).slice(0, size).map((entry) => entry.intent);
 }
 
 /** One constrained call to the local model: an id of the shortlist, or null for "none of these". */

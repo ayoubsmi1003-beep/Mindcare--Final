@@ -88,6 +88,18 @@ interface Run { readonly words: string[]; readonly upper: boolean; readonly befo
 
 /** Contiguous runs of words no vocabulary knows, keeping the doctor's own spelling. */
 export function unknownNameRuns(text: string): Run[] { return unknownRuns(text); }
+/**
+ * Which family of reads a request is about: "patient" when it speaks of one person (a name, a pronoun, "ce patient", "on l'a
+ * reçu"), "practice" when it names nobody but a day, a period or the patients as a group, null when nothing tells.
+ * "Le patient suivant" and "il nous reste" belong to the agenda and the till. "[X]" is the catalogue's own stand-in for a name.
+ */
+export function readFamily(text: string): "patient" | "practice" | null {
+  const p = fold(text).replace(/\b(?:le|la|mon|ma) (?:patient|patiente) (?:suivant|suivante|prochain|prochaine|d'apres|precedent|precedente)\b|\bil (?:nous|me|vous) reste\b|\bs'il (?:te|vous) plait\b/gu, " ");
+  // Days and slots are not names, even typed in lower case next to an unknown verb ("viennent vendredi").
+  const calendar = /\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|journ[ée]e|cr[ée]neaux?|programme)\b/giu;
+  if (PRONOUN_CUE.test(p) || /\bon (?:le|la|l')|\b(?:le|la|l')(?: ?[a-z]+)-on\b|\[x\]/u.test(p) || unknownRuns(text.replace(calendar, " ")).some((run) => run.words.length >= 2 || run.upper)) return "patient";
+  return OTHER_SCOPE.test(p) || calendar.test(fold(text)) ? "practice" : null;
+}
 function unknownRuns(text: string): Run[] {
   const tokens = [...text.matchAll(/[\p{L}][\p{L}'’-]*/gu)].flatMap((match) => {
     const raw = match[0], split = /^(?:d|l|qu|j|s|n|c|m|t)['’]/iu.exec(raw);
