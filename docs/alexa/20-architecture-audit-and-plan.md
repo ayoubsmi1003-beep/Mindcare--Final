@@ -146,3 +146,20 @@ Same frozen 270 turns, same eval DB, run alone on the i3.
   book topic now count as a book question anywhere in the sentence, not only as the first word.
 - Remaining failures are mostly the patient (36), facts the deterministic readers do not give yet (99), and book retrieval (30
   "no relevant passage", 30 "passage does not answer"): Phases 3 and 5.
+
+## 10. Phase 3: who the question is about (`d6529e7`), and which period (`6829422`)
+Read from the 36 `p2` turns with a wrong or missing patient. Nearly all touched **no** patient: the name was not found, so
+the turn fell to the 1B model. Rule 2 classification (now in `report-c270.mjs`): every judged failure in `p2` is Alexa's; the
+only unjudged turns are test-data limitations (1 BLOCKED, 1 not verified).
+| Capability that failed | Cause | Fix (shared code, not per question) |
+|---|---|---|
+| Entity extraction | A name was recognised only as "words no list knows"; any ordinary verb beside it ("a consulté", "les passages") made two groups, and the parser gave up | Beside one full name, a lone lower-case word or the sentence's capitalised first word is vocabulary |
+| Entity resolution | A word glued to the name ("<nom> juste avant") made the patient search find nobody, then offer sound-alikes | The resolver drops one edge word of a 3+ word name, kept only when the rest names one patient exactly |
+| Understanding | Reading by meaning took "j'avais mis", "le fasse entrer" for names and asked "Quel patient ?" with the patient on screen | Same rule as the word frames: a name the patient search cannot find is vocabulary |
+| Safety | "Quel âge a <nom> ?" reached the general model, which **invented an age** | A person's own attribute (age, address, weight, allergies…) asked about someone is never admitted to the general model; age is a profile read |
+| Understanding | "la prochaine fois qu'il vient", "son prochain passage" were not the next appointment | Any word of a visit with "prochain" names it |
+| Period | Only explicit dates and named months had bounds: "hier", "la semaine passée", "l'an dernier", "en 2025", "depuis janvier", "depuis le début du mois" asked for dates, or read **all of history** | `civil-period.ts`, one reader for French civil periods, used by consultations, documents and finance after the explicit parsers |
+| Period | "la dernière séance" counted as a period and triggered "précisez les dates" | A rank among visits is not a period |
+| Entity extraction | "avant-hier" was taken for a patient's name and removed before the period was read | Calendar words are never names |
+| Period | "patients vus la semaine dernière" was answered **for the current month** | An activity question over a period its frame cannot write is no longer defaulted to the month |
+Tests: `alexa-patient-names.test.ts` (21), `alexa-civil-period.test.ts` (25), development wordings only.

@@ -22,6 +22,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    lecture par le sens. Livres : 203/204 passages mot pour mot. Rien d'autre sur le CPU pendant ces passes.
    **C270 `p2` (`cd741a0`, `ALEXA_MEANING=1`) : 118/270** (25/21/12/16/35/9) ; 14 gagnés, 1 perdu (question d'argent lue
    comme un nombre de consultations — garde `PATIENT_MONEY` ajoutée) ; 106 tours au modèle 1B ; médiane 2,0 s ; 0 écho. Doc 20 §9.
+   Phase 3 (`d6529e7`) : nom repéré parmi des mots inconnus, résolveur tolérant un mot collé, même contrôle par la recherche pour la
+   lecture par le sens, le modèle général ne répond plus sur une personne (il avait inventé un âge). Périodes (`6829422`) : un lecteur
+   unique des périodes civiles (`civil-period.ts`). Rapport : chaque échec classé (règle 2). **C270 `p3` lancée** sur `6829422`. Doc 20 §10.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.
