@@ -18,6 +18,7 @@ import {profileCopy} from '@/i18n/alexa-profile';
 import {actionArgumentKeys} from '@/shared/alexa/agent';
 import type { inferLocalCompletion } from "./local-model";
 import { inferCompletionForTask } from "./inference/registry";
+import { unresolvedPartSentence, withDoctorsWords } from "./unresolved-wording";
 import { absentFeatureRequested } from "@/shared/alexa/capabilities";
 import { absentFeatureCopy } from "@/i18n/alexa-capabilities";
 import {relativeClinicalDate} from './clinical-narrative';
@@ -1324,7 +1325,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
           if(parts.some(part=>part.literalQuery&&(!explicitName||normalizedPatientQuery(part.literalQuery)!==normalizedPatientQuery(explicitName))))throw new Error("UngroundedLiteralPatientQuery");
           declared=true;declarationAccepted=true;
           if(parts.length===1)parts[0]!.goal=requestText;
-          for(const part of parts)if(part.unsupportedConditions?.length){part.status="unsupported";part.reason=copy.unsupported+" "+part.unsupportedConditions.join(", ");}
+          for(const part of parts)if(part.unsupportedConditions?.length){part.status="unsupported";part.reason=withDoctorsWords(copy.unsupported,part.unsupportedConditions,input.text);}
         }catch{parts=[];if(requestedOutputs){parts=requestedOutputs.map((goal,i)=>({id:"requested_"+(i+1),goal,tools:[],conditions:[],dependsOn:[],status:"pending",resultRefs:[]}));declarationError="RequestedOutputsMismatch";}if(compoundContract){parts=compoundContractParts(compoundContract);declarationError="CompoundOutputsOrConditionsMismatch";}if(countContract){parts=countContractParts(countContract);declarationError="RequestedCountOutputsOrConditionsMismatch";}/* An invalid declaration grants no dispatch authority. */}
       }
       for (const call of completion.calls) {
@@ -1476,7 +1477,7 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
   for (const p of parts) if (p.status === "pending") { p.status = userCancelled ? "cancelled" : signal.aborted?"budget_limited":inferenceFailed||(!results.length&&finalText)?"failed":"budget_limited"; p.reason = userCancelled ? copy.cancelled : signal.aborted?copy.budget:inferenceFailed||(!results.length&&finalText)?copy.modelUnavailable:copy.budget; }
   if(!countContract&&!compoundContract)releaseSharedReads(parts);
   const sentences: string[] = presentAgentResults(results,input.text);
-  for (const p of parts) if (!p.resultRefs.length && p.reason) sentences.push(`${p.goal} — ${p.reason}`);
+  for (const p of parts) if (!p.resultRefs.length && p.reason) sentences.push(unresolvedPartSentence(p, parts.length, input.text));
   const status: AgentTerminal = userCancelled ? "cancelled" : parts.every(p => p.status === "answered") ? "completed" : parts.some(p => p.status === "proposed") ? "needs_confirmation"
     : parts.every(p => p.status === "needs_input") ? "needs_input" : parts.some(p => p.status === "answered")||results.some(r=>["ok","empty","partial"].includes(r.status)) ? "partial" : "failed";
   const speakableKnowledge=results.length>0&&results.every(result=>result.presentation==="knowledge"&&result.status==="partial"&&!result.complete&&!!result.text.trim()&&result.evidence.length>0&&result.evidence.every(source=>source.type==="knowledge"&&!!source.id.trim()&&!!source.label.trim()&&!!source.excerpt?.trim()));

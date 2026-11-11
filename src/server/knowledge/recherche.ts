@@ -159,19 +159,22 @@ export function appliquerBudgetOctets<T extends { readonly texte: string }>(
   evidences: readonly T[],
   budget: number = LIMITES.BUDGET_OCTETS,
 ): { readonly retenues: readonly T[]; readonly tronque: boolean } {
-  let total = 0;
+  let total = 0, tronque = false;
   const retenues: T[] = [];
   for (const evidence of evidences) {
     if (total + evidence.texte.length > budget) {
+      tronque = true;
       if (retenues.length === 0 && total === 0 && evidence.texte.length > budget && budget > 0) {
         retenues.push({ ...evidence, texte: evidence.texte.slice(0, budget) });
+        return { retenues, tronque };
       }
-      return { retenues, tronque: true };
+      // One passage too long for what is left must not hide the shorter ones after it: it is skipped, never cut.
+      continue;
     }
     total += evidence.texte.length;
     retenues.push(evidence);
   }
-  return { retenues, tronque: false };
+  return { retenues, tronque };
 }
 
 /** Projette une ligne validée+gouvernée en candidat brut (branche indifférente). */

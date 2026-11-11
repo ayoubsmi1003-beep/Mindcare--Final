@@ -123,7 +123,13 @@ export function agendaQuestionFrame(text: string, asOf: string): string | null {
   if (/\b(?:et|puis|ainsi que|aussi)\b[^?]*\b(?:quel(?:le|s|les)?|combien|qui|comment|pourquoi)\b/u.test(out.replace(/^(?:et|puis)\s+/u, ""))) return null;
   const period = question.period ? canonicalPeriod(question.period, asOf) : null;
   if (question.period && !period) return null;
-  switch (question.intent) {
+  return renderAgendaQuestion(question.intent, period);
+}
+
+/** The closed agenda question for an intent and a canonical period (null only for "next"). */
+export function renderAgendaQuestion(intent: AgendaIntent, period: string | null): string | null {
+  if (intent !== "next" && !period) return null;
+  switch (intent) {
     case "count": return `Combien de rendez-vous ${period} ?`;
     case "list": case "last": case "free": return `Quels sont les rendez-vous ${period} ?`;
     case "cancelled": return `Quels sont les rendez-vous annulés ${period} ?`;
@@ -132,6 +138,13 @@ export function agendaQuestionFrame(text: string, asOf: string): string | null {
     case "pastcount": return `Combien de consultations terminées ${period} ?`;
     case "next": return "Quel est le prochain rendez-vous du cabinet ?";
   }
+}
+
+/** The one period a sentence names, in the form the gates read, or null (none, or two). */
+export function agendaPeriodOf(text: string, asOf: string): string | null {
+  const { out } = foldWithMap(text);
+  const found = [...out.matchAll(new RegExp(PERIOD_SOURCE, "gu"))].map(match => match[0]).filter(value => !/^ma (?:journee|semaine)$/u.test(value));
+  return found.length === 1 ? canonicalPeriod(found[0]!, asOf) : null;
 }
 
 /**

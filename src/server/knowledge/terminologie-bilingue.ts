@@ -650,7 +650,9 @@ export function planifierExpansionBilingue(
       const mots = j.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
       if (mots.length === 0) return false;
       const joint = mots.join(" ");
-      return ALIASES_PLANIFICATEUR_FR_EN.some(([, en]) => en === joint);
+      // Only an alias of THIS concept counts: "treatment" in the query says nothing about "effets indésirables" (before this,
+      // any translated word, or "diagnostiquer" which maps to itself, turned the whole expansion off).
+      return ALIASES_PLANIFICATEUR_FR_EN.some(([fr, en]) => en === joint && c.fr.some((form) => form === fr || form.split(" ").includes(fr)));
     });
     if (aliasPlanificateur) continue;
     consommes.add(c.id);

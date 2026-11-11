@@ -1,4 +1,5 @@
 import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
+import { unresolvedPartSentence } from "./unresolved-wording";
 import type { AgentCall } from "@/shared/alexa/agent";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
@@ -45,7 +46,10 @@ import {agentCopy} from "@/i18n/alexa-agent";
 import {alexaActions} from "@/i18n/alexa-actions";
 import { alexaGoalCopy, alexaIdentityCopy, practiceReadCopy } from "@/i18n/alexa-practice-reads";
 import { understandTurn, understandingCodes } from "@/shared/alexa/turn-understanding";
-import { explicitFrenchCurrentMonthRange, frenchRequestAdmission, isPracticeManagementQuestion, questionConcernsAPerson } from "@/shared/alexa/request-contract";
+import { explicitFrenchCurrentMonthRange, frenchRequestAdmission, isClinicalKnowledgeQuestion, isPracticeManagementQuestion, questionConcernsAPerson } from "@/shared/alexa/request-contract";
+import { chooseWithLocalModel, intentByMeaning, SEMANTIC_RECIPE, type Choose, type Embed } from "./semantic-intent";
+import { renderIntent } from "@/shared/alexa/intent-render";
+import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
 import type { TurnTraceRecorder } from "./turn-trace";
 import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
 export { isKnowledgeFollowup, knowledgeFollowupQuestion };
@@ -85,6 +89,8 @@ export interface OrchestratorDependencies {
   contextKey?:string;
   trace?:TurnTraceRecorder;
   resumeCursor?:{cursorId:string;kind:AgentContinuationKind;patientId:string|null};
+  /** Reading a request by meaning (semantic-intent.ts). null turns it off; absent means the local default when e5-base is configured. */
+  semantic?:{embed:Embed;choose:Choose}|null;
   build?: typeof buildClinicalContext;
   infer?: typeof inferAlexa;
   general?: typeof inferGeneralAlexa;
@@ -318,6 +324,11 @@ async function runSequencedGoals(input:TurnInput,sequence:{goals:string[];droppe
   emit({type:"done",patientId:replaced?patientId:null,patientScope:replaced?"replace":"preserve",sourceRevision:null,coverage:null,limited:limited||status!=="completed",status,speechAllowed:speakable&&!sequence.dropped.length,parts});
 }
 
+/** The local meaning step: only with the vector space it was calibrated for, and only when switched on (ALEXA_MEANING=1) until the C270 campaign has measured it (docs/alexa/20). Off, every turn keeps its previous route. */
+function defaultSemantic():{embed:Embed;choose:Choose}|null{
+  return process.env['ALEXA_MEANING']==='1'&&process.env['KNOWLEDGE_VECTOR_RECETTE']?.trim()===SEMANTIC_RECIPE?{embed:vecteurRequeteSecondaireProduction,choose:chooseWithLocalModel}:null;
+}
+
 /** Native tool selection remains subject to server validation, identity and scope gates. */
 export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
   // On a consultation screen the client reports only the consultation id. The patient comes from the audited gates,
@@ -405,10 +416,17 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
       else if(found&&found.matches.length===0)patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
     }
     if(patientFrame?.subject.kind==='named'&&/\s/u.test(patientFrame.subject.name)&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
-    const frameText=appliedToPatient??patientFrame?.text??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??null;
+    const wordFrameText=appliedToPatient??patientFrame?.text??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??null;
+    // Wording no frame knows: which closed read it MEANS (semantic-intent.ts). Only a read with nothing else to go on: never a
+    // change, never a book question, never what the closed admission already understood. The read itself stays on its gate.
+    const semantic=dependencies.semantic===null?null:dependencies.semantic??defaultSemantic();
+    const meaning=!wordFrameText&&semantic&&!dependencies.resumeCursor&&!inheritedText&&!knowledgeFollowup&&!selectedListedPatient&&!admittedTools?.length&&!understanding.wantsChange&&!isClinicalKnowledgeQuestion(agentInput.text)
+      ?await (async()=>{const intent=await intentByMeaning(agentInput.text,semantic.embed,semantic.choose,signal);const rendered=intent?renderIntent(intent,agentInput.text,frameOptions,asOf):null;if(intent)dependencies.trace?.code('meaning',`${intent.id}${rendered?'':':no-subject-or-period'}`);return rendered;})()
+      :null;
+    const frameText=wordFrameText??meaning?.text??null;
 
-    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:reaskForSelectedPatient(previous?.lastRequest)??'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');else if(patientFrame)dependencies.trace?.followup('patient-frame');else if(agendaFrame)dependencies.trace?.followup('agenda-frame');else if(practiceFrame)dependencies.trace?.followup('practice-frame');
-    const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context';
+    const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:reaskForSelectedPatient(previous?.lastRequest)??'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');else if(patientFrame)dependencies.trace?.followup('patient-frame');else if(agendaFrame)dependencies.trace?.followup('agenda-frame');else if(practiceFrame)dependencies.trace?.followup('practice-frame');else if(meaning)dependencies.trace?.followup('meaning-frame');
+    const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context'||!!meaning?.contextPatient;
     const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
     const deterministicAggregate=!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName
@@ -449,7 +467,7 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     }
     const responses=result.results.filter(r=>r.text),deferredNotices:string[]=[];
     if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
-    const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>`${p.goal} — ${p.reason}`));
+    const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>unresolvedPartSentence(p,result.parts.length,scopedInput.text)));
     // A change that was asked for and not even proposed must not read as done.
     // A sequence that couldn't be split must not lose a goal without saying so.
     if(sequence&&result.parts.length<sequence.goals.length&&result.status!=="needs_input"){const real=sequence.goals.filter(goal=>!/^(?:ne |n['’]|sans |bonjour|bonsoir|merci|s['’]il)/iu.test(goal));for(const lost of real.slice(Math.max(result.parts.length,1)))deferredNotices.push(alexaGoalCopy.notDone(lost));for(const lost of sequence.dropped)deferredNotices.push(alexaGoalCopy.notDone(lost));}

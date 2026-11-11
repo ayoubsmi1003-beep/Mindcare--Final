@@ -13,7 +13,7 @@ it('transports only verified server-assembled label ranges with their own result
 });
 it('attributes each native sentence to its own result, including identical text and unresolved parts',async()=>{
  const a:AlexaSource={id:'a',type:'patient',label:'Patient A'},b:AlexaSource={id:'b',type:'patient',label:'Patient B'};
- loop.mockResolvedValue({status:'partial',parts:[{id:'missing',goal:'Lecture',conditions:[],dependsOn:[],status:'failed',reason:'Indisponible.',resultRefs:[]}],patientId:null,tokensIn:1,tokensOut:1,sources:[a,b],sentences:['Téléphone non renseigné.','Téléphone non renseigné.','Lecture — Indisponible.'],results:[
+ loop.mockResolvedValue({status:'partial',parts:[{id:'missing',goal:'Lecture',conditions:[],dependsOn:[],status:'failed',reason:'Indisponible.',resultRefs:[]}],patientId:null,tokensIn:1,tokensOut:1,sources:[a,b],sentences:['Téléphone non renseigné.','Téléphone non renseigné.','Indisponible.'],results:[
   {callId:'a',status:'ok',complete:true,text:'Téléphone non renseigné.',evidence:[a],conditionKeys:[]},
   {callId:'b',status:'ok',complete:true,text:'Téléphone non renseigné.',evidence:[b],conditionKeys:[],presentation:'inference'},
  ]} satisfies AgentOutcome);
@@ -22,7 +22,7 @@ it('attributes each native sentence to its own result, including identical text 
  expect(events.filter(e=>e.type==='sentence')).toEqual([
   {type:'sentence',text:'Téléphone non renseigné.',kind:'fact',sources:[a]},
   {type:'sentence',text:'Téléphone non renseigné.',kind:'inference',sources:[b]},
-  {type:'sentence',text:'Lecture — Indisponible.',kind:'fact',sources:[]},
+  {type:'sentence',text:'Indisponible.',kind:'fact',sources:[]},
  ]);
 });
 it.each(['needs_input','cancelled'] as const)('keeps a direct %s message factual and without patient sources',async status=>{

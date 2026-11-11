@@ -1,0 +1,68 @@
+# 20 — C270 phase: architecture audit, decisions and measurements
+
+Branch `claude/alexa-conversational-intelligence-e9e6f8`, based on `71bb162` (C200–C202 work). Plan approved on 2026-11-11.
+This file records what the code really does, what was measured, and what changed in the plan because of a measurement.
+
+## 1. The pipeline as it runs (native path)
+`POST /api/alexa/turn` → `runAlexa` (`orchestrator.ts`) → consultation patient from the server (`withConsultationPatient`) →
+`understandTurn` (third party, change requests) → shortcuts (dialogue, clock, next patient, deterministic action) →
+about fifteen follow-up rewriters → **word frames** (`patient-question.ts`, `agenda-frame.ts`, `practice-frame.ts`): each turns a
+recognised request into a fixed **closed question** → `runAgentLoop`: 39 deterministic `direct*` builders execute closed questions
+with no model; anything else goes to the **local MiniCPM 1B** in a 2-to-5-call tool loop (30–350 s on the doctor's PC) → SQL gates
+under RLS → `presentAgentResults` → sentences. Books: `readKnowledge` (lexical AND gate + e5 vectors, fused, reranked) → verbatim
+passages (`knowledge-references.ts`), never model text.
+
+## 2. Root causes found (C202: 110/200)
+| Cause | Where | Effect in C202 |
+|---|---|---|
+| Intent is a word list; unknown wording falls to the slow 1B loop | frames, `agent-loop.ts` | 59 of 98 failing turns |
+| Follow-up state readable only on an identical `appContext` string | `conversation-state.ts:72` | follow-ups lost after a page change |
+| A name the parser misses falls back to the screen patient | `patient-mention.ts` stop list | 2 cross-patient reads |
+| The question is echoed and model tokens leak (`email:missing`, `nadir_mazouni`) | `agent-loop.ts` unresolved parts | visible in many failed answers |
+| Lexical book gate needs EVERY word, no stemming | `123_knowledge_lexical_reader.sql` | one stray word = no passage |
+| Book vectors built from 128 tokens, no heading | recipe `e5-base` | French→English misses |
+| Glossary alias check disabled expansion on any English token | `terminologie-bilingue.ts:649` | expansion silently off |
+| Budget stopped at the first oversized passage | `recherche.ts:164` | shorter good passages dropped |
+
+## 3. A measurement that changed the plan: e5 cannot route by itself
+The plan proposed nearest-neighbour intent matching with the e5-base model already installed. Measured on the catalogue's own
+165 French paraphrases (27 read intents, leave-one-out, `tests/unit/alexa-semantic-intent.test.ts` and an offline script):
+
+| Method | Right intent first |
+|---|---:|
+| raw k-NN (cosine) | 75 / 168 |
+| centred k-NN | 78 / 168 |
+| centred class centroid | **89 / 168** |
+| linear classifier (5-fold) | 71 / 168 |
+| family only (patient / agenda / finance / activity), centroid | 124 / 168 |
+| **right intent among the 8 closest centroids** | **163 / 168** |
+
+Short French questions about one patient embed very close together (margins of 0.01–0.03). Routing on that would have added
+confident wrong reads. BGE-M3 (stronger) is not installed on the PC. **Decision:** e5 is used as a **shortlist** (8 intents,
+97 % recall), and **one constrained call** to the local model chooses among them or answers "none" (`semantic-intent.ts`,
+task `intent_choice`, JSON schema enum, 24 tokens). The closed question is then written by the frames' own renderers
+(`intent-render.ts`) and runs deterministically. This replaces the 2–5-call tool loop for reads only when no frame understood
+the turn, never for a change request or a book question. It is **off unless `ALEXA_MEANING=1`** until C270 measures it; its
+accuracy with the 1B model is measured once the campaigns no longer occupy the CPU (calibration test, on request).
+
+## 4. Lexical book gate: migrations 215–221 (approved: additive)
+`app.search_knowledge_lexical_ranked` matches ANY word of the question and ranks chunks by the share of the question's weight
+they hold (each word weighs ln(1 + N/df)). Built in steps, each applied on the evaluation database only and kept as history:
+| Migration | Change | Why |
+|---|---|---|
+| 215 | the gate (any word, equal weights) | the AND gate of 123 returns nothing when one word is missing |
+| 216 | words weighted by rarity | filler words won with equal weights |
+| 217 | one index pass, 200 best | 0.88 s → 0.51 s |
+| 218 | **approval filters before any count or limit; counts over approved rows only; words kept in question order; role-membership guard** | adversarial review: 217 could return nothing when superseded chunks filled its 200 places, and its counts revealed whether a word occurs in non-approved content |
+| 219 | per-word index lookup with the filters | 218 took 68 s on "kleptomanie criteres" |
+| 220 | rank only the 300 best approved chunks | 219 took 7.4 s on common words |
+| 221 | words with a digit kept whole (5-HT2A, CYP2D6) | second review: they were split and never found |
+Final timings on the doctor's class of PC (i3 4th gen, 8 GB, a campaign running on the same CPU): under 10 ms to 0.69 s; the
+AND gate of 123 takes 0.17–0.22 s on common words. Security as 123: SECURITY DEFINER owned by the NOLOGIN reader role,
+restrictive policy on the function's own tsquery (restored on exit), cabinet policies, EXECUTE for `authenticated` only (`anon`
+refused, checked), no injection path (each word through `quote_literal`, probed). The headers of 215 and 217 overstate their
+security and output; 218 says so. Not yet called by the application. Second review: security OK; at a coverage tie on the 300th place the cut is by id; at most 12 words. **The doctor's PC needs 215 to 221 in order.**
+
+## 5. Novelty threshold of C270, corrected
+The plan set e5 cosine 0.92 as "same question". It flagged 186 of 330 new turns; reading the pairs, most were the same record
+section in other words or for another period. 0.97 was kept; every pair from 0.97 up (25) was reworded; none remains.

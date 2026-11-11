@@ -4,6 +4,26 @@ Dernière mise à jour : 2026-09-08 (session « transformation V9 »)
 
 ---
 
+## ▶ 2026-11-11 — ALEXA C270 (EN COURS) — journal de reprise
+
+Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan : `docs/alexa/20-architecture-audit-and-plan.md`.
+
+**Fait**
+- C270 gelée (`b359628`) : 270 tours (55/45/40/35/80/15), vérité SQL, 0 bloqué ; réserve H270 (60) scellée hors git.
+- Lecture par le sens (`semantic-intent.ts`) : e5 ne sait pas router seul (89/168), il sert de présélection (163/168) ; un
+  choix fermé du modèle local tranche. **Désactivé sauf `ALEXA_MEANING=1`** tant que C270 ne l'a pas mesuré.
+- Réponses : plus de question répétée ni de code interne du modèle (`unresolved-wording.ts`).
+- Livres : alias du glossaire par concept ; un passage trop long n'efface plus les suivants ; portes 215–221 (lecture classée, revue adverse : 218 corrige deux défauts de 217)
+  appliquées sur la base d'évaluation SEULEMENT, pas encore appelées par l'application.
+
+**En cours / à faire, dans l'ordre**
+1. Rejeu C202 sur `71bb162` (worktree `_eval-71bb162`, label `base71`) — puis C270 `base` au même endroit. Rien d'autre sur le CPU pendant ces passes.
+2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
+3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
+4. Contexte et isolation patient ; médicaments (migration 222 : champs d'arrêt) ; C270 finale ; H270 ; régressions.
+
+⚠️ Échecs unitaires préexistants (identiques sur `71bb162`) : manifeste V8 adversarial, `lecture-auto`, inventaire voix, `knowledge-stahl-chunker`.
+
 ## ▶ 2026-11-08 — Alexa : sécurité du dossier en cours, demandes multiples, campagne finale
 
 Branche claude/alexa-intelligence-transformation-9fc1d1, commits locaux non poussés (e11b03b → e4dccbe).

@@ -122,3 +122,17 @@ export function financePeriodFollowup(text: string, previousRequest: string | un
   if (!match) return null;
   return financeQuestionFrame(`Combien avons-nous encaissé ${match[1]} ?`, asOf)?.text ?? null;
 }
+
+/**
+ * The closed money or activity question for an intent chosen by meaning (semantic-intent.ts): the sentence is restated with the
+ * frame's own words and its own period, then read by the same frame. No period, or one the frame cannot read: null.
+ */
+export function practiceQuestionFor(measure: "revenue" | "expenses" | "net" | "outstanding" | "activity", text: string, asOf: string): string | null {
+  if (measure === "outstanding") return financeQuestionFrame("Quels sont les impayés ?", asOf)?.text ?? null;
+  const found = period(fold(text), asOf);
+  if (!found) return measure === "activity" ? activityQuestionFrame("Statistiques d'activité de ce mois", asOf) : null;
+  const when = found.kind === "named" ? `en ${found.month} ${found.year}` : found.phrase;
+  if (measure === "activity") return activityQuestionFrame(`Statistiques d'activité ${when}`, asOf);
+  const pivot = measure === "revenue" ? `Combien avons-nous encaissé ${when} ?` : measure === "expenses" ? `Quelles sont nos dépenses ${when} ?` : `Quel est le bénéfice ${when} ?`;
+  return financeQuestionFrame(pivot, asOf)?.text ?? null;
+}

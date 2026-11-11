@@ -1,0 +1,23 @@
+import { agendaPeriodOf, renderAgendaQuestion } from "./agenda-frame";
+import type { CatalogueIntent } from "./intent-catalogue";
+import { patientSubject, renderPatientQuestion } from "./patient-question";
+import { practiceQuestionFor } from "./practice-frame";
+
+/**
+ * The closed question for an intent chosen by meaning, written by the same renderers as the word-based frames, with the
+ * subject and the period taken from the doctor's own sentence by the same parsers. Null when the sentence does not say who
+ * or when clearly enough: the turn then keeps its previous route, which asks.
+ */
+export function renderIntent(intent: CatalogueIntent, text: string, options: { contextPatient: boolean; followup: boolean }, asOf: string): { readonly text: string; readonly contextPatient: boolean } | null {
+  const target = intent.target;
+  const plain = (value: string | null) => (value ? { text: value, contextPatient: false } : null);
+  switch (target.family) {
+    case "patient": {
+      const subject = patientSubject(text, options, target.section);
+      return subject ? { text: renderPatientQuestion(target.section === "prev" ? { section: "prev", n: 3 } : { section: target.section }, subject), contextPatient: subject.kind === "context" } : null;
+    }
+    case "agenda": return plain(renderAgendaQuestion(target.intent, target.intent === "next" ? null : agendaPeriodOf(text, asOf)));
+    case "finance": return plain(practiceQuestionFor(target.measure, text, asOf));
+    case "activity": return plain(practiceQuestionFor("activity", text, asOf));
+  }
+}

@@ -8,7 +8,7 @@ import { noteTurnCode } from "../turn-trace";
  * adding a provider here and benchmarking it, without touching orchestration. Anything external
  * would still have to go through `egress/external-call.ts`.
  */
-export const INFERENCE_TASKS = ["tool_selection", "general", "knowledge_selection", "knowledge_french", "narrative", "clinical_selection"] as const;
+export const INFERENCE_TASKS = ["tool_selection", "general", "knowledge_selection", "knowledge_french", "narrative", "clinical_selection", "intent_choice"] as const;
 export type InferenceTask = (typeof INFERENCE_TASKS)[number];
 type LocalOptions = Parameters<typeof inferLocalText>[1];
 
@@ -29,7 +29,7 @@ const localMiniCpm: InferenceProvider = {
 export const INFERENCE_PROVIDERS: Readonly<Record<string, InferenceProvider>> = { [localMiniCpm.id]: localMiniCpm };
 export const TASK_PROVIDERS: Readonly<Record<InferenceTask, string>> = {
   tool_selection: localMiniCpm.id, general: localMiniCpm.id, knowledge_selection: localMiniCpm.id,
-  knowledge_french: localMiniCpm.id, narrative: localMiniCpm.id, clinical_selection: localMiniCpm.id,
+  knowledge_french: localMiniCpm.id, narrative: localMiniCpm.id, clinical_selection: localMiniCpm.id, intent_choice: localMiniCpm.id,
 };
 export function providerForTask(task: InferenceTask): InferenceProvider {
   const provider = INFERENCE_PROVIDERS[TASK_PROVIDERS[task]];
