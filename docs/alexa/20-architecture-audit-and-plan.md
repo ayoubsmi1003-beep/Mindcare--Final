@@ -326,3 +326,11 @@ model: 68 (86 in `p5`). Book passages word for word: 99 % (§22). Every loss rep
 | X011#2, F026#1, V006 | PASS | runtime: the PC ran the 1B model 2–4× slower than in `p5` (meaning choice 26–91 s instead of 5 s); a statistics read timed out at 18 s |
 | A019 ("Demain, mon premier patient arrive à quelle heure ?") | FAIL | Alexa failure, hidden in `p5` by the model's luck: the agenda frame classified it, then refused it because "arrive" was left over as a possible name. Arrival verbs are agenda words now (§25) |
 | V002 ("on l'a reçu la dernière fois… c'était quel jour ?") | FAIL | Alexa failure, model-dependent in both runs: the patient frame read "reçu" as a patient's name. Visit word now (§25) |
+
+## 25. Words of the visit and of the agenda read as names (A019, V002)
+"arrive", "débute", "termine" were not agenda words: once the agenda frame removed its vocabulary, "arrive" was left and taken for
+a possible name, so "Demain, mon premier patient arrive à quelle heure ?" fell to the local model. "reçu" was not a word of the
+visit: the patient frame took it for a name ("…dernière consultation de reçu ?"). Both added to the frames' own vocabularies.
+Replayed (patients, context, agenda, variation; 155 turns) against `p6`: 3 gained (A019, V002 by the frames now; X011#2, runtime),
+none lost. Patients 36/55, context 30/45, agenda 22/40, variation 11/15. Note: during this session another process ran a unit
+suite from the main checkout on the same CPU; the local model's latencies measured then are not comparable with `p5`.

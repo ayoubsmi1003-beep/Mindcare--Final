@@ -17,6 +17,15 @@ describe("a patient named first, as the topic of the sentence", () => {
   });
 });
 
+describe("« reçu », like « vu » or « venu », is a word of the visit, never a name", () => {
+  it("reads the last visit of the patient on screen or of the one named", () => {
+    expect(patientQuestionFrame("Je l'ai reçue quand pour la dernière fois ?", { contextPatient: true, followup: false }, ASOF)?.text)
+      .toBe("Quelles sont les dates de la première à la dernière consultation du patient sélectionné ?");
+    expect(patientQuestionFrame("Amina Kaci a été reçue quand la dernière fois ?", named, ASOF)?.text)
+      .toBe("Quelles sont les dates de la première à la dernière consultation de Amina Kaci ?");
+  });
+});
+
 describe("what the doctor wrote at a visit is the note", () => {
   it("reads « écrit », « consigné » with a visit word as the note, with its area", () => {
     expect(frenchRequestAdmission("Pour Amina Kaci, qu'avais-je écrit dans l'évaluation à la dernière séance ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes", noteArea: "assessment" });
