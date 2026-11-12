@@ -71,6 +71,25 @@ describe("couche de terminologie bilingue (Stahl 7e)", () => {
     expect(plan.requetes.some((q) => q.startsWith("Usual Dosage Range"))).toBe(true);
   });
 
+  it("nomme le medicament comme sa monographie anglaise, quelle que soit la graphie francaise", () => {
+    // Development wordings, never C270/H270. "disulfirame" alone found nothing in the English book.
+    for (const [question, mots, anglais] of [
+      ["Quel est le mecanisme d'action du disulfirame ?", ["mecanisme", "action", "disulfirame"], "disulfiram"],
+      ["Comment agit la gabapentine ?", ["comment", "agit", "gabapentine"], "gabapentin"],
+      ["Delai d'action de la pregabaline ?", ["delai", "action", "pregabaline"], "pregabalin"],
+    ] as const) {
+      const plan = planifierExpansionBilingue(normaliser(question), mots);
+      expect(plan.requetes.length).toBeGreaterThan(0);
+      for (const q of plan.requetes) { expect(q).toContain(anglais); expect(q).not.toMatch(new RegExp(`\\b${anglais}e\\b`, "u")); }
+    }
+  });
+
+  it("ne transforme un mot en medicament que s'il nomme une monographie", () => {
+    // "Lithium", "sertraline": same in both languages. "bonne" minus its "e" is no drug: unchanged.
+    const plan = planifierExpansionBilingue(normaliser("Posologie habituelle de la sertraline, bonne tolerance ?"), ["posologie", "habituelle", "sertraline", "bonne", "tolerance"]);
+    for (const q of plan.requetes) { expect(q).toContain("sertraline"); expect(q).not.toMatch(/\bbonn\b/u); }
+  });
+
   it("tolere les elisions et les tirets francais", () => {
     // « comment dose-t-on » et « comment dose t on » sont la meme forme.
     const plan = planifierExpansionBilingue(

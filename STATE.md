@@ -28,6 +28,8 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    (28/24/13/17/35/10) ; 9 gagnés, 0 perdu ; restent 2 lectures d'un autre patient (X003, nom de 3 mots non trouvé puis pronom). Doc 20 §10.
    Nombre de séances d'un patient sur une période (« l'an passé », « depuis janvier ») : la période était perdue, le dossier entier
    compté — désormais lue, citée dans la réponse, ou refusée si illisible. Doc 20 §11.
+   Livres : nom français d'un médicament écrit comme sa monographie anglaise (`terminologie-bilingue.ts`) ; test structurel
+   médicament × rubrique : 29 → 32/47 au rang 1, sans perte. Doc 20 §12.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

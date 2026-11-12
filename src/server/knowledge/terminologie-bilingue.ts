@@ -53,6 +53,7 @@
 
 import { jetoniser } from "./rerank";
 import { medicationNames } from "@/shared/alexa/medications";
+import { MONOGRAPH_ROOTS } from "./monograph-roots";
 
 /** Noms de médicaments du référentiel fermé (comparaison en `string`). */
 const MEDICAMENTS_CONNUS: ReadonlySet<string> = new Set<string>(medicationNames);
@@ -606,6 +607,8 @@ const MOTS_DE_PRISE_EN_CHARGE: ReadonlySet<string> = new Set([
   "quel", "quelle", "quels", "quelles", "que", "est", "la", "le", "les", "de", "du", "des", "un", "une", "en", "cas", "psychotropes",
 ]);
 
+const RACINES_MONOGRAPHIES: ReadonlySet<string> = new Set(MONOGRAPH_ROOTS);
+
 export function planifierExpansionBilingue(
   questionNormalisee: string,
   jetonsQuestion: readonly string[],
@@ -684,7 +687,10 @@ export function planifierExpansionBilingue(
   // On les extrait du RESTE (la chaine), pas des jetons du planificateur :
   // celui-ci produit des jetons multi-mots (l'alias « contreindications »
   // vaut « contre indications ») qui ne se comparent pas mot a mot.
-  const contenu = [...new Set(reste.split(/[^\p{L}\p{N}]+/u).filter(Boolean))]
+  // A drug the Prescriber's Guide titles is named there in English: "disulfirame" is the "Disulfiram" monograph. Left French, the
+  // rubric query ("how the drug works disulfirame") found nothing in the English book and the rubric of other drugs filled the places.
+  const monographie = (mot: string) => RACINES_MONOGRAPHIES.has(mot) ? mot : mot.endsWith("e") && RACINES_MONOGRAPHIES.has(mot.slice(0, -1)) ? mot.slice(0, -1) : null;
+  const contenu = [...new Set(reste.split(/[^\p{L}\p{N}]+/u).filter(Boolean).map((mot) => monographie(mot) ?? mot))]
     .filter((j) => j.length >= 2 || /^\d+$/u.test(j));
   // Les quantites exactes du planificateur (doses signees, decimales) sont
   // conservees telles quelles : elles ne sont pas dans le texte source, mais
@@ -705,7 +711,7 @@ export function planifierExpansionBilingue(
   // jamais une négation réécrite : elle ÉLARGIT la recherche, et la question
   // d'origine reste celle que lit la synthèse.
   const invariant = (jeton: string): boolean =>
-    MEDICAMENTS_CONNUS.has(jeton)
+    MEDICAMENTS_CONNUS.has(jeton) || RACINES_MONOGRAPHIES.has(jeton)
     || /^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(jeton)
     || UNITES_INVARIANTES.has(jeton);
   const invariants = contenu.filter(invariant);

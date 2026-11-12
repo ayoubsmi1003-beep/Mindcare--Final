@@ -182,3 +182,15 @@ its period the same way. This is a silent wrong answer, the worst kind.
 Words that only look like a period are not one: "antidépresseur" (no word boundary before), "depuis combien d'années" (a
 duration), "la dernière séance" (a rank). Tests: `alexa-patient-count-period.test.ts` (13), development wordings only.
 
+## 12. Books: a French drug name reaches the English drug guide
+`tests/integration/alexa-book-aspects.live.test.ts` asks, in varied French, about one aspect (mechanism, indications, elderly,
+dependence, delay of action) of 20 drugs, and checks structurally that the passage shown comes from that drug's own monograph
+section. Only pairs whose section exists are judged: 53 of the 100 pairs have no such rubric in the corpus (for example
+"Habit Forming" exists for few monographs). That is a data limitation, not a retrieval failure.
+| Capability | Cause | Fix |
+|---|---|---|
+| Retrieval (query construction) | The rubric query kept the French drug name ("how the drug works gabapentine"), absent from the English book, so other drugs' rubrics filled the places | A content word that is a monograph name, or one once its French final "e" is dropped ("disulfirame", "prégabaline"), is written as the monograph's name and kept as an invariant |
+Measured on the evaluation database (read-only): **29 → 32 / 47 at rank 1, 36 → 37 / 47 in the top 5**; 3 pairs fixed, none
+lost. Remaining misses are mostly wrong-book choices (a Maudsley chapter or a DSM section ranked first) and a neighbouring
+rubric of the right drug ("Children and Adolescents" for "Commonly Prescribed for").
+
