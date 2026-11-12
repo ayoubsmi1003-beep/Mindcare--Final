@@ -17,11 +17,11 @@ describe("bounded native speech operation deadlines", () => {
     expect(write).toHaveBeenCalledOnce(); expect(destroy).not.toHaveBeenCalled();
   });
 
-  it("still aborts a longer STT immediately and ignores its late result", async () => {
+  it("still rejects an aborted longer STT immediately, keeps the worker, and ignores its late result", async () => {
     vi.useFakeTimers(); const destroy = vi.fn(), canal = new CanalVoixNative(vi.fn(), destroy), controller = new AbortController();
     const result = canal.demander(stt, controller.signal, 90_000).then(() => "unexpected-success", error => error.message);
     await vi.advanceTimersByTimeAsync(61_000); controller.abort();
-    expect(await result).toBe("annulee"); expect(destroy).toHaveBeenCalledOnce();
+    expect(await result).toBe("annulee"); expect(destroy).not.toHaveBeenCalled();
     canal.recevoir(answer);
     await expect(canal.demander(stt, controller.signal, 90_000)).rejects.toThrow("annulee");
   });

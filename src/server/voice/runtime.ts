@@ -1,4 +1,5 @@
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
+import { availableParallelism } from "node:os";
 import { isAbsolute, join } from "node:path";
 
 import { env } from "@/server/env";
@@ -12,6 +13,19 @@ const READY_TIMEOUT_MS = 180_000;
 const STT_TIMEOUT_MS = 60_000;
 const TTS_TIMEOUT_MS = 120_000;
 
+/**
+ * Whisper threads. Kokoro runs in its own process at the same time (prefetch,
+ * barge-in), so Whisper takes half the logical cores, never fewer than 2.
+ * Measured in ALEXA_STT_BENCHMARK.md.
+ */
+export function threadsWhisper(coeurs = availableParallelism()): number {
+  return Math.max(2, Math.min(8, Math.floor(coeurs / 2)));
+}
+
+/** STT and TTS live in two processes: neither blocks the other. */
+export type RoleVoix = "stt" | "tts";
+const ROLES: readonly RoleVoix[] = ["stt", "tts"];
+
 interface Travailleur {
   readonly processus: ChildProcessWithoutNullStreams;
   readonly canal: CanalVoixNative;
@@ -19,27 +33,24 @@ interface Travailleur {
   readonly pret: Promise<void>;
 }
 
-interface EtatVoix {
+interface EtatRole {
   courant: Travailleur | null;
-  preparation: Promise<void> | null;
-  verification: Promise<void> | null;
-  idle: ReturnType<typeof setTimeout> | undefined;
-  generation: number;
-  sessionContinue: string | null;
   etat: "stopped" | "starting" | "ready" | "busy" | "error";
   dernierErreur: string | null;
 }
 
-const globalVoix = globalThis as typeof globalThis & { __mindcareVoiceRuntime?: EtatVoix };
-const etat: EtatVoix = (globalVoix.__mindcareVoiceRuntime ??= {
-  courant: null,
-  preparation: null,
+interface EtatVoix {
+  roles: Record<RoleVoix, EtatRole>;
+  verification: Promise<void> | null;
+  generation: number;
+}
+
+const nouveauRole = (): EtatRole => ({ courant: null, etat: "stopped", dernierErreur: null });
+const globalVoix = globalThis as typeof globalThis & { __mindcareVoiceRuntimes?: EtatVoix };
+const etat: EtatVoix = (globalVoix.__mindcareVoiceRuntimes ??= {
+  roles: { stt: nouveauRole(), tts: nouveauRole() },
   verification: null,
-  idle: undefined,
   generation: 0,
-  sessionContinue: null,
-  etat: "stopped",
-  dernierErreur: null,
 });
 
 function chemins() {
@@ -56,25 +67,27 @@ async function verifierModeles(): Promise<void> {
   await verifierFichierModele(join(c.assets, MODELES_VOIX.ttsVoices.file), MODELES_VOIX.ttsVoices);
 }
 
-function detruire(): void {
-  const courant = etat.courant;
-  etat.courant = null;
-  etat.etat = "stopped";
-  clearTimeout(etat.idle);
+function detruire(role: RoleVoix): void {
+  const r = etat.roles[role];
+  const courant = r.courant;
+  r.courant = null;
+  r.etat = "stopped";
   if (courant !== null) {
     courant.canal.echouer();
     courant.processus.kill();
   }
 }
 
-function ouvrir(sessionId: string): Travailleur {
+function ouvrir(role: RoleVoix, sessionId: string): Travailleur {
   const c = chemins();
+  const r = etat.roles[role];
   if (env().ALEXA_LOCAL_VOICE === "false") throw new Error("configuration: voix-locale");
-  if (etat.courant !== null && etat.courant.sessionId !== sessionId) detruire();
-  if (etat.courant !== null && !etat.courant.processus.killed) return etat.courant;
+  if (r.courant !== null && r.courant.sessionId !== sessionId) detruire(role);
+  if (r.courant !== null && !r.courant.processus.killed) return r.courant;
 
-  etat.etat = "starting";
-  etat.dernierErreur = null;
+  r.etat = "starting";
+  r.dernierErreur = null;
+  const threads = String(threadsWhisper());
   const processus = spawn(c.python, ["-I", "-B", "-u", c.worker, c.packages, c.assets], {
     shell: false,
     windowsHide: true,
@@ -87,7 +100,9 @@ function ouvrir(sessionId: string): Travailleur {
       TEMP: process.env["TEMP"] ?? "",
       TMP: process.env["TMP"] ?? "",
       USERPROFILE: process.env["USERPROFILE"] ?? "",
-      OMP_NUM_THREADS: "2",
+      OMP_NUM_THREADS: threads,
+      ALEXA_VOICE_ROLE: role,
+      ALEXA_STT_THREADS: threads,
       ALEXA_VOICE_STT_MODEL: join(c.assets, MODELES_VOIX.stt.dir),
       ALEXA_KOKORO_MODEL: join(c.assets, MODELES_VOIX.ttsModel.file),
       ALEXA_KOKORO_VOICES: join(c.assets, MODELES_VOIX.ttsVoices.file),
@@ -102,7 +117,7 @@ function ouvrir(sessionId: string): Travailleur {
       processus.stdin.write(ligne);
     },
     () => {
-      if (etat.courant?.processus === processus) detruire();
+      if (r.courant?.processus === processus) detruire(role);
       processus.kill();
     },
   );
@@ -122,7 +137,7 @@ function ouvrir(sessionId: string): Travailleur {
     buffer += fragment;
     if (buffer.length > 8_100_000) {
       rejectPret(new Error("runtime"));
-      detruire();
+      detruire(role);
       return;
     }
     for (;;) {
@@ -133,47 +148,47 @@ function ouvrir(sessionId: string): Travailleur {
       try {
         const valeur = JSON.parse(ligne) as { ready?: unknown; error?: unknown };
         if (valeur.ready === true) {
-          etat.etat = "ready";
+          r.etat = "ready";
           resolvePret();
           continue;
         }
         if (valeur.ready === false) {
           const code = typeof valeur.error === "string" ? valeur.error : "health";
-          etat.dernierErreur = code;
-          etat.etat = "error";
+          r.dernierErreur = code;
+          r.etat = "error";
           rejectPret(new Error(code === "health" ? "configuration: sante" : "configuration: modele"));
-          detruire();
+          detruire(role);
           continue;
         }
         canal.recevoir(valeur);
       } catch {
         rejectPret(new Error("runtime"));
-        detruire();
+        detruire(role);
       }
     }
   });
   processus.stderr.resume(); // No transcripts or patient audio are logged.
   processus.on("error", () => {
-    etat.dernierErreur = "runtime";
-    etat.etat = "error";
+    r.dernierErreur = "runtime";
+    r.etat = "error";
     rejectPret(new Error("runtime"));
-    detruire();
+    detruire(role);
   });
   processus.on("exit", () => {
-    if (etat.courant?.processus === processus) {
-      etat.etat = "stopped";
-      etat.courant = null;
+    if (r.courant?.processus === processus) {
+      r.etat = "stopped";
+      r.courant = null;
     }
     rejectPret(new Error("runtime"));
     canal.echouer();
   });
 
   const travailleur: Travailleur = { processus, canal, sessionId, pret };
-  etat.courant = travailleur;
+  r.courant = travailleur;
   return travailleur;
 }
 
-async function attendrePret(travailleur: Travailleur, signal?: AbortSignal): Promise<void> {
+async function attendrePret(role: RoleVoix, travailleur: Travailleur, signal?: AbortSignal): Promise<void> {
   if (signal?.aborted) throw new Error("annulee");
   let minuteur: ReturnType<typeof setTimeout> | undefined;
   const abandon = new Promise<never>((_, reject) => {
@@ -184,18 +199,16 @@ async function attendrePret(travailleur: Travailleur, signal?: AbortSignal): Pro
   try {
     await Promise.race([travailleur.pret, abandon]);
   } catch (cause) {
-    detruire();
+    // A caller giving up while the model loads must not throw the load away:
+    // only a real failure or the ready deadline destroys the worker.
+    if (!(cause instanceof Error && cause.message === "annulee")) detruire(role);
     throw cause;
   } finally {
     if (minuteur !== undefined) clearTimeout(minuteur);
   }
 }
 
-export async function preparerVoixNative(
-  sessionId: string,
-  signal?: AbortSignal,
-  continueSession = false,
-): Promise<void> {
+async function preparerRole(role: RoleVoix, sessionId: string, signal?: AbortSignal): Promise<Travailleur> {
   if (env().ALEXA_LOCAL_VOICE === "false" || signal?.aborted) throw new Error("configuration: voix-locale");
   if (!/^[a-f0-9]{64}$/u.test(sessionId)) throw new Error("configuration: session");
   const epoch = etat.generation;
@@ -205,51 +218,41 @@ export async function preparerVoixNative(
   });
   await etat.verification;
   if (signal?.aborted || epoch !== etat.generation) throw new Error("annulee");
-
-  const travailleur = ouvrir(sessionId);
-  await attendrePret(travailleur, signal);
+  const travailleur = ouvrir(role, sessionId);
+  await attendrePret(role, travailleur, signal);
   if (signal?.aborted || epoch !== etat.generation) throw new Error("annulee");
-  clearTimeout(etat.idle);
-  if (continueSession) etat.sessionContinue = sessionId;
-  etat.etat = "ready";
-  etat.idle = setTimeout(() => arreterVoixNative(sessionId), 15 * 60_000);
-  etat.idle.unref();
+  return travailleur;
 }
 
-export async function demanderVoixNative(
-  entree: EntreeVoix,
-  signal?: AbortSignal,
-): Promise<ReponseVoix> {
-  await preparerVoixNative(entree.sessionId, signal);
-  clearTimeout(etat.idle);
-  const travailleur = etat.courant;
-  if (travailleur === null) throw new Error("runtime");
-  etat.etat = "busy";
+/**
+ * Loads both models once and keeps them resident for the session: no idle
+ * kill. Reloading costs 15-40 s, which is exactly the "Alexa stopped working"
+ * symptom. Only sign-out, an explicit stop or another session ends them.
+ */
+export async function preparerVoixNative(sessionId: string, signal?: AbortSignal, _continueSession = false): Promise<void> {
+  await Promise.all(ROLES.map((role) => preparerRole(role, sessionId, signal)));
+}
+
+export async function demanderVoixNative(entree: EntreeVoix, signal?: AbortSignal): Promise<ReponseVoix> {
+  const role: RoleVoix = entree.action;
+  const travailleur = await preparerRole(role, entree.sessionId, signal);
+  const r = etat.roles[role];
+  r.etat = "busy";
   try {
-    return await travailleur.canal.demander(
-      entree,
-      signal,
-      entree.action === "stt" ? STT_TIMEOUT_MS : TTS_TIMEOUT_MS,
-    );
+    return await travailleur.canal.demander(entree, signal, role === "stt" ? STT_TIMEOUT_MS : TTS_TIMEOUT_MS);
   } finally {
-    etat.etat = etat.courant === travailleur ? "ready" : "stopped";
-    if (etat.courant === travailleur) {
-      etat.idle = setTimeout(
-        () => arreterVoixNative(entree.sessionId),
-        etat.sessionContinue === entree.sessionId ? 15 * 60_000 : 60_000,
-      );
-      etat.idle.unref();
-    }
+    r.etat = r.courant === travailleur ? "ready" : "stopped";
   }
 }
 
 export function arreterVoixNative(sessionId?: string): void {
-  if (sessionId !== undefined && etat.courant !== null && etat.courant.sessionId !== sessionId) return;
+  for (const role of ROLES) {
+    const r = etat.roles[role];
+    if (sessionId !== undefined && r.courant !== null && r.courant.sessionId !== sessionId) continue;
+    r.dernierErreur = null;
+    detruire(role);
+  }
   etat.generation++;
-  etat.preparation = null;
-  etat.sessionContinue = null;
-  etat.dernierErreur = null;
-  detruire();
 }
 
 export interface StatutVoixNative {
@@ -257,22 +260,33 @@ export interface StatutVoixNative {
   readonly stt: string;
   readonly tts: string;
   readonly voice: string;
-  readonly worker: EtatVoix["etat"];
+  readonly worker: EtatRole["etat"];
+  readonly workers: Readonly<Record<RoleVoix, EtatRole["etat"]>>;
   readonly ready: boolean;
   readonly lastError: string | null;
   readonly root: string;
 }
 
+const pret = (e: EtatRole["etat"]) => e === "ready" || e === "busy";
+
 export function statutVoixNative(): StatutVoixNative {
   const c = chemins();
+  const { stt, tts } = etat.roles;
+  const ready = pret(stt.etat) && pret(tts.etat);
+  // One summary state for existing callers: the worst of the two.
+  const worker = ready
+    ? (stt.etat === "busy" || tts.etat === "busy" ? "busy" : "ready")
+    : stt.etat === "error" || tts.etat === "error" ? "error"
+      : stt.etat === "starting" || tts.etat === "starting" ? "starting" : "stopped";
   return {
     provider: "local",
     stt: MODELES_VOIX.stt.id,
     tts: `${MODELES_VOIX.ttsModel.id}-ff_siwis`,
     voice: "ff_siwis",
-    worker: etat.etat,
-    ready: etat.etat === "ready" || etat.etat === "busy",
-    lastError: etat.dernierErreur,
+    worker,
+    workers: { stt: stt.etat, tts: tts.etat },
+    ready,
+    lastError: stt.dernierErreur ?? tts.dernierErreur,
     root: c.root,
   };
 }
