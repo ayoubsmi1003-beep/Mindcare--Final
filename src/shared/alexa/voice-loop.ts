@@ -3,7 +3,11 @@ import type { AlexaNavigation, AlexaSource } from "./turn";
 export interface TrameVoix { readonly samples: Float32Array; readonly sampleRate: number }
 export interface ResultatTourVoix { readonly texte: string; readonly sources?: readonly AlexaSource[]; readonly patientId?: string | null; readonly persiste?: boolean; readonly navigation?: AlexaNavigation; readonly speechAllowed?:boolean; readonly speechLimited?: true }
 export interface TourVoix extends Omit<ResultatTourVoix, "texte"> { readonly id: string; readonly texte: string; readonly reponse?: string; readonly error?: "capture" | "stt" | "turn" | "tts" | "interrompu" }
-export type PhaseVoixLocale = "desactive" | "reveille" | "ecoute" | "traitement" | "parole" | "erreur";
+/**
+ * `voixDetectee`: the doctor is speaking, live partials are shown.
+ * `transcription`: she stopped, Whisper writes the final text.
+ */
+export type PhaseVoixLocale = "desactive" | "reveille" | "ecoute" | "voixDetectee" | "transcription" | "traitement" | "parole" | "erreur";
 export interface PortsVoixLocale {
   ouvrir: (recevoir: (frame: TrameVoix) => void) => Promise<() => void>;
   transcrire: (samples: Float32Array, rate: number, signal: AbortSignal) => Promise<string|{texte:string;utteranceId:string}>;
@@ -14,6 +18,10 @@ export interface PortsVoixLocale {
   tour: (turn: TourVoix) => void;
   navigate?: (target: AlexaNavigation) => void;
   speechLimitNotice?: (utterance: string) => string;
+  /** Streaming recognizer for the live transcript. `reset` opens a new utterance. Display only: Whisper writes the final text. */
+  partiel?: (samples: Float32Array, rate: number, reset: boolean, signal: AbortSignal) => Promise<string>;
+  /** The live transcript while she speaks; `null` once the final text replaces it or the utterance is dropped. */
+  apercu?: (texte: string | null) => void;
 }
 /** `ports.lire` rejects with this message when playback was stopped on purpose (STOP, barge-in). */
 const isCancelled = (cause: unknown) => cause instanceof Error && cause.message === "cancelled";
@@ -23,6 +31,12 @@ export function splitSentences(text: string): string[] {
   return text.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«])/u).map((s) => s.trim()).filter((s) => s !== "");
 }
 
+function concat(frames: readonly Float32Array[]): Float32Array {
+  const merged = new Float32Array(frames.reduce((n, f) => n + f.length, 0)); let offset = 0;
+  for (const frame of frames) { merged.set(frame, offset); offset += frame.length; }
+  return merged;
+}
+
 /** Local VAD decisions have no tool authority. Only finalized STT enters the server turn. */
 export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   let active = false, generation = 0, close: (() => void) | null = null;
@@ -30,7 +44,23 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   let pendingTurn: { id: string; texte: string } | null = null;
   let frames: Float32Array[] = [], lead: Float32Array[] = [];
   let rate = 0, spoken = 0, silence = 0, duration = 0, onset = 0, speaking = false;
-  const clearFrames = () => { frames = []; lead = []; spoken = silence = duration = onset = 0; speaking = false; };
+  // Live partials: in order, at most one request in flight, audio accumulated meanwhile (nothing skipped).
+  let live: { pending: Float32Array[]; samples: number; inflight: boolean; first: boolean; failed: boolean; control: AbortController } | null = null;
+  const pump = () => {
+    const l = live;
+    if (!l || l.inflight || l.failed || !ports.partiel || l.samples < rate * 0.2) return;
+    let n = 0, take = 0;
+    while (n < l.pending.length && (n === 0 || take + l.pending[n]!.length <= rate * 1.5)) take += l.pending[n++]!.length;
+    const chunk = concat(l.pending.splice(0, n)); l.samples -= chunk.length;
+    const reset = l.first; l.first = false; l.inflight = true;
+    ports.partiel(chunk, rate, reset, l.control.signal)
+      .then((texte) => { if (live === l && texte.trim()) ports.apercu?.(texte.trim()); })
+      // Display aid only: a failed partial stops the live text for this utterance; the final text still comes from Whisper.
+      .catch(() => { l.failed = true; })
+      .finally(() => { l.inflight = false; if (live === l) pump(); });
+  };
+  const endLive = () => { live?.control.abort(); live = null; };
+  const clearFrames = () => { endLive(); frames = []; lead = []; spoken = silence = duration = onset = 0; speaking = false; };
   const cut = () => {
     control?.abort(); control = null; ports.couper();
     if (pendingTurn) { const turn = pendingTurn; pendingTurn = null; ports.tour({ ...turn, error: "interrompu" }); }
@@ -60,11 +90,14 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     const epoch = generation, deadline = setTimeout(() => c.abort(), 600_000);
     let stage: "stt" | "turn" | "tts" = "stt";
     try {
-      ports.phase("traitement");
-      const transcribed=await ports.transcrire(samples,sampleRate,c.signal);
+      ports.phase("transcription");
+      let transcribed: Awaited<ReturnType<PortsVoixLocale["transcrire"]>>;
+      try { transcribed = await ports.transcrire(samples, sampleRate, c.signal); }
+      finally { if (alive(epoch, c)) ports.apercu?.(null); }
       const texte=(typeof transcribed==="string"?transcribed:transcribed.texte).trim();
       if (!alive(epoch, c)) return;
       if (!texte) { touch(); ports.phase("ecoute"); return; }
+      ports.phase("traitement");
       const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
       let audioError = false, speechLimited = false, queue = Promise.resolve();
       const speak = (text: string) => {
@@ -123,18 +156,18 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       // Synchronous cancellation happens at speech onset, before transcription or network work.
       cut(); touch(); speaking = true; frames = lead; lead = []; spoken = onset;
       duration = frames.reduce((n, f) => n + f.length * 1000 / sampleRate, 0); silence = 0;
-      ports.phase("ecoute"); return;
+      live = { pending: frames.slice(), samples: frames.reduce((n, f) => n + f.length, 0), inflight: false, first: true, failed: false, control: new AbortController() };
+      ports.phase("voixDetectee"); pump(); return;
     }
     frames.push(samples.slice()); duration += ms; spoken += voiced ? ms : 0; silence = voiced ? 0 : silence + ms;
-    if (duration > 20_000) { fail("capture"); return; }
-    if (silence < 700) return;
+    if (live) { live.pending.push(frames[frames.length - 1]!); live.samples += samples.length; pump(); }
+    // A long dictation is finalized at 20 s, never thrown away.
+    if (silence < 700 && duration <= 20_000) return;
     const accepted = spoken >= 240;
     const utterance = frames;
     clearFrames();
-    if (!accepted) return;
-    const merged = new Float32Array(utterance.reduce((n, f) => n + f.length, 0)); let offset = 0;
-    for (const frame of utterance) { merged.set(frame, offset); offset += frame.length; }
-    void finish(merged, sampleRate);
+    if (!accepted) { ports.apercu?.(null); ports.phase("ecoute"); return; }
+    void finish(concat(utterance), sampleRate);
   };
   return {
     demarrer: async () => {

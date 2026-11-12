@@ -210,3 +210,62 @@ describe("one speech path for typed and spoken answers", () => {
     expect(h.calls.at(-1)).toBe("state:ecoute");
   });
 });
+
+describe("live transcript while the doctor speaks", () => {
+  it("streams partials in order, one request at a time, then the final text replaces them", async () => {
+    const sent: { n: number; reset: boolean }[] = [], shown: (string | null)[] = [];
+    let inflight = 0, maxInflight = 0;
+    const gates: (() => void)[] = [];
+    const h = harness({
+      partiel: async (samples, _rate, reset) => {
+        inflight++; maxInflight = Math.max(maxInflight, inflight); sent.push({ n: samples.length, reset });
+        await new Promise<void>((r) => gates.push(r)); inflight--;
+        return `mot${sent.length}`;
+      },
+      apercu: (texte) => { shown.push(texte); },
+      transcrire: async () => { h.calls.push("stt"); return "Quels sont les rendez-vous de demain ?"; },
+    });
+    await h.loop.demarrer();
+    h.frames(30, .05); // 600 ms of speech
+    expect(sent).toHaveLength(1); expect(sent[0]!.reset).toBe(true);
+    gates.shift()!(); await flush();
+    expect(sent).toHaveLength(2); expect(sent[1]!.reset).toBe(false); // the audio accumulated meanwhile, nothing skipped
+    h.frames(20, .05);
+    expect(maxInflight).toBe(1);
+    gates.shift()!(); await flush(); gates.shift()?.(); await flush();
+    expect(shown.filter((t) => t !== null)).toEqual(expect.arrayContaining(["mot1", "mot2"]));
+    expect(h.calls).toContain("state:voixDetectee");
+    h.frames(40, 0); // pause → end of utterance
+    while (gates.length) { gates.shift()!(); await flush(); }
+    await flush(); await flush();
+    expect(h.calls).toContain("state:transcription");
+    // The preview is withdrawn before the final user message enters the thread.
+    expect(shown.at(-1)).toBeNull();
+    expect(h.calls.indexOf("state:transcription")).toBeLessThan(h.calls.indexOf("state:traitement"));
+    // Every captured sample went to the streaming recognizer exactly once, in order.
+    expect(sent.reduce((n, s) => n + s.n, 0)).toBeLessThanOrEqual((10 + 50 + 40) * 320);
+  });
+
+  it("a failed live partial never blocks the final transcript", async () => {
+    const h = harness({ partiel: async () => { throw new Error("partial"); }, apercu: () => {} });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+    expect(h.calls).toContain("answer");
+  });
+
+  it("a breath too short to be speech withdraws the preview and keeps listening", async () => {
+    const shown: (string | null)[] = [];
+    const h = harness({ partiel: async () => "euh", apercu: (t) => { shown.push(t); } });
+    await h.loop.demarrer(); h.frames(5, .05); h.frames(40, 0); await flush();
+    expect(h.calls).not.toContain("stt");
+    expect(shown.at(-1)).toBeNull();
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+
+  it("finalizes a dictation longer than 20 s instead of closing the microphone", async () => {
+    const h = harness();
+    await h.loop.demarrer(); h.frames(1_010, .05); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+    expect(h.calls).not.toContain("state:erreur");
+  });
+});

@@ -74,11 +74,18 @@ export type EtatVoix =
   | "veille"
   | "reveille"
   | "ecoute"
+  | "voixDetectee"
+  | "transcription"
   | "traitement"
   | "parole"
   | "interrompu"
   | "erreur"
   | "desactive";
+
+/** A voice interaction is under way (anything but standby, error or off). */
+export function estVoixActive(etat: EtatVoix): boolean {
+  return etat !== "veille" && etat !== "erreur" && etat !== "desactive";
+}
 
 export interface VueVoix {
   readonly etat: EtatVoix;

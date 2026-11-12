@@ -25,6 +25,7 @@ interface Reponse {
   readonly detected?: boolean;
   readonly ready?: boolean;
   readonly pong?: boolean;
+  readonly texte?: string;
   readonly code?: string;
 }
 
@@ -201,9 +202,11 @@ export async function preparerReveil(sessionId: string, signal?: AbortSignal): P
   etat.idle.unref();
 }
 
+export type ActionReveil = "audio" | "reset" | "ping" | "partial" | "partial-reset";
+
 function demanderUne(
   sessionId: string,
-  action: "audio" | "reset" | "ping",
+  action: ActionReveil,
   pcmBase64?: string,
   signal?: AbortSignal,
 ): Promise<Reponse> {
@@ -246,14 +249,18 @@ function demanderUne(
   });
 }
 
-/** Serialised: a 500 ms chunk decodes in ~16 ms, so a queue never grows. */
+/**
+ * Serialised: a 500 ms chunk decodes in ~16 ms, so a queue never grows.
+ * `partial` feeds the free-vocabulary recognizer of an open conversation and
+ * returns the live transcript so far; `partial-reset` starts a new utterance.
+ */
 export function demanderReveil(
   sessionId: string,
-  action: "audio" | "reset" | "ping",
+  action: ActionReveil,
   pcmBase64?: string,
   signal?: AbortSignal,
-): Promise<{ detected: boolean; pong?: true }> {
-  if (action === "audio" && (!pcmBase64 || pcmBase64.length > MAX_PCM * 2)) {
+): Promise<{ detected: boolean; pong?: true; texte?: string }> {
+  if ((action === "audio" || action === "partial") && (!pcmBase64 || pcmBase64.length > MAX_PCM * 2)) {
     return Promise.reject(new Error("volume"));
   }
   const tour = etat.chaine.then(async () => {
@@ -263,6 +270,10 @@ export function demanderReveil(
     if (action === "ping") {
       if (r.pong !== true) throw new Error("runtime");
       return { detected: false, pong: true as const };
+    }
+    if (action === "partial" || action === "partial-reset") {
+      if (typeof r.texte !== "string") throw new Error("runtime");
+      return { detected: false, texte: r.texte };
     }
     return { detected: r.detected === true };
   });

@@ -31,6 +31,12 @@ if not model_dir.is_dir():
 GRAMMAR = '["alexa", "alexia", "eh lexa", "[unk]"]'
 model = Model(str(model_dir))
 recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
+# Live transcript during a conversation: the same French model, free
+# vocabulary, true streaming. Whisper still writes the final text; this only
+# shows the doctor her words while she speaks. Text goes back to the local
+# server only, never to a log.
+dictation = KaldiRecognizer(model, 16000)
+committed = []
 last = 0.0
 REFRACTORY_S = 2.0
 sys.stdout.write(json.dumps({"id": "ready", "ready": True}) + "\n")
@@ -40,6 +46,12 @@ sys.stdout.flush()
 def reset():
     global recognizer
     recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
+
+
+def reset_dictation():
+    global dictation, committed
+    dictation = KaldiRecognizer(model, 16000)
+    committed = []
 
 
 def heard(text):
@@ -81,6 +93,21 @@ for line in sys.stdin:
                 last = now
                 reset()
             result["detected"] = detected
+        elif action == "partial":
+            raw = base64.b64decode(req["pcmBase64"], validate=True)
+            if len(raw) == 0 or len(raw) > 64_000 or len(raw) % 2:
+                raise ValueError("volume")
+            if dictation.AcceptWaveform(raw):
+                done = json.loads(dictation.Result()).get("text", "").strip()
+                if done:
+                    committed.append(done)
+                pending = ""
+            else:
+                pending = json.loads(dictation.PartialResult()).get("partial", "").strip()
+            result["texte"] = " ".join(committed + ([pending] if pending else []))[:4000]
+        elif action == "partial-reset":
+            reset_dictation()
+            result["texte"] = ""
         elif action == "reset":
             reset()
             result["detected"] = False

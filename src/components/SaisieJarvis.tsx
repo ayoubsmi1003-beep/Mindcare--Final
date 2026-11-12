@@ -8,7 +8,7 @@ import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
 import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
 import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
-import { annulerSuivi, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
+import { annulerSuivi, estVoixActive, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -31,7 +31,7 @@ export function SaisieJarvis({
   useEffect(() => abonnerMainsLibres(setMainsLibres), []);
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier : seule
   // une voix engagée (réveil entendu, écoute, traitement, parole) le fait.
-  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const actif = estVoixActive(voix.etat);
   // La fenêtre de suivi ouvre le micro SANS redire « Alexa » : la machine
   // porte ce fait dans `raison` (voir `declencherEcoute`), et l'écran le dit.
   const suivi = voix.etat === "ecoute" && voix.raison === fr.jarvis.voix.reveil.voixSuivi;

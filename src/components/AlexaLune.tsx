@@ -10,6 +10,7 @@
 
 import { useEffect, useState } from "react";
 import { basculerVoixLocale } from "@/services/alexa-local";
+import { estVoixActive } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
@@ -20,7 +21,7 @@ import { Icone, type NomIcone } from "./ui/Icones";
 
 export function HeroAlexaLune({ etat }: { readonly etat: EtatConversationPublique }): React.JSX.Element {
   const voix = useVueVoixUnifiee();
-  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const actif = estVoixActive(voix.etat);
   return (
     <div className="animate-fondu-monte flex flex-col items-center px-4 text-center motion-reduce:animate-none">
       {/* L'orbe mène l'état vide à pleine force : c'est le pic de l'écran,

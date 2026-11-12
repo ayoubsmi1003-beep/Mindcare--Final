@@ -1919,6 +1919,8 @@ export const fr = {
           veille: "En veille",
           reveille: "Oui ?",
           ecoute: "Je vous écoute…",
+          voixDetectee: "Je vous entends…",
+          transcription: "Transcription…",
           traitement: "Un instant…",
           parole: "Alexa parle",
           interrompu: "Arrêté.",

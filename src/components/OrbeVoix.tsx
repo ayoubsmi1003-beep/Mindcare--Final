@@ -50,6 +50,8 @@ const APPARENCE: Record<EtatVoix, { readonly noyau: string; readonly anneau: str
   veille: { noyau: "", anneau: "" },
   reveille: { noyau: "", anneau: "ring-2 ring-ai-500" },
   ecoute: { noyau: "", anneau: "ring-2 ring-ai-600" },
+  voixDetectee: { noyau: "", anneau: "ring-2 ring-ai-600" },
+  transcription: { noyau: "", anneau: "ring-2 ring-ai-100" },
   traitement: { noyau: "", anneau: "ring-2 ring-ai-100" },
   parole: { noyau: "", anneau: "ring-2 ring-ai-500" },
   interrompu: { noyau: "", anneau: "ring-2 ring-rule" },
@@ -133,7 +135,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
           transform: "scale(calc(1 + var(--niveau, 0) * 0.18))",
         }}
       >
-        {(etat === "ecoute" || etat === "traitement") && vagueOk ? (
+        {(etat === "ecoute" || etat === "voixDetectee" || etat === "transcription" || etat === "traitement") && vagueOk ? (
           <VagueAlexa size={taille} />
         ) : (
           <AvatarAlexa taille="sm" diametre={diametre} className="rounded-full" />

@@ -45,6 +45,8 @@ export const alexa = {
   voixVeille: "Mains-libres en veille. Dites « Alexa » pour me réveiller.",
   voixLocalePrete: "Voix locale prête.",
   voixEcoute: "Microphone actif. Parlez, puis faites une pause.",
+  voixDetectee: "Je vous entends. Faites une pause quand vous avez terminé.",
+  voixTranscription: "Transcription de votre demande…",
   voixReflexion: "Alexa prépare sa réponse…",
   voixParole: "Alexa parle. Vous pouvez l’interrompre.",
   lectureAutoActiver: "Lecture automatique",

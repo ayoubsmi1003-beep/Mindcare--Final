@@ -61,6 +61,8 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
     // two minutes on an 8 GB CPU-only machine. Do not cut the microphone off
     // while the local worker is still legitimately initializing.
     const prepared = controlWorker("prepare", AbortSignal.any([preparing.signal, AbortSignal.timeout(300_000)]));
+    // The live-transcript recognizer lives in the wake worker: warm it now. A failure only hides the live text.
+    void db().invokeFunction("jarvis-wake", { action: "start" }, preparing.signal).catch(() => {});
     const admission=await prepared; if(!admission.ok)throw new Error("voice-admission");
     const access = await prendreMicro(); if (!access.ok) throw new Error("microphone");
     if (released) { access.data.rendre(); throw new Error("cancelled"); }
@@ -98,8 +100,25 @@ async function lireLocalement(text: string, signal: AbortSignal, playing: () => 
   } finally { signal.removeEventListener("abort", abort); unsubscribe(); }
 }
 
+const apercuSubscribers = new Set<(texte: string | null) => void>();
+let apercu: string | null = null;
+/** The doctor's words while she speaks (live, provisional); `null` when none. */
+export function abonnerApercuVoix(subscriber: (texte: string | null) => void): () => void {
+  apercuSubscribers.add(subscriber); subscriber(apercu); return () => { apercuSubscribers.delete(subscriber); };
+}
+
 const loop = creerBoucleVoixLocale({
   ouvrir: ouvrirCapture,
+  partiel: async (samples, rate, reset, signal) => {
+    if (reset) {
+      const r = await db().invokeFunction("jarvis-wake", { action: "partial-reset" }, signal);
+      if (!r.ok) throw new Error("partial");
+    }
+    const r = await db().invokeFunction<{ texte: string }>("jarvis-wake", { action: "partial", pcmBase64: base64(encoderPCM16([samples], rate)) }, signal);
+    if (!r.ok || typeof r.data.texte !== "string") throw new Error("partial");
+    return r.data.texte;
+  },
+  apercu: (texte) => { apercu = texte; for (const subscriber of apercuSubscribers) subscriber(texte); },
   transcrire: async (samples, rate, signal) => {
     const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
     const result = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
@@ -122,12 +141,13 @@ const loop = creerBoucleVoixLocale({
     // micro : sans cela, une dictée de champ pourrait en ouvrir un second.
     // `erreur` n'est PAS une capture : le micro est déjà refermé.
     setLoopBusy(
-      etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole",
+      etat !== "desactive" && etat !== "erreur",
     );
     if (etat === "desactive") { scopeUnsubscribe?.(); scopeUnsubscribe = null; level = 0; }
     const raison = error === "capture" ? alexa.voixLocale : error === "stt" ? alexa.stt
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
       : etat === "reveille" ? alexa.voixPreparation : etat === "ecoute" ? alexa.voixEcoute
+      : etat === "voixDetectee" ? alexa.voixDetectee : etat === "transcription" ? alexa.voixTranscription
       : etat === "traitement" ? alexa.voixReflexion : etat === "parole" ? alexa.voixParole : null;
     view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "local" : null };
     for (const subscriber of subscribers) subscriber(view);
