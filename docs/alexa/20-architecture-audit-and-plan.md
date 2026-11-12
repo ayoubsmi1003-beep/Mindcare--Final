@@ -272,3 +272,12 @@ Still missed: "phobie spécifique" (the generated index holds "phobie speciique"
 appointment, never with a word of the last, a previous or the first visit; appointment states ("prévu", "programmé",
 "planifié") join the parser's status words. Practice-wide questions ("Qui a un rendez-vous demain ?") keep the agenda route.
 Replayed on C270 (patients, context, agenda: 140 turns): 2 gained (P046, X008#3), none lost.
+
+## 21. A patient named first ("Sur <nom>, …"), and what the doctor wrote at a visit
+"Sur <nom>, qu'avais-je écrit dans l'évaluation à la dernière séance ?" read no patient (only "Pour <nom>, …" opened a patient
+scope), so the local model listed the practice's 8 143 consultations, other patients' names included (P010). "Sur",
+"Concernant", "À propos de", "Au sujet de" now open the same scope; the patient frame knows "concernant", "propos", "sujet".
+"Écrit", "consigné" with a visit word is the note, and "évaluation" with "séance" is its assessment area, as with "consultation".
+Replayed (patients, context, variation, main database): 1 gained (P010), none lost; the fixture-database cases of that replay
+were stopped before the end (PC restart) and are still to replay. Not done: a guard refusing a practice-wide consultation list
+when the question is about one person (P044, a name the parser cannot see).

@@ -74,9 +74,9 @@ export type PatientMention = { status: "none" } | { status: "named"; name: strin
 export function parsePatientMention(text: string): PatientMention {
   const names = new Map<string, string>();
   const normalized = folded(text);
-  // A leading « Pour <full name>, » is an explicit patient scope even when
-  // the stored synthetic name is lower case.
-  const leadingPour = text.match(/^\s*(?:(?:alexa|assistant)[, :]+)?pour\s+(.{2,80}?),/iu);
+  // A leading « Pour <full name>, » (or « Sur », « Concernant », « À propos de », « Au sujet de ») is an explicit patient
+  // scope even when the stored synthetic name is lower case.
+  const leadingPour = text.match(/^\s*(?:(?:alexa|assistant)[, :]+)?(?:pour|sur|concernant|(?:a|à) propos de|au sujet de)\s+(.{2,80}?),/iu);
   if (leadingPour) {
     const candidate = candidateName(leadingPour[1]);
     if (candidate?.includes(" ")) return { status: "named", name: candidate };
