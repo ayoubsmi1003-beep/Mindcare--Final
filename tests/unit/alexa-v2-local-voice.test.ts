@@ -269,3 +269,84 @@ describe("live transcript while the doctor speaks", () => {
     expect(h.calls).not.toContain("state:erreur");
   });
 });
+
+describe("wake-word conversation, barge-in and self-echo", () => {
+  it("plays the cached acknowledgement after the microphone opens, then listens, without announcing it as an answer", async () => {
+    const h = harness({ accuse: async (_signal, playing) => { h.calls.push("ack"); playing(); } });
+    await h.loop.demarrer({ conversation: true });
+    expect(h.calls).toEqual(["state:reveille", "capture", "ack", "state:ecoute"]);
+  });
+
+  it("the doctor can talk over the acknowledgement: it stops and her words are captured", async () => {
+    let stopped = false;
+    const h = harness({
+      accuse: (signal, playing) => new Promise<void>((_, reject) => { playing(); signal.addEventListener("abort", () => { stopped = true; reject(new Error("cancelled")); }); }),
+    });
+    const start = h.loop.demarrer({ conversation: true }); await flush();
+    h.frames(20, .001); // echo-learning window, quiet
+    h.frames(15, .2);   // loud, sustained speech over the acknowledgement
+    await start; await flush();
+    expect(stopped).toBe(true);
+    expect(h.calls).toContain("state:voixDetectee");
+    h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+  });
+
+  it("Alexa's own voice at the speaker level never interrupts her", async () => {
+    const gate = deferred<void>();
+    const h = harness({ lire: async (_text, _signal, playing) => { playing(); await gate.promise; } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("state:parole");
+    h.calls.length = 0;
+    h.frames(100, .06); // two seconds of steady echo, louder than the 0.02 speech threshold
+    expect(h.calls).not.toContain("stop-playback");
+    expect(h.calls).not.toContain("state:voixDetectee");
+    gate.resolve(); await flush();
+  });
+
+  it("a doctor clearly louder than the echo interrupts the answer at once (barge-in)", async () => {
+    const h = harness({ lire: (_text, signal, playing) => new Promise<void>((_, reject) => { playing(); signal.addEventListener("abort", () => reject(new Error("cancelled"))); }) });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    h.frames(20, .04); // echo
+    h.calls.length = 0;
+    h.frames(12, .3);  // 240 ms of speech well above it
+    expect(h.calls).toContain("stop-playback");
+    expect(h.calls).toContain("state:voixDetectee");
+  });
+
+  it("drops a transcript that repeats what Alexa just said, and keeps listening", async () => {
+    let turns = 0;
+    const h = harness({
+      transcrire: async () => (turns++ === 0 ? "Quels sont les rendez-vous de demain ?" : "vous avez trois rendez-vous demain matin"),
+      repondre: async () => ({ texte: "Vous avez trois rendez-vous demain matin." }),
+    });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    const answers = h.calls.filter((c) => c === "answer").length;
+    h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls.filter((c) => c === "answer").length).toBe(answers);
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+
+  it("self-echo detection ignores short follow-ups and unrelated questions", async () => {
+    const { ressembleEcho } = await import("@/shared/alexa/voice-loop");
+    expect(ressembleEcho("Et les doses ?", "Les doses sont de 50 mg.")).toBe(false);
+    expect(ressembleEcho("quels sont les antécédents familiaux", "Vous avez trois rendez-vous demain.")).toBe(false);
+    expect(ressembleEcho("vous avez trois rendez vous demain", "Vous avez trois rendez-vous demain matin.")).toBe(true);
+  });
+
+  it("a wake-word conversation closes itself after the quiet follow-up window; a click-opened one does not", async () => {
+    const { vi } = await import("vitest");
+    vi.useFakeTimers();
+    try {
+      const { CONVERSATION_SILENCE_MS } = await import("@/shared/alexa/voice-loop");
+      const h = harness({ accuse: async () => {} });
+      await h.loop.demarrer({ conversation: true });
+      vi.advanceTimersByTime(CONVERSATION_SILENCE_MS - 1); expect(h.loop.active()).toBe(true);
+      vi.advanceTimersByTime(1); expect(h.loop.active()).toBe(false);
+      const manual = harness();
+      await manual.loop.demarrer();
+      vi.advanceTimersByTime(CONVERSATION_SILENCE_MS * 2); expect(manual.loop.active()).toBe(true);
+      manual.loop.arreter();
+    } finally { vi.useRealTimers(); }
+  });
+});

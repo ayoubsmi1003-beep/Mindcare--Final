@@ -576,6 +576,39 @@ export async function lireReponse(texte: string, annulee?: () => boolean): Promi
   return ok(true);
 }
 
+/**
+ * The wake acknowledgement, synthesized ONCE by Kokoro and kept in RAM as a
+ * validated WAV: on "Alexa" it plays at once, without a synthesis round trip.
+ */
+let accuseEnCache: { readonly texte: string; readonly tampon: ArrayBuffer } | null = null;
+
+export async function prechargerAccuse(texte: string): Promise<boolean> {
+  if (accuseEnCache?.texte === texte) return true;
+  const synthese = await synthetiser(texte, AbortSignal.timeout(180_000));
+  if (!synthese.ok) return false;
+  accuseEnCache = { texte, tampon: synthese.data };
+  return true;
+}
+
+export function accuseEnCachePret(texte: string): boolean {
+  return accuseEnCache?.texte === texte;
+}
+
+/** Plays the cached acknowledgement; synthesizes it on the spot only if the cache is missing. */
+export async function lireAccuse(texte: string, annulee?: () => boolean): Promise<Result<true>> {
+  const cache = accuseEnCache;
+  if (cache?.texte !== texte) return lireReponse(texte, annulee);
+  arreterLecture();
+  const generation = generationLecture;
+  const controle = new AbortController();
+  controleLecture = controle;
+  const fin = await jouerSegment(cache.tampon.slice(0), generation, controle);
+  if (generation === generationLecture) arreterLecture();
+  if (fin === "fini") return ok(true);
+  if (fin === "interrompu" || annulee?.() === true) return err(erreurLectureInterrompue());
+  return err(fin === "bloque" ? { code: "interdit", message: fr.jarvis.voix.lectureBloquee } : { code: "indisponible", message: fr.jarvis.voix.indisponible });
+}
+
 /** Historical entry point (bubble replay, global reader): same single queue. */
 export async function lireTexteLong(
   texte: string,

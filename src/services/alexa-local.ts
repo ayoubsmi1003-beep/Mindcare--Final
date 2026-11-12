@@ -3,8 +3,8 @@ import { creerBoucleVoixLocale, type TourVoix, type TrameVoix } from "@/shared/a
 import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { envoyerTourAlexa } from "./alexa-turn";
 import { db } from "./db";
-import { abonnerLecture, arreterLecture, estLectureInterrompue, lireReponse } from "./jarvis-voix";
-import type { VueVoix } from "./jarvis-reveil";
+import { abonnerLecture, arreterLecture, estLectureInterrompue, lireAccuse, lireReponse, prechargerAccuse } from "./jarvis-voix";
+import { installerConversationVoix, type VueVoix } from "./jarvis-reveil";
 import { prendreMicro, type PriseMicro } from "./micro-partage";
 import { abonnerPatientActif, patientActifCourant } from "./patient-actif";
 import { navigateAlexa } from "./alexa-navigation";
@@ -12,6 +12,22 @@ import { dialogue } from "@/i18n/alexa-dialogue";
 import { planRequest } from "@/shared/alexa/request-plan";
 import type { AlexaProposal } from "@/shared/alexa/turn";
 import { lectureInterdite, setLoopBusy } from "./voice-activity";
+import type { Result } from "./result";
+import { creerTracesVoix, type MarqueVoix } from "@/shared/alexa/voice-trace";
+
+/**
+ * Voice timing traces (timestamps only, never text), readable for diagnosis
+ * and by the automated voice scenarios as `window.__mindcareVoiceTraces`.
+ */
+const tracesVoix = creerTracesVoix(() => performance.now());
+let attenteSilence = false;
+export function marquerVoix(marque: MarqueVoix): void {
+  if (marque === "stop") attenteSilence = true;
+  tracesVoix.marquer(marque);
+}
+abonnerLecture((active) => { if (!active && attenteSilence) { attenteSilence = false; tracesVoix.marquer("silence"); } });
+declare global { interface Window { __mindcareVoiceTraces?: Pick<ReturnType<typeof creerTracesVoix>, "traces" | "rapport"> } }
+if (typeof window !== "undefined") window.__mindcareVoiceTraces = { traces: tracesVoix.traces, rapport: tracesVoix.rapport };
 
 const proposalSubscribers=new Set<(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>>();
 export function abonnerPropositionVoixLocale(handler:(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>):()=>void {
@@ -88,17 +104,18 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
   } catch (cause) { close(); throw cause; }
 }
 
-/** The single speech queue (Kokoro, sentence by sentence). Rejects "cancelled" on STOP/barge-in, "tts" on a real failure. */
-async function lireLocalement(text: string, signal: AbortSignal, playing: () => void): Promise<void> {
+/** Runs one read of the single speech queue. Rejects "cancelled" on STOP/barge-in, "tts" on a real failure. */
+async function jouerLocalement(read: (annulee: () => boolean) => Promise<Result<true>>, signal: AbortSignal, playing: () => void): Promise<void> {
   if (signal.aborted) throw new Error("cancelled");
   const abort = () => arreterLecture();
   signal.addEventListener("abort", abort, { once: true });
   const unsubscribe = abonnerLecture((active) => { if (active) playing(); });
   try {
-    const result = await lireReponse(text, () => signal.aborted);
+    const result = await read(() => signal.aborted);
     if (!result.ok) throw new Error(signal.aborted || estLectureInterrompue(result.error) ? "cancelled" : "tts");
   } finally { signal.removeEventListener("abort", abort); unsubscribe(); }
 }
+const lireLocalement = (text: string, signal: AbortSignal, playing: () => void) => jouerLocalement((a) => lireReponse(text, a), signal, playing);
 
 const apercuSubscribers = new Set<(texte: string | null) => void>();
 let apercu: string | null = null;
@@ -118,6 +135,7 @@ const loop = creerBoucleVoixLocale({
     if (!r.ok || typeof r.data.texte !== "string") throw new Error("partial");
     return r.data.texte;
   },
+  trace: marquerVoix,
   apercu: (texte) => { apercu = texte; for (const subscriber of apercuSubscribers) subscriber(texte); },
   transcrire: async (samples, rate, signal) => {
     const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
@@ -135,6 +153,7 @@ const loop = creerBoucleVoixLocale({
   navigate: navigateAlexa,
   speechLimitNotice: text => dialogue(planRequest(text, null).language).speechLimit,
   lire: lireLocalement,
+  accuse: (signal, playing) => jouerLocalement((a) => lireAccuse(alexa.reveilAccuse, a), signal, playing),
   couper: arreterLecture,
   phase: (etat, error) => {
     // Le registre partagé voit la boucle directe comme un propriétaire du
@@ -146,7 +165,7 @@ const loop = creerBoucleVoixLocale({
     if (etat === "desactive") { scopeUnsubscribe?.(); scopeUnsubscribe = null; level = 0; }
     const raison = error === "capture" ? alexa.voixLocale : error === "stt" ? alexa.stt
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
-      : etat === "reveille" ? alexa.voixPreparation : etat === "ecoute" ? alexa.voixEcoute
+      : etat === "reveille" ? (parReveil ? alexa.reveilAccuse : alexa.voixPreparation) : etat === "ecoute" ? alexa.voixEcoute
       : etat === "voixDetectee" ? alexa.voixDetectee : etat === "transcription" ? alexa.voixTranscription
       : etat === "traitement" ? alexa.voixReflexion : etat === "parole" ? alexa.voixParole : null;
     view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "local" : null };
@@ -172,7 +191,7 @@ export function arreterVoixLocale(): void {
 export function niveauVoixLocale(): number { return level; }
 /** A typed answer while the voice conversation is open: spoken by the loop, which then listens again. */
 export function parlerVoixLocale(texte: string): Promise<"fini" | "interrompu" | "echec" | "occupe"> { return loop.parler(texte); }
-export async function demarrerVoixLocale(): Promise<void> {
+export async function demarrerVoixLocale(options?: { readonly conversation?: boolean }): Promise<void> {
   if (loop.active()) return;
   // ⚠️ UN SEUL PROPRIÉTAIRE. Une capture du réveil, une dictée de champ ou une
   // synthèse déjà en cours interdit d'ouvrir la boucle : deux prises sur le
@@ -182,6 +201,38 @@ export async function demarrerVoixLocale(): Promise<void> {
   const id = patientActifCourant()?.id ?? null;
   scopeUnsubscribe?.();
   scopeUnsubscribe = abonnerPatientActif((patient) => { if ((patient?.id ?? null) !== id) arreterVoixLocale(); });
-  await loop.demarrer();
+  parReveil = options?.conversation === true;
+  await loop.demarrer(options);
 }
+let parReveil = false;
+
+/**
+ * Hands-free: loads Whisper + Kokoro and caches the acknowledgement BEFORE the
+ * first "Alexa", so the wake answer is immediate and the first command does
+ * not pay a model load. Failures stay visible on the first real turn.
+ */
+export async function preparerVoixReveil(): Promise<boolean> {
+  const prepared = await controlWorker("prepare", AbortSignal.timeout(300_000)).catch(() => null);
+  if (!prepared?.ok) return false;
+  return prechargerAccuse(alexa.reveilAccuse);
+}
+
+/**
+ * "Alexa" in standby opens a conversation here and resolves when it ends
+ * (quiet follow-up window, STOP of the microphone, error): the wake detector
+ * then resumes. Registered on the wake machine, which never imports this module.
+ */
+installerConversationVoix(async () => {
+  if (loop.active() || lectureInterdite()) return;
+  await demarrerVoixLocale({ conversation: true });
+  if (!loop.active()) return;
+  await new Promise<void>((resolve) => {
+    let done = false, unsubscribe: (() => void) | null = null;
+    unsubscribe = abonnerVoixLocale((v) => {
+      if (done || (v.etat !== "desactive" && v.etat !== "erreur")) return;
+      done = true; unsubscribe?.(); resolve();
+    });
+    if (done) unsubscribe();
+  });
+});
 export function basculerVoixLocale(): void { if (loop.active()) arreterVoixLocale(); else void demarrerVoixLocale(); }

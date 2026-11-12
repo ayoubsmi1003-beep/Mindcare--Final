@@ -9,7 +9,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 const { invokeFunctionStream } = vi.hoisted(() => ({ invokeFunctionStream: vi.fn() }));
 vi.mock("@/services/db", () => ({ db: () => ({ invokeFunctionStream }) }));
 
-import { arreterLecture, estLectureInterrompue, estWavValide, lireReponse, segmenterPhrases } from "@/services/jarvis-voix";
+import { accuseEnCachePret, arreterLecture, estLectureInterrompue, estWavValide, lireAccuse, lireReponse, prechargerAccuse, segmenterPhrases } from "@/services/jarvis-voix";
 import { playbackBusy, setPlaybackBusy } from "@/services/voice-activity";
 
 function wav(): Uint8Array {
@@ -148,5 +148,26 @@ describe("lireReponse", () => {
     const resultat = await lecture;
     expect(resultat.ok).toBe(false);
     expect(FauxAudio.instances).toHaveLength(1);
+  });
+});
+
+describe("cached wake acknowledgement", () => {
+  it("is synthesized once, validated, then played from RAM with no synthesis round trip", async () => {
+    vi.stubGlobal("Audio", FauxAudio);
+    invokeFunctionStream.mockImplementation(() => Promise.resolve(flux(wav())));
+    expect(await prechargerAccuse("Oui Docteur, je vous écoute.")).toBe(true);
+    expect(await prechargerAccuse("Oui Docteur, je vous écoute.")).toBe(true);
+    expect(invokeFunctionStream).toHaveBeenCalledTimes(1);
+    expect(accuseEnCachePret("Oui Docteur, je vous écoute.")).toBe(true);
+    const lecture = lireAccuse("Oui Docteur, je vous écoute.");
+    await attendre(); await attendre();
+    expect(invokeFunctionStream).toHaveBeenCalledTimes(1);
+    FauxAudio.instances[0]!.finir();
+    expect((await lecture).ok).toBe(true);
+  });
+  it("is never cached from an invalid synthesis", async () => {
+    invokeFunctionStream.mockResolvedValue(flux(new Uint8Array(44)));
+    expect(await prechargerAccuse("Autre accusé.")).toBe(false);
+    expect(accuseEnCachePret("Autre accusé.")).toBe(false);
   });
 });

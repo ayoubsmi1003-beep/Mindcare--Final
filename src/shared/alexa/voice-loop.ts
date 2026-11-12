@@ -1,4 +1,5 @@
 import type { AlexaNavigation, AlexaSource } from "./turn";
+import type { MarqueVoix } from "./voice-trace";
 
 export interface TrameVoix { readonly samples: Float32Array; readonly sampleRate: number }
 export interface ResultatTourVoix { readonly texte: string; readonly sources?: readonly AlexaSource[]; readonly patientId?: string | null; readonly persiste?: boolean; readonly navigation?: AlexaNavigation; readonly speechAllowed?:boolean; readonly speechLimited?: true }
@@ -22,6 +23,26 @@ export interface PortsVoixLocale {
   partiel?: (samples: Float32Array, rate: number, reset: boolean, signal: AbortSignal) => Promise<string>;
   /** The live transcript while she speaks; `null` once the final text replaces it or the utterance is dropped. */
   apercu?: (texte: string | null) => void;
+  /** The wake acknowledgement ("Oui Docteur, je vous écoute."), from cache. Same contract as `lire`. */
+  accuse?: (signal: AbortSignal, playing: () => void) => Promise<void>;
+  /** Timing marks only (voice-trace): never text. */
+  trace?: (marque: MarqueVoix) => void;
+}
+
+/** After an answer, an open conversation waits this long for a follow-up before returning to wake-word standby. */
+export const CONVERSATION_SILENCE_MS = 20_000;
+
+/**
+ * Self-echo guard: a "question" that mostly repeats what Alexa just said is her
+ * own voice leaking from the speaker into the microphone, not the doctor.
+ * Under three words it is never treated as echo ("Stop", "Merci", "Et les doses ?").
+ */
+export function ressembleEcho(transcript: string, spoken: string): boolean {
+  const words = (s: string) => s.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").match(/\p{L}{3,}/gu) ?? [];
+  const heard = words(transcript);
+  if (heard.length < 3) return false;
+  const said = new Set(words(spoken));
+  return heard.filter((w) => said.has(w)).length / heard.length >= 0.6;
 }
 /** `ports.lire` rejects with this message when playback was stopped on purpose (STOP, barge-in). */
 const isCancelled = (cause: unknown) => cause instanceof Error && cause.message === "cancelled";
@@ -54,7 +75,7 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     const chunk = concat(l.pending.splice(0, n)); l.samples -= chunk.length;
     const reset = l.first; l.first = false; l.inflight = true;
     ports.partiel(chunk, rate, reset, l.control.signal)
-      .then((texte) => { if (live === l && texte.trim()) ports.apercu?.(texte.trim()); })
+      .then((texte) => { if (live === l && texte.trim()) { ports.trace?.("premierPartiel"); ports.apercu?.(texte.trim()); } })
       // Display aid only: a failed partial stops the live text for this utterance; the final text still comes from Whisper.
       .catch(() => { l.failed = true; })
       .finally(() => { l.inflight = false; if (live === l) pump(); });
@@ -74,7 +95,22 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     arreter(); ports.phase("erreur", kind);
   };
   const alive = (epoch: number, c: AbortController) => active && generation === epoch && control === c && !c.signal.aborted;
-  const touch = () => { clearTimeout(idle); idle = setTimeout(arreter, 15 * 60_000); };
+  // Opened by the wake word: a conversation that ends by itself after a quiet
+  // follow-up window. Opened by a click: the existing 15-minute bound.
+  let conversation = false;
+  const touch = () => { clearTimeout(idle); idle = setTimeout(arreter, conversation ? CONVERSATION_SILENCE_MS : 15 * 60_000); };
+  // Barge-in gating: while Alexa's audio plays, the microphone also hears it.
+  // `echo` follows the loudest residual heard so far; only speech well above it interrupts.
+  let playing = false, playingMs = 0, echo = 0, spokenText = "", spokenAt = 0;
+  const say = async (text: string, run: (playing: () => void) => Promise<void>, epoch: number, c: AbortController, announce = true) => {
+    spokenText = text;
+    try {
+      await run(() => {
+        if (!playing) { playing = true; playingMs = 0; echo = 0; if (announce) ports.trace?.("lectureDebut"); }
+        if (announce && alive(epoch, c)) ports.phase("parole");
+      });
+    } finally { if (playing && announce) ports.trace?.("lectureFin"); playing = false; spokenAt = Date.now(); }
+  };
   // A turn (faster-whisper small STT + local-model inference + Kokoro) can
   // outlast a short idle budget on the delivery PC. Suspend the idle timer for
   // the whole turn; re-arm only when back in ecoute. Otherwise arreter()
@@ -92,11 +128,13 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     try {
       ports.phase("transcription");
       let transcribed: Awaited<ReturnType<PortsVoixLocale["transcrire"]>>;
-      try { transcribed = await ports.transcrire(samples, sampleRate, c.signal); }
+      try { transcribed = await ports.transcrire(samples, sampleRate, c.signal); ports.trace?.("final"); }
       finally { if (alive(epoch, c)) ports.apercu?.(null); }
       const texte=(typeof transcribed==="string"?transcribed:transcribed.texte).trim();
       if (!alive(epoch, c)) return;
       if (!texte) { touch(); ports.phase("ecoute"); return; }
+      // Alexa's own words came back through the microphone: drop them, keep listening.
+      if (spokenText && Date.now() - spokenAt < 5_000 && ressembleEcho(texte, spokenText)) { touch(); ports.phase("ecoute"); return; }
       ports.phase("traitement");
       const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
       let audioError = false, speechLimited = false, queue = Promise.resolve();
@@ -111,12 +149,14 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
         }
         if (!kept.length || !alive(epoch, c)) return;
         queue = (async () => {
-          try { await ports.lire(kept.join(" "), c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
+          try { const all = kept.join(" "); await say(all, (p) => ports.lire(all, c.signal, p), epoch, c); }
           // STOP is not a voice failure: the turn ends normally, back to listening.
           catch (cause) { if (alive(epoch, c) && !isCancelled(cause)) audioError = true; }
         })();
       };
+      ports.trace?.("tourEnvoye");
       const result = await ports.repondre(texte, c.signal, ()=>{},id);
+      ports.trace?.("tourRecu");
       if (!alive(epoch, c)) return;
       if (result.speechAllowed!==false)speak(result.texte);
       pendingTurn = null; ports.tour({ id, texte, reponse: result.texte,
@@ -128,12 +168,12 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       });
       stage = "tts"; await queue;
       if (alive(epoch, c) && !audioError && speechLimited && ports.speechLimitNotice) {
-        try { await ports.lire(ports.speechLimitNotice(texte), c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
+        try { const notice = ports.speechLimitNotice(texte); await say(notice, (p) => ports.lire(notice, c.signal, p), epoch, c); }
         catch { audioError = true; }
       }
       if (alive(epoch, c)) {
         if (audioError) fail("tts");
-        else { if (result.navigation) ports.navigate?.(result.navigation); if (alive(epoch, c)) { touch(); ports.phase("ecoute"); } }
+        else { if (result.navigation) ports.navigate?.(result.navigation); if (alive(epoch, c)) { touch(); ports.trace?.("ecouteReprise"); ports.phase("ecoute"); } }
       }
     } catch { if (alive(epoch, c)) fail(stage); }
     finally {
@@ -148,16 +188,30 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       || samples.length > sampleRate / 10 || (rate !== 0 && rate !== sampleRate)) { fail("capture"); return; }
     rate = sampleRate; let power = 0;
     for (const sample of samples) { if (!Number.isFinite(sample)) { fail("capture"); return; } power += sample * sample; }
-    const ms = samples.length * 1000 / sampleRate, voiced = Math.sqrt(power / samples.length) >= 0.02;
+    const ms = samples.length * 1000 / sampleRate, rms = Math.sqrt(power / samples.length);
+    let voiced = rms >= 0.02;
+    if (!speaking && playing) {
+      // Barge-in while Alexa speaks. For the first 300 ms of playback only
+      // learn the echo (no interruption); then interrupt only on speech at
+      // least 2.5x the loudest echo heard, sustained 200 ms. Uncalibrated on
+      // real speakers: a doctor who cannot be heard over the echo uses STOP.
+      playingMs += ms;
+      if (playingMs <= 300) { echo = Math.max(echo * 0.97, rms); voiced = false; }
+      else {
+        voiced = rms >= Math.max(0.02, echo * 2.5);
+        if (!voiced) echo = Math.max(echo * 0.995, rms);
+      }
+    }
     if (!speaking) {
       lead.push(samples.slice()); if (lead.length > 10) lead.shift();
       onset = voiced ? onset + ms : 0;
-      if (onset < 60) return;
+      if (onset < (playing ? 200 : 60)) return;
       // Synchronous cancellation happens at speech onset, before transcription or network work.
       cut(); touch(); speaking = true; frames = lead; lead = []; spoken = onset;
       duration = frames.reduce((n, f) => n + f.length * 1000 / sampleRate, 0); silence = 0;
       live = { pending: frames.slice(), samples: frames.reduce((n, f) => n + f.length, 0), inflight: false, first: true, failed: false, control: new AbortController() };
-      ports.phase("voixDetectee"); pump(); return;
+      if (playing) ports.trace?.("stop");
+      ports.trace?.("onset"); ports.phase("voixDetectee"); pump(); return;
     }
     frames.push(samples.slice()); duration += ms; spoken += voiced ? ms : 0; silence = voiced ? 0 : silence + ms;
     if (live) { live.pending.push(frames[frames.length - 1]!); live.samples += samples.length; pump(); }
@@ -167,17 +221,30 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     const utterance = frames;
     clearFrames();
     if (!accepted) { ports.apercu?.(null); ports.phase("ecoute"); return; }
+    ports.trace?.("finParole");
     void finish(concat(utterance), sampleRate);
   };
   return {
-    demarrer: async () => {
+    /**
+     * `conversation`: opened by the wake word. The microphone opens first, the
+     * cached acknowledgement plays (the doctor may talk over it), then the
+     * conversation listens and closes itself after a quiet follow-up window.
+     */
+    demarrer: async (options?: { readonly conversation?: boolean }) => {
       if (active) return;
-      active = true; const epoch = ++generation; ports.phase("reveille");
+      active = true; conversation = options?.conversation === true; const epoch = ++generation; ports.phase("reveille");
       try {
         const release = await ports.ouvrir(receive);
         if (!active || generation !== epoch) { release(); return; }
-        close = release; touch(); ports.phase("ecoute");
-      } catch { if (active && generation === epoch) fail("capture"); }
+        close = release;
+      } catch { if (active && generation === epoch) fail("capture"); return; }
+      if (conversation && ports.accuse) {
+        const c = new AbortController(); control = c;
+        try { await say("", (p) => ports.accuse!(c.signal, p), epoch, c, false); }
+        catch { /* A missing acknowledgement never blocks listening; the answer path reports real TTS failures. */ }
+        finally { if (control === c) control = null; }
+      }
+      if (active && generation === epoch && !speaking && control === null) { touch(); ports.phase("ecoute"); }
     },
     /**
      * A typed answer while the conversation is open: spoken by the same
@@ -187,7 +254,7 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       if (!active || control !== null || speaking || !text.trim()) return "occupe";
       suspend(); const c = new AbortController(); control = c; const epoch = generation;
       try {
-        await ports.lire(text, c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); });
+        await say(text, (p) => ports.lire(text, c.signal, p), epoch, c);
         return "fini";
       } catch (cause) { return alive(epoch, c) && !isCancelled(cause) ? "echec" : "interrompu"; }
       finally {

@@ -5,7 +5,7 @@ const { voice, wake } = vi.hoisted(() => ({
   voice: { callback: null as ((event: TourVoix) => void) | null },
   wake: { commande: null as ((texte: string) => Promise<void>) | null },
 }));
-vi.mock("@/services/alexa-local", () => ({ abonnerPropositionVoixLocale: () => () => {}, abonnerTourVoixLocale: (callback: (event: TourVoix) => void) => { voice.callback = callback; return () => {}; }, arreterVoixLocale: () => {} }));
+vi.mock("@/services/alexa-local", () => ({ abonnerPropositionVoixLocale: () => () => {}, abonnerTourVoixLocale: (callback: (event: TourVoix) => void) => { voice.callback = callback; return () => {}; }, arreterVoixLocale: () => {}, preparerVoixReveil: async () => true }));
 // The wake path goes through `envoyer()`; the network edge is the only thing
 // simulated, exactly like a typed turn.
 vi.mock("@/services/alexa-turn", () => ({

@@ -22,6 +22,7 @@ import { annulerSuivi, estVoixActive, etatVoix, interrompreVoix } from "@/servic
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
+import { BoutonStopParole } from "./BoutonStopParole";
 import { Icone } from "./ui/Icones";
 
 interface AutoResizeOptions {
@@ -97,7 +98,9 @@ export function SaisieAlexaLune({
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
-  const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
+  // Typing stays open while the voice conversation listens or speaks: a typed
+  // follow-up is answered aloud by the same conversation.
+  const bloque = fluxEnCours || etat.carteEcriture !== null || (actif && voix.etat !== "ecoute" && voix.etat !== "parole");
 
   // ⚠️ UN ENVOI TAPÉ N'HÉRITE JAMAIS DE LA FENÊTRE DE SUIVI. `annulerSuivi()`
   // retire le démarrage FUTUR ; `interrompreVoix()` referme la capture déjà
@@ -116,6 +119,7 @@ export function SaisieAlexaLune({
 
   return (
     <div className="grid min-w-0 gap-2">
+      <BoutonStopParole className="justify-self-end" />
       <div className="lune-alexa-boite min-w-0 rounded-xl">
         <textarea
           ref={textareaRef}
