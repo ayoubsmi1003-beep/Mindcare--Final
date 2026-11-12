@@ -227,3 +227,12 @@ X003 (3 turns) and L043 pass. Unit tests fail without each fix.
 Replayed on C270 (code not otherwise changed): agenda **13 → 22 / 40**, patients **31 → 33 / 55** and context **27 → 29 / 45**
 (X003#3 included), P017 passes; no turn lost in these three domains. Still unread: "le week-end", "entre mardi et jeudi". Wording
 gap left: the agenda answer says "rendez-vous prévus" for past absences (existing answer template).
+
+## 16. A loss caught by the finance replay, and patients who came at least once
+§15 let the agenda frame read any month; the agenda frame runs before the activity and money frames, so "Combien de
+consultations en septembre ?", "patients vus en août" and "séances réglées en août" became appointment counts (F009, F016, F025
+lost on a finance replay). The civil period is now read by the agenda frame only for appointments, absences or cancellations
+named as such, never with a money word. Separately, "combien de patients ont consulté / sont venus au moins une fois" is an
+activity question (statistics hold "patients vus"); a name or a pronoun keeps it with the patient routes. Weeks stay a tool
+limitation: the statistics view reads months and years only.
+Replayed on C270 against `p4`: agenda 13 → 22 / 40, finance 17 → 18 / 35, 10 gained, none lost.

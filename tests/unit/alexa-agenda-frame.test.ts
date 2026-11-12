@@ -158,6 +158,10 @@ describe("agenda frame: absences, cancellations, and periods the frame's own lis
     expect(admitted("J'ai quelque chose de prévu le 3 novembre ?")).toBe("Quels sont les rendez-vous le 3 novembre ?");
     expect(admitted("Qui était au programme mardi dernier ?")).toBe("Quels sont les rendez-vous le 20 octobre 2026 ?");
   });
+  it("leaves consultations, sessions paid and patients seen over a month to the activity and money frames", () => {
+    for (const text of ["Combien de consultations en juillet ?", "Combien de patients vus en septembre ?", "Combien de séances payées en août ?"]) expect(frame(text), text).toBeNull();
+    expect(admitted("Combien de rendez-vous en juillet ?")).toBe("Combien de rendez-vous du 1 juillet 2026 au 31 juillet 2026 ?");
+  });
   it("never guesses: a month without its year far in the past, one person, or a name stay with the other routes", () => {
     for (const text of ["Combien de rendez-vous en novembre ?", "Est-ce qu'il n'est pas venu hier ?", "Elle était absente à son rendez-vous de lundi ?", "Les absences de Karim Test en septembre ?", "Des rendez-vous ce week-end ?"]) expect(frame(text), text).toBeNull();
   });

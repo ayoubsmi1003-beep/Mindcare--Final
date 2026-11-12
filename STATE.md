@@ -36,7 +36,8 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    patient » lit le dossier ouvert). Test médicament × rubrique : 33/47 au rang 1. Doc 20 §14.
    Agenda : absences (« non honorés »), annulations comptées, mois et jours nommés par le lecteur civil partagé ; patient :
    séance classée avant la dernière, « depuis combien d'années est-il suivi ». Rejoué sur C270 : agenda 13 → 22/40, patients
-   33/55, contexte 29/45, aucune perte. Doc 20 §15. À mesurer : C270 `p5`.
+   33/55, contexte 29/45, aucune perte. Doc 20 §15. Perte rattrapée (mois lus par l'agenda au détriment de l'activité) et « patients
+   venus au moins une fois » : finance 18/35, agenda 22/40, aucune perte. Doc 20 §16. À mesurer : C270 `p5`.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

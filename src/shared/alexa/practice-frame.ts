@@ -1,4 +1,4 @@
-import { unknownNameRuns } from "./patient-question";
+import { readFamily, unknownNameRuns } from "./patient-question";
 import { relativeFrenchPeriod } from "./civil-period";
 
 /**
@@ -68,11 +68,12 @@ function dayRange(phrase: string, asOf: string): { from: string; to: string } | 
 export type PracticeFrame ={ readonly text: string; readonly cashOnlyNotice: boolean };
 
 /** Activity of the practice: sessions, patients seen, new records, busiest days. */
-const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
+const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|patients\b[^?]*\b(?:ont consulte|sont venus|sont passes|au moins une fois)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
 export function activityQuestionFrame(text: string, asOf: string): string | null {
   const p = fold(text), q = withoutBusy(p);
   if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || SESSION_PAID.test(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
-  if (!ACTIVITY.test(p)) return null;
+  // A name or a pronoun makes it one person's question, never the practice's figures. A capital that only opens the sentence is no name.
+  if (!ACTIVITY.test(p) || readFamily(text.charAt(0).toLowerCase() + text.slice(1)) === "patient") return null;
   // "Patients suivis" and "jours les plus chargés" with no period speak of the current month. A period this frame cannot write
   // ("la semaine dernière", "l'an passé") is never replaced by the current month: the turn keeps its other routes.
   const read = period(p, asOf);

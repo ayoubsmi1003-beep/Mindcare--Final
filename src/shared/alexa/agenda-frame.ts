@@ -96,6 +96,7 @@ const HAVE_PEOPLE = /\b(?:j'ai|ai-je|on a|avons-nous|nous avons)\s+(?:du monde|d
 const CANCELLED = /\bqui (?:a|ont)\s+(?:annule|reporte|decale)\w*\b|\b(?:annulations?|rendez-vous annules)\b/u;
 // A patient who did not come: the gate's "non honoré" status. "Poser un lapin" is the everyday French for it.
 const ABSENT = /\b(?:absents?|absentes?|absences?|lapins?|no[- ]show|non (?:honore|excuse|venu)\w*|pas (?:venu|venue|venus|venues)\b|(?:ne|n') ?(?:s'est|se sont|est|sont) pas (?:presente|presentee|presentes|presentees|venu|venue|venus|venues))/u;
+const AGENDA_ITSELF = /\b(?:rendez-vous|rdv|absen\w*|annul\w*|lapins?|programme|prevu\w*|planning|agenda|presente\w*|venu\w*|honore\w*|excuse\w*)\b/u;
 const ABSENT_WORDS = /\b(?:annul\w*|absent\w*|absences?|lapins?|venu\w*|presente\w*|honore\w*|excuse\w*|pose\w*|ne|n|s|se|pas|non|show|no)\b/gu;
 const OVERVIEW = /\b(?:apercu|a quoi ressemble|les rendez-vous|les rdv|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme|au programme|quelque chose de prevu)\b/u;
 const NEXT = /\b(?:prochain|prochaine)\s+(?:patient|rendez-vous|rdv|consultation)\b|\bqui est le prochain\b|\ba quelle heure est (?:mon|le|ma) prochain\w*\b/u;
@@ -136,7 +137,9 @@ export function classifyAgendaQuestion(text: string, otherPeriod?: string | null
 /** The closed agenda question for this utterance, or null when unsure. Asked-back names or pronouns leave it to the older route. */
 export function agendaQuestionFrame(text: string, asOf: string): string | null {
   const { out } = foldWithMap(text);
-  const civil = PERIOD.test(out) ? null : civilPeriod(text, asOf);
+  // Over a month or a range, "consultations", "séances" or "patients vus" are the activity and money frames' figures: only
+  // appointments, absences or cancellations named as such are the agenda's.
+  const civil = PERIOD.test(out) || !AGENDA_ITSELF.test(out) || /\b(?:regl\w*|pay\w*|encaiss\w*|factur\w*)\b/u.test(out) ? null : civilPeriod(text, asOf);
   const question = classifyAgendaQuestion(text, civil);
   if (!question) return null;
   // Anything left once the agenda vocabulary is removed would be a name, a topic or a second request.

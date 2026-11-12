@@ -107,3 +107,18 @@ describe("sessions that were paid, and this month against last month", () => {
     expect(admission.applicationView).toBe("statistics");
   });
 });
+
+describe("activity: patients who came at least once", () => {
+  // Development wordings, never C270/H270.
+  it("reads it as the practice's figures over a month or a year the statistics read", () => {
+    expect(activity("Combien de patients sont venus au moins une fois cette année ?")).toBe("Montre-moi les statistiques de cette année");
+    expect(activity("Combien de patients ont consulté en septembre ?")).toBe("Montre-moi les statistiques de septembre 2026");
+    expect(frenchRequestAdmission(activity("Combien de patients sont passés ce mois-ci ?")!, false, ASOF)?.tools).toEqual(["query_app"]);
+  });
+  it("never for one named person, and never over a week the statistics cannot read", () => {
+    expect(activity("Combien de patients ont consulté Karim Test ?")).toBeNull();
+    expect(activity("Karim Test, combien de patients a-t-il vus ce mois-ci ?")).toBeNull();
+    expect(activity("Le patient a consulté combien de fois cette année ?")).toBeNull();
+    expect(activity("Combien de patients ont consulté la semaine dernière ?")).toBeNull();
+  });
+});
