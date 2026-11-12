@@ -38,7 +38,8 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    séance classée avant la dernière, « depuis combien d'années est-il suivi ». Rejoué sur C270 : agenda 13 → 22/40, patients
    33/55, contexte 29/45, aucune perte. Doc 20 §15. Perte rattrapée (mois lus par l'agenda au détriment de l'activité) et « patients
    venus au moins une fois » : finance 18/35, agenda 22/40, aucune perte. Doc 20 §16. **C270 `p5` (`713d045`) : 149/270**
-   (34/29/22/18/36/10) ; 16 gagnés, 0 perdu. Doc 20 §17. Suite : livres (44 échecs, dont 40 de recherche).
+   (34/29/22/18/36/10) ; 16 gagnés, 0 perdu. Doc 20 §17. Livres jamais routés (mots pris pour un nom, verbe d'écriture
+   décrivant, « est-il ») : +4 sur 131 tours rejoués, aucune perte. Doc 20 §18. Suite : critères DSM (11 échecs).
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

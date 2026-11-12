@@ -1,4 +1,5 @@
 ﻿import { isMedicationName } from "./medications";
+import { mentionsBookTopic } from "./book-topics";
 
 const common = new Set([
   "secondaire", "secondaires", "cabinet", "rendez-vous", "rendez",
@@ -41,7 +42,15 @@ for (const word of [
   "schizophrenie", "schizophrene", "schizoaffectif", "bipolaire", "delirant", "delirants", "insomnie", "dysthymie", "hyperactivite", "attention", "deficit", "alimentaires", "alimentaire", "prescription", "prescriptions",
   "parler", "durer", "diagnostiquer", "definir", "identifier", "evoquer", "poser", "reconnaitre", "distinguer", "ii", "iii", "iv", "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
 ]) common.add(word);
-const folded = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+// French function words are never part of a name: "c'est quoi exactement", "une place contre l'akathisie", "pour autant".
+for (const word of [
+  "quoi", "comment", "quand", "combien", "pourquoi", "ou", "lequel", "laquelle", "lesquels", "lesquelles", "quel", "quelle", "quels", "quelles",
+  "autant", "exactement", "vraiment", "aussi", "deja", "toujours", "jamais", "seulement", "bien", "mal", "tres", "trop", "peu", "plus", "moins",
+  "pas", "ne", "rien", "tout", "tous", "toute", "toutes", "ainsi", "alors", "donc", "puis", "ensuite", "surtout", "souvent", "parfois", "assez", "beaucoup", "environ",
+  "contre", "vers", "parmi", "sous", "malgre", "pendant", "durant", "lors", "envers", "via", "comme", "sauf", "hors",
+  "on", "ils", "elles", "nous", "vous", "je", "tu", "lui", "leur", "leurs", "y", "ca", "cela", "ceci", "celui", "celle", "ceux", "chacun", "chacune",
+]) common.add(word);
+const folded =(value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const scaleNames = new Set(["hamilton", "madrs"]);
 function candidateName(value: string | undefined): string | undefined {
   if (!value) return undefined;
@@ -70,9 +79,11 @@ export function parsePatientMention(text: string): PatientMention {
     const candidate = candidateName(leadingPour[1]);
     if (candidate?.includes(" ")) return { status: "named", name: candidate };
   }
-  const explicitPatient = /\b(?:patiente?s?|dossiers?|fiches?)\b|المريض|المريضة|ملف/u.test(normalized);
+  // "Si un patient sous X arrête de fumer": an indefinite patient is anyone, so it scopes no record.
+  const definite = normalized.replace(/\b(?:un|une)\s+patiente?\b/gu, " ");
+  const explicitPatient = /\b(?:patiente?s?|dossiers?|fiches?)\b|المريض|المريضة|ملف/u.test(definite);
   const localFieldPattern = /\b(?:allergies?|resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossiers?|fiches?|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|justificatifs?|brouillons?|suivis?\s+medic(?:al|ale|aux|ales)|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
-  const localFieldRead = [...normalized.matchAll(localFieldPattern)].length > 0;
+  const localFieldRead = [...definite.matchAll(localFieldPattern)].length > 0;
   // A single noun in a general symptom/diagnosis question is a topic.
   // Named single patients remain explicit through patient/dossier or quotes.
   const generalSingleTopic = (name: string | undefined, prefix: string): boolean => {
@@ -110,6 +121,8 @@ export function parsePatientMention(text: string): PatientMention {
   const direct = text.matchAll(/(?:(?<![\p{L}\p{N}])(?:r[eé]sum[eé]|synth[eè]se|consultations?|s[eé]ances?|traitements?|m[eé]dicaments?|diagnostics?(?:\s+(?:porte|portent)(?:\s+(?:actuellement|maintenant))?)?|notes?|[eé]chelles?|scores?|dossiers?(?:\s+(?:porte|contient|affiche|indique|pr[eé]sente))?|patient|patiente|prend)|ملخص|لخص|(?:ال)?(?:جلسة|جلسات|جلستان|جلستين|استشارة|استشارات|استشارتان|استشارتين))\s+/giu);
   for (const match of direct) {
     const start = match.index + match[0].length;
+    // "un patient dément", "une patiente obsédée": an indefinite patient is described, never named.
+    if (/^patiente?\s/iu.test(match[0]) && /\b(?:un|une)\s+$/iu.test(text.slice(0, match.index))) continue;
     const tail = text.slice(start, start + 100);
     if (/^[dl]['’]/iu.test(tail) && !/^patiente?\s/iu.test(match[0])) continue;
     const candidate = candidateName(tail);
@@ -190,12 +203,17 @@ export function parsePatientMention(text: string): PatientMention {
     // This stored document kind is a noun phrase; its patient follows a separate introducer.
     if (/^bonne\s+sant[eé]\s+mentale\b/iu.test(match[1] ?? "") && /\bcertificats?\s*$/iu.test(text.slice(0, match.index))) continue;
     const candidate = candidateName(match[1]);
+    // "pour prévenir une encéphalopathie": an infinitive with its object is a purpose, not a person.
+    if (/^pour\s/u.test(folded(match[0])) && candidate && !candidate.includes(" ") && /(?:er|ir|re|oir)$/u.test(folded(candidate))
+      && /^\s+(?:un|une|le|la|les|l['’]|des|du|de|d['’]|ce|cet|cette|ces|son|sa|ses|leur|leurs)(?![\p{L}])/iu.test((match[1] ?? "").slice(candidate.length))) continue;
     // Conditional phrases establish an identity only when they include a full name.
     if (/^si\s/u.test(folded(match[0])) && (!candidate || !candidate.includes(" "))) continue;
     if (generalSingleTopic(candidate, text.slice(0, match.index))) continue;
     // In medication questions an unquoted drug is a topic. A separately named
     // patient, "patient Lithium" or a quoted identity still resolves locally.
     if (candidate && medicineQuestion && (isMedicationName(candidate) || isMedicationName(candidate.split(/\s+/u)[0]!))) continue;
+    // "une séance d'eskétamine": one lower-case word naming a drug or a disorder the books treat is a topic in any question.
+    if (candidate && !candidate.includes(" ") && /^\p{Ll}/u.test(candidate) && mentionsBookTopic(candidate)) continue;
     // In "score de Hamilton", Hamilton names the scale. A quoted name or
     // "patient Hamilton" remains an explicit identity reference. Exclude this
     // eponym before counting distinct names, including a named mixed request.

@@ -510,13 +510,13 @@ export function isClinicalKnowledgeQuestion(text:string):boolean{
  if(isPracticeManagementQuestion(text))return false;
  if(questionConcernsAPerson(text))return false;
  // "de" must be the word itself: as a prefix it read "dépression majeure" as the name "pression majeure".
- if(mentionsAFullName(text)||/\b(?:de\s+|d')([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse)$/u.test(word)))return false;
+ if(mentionsAFullName(text)||/\b(?:de\s+|d')([\p{L}-]+)\s+([\p{L}-]+)\s*[?.!]*\s*$/u.exec(plain)?.slice(1).every(word=>!knownQuestionWord(word)&&!NOT_A_PERSON.test(word)&&!/(?:ie|ose|ite|isme|ique|ale|ive|aire|ence|ance|ome|ees?|eux|euse|tion|sion)$/u.test(word)))return false;
  if(isClosedDrugQuestion(text))return true;
  // "Risque de lithium pendant la grossesse": a drug and a clinical subject need no question word.
  if((mentionsMedication(plain)||mentionsBookTopic(plain))&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
  const bookTopic=mentionsBookTopic(text);
  // "Donépézil, dose de départ ?": a topic the books treat, asked as a question, needs no question word.
- if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-t-(?:il|elle|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$|\b(?:criteres?|definition)\b/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
+ if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-(?:t-)?(?:il|elle|ils|elles|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$|\b(?:criteres?|definition)\b/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
  return CLINICAL_TOPIC.test(plain)||((CLINICAL_STEMS.test(plain)||bookTopic)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
 }
 /** Psychiatric and pharmacological stems the closed topic list below misses: a question about one of them belongs to the books, never to the general model. */
@@ -725,6 +725,7 @@ function preparationTarget(text:string,selectedDocumentId?:string|null):Pick<Fre
 }
 
 /** Positive vocabulary narrows only a single supported domain; mixed requests retain the full native interpretation path. */
+const WRITE_VERB=/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|changer|change|changez|ajuster|ajuste|ajustez|augmenter|augmente|augmentez|diminuer|diminue|diminuez|arreter|arrete|arretez|cesser|cesse|cessez|interrompre|interrompt|interrompez|stopper|stoppe|stoppez|corriger|corrige|corrigez|rectifier|rectifie|rectifiez|passer|passe|passez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|generez|genere(?=\s+(?:un|une|le|la|les|des|du|ce|cette|mon|ma|mes|son|sa|ses)\b)|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/gu;
 export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:string,selectedDocumentId?:string|null):FrenchRequestAdmission{
  const plain=fold(text),chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain)&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(plain),chronologicalOrder=/\b(?:ordre chronologique|chronologiquement|du plus ancien au plus recent)\b/u.test(plain);
  const messageKind=messageDraftTarget(text);
@@ -743,10 +744,18 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  const receivableRead=/\b(?:reste|restant|solde|impayes?)\s+a\s+encaisser\b/u.test(plain);
  const comparisonQuestion=/^\s*(?:alexa[, :]\s*)?qu['’]est[- ]ce qui a chang\w*\b/u.test(plain);
  const noMutation=/\b(?:sans|ne\s+pas|n['’]\s*pas)\s+(?:ajouter|ajoute|modifier|modifie|changer|change|supprimer|supprime|creer|cree|enregistrer|enregistre|arreter|arrete|suspendre|suspends|reprendre|reprends)\b/u.test(plain);
- const write=!noMutation&&!receivableRead&&!comparisonQuestion&&/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|changer|change|changez|ajuster|ajuste|ajustez|augmenter|augmente|augmentez|diminuer|diminue|diminuez|arreter|arrete|arretez|cesser|cesse|cessez|interrompre|interrompt|interrompez|stopper|stoppe|stoppez|corriger|corrige|corrigez|rectifier|rectifie|rectifiez|passer|passe|passez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|generez|genere(?=\s+(?:un|une|le|la|les|des|du|ce|cette|mon|ma|mes|son|sa|ses)\b)|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
+ const writeVerbs=[...plain.matchAll(WRITE_VERB)];
+ const write=!noMutation&&!receivableRead&&!comparisonQuestion&&writeVerbs.length>0;
  // "Comment arrêter une benzodiazépine ?" asks what the references say; it stops nothing.
  const howToQuestion=/^(?:alexa\W+)?comment\s+(?:faut-il\s+|peut-on\s+|doit-on\s+)?(?:arreter|stopper|interrompre|cesser|sevrer|reduire|diminuer|augmenter|passer)\b/u.test(plain)&&isClinicalKnowledgeQuestion(text);
- if(write&&!howToQuestion)return {profileOnly:false};
+ // "Quand on arrête la valbénazine", "qu'est-ce qui change", "si un patient arrête de fumer", "faut-il arrêter":
+ // in a book question a verb with its own subject, or asked about, describes; only a command writes.
+ const described=()=>isClinicalKnowledgeQuestion(text)&&writeVerbs.every(verb=>{
+  const clause=plain.slice(0,verb.index).split(/[,;:?!.]/u).at(-1)??'';
+  // A pronoun after a hyphen ("ont-ils changé") belongs to an auxiliary: no subject of the verb itself.
+  return /(?:^|\s)(?:on|il|elle|ils|elles|qui|ne|n'|se|s')\s+$/u.test(clause)||/^-(?:t-)?(?:il|elle|ils|elles|on)\b/u.test(plain.slice(verb.index+verb[0].length))||/^\s*(?:si|s'|quand|lorsque|lorsqu')\b/u.test(clause)||/\b(?:faut-il|doit-on|peut-on|faudrait-il|devrait-on)\b/u.test(clause);
+ });
+ if(write&&!howToQuestion&&!described())return {profileOnly:false};
  const clinical=/\b(?:notes?|historique|consult\w*|seances?|diagnosti\w*|traitements?|echelles?|symptom\w*|analyse\w*|ordonn\w*|certificats?|medic\w*|prescri\w*|therap\w*|stress|sommeil|risques?|humeur|sante|dsm|cim|icd|taylor|maudsley)\b/u.test(plain);
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);
  if(clinical&&finance)return {profileOnly:false};

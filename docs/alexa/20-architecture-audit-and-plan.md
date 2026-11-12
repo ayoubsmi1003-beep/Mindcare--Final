@@ -242,3 +242,14 @@ Replayed on C270 against `p4`: agenda 13 → 22 / 40, finance 17 → 18 / 35, 10
 16 gained, none lost (agenda 9, patients 3, context 2, finance 1, books 1: L043). Turns reaching the local model: 86 (93 in `p4`).
 Book passages: 240/241 word for word. Rule 2: every judged failure is Alexa's; 1 test-data limitation. Largest remaining
 group: book retrieval (40 turns), then facts missing from an answer (37), then which patient (23).
+
+## 18. Book questions that never reached the books (16 turns in `p5`)
+| Capability | Cause | Fix |
+|---|---|---|
+| Who it is about (name parser) | Ordinary words were read as a patient's name, and a name sends a question to the record: "pour retenir une…", "c'est quoi exactement", "une place contre l'akathisie", "chez un patient dément", "pour autant" | French function words (interrogatives, adverbs, prepositions, pronouns) are never part of a name; "pour" + infinitive + article is a purpose; "un patient …" / "une patiente …" describes, it names no record (and scopes none); one lower-case word naming a drug or disorder of the books is a topic |
+| Understanding (write or read) | A write verb anywhere made the sentence a write request: "quand on arrête la valbénazine", "qu'est-ce qui change", "ne passe pas", "si un patient arrête de fumer" | In a book question, a verb with its own subject, in a "si/quand/lorsque" clause, followed by "-t-il", or asked about ("faut-il arrêter") describes; commands and any sentence about a named or possessed patient keep the write route |
+| Understanding (question form) | "est-il", "sont-ils" were not seen as questions; "agent de tranquillisation rapide" ended like a full name | Any verb–pronoun inversion is a question; words ending in -tion/-sion are not a name |
+Unit tests: `alexa-book-routing-grammar.test.ts` (development wordings, real names and commands kept). Replayed on C270 (16 book
+cases, patients, context, variation: 131 turns): 4 gained (L007, L014, L059, V004), none lost, no patient changed. Seven more
+book turns now reach the right drug's monograph and fail on the rubric (retrieval). L027 (a case description), L060 (thiamine:
+Maudsley's vocabulary is not in the generated topic list) and L079 (a generic "médicament … arrêter") are still not routed.
