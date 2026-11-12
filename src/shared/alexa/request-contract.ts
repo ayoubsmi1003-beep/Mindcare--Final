@@ -122,6 +122,10 @@ export function explicitFrenchCurrentMonthRange(text:string,asOf?:string):{from:
  const cabinetDate=new Date(Date.parse(asOf)+3_600_000),year=cabinetDate.getUTCFullYear(),month=cabinetDate.getUTCMonth()+1,next=month===12?{year:year+1,month:1}:{year,month:month+1};
  return {from:`${year}-${String(month).padStart(2,'0')}-01T00:00:00+01:00`,to:`${next.year}-${String(next.month).padStart(2,'0')}-01T00:00:00+01:00`};
 }
+/** The one period a sentence names, by the same readers as the consultation admission, in the same order. */
+export function namedFrenchPeriod(text:string,asOf?:string):{from:string;to:string}|null{
+ return explicitFrenchDateRange(text,asOf)??explicitFrenchDayRange(text,asOf)??explicitFrenchMonthRange(text)??explicitFrenchSingleMonthRange(text,asOf)??explicitFrenchCurrentMonthRange(text,asOf)??relativeFrenchPeriod(text,asOf);
+}
 /** Two named consultation months in a comparison stay separate half-open periods. */
 export function explicitFrenchComparedMonthRanges(text:string,asOf?:string):{month:typeof frenchMonths[number];year:number;from:string;to:string}[]|null{
  const plain=fold(text);

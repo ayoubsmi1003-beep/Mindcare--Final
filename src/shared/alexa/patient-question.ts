@@ -1,4 +1,4 @@
-import { mayBeAName, mentionsClinicalTopic } from "./request-contract";
+import { mayBeAName, mentionsClinicalTopic, namedFrenchPeriod } from "./request-contract";
 
 /**
  * A doctor asks about a patient in many ways ("Il prend quoi comme cachets ?", "Depuis quand je le suis ?",
@@ -44,7 +44,21 @@ const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
 // ── Who it is about ───────────────────────────────────────────────────────────
 const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b/u;
 const NOT_THE_PATIENT = /\b(?:mere|pere|frere|soeur|epoux|epouse|conjoint\w*|fils|fille|famille|parents?|enfants?|amis?|proches?)\b/u;
-const OTHER_SCOPE = /\b(?:patients|patientes|(?:du|de tout le|dans tout le|de l'ensemble du|pour tout le) cabinet|agenda|planning|tous|toutes|aujourd'hui|demain|hier|semaine|semaines|mois|annee|matin|soir|midi|apres-midi|recettes?|impayes?)\b/u;
+const GROUP_SCOPE = /\b(?:patients|patientes|(?:du|de tout le|dans tout le|de l'ensemble du|pour tout le) cabinet|agenda|planning|tous|toutes|recettes?|impayes?)\b/u;
+const CALENDAR_SCOPE = /\b(?:aujourd'hui|demain|hier|semaine|semaines|mois|annee|matin|soir|midi|apres-midi)\b/u;
+// A rank among visits ("la dernière séance", "les trois dernières fois") is not a calendar period.
+const RANKED_VISIT = /\b(?:\d+ |deux |trois |quatre |cinq )?(?:avant-)?(?:derni\w*|preced\w*|prochain\w*|premi\w*)\s+(?:seances?|consultations?|visites?|fois|rendez-vous|rdv|notes?|entretiens?|passages?)\b|\bla (?:derniere|premiere|prochaine) fois\b/gu;
+const PERIOD_WORD = /\b(?:(?:19|20)\d{2}|an|annees?|mois|semaines?|trimestres?|semestres?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd'hui|avant-hier|hier|apres-demain|demain|entre|jusqu\w*)\b|\bdepuis (?!quand\b|combien\b|(?:le |son |leur )?debut\b(?!\s+(?:du|de la|de l'|de cette|de ce)\b))|\d{1,2}\/\d{1,2}/u;
+/** Whether the question names a calendar period: read (its bounds), unreadable, or none. */
+function namedPeriod(text: string, asOf: string | undefined): { from: string; to: string } | "unreadable" | null {
+  // "Depuis combien d'années ?" asks a duration, not over which period.
+  if (!PERIOD_WORD.test(fold(text).replace(RANKED_VISIT, " ").replace(/\b(?:depuis|il y a) combien (?:de |d')\w+/gu, " "))) return null;
+  return namedFrenchPeriod(text, asOf) ?? "unreadable";
+}
+const shortDate = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;
+const lastDay = (iso: string) => new Date(Date.parse(`${iso.slice(0, 10)}T00:00:00Z`) - 86_400_000).toISOString().slice(0, 10);
+/** The bounds in the form the admission reads back: "du 01/01/2025 au 31/12/2025" (inclusive). */
+export const periodWords = (period: { from: string; to: string }) => `du ${shortDate(period.from)} au ${shortDate(lastDay(period.to))}`;
 /** Words of the frame itself; anything else Latin and unknown to the question vocabularies may be a name. */
 const FRAME_WORDS = /^(?:alexa|cabinet|clinique|dates|periode|dis|dites|moi|me|stp|svp|plait|merci|oui|non|et|ou|mais|donc|alors|aussi|bien|bon|ben|euh|ah|tu|vous|peux|pouvez|peut|pourrais|pourriez|voudrais|veux|souhaite|sais|savez|sait|dire|rappelle|rappeler|rappelez|montre|montrer|affiche|afficher|donne|donner|fais|faire|fait|vois|voir|trouve|cherche|ouvre|passe|passons|reviens|revenons|maintenant|encore|aussi|toujours|petit|petite|gros|grand|beaucoup|peu|moins|plus|tres|trop|ici|la|là|quoi|comme|comment|quand|combien|quel|quelle|quels|quelles|qui|que|qu|dont|ceci|cela|ca|ce|cet|cette|ces|celui|celle|ceux|celles|mon|ma|mes|notre|nos|votre|vos|son|sa|ses|leur|leurs|il|elle|ils|elles|lui|eux|je|j|nous|on|y|en|le|les|un|une|des|du|de|d|au|aux|sur|sous|dans|chez|par|pour|avec|sans|selon|vers|entre|apres|avant|depuis|pendant|jusqu|est|sont|etait|etaient|ete|etre|a|ai|as|avons|avez|ont|avait|avaient|eu|eues|eue|aurait|va|vont|faut|doit|dois|dit|dire|ces|temps|fois|moment|jour|jours|toute|tous|tout|toutes|rien|chose|choses|truc|machin|cas|monde|gens|personne|personnes|mme|mlle|madame|mademoiselle|monsieur|docteur|dr|patient|patiente|patients|malade|dossier|fiche|etat|situation|nouvelles|essentiel|point|points|resume|synthese|informations|information|infos|info|historique|parcours|traitement|traitements|medicament|medicaments|medocs|cachets|comprimes|gelules|ordonnance|prescription|posologie|dose|doses|molecule|molecules|consultation|consultations|seance|seances|visite|visites|rendez|vous|rdv|dernier|derniere|dernieres|derniers|premier|premiere|premieres|premiers|precedent|precedente|precedentes|precedents|recent|recente|recentes|recents|prochain|prochaine|actuel|actuelle|actuellement|avant|apres|deja|jamais|evolue|evolution|diagnostic|diagnostics|echelle|echelles|score|scores|document|documents|certificat|certificats|venu|venue|venus|vu|vue|vus|passe|suis|suit|suivi|suivre|sais|savoir|parle|parler|raconte|retrace|prend|prends|prenait|pris|sous|noter|note|dit|dits|parle|parles|presente|presentes|resume|resumes|explique|dresse|indique|indiquer|vient|revient|reviendra|deux|trois|quatre|cinq)$/u;
 
@@ -99,7 +113,7 @@ export function readFamily(text: string): "patient" | "practice" | null {
   // Days and slots are not names, even typed in lower case next to an unknown verb ("viennent vendredi").
   const calendar = /\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|journ[ée]e|cr[ée]neaux?|programme)\b/giu;
   if (PRONOUN_CUE.test(p) || /\bon (?:le|la|l')|\b(?:le|la|l')(?: ?[a-z]+)-on\b|\[x\]/u.test(p) || unknownRuns(text.replace(calendar, " ")).some((run) => run.words.length >= 2 || run.upper)) return "patient";
-  return OTHER_SCOPE.test(p) || calendar.test(fold(text)) ? "practice" : null;
+  return GROUP_SCOPE.test(p) || CALENDAR_SCOPE.test(p) || calendar.test(fold(text)) ? "practice" : null;
 }
 function unknownRuns(text: string): Run[] {
   const tokens = [...text.matchAll(/[\p{L}][\p{L}'’-]*/gu)].flatMap((match) => {
@@ -129,9 +143,10 @@ function unknownRuns(text: string): Run[] {
  * Who the question is about. `named` when two to four unknown words in a row can only be a name; `context` when it
  * speaks of the patient on screen or in the conversation; null when unsure (the previous route then asks).
  */
-export function patientSubject(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }, section: PatientSectionKey): PatientSubject | null {
+export function patientSubject(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean; periodRead?: boolean }, section: PatientSectionKey): PatientSubject | null {
   const p = fold(text);
-  if (NOT_THE_PATIENT.test(p) || OTHER_SCOPE.test(p)) return null;
+  // A day or a period speaks of the practice, unless the caller reads that period for this patient.
+  if (NOT_THE_PATIENT.test(p) || GROUP_SCOPE.test(p) || (!options.periodRead && CALENDAR_SCOPE.test(p))) return null;
   // The caller found no patient of that name: the unknown words are vocabulary the lists lack ("changé récemment"), not a name.
   // A capitalised unknown word is a name by every reading; if the search found nobody of that name, the question is not about the
   // patient on screen either (it must never turn into a read of the patient already selected): the previous route asks.
@@ -154,6 +169,8 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
   // "au cabinet" with nobody in the sentence asks about the clinic, not about the patient on screen.
   if (/\bcabinet\b/u.test(p) && !cue) return null;
   if (cue) return { kind: "context" };
+  // "Combien de séances la semaine dernière ?": a day or a week with no pronoun is the practice's count, as before.
+  if (options.periodRead && CALENDAR_SCOPE.test(p)) return null;
   // Words that were taken for a name and found nobody: without a pronoun or "ce patient", nothing says the question is about the patient on screen.
   if (options.ignoreUnknownWords) return null;
   // Without a pronoun, only questions that no book could answer may speak of the patient on screen.
@@ -165,8 +182,9 @@ export function patientSubject(text: string, options: { contextPatient: boolean;
 
 const SELECTED = "du patient sélectionné";
 /** The closed question the audited gates answer. Named subjects use forms the name parser reads reliably. */
-export function renderPatientQuestion(question: PatientQuestion, subject: PatientSubject): string {
+export function renderPatientQuestion(question: PatientQuestion, subject: PatientSubject, period?: { from: string; to: string }): string {
   const named = subject.kind === "named" ? subject.name : null;
+  if (question.section === "count" && period) return named ? `Nombre de consultations pour ${named} ${periodWords(period)}.` : `Combien de consultations a le patient sélectionné ${periodWords(period)} ?`;
   switch (question.section) {
     case "summary": return named ? `Résumé de ${named}.` : "Résume le dossier du patient sélectionné.";
     case "history": return named ? `Quel est l'historique médical de ${named} ?` : "Montre l'historique du patient sélectionné.";
@@ -189,12 +207,24 @@ export function renderPatientQuestion(question: PatientQuestion, subject: Patien
 }
 
 /** The whole step: the closed question for this utterance, or null when the utterance is not clearly one. */
-export function patientQuestionFrame(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }):{ text: string; subject: PatientSubject; section: PatientSectionKey } | null {
+export function patientQuestionFrame(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }, asOf?: string):{ text: string; subject: PatientSubject; section: PatientSectionKey } | null {
   const question = classifyPatientQuestion(text);
   if (!question) return null;
-  const subject = patientSubject(text, options, question.section);
+  const period = patientPeriod(text, question.section, asOf);
+  if (period === "refuse") return null;
+  const subject = patientSubject(text, { ...options, periodRead: !!period }, question.section);
   if (!subject) return null;
-  return { text: renderPatientQuestion(question, subject), subject, section: question.section };
+  return { text: renderPatientQuestion(question, subject, period ?? undefined), subject, section: question.section };
+}
+
+/**
+ * The period a patient question carries. Only a visit count is read over a period; any other section, or a period the
+ * readers cannot bound, is refused ("refuse"): never the whole record in silence. Null when the question names no period.
+ */
+export function patientPeriod(text: string, section: PatientSectionKey, asOf: string | undefined): { from: string; to: string } | "refuse" | null {
+  const period = namedPeriod(text, asOf);
+  if (period === null) return null;
+  return section === "count" && period !== "unreadable" ? period : "refuse";
 }
 
 /**

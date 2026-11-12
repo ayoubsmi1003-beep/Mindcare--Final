@@ -13,7 +13,7 @@ import { ALEXA_GENERAL_SOURCE } from "@/i18n/alexa-general";
 import { resolvePatient } from "./patient-resolver";
 import { withConsultationPatient } from "./consultation-context";
 import { firstNameMatches } from "./first-name-search";
-import { patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
+import { patientPeriod, patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
 import { agendaQuestionFrame, algiersTimestamp, periodFollowup } from "@/shared/alexa/agenda-frame";
 import { activityQuestionFrame, financePeriodFollowup, financeQuestionFrame } from "@/shared/alexa/practice-frame";
 import { buildClinicalContext } from "./clinical-context";
@@ -54,6 +54,8 @@ import type { TurnTraceRecorder } from "./turn-trace";
 import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
 export { isKnowledgeFollowup, knowledgeFollowupQuestion };
 import { z } from "zod";
+// The frame already refused a period it cannot carry; here only its bounds are kept.
+const periodOf = (period: ReturnType<typeof patientPeriod>) => (period && period !== "refuse" ? period : undefined);
 
 /** Deterministic application aggregates that the local 1B router often misses. */
 function deterministicAggregateCall(text: string, asOf: string): AgentCall | null {
@@ -399,11 +401,11 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     if(switchFollowup&&(await resolvePatient(dependencies.db,{name:switchFollowup.name},signal,asOf)).status==='absent')switchFollowup=null;
     const frameOptions={contextPatient:!!input.appContext.patientId,followup:!!previous?.selectedPatientId};
     let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
-      :patientQuestionFrame(agentInput.text,frameOptions);
+      :patientQuestionFrame(agentInput.text,frameOptions,asOf);
     // One word that may be a first name: one patient reads, several are a question for the doctor, none is vocabulary.
     if(patientFrame?.subject.kind==='named'&&!/\s/u.test(patientFrame.subject.name)){
       const found=await firstNameMatches(dependencies.db,patientFrame.subject.name,signal);
-      if(found&&found.matches.length===1&&!found.truncated){const match=found.matches[0]!,full=`${match.first} ${match.last}`;patientFrame={...patientFrame,subject:{kind:'named',name:full},text:renderPatientQuestion({section:patientFrame.section,n:3},{kind:'named',name:full})};}
+      if(found&&found.matches.length===1&&!found.truncated){const match=found.matches[0]!,full=`${match.first} ${match.last}`;patientFrame={...patientFrame,subject:{kind:'named',name:full},text:renderPatientQuestion({section:patientFrame.section,n:3},{kind:'named',name:full},periodOf(patientPeriod(agentInput.text,patientFrame.section,asOf)))};}
       else if(found&&found.matches.length>=1&&(found.matches.length>1||found.truncated)){
         const choices=found.matches.slice(0,5).map(match=>({patientId:match.patientId,label:`${match.first} ${match.last}`}));
         dependencies.trace?.route('closed');dependencies.trace?.followup('first-name-choice');
@@ -413,9 +415,9 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
         emit({type:"done",patientId:null,patientScope:"preserve",sourceRevision:null,coverage:null,limited:true,status:"needs_input",speechAllowed:true,parts:[{id:"which_patient",goal:input.text,conditions:[],dependsOn:[],status:"needs_input",resultRefs:[],reason:alexaIdentityCopy.whichPatient([],false)}]});
         return;
       }
-      else if(found&&found.matches.length===0)patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+      else if(found&&found.matches.length===0)patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true},asOf);
     }
-    if(patientFrame?.subject.kind==='named'&&/\s/u.test(patientFrame.subject.name)&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true});
+    if(patientFrame?.subject.kind==='named'&&/\s/u.test(patientFrame.subject.name)&&(await resolvePatient(dependencies.db,{name:patientFrame.subject.name},signal,asOf)).status==='absent')patientFrame=patientQuestionFrame(agentInput.text,{...frameOptions,ignoreUnknownWords:true},asOf);
     const wordFrameText=appliedToPatient??patientFrame?.text??(patientFollowup.kind==='rewrite'?patientFollowup.text:null)??agendaFrame??practiceFrame?.text??switchFollowup?.text??null;
     // Wording no frame knows: which closed read it MEANS (semantic-intent.ts). Only a read with nothing else to go on: never a
     // change, never a book question, never what the closed admission already understood. The read itself stays on its gate.

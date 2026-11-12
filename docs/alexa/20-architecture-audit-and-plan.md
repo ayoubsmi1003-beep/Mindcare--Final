@@ -163,3 +163,22 @@ only unjudged turns are test-data limitations (1 BLOCKED, 1 not verified).
 | Entity extraction | "avant-hier" was taken for a patient's name and removed before the period was read | Calendar words are never names |
 | Period | "patients vus la semaine dernière" was answered **for the current month** | An activity question over a period its frame cannot write is no longer defaulted to the month |
 Tests: `alexa-patient-names.test.ts` (21), `alexa-civil-period.test.ts` (25), development wordings only.
+
+**C270 `p3` (`6829422`): 127/270 turns** (patients 28/55, context 24/45, agenda 13/40, finance 17/35, books 35/80, variation
+10/15). Gains over `p2`: P029, P048, X001 (2 turns), X016#3, A030, V010, P055, F011; no turn lost. Still wrong: X003, where a
+three-word lower-case name was not found and the following pronoun then read the patient on screen (2 turns), and P042, where an
+exact full name was offered among sound-alikes. Rule 2: every judged failure is Alexa's; 1 turn is a test-data limitation.
+
+## 11. A patient's visit count over a period
+In `p3`, "<nom> a consulté combien de fois l'an passé ?" and "Depuis janvier, combien de séances ?" were answered with the
+count of the **whole record**: the patient frame recognised a count and dropped the period. "Son traitement de l'an passé" lost
+its period the same way. This is a silent wrong answer, the worst kind.
+| Capability | Cause | Fix |
+|---|---|---|
+| Argument construction | The patient frame's canonical sentences have no period slot | A count carries the period as explicit dates ("du 01/01/2025 au 31/12/2025"), read by the same readers as the consultation admission (`namedFrenchPeriod`) |
+| Argument construction | Any other section, or a period no reader can bound ("septembre et octobre", "ce semestre"), would silently cover all dates | The frame is refused; the turn keeps its previous route, which asks for dates |
+| Answer | "Ce dossier contient 12 consultations" does not say over which period | The count sentence names the period first ("Du 01/01/2025 au 31/12/2025, ce dossier contient…") |
+| Entity scope | A day or week word made every patient question "the practice" | Kept for questions with no pronoun or name; with "il", "lui" or a name, the period applies to that patient |
+Words that only look like a period are not one: "antidépresseur" (no word boundary before), "depuis combien d'années" (a
+duration), "la dernière séance" (a rank). Tests: `alexa-patient-count-period.test.ts` (13), development wordings only.
+

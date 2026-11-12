@@ -1,6 +1,6 @@
 import { agendaPeriodOf, renderAgendaQuestion } from "./agenda-frame";
 import type { CatalogueIntent } from "./intent-catalogue";
-import { patientSubject, renderPatientQuestion } from "./patient-question";
+import { patientPeriod, patientSubject, renderPatientQuestion } from "./patient-question";
 import { practiceQuestionFor } from "./practice-frame";
 
 /**
@@ -13,9 +13,11 @@ export function renderIntent(intent: CatalogueIntent, text: string, options: { c
   const plain = (value: string | null) => (value ? { text: value, contextPatient: false } : null);
   switch (target.family) {
     case "patient": {
-      const subject = patientSubject(text, options, target.section);
+      const period = patientPeriod(text, target.section, asOf);
+      if (period === "refuse") return null;
+      const subject = patientSubject(text, { ...options, periodRead: !!period }, target.section);
       if (!subject) return null;
-      const question = renderPatientQuestion(target.section === "prev" ? { section: "prev", n: 3 } : { section: target.section }, subject);
+      const question = renderPatientQuestion(target.section === "prev" ? { section: "prev", n: 3 } : { section: target.section }, subject, period ?? undefined);
       return subject.kind === "named" ? { text: question, contextPatient: false, name: subject.name } : { text: question, contextPatient: subject.kind === "context" };
     }
     case "agenda": return plain(renderAgendaQuestion(target.intent, target.intent === "next" ? null : agendaPeriodOf(text, asOf)));

@@ -24,7 +24,10 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    comme un nombre de consultations — garde `PATIENT_MONEY` ajoutée) ; 106 tours au modèle 1B ; médiane 2,0 s ; 0 écho. Doc 20 §9.
    Phase 3 (`d6529e7`) : nom repéré parmi des mots inconnus, résolveur tolérant un mot collé, même contrôle par la recherche pour la
    lecture par le sens, le modèle général ne répond plus sur une personne (il avait inventé un âge). Périodes (`6829422`) : un lecteur
-   unique des périodes civiles (`civil-period.ts`). Rapport : chaque échec classé (règle 2). **C270 `p3` lancée** sur `6829422`. Doc 20 §10.
+   unique des périodes civiles (`civil-period.ts`). Rapport : chaque échec classé (règle 2). **C270 `p3` (`6829422`) : 127/270**
+   (28/24/13/17/35/10) ; 9 gagnés, 0 perdu ; restent 2 lectures d'un autre patient (X003, nom de 3 mots non trouvé puis pronom). Doc 20 §10.
+   Nombre de séances d'un patient sur une période (« l'an passé », « depuis janvier ») : la période était perdue, le dossier entier
+   compté — désormais lue, citée dans la réponse, ou refusée si illisible. Doc 20 §11.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.
