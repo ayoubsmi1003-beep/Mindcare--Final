@@ -165,8 +165,11 @@ export async function resolvePatient(db: Pick<DbPort, "rpc">, input: { readonly 
   const result = await resolveWrittenName(db, input, signal, asOf);
   const words = input.name?.trim().split(/\s+/u) ?? [];
   // "Yanis Bellil juste avant…": an everyday word glued to a name. One word off either edge, kept only when it names one
-  // patient exactly; anything less certain keeps the first answer (absent, or the close names to choose from).
-  if (words.length >= 3 && words.length <= 5 && (result.status === "absent" || (result.status === "ambiguous" && result.suggested))) {
+  // patient exactly; anything less certain keeps the first answer (absent, or the close names to choose from). A list where
+  // someone carries every written word is a real choice between people of that name: it is never trimmed away.
+  const written = words.map((word) => normalise(word));
+  const someoneHasThatName = result.status === "ambiguous" && result.candidates.some((row) => { const parts = normalise(row.label).split(/[\s,()-]+/u); return written.every((word) => parts.includes(word)); });
+  if (words.length >= 3 && words.length <= 5 && (result.status === "absent" || (result.status === "ambiguous" && !someoneHasThatName))) {
     for (const trimmed of [words.slice(0, -1), words.slice(1)]) {
       const retry = await resolveWrittenName(db, { name: trimmed.join(" ") }, signal, asOf);
       if (retry.status === "resolved" || retry.status === "cancelled") return retry;

@@ -241,7 +241,7 @@ function ordinalPhoneFollowup(text:string,previous:WorkingReference|null):string
  if(!/^(?:le|la)?\s*(?:premier|deuxieme|second)\b[^.!?]{0,30}\bnumero\b[^.!?]{0,30}\bappartient\b/u.test(plain))return null;
  const match=previous.lastRequest.match(/t[ée]l[ée]phone de (.+?)(?:,)?\s+puis (?:celui|celle) de (.+?)[.!?]*$/iu);
  if(!match?.[1])return null;
- return `Affiche le profil de ${match[1].trim()}.`;
+ return `Affiche le profil du patient ${match[1].trim()}.`;
 }
 function treatmentFrequencyFollowup(text:string,previous:WorkingReference|null,asOf:string):string|null {
  if(!previous?.lastRequest)return null;

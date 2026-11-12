@@ -194,3 +194,11 @@ Measured on the evaluation database (read-only): **29 → 32 / 47 at rank 1, 36 
 lost. Remaining misses are mostly wrong-book choices (a Maudsley chapter or a DSM section ranked first) and a neighbouring
 rubric of the right drug ("Children and Adolescents" for "Commonly Prescribed for").
 
+## 13. The named patient survives the rewrite (X003, P042 in `p3`)
+| Capability | Cause | Fix |
+|---|---|---|
+| Entity extraction | The closed question for a named profile or age, "Affiche le profil de <nom>.", is a form the name parser does not read: the name was lost, the read fell back on the open record and was refused ("Je ne suis pas sûre que cette question vise le dossier ouvert") | "Affiche le profil du patient <nom>.", the form the selected-patient version already used; same fix in the phone follow-up rewrite |
+| Entity resolution | "<nom> cumule combien…": the glued verb made the search return a list of close names; the edge-word retry ran only when the search found nobody | Also on a list, unless one of the listed people carries every written word (a real choice between people of that name) |
+A guard test now renders every patient section with lower-case, capitalised and three-word names and checks that the parser
+reads back the same name and that the question is admitted to one tool. It would have caught the profile form.
+

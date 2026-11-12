@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { classifyPatientQuestion, patientSubject } from "@/shared/alexa/patient-question";
+import { classifyPatientQuestion, patientSubject, renderPatientQuestion, type PatientSectionKey } from "@/shared/alexa/patient-question";
+import { parsePatientMention } from "@/shared/alexa/patient-mention";
+import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
 import { resolvePatient } from "@/server/alexa/patient-resolver";
 import { canAnswerGeneralAlexa } from "@/server/alexa/model-gateway";
 
@@ -46,6 +48,22 @@ describe("a name with an everyday word glued to it", () => {
     expect(await resolvePatient(db as never, { name: "yanis bellil juste" })).toMatchObject({ status: "resolved", patientId: id(1) });
     expect(await resolvePatient(db as never, { name: "voir yanis bellil" })).toMatchObject({ status: "resolved", patientId: id(1) });
   });
+  it("drops the glued word when the search offered a list of close names", async () => {
+    const listing = { rpc: async (name: string, args: Record<string, unknown>) => {
+      // The search door returns approximate rows for the three words: a list, none of them carrying every word.
+      if (name === "search_patients" && args["p_query"] === "yanis bellil cumule") return { ok: true, data: people.map((p) => ({ ...p, total_count: 2 })) };
+      return db.rpc(name, args);
+    } };
+    expect(await resolvePatient(listing as never, { name: "yanis bellil cumule" })).toMatchObject({ status: "resolved", patientId: id(1) });
+  });
+  it("keeps the choice when someone carries every written word", async () => {
+    const twins = [...people, { id: id(3), first_name: "Yanis Bellil", last_name: "Cumule", total_count: 1 }, { id: id(4), first_name: "Yanis", last_name: "Bellil Cumule", total_count: 1 }];
+    const both = { rpc: async (name: string, args: Record<string, unknown>) => {
+      if (name === "search_patients" && args["p_query"] === "yanis bellil cumule") return { ok: true, data: twins.slice(2).map((p) => ({ ...p, total_count: 2 })) };
+      return db.rpc(name, args);
+    } };
+    expect((await resolvePatient(both as never, { name: "yanis bellil cumule" })).status).toBe("ambiguous");
+  });
   it("never guesses when the trimmed name is not one patient", async () => {
     expect((await resolvePatient(db as never, { name: "bellil juste demain" })).status).not.toBe("resolved");
     expect((await resolvePatient(db as never, { name: "fasse entrer" })).status).toBe("absent");
@@ -54,4 +72,18 @@ describe("a name with an everyday word glued to it", () => {
 
 describe("the next appointment, said with any word of a visit", () => {
   it.each(["Elle repasse quand, la prochaine fois ?", "Son prochain passage, c'est pour quand ?", "Il est attendu quand la prochaine fois ?", "La prochaine visite de Salim Ouared ?"])("%s", (text) => expect(classifyPatientQuestion(text)?.section).toBe("nextappt"));
+});
+
+describe("every closed question names the patient in a form the name parser reads", () => {
+  // "Affiche le profil de <nom>." was read as nobody: the turn fell back on the open record, then refused.
+  const sections: PatientSectionKey[] = ["summary", "history", "treatments", "treatchanges", "bounds", "count", "lastnote", "prev", "nextappt", "documents", "scales", "diagnoses", "evolution", "identity"];
+  it.each(sections.flatMap((section) => ["yanis bellil", "Nadia Kerrouche", "amel sara sahraoui"].map((name) => [section, name] as const)))("%s, %s", (section, name) => {
+    const text = renderPatientQuestion({ section, n: 3 }, { kind: "named", name });
+    expect(parsePatientMention(text)).toEqual({ status: "named", name });
+    expect(frenchRequestAdmission(text, false).tools?.length).toBe(1);
+  });
+  it("also with the period of a count", () => {
+    const text = renderPatientQuestion({ section: "count" }, { kind: "named", name: "yanis bellil" }, { from: "2025-01-01T00:00:00+01:00", to: "2026-01-01T00:00:00+01:00" });
+    expect(parsePatientMention(text)).toEqual({ status: "named", name: "yanis bellil" });
+  });
 });

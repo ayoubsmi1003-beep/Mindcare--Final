@@ -202,7 +202,7 @@ export function renderPatientQuestion(question: PatientQuestion, subject: Patien
     case "diagnoses": return named ? `Quels diagnostics actifs pour ${named} ?` : "Quels diagnostics actifs pour le patient sélectionné ?";
     // The evolution of a record is read from the same recorded fields as its summary: dates, treatment, latest notes, no interpretation.
     case "evolution": return renderPatientQuestion({ section: "summary" }, subject);
-    case "identity": return named ? `Affiche le profil de ${named}.` : "Affiche le profil du patient sélectionné.";
+    case "identity": return named ? `Affiche le profil du patient ${named}.` : "Affiche le profil du patient sélectionné.";
   }
 }
 
