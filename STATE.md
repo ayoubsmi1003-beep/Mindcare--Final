@@ -47,9 +47,13 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    des mots cliniques français vérifiées dans les livres (`cognats.ts`), passage d'un autre livre nommant le médicament gardé :
    livres 49 → 55/80, aucune perte ; test développement français→anglais 5 → 7/18 au rang 1. Doc 20 §22. Garde : une question sur une
    personne ne lit jamais toute la liste du cabinet (§23). **C270 `p6` : 167/270** (36/29/21/17/55/9), 22 gagnés, 4 perdus classés
-   (3 lenteur du PC, 2 défaillances Alexa masquées en p5 par le modèle, corrigées §25). Doc 20 §24. REPRISE : était garde contre une liste de consultations du cabinet pour une question sur une personne (P044).
+   (3 lenteur du PC, 2 défaillances Alexa masquées en p5 par le modèle, corrigées §25). Doc 20 §24. « arrive », « reçu » (§25) : +3 sur 155 tours, aucune perte (`d0f7b70`).
+   REPRISE : livres (25 échecs : rubrique Stahl, Maudsley hors vocabulaire, cotes de score des voisins denses) ; agenda et
+   finance (≈18 échecs chacun, dont semaines non lues par les statistiques) ; puis campagne complète `p7` sur un PC sans autre
+   charge (une autre session lançait des tests depuis le dépôt principal pendant `p6`).
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
-3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
+3. Porte classée 215–221 mesurée sans gain (doc 20 §22) : non branchée. Réencodage des vecteurs (approuvé) : seule une
+   expérience sur 2 questions faite, non concluante ; à mesurer sur le test français→anglais avant toute écriture.
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.
    Reporté : exposer `stopped_reason`/`stopped_at` à Alexa — aucune base d'essai ne contient de traitement arrêté avec un motif, la migration ne serait pas mesurable.
    Rejeu C202 sur `71bb162` (`base71`) : **119/200** (livres 22/35 ; passages 133/133 mot pour mot ; latence médiane 2 s, p95 245 s).
