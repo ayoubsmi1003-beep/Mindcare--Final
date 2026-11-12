@@ -25,6 +25,8 @@ export interface PortsVoixLocale {
   apercu?: (texte: string | null) => void;
   /** The wake acknowledgement ("Oui Docteur, je vous écoute."), from cache. Same contract as `lire`. */
   accuse?: (signal: AbortSignal, playing: () => void) => Promise<void>;
+  /** Loudness of what Alexa's speaker emits right now (RMS envelope), `null` when silent/unknown: tells her echo from the doctor. */
+  echoReference?: () => number | null;
   /** Timing marks only (voice-trace): never text. */
   trace?: (marque: MarqueVoix) => void;
 }
@@ -66,28 +68,32 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   let frames: Float32Array[] = [], lead: Float32Array[] = [];
   let rate = 0, spoken = 0, silence = 0, duration = 0, onset = 0, speaking = false;
   // Live partials: in order, at most one request in flight, audio accumulated meanwhile (nothing skipped).
-  let live: { pending: Float32Array[]; samples: number; inflight: boolean; first: boolean; failed: boolean; control: AbortController } | null = null;
-  const pump = () => {
-    const l = live;
-    if (!l || l.inflight || l.failed || !ports.partiel || l.samples < rate * 0.2) return;
+  // `closing`: the utterance just ended; its partials keep draining so her words
+  // stay visible while Whisper writes the final text (seconds on a slow CPU).
+  type Live = { pending: Float32Array[]; samples: number; inflight: boolean; first: boolean; failed: boolean; control: AbortController };
+  let live: Live | null = null, closing: Live | null = null;
+  const shown = (l: Live) => live === l || closing === l;
+  const pump = (l: Live | null = live) => {
+    if (!l || l.inflight || l.failed || !ports.partiel || l.samples === 0 || (live === l && l.samples < rate * 0.2)) return;
     let n = 0, take = 0;
     while (n < l.pending.length && (n === 0 || take + l.pending[n]!.length <= rate * 1.5)) take += l.pending[n++]!.length;
     const chunk = concat(l.pending.splice(0, n)); l.samples -= chunk.length;
     const reset = l.first; l.first = false; l.inflight = true;
     ports.partiel(chunk, rate, reset, l.control.signal)
-      .then((texte) => { if (live === l && texte.trim()) { ports.trace?.("premierPartiel"); ports.apercu?.(texte.trim()); } })
+      .then((texte) => { if (shown(l) && texte.trim()) { ports.trace?.("premierPartiel"); ports.apercu?.(texte.trim()); } })
       // Display aid only: a failed partial stops the live text for this utterance; the final text still comes from Whisper.
       .catch(() => { l.failed = true; })
-      .finally(() => { l.inflight = false; if (live === l) pump(); });
+      .finally(() => { l.inflight = false; if (shown(l)) pump(l); });
   };
   const endLive = () => { live?.control.abort(); live = null; };
+  const endClosing = () => { closing?.control.abort(); closing = null; };
   const clearFrames = () => { endLive(); frames = []; lead = []; spoken = silence = duration = onset = 0; speaking = false; };
   const cut = () => {
     control?.abort(); control = null; ports.couper();
     if (pendingTurn) { const turn = pendingTurn; pendingTurn = null; ports.tour({ ...turn, error: "interrompu" }); }
   };
   const arreter = () => {
-    active = false; generation++; clearTimeout(idle); cut(); close?.(); close = null;
+    active = false; generation++; clearTimeout(idle); cut(); endClosing(); close?.(); close = null;
     clearFrames(); rate = 0; ports.phase("desactive");
   };
   const fail = (kind: "capture" | "stt" | "turn" | "tts") => {
@@ -129,7 +135,7 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       ports.phase("transcription");
       let transcribed: Awaited<ReturnType<PortsVoixLocale["transcrire"]>>;
       try { transcribed = await ports.transcrire(samples, sampleRate, c.signal); ports.trace?.("final"); }
-      finally { if (alive(epoch, c)) ports.apercu?.(null); }
+      finally { endClosing(); if (alive(epoch, c)) ports.apercu?.(null); }
       const texte=(typeof transcribed==="string"?transcribed:transcribed.texte).trim();
       if (!alive(epoch, c)) return;
       if (!texte) { touch(); ports.phase("ecoute"); return; }
@@ -191,24 +197,40 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     const ms = samples.length * 1000 / sampleRate, rms = Math.sqrt(power / samples.length);
     let voiced = rms >= 0.02;
     if (!speaking && playing) {
-      // Barge-in while Alexa speaks. For the first 300 ms of playback only
-      // learn the echo (no interruption); then interrupt only on speech at
-      // least 2.5x the loudest echo heard, sustained 200 ms. Uncalibrated on
-      // real speakers: a doctor who cannot be heard over the echo uses STOP.
-      playingMs += ms;
-      if (playingMs <= 300) { echo = Math.max(echo * 0.97, rms); voiced = false; }
-      else {
-        voiced = rms >= Math.max(0.02, echo * 2.5);
-        if (!voiced) echo = Math.max(echo * 0.995, rms);
+      // Barge-in while Alexa speaks: the microphone also hears her.
+      const ref = ports.echoReference?.() ?? null;
+      if (ref !== null) {
+        // We know what the speaker plays. `echo` is the speaker→microphone
+        // gain: the peak mic/reference ratio over the first 300 ms of clearly
+        // audible playback (no interruption meanwhile), then refined only by
+        // frames that look like pure echo (within 1.5x of it): her quieter
+        // syllables must never raise it — measured 2026-11-12, updating on every
+        // non-voice frame drove the gain from 0.15 to 5 and she could not
+        // interrupt. The predicted echo follows the reference, so a louder
+        // syllable later is still recognized as Alexa's own.
+        if (playingMs < 300) { if (ref > 0.03) { playingMs += ms; echo = Math.max(echo, rms / ref); } voiced = false; }
+        else {
+          voiced = rms >= Math.max(0.02, 3 * echo * ref);
+          if (ref > 0.03 && rms / ref <= echo * 1.5) echo = Math.max(echo * 0.999, rms / ref);
+        }
+      } else {
+        // No reference: learn the loudest echo from the first 300 ms of
+        // AUDIBLE playback (leading silence teaches nothing), no interruption
+        // meanwhile; then only speech above 2.5x that echo counts.
+        if (playingMs < 300) { if (rms > 0.005) { playingMs += ms; echo = Math.max(echo, rms); } voiced = false; }
+        else { voiced = rms >= Math.max(0.02, echo * 2.5); if (!voiced) echo = Math.max(echo * 0.995, rms); }
       }
     }
     if (!speaking) {
       lead.push(samples.slice()); if (lead.length > 10) lead.shift();
-      onset = voiced ? onset + ms : 0;
+      // Over Alexa's voice, speech is judged frame by frame against her echo and
+      // has short dips between syllables: a dip only slows the count down.
+      onset = voiced ? onset + ms : playing ? Math.max(0, onset - ms / 2) : 0;
       if (onset < (playing ? 200 : 60)) return;
       // Synchronous cancellation happens at speech onset, before transcription or network work.
       cut(); touch(); speaking = true; frames = lead; lead = []; spoken = onset;
       duration = frames.reduce((n, f) => n + f.length * 1000 / sampleRate, 0); silence = 0;
+      endClosing();
       live = { pending: frames.slice(), samples: frames.reduce((n, f) => n + f.length, 0), inflight: false, first: true, failed: false, control: new AbortController() };
       if (playing) ports.trace?.("stop");
       ports.trace?.("onset"); ports.phase("voixDetectee"); pump(); return;
@@ -219,6 +241,7 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     if (silence < 700 && duration <= 20_000) return;
     const accepted = spoken >= 240;
     const utterance = frames;
+    if (accepted) { endClosing(); closing = live; live = null; pump(closing); }
     clearFrames();
     if (!accepted) { ports.apercu?.(null); ports.phase("ecoute"); return; }
     ports.trace?.("finParole");

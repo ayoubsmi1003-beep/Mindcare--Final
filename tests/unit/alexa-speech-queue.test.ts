@@ -17,6 +17,7 @@ function wav(): Uint8Array {
   b.set([0x52, 0x49, 0x46, 0x46], 0); b.set([0x57, 0x41, 0x56, 0x45], 8);
   return b;
 }
+const tampon = (u: Uint8Array): ArrayBuffer => { const a = new ArrayBuffer(u.length); new Uint8Array(a).set(u); return a; };
 const flux = (bytes: Uint8Array) => ({ ok: true as const, data: new ReadableStream<Uint8Array>({ start(c) { c.enqueue(bytes); c.close(); } }) });
 
 class FauxAudio {
@@ -67,9 +68,9 @@ describe("segmentation", () => {
     for (const s of segmenterPhrases("mot ".repeat(2_000))) expect(s.length).toBeLessThanOrEqual(2_000);
   });
   it("accepts only a RIFF/WAVE body with samples", () => {
-    expect(estWavValide(wav().buffer)).toBe(true);
-    expect(estWavValide(new Uint8Array(44).buffer)).toBe(false);
-    expect(estWavValide(new Uint8Array(100).buffer)).toBe(false);
+    expect(estWavValide(tampon(wav()))).toBe(true);
+    expect(estWavValide(tampon(new Uint8Array(44)))).toBe(false);
+    expect(estWavValide(tampon(new Uint8Array(100)))).toBe(false);
   });
 });
 

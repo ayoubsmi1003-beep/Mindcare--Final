@@ -269,7 +269,35 @@ export function annulerDicteeSi(gen: number): boolean {
  */
 const DELAI_PREMIER_SON_MS = 5_000;
 
-let lectureEnCours: { audio: HTMLAudioElement; url: string } | null = null;
+let lectureEnCours: { audio: HTMLAudioElement; url: string; enveloppe?: Float32Array | undefined } | null = null;
+
+/** RMS of each 20 ms block of a canonical PCM16 mono WAV: what the speaker is about to emit. */
+export function enveloppeWav(tampon: ArrayBuffer): Float32Array | undefined {
+  if (tampon.byteLength <= 44) return undefined;
+  const vue = new DataView(tampon);
+  const taux = vue.getUint32(24, true), bloc = Math.max(1, Math.round(taux / 50)), n = Math.floor((tampon.byteLength - 44) / 2);
+  const sortie = new Float32Array(Math.ceil(n / bloc));
+  for (let b = 0; b < sortie.length; b++) {
+    let p = 0, k = 0;
+    for (let i = b * bloc; i < Math.min(n, (b + 1) * bloc); i++, k++) { const v = vue.getInt16(44 + i * 2, true) / 32768; p += v * v; }
+    sortie[b] = k ? Math.sqrt(p / k) : 0;
+  }
+  return sortie;
+}
+
+/**
+ * The loudest block Alexa's speaker emitted over the last 300 ms (reverberation
+ * and output latency included), at the real playback clock; `null` when
+ * nothing plays. Lets the microphone tell the doctor's voice from Alexa's echo.
+ */
+export function enveloppeLecture(): number | null {
+  const l = lectureEnCours;
+  if (l === null || !enLecture || l.enveloppe === undefined || !Number.isFinite(l.audio.currentTime)) return null;
+  const fin = Math.min(l.enveloppe.length - 1, Math.floor(l.audio.currentTime * 50) + 3);
+  let max = 0;
+  for (let b = Math.max(0, fin - 18); b <= fin; b++) max = Math.max(max, l.enveloppe[b] ?? 0);
+  return max;
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // L'ÉTAT DE LECTURE — CE QUE LE NAVIGATEUR FAIT, PAS CE QU'ON LUI A DEMANDÉ
@@ -506,7 +534,7 @@ function jouerSegment(tampon: ArrayBuffer, generation: number, controle: AbortCo
     // The local worker normalizes its PCM; keep the player at unity.
     audio.volume = 1;
     audio.muted = false;
-    lectureEnCours = { audio, url };
+    lectureEnCours = { audio, url, enveloppe: enveloppeWav(tampon) };
     let demarre = false;
     const fin = (valeur: FinSegment) => {
       clearTimeout(premierSon);

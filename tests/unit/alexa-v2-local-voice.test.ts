@@ -283,7 +283,7 @@ describe("wake-word conversation, barge-in and self-echo", () => {
       accuse: (signal, playing) => new Promise<void>((_, reject) => { playing(); signal.addEventListener("abort", () => { stopped = true; reject(new Error("cancelled")); }); }),
     });
     const start = h.loop.demarrer({ conversation: true }); await flush();
-    h.frames(20, .001); // echo-learning window, quiet
+    h.frames(20, .01); // the acknowledgement heard faintly: the echo is learned
     h.frames(15, .2);   // loud, sustained speech over the acknowledgement
     await start; await flush();
     expect(stopped).toBe(true);

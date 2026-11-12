@@ -28,7 +28,16 @@ if not model_dir.is_dir():
 
 # The grammar keeps the decoder inside a closed vocabulary. The model is
 # French; "alexa" is the configured wake word and the brand is spoken as-is.
-GRAMMAR = '["alexa", "alexia", "eh lexa", "[unk]"]'
+# Decoys: with only "alexa" in a closed grammar, the decoder forces every
+# similar-sounding word onto it — measured 2026-11-12: "Alexandre", "Alexis",
+# "à la caisse" woke Alexa every time (18 false wakes / 24 negatives). Giving
+# those sounds their own words removes them (0 / 36) with unchanged recall
+# (12 / 12) and latency. Words absent from the model's vocabulary are ignored.
+WAKE_WORDS = ["alexa", "alexia", "eh lexa"]
+DECOYS = ["alexandre", "alexandra", "alexis", "alex", "alexandrie", "la caisse", "à la caisse",
+          "caisse", "taxe", "la taxe", "taxi", "lexique", "excès", "à l'excès", "elle a", "elle",
+          "bonjour", "patient"]
+GRAMMAR = json.dumps(WAKE_WORDS + DECOYS + ["[unk]"], ensure_ascii=False)
 model = Model(str(model_dir))
 recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
 # Live transcript during a conversation: the same French model, free

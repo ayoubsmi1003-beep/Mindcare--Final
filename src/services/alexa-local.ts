@@ -3,7 +3,7 @@ import { creerBoucleVoixLocale, type TourVoix, type TrameVoix } from "@/shared/a
 import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { envoyerTourAlexa } from "./alexa-turn";
 import { db } from "./db";
-import { abonnerLecture, arreterLecture, estLectureInterrompue, lireAccuse, lireReponse, prechargerAccuse } from "./jarvis-voix";
+import { abonnerLecture, arreterLecture, enveloppeLecture, estLectureInterrompue, lireAccuse, lireReponse, prechargerAccuse } from "./jarvis-voix";
 import { installerConversationVoix, type VueVoix } from "./jarvis-reveil";
 import { prendreMicro, type PriseMicro } from "./micro-partage";
 import { abonnerPatientActif, patientActifCourant } from "./patient-actif";
@@ -142,6 +142,9 @@ const loop = creerBoucleVoixLocale({
     const result = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
       pcmBase64: base64(encoderPCM16([samples], rate)), sampleRate: 16000, runId, utteranceId, langue: "fr",
     }, signal);
+    // Silence or nothing intelligible (a cough, a fragment) is not a voice failure:
+    // the conversation keeps listening instead of closing the microphone.
+    if (!result.ok && result.error.code === "regle-metier") return { texte: "", utteranceId };
     if (!result.ok || result.data.runId !== runId || result.data.utteranceId !== utteranceId) throw new Error("stt");
     return {texte:result.data.texte,utteranceId};
   },
@@ -154,6 +157,7 @@ const loop = creerBoucleVoixLocale({
   speechLimitNotice: text => dialogue(planRequest(text, null).language).speechLimit,
   lire: lireLocalement,
   accuse: (signal, playing) => jouerLocalement((a) => lireAccuse(alexa.reveilAccuse, a), signal, playing),
+  echoReference: enveloppeLecture,
   couper: arreterLecture,
   phase: (etat, error) => {
     // Le registre partagé voit la boucle directe comme un propriétaire du
