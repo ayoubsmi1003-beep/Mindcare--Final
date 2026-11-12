@@ -448,39 +448,144 @@ export function decouperTexteLecture(texte: string, limite = LIMITE_LECTURE): st
 }
 
 /**
- * Lit une réponse longue en morceaux successifs.
- *
- * `lireTexte` résout au PREMIER son ; enchaîner deux morceaux sans attendre la
- * fin du précédent ferait couper le premier par le second. On attend donc la
- * fin réelle entre deux morceaux — jamais pendant le dernier.
+ * Segments for sentence-level synthesis. A decimal dot belongs to its dosage:
+ * split only at a line break or at punctuation followed by whitespace and the
+ * next sentence's text. Fragments under 24 characters join the next one, so a
+ * "Oui." does not cost a synthesis round trip of its own; every segment stays
+ * under the synthesizer's cap.
  */
+export function segmenterPhrases(texte: string, limite = LIMITE_LECTURE): string[] {
+  const brutes = texte.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«\d])/u).map((s) => s.trim()).filter((s) => s !== "");
+  const segments: string[] = [];
+  let tampon = "";
+  for (const phrase of brutes) {
+    tampon = tampon === "" ? phrase : `${tampon} ${phrase}`;
+    if (tampon.length >= 24) { segments.push(...decouperTexteLecture(tampon, limite)); tampon = ""; }
+  }
+  if (tampon !== "") segments.push(...decouperTexteLecture(tampon, limite));
+  return segments;
+}
+
+/** A RIFF/WAVE body with at least one sample. Anything else is not audio. */
+export function estWavValide(tampon: ArrayBuffer): boolean {
+  if (tampon.byteLength <= 44) return false;
+  const tete = new Uint8Array(tampon, 0, 12);
+  const ascii = (debut: number) => String.fromCharCode(...tete.subarray(debut, debut + 4));
+  return ascii(0) === "RIFF" && ascii(8) === "WAVE";
+}
+
+/** Kokoro synthesis of one segment, in RAM. Never rejects: failures are named. */
+async function synthetiser(texte: string, signal: AbortSignal): Promise<Result<ArrayBuffer>> {
+  try {
+    const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
+    const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, signal);
+    if (signal.aborted) return err(erreurLectureInterrompue());
+    if (!flux.ok) return err(flux.error);
+    const tampon = await new Response(flux.data).arrayBuffer();
+    if (signal.aborted) return err(erreurLectureInterrompue());
+    // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE.
+    if (!estWavValide(tampon)) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    return ok(tampon);
+  } catch {
+    return err(signal.aborted ? erreurLectureInterrompue() : { code: "indisponible", message: fr.jarvis.voix.indisponible });
+  }
+}
+
+type FinSegment = "fini" | "interrompu" | "echec" | "bloque";
+
+/**
+ * Plays one synthesized segment to its END. "Alexa parle" is published on the
+ * first real sound only, and stays published across segments (no flicker).
+ */
+function jouerSegment(tampon: ArrayBuffer, generation: number, controle: AbortController): Promise<FinSegment> {
+  return new Promise((resolve) => {
+    if (generation !== generationLecture || controle.signal.aborted) { resolve("interrompu"); return; }
+    if (lectureEnCours !== null) URL.revokeObjectURL(lectureEnCours.url);
+    const url = URL.createObjectURL(new Blob([tampon], { type: "audio/wav" }));
+    const audio = new Audio(url);
+    // The local worker normalizes its PCM; keep the player at unity.
+    audio.volume = 1;
+    audio.muted = false;
+    lectureEnCours = { audio, url };
+    let demarre = false;
+    const fin = (valeur: FinSegment) => {
+      clearTimeout(premierSon);
+      audio.onplaying = audio.onended = audio.onerror = null;
+      controle.signal.removeEventListener("abort", abandon);
+      resolve(valeur);
+    };
+    const abandon = () => fin("interrompu");
+    // A `playing` that never comes (no output device) must not hang the queue.
+    const premierSon = setTimeout(() => { if (!demarre) fin("echec"); }, DELAI_PREMIER_SON_MS);
+    controle.signal.addEventListener("abort", abandon, { once: true });
+    audio.onplaying = () => {
+      demarre = true;
+      if (generation === generationLecture && !controle.signal.aborted) publierLecture(true, "local");
+    };
+    audio.onended = () => fin("fini");
+    audio.onerror = () => fin("echec");
+    audio.play().catch((cause: unknown) => {
+      fin(cause instanceof DOMException && cause.name === "NotAllowedError" ? "bloque" : "echec");
+    });
+  });
+}
+
+/**
+ * ═══ LA SEULE SORTIE VOCALE D'UNE RÉPONSE — tapée ou dite ═══
+ *
+ * Kokoro, phrase par phrase : la première phrase joue dès qu'elle est
+ * synthétisée, la suivante se synthétise PENDANT qu'elle joue (une d'avance,
+ * jamais plus), et l'ordre est strict. Une seule réponse à la fois : démarrer
+ * une lecture coupe la précédente. `arreterLecture()` (bouton STOP) coupe le
+ * son ET abandonne les synthèses en attente ; le texte affiché n'est jamais
+ * touché. Résout à la FIN réelle de la dernière phrase.
+ */
+export async function lireReponse(texte: string, annulee?: () => boolean): Promise<Result<true>> {
+  arreterLecture();
+  const segments = segmenterPhrases(texte);
+  if (segments.length === 0) return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
+  const generation = generationLecture;
+  const controle = new AbortController();
+  controleLecture = controle;
+  const vivant = () => generation === generationLecture && !controle.signal.aborted && annulee?.() !== true;
+  const interrompre = (): Result<true> => {
+    // Une capture (ou un mute) a pris la main : on coupe le son en cours.
+    if (generation === generationLecture) arreterLecture();
+    return err(erreurLectureInterrompue());
+  };
+  let suivant: Promise<Result<ArrayBuffer>> | null = synthetiser(segments[0]!, controle.signal);
+  for (let index = 0; index < segments.length; index += 1) {
+    const tampon: Result<ArrayBuffer> = await suivant!;
+    if (!vivant()) return interrompre();
+    if (!tampon.ok) {
+      arreterLecture();
+      if (!estLectureInterrompue(tampon.error)) log.warn("jarvis.voix.lecture", logFieldsFor(tampon.error));
+      return tampon;
+    }
+    suivant = index + 1 < segments.length ? synthetiser(segments[index + 1]!, controle.signal) : null;
+    const fin = await jouerSegment(tampon.data, generation, controle);
+    if (fin === "interrompu" || !vivant()) return interrompre();
+    if (fin !== "fini") {
+      arreterLecture();
+      if (fin === "bloque") return err({ code: "interdit", message: fr.jarvis.voix.lectureBloquee });
+      log.warn("jarvis.voix.jamaisDemarree", { code: "indisponible" });
+      return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    }
+  }
+  arreterLecture();
+  return ok(true);
+}
+
+/** Historical entry point (bubble replay, global reader): same single queue. */
 export async function lireTexteLong(
   texte: string,
   porteUneIdentite = false,
   annulee?: () => boolean,
 ): Promise<Result<true>> {
-  const morceaux = decouperTexteLecture(texte);
-  if (morceaux.length === 0) {
-    return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
-  }
-  for (let index = 0; index < morceaux.length; index += 1) {
-    if (annulee?.() === true) {
-      // Une capture (ou un mute) a pris la main : on coupe le son en cours
-      // avant de rendre la main, jamais seulement le morceau suivant.
-      arreterLecture();
-      return err(erreurLectureInterrompue());
-    }
-    const resultat = await lireTexte(morceaux[index]!, porteUneIdentite);
-    if (!resultat.ok) return resultat;
-    if (index < morceaux.length - 1) {
-      await attendreFinLecture(120_000);
-      if (annulee?.() === true) {
-        arreterLecture();
-        return err(erreurLectureInterrompue());
-      }
-    }
-  }
-  return ok(true);
+  // TTS is local: a patient-named answer is spoken like any other.
+  void porteUneIdentite;
+  if (annulee?.() === true) return err(erreurLectureInterrompue());
+  return lireReponse(texte, annulee);
 }
 
 /**
@@ -531,19 +636,12 @@ export async function lireTexte(
 
   const generation = generationLecture;
   const controle = new AbortController(); controleLecture = controle;
-  const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
-  const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, controle.signal);
+  const synthese = await synthetiser(texte, controle.signal);
   if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
-  if (!flux.ok) return err(flux.error);
+  if (!synthese.ok) return synthese;
 
   try {
-    const tampon = await new Response(flux.data).arrayBuffer();
-    if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
-    if (tampon.byteLength === 0) {
-      // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE. Le déclarer tel quel
-      // ferait dire à l'orbe que Jarvis parle alors que rien ne sortira jamais.
-      return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-    }
+    const tampon = synthese.data;
     try {
       const contexte = new OfflineAudioContext(1, 1, 16000);
       const ref = await contexte.decodeAudioData(tampon.slice(0));

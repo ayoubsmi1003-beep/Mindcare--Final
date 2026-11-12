@@ -44,10 +44,11 @@ describe("fautLireAuto", () => {
       fautLireAuto({ ...BASE, texte: "x".repeat(2001) }, { lectureAuto: true, dejaLu: false, conversationChargee: true }),
     ).toBe(true);
   });
-  it("refuse une réponse dont le statut Alexa n'est pas `completed`", () => {
+  it("lit une réponse complète ou une clarification, refuse un tour partiel", () => {
     const opts = { lectureAuto: true, dejaLu: false, conversationChargee: true } as const;
     expect(fautLireAuto({ ...BASE, alexaStatus: "partial" }, opts)).toBe(false);
-    expect(fautLireAuto({ ...BASE, alexaStatus: "needs_input" }, opts)).toBe(false);
+    // A clarification question is a complete answer the doctor must hear.
+    expect(fautLireAuto({ ...BASE, alexaStatus: "needs_input" }, opts)).toBe(true);
     expect(fautLireAuto({ ...BASE, alexaStatus: "completed" }, opts)).toBe(true);
   });
 });

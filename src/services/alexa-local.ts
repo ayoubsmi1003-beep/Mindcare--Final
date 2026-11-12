@@ -3,7 +3,7 @@ import { creerBoucleVoixLocale, type TourVoix, type TrameVoix } from "@/shared/a
 import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { envoyerTourAlexa } from "./alexa-turn";
 import { db } from "./db";
-import { abonnerLecture, arreterLecture, lireTexte } from "./jarvis-voix";
+import { abonnerLecture, arreterLecture, estLectureInterrompue, lireReponse } from "./jarvis-voix";
 import type { VueVoix } from "./jarvis-reveil";
 import { prendreMicro, type PriseMicro } from "./micro-partage";
 import { abonnerPatientActif, patientActifCourant } from "./patient-actif";
@@ -23,10 +23,10 @@ const turnSubscribers = new Set<(turn: TourVoix) => void>();
 let view: VueVoix = { etat: "desactive", raison: null, reveilArme: false, sourceParole: null };
 let scopeUnsubscribe: (() => void) | null = null;
 let level = 0;
-let captureGeneration = 0, preparingCapture: AbortController | null = null;
+let preparingCapture: AbortController | null = null;
 let workerLifecycle = Promise.resolve();
-function controlWorker(action: "prepare" | "stop", signal?: AbortSignal) {
-  const request = workerLifecycle.then(() => db().invokeFunction("jarvis-voice-session", { action }, signal ?? (action === "stop" ? AbortSignal.timeout(4_000) : undefined)));
+function controlWorker(action: "prepare", signal?: AbortSignal) {
+  const request = workerLifecycle.then(() => db().invokeFunction("jarvis-voice-session", { action }, signal));
   workerLifecycle = request.then(() => {}, () => {});
   return request;
 }
@@ -40,7 +40,7 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
   let context: AudioContext | null = null, prise: PriseMicro | null = null;
   let source: MediaStreamAudioSourceNode | null = null, capture: AudioWorkletNode | null = null, mute: GainNode | null = null;
   const preparing = new AbortController();
-  const ownGeneration = ++captureGeneration; preparingCapture = preparing;
+  preparingCapture = preparing;
   let released = false;
   const ended = () => arreterVoixLocale();
   const close = () => {
@@ -51,7 +51,7 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
     for (const track of prise?.flux.getTracks() ?? []) track.removeEventListener("ended", ended);
     prise?.rendre(); prise = null; void context?.close().catch(() => {}); context = null;
     if (preparingCapture === preparing) preparingCapture = null;
-    if (ownGeneration === captureGeneration) void controlWorker("stop");
+    // The models stay resident: closing the conversation never unloads them (reload = 15-40 s).
   };
   preparing.signal.addEventListener("abort", close, { once: true });
   try {
@@ -86,25 +86,15 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
   } catch (cause) { close(); throw cause; }
 }
 
+/** The single speech queue (Kokoro, sentence by sentence). Rejects "cancelled" on STOP/barge-in, "tts" on a real failure. */
 async function lireLocalement(text: string, signal: AbortSignal, playing: () => void): Promise<void> {
   if (signal.aborted) throw new Error("cancelled");
-  let seen = false, unsubscribe = () => {};
-  let resolveEnd!: () => void, rejectEnd!: (cause: Error) => void;
-  const end = new Promise<void>((resolve, reject) => { resolveEnd = resolve; rejectEnd = reject; });
-  // The rejection is observed immediately, including cancellation while TTS is still preparing.
-  void end.catch(() => {});
-  const abort = () => { arreterLecture(); rejectEnd(new Error("cancelled")); };
+  const abort = () => arreterLecture();
   signal.addEventListener("abort", abort, { once: true });
-  unsubscribe = abonnerLecture((active, source) => {
-    // Kokoro is local; the old cloud-only check would reject our own audio.
-    if (active && source === "local") { seen = true; playing(); }
-    else if (active) { arreterLecture(); rejectEnd(new Error("local-only")); }
-    else if (seen) resolveEnd();
-  });
+  const unsubscribe = abonnerLecture((active) => { if (active) playing(); });
   try {
-    const result = await lireTexte(text);
-    if (!result.ok || signal.aborted) throw new Error("tts");
-    await end;
+    const result = await lireReponse(text, () => signal.aborted);
+    if (!result.ok) throw new Error(signal.aborted || estLectureInterrompue(result.error) ? "cancelled" : "tts");
   } finally { signal.removeEventListener("abort", abort); unsubscribe(); }
 }
 
@@ -156,10 +146,12 @@ export function abonnerTourVoixLocale(subscriber: (turn: TourVoix) => void): () 
   turnSubscribers.add(subscriber); return () => { turnSubscribers.delete(subscriber); };
 }
 export function arreterVoixLocale(): void {
-  const wasActive = loop.active(); captureGeneration++; preparingCapture?.abort(); preparingCapture = null;
-  loop.arreter(); setLoopBusy(false); if (wasActive) void controlWorker("stop");
+  preparingCapture?.abort(); preparingCapture = null;
+  loop.arreter(); setLoopBusy(false);
 }
 export function niveauVoixLocale(): number { return level; }
+/** A typed answer while the voice conversation is open: spoken by the loop, which then listens again. */
+export function parlerVoixLocale(texte: string): Promise<"fini" | "interrompu" | "echec" | "occupe"> { return loop.parler(texte); }
 export async function demarrerVoixLocale(): Promise<void> {
   if (loop.active()) return;
   // ⚠️ UN SEUL PROPRIÉTAIRE. Une capture du réveil, une dictée de champ ou une

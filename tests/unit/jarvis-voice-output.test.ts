@@ -14,6 +14,13 @@ import {
 } from "@/services/jarvis-voix";
 import { playbackBusy, setPlaybackBusy } from "@/services/voice-activity";
 
+/** Smallest valid RIFF/WAVE body: header plus two silent PCM16 samples. */
+function wavMinimal(): Uint8Array {
+  const b = new Uint8Array(48);
+  b.set([0x52, 0x49, 0x46, 0x46], 0); b.set([0x57, 0x41, 0x56, 0x45], 8);
+  return b;
+}
+
 class AudioSortieLocale {
   static instances: AudioSortieLocale[] = [];
   volume = 0;
@@ -41,7 +48,7 @@ function fluxAudioValide(): { ok: true; data: ReadableStream<Uint8Array> } {
     ok: true,
     data: new ReadableStream<Uint8Array>({
       start(controller) {
-        controller.enqueue(new Uint8Array(44));
+        controller.enqueue(wavMinimal());
         controller.close();
       },
     }),
@@ -51,7 +58,7 @@ function fluxAudioValide(): { ok: true; data: ReadableStream<Uint8Array> } {
 it("reads an answer containing a patient name through local voice at full element volume", async () => {
   invokeFunctionStream.mockResolvedValue({
     ok: true,
-    data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(new Uint8Array(44)); controller.close(); } }),
+    data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(wavMinimal()); controller.close(); } }),
   });
   vi.stubGlobal("Audio", AudioSortieLocale);
   const states: Array<[boolean, string | null]> = [];
@@ -96,7 +103,7 @@ it("reports a deliberate stop while the synthesis is pending as an interrupted r
   arreterLecture();
   resolveStream({
     ok: true,
-    data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(new Uint8Array(44)); controller.close(); } }),
+    data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(wavMinimal()); controller.close(); } }),
   });
 
   const result = await pending;
@@ -177,28 +184,26 @@ describe("les réponses plus longues que la limite du synthétiseur", () => {
     expect(decouperTexteLecture(sansSeparateur).map((morceau) => morceau.length)).toEqual([2_000, 2_000, 500]);
   });
 
-  it("lit chaque morceau l'un après l'autre, en attendant la fin réelle du précédent", async () => {
+  it("lit chaque phrase l'une après l'autre, jusqu'à la fin réelle de la dernière", async () => {
     invokeFunctionStream.mockImplementation(() => Promise.resolve(fluxAudioValide()));
     vi.stubGlobal("Audio", AudioSortieLocale);
 
     const texte = `${"Une phrase complète. ".repeat(150)}`;
-    const lecture = lireTexteLong(texte);
-
-    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(1));
-    await vi.waitFor(() => expect(AudioSortieLocale.instances[0]?.onended).toBeTypeOf("function"));
-    AudioSortieLocale.instances[0]?.onended?.();
-
-    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(2));
-    await vi.waitFor(() => expect(AudioSortieLocale.instances[1]?.onended).toBeTypeOf("function"));
-    AudioSortieLocale.instances[1]?.onended?.();
-
+    let fini = false;
+    const lecture = lireTexteLong(texte).then((r) => { fini = true; return r; });
+    // Every played segment must end before the next one is created.
+    for (let i = 0; !fini && i < 200; i += 1) {
+      await vi.waitFor(() => expect(fini || AudioSortieLocale.instances[i]?.onended).toBeTruthy());
+      if (!fini) AudioSortieLocale.instances[i]?.onended?.();
+    }
     const resultat = await lecture;
     expect(resultat.ok).toBe(true);
-    expect(invokeFunctionStream.mock.calls.every(([, corps]) => String((corps as { texte: string }).texte).length <= 2_000))
-      .toBe(true);
+    const lus = invokeFunctionStream.mock.calls.map(([, corps]) => String((corps as { texte: string }).texte));
+    expect(lus.every((t) => t.length <= 2_000)).toBe(true);
+    expect(lus.join(" ")).toBe(texte.trim());
   });
 
-  it("stops between chunks and cuts the sound when a capture starts", async () => {
+  it("stops between sentences and cuts the sound when a capture starts", async () => {
     invokeFunctionStream.mockImplementation(() => Promise.resolve(fluxAudioValide()));
     vi.stubGlobal("Audio", AudioSortieLocale);
 
@@ -206,7 +211,6 @@ describe("les réponses plus longues que la limite du synthétiseur", () => {
     const texte = `${"Une phrase complète. ".repeat(150)}`;
     const lecture = lireTexteLong(texte, false, () => capture);
 
-    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(1));
     await vi.waitFor(() => expect(AudioSortieLocale.instances[0]?.onended).toBeTypeOf("function"));
     capture = true;
     AudioSortieLocale.instances[0]?.onended?.();
@@ -214,8 +218,9 @@ describe("les réponses plus longues que la limite du synthétiseur", () => {
     const resultat = await lecture;
     expect(resultat.ok).toBe(false);
     if (!resultat.ok) expect(estLectureInterrompue(resultat.error)).toBe(true);
-    // Le second morceau n'est jamais demandé : la capture a pris la main.
-    expect(invokeFunctionStream).toHaveBeenCalledTimes(1);
+    // At most the one prefetched sentence was synthesized; no second sound ever started.
+    expect(invokeFunctionStream.mock.calls.length).toBeLessThanOrEqual(2);
+    expect(AudioSortieLocale.instances).toHaveLength(1);
     expect(playbackBusy()).toBe(false);
   });
 

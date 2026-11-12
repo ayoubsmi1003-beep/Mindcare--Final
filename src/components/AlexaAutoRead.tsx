@@ -14,7 +14,12 @@
  * · aucun son pendant une capture (réveil, dictée de champ, boucle directe) ;
  * · aucune lecture d'historique, de tour interrompu ou de statut non
  *   `completed` ;
- * · aucune seconde lecture d'une réponse déjà prononcée par la boucle directe.
+ * · aucune seconde lecture d'une réponse déjà prononcée par la boucle directe
+ *   (`dejaParlee`).
+ *
+ * Une réponse TAPÉE pendant une conversation vocale ouverte est prononcée PAR
+ * la boucle (`parlerVoixLocale`), qui reprend l'écoute ensuite : tapée ou dite,
+ * toute réponse passe par la même file Kokoro.
  *
  * La décision est PURE (`choisirActionLectureAuto`) pour être éprouvée sans
  * DOM ; le composant ne fait que l'exécuter.
@@ -38,6 +43,7 @@ import {
   lirePreferenceLectureAuto,
   type CandidatLectureAuto,
 } from "@/services/lecture-auto";
+import { parlerVoixLocale } from "@/services/alexa-local";
 import { arreterLecture, estLectureInterrompue, lireTexteLong } from "@/services/jarvis-voix";
 import type { EtatVoix } from "@/services/jarvis-reveil";
 import {
@@ -61,15 +67,15 @@ export interface OptionsLectureAutoGlobale {
 }
 
 export type DecisionLectureAuto =
-  | { readonly action: "lire"; readonly tour: CandidatLectureAuto }
-  | { readonly action: "marquer"; readonly tour: CandidatLectureAuto }
+  | { readonly action: "lire"; readonly voie: "lecteur" | "boucle"; readonly tour: CandidatLectureAuto }
   | null;
 
 /**
- * Décide quoi faire du dernier tour Jarvis — ou rien.
+ * Décide quoi lire, et par quelle voie — ou rien.
  *
- * `marquer` est le cas de la boucle directe : elle a déjà lu la réponse
- * elle-même. La marquer évite de la rejouer quand la boucle s'arrête.
+ * `boucle` : une conversation vocale est ouverte ; elle seule possède le
+ * haut-parleur et le micro, la réponse tapée passe par elle quand elle écoute.
+ * Ses propres réponses vocales portent `dejaParlee` et ne sont jamais rejouées.
  */
 export function choisirActionLectureAuto(
   tours: readonly CandidatLectureAuto[],
@@ -81,17 +87,14 @@ export function choisirActionLectureAuto(
   // phrase coupée au milieu.
   if (opts.etatConversation === "envoi" || opts.etatConversation === "flux") return null;
 
-  const boucleParle =
-    opts.boucleActive &&
-    (opts.etatVoix === "parole" || opts.etatVoix === "ecoute" || opts.etatVoix === "traitement");
-  if (boucleParle) {
-    // La boucle directe prononce elle-même ses réponses. On marque la plus
-    // récente comme lue — sans appeler `lireTexte` une seconde fois.
+  if (opts.boucleActive) {
+    // Elle traite, parle ou se prépare : la réponse attendra son retour à l'écoute.
+    if (opts.etatVoix !== "ecoute" || opts.playbackBusy) return null;
     const tour = choisirTourAuto(tours, idsHistoriques, idsLus, {
-      lectureAuto: true,
+      lectureAuto: opts.lectureAuto,
       conversationChargee: opts.conversationChargee,
     });
-    return tour === null ? null : { action: "marquer", tour };
+    return tour === null ? null : { action: "lire", voie: "boucle", tour };
   }
 
   // Une capture du réveil, un champ ou la préparation de la boucle : aucun
@@ -113,7 +116,7 @@ export function choisirActionLectureAuto(
     lectureAuto: opts.lectureAuto,
     conversationChargee: opts.conversationChargee,
   });
-  return tour === null ? null : { action: "lire", tour };
+  return tour === null ? null : { action: "lire", voie: "lecteur", tour };
 }
 
 export function AlexaAutoRead(): React.JSX.Element | null {
@@ -168,12 +171,25 @@ export function AlexaAutoRead(): React.JSX.Element | null {
     });
     if (decision === null) return;
 
-    if (decision.action === "marquer") {
-      marquerTourLu(decision.tour.id);
+    const tour = decision.tour;
+    if (decision.voie === "boucle") {
+      enCours.current = true;
+      setErreur(false);
+      void parlerVoixLocale(tour.texte)
+        .then((fin) => {
+          // `occupe` : la boucle a repris la parole ou l'écoute active entre-temps ;
+          // le tour reste non lu et sera prononcé à son prochain retour à l'écoute.
+          if (fin !== "occupe") marquerTourLu(tour.id);
+          if (fin === "echec") setErreur(true);
+        })
+        .catch(() => setErreur(true))
+        .finally(() => {
+          enCours.current = false;
+          setFinLecture((valeur) => valeur + 1);
+        });
       return;
     }
 
-    const tour = decision.tour;
     // Marqué AVANT la lecture : un remontage du panneau ne le relira pas.
     marquerTourLu(tour.id);
     enCours.current = true;

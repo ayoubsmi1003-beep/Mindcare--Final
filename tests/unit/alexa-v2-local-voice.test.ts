@@ -171,3 +171,42 @@ describe("continuous local Alexa voice loop", () => {
     expect(h.loop.active()).toBe(false); expect(h.calls).toContain("state:erreur"); expect(h.calls).not.toContain("stt");
   });
 });
+
+describe("one speech path for typed and spoken answers", () => {
+  it("speaks a typed answer through the open conversation, then listens again", async () => {
+    const h = harness({ lire: async (text, _signal, playing) => { h.calls.push(`tts:${text}`); playing(); } });
+    await h.loop.demarrer(); h.calls.length = 0;
+    expect(await h.loop.parler("Vous avez trois rendez-vous demain.")).toBe("fini");
+    expect(h.calls).toEqual(["tts:Vous avez trois rendez-vous demain.", "state:parole", "state:ecoute"]);
+    expect(h.loop.active()).toBe(true);
+  });
+
+  it("refuses a typed answer while a voice turn owns the speaker", async () => {
+    const gate = deferred<{ texte: string }>();
+    const h = harness({ repondre: () => gate.promise });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush();
+    expect(await h.loop.parler("Réponse tapée.")).toBe("occupe");
+    gate.resolve({ texte: "Fin." }); await flush();
+  });
+
+  it("STOP during a spoken answer returns to listening: not an error, the loop stays open", async () => {
+    const h = harness({ lire: async () => { throw new Error("cancelled"); } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).not.toContain("state:erreur");
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+    expect(h.loop.active()).toBe(true);
+  });
+
+  it("a real synthesis failure is reported, never hidden", async () => {
+    const h = harness({ lire: async () => { throw new Error("tts"); } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("state:erreur");
+  });
+
+  it("a typed answer stopped by STOP is reported as interrupted, and listening resumes", async () => {
+    const h = harness({ lire: async () => { throw new Error("cancelled"); } });
+    await h.loop.demarrer();
+    expect(await h.loop.parler("Une longue réponse tapée.")).toBe("interrompu");
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+});

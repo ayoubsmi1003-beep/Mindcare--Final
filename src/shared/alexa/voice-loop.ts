@@ -15,6 +15,14 @@ export interface PortsVoixLocale {
   navigate?: (target: AlexaNavigation) => void;
   speechLimitNotice?: (utterance: string) => string;
 }
+/** `ports.lire` rejects with this message when playback was stopped on purpose (STOP, barge-in). */
+const isCancelled = (cause: unknown) => cause instanceof Error && cause.message === "cancelled";
+
+/** A decimal dot belongs to its dosage: split only at a line break or punctuation followed by whitespace and the next sentence's text. */
+export function splitSentences(text: string): string[] {
+  return text.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«])/u).map((s) => s.trim()).filter((s) => s !== "");
+}
+
 /** Local VAD decisions have no tool authority. Only finalized STT enters the server turn. */
 export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   let active = false, generation = 0, close: (() => void) | null = null;
@@ -58,28 +66,26 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       if (!alive(epoch, c)) return;
       if (!texte) { touch(); ports.phase("ecoute"); return; }
       const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
-      let count = 0, chars = 0, audioError = false, speechLimited = false, queue = Promise.resolve();
-      const enqueue = (text: string) => {
-        if (!alive(epoch, c) || !text.trim()) return;
-        // Text and source verification must continue when speech reaches its
-        // own bound. Never fail the clinical turn because its TTS queue is full.
-        if (speechLimited || count >= 32 || chars + text.length > 20_000 || text.length > 2_000) { speechLimited = true; return; }
-        count++; chars += text.length;
-        queue = queue.then(async () => {
-          if (!alive(epoch, c) || audioError) return;
-          try { await ports.lire(text, c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
-          catch { audioError = true; }
-        });
-      };
-      const sentence = (text: string) => {
-        // A decimal dot belongs to its dosage. Split only at a line break or
-        // punctuation followed by whitespace and the next sentence's text.
-        const segments = text.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«])/u);
-        for (const segment of segments) enqueue(segment);
+      let audioError = false, speechLimited = false, queue = Promise.resolve();
+      const speak = (text: string) => {
+        // The speech queue (ports.lire) synthesizes sentence by sentence with
+        // prefetch. Here only the bound is decided: text and source verification
+        // continue when speech reaches it; never fail the clinical turn for it.
+        const kept: string[] = []; let chars = 0;
+        for (const segment of splitSentences(text)) {
+          if (kept.length >= 32 || chars + segment.length > 20_000 || segment.length > 2_000) { speechLimited = true; break; }
+          kept.push(segment); chars += segment.length;
+        }
+        if (!kept.length || !alive(epoch, c)) return;
+        queue = (async () => {
+          try { await ports.lire(kept.join(" "), c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); }); }
+          // STOP is not a voice failure: the turn ends normally, back to listening.
+          catch (cause) { if (alive(epoch, c) && !isCancelled(cause)) audioError = true; }
+        })();
       };
       const result = await ports.repondre(texte, c.signal, ()=>{},id);
       if (!alive(epoch, c)) return;
-      if (result.speechAllowed!==false)sentence(result.texte);
+      if (result.speechAllowed!==false)speak(result.texte);
       pendingTurn = null; ports.tour({ id, texte, reponse: result.texte,
         ...(result.sources !== undefined ? { sources: result.sources } : {}),
         ...(result.patientId !== undefined ? { patientId: result.patientId } : {}),
@@ -139,6 +145,21 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
         if (!active || generation !== epoch) { release(); return; }
         close = release; touch(); ports.phase("ecoute");
       } catch { if (active && generation === epoch) fail("capture"); }
+    },
+    /**
+     * A typed answer while the conversation is open: spoken by the same
+     * queue, then back to listening. A turn in progress owns the speaker.
+     */
+    parler: async (text: string): Promise<"fini" | "interrompu" | "echec" | "occupe"> => {
+      if (!active || control !== null || speaking || !text.trim()) return "occupe";
+      suspend(); const c = new AbortController(); control = c; const epoch = generation;
+      try {
+        await ports.lire(text, c.signal, () => { if (alive(epoch, c)) ports.phase("parole"); });
+        return "fini";
+      } catch (cause) { return alive(epoch, c) && !isCancelled(cause) ? "echec" : "interrompu"; }
+      finally {
+        if (control === c) { control = null; if (active && generation === epoch && !speaking) { touch(); ports.phase("ecoute"); } }
+      }
     },
     arreter, active: () => active,
   };

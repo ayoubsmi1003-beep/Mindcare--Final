@@ -139,6 +139,8 @@ export interface TourConversation {
    * sans lui, le nom de la patiente partirait chez le fournisseur de voix.
    */
   readonly porteUneIdentite?: boolean;
+  /** The voice loop already spoke (or deliberately silenced) this answer: never replayed by the global reader. */
+  readonly dejaParlee?: boolean;
 }
 
 export interface EtatConversationPublique {
@@ -1083,7 +1085,7 @@ abonnerTourVoixLocale(event => {
   }
   const response = voiceTurns.get(event.id);
   if (response && (event.reponse !== undefined || event.error !== undefined)) remplacerTour(response, {
-    ...(event.reponse !== undefined ? { texte: event.reponse } : {}), porteUneIdentite: event.speechAllowed!==true,
+    ...(event.reponse !== undefined ? { texte: event.reponse } : {}), porteUneIdentite: event.speechAllowed!==true, dejaParlee: true,
     ...(event.sources !== undefined ? { alexaSources: event.sources } : {}),
     ...(event.patientId !== undefined ? { sourcePatientId: event.patientId } : {}),
     ...(event.persiste !== undefined ? { persiste: event.persiste } : {}),
