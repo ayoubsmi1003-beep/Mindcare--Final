@@ -29,6 +29,11 @@ describe("what is listed", () => {
   it("one drug with its own monograph: neighbours take no place", () => {
     expect(sections("Posologie de la sertraline ?", [proof("Lithium › Dosing"), proof("Sertraline › Dosing"), proof("Sertraline › Side Effects")])).toEqual(["Sertraline › Dosing", "Sertraline › Side Effects"]);
   });
+  it("another book's passage naming that drug is no neighbour: it keeps its place beside the monograph", () => {
+    const guideline = proof("Chapter 1 › Effects of antipsychotic drugs", "Sertraline does not appear to significantly affect the plasma level in most patients");
+    expect(sections("La sertraline modifie-t-elle ce taux ?", [guideline, proof("Lithium › Dosing"), proof("Sertraline › Side Effects")]))
+      .toEqual(["Sertraline › Side Effects", "Chapter 1 › Effects of antipsychotic drugs"]);
+  });
   it("each drug asked for gets a place", () => {
     const listed = sections("Lithium ou sertraline, quelle posologie ?", [proof("Lithium › A"), proof("Lithium › B"), proof("Lithium › C"), proof("Sertraline › A")]);
     expect(listed).toContain("Sertraline › A");

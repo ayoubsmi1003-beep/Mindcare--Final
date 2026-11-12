@@ -54,9 +54,11 @@ export function referencesToRead(question: string, proofs: readonly Proof[]): { 
 
   const drugs = [...new Set([...requestedMonographNames(question), ...requestedMedicationNames(question)])];
   const ownedBy = (name: string) => (entry: KnowledgeReference) => monographOwner(entry.proof.section, [name]) !== null;
-  const mentions = (name: string) => (entry: KnowledgeReference) => requestedMedicationNames(entry.excerpt).includes(name);
-  // One drug with its own monograph here: a neighbouring drug would only be noise.
-  const owned = drugs.length === 1 ? readable.filter(ownedBy(drugs[0]!)) : [];
+  const mentions = (name: string) => (entry: KnowledgeReference) =>
+    [...requestedMonographNames(entry.excerpt), ...requestedMedicationNames(entry.excerpt)].includes(name);
+  // One drug with its own monograph here: a neighbouring drug would only be noise. Another book's passage naming that same drug
+  // is no neighbour: it often holds the answer (the Maudsley's "asenapine does not appear to affect prolactin").
+  const owned = drugs.length === 1 ? readable.filter(entry => ownedBy(drugs[0]!)(entry) || mentions(drugs[0]!)(entry)) : [];
   const pool = owned.length ? owned : readable;
 
   // Retrieval's order, except that each drug and section asked for gets a place first.

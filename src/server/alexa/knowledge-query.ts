@@ -3,6 +3,7 @@ import { medicationNames } from "@/shared/alexa/medications";
 import {knowledgeComparisonRequested,requestedMedicationNames} from './knowledge-evidence-content';
 import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
 import { BOOK_DISORDER_TERMS } from "@/shared/alexa/book-topics.generated";
+import { cognatAnglais } from "@/server/knowledge/cognats";
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -318,16 +319,18 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   if (book === undefined) {
     // Traduction des SEULES formes dont une réalisation anglaise est connue ;
     // le reste (français inconnu) est écarté plutôt que de casser l'ET.
+    // A glossary word, a word both languages share, or the English spelling of a French clinical word the books contain
+    // ("myocardite" → "myocarditis", `cognats.ts`).
+    const anglais = (token: string): string | undefined => ALIASES[token]?.[1] ?? (anglaisConnus.has(token) ? token : cognatAnglais(token));
     const motsAnglais = termes
-      .map((token) => ALIASES[token]?.[1] ?? token)
-      .filter((token) => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token));
+      .map(anglais)
+      .filter((token): token is string => token !== undefined && !MOTS_FAIBLES_ANGLAIS.has(token));
     const nombres = tokens.filter((token) => /^[+-]?\d/u.test(token) || UNITES_INVARIANTES.has(token));
     // GARDE D'INTÉGRALITÉ : si un mot de CONTENU reste intraduisible, la
     // variante anglaise serait une question amputée (« prix lithium Algérie »
     // → « lithium »), et répondrait à côté. On ne l'ajoute pas.
     const nonTraduits = termes.filter((token) =>
-      ALIASES[token] === undefined
-      && !anglaisConnus.has(token)
+      anglais(token) === undefined
       && !UNITES_INVARIANTES.has(token)
       && !/^[+-]?\d/u.test(token));
     const requeteAnglaise = [...new Set([...motsAnglais, ...nombres])].join(" ");
@@ -344,8 +347,9 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     // amputée : elle exige au moins deux termes de contenu.
     const coeur = [...new Set([...motsAnglais.filter((t) => !VERBES_ANGLAIS_FAIBLES.has(t)), ...nombres])];
     const requeteCoeur = coeur.join(" ");
-    if (coeur.length >= 2 && requeteCoeur !== "" && requeteCoeur !== requeteAnglaise
-      && !queries.includes(requeteCoeur)) {
+    // Compared with the queries sent, not with the full English variant: that one is not sent when a word stays untranslated,
+    // and the core query was then dropped with it ("lithium abîme thyroïde" sent neither "lithium thyroid" query).
+    if (coeur.length >= 2 && requeteCoeur !== "" && !queries.includes(requeteCoeur)) {
       queries.push(requeteCoeur);
       references.push(requeteCoeur);
     }

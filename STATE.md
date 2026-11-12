@@ -43,9 +43,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    demandés en d'autres mots (« à partir de quand », « comment se présente ») : test structurel 4 → 36/40 au rang 1 ; livres C270
    36 → 49/80, aucune perte. Doc 20 §19. Prochain rendez-vous d'un patient nommé (« a-t-il un rendez-vous de
    prévu », « vient quand ») : +2 sur 140 tours, aucune perte. Doc 20 §20. « Sur <nom>, … », « écrit » à une séance = la note :
-   P010 gagné, aucune perte (base principale ; cas fixture à rejouer). Doc 20 §21. REPRISE : rejouer `domain:patient,domain:context`
-   (cas fixture), puis livres : traductions FR→EN de termes cliniques (abus, priapisme, QTc, régime/tyramine) avec un test
-   structurel médicament × terme ; garde contre une liste de consultations du cabinet pour une question sur une personne (P044).
+   P010 gagné, aucune perte (base principale ; cas fixture à rejouer). Doc 20 §21. Cas fixture rejoués : inchangés. Livres : formes anglaises
+   des mots cliniques français vérifiées dans les livres (`cognats.ts`), passage d'un autre livre nommant le médicament gardé :
+   livres 49 → 55/80, aucune perte ; test développement français→anglais 5 → 7/18 au rang 1. Doc 20 §22. REPRISE : garde contre une liste de consultations du cabinet pour une question sur une personne (P044).
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

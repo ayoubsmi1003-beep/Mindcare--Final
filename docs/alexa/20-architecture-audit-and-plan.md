@@ -281,3 +281,27 @@ scope), so the local model listed the practice's 8 143 consultations, other pati
 Replayed (patients, context, variation, main database): 1 gained (P010), none lost; the fixture-database cases of that replay
 were stopped before the end (PC restart) and are still to replay. Not done: a guard refusing a practice-wide consultation list
 when the question is about one person (P044, a name the parser cannot see).
+
+## 22. French questions against the English books: the English words, and the passages kept beside a monograph
+Fixture-database cases left from §21 (P054, P055, X010, X014, X015) replayed: same verdicts as `p5`.
+
+**Diagnosis (26 failing book turns, read-only stage probe).** Every AND query of the French words returned 0 rows; an English
+variant was built only when every word had a glossary translation, and the "core" English query was dropped whenever it equalled
+that unbuilt variant (`requeteCoeur !== requeteAnglaise`), so "lithium abîme thyroïde" sent no English query at all. The meaning
+search held the right passage among its 24 candidates in 10 turns, rarely first (scores 0.81–0.89).
+
+| Capability | Cause | Fix |
+|---|---|---|
+| Retrieval (query language) | French clinical words had no English form unless the hand-written glossary held them | `cognats.ts`: spelling rules (-ite→-itis/-ity, -ose→-osis, -ie→-ia/-y, -isme→-ism, -émie→-emia/-aemia, -ide→-id, -ique→-ic…) propose English forms; one counts only if the approved English books contain it (`book-english-words.generated.ts`, 16 398 words with passage counts, `scripts/gen-book-english-words.mjs`), the most used wins ("epilepsy", not "epilepsia"); a same-spelling word needs 8 letters and 3 passages ("traitement", quoted once, is refused) |
+| Retrieval (query planning) | The core English query was compared with a query never sent | Compared with the queries sent |
+| Presentation (which passages) | One drug named and one passage from its monograph: every other passage was dropped, including another book's passage naming that drug (the Maudsley "asenapine does not appear to affect prolactin", L072 lost on the first replay) | A passage naming the drug is kept beside its monograph; neighbouring drugs still go (`knowledge-references.ts`) |
+
+Measured, not shipped: the ranked gate 215–221 called when every AND query is empty — 18 new development questions 5 → 5 at
+rank 1 (one passage 2nd → 3rd), so it stays unwired; the local cross-encoder (`KNOWLEDGE_RERANK=mmarco`) 5 → 7 but nearly every
+answer turns « faible » and ~4 s more per question on the i3: its score calibration is a separate piece of work.
+Checks: new `alexa-book-cross-language.live.test.ts` (18 development questions, drugs and effects no C270 book case uses; the right
+passage holds the English term and names the drug): **rank 1 5 → 7, top 5 → 11 / 18**, none worse. Drug × rubric 33/47 and DSM
+criteria 36/40 unchanged. C270 books replayed: **49 → 55 / 80** against the last book run (L031, L047, L056, L063, L064, L068),
+none lost. Passages word for word: 292/294; the two others (L024, L073) are chunks whose section heading is a cut copy of their
+own first sentence (ingestion artifact, data). The doctor's PC needs nothing new: the vocabulary file is generated from the same
+approved books and ships with the code.
