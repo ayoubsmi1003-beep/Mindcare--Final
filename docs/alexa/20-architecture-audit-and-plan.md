@@ -236,3 +236,9 @@ named as such, never with a money word. Separately, "combien de patients ont con
 activity question (statistics hold "patients vus"); a name or a pronoun keeps it with the patient routes. Weeks stay a tool
 limitation: the statistics view reads months and years only.
 Replayed on C270 against `p4`: agenda 13 → 22 / 40, finance 17 → 18 / 35, 10 gained, none lost.
+
+## 17. C270 `p5` (`713d045`, 2026-11-12)
+**149/270 turns** (patients 34/55, context 29/45, agenda 22/40, finance 18/35, books 36/80, variation 10/15); against `p4`:
+16 gained, none lost (agenda 9, patients 3, context 2, finance 1, books 1: L043). Turns reaching the local model: 86 (93 in `p4`).
+Book passages: 240/241 word for word. Rule 2: every judged failure is Alexa's; 1 test-data limitation. Largest remaining
+group: book retrieval (40 turns), then facts missing from an answer (37), then which patient (23).
