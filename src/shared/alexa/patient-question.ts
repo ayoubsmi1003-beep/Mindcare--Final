@@ -52,7 +52,7 @@ const PERIOD_WORD = /\b(?:(?:19|20)\d{2}|an|annees?|mois|semaines?|trimestres?|s
 /** Whether the question names a calendar period: read (its bounds), unreadable, or none. */
 function namedPeriod(text: string, asOf: string | undefined): { from: string; to: string } | "unreadable" | null {
   // "Depuis combien d'années ?" asks a duration, not over which period.
-  if (!PERIOD_WORD.test(fold(text).replace(RANKED_VISIT, " ").replace(/\b(?:depuis|il y a) combien (?:de |d')\w+/gu, " "))) return null;
+  if (!PERIOD_WORD.test(fold(text).replace(RANKED_VISIT, " ").replace(/\b(?:depuis|il y a) combien (?:de |d')\w+/gu, " ").replace(/\b(?:depuis|a partir de) (?:la|le) (?:plus )?(?:recent\w*|derni\w*|premi\w*)\b/gu, " "))) return null;
   return namedFrenchPeriod(text, asOf) ?? "unreadable";
 }
 const shortDate = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;
@@ -62,7 +62,11 @@ export const periodWords = (period: { from: string; to: string }) => `du ${short
 /** Words of the frame itself; anything else Latin and unknown to the question vocabularies may be a name. */
 const FRAME_WORDS = /^(?:alexa|cabinet|clinique|dates|periode|dis|dites|moi|me|stp|svp|plait|merci|oui|non|et|ou|mais|donc|alors|aussi|bien|bon|ben|euh|ah|tu|vous|peux|pouvez|peut|pourrais|pourriez|voudrais|veux|souhaite|sais|savez|sait|dire|rappelle|rappeler|rappelez|montre|montrer|affiche|afficher|donne|donner|fais|faire|fait|vois|voir|trouve|cherche|ouvre|passe|passons|reviens|revenons|maintenant|encore|aussi|toujours|petit|petite|gros|grand|beaucoup|peu|moins|plus|tres|trop|ici|la|là|quoi|comme|comment|quand|combien|quel|quelle|quels|quelles|qui|que|qu|dont|ceci|cela|ca|ce|cet|cette|ces|celui|celle|ceux|celles|mon|ma|mes|notre|nos|votre|vos|son|sa|ses|leur|leurs|il|elle|ils|elles|lui|eux|je|j|nous|on|y|en|le|les|un|une|des|du|de|d|au|aux|sur|sous|dans|chez|par|pour|avec|sans|selon|vers|entre|apres|avant|depuis|pendant|jusqu|est|sont|etait|etaient|ete|etre|a|ai|as|avons|avez|ont|avait|avaient|eu|eues|eue|aurait|va|vont|faut|doit|dois|dit|dire|ces|temps|fois|moment|jour|jours|toute|tous|tout|toutes|rien|chose|choses|truc|machin|cas|monde|gens|personne|personnes|mme|mlle|madame|mademoiselle|monsieur|docteur|dr|patient|patiente|patients|malade|dossier|fiche|etat|situation|nouvelles|essentiel|point|points|resume|synthese|informations|information|infos|info|historique|parcours|traitement|traitements|medicament|medicaments|medocs|cachets|comprimes|gelules|ordonnance|prescription|posologie|dose|doses|molecule|molecules|consultation|consultations|seance|seances|visite|visites|rendez|vous|rdv|dernier|derniere|dernieres|derniers|premier|premiere|premieres|premiers|precedent|precedente|precedentes|precedents|recent|recente|recentes|recents|prochain|prochaine|actuel|actuelle|actuellement|avant|apres|deja|jamais|evolue|evolution|diagnostic|diagnostics|echelle|echelles|score|scores|document|documents|certificat|certificats|venu|venue|venus|vu|vue|vus|passe|suis|suit|suivi|suivre|sais|savoir|parle|parler|raconte|retrace|prend|prends|prenait|pris|sous|noter|note|dit|dits|parle|parles|presente|presentes|resume|resumes|explique|dresse|indique|indiquer|vient|revient|reviendra|deux|trois|quatre|cinq)$/u;
 
-const NUMBER_WORDS: Record<string, number> = { deux: 2, trois: 3, quatre: 4, cinq: 5, "2": 2, "3": 3, "4": 4, "5": 5 };
+const NUMBER_WORDS: Record<string, number> = { deux: 2, trois: 3, quatre: 4, cinq: 5, "2": 2, "3": 3, "4": 4, "5": 5, deuxieme: 2, second: 2, seconde: 2, troisieme: 3, quatrieme: 4, cinquieme: 5 };
+// A visit ranked before the last one: "l'avant-dernière", "juste avant sa dernière", "la troisième en remontant". The latest-visits list holds it.
+const BEFORE_LAST = /\bavant-derni\w*|\bavant (?:sa|la|son|leur) derni\w*|\b(deuxieme|second|seconde|troisieme|quatrieme|cinquieme)\b[^?]*\b(?:en remontant|en partant de la fin|avant la derniere|depuis la (?:plus )?recente)\b/u;
+// How long the patient has been followed is the date of the first visit, not a number of visits.
+const SINCE_HOW_LONG = /\bdepuis combien (?:de temps|d'annees|d'ans|de mois)\b/u;
 const requestedCount = (plain: string) => {
   const match = /\b(deux|trois|quatre|cinq|[2-5])\s+derni\w*/u.exec(plain);
   return match ? NUMBER_WORDS[match[1]!] ?? 3 : 3;
@@ -80,6 +84,9 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   // "son traitement précédent", "a-t-il changé de traitement", "il prenait quoi avant": the recorded changes, not the current state.
   if (TREAT.test(p) && (PREVIOUS.test(p) || CHANGED.test(p))) return { section: "treatchanges" };
   if (TREAT.test(p)) return { section: "treatments" };
+  const before = BEFORE_LAST.exec(p);
+  if (before && VISIT.test(p)) return { section: "prev", n: NUMBER_WORDS[before[1] ?? ""] ?? 2 };
+  if (SINCE_HOW_LONG.test(p) && (VISIT.test(p) || /\bsui[st]?\w*\b/u.test(p))) return { section: "firstdate" };
   if ((LAST.test(p) || PREVIOUS.test(p)) && VISIT.test(p) && /\b(?:deux|trois|quatre|cinq|[2-5])\s+derni\w*/u.test(p)) return { section: "prev", n: requestedCount(p) };
   if (HISTORY.test(p)) return { section: "history" };
   if (EVOLVE.test(p)) return { section: "evolution" };

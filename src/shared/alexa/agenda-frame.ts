@@ -1,4 +1,5 @@
 import { unknownNameRuns } from "./patient-question";
+import { namedFrenchPeriod } from "./request-contract";
 
 /**
  * Everyday agenda questions ("Combien de patients aujourd'hui ?", "J'ai du monde ce matin ?", "Qui a annulé cette semaine ?")
@@ -39,6 +40,20 @@ const explicitRange = (from: string, to: string) => {
   return `du ${fd} ${monthName(fm!)} ${fy} au ${td} ${monthName(tm!)} ${ty}`;
 };
 const cabinetDay = (asOf: string) => asOf.slice(0, 10);
+/**
+ * A period the list above does not know ("en septembre", "depuis le début du mois", "le 5 novembre"), read by the shared civil
+ * reader of the patient and finance frames and written as the explicit day or range the gate reads. Its bounds are cabinet days.
+ */
+function civilPeriod(text: string, asOf: string): string | null {
+  const period = namedFrenchPeriod(text, asOf);
+  if (!period) return null;
+  const from = period.from.slice(0, 10), last = addDays(period.to.slice(0, 10), -1);
+  // A month without its year is read as the last one past; in an agenda, "en novembre" said in October may be the coming one.
+  if (!/\b(?:19|20)\d{2}\b/u.test(text) && toUtc(cabinetDay(asOf)) - toUtc(from) > 183 * 86400000) return null;
+  return last <= from ? explicitDay(from) : explicitRange(from, last);
+}
+// The words of such a period, so they are not taken for a name once it is read.
+const CIVIL_WORDS = new RegExp(`\\b(?:${MONTHS}|(?:19|20)\\d{2}|\\d{1,2}(?:er)?|depuis|debut|fin|mois|semaine|annee|tout|toute|entier|ensemble|sur|en|au|du|jusqu'au|jusqu'a|de|d)\\b`, "gu");
 
 /**
  * The period as the gates read it. Words the period parser already knows stay as they are; the others become explicit
@@ -76,28 +91,35 @@ export function canonicalPeriod(folded: string, asOf: string): string | null {
 // ── concepts ──
 const COUNT_PEOPLE = /\bcombien (?:de|d')\s*(?:patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv)\b/u;
 const COUNT_ANY = /\bcombien\b|\bnombre (?:de|d')\s*(?:patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv)\b/u;
-const WHO = /\bqui (?:ai-je|avons-nous|a-t-on|est attendu|sont attendus|attends-je|vient|viennent|vais-je (?:voir|recevoir)|vois-je|reste|restent|avais-je|est (?:mon|le|ma) (?:premier|dernier|prochain)|etait (?:mon|le) (?:premier|dernier))\b/u;
+const WHO = /\bqui (?:ai-je|avons-nous|a-t-on|est attendu|sont attendus|attends-je|vient|viennent|vais-je (?:voir|recevoir)|vois-je|reste|restent|avais-je|est (?:mon|le|ma) (?:premier|dernier|prochain)|etait (?:mon|le) (?:premier|dernier)|(?:est|etait|sont|etaient) (?:prevus?|prevues?|attendus?|au programme))\b/u;
 const HAVE_PEOPLE = /\b(?:j'ai|ai-je|on a|avons-nous|nous avons)\s+(?:du monde|des patients|beaucoup de patients|des consultations|des rendez-vous|des rdv|de la visite|du monde)\b/u;
 const CANCELLED = /\bqui (?:a|ont)\s+(?:annule|reporte|decale)\w*\b|\b(?:annulations?|rendez-vous annules)\b/u;
-const OVERVIEW = /\b(?:apercu|a quoi ressemble|les rendez-vous|les rdv|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme)\b/u;
+// A patient who did not come: the gate's "non honoré" status. "Poser un lapin" is the everyday French for it.
+const ABSENT = /\b(?:absents?|absentes?|absences?|lapins?|no[- ]show|non (?:honore|excuse|venu)\w*|pas (?:venu|venue|venus|venues)\b|(?:ne|n') ?(?:s'est|se sont|est|sont) pas (?:presente|presentee|presentes|presentees|venu|venue|venus|venues))/u;
+const ABSENT_WORDS = /\b(?:annul\w*|absent\w*|absences?|lapins?|venu\w*|presente\w*|honore\w*|excuse\w*|pose\w*|ne|n|s|se|pas|non|show|no)\b/gu;
+const OVERVIEW = /\b(?:apercu|a quoi ressemble|les rendez-vous|les rdv|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme|au programme|quelque chose de prevu)\b/u;
 const NEXT = /\b(?:prochain|prochaine)\s+(?:patient|rendez-vous|rdv|consultation)\b|\bqui est le prochain\b|\ba quelle heure est (?:mon|le|ma) prochain\w*\b/u;
 const FIRSTLAST = /\b(?:premier|premiere|dernier|derniere)\s+(?:patient|patiente|rendez-vous|rdv|consultation)\b|\ba quelle heure commence ma journee\b/u;
 const FREE = /\b(?:suis-je libre|libre|disponible|creneaux? (?:libre|disponible))\b/u;
 const BARE_PEOPLE = /^(?:les )?patients?\s*(?:attendus?\s*)?$/u;
 // Words that make it a question about the clinic's population or about one person, not about the agenda.
 const NOT_AGENDA = /\b(?:son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|pay(?:e|ee|es|ees|er)s?|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
-const AGENDA_WORDS = /\b(?:ressemble|quoi|ont|eu|lieu|ete|realisees|faites|terminees|passee|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge)\b/gu;
+const AGENDA_WORDS = /\b(?:ressemble|quoi|ont|eu|lieu|ete|realisees|faites|terminees|passee|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge|quelque|chose|prevus?|prevues?|programme|etaient)\b/gu;
 
-export type AgendaIntent = "count" | "list" | "cancelled" | "next" | "first" | "last" | "free" | "pastcount";
+export type AgendaIntent = "count" | "list" | "cancelled" | "cancelledcount" | "absent" | "absentcount" | "next" | "first" | "last" | "free" | "pastcount";
 
-/** What the question asks of the agenda. Null when it is not clearly an agenda question. */
-export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; period: string | null } | null {
+/** What the question asks of the agenda. Null when it is not clearly an agenda question. `otherPeriod`: one read by the civil reader. */
+export function classifyAgendaQuestion(text: string, otherPeriod?: string | null): { intent: AgendaIntent; period: string | null } | null {
   const { out } = foldWithMap(text);
   const found = [...out.matchAll(new RegExp(PERIOD_SOURCE, "gu"))].map(match => match[0]);
   // "À quelle heure commence ma journée demain ?": the day named wins over "ma journée".
-  const period = found.find(value => !/^ma (?:journee|semaine)$/u.test(value)) ?? found[0] ?? null;
-  if (NOT_AGENDA.test(out) && !CANCELLED.test(out)) return null;
-  if (CANCELLED.test(out) && period) return { intent: "cancelled", period };
+  const period = found.find(value => !/^ma (?:journee|semaine)$/u.test(value)) ?? found[0] ?? otherPeriod ?? null;
+  const absent = ABSENT.test(out);
+  // "Qui n'est pas venu à son rendez-vous ?" asks the agenda; "il", "elle" or a record still make it one person's question.
+  if (NOT_AGENDA.test(absent ? out.replace(/\ba (?:son|leur|leurs|ses) (?:rendez-vous|rdv)\b/gu, " ") : out) && !CANCELLED.test(out)) return null;
+  const counted = /\bcombien\b|\bnombre (?:de|d')/u.test(out);
+  if (absent && period) return { intent: counted ? "absentcount" : "absent", period };
+  if (CANCELLED.test(out) && period) return { intent: counted ? "cancelledcount" : "cancelled", period };
   if (NEXT.test(out)) return { intent: "next", period: null };
   if (!period) return null;
   if (FREE.test(out)) return { intent: "free", period };
@@ -113,15 +135,17 @@ export function classifyAgendaQuestion(text: string): { intent: AgendaIntent; pe
 
 /** The closed agenda question for this utterance, or null when unsure. Asked-back names or pronouns leave it to the older route. */
 export function agendaQuestionFrame(text: string, asOf: string): string | null {
-  const question = classifyAgendaQuestion(text);
-  if (!question) return null;
   const { out } = foldWithMap(text);
+  const civil = PERIOD.test(out) ? null : civilPeriod(text, asOf);
+  const question = classifyAgendaQuestion(text, civil);
+  if (!question) return null;
   // Anything left once the agenda vocabulary is removed would be a name, a topic or a second request.
-  const rest = out.replace(PERIOD, " ").replace(AGENDA_WORDS, " ").replace(/[^\p{L}\s]/gu, " ").replace(/\s+/gu, " ").trim();
+  const status = question.intent.startsWith("absent") || question.intent.startsWith("cancelled");
+  const rest = out.replace(PERIOD, " ").replace(civil ? CIVIL_WORDS : /$^/u, " ").replace(status ? ABSENT_WORDS : /$^/u, " ").replace(AGENDA_WORDS, " ").replace(/[^\p{L}\s]/gu, " ").replace(/\s+/gu, " ").trim();
   if (rest && unknownNameRuns(rest).length) return null;
   // A second request in the same sentence is not answered by the agenda alone.
   if (/\b(?:et|puis|ainsi que|aussi)\b[^?]*\b(?:quel(?:le|s|les)?|combien|qui|comment|pourquoi)\b/u.test(out.replace(/^(?:et|puis)\s+/u, ""))) return null;
-  const period = question.period ? canonicalPeriod(question.period, asOf) : null;
+  const period = civil && question.period === civil ? civil : question.period ? canonicalPeriod(question.period, asOf) : null;
   if (question.period && !period) return null;
   return renderAgendaQuestion(question.intent, period);
 }
@@ -133,6 +157,9 @@ export function renderAgendaQuestion(intent: AgendaIntent, period: string | null
     case "count": return `Combien de rendez-vous ${period} ?`;
     case "list": case "last": case "free": return `Quels sont les rendez-vous ${period} ?`;
     case "cancelled": return `Quels sont les rendez-vous annulés ${period} ?`;
+    case "cancelledcount": return `Combien de rendez-vous annulés ${period} ?`;
+    case "absent": return `Quels sont les rendez-vous non honorés ${period} ?`;
+    case "absentcount": return `Combien de rendez-vous non honorés ${period} ?`;
     // The period reader refuses "premier" beside a day other than today; the day's list holds the first row as well.
     case "first": return period === "aujourd'hui" ? `Quel est le premier rendez-vous ${period} ?` : `Quels sont les rendez-vous ${period} ?`;
     case "pastcount": return `Combien de consultations terminées ${period} ?`;
@@ -144,7 +171,7 @@ export function renderAgendaQuestion(intent: AgendaIntent, period: string | null
 export function agendaPeriodOf(text: string, asOf: string): string | null {
   const { out } = foldWithMap(text);
   const found = [...out.matchAll(new RegExp(PERIOD_SOURCE, "gu"))].map(match => match[0]).filter(value => !/^ma (?:journee|semaine)$/u.test(value));
-  return found.length === 1 ? canonicalPeriod(found[0]!, asOf) : null;
+  return found.length === 1 ? canonicalPeriod(found[0]!, asOf) : found.length === 0 ? civilPeriod(text, asOf) : null;
 }
 
 /**

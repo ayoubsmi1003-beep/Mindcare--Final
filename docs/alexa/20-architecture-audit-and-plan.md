@@ -215,3 +215,15 @@ Prazosine dependence (fixed by the invariant in §12) was lost by its revert: th
 concept. Drug × rubric check: **33 / 47 at rank 1, 38 / 47 in the top 5** (§12: 32 and 37), no new miss. Replayed on C270:
 X003 (3 turns) and L043 pass. Unit tests fail without each fix.
 
+
+## 15. Agenda: absences, cancellations counted, and periods named by month or day; visits ranked before the last
+| Capability | Cause | Fix |
+|---|---|---|
+| Understanding (agenda status) | The agenda frame had no concept for a patient who did not come ("qui n'est pas venu", "absences non excusées", "lapins", "ne se sont pas présentés"), though the gate filters the « non honoré » status | An absence concept renders "Quels sont / Combien de rendez-vous non honorés <période> ?"; a counted cancellation renders "Combien de rendez-vous annulés…"; "il", "elle" or a name still leave it to the patient routes |
+| Period reading (agenda) | The frame's own period list knew no month ("en septembre", "sur l'ensemble du mois d'octobre") nor "depuis le début du mois" | When that list finds nothing, the shared civil reader of the patient and finance frames (`namedFrenchPeriod`) reads it, written as an explicit day or range; the meaning layer uses the same reader. A month without its year more than six months back is not guessed |
+| Understanding (agenda) | "qui était au programme", "quelque chose de prévu" were not agenda wording | Added to the overview and "who is expected" concepts |
+| Understanding (patient) | "l'avant-dernière séance", "juste avant sa dernière visite", "la troisième en remontant" were read as the last visit; "depuis la plus récente" as an unreadable period | A rank before the last visit reads the latest-visits list (dates of the five latest); "depuis la plus récente" is where the counting starts |
+| Understanding (patient) | "Depuis combien d'années est-il suivi ?" was a visit count | How long a patient has been followed is the date of the first visit; a treatment question keeps the treatment route |
+Replayed on C270 (code not otherwise changed): agenda **13 → 22 / 40**, patients **31 → 33 / 55** and context **27 → 29 / 45**
+(X003#3 included), P017 passes; no turn lost in these three domains. Still unread: "le week-end", "entre mardi et jeudi". Wording
+gap left: the agenda answer says "rendez-vous prévus" for past absences (existing answer template).

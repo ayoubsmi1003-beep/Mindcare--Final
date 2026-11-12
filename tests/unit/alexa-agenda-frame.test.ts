@@ -136,3 +136,29 @@ describe("the clinic's own calendar", () => {
     expect(algiersTimestamp(new Date("2026-10-26T08:30:00Z"))).toBe("2026-10-26T09:30:00+01:00");
   });
 });
+
+describe("agenda frame: absences, cancellations, and periods the frame's own list does not know", () => {
+  // Development wordings, never C270/H270. Each closed form must be one the agenda gate admits.
+  const admitted = (text: string) => { const closed = frame(text); expect(closed, text).not.toBeNull(); expect(frenchRequestAdmission(closed!, false, ASOF)?.tools).toEqual(["query_agenda"]); return closed!; };
+  it("reads a no-show however it is said, as the gate's « non honoré » status", () => {
+    expect(admitted("Qui ne s'est pas présenté hier ?")).toBe("Quels sont les rendez-vous non honorés hier ?");
+    expect(admitted("Les patients absents hier ?")).toBe("Quels sont les rendez-vous non honorés hier ?");
+    expect(admitted("Qui m'a posé un lapin la semaine dernière ?")).toBe("Quels sont les rendez-vous non honorés du 19 octobre 2026 au 25 octobre 2026 ?");
+    expect(admitted("Combien de lapins cette semaine ?")).toBe("Combien de rendez-vous non honorés cette semaine ?");
+    expect(admitted("Combien de rendez-vous non excusés ce mois-ci ?")).toBe("Combien de rendez-vous non honorés ce mois-ci ?");
+  });
+  it("counts cancellations when the question counts", () => {
+    expect(admitted("Combien d'annulations depuis le début de la semaine ?")).toBe("Combien de rendez-vous annulés le 26 octobre 2026 ?");
+    expect(admitted("Qui a annulé hier ?")).toBe("Quels sont les rendez-vous annulés hier ?");
+  });
+  it("reads a month or an explicit day through the shared civil reader", () => {
+    expect(admitted("Sur tout le mois de septembre, combien de rendez-vous ?")).toBe("Combien de rendez-vous du 1 septembre 2026 au 30 septembre 2026 ?");
+    expect(admitted("Combien de patients absents en septembre ?")).toBe("Combien de rendez-vous non honorés du 1 septembre 2026 au 30 septembre 2026 ?");
+    expect(admitted("Qui était prévu le 5 novembre ?")).toBe("Quels sont les rendez-vous le 5 novembre ?");
+    expect(admitted("J'ai quelque chose de prévu le 3 novembre ?")).toBe("Quels sont les rendez-vous le 3 novembre ?");
+    expect(admitted("Qui était au programme mardi dernier ?")).toBe("Quels sont les rendez-vous le 20 octobre 2026 ?");
+  });
+  it("never guesses: a month without its year far in the past, one person, or a name stay with the other routes", () => {
+    for (const text of ["Combien de rendez-vous en novembre ?", "Est-ce qu'il n'est pas venu hier ?", "Elle était absente à son rendez-vous de lundi ?", "Les absences de Karim Test en septembre ?", "Des rendez-vous ce week-end ?"]) expect(frame(text), text).toBeNull();
+  });
+});
