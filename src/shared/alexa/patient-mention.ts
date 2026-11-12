@@ -41,6 +41,8 @@ for (const word of [
   "antipsychotique", "antipsychotiques", "antidepresseur", "antidepresseurs", "benzodiazepine", "benzodiazepines", "metabolique", "metaboliques", "effet", "duree", "criteres", "critere", "post-traumatique", "traumatique", "stress",
   "schizophrenie", "schizophrene", "schizoaffectif", "bipolaire", "delirant", "delirants", "insomnie", "dysthymie", "hyperactivite", "attention", "deficit", "alimentaires", "alimentaire", "prescription", "prescriptions",
   "parler", "durer", "diagnostiquer", "definir", "identifier", "evoquer", "poser", "reconnaitre", "distinguer", "ii", "iii", "iv", "risque", "risques", "precaution", "precautions", "mecanisme", "mecanismes", "action", "dosage", "dosages", "doses", "temps", "symptomes", "symptome",
+  // States of an appointment, like "terminé" above: "un rendez-vous de prévu" names nobody.
+  "prevu", "prevue", "prevus", "prevues", "programme", "programmee", "programmes", "programmees", "planifie", "planifiee", "planifies", "planifiees",
 ]) common.add(word);
 // French function words are never part of a name: "c'est quoi exactement", "une place contre l'akathisie", "pour autant".
 for (const word of [

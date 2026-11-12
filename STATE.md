@@ -41,7 +41,8 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    (34/29/22/18/36/10) ; 16 gagnés, 0 perdu. Doc 20 §17. Livres jamais routés (mots pris pour un nom, verbe d'écriture
    décrivant, « est-il ») : +4 sur 131 tours rejoués, aucune perte. Doc 20 §18. Critères DSM
    demandés en d'autres mots (« à partir de quand », « comment se présente ») : test structurel 4 → 36/40 au rang 1 ; livres C270
-   36 → 49/80, aucune perte. Doc 20 §19.
+   36 → 49/80, aucune perte. Doc 20 §19. Prochain rendez-vous d'un patient nommé (« a-t-il un rendez-vous de
+   prévu », « vient quand ») : +2 sur 140 tours, aucune perte. Doc 20 §20.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

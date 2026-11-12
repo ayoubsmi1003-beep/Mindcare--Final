@@ -264,3 +264,11 @@ chunk known from the manual's own headings): **rank 1: 4 → 36 / 40, top 5: 14 
 (33 / 47, 38 / 47). C270 books replayed: **36 → 49 / 80** against `p5` (DSM criteria 10, routing of §18 3), none lost.
 Still missed: "phobie spécifique" (the generated index holds "phobie speciique": a ligature lost by the generator, data);
 "anxiété de séparation" (its criteria chunk scores under the relevance floor).
+
+## 20. A named patient's next appointment, asked as coming or holding one
+"<nom> a-t-il un rendez-vous de prévu ?" and "<nom> vient quand ?" were neither read as the next appointment (the concept knew
+"prochain", "revient", "reconvoqué") nor kept their patient: the name parser took "prévu" for a name. Coming ("vient / passera
+… quand") or holding an appointment ("a-t-il un rendez-vous", "de prévu", "à venir", "planifié") in the present is now the next
+appointment, never with a word of the last, a previous or the first visit; appointment states ("prévu", "programmé",
+"planifié") join the parser's status words. Practice-wide questions ("Qui a un rendez-vous demain ?") keep the agenda route.
+Replayed on C270 (patients, context, agenda: 140 turns): 2 gained (P046, X008#3), none lost.

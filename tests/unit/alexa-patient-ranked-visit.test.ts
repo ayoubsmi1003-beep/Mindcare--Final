@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { classifyPatientQuestion, patientQuestionFrame } from "@/shared/alexa/patient-question";
+import { parsePatientMention } from "@/shared/alexa/patient-mention";
 
 // Development wordings, never C270/H270.
 describe("a visit ranked before the last one, and how long a patient has been followed", () => {
@@ -25,5 +26,24 @@ describe("a visit ranked before the last one, and how long a patient has been fo
   it("reads « depuis combien de temps est-il suivi » as the date of the first visit, never a count", () => {
     for (const text of ["Depuis combien de temps la suit-on ?", "Il vient au cabinet depuis combien d'années ?", "Depuis combien de mois est-elle suivie ici ?"]) expect(classifyPatientQuestion(text)?.section, text).toBe("firstdate");
     expect(classifyPatientQuestion("Combien de séances depuis janvier ?")?.section).toBe("count");
+  });
+});
+
+describe("a patient's next appointment, asked as coming or holding one", () => {
+  // Development wordings, never C270/H270.
+  const ASOF = "2026-10-26T09:00:00+01:00";
+  it("reads « vient quand », « a-t-il un rendez-vous (de prévu) » as the next appointment, for a named patient or the one on screen", () => {
+    expect(patientQuestionFrame("Samir Test a-t-il un rendez-vous de programmé ?", { contextPatient: false, followup: false }, ASOF)?.text).toBe("Quel est le prochain rendez-vous de Samir Test ?");
+    expect(patientQuestionFrame("Et Samir Test, il passera quand ?", { contextPatient: false, followup: false }, ASOF)?.text).toBe("Quel est le prochain rendez-vous de Samir Test ?");
+    expect(patientQuestionFrame("Elle a toujours un rdv ?", { contextPatient: true, followup: false }, ASOF)?.text).toBe("Quel est le prochain rendez-vous du patient sélectionné ?");
+    expect(classifyPatientQuestion("Un rendez-vous à venir pour lui ?")?.section).toBe("nextappt");
+  });
+  it("leaves past visits and the practice's agenda alone", () => {
+    expect(classifyPatientQuestion("Quand est-elle venue la dernière fois ?")?.section).toBe("lastdate");
+    expect(classifyPatientQuestion("A-t-il eu un rendez-vous en septembre ?")).toBeNull();
+    expect(patientQuestionFrame("Qui a un rendez-vous demain ?", { contextPatient: true, followup: false }, ASOF)).toBeNull();
+  });
+  it("never takes an appointment's state for a name", () => {
+    expect(parsePatientMention("Samir Test a-t-il un rendez-vous de prévu ?")).toEqual({ status: "none" });
   });
 });

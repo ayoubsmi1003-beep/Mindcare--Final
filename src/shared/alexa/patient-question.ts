@@ -37,7 +37,7 @@ const SUMMARY = /\b(?:resum\w*|synthese|essentiel|points? (?:importants?|cles?)|
 const DOCS = /\b(?:documents?|certificats?)\b/u;
 const SCALES = /\b(?:echelles?|scores?|phq|gad|questionnaires?)\b/u;
 const DIAG = /\bdiagnostics?\b/u;
-const NEXT = /\b(?:prochain\w*|revient|reviendra|reconvoqu\w*|reprogramm\w*|programme\w*)\b/u;
+const NEXT = /\b(?:prochain\w*|revient|reviendra|reconvoqu\w*|reprogramm\w*|programme\w*|prevus?|prevues?|planifie\w*|a venir)\b/u;
 const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|precedemment|auparavant)\b/u;
 const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
 
@@ -81,6 +81,9 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   if (DOCS.test(p)) return { section: "documents" };
   // Any word of a visit ("la prochaine fois qu'il vient", "son prochain passage", "attendu quand") names the next appointment.
   if (NEXT.test(p) && (VISIT.test(p) || /\b(?:revien\w*|repass\w*|reconvoqu\w*|attendue?s?)\b/u.test(p))) return { section: "nextappt" };
+  // "Il vient quand ?", "a-t-elle un rendez-vous ?": coming, or holding an appointment, in the present is the next one.
+  if (!LAST.test(p) && !PREVIOUS.test(p) && !FIRST.test(p) && (/\b(?:vient|viennent|viendra|viendront|passera|repasse)\b[^?]*\bquand\b|\bquand\b[^?]*\b(?:vient|viennent|viendra|viendront|passera|repasse)\b/u.test(p)
+    || /\b(?:a|a-t-il|a-t-elle|ont-ils|ont-elles)\s+(?:bien\s+|toujours\s+|encore\s+)?(?:un\s+)?(?:rendez-vous|rdv)\b/u.test(p))) return { section: "nextappt" };
   // "son traitement précédent", "a-t-il changé de traitement", "il prenait quoi avant": the recorded changes, not the current state.
   if (TREAT.test(p) && (PREVIOUS.test(p) || CHANGED.test(p))) return { section: "treatchanges" };
   if (TREAT.test(p)) return { section: "treatments" };
