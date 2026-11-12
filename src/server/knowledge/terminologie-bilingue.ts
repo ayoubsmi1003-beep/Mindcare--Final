@@ -402,7 +402,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "dependance",
-    fr: ["dependance", "risque de dependance", "addiction"],
+    fr: ["dependance", "risque de dependance", "addiction", "accoutumance", "risque d accoutumance"],
     en: ["habit forming", "dependence", "addiction"],
     rubriques: ["Habit Forming"],
     origine: "livre",
@@ -496,6 +496,8 @@ export const MOTS_OUTILS_QUESTION: ReadonlySet<string> = new Set([
   "ils", "elles", "on", "nous", "vous", "je", "tu", "te", "se", "y",
   "que", "quand", "comme", "si", "ne", "pas", "plus", "a", "ou",
   "dire", "dit", "dis", "sait", "savoir", "peut", "faire", "faut",
+  // A verb that only links drug and effect ("entraine-t-elle une dependance") is no word of the English book.
+  "entraine", "entrainent", "entrainer", "provoque", "provoquent", "provoquer",
   "what", "which", "who", "whom", "whose", "how", "why", "when", "where",
   "is", "are", "was", "were", "be", "been", "being", "am", "do", "does",
   "did", "has", "have", "had", "can", "could", "should", "would", "will",
@@ -711,7 +713,8 @@ export function planifierExpansionBilingue(
   // jamais une négation réécrite : elle ÉLARGIT la recherche, et la question
   // d'origine reste celle que lit la synthèse.
   const invariant = (jeton: string): boolean =>
-    MEDICAMENTS_CONNUS.has(jeton) || RACINES_MONOGRAPHIES.has(jeton)
+    // Not every monograph: "sodium sous oxcarbazepine" lost "sodium" and the drug's other rubrics filled the places.
+    MEDICAMENTS_CONNUS.has(jeton)
     || /^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(jeton)
     || UNITES_INVARIANTES.has(jeton);
   const invariants = contenu.filter(invariant);

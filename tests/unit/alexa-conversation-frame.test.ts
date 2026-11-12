@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, afterEach } from "vitest";
-import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "@/server/alexa/conversation-frame";
+import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, namesTheOpenRecord, resolvePatientFollowup } from "@/server/alexa/conversation-frame";
 
 const loop = vi.hoisted(() => ({ runAgentLoop: vi.fn() }));
 vi.mock("@/server/alexa/agent-loop", () => loop);
@@ -56,6 +56,10 @@ describe("resolvePatientFollowup", () => {
     expect(resolvePatientFollowup(text).kind).toBe("none");
   });
   it("never applies when someone is named", () => expect(resolvePatientFollowup("Et le traitement de Rania Autre ?").kind).toBe("none"));
+  it("tells the record on screen from the patient discussed last", () => {
+    for (const yes of ["Revenons à mon patient : sa dernière note ?", "Retour au dossier, son traitement ?", "Et ma patiente, elle a quel âge ?", "Pour le patient ouvert, les rendez-vous ?", "La patiente de la consultation, son diagnostic ?"]) expect(namesTheOpenRecord(yes)).toBe(true);
+    for (const no of ["Et ce patient, son traitement ?", "Le patient suivant ?", "Sa dernière note ?", "Combien de patients aujourd'hui ?", "Le dossier de Lina Test ?"]) expect(namesTheOpenRecord(no)).toBe(false);
+  });
 });
 
 describe("orchestrated follow-ups", () => {
@@ -64,11 +68,11 @@ describe("orchestrated follow-ups", () => {
   const cleanups: (() => void)[] = [];
   afterEach(() => { for (const cleanup of cleanups.splice(0)) cleanup(); loop.runAgentLoop.mockReset(); });
   const answer = (id: string | null, tool: string) => ({ status: "completed", parts: [{ id: "requested_1", goal: "g", tools: [tool], conditions: [], dependsOn: [], status: "answered", resultRefs: ["r"] }], results: [{ callId: "r", status: "ok", complete: true, ...(id ? { patientId: id } : {}), text: "Réponse.", evidence: [], conditionKeys: [] }], sentences: ["Réponse."], sources: [], patientId: id, tokensIn: 1, tokensOut: 1 });
-  function session() {
+  function session(screenPatientId: string | null = null) {
     const actor = `frame-${crypto.randomUUID()}`, conversationId = crypto.randomUUID();
     cleanups.push(() => conversationState.clear(actor, conversationId));
     const deps: OrchestratorDependencies = { actor, native: true, agentAsOf: "2026-10-27T09:00:00+01:00", db: { rpc: noRead }, knowledge: { rpc: noRead } };
-    return (text: string) => runAlexa({ text, conversationId, clientTurnId: crypto.randomUUID(), appContext: { patientId: null, page: "/jarvis" } }, deps, () => undefined, new AbortController().signal);
+    return (text: string) => runAlexa({ text, conversationId, clientTurnId: crypto.randomUUID(), appContext: { patientId: screenPatientId, page: screenPatientId ? "patient" : "/jarvis" } }, deps, () => undefined, new AbortController().signal);
   }
   const last = () => loop.runAgentLoop.mock.calls.at(-1)?.[0] as { text: string; appContext: { patientId: string | null } };
 
@@ -98,5 +102,22 @@ describe("orchestrated follow-ups", () => {
     const run = session();loop.runAgentLoop.mockResolvedValue(answer(patientId, "get_patient_context"));
     await run("Résume la dernière consultation de Lina Test.");await run("Et le traitement de Rania Autre ?");
     expect(last().appContext.patientId).toBeNull();
+  });
+  it("goes back to the record on screen when the doctor says so, after another patient was read", async () => {
+    const screen = "33333333-3333-4333-8333-333333333333", run = session(screen);
+    loop.runAgentLoop.mockResolvedValue(answer(patientId, "get_patient_context"));
+    await run("Résume la dernière consultation de Lina Test.");
+    await run("Et le traitement ?");
+    expect(last().appContext.patientId).toBe(patientId);
+    for (const back of ["Revenons à ma patiente : son traitement ?", "Et pour le dossier ouvert, sa dernière note ?"]) {
+      await run("Résume la dernière consultation de Lina Test.");
+      await run(back);
+      expect(last().appContext.patientId).toBe(screen);
+    }
+  });
+  it("keeps the working patient when no record is open", async () => {
+    const run = session();loop.runAgentLoop.mockResolvedValue(answer(patientId, "get_patient_context"));
+    await run("Résume la dernière consultation de Lina Test.");await run("Revenons à mon patient : son traitement ?");
+    expect(last().appContext.patientId).toBe(patientId);
   });
 });

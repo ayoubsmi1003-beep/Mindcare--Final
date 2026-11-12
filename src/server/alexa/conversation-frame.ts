@@ -93,6 +93,11 @@ const NOT_A_PATIENT_SUBJECT = /^(?:il|elle)\s+(?:faut|y a|existe|est (?:possible
 export type PatientFollowup = { kind: "rewrite"; text: string } | { kind: "reuse" } | { kind: "none" };
 
 /** Short references to the working patient. Naming someone or the whole cabinet is never one. */
+/** Words that point back at the record open on screen, not at the patient discussed last ("revenons à mon patient", "le dossier ouvert"). */
+export function namesTheOpenRecord(text: string): boolean {
+  return /\b(?:revenons|revenir|reviens|retournons|retour)\s+(?:a|au|sur)\s+(?:(?:mon|ma|notre|le|la)\s+)?(?:patient|patiente|dossier)\b|\b(?:mon|ma|notre) (?:patient|patiente)\b|\b(?:le|la) (?:patient|patiente|dossier) (?:ouvert|ouverte|a l'ecran|de la consultation|en cours)\b/u.test(plain(text));
+}
+
 export function resolvePatientFollowup(text: string): PatientFollowup {
   const folded = plain(text).replace(/[?.!]+$/u, "").trim();
   // The name parser reads "elle prend quoi" as a name; a leading pronoun is not one.

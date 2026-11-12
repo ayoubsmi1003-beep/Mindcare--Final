@@ -90,6 +90,29 @@ describe("couche de terminologie bilingue (Stahl 7e)", () => {
     for (const q of plan.requetes) { expect(q).toContain("sertraline"); expect(q).not.toMatch(/\bbonn\b/u); }
   });
 
+  it("garde chaque mot de la question dans toutes les requetes d'une monographie hors referentiel ferme", () => {
+    // Development wordings. A rubric + drug-only query dropped "sodium" and pulled the drug's unrelated rubrics.
+    for (const [question, mots, garde] of [
+      ["Faut-il surveiller le bicarbonate sous topiramate ?", ["surveiller", "bicarbonate", "topiramate"], "bicarbonate"],
+      ["Surveiller les transaminases sous disulfirame ?", ["surveiller", "transaminases", "disulfirame"], "transaminases"],
+    ] as const) {
+      const plan = planifierExpansionBilingue(normaliser(question), mots);
+      expect(plan.requetes.length).toBeGreaterThan(0);
+      for (const q of plan.requetes) expect(q).toContain(garde);
+    }
+  });
+
+  it("lit « accoutumance » comme la dependance, sans garder le verbe de liaison francais", () => {
+    // Development wordings. "entraine" or "provoque" left in every rubric query annulled the English AND.
+    for (const [question, mots, attendu] of [
+      ["La prazosine entraine-t-elle une dependance ?", ["prazosine", "entraine", "dependance"], "Habit Forming prazosin"],
+      ["Risque d'accoutumance avec la buspirone ?", ["risque", "accoutumance", "buspirone"], "Habit Forming buspirone"],
+      ["La clonidine provoque-t-elle une dependance ?", ["clonidine", "provoque", "dependance"], "Habit Forming clonidine"],
+    ] as const) {
+      expect(planifierExpansionBilingue(normaliser(question), mots).requetes).toContain(attendu);
+    }
+  });
+
   it("tolere les elisions et les tirets francais", () => {
     // « comment dose-t-on » et « comment dose t on » sont la meme forme.
     const plan = planifierExpansionBilingue(

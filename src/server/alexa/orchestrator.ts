@@ -51,7 +51,7 @@ import { chooseWithLocalModel, intentByMeaning, SEMANTIC_RECIPE, type Choose, ty
 import { renderIntent } from "@/shared/alexa/intent-render";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
 import type { TurnTraceRecorder } from "./turn-trace";
-import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, resolvePatientFollowup } from "./conversation-frame";
+import { isKnowledgeFollowup, knowledgeAppliedToPatient, knowledgeFollowupQuestion, namesTheOpenRecord, resolvePatientFollowup } from "./conversation-frame";
 export { isKnowledgeFollowup, knowledgeFollowupQuestion };
 import { z } from "zod";
 // The frame already refused a period it cannot carry; here only its bounds are kept.
@@ -430,7 +430,9 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     const frameText=wordFrameText??meaning?.text??null;
 
     const turnInput=dependencies.resumeCursor?agentInput:selectedListedPatient?{...agentInput,text:reaskForSelectedPatient(previous?.lastRequest)??'Affiche le profil du patient sélectionné.'}:inheritedText?{...agentInput,text:inheritedText}:knowledgeFollowup?{...agentInput,text:knowledgeFollowup}:frameText?{...agentInput,text:frameText}:agentInput;    if(selectedListedPatient)dependencies.trace?.followup('listed-patient');else if(inheritedText)dependencies.trace?.followup('rewritten');else if(knowledgeFollowup)dependencies.trace?.followup('knowledge');else if(appliedToPatient)dependencies.trace?.followup('knowledge-to-patient');else if(patientFollowup.kind!=='none')dependencies.trace?.followup('patient');else if(patientFrame)dependencies.trace?.followup('patient-frame');else if(agendaFrame)dependencies.trace?.followup('agenda-frame');else if(practiceFrame)dependencies.trace?.followup('practice-frame');else if(meaning)dependencies.trace?.followup('meaning-frame');
-    const reusePatient=continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context'||!!meaning?.contextPatient;
+    // "Revenons à mon patient": the record on screen, even when the last turns read another patient.
+    const backToScreen=!!input.appContext.patientId&&namesTheOpenRecord(input.text);
+    const reusePatient=!backToScreen&&(continuesPatientReference(turnInput.text,previous)||!!appliedToPatient||patientFollowup.kind!=='none'||patientFrame?.subject.kind==='context'||!!meaning?.contextPatient);
     const scopedInput=selectedListedPatient?{...turnInput,appContext:{...turnInput.appContext,patientId:selectedListedPatient}}:reusePatient&&previous?.selectedPatientId?{...turnInput,appContext:{...turnInput.appContext,patientId:previous.selectedPatientId}}:turnInput;
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page,Date.now(),contextKey);
     const deterministicAggregate=!dependencies.resumeCursor&&!input.appContext.patientId&&!input.patientName

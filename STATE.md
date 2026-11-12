@@ -31,7 +31,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    Livres : nom français d'un médicament écrit comme sa monographie anglaise (`terminologie-bilingue.ts`) ; test structurel
    médicament × rubrique : 29 → 32/47 au rang 1, sans perte. Doc 20 §12.
    Patient nommé perdu à la réécriture (« Affiche le profil de <nom> » illisible pour l'analyseur) ; mot collé au nom aussi
-   retiré quand la recherche rend une liste. Doc 20 §13. À mesurer : C270 `p4`.
+   retiré quand la recherche rend une liste. Doc 20 §13. **C270 `p4` (`49145f9`) : 133/270** (31/27/13/17/35/10) ; 8 gagnés,
+   2 perdus, corrigés ensuite : L043 (invariant étendu à toute monographie → retour à la liste fermée) et X003#3 (« revenons à mon
+   patient » lit le dossier ouvert). Test médicament × rubrique : 33/47 au rang 1. Doc 20 §14. À mesurer : C270 `p5`.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.

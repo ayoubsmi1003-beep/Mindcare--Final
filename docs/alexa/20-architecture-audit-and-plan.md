@@ -202,3 +202,16 @@ rubric of the right drug ("Children and Adolescents" for "Commonly Prescribed fo
 A guard test now renders every patient section with lower-case, capitalised and three-word names and checks that the parser
 reads back the same name and that the question is admitted to one tool. It would have caught the profile form.
 
+## 14. C270 `p4` (`49145f9`, 2026-11-12), and its two lost turns
+**133/270 turns** (patients 31/55, context 27/45, agenda 13/40, finance 17/35, books 35/80, variation 10/15); against `p3`:
+8 gained (P019, P020, X002#1: period count; X003#1 and #2: named patient; P042: glued verb; X004#2; L050: disulfirame), 2 lost.
+Book passages: 240/241 word for word. Rule 2: every judged failure is Alexa's; 1 test-data limitation.
+| Lost turn | Capability | Cause | Fix |
+|---|---|---|---|
+| L043 (sodium under a drug) | Retrieval (query construction) | §12 also made every monograph name an *invariant*, which adds a "rubric + drug" query without the other words; "sodium" was dropped and the drug's unrelated rubrics (Pregnancy) came first. The turn had passed in `base`, `p2` and `p3` | Invariants back to the closed drug list; the monograph spelling of §12 stays |
+| X003#3 ("Revenons à mon patient : sa dernière note ?") | Context (which patient) | Now that the named patient is kept (§13), a possessive reused it; nothing read "mon patient", "le dossier ouvert", "revenons à…" as the record on screen | `namesTheOpenRecord` (`conversation-frame.ts`): when a record is open, those words read it, never the patient discussed last; without an open record nothing changes |
+Prazosine dependence (fixed by the invariant in §12) was lost by its revert: the French linking verb ("entraîne-t-elle",
+"provoque-t-elle") stayed in every rubric query. Those verbs are now question words; "accoutumance" joins the dependence
+concept. Drug × rubric check: **33 / 47 at rank 1, 38 / 47 in the top 5** (§12: 32 and 37), no new miss. Replayed on C270:
+X003 (3 turns) and L043 pass. Unit tests fail without each fix.
+
