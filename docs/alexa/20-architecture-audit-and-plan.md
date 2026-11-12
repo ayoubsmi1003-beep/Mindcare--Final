@@ -305,3 +305,24 @@ criteria 36/40 unchanged. C270 books replayed: **49 → 55 / 80** against the la
 none lost. Passages word for word: 292/294; the two others (L024, L073) are chunks whose section heading is a cut copy of their
 own first sentence (ingestion artifact, data). The doctor's PC needs nothing new: the vocabulary file is generated from the same
 approved books and ships with the code.
+
+The vocabulary file holds book text only; it contains one cited author's surname (6 passages) that shares letters
+with a test-database surname: no patient data, checked.
+
+## 23. A question about one person never reads the practice's whole consultation list
+P044 ("<nom> a-t-il déjà été reçu en consultation ?", a name the parser cannot see) reached the local model, which called
+`query_consultations` with no patient: the answer listed the practice's 8 143 consultations, other patients' names included, and
+answered nothing. The executor (`agent-tools.ts`) now refuses that read when no patient was resolved, the request is not about the
+whole practice, and the sentence speaks of one person (`questionConcernsAPerson`, or "il"/"elle" as a subject): it asks which
+patient. Practice-wide lists ("Liste les consultations du cabinet.") are unchanged. Safety, not score: the turn still fails (the
+name is not resolved), but no other patient's name is shown. Test: `alexa-one-person-practice-read.test.ts`.
+
+## 24. C270 `p6` (`db55508` + the guard of §23, 2026-11-12)
+**167/270 turns** (patients 36/55, context 29/45, agenda 21/40, finance 17/35, books 55/80, variation 9/15); against `p5` (149):
+22 gained (books 18, patients 2, context 1, variation 1), 4 lost, V006 not run (test timeout at 438 s). Turns reaching the local
+model: 68 (86 in `p5`). Book passages word for word: 99 % (§22). Every loss replayed alone (`p6check`) and classified (rule 2):
+| Turn | Replayed | Class |
+|---|---|---|
+| X011#2, F026#1, V006 | PASS | runtime: the PC ran the 1B model 2–4× slower than in `p5` (meaning choice 26–91 s instead of 5 s); a statistics read timed out at 18 s |
+| A019 ("Demain, mon premier patient arrive à quelle heure ?") | FAIL | Alexa failure, hidden in `p5` by the model's luck: the agenda frame classified it, then refused it because "arrive" was left over as a possible name. Arrival verbs are agenda words now (§25) |
+| V002 ("on l'a reçu la dernière fois… c'était quel jour ?") | FAIL | Alexa failure, model-dependent in both runs: the patient frame read "reçu" as a patient's name. Visit word now (§25) |

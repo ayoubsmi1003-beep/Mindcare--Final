@@ -23,7 +23,7 @@ import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summariz
 import { buildConsultationNoteDetails, buildStructuredSummaryNarrative } from "./case-summary";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns} from "@/shared/alexa/request-contract";
+import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns,questionConcernsAPerson} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
@@ -396,6 +396,10 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    patientId=resolved.patientId; result.patientId=patientId;patientLabels.set(call.id,resolved.identityTokens.reduce((longest,token)=>token.length>longest.length?token:longest,""));
   }
+  // A question about one person ("a-t-il déjà été reçu ?") whose name was not read is never answered by the practice's whole list
+  // of consultations: that list shows other patients' names and answers nothing. Ask which patient.
+  if(call.name==='query_consultations'&&!patientId&&!cabinetWideScope&&(questionConcernsAPerson(identityText)
+    ||/\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste))/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())))return failure(call,'needs_input',copy.patient,'one-person-question-practice-read');
   if(call.name==="query_app"&&a["view"]==="message_draft")return readMessageDraft(call.id,patientId!,String(a["motif"]),asOf,rpc,signal);
   if(call.name==="get_patient_context"){
    if(a['section']==='timeline'){

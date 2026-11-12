@@ -45,7 +45,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    prévu », « vient quand ») : +2 sur 140 tours, aucune perte. Doc 20 §20. « Sur <nom>, … », « écrit » à une séance = la note :
    P010 gagné, aucune perte (base principale ; cas fixture à rejouer). Doc 20 §21. Cas fixture rejoués : inchangés. Livres : formes anglaises
    des mots cliniques français vérifiées dans les livres (`cognats.ts`), passage d'un autre livre nommant le médicament gardé :
-   livres 49 → 55/80, aucune perte ; test développement français→anglais 5 → 7/18 au rang 1. Doc 20 §22. REPRISE : garde contre une liste de consultations du cabinet pour une question sur une personne (P044).
+   livres 49 → 55/80, aucune perte ; test développement français→anglais 5 → 7/18 au rang 1. Doc 20 §22. Garde : une question sur une
+   personne ne lit jamais toute la liste du cabinet (§23). **C270 `p6` : 167/270** (36/29/21/17/55/9), 22 gagnés, 4 perdus classés
+   (3 lenteur du PC, 2 défaillances Alexa masquées en p5 par le modèle, corrigées §25). Doc 20 §24. REPRISE : était garde contre une liste de consultations du cabinet pour une question sur une personne (P044).
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Brancher la porte classée ; ré-encoder les vecteurs (approuvé) APRÈS la passe `base` (la base est partagée).
 4. Contexte et isolation patient (piloté par les échecs mesurés de C270 `base`, vérifié sur H270) ; pluriels « (s) » des gabarits Alexa ; C270 finale ; H270 ; régressions.
