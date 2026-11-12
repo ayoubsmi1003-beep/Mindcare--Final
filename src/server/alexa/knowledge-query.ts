@@ -2,6 +2,7 @@ import { jetoniser } from "@/server/knowledge/rerank";
 import { medicationNames } from "@/shared/alexa/medications";
 import {knowledgeComparisonRequested,requestedMedicationNames} from './knowledge-evidence-content';
 import { requestedMonographNames } from "@/server/knowledge/monograph-roots";
+import { BOOK_DISORDER_TERMS } from "@/shared/alexa/book-topics.generated";
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -166,6 +167,8 @@ export interface KnowledgeQueryPlan {
    * par le lot générique à score égal.
    */
   readonly leafHint?: string;
+  /** The disorder whose criteria are asked: another disorder's criteria that merely mention it are not that leaf. */
+  readonly leafSubject?: string;
   /** Legacy root-section chunks may contain comorbidity under the same locator. */
   readonly embeddedCriteriaOnly?: boolean;
   /**
@@ -175,6 +178,21 @@ export interface KnowledgeQueryPlan {
   readonly terminologieVersion?: string;
 }
 
+// What makes a disorder, asked in everyday words: what it is, how it shows, its thresholds of time or frequency, its forms, its onset.
+const DISORDER_ITSELF=/\b(?:defini\w*|definition|designe\w*|appel\w*|recouvr\w*|signifi\w*|veut dire|c'est quoi|qu'est-ce qu\w*|consist\w*|manifest\w*|present\w*|tradui\w*|caracteris\w*|reconnai\w*|repere\w*|identifi\w*|evoqu\w*|poser|diagnostiqu\w*|retenir|retient|duree\w*|combien de temps|a partir de quand|a partir de quel\w*|frequence|combien de fois|fenetre|minimum|minimale|au moins|seuils?|formes?|sous-types?|variantes?|install\w*)\b/u;
+// Another rubric of the manual, or a treatment: the criteria must not take its place.
+const ANOTHER_RUBRIC=/\b(?:prevalen\w*|frequent(?:e|s|es)?|epidemiolog\w*|evolu\w*|pronostic\w*|facteurs?|risques?|cultur\w*|genre|sexe|suicid\w*|retentissement|consequences?|differentiel\w*|differenci\w*|comorbid\w*|associe\w*|marqueurs?|traitements?|traiter|prise en charge|medicament\w*|posolog\w*|doses?|causes?|origine)\b/u;
+// The manual's own index terms, longest first; "dépersonnalisation/déréalisation" is named by either half.
+const MANUAL_INDEX=BOOK_DISORDER_TERMS.flatMap(term=>term.split('/')).map(term=>({term,words:term.split(/[^\p{L}\p{N}-]+/u).filter(Boolean)})).sort((a,b)=>b.words.length-a.words.length||b.term.length-a.term.length);
+/**
+ * The disorder of the manual's index the question names, each term's words present in any order ("le jeu d'argent devient
+ * pathologique"). Several terms add up ("personnalité" + "évitante"); a term inside a longer one found is not counted again.
+ */
+function manualDisorderTerm(normalized:string):string|undefined{
+  const words=new Set(normalized.split(/[^\p{L}\p{N}-]+/u)),found:string[][]=[];
+  for(const entry of MANUAL_INDEX)if(entry.words.every(word=>words.has(word))&&!found.some(longer=>entry.words.every(word=>longer.includes(word))))found.push(entry.words);
+  return found.length?found.flat().join(' '):undefined;
+}
 function normalize(text: string): string {
   return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/[’‘]/gu, "'").trim()
     .replace(/[٠-٩]/gu, digit => String(digit.charCodeAt(0) - 0x0660))
@@ -473,6 +491,14 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     : undefined;
   const sectionFocus=drugLocationFocus??(!comparison&&requestedMedicationNames(question).length===0&&(book?.language==='fr'||(!book&&(locationRequest||focusedContent)))?recognizedFocuses[0]:undefined);
   const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
+  // A disorder of the manual asked for what makes it ("à partir de quand", "comment se présente", "quelle fenêtre de temps"): its
+  // diagnostic criteria answer, searched under the manual's own term, unless another rubric or a treatment is asked.
+  const disorderTerm=book===undefined||book.language==='fr'?manualDisorderTerm(normalized):undefined;
+  const disorderItself=!!disorderTerm&&!comparison&&requestedMedicationNames(question).length===0&&DISORDER_ITSELF.test(normalized)&&!ANOTHER_RUBRIC.test(normalized);
+  if(disorderItself&&recognizedFocuses.length===0&&!sectionFocus){
+    const requete=`${disorderTerm} criteres diagnostiques`;
+    if(!queries.includes(requete)){queries.push(requete);references.push(requete);}
+  }
   // Aucun livre nommé + entité diagnostique reconnue : on AJOUTE les requêtes
   // de rubrique (concept + « critères diagnostiques ») SANS poser
   // `sectionFocus`. Sans filtre, Taylor et Stahl restent interrogeables ; avec la requête,
@@ -480,7 +506,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // sections à couverture égale (mesuré : 5/5 partout, gagnant par hash).
   if (book === undefined && recognizedFocuses.length === 1 && !comparison) {
     const focus = recognizedFocuses[0] as string;
-    const criteres = /\b(?:criteres|symptomes|signes|duree|combien)\b/u.test(normalized);
+    const criteres = disorderItself || /\b(?:criteres|symptomes|signes|duree|combien)\b/u.test(normalized);
     for (const requete of [focus, criteres ? `${focus} criteres diagnostiques` : null]) {
       if (requete !== null && requete !== "" && !queries.includes(requete)) {
         queries.push(requete);
@@ -501,9 +527,10 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // DSM substance criteria live at this topic heading without an A/B marker structure.
   const criteriaAtTopicSection=embeddedCriteria||sectionFocus==="troubles de l'usage d'une substance";
   const thresholdRequested=/\b(?:seuils?|duree|combien de temps|minimum temporel|periode minimale)\b/u.test(normalized);
- const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized)||thresholdRequested,descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
+ const criteriaWords=/\b(?:criteres|symptomes|signes)\b/u.test(normalized)||thresholdRequested,criteriaRequested=criteriaWords||disorderItself,descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const symptomFamiliesRequested=/\b(?:familles|groupes) de symptomes\b/u.test(normalized);
-  const sectionLeaf = sectionFocus ? criteriaAtTopicSection&&(criteriaRequested||descriptionRequested)?sectionFocus:!criteriaAtTopicSection&&criteriaRequested&&!symptomFamiliesRequested?'criteres diagnostiques':!criteriaAtTopicSection&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
+  // The strict leaf of a focused section keeps its own words (a named manual's "définit" is its "Caractéristiques diagnostiques").
+  const sectionLeaf = sectionFocus ? criteriaAtTopicSection&&(criteriaWords||descriptionRequested)?sectionFocus:!criteriaAtTopicSection&&criteriaWords&&!symptomFamiliesRequested?'criteres diagnostiques':!criteriaAtTopicSection&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
   // Indice de feuille pour un livre NON nommé : même logique, sans filtre.
   const leafHint = sectionLeaf !== undefined
     ? sectionLeaf
@@ -519,7 +546,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       : (!comparison && recognizedFocuses.length === 0 && (criteriaRequested || descriptionRequested || /\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized)) ? 'criteres diagnostiques' : undefined));
   // A criteria or description question about a disorder no focus rule names: the DSM chunk to find opens "<Disorder> — critères diagnostiques —",
   // so ask for the subject words together with that aspect (the plain subject query fills its twenty places with other chunks).
-  if(book===undefined&&!sectionFocus&&!comparison&&(criteriaRequested||descriptionRequested||/\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized))){
+  if(book===undefined&&!sectionFocus&&!comparison&&!disorderItself&&(criteriaWords||descriptionRequested||/\b(?:caracteris\w*|reconnai\w*|correspond\w*|repos\w*)\b/u.test(normalized))){
     const aspectWords=/^(?:criteres?|symptomes?|signes?|defini\w*|caracteris\w*|reconnai\w*|correspond\w*|repos\w*|diagnostic\w*|quoi|comment|qui|que|permett\w*|retenir|evoqu\w*)$/u;
     const subject=tokens.filter(token=>!aspectWords.test(token));
     if(subject.length>=1&&subject.length<=4){const aspectQuery=[...subject,'criteres diagnostiques'].join(' ');if(!queries.includes(aspectQuery)){queries.push(aspectQuery);references.push(aspectQuery);}}
@@ -532,13 +559,22 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), ...(bilingue.rubriques?.length ? { aspectRubrics: bilingue.rubriques } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, ...(recoveryQueries.length ? { recoveryQueries } : {}), ...(bilingue.rubriques?.length ? { aspectRubrics: bilingue.rubriques } : {}), relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(disorderItself && disorderTerm ? { leafSubject: disorderTerm } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */
 /** The DSM chunks open with "<Disorder> — <aspect> — …" (the aspect is not always the section leaf): true when that aspect is the one asked for. */
 export const textOpensWithAspect=(text:string,aspect:string)=>new RegExp(`^[^—]{2,120}—\\s*${aspect}\\b`,'u').test(normalize(text));
 export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
+/**
+ * The chunk belongs to that disorder: every word of its term in the heading that owns it, the words before the first "—" or the
+ * section just above a "Critères diagnostiques" leaf. Never the chapter: "Troubles disruptifs" files several disorders.
+ */
+export const ownsLeafSubject=(section:string|null,text:string,subject:string)=>{
+  const parts=normalize(section??'').split('›').map(part=>part.trim());
+  const heading=`${normalize(text.split('—')[0]??'')} ${parts.length>1&&parts.at(-1)==='criteres diagnostiques'?parts.at(-2):''}`;
+  return subject.split(/[^\p{L}\p{N}-]+/u).filter(Boolean).every(word=>heading.includes(word));
+};
 
 /**
  * Réinjecte le marqueur du livre requis quand l'outil appelant l'a omis.

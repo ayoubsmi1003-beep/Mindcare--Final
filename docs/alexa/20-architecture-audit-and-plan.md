@@ -253,3 +253,14 @@ Unit tests: `alexa-book-routing-grammar.test.ts` (development wordings, real nam
 cases, patients, context, variation: 131 turns): 4 gained (L007, L014, L059, V004), none lost, no patient changed. Seven more
 book turns now reach the right drug's monograph and fail on the rubric (retrieval). L027 (a case description), L060 (thiamine:
 Maudsley's vocabulary is not in the generated topic list) and L079 (a generic "médicament … arrêter") are still not routed.
+
+## 19. A disorder asked for what makes it reaches its own diagnostic criteria
+| Capability | Cause | Fix |
+|---|---|---|
+| Retrieval (DSM rubric) | The criteria were preferred only for a few words ("critères", "durée", "définition"); "à partir de quand", "quelle fenêtre de temps", "est-il défini", "comment se présente", "quelles formes" fell to short neighbouring chunks of the same disorder (prevalence, course, "Biochimie") | A question naming a disorder of the manual's own index (generated `BOOK_DISORDER_TERMS`, every word present in any order, several terms added up) and asking what makes it (definition, presentation, threshold of time or frequency, forms, onset) — no other rubric, treatment or drug — adds "<term> critères diagnostiques" and prefers the criteria leaf |
+| Retrieval (which disorder) | Another disorder's criteria that merely mention the one asked (bipolar II's exclusion of schizophreniform, binge-eating's of bulimia) won the criteria tie-break | The criteria leaf leads only under the heading that owns it (the words before the first "—", or the section just above the leaf), never the chapter |
+Structural check `alexa-book-dsm-criteria.live.test.ts` (20 disorders no C270 case uses, 40 development wordings; the right
+chunk known from the manual's own headings): **rank 1: 4 → 36 / 40, top 5: 14 → 37 / 40**. Drug × rubric check unchanged
+(33 / 47, 38 / 47). C270 books replayed: **36 → 49 / 80** against `p5` (DSM criteria 10, routing of §18 3), none lost.
+Still missed: "phobie spécifique" (the generated index holds "phobie speciique": a ligature lost by the generator, data);
+"anxiété de séparation" (its criteria chunk scores under the relevance floor).

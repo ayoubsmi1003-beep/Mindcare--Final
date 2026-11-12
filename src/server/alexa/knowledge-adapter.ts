@@ -15,7 +15,7 @@ import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-s
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { recetteSecondaireGelee } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, planKnowledgeQuery, matchesSectionFocus, textOpensWithAspect } from "./knowledge-query";
+import { isKnowledgeLocationQuestion, matchesLeafHint, matchesRequestedBook, ownsLeafSubject, planKnowledgeQuery, matchesSectionFocus, textOpensWithAspect } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
@@ -550,7 +550,8 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     const indiceFocus = (preuve: Preuve): number =>
       plan.focusHints?.some(focus => matchesSectionFocus(preuve.section, focus)) ? 1 : 0;
     const indiceFeuille = (preuve: Preuve): number =>
-      plan.leafHint !== undefined && (matchesLeafHint(preuve.section, plan.leafHint) || textOpensWithAspect(preuve.texte, plan.leafHint)) ? 1 : 0;
+      plan.leafHint !== undefined && (matchesLeafHint(preuve.section, plan.leafHint) || textOpensWithAspect(preuve.texte, plan.leafHint))
+        && (plan.leafSubject === undefined || ownsLeafSubject(preuve.section, preuve.texte, plan.leafSubject)) ? 1 : 0;
     // À pertinence ÉGALE, la correspondance lexicale exacte passe avant un
     // voisin purement dense. Mesuré : le bon passage de « surveillance
     // hématologique clozapine » était rang 1 lexical, mais des voisins denses
