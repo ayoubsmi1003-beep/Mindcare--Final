@@ -41,10 +41,16 @@ describe("local voice process protocol", () => {
   canal.echouer();
   await expect(second).rejects.toThrow("runtime");
  });
- it("refuses concurrent work and duplicate IDs rather than mixing sessions", async () => {
-  const canal = new CanalVoixNative(vi.fn(), vi.fn()); const p = canal.demander(entree, undefined, 20);
-  await expect(canal.demander({ ...entree, sessionId: "b".repeat(64) }, undefined, 20)).rejects.toThrow("occupe");
+ it("queues one request behind a running one (never two at once in the worker) and refuses a third", async () => {
+  const write = vi.fn(); const canal = new CanalVoixNative(write, vi.fn()); const p = canal.demander(entree, undefined, 1000);
+  const second = { ...entree, id: "00000000-0000-4000-8000-000000000006" };
+  const q = canal.demander(second, undefined, 1000);
+  await expect(canal.demander({ ...entree, id: "00000000-0000-4000-8000-000000000007" }, undefined, 20)).rejects.toThrow("occupe");
+  expect(write).toHaveBeenCalledTimes(1);
   canal.recevoir({ id: entree.id, runId: scope.runId, utteranceId: scope.utteranceId, ok: false, code: "runtime" });
   await expect(p).rejects.toThrow("runtime");
+  await vi.waitFor(() => expect(write).toHaveBeenCalledTimes(2));
+  canal.recevoir({ id: second.id, runId: scope.runId, utteranceId: scope.utteranceId, ok: true, texte: "ensuite" });
+  expect(await q).toMatchObject({ texte: "ensuite" });
  });
 });

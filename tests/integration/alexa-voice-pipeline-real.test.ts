@@ -20,6 +20,7 @@ import { creerBoucleVoixLocale, type PhaseVoixLocale, type TourVoix } from "@/sh
 import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { arreterVoixNative, demanderVoixNative, preparerVoixNative } from "@/server/voice/runtime";
 import { arreterReveil, demanderReveil, preparerReveil } from "@/server/voice/wake-runtime";
+import { decouperDictee } from "@/services/jarvis-voix";
 
 const REEL = process.env["MINDCARE_VOICE_REAL"] === "1";
 const SESSION = "b".repeat(64);
@@ -189,6 +190,35 @@ describe.skipIf(!REEL)("voice pipeline on the real engines (hardware boundary si
     await attendre(() => p.tours.filter((t) => t.reponse !== undefined).length === 2, 300_000);
     expect(mots(p.tours.filter((t) => t.reponse === undefined).at(-1)!.texte)).toContain("doses");
     p.loop.arreter();
+  }, 900_000);
+
+  it("H: a consultation note longer than Whisper's 30 s window is transcribed whole, in order", async () => {
+    // Two dictated paragraphs separated by a natural pause, like a real note.
+    const premier = await kokoro(
+      "Patiente vue ce matin pour un suivi de trouble anxieux généralisé. Elle décrit une amélioration du sommeil depuis trois semaines. " +
+      "Les ruminations du soir persistent mais sont moins intenses. Pas d'idées suicidaires, pas de conduites à risque. " +
+      "Le traitement par sertraline est bien toléré, sans nausées ni céphalées. L'appétit est conservé et le poids est stable.",
+    );
+    const second = await kokoro(
+      "Elle a repris le travail à mi-temps et souhaite poursuivre la psychothérapie hebdomadaire. Son entourage la soutient. " +
+      "Elle pratique la marche chaque jour et a réduit sa consommation de café. " +
+      "Nous convenons de maintenir la même posologie et de revoir la patiente dans un mois.",
+    );
+    const note = new Float32Array(premier.length + 9_600 + second.length);
+    note.set(premier); note.set(second, premier.length + 9_600);
+    expect(note.length / 16_000).toBeGreaterThan(30);
+    const parties = decouperDictee(note, 16_000);
+    expect(parties.length).toBeGreaterThan(1);
+    const textes: string[] = [];
+    for (const partie of parties) {
+      try { textes.push((await demanderVoixNative({ ...ids(), action: "stt", pcmBase64: b64(partie), sampleRate: 16_000, langue: "fr" })).texte ?? ""); }
+      catch (cause) { if (!(cause instanceof Error && (cause.message === "silence" || cause.message === "confiance"))) throw cause; }
+    }
+    const tout = mots(textes.join(" "));
+    // Words from the beginning, the middle and the end, in that order.
+    const positions = ["sommeil", "sertraline", "psychotherapie", "mois"].map((m) => tout.findIndex((w) => w.startsWith(m)));
+    expect(positions.every((p) => p >= 0)).toBe(true);
+    expect([...positions].sort((a, b) => a - b)).toEqual(positions);
   }, 900_000);
 
   it("G: a voice engine that cannot start is reported, nothing stays stuck, and voice recovers", async () => {

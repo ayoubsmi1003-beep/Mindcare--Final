@@ -22,11 +22,13 @@ export type ReponseVoix = z.infer<typeof Reponse>;
  * A single resident worker; no concurrent session audio or unbounded queue.
  * A caller abort never kills the worker: reloading Whisper/Kokoro costs 15-40 s,
  * and aborts are routine (barge-in, STOP, new utterance). The aborted request
- * stays an orphan until the worker answers (its result is dropped); at most one
- * next request waits for it. Only a timeout or a dead process destroys the worker.
+ * stays an orphan until the worker answers (its result is dropped). Whatever
+ * holds the slot (running or orphaned), at most ONE next request waits for it —
+ * e.g. the wake acknowledgement being cached while an answer is synthesized —
+ * and a third is refused. Only a timeout or a dead process destroys the worker.
  */
 export class CanalVoixNative {
- private courante: { entree: EntreeVoix; orpheline: boolean; recevoir: (r: ReponseVoix) => void; rejeter: (e: Error) => void } | null = null;
+ private courante: { entree: EntreeVoix; recevoir: (r: ReponseVoix) => void; rejeter: (e: Error) => void } | null = null;
  private attente: { liberer: () => void; rejeter: (e: Error) => void } | null = null;
  constructor(private readonly ecrire: (ligne: string) => void, private readonly detruire: () => void) {}
  recevoir(brut: unknown): void {
@@ -42,7 +44,7 @@ export class CanalVoixNative {
   this.courante?.rejeter(new Error("runtime"));
  }
  private liberer(): void { this.courante = null; const a = this.attente; this.attente = null; a?.liberer(); }
- private attendreOrpheline(signal?: AbortSignal): Promise<void> {
+ private attendreLibre(signal?: AbortSignal): Promise<void> {
   if (this.attente !== null) return Promise.reject(new Error("occupe"));
   return new Promise((resolve, reject) => {
    const annuler = () => { if (this.attente === moi) this.attente = null; reject(new Error("annulee")); };
@@ -54,8 +56,7 @@ export class CanalVoixNative {
   const entree = validerEntreeVoix(brut);
   if (entree === null) throw new Error("format");
   if (signal?.aborted) throw new Error("annulee");
-  if (this.courante !== null && !this.courante.orpheline) throw new Error("occupe");
-  if (this.courante !== null) await this.attendreOrpheline(signal);
+  if (this.courante !== null) await this.attendreLibre(signal);
   if (this.courante !== null) throw new Error("occupe");
   return new Promise((resolve, reject) => {
    let fini = false;
@@ -64,9 +65,10 @@ export class CanalVoixNative {
     if (fini) return; fini = true;
     if (valeur instanceof Error) reject(valeur); else resolve(valeur);
    };
-   const annuler = () => { if (this.courante?.entree === entree) this.courante.orpheline = true; if (!fini) { fini = true; reject(new Error("annulee")); } };
+   // The request stays in the slot as an orphan: the worker answers anyway and the answer is dropped.
+   const annuler = () => { if (!fini) { fini = true; reject(new Error("annulee")); } };
    const minuteur = setTimeout(() => { this.detruire(); terminer(new Error("timeout")); }, Math.min(300_000, timeoutMs));
-   this.courante = { entree, orpheline: false, recevoir: (r) => terminer(r), rejeter: (e) => terminer(e) };
+   this.courante = { entree, recevoir: (r) => terminer(r), rejeter: (e) => terminer(e) };
    signal?.addEventListener("abort", annuler, { once: true });
    try { this.ecrire(JSON.stringify(entree) + "\n"); } catch { this.detruire(); terminer(new Error("runtime")); }
   });

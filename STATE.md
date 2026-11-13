@@ -44,9 +44,19 @@ phrase Kokoro `fp16` **P50 17,6 s** ❌. Les deux derniers ne tiennent pas les o
 ce poste ; l'i7 n'est pas mesuré. Levier : changer de modèle (Whisper `base`, Kokoro `int8`/`fp32`) —
 **décision praticienne/utilisatrice en attente** (règle 9/10 : nouveaux actifs).
 
+### Dictée en consultation (2026-11-13)
+Une note de plus de 30 s échouait (« voix indisponible ») : fenêtre Whisper de 30 s. Elle est
+désormais découpée dans ses pauses (20–28 s), transcrite morceau par morceau, dans l'ordre ; un morceau
+silencieux est ignoré, pas la note. Whisper se prépare à l'ouverture de l'écran de consultation.
+Prouvé sur moteurs réels (note de 40 s, scénario H). `inventory.json`/`manifest.json` mis à jour pour
+les deux workers modifiés (sinon `voix:preparer --check` et la vérification de paquet échouent).
+
+**Tâche voix CLOSE (2026-11-13)** — évaluation de modèles plus rapides (Whisper `base`, Kokoro
+`int8`) arrêtée à la demande de l'utilisatrice, non faite.
+
 ### Non prouvé ici
 Voix humaine, acoustique de la pièce, écho réel des haut-parleurs (seuils non calibrés), latence sur
-l'i7 : `docs/TEST-LAPTOP-VOIX.md`, checklist 12 étapes, **NOT RUN**.
+l'i7, rendu des écrans dans le navigateur : `docs/TEST-LAPTOP-VOIX.md`, checklist 14 étapes, **NOT RUN**.
 
 ---
 

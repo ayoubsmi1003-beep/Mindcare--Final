@@ -159,6 +159,8 @@ d'abord le test **au casque** (aucun écho possible), puis **sur haut-parleurs**
 | 10 | Taper une question dans le panneau | Réponse affichée **et** lue | **NOT RUN** |
 | 11 | Débrancher puis rebrancher le micro | Erreur visible, puis réarmement | **NOT RUN** |
 | 12 | Une heure plus tard, sans avoir touché l'app : « Alexa » | Répond toujours | **NOT RUN** |
+| 13 | Consultation : ouvrir un dossier, cliquer le micro d'un champ de note, dicter **plus de 30 s** puis arrêter | Texte complet inséré au curseur, dans l'ordre, sans écraser l'existant | **NOT RUN** |
+| 14 | Consultation : première dictée juste après l'ouverture de l'écran | Pas d'attente de chargement du modèle (Whisper préparé à l'ouverture) | **NOT RUN** |
 
 Relever ensuite `window.__mindcareVoiceTraces.rapport()` et le consigner dans
 `ALEXA_STT_BENCHMARK.md`. Si l'étape 8 échoue (écho qui coupe Alexa), noter

@@ -65,7 +65,6 @@ interface DicteeEnCours {
   /** Horodatage de départ — sert la seule métrique de durée, jamais l'audio. */
   debut: number;
   runId: string;
-  utteranceId: string;
 }
 
 let dictee: DicteeEnCours | null = null;
@@ -134,7 +133,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   };
   recorder.start(250); // fragment toutes les 250 ms — stop net, pas de queue perdue
 
-  dictee = { recorder, prise, fragments, debut: Date.now(), runId: crypto.randomUUID(), utteranceId: crypto.randomUUID() };
+  dictee = { recorder, prise, fragments, debut: Date.now(), runId: crypto.randomUUID() };
 
   // ⚠️ DIAGNOSTIC : DES MÉTADONNÉES, JAMAIS UN ÉCHANTILLON.
   // Ce qui a manqué le 2026-08-27 n'était pas l'audio — c'était de savoir si
@@ -205,30 +204,72 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
 
 
   const controle = new AbortController(); controleTranscription = controle;
-  let pcmBase64: string;
+  let morceaux: string[];
   try {
     const contexte = new OfflineAudioContext(1, 1, 16000);
     const tampon = await contexte.decodeAudioData(await blob.arrayBuffer());
-    const channels = Array.from({ length: Math.min(2, tampon.numberOfChannels) }, (_, i) => tampon.getChannelData(i));
-    const bytes = encoderPCM16(channels, tampon.sampleRate);
-    let binary = ""; for (const byte of bytes) binary += String.fromCharCode(byte);
-    pcmBase64 = btoa(binary);
+    const mono = tampon.getChannelData(0).slice();
+    if (tampon.numberOfChannels > 1) { const droite = tampon.getChannelData(1); for (let i = 0; i < mono.length; i++) mono[i] = (mono[i]! + droite[i]!) / 2; }
+    morceaux = decouperDictee(mono, tampon.sampleRate).map((partie) => {
+      let binary = ""; for (const byte of encoderPCM16([partie], tampon.sampleRate)) binary += String.fromCharCode(byte);
+      return btoa(binary);
+    });
   } catch {
     return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
   }
-  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-  const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
-    pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "fr",
-  }, controle.signal);
-  if (controleTranscription === controle) controleTranscription = null;
-  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-
-  if (!resultat.ok) {
-    log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
-    return err(resultat.error);
+  // A note longer than Whisper's 30 s window is transcribed piece by piece, in order.
+  const textes: string[] = [];
+  let incompris: AppError | null = null;
+  for (const pcmBase64 of morceaux) {
+    if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    const utteranceId = crypto.randomUUID();
+    const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
+      pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId, langue: "fr",
+    }, controle.signal);
+    if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    if (!resultat.ok) {
+      // A silent or unintelligible piece (a pause) is skipped, never the whole note.
+      if (resultat.error.code === "regle-metier") { incompris = resultat.error; continue; }
+      log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
+      return err(resultat.error);
+    }
+    if (resultat.data.runId !== enCours.runId || resultat.data.utteranceId !== utteranceId) return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
+    if (resultat.data.texte.trim()) textes.push(resultat.data.texte.trim());
   }
-  if (resultat.data.runId !== enCours.runId || resultat.data.utteranceId !== enCours.utteranceId) return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
-  return ok(resultat.data.texte);
+  if (controleTranscription === controle) controleTranscription = null;
+  if (textes.length === 0 && incompris !== null) return err(incompris);
+  return ok(textes.join(" "));
+}
+
+/**
+ * Whisper hears at most 30 s per request. A longer dictation is cut at the
+ * quietest 100 ms between 20 and 28 s, so a cut falls between words.
+ */
+export function decouperDictee(samples: Float32Array, taux: number): Float32Array[] {
+  const max = Math.floor(28 * taux), min = Math.floor(20 * taux), fenetre = Math.max(1, Math.floor(taux / 10));
+  const parties: Float32Array[] = [];
+  let debut = 0;
+  while (samples.length - debut > max) {
+    let coupe = debut + max, plusBas = Infinity;
+    for (let o = debut + min; o + fenetre <= debut + max; o += fenetre) {
+      let p = 0;
+      for (let i = o; i < o + fenetre; i++) p += samples[i]! * samples[i]!;
+      if (p < plusBas) { plusBas = p; coupe = o + Math.floor(fenetre / 2); }
+    }
+    parties.push(samples.subarray(debut, coupe));
+    debut = coupe;
+  }
+  parties.push(samples.subarray(debut));
+  // A sliver under 100 ms carries no word.
+  return parties.filter((p) => p.length >= fenetre);
+}
+
+/**
+ * Loads Whisper (and Kokoro) as soon as a dictation screen opens, so the first
+ * note does not wait for a cold model load. Failures surface on the dictation itself.
+ */
+export function preparerTranscription(): void {
+  void db().invokeFunction("jarvis-voice-session", { action: "prepare" }).catch(() => {});
 }
 
 /** Annule sans envoyer : le fragment jeté, le micro rendu. */

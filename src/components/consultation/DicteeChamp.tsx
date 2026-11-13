@@ -33,6 +33,7 @@ import {
   demarrerDictee,
   detecterCapacitesVoix,
   generationDictee,
+  preparerTranscription,
 } from "@/services/jarvis-voix";
 import { reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
 import { lectureInterdite, setFieldBusy } from "@/services/voice-activity";
@@ -172,7 +173,10 @@ export function useDicteeChamps<C extends string>(
     // `MediaRecorder` n'existe pas au rendu serveur : la capacité se constate
     // une fois, au montage, sinon le bouton clignoterait à l'hydratation.
     monte.current = true;
-    setPossible(detecterCapacitesVoix().dicteePossible);
+    const possible = detecterCapacitesVoix().dicteePossible;
+    setPossible(possible);
+    // Whisper loads while the doctor reads the record, not after her first note.
+    if (possible) preparerTranscription();
     return () => {
       // ⚠️ LE MICRO NE RESTE JAMAIS OUVERT DERRIÈRE UN ÉCRAN QU'ON QUITTE.
       // Un micro allumé dans un cabinet de psychiatrie, sans que rien à
