@@ -25,3 +25,23 @@ describe("an ordinal follow-up after an agenda list", () => {
     expect(periodFollowup("Et le premier ?", "Quel est le solde du cabinet ?", undefined, ASOF)).toBeNull();
   });
 });
+
+describe("an unanswered part is named only in the doctor's own words", () => {
+  it("never shows a goal the local model wrote", async () => {
+    const { unresolvedPartSentence } = await import("@/server/alexa/unresolved-wording");
+    expect(unresolvedPartSentence({ goal: "list of medical records", reason: "Pas de réponse." }, 2, "Et ses antécédents à lui ?")).toBe("Pas de réponse.");
+    expect(unresolvedPartSentence({ goal: "ses allergies", reason: "Pas de réponse." }, 2, "Son traitement et ses allergies ?")).toBe("ses allergies — Pas de réponse.");
+  });
+});
+
+describe("a section of the doctor's note, named in the doctor's words", () => {
+  it("reads « le plan » and « les observations cliniques » of a visit as note sections", async () => {
+    const { frenchRequestAdmission } = await import("@/shared/alexa/request-contract");
+    expect(frenchRequestAdmission("Qu'est-ce que j'ai noté dans le plan à la dernière consultation ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes", noteArea: "plan" });
+    expect(frenchRequestAdmission("Les observations cliniques relevées à sa dernière séance ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes", noteArea: "objective" });
+  });
+  it("leaves a treatment plan to its own reading", async () => {
+    const { frenchRequestAdmission } = await import("@/shared/alexa/request-contract");
+    expect(frenchRequestAdmission("Quel est le plan de traitement recommandé dans la schizophrénie ?", false, ASOF).noteArea).toBeUndefined();
+  });
+});

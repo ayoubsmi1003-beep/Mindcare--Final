@@ -6,7 +6,9 @@ const foldWords=(value:string)=>value.normalize("NFKD").replace(/\p{M}/gu,"").to
  */
 export function unresolvedPartSentence(part:{goal:string;reason?:string},partCount:number,request:string):string{
   const reason=part.reason??"";
-  return partCount>1&&foldWords(part.goal)!==foldWords(request)?`${part.goal} — ${reason}`:reason;
+  // Only the doctor's own words are repeated: a goal the local model wrote itself ("list of medical records") is never shown.
+  const own=foldWords(request).includes(foldWords(part.goal));
+  return partCount>1&&own&&foldWords(part.goal)!==foldWords(request)?`${part.goal} — ${reason}`:reason;
 }
 /**
  * The model may list conditions it cannot apply. Only the doctor's own words are repeated to the doctor: a token the model
