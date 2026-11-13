@@ -68,3 +68,9 @@ describe("more of the doctor's wordings", () => {
     expect(classifyPatientQuestion("Affiche tous ses rendez-vous, passés et futurs.")?.section).toBe("history");
   });
 });
+
+describe("« où on en est » with the patient", () => {
+  it("reads the summary of the patient in context", () => {
+    for (const text of ["Rappelle-moi où on en est avec cette dame.", "On en est où avec ce patient ?"]) expect(patientQuestionFrame(text, { contextPatient: true, followup: false }, ASOF)?.section, text).toBe("summary");
+  });
+});
