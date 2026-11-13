@@ -443,3 +443,12 @@ fixture's next patient). Against `p7` (201): **12 gained, 0 lost** (P003, P004, 
 twice by mistake (a background launch thought dead was alive), so two complete runs shared the CPU and wrote to one results file.
 Separated turn by turn, **the two runs gave the same verdict on all 270 turns** (213 each), a reproducibility check of the
 deterministic routes; latencies of this campaign are not comparable (median turn 0.8 s under double load).
+
+## 32. The model's goal never shown; note sections in the doctor's words (`554d1e5`)
+- An unanswered part was shown as "list of medical records — …" or "diagnostic allergy — …": a goal the local model wrote,
+  in English. A part is named only in the doctor's own words; otherwise the reason alone is shown.
+- "Qu'avais-je mis dans le plan la dernière fois ?", "les observations cliniques relevées au dernier entretien": the admission
+  knew the note's sections by their form names only ("conduite à tenir", "objectif"); "le plan" of a visit and "observations
+  cliniques" / "examen clinique" now read those sections (a treatment plan asked of the books stays a book question).
+Replayed (patients, context, variation; 115 turns) against `p8`: **patients 41 → 43/55**, context 32/45, variation 13/15;
+2 gained (P009, P012), 0 lost. With `p8`'s other domains: **215/270**.

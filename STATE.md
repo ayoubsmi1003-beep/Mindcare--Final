@@ -62,7 +62,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    ne peut plus écrire au médecin en anglais (`ae9a414`). Contexte (`43ddcc8`) : « qui est en face de moi », « désistements »,
    « et lequel est le premier ». **C270 `p8` (`43ddcc8`) : 213/270** (41/32/36/30/61/13), 12 gagnés, 0 perdu ; lancée deux fois par erreur en parallèle :
    les deux passes donnent le même verdict sur les 270 tours (latences non comparables). Doc 20 §31.
-   REPRISE : sections de note (« le plan », « les observations »), note de la première consultation
+   Sections de note (« le plan », « observations cliniques ») et intitulé écrit par le modèle jamais montré (`554d1e5`, §32) :
+   patients 41 → 43, 0 perdu ; **215/270** au total (`p8` + rejeu).
+   REPRISE : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Porte classée 215–221 mesurée sans gain (doc 20 §22) : non branchée. Réencodage des vecteurs (approuvé) : seule une
