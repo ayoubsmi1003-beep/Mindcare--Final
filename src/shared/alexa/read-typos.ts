@@ -24,6 +24,17 @@ const VOCABULARY: ReadonlySet<string> = new Set([
   // Short or name-like words ("matin", "notes", "quand") are left out: "martin" typed in lower case is a name, not a slip.
 ]);
 
+// Real French words one slip away from a vocabulary word: never a typo ("récentes" is not "recettes", "annuel" is not "annulé").
+// Mostly other inflections of the same verb or adjective, which a command or a question uses on purpose.
+const REAL_WORDS: ReadonlySet<string> = new Set([
+  "recent", "recente", "recents", "recentes", "recette", "annuel", "annuels", "annuelle", "annuelles", "annuler", "annulez", "annulee", "annulees",
+  "confirmer", "confirmez", "confirmee", "confirmees", "combine", "combines", "patienter", "patientez", "charger", "chargez", "charge",
+  "depense", "depenser", "depensez", "depensee", "encaisser", "encaissez", "encaisses", "documente", "documentee", "documentes",
+  "telephoner", "telephonez", "telephones", "adresser", "adressez", "adresses", "adressee", "beneficie", "benefices", "premiers", "premieres",
+  "paiement", "resultats", "statistique", "activites", "impaye", "impayee", "impayees", "absence", "absente", "absent", "annulation",
+  "agendas", "journees", "evolutions", "syntheses", "antecedent", "historiques", "planifier",
+]);
+
 /** True when one deletion, insertion, substitution or swap of two neighbours turns `typed` into `word`. */
 function oneSlip(typed: string, word: string): boolean {
   if (typed === word || Math.abs(typed.length - word.length) > 1) return false;
@@ -52,7 +63,7 @@ export function correctReadTypos(text: string): string {
     const index = seen++, before = words[index - 1] ?? "", beforeThat = words[index - 2] ?? "";
     if (quoted || piece.length < 5 || !/^\p{Ll}[\p{L}'’-]*$/u.test(piece)) return piece;
     const word = fold(piece);
-    if (VOCABULARY.has(word) || nameWords.has(word)) return piece;
+    if (VOCABULARY.has(word) || REAL_WORDS.has(word) || nameWords.has(word)) return piece;
     if (NAME_BEFORE.test(before) || (/^(?:de|d')$/u.test(before) && RECORD_NOUN.test(beforeThat))) return piece;
     const near = [...VOCABULARY].filter((candidate) => candidate.length >= 5 && oneSlip(word, candidate));
     return near.length === 1 ? near[0]! : piece;

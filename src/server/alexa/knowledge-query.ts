@@ -131,6 +131,9 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   synthese: ["synthese", "synthetic"], pic: ["pic", "peak"], somnambulisme: ["somnambulisme", "sleepwalking"],
   detournement: ["detournement", "misuse"], detournee: ["detournee", "misuse"], mesusage: ["mesusage", "misuse"],
   sanguin: ["sanguin", "blood"], sanguine: ["sanguine", "blood"],
+  // The aspect of a "what causes it" question: dropped, the English variant became the bare disorder and drew every monograph naming it.
+  cause: ["cause", "cause"], causes: ["causes", "causes"], origine: ["origine", "cause"], etiologie: ["etiologie", "etiology"],
+  provoque: ["provoque", "cause"], provoquent: ["provoquent", "cause"],
   hematologique: ["hematologique", "haematological"], hematologiques: ["hematologiques", "haematological"],
   معايير: ["criteres", "criteria"], اكتياب: ["depression", "depression"], // hamza-normalized اكتئاب
   علاج: ["traitement", "treatment"], جرعة: ["dose", "dose"],
@@ -276,6 +279,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   if (book) normalized = normalized.replace(new RegExp(book.marker.source, "gu"), " ");
   normalized = normalized.replace(/ثنايي\s+(?:ال)?قطب/gu, "trouble bipolaire");
   normalized = normalized.replace(/\bcontre[-\s]+indications?\b/gu, "contreindications");
+  normalized = normalized.replace(/\bd'ou vien(?:nen)?t\b/gu, "origine");
   const language = book?.language ?? "toutes";
   const english = language === "en";
   // The unchanged rank tokenizer drops one-digit, decimal and signed quantities.

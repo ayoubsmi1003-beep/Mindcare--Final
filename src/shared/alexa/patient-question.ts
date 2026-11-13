@@ -45,7 +45,7 @@ const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|prec
 const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b|\bqui (?:j'ai|ai-je|est|se trouve) (?:en face|devant moi)\b|\b(?:la personne|le patient|la patiente) que j'ai (?:en face|devant moi)\b|\bde qui s'agit-il\b/u;
 
 // ── Who it is about ───────────────────────────────────────────────────────────
-const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b|\b(?:le|la) [a-z]+-(?:t-)?on\b|\bl'[a-z]+-(?:t-)?on\b|\b(?:celui|celle)-(?:ci|la)\b|\b(?:le|la) (?:faire|fasse|fais) (?:entrer|venir|monter)\b/u;
+const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b|\b(?:le|la) [a-z]+-(?:t-)?on\b|\bl'[a-z]+-(?:t-)?on\b|\b(?:celui|celle)-(?:ci|la)\b|\b(?:le|la) (?:faire|fasse|fais) (?:entrer|venir|monter)\b|\b(?:a-t-on|avons-nous|ai-je|on (?:lui )?a|j'ai|nous (?:lui )?avons|je (?:lui )?ai)\s+(?:\w+\s+)?prescrit\w*\b/u;
 const NOT_THE_PATIENT = /\b(?:mere|pere|frere|soeur|epoux|epouse|conjoint\w*|fils|fille|famille|parents?|enfants?|amis?|proches?)\b/u;
 const GROUP_SCOPE = /\b(?:patients|patientes|(?:du|de tout le|dans tout le|de l'ensemble du|pour tout le) cabinet|agenda|planning|tous|toutes|recettes?|impayes?)\b/u;
 const CALENDAR_SCOPE = /\b(?:aujourd'hui|demain|hier|semaine|semaines|mois|annee|matin|soir|midi|apres-midi)\b/u;
@@ -55,7 +55,9 @@ const PERIOD_WORD = /\b(?:(?:19|20)\d{2}|an|annees?|mois|semaines?|trimestres?|s
 /** Whether the question names a calendar period: read (its bounds), unreadable, or none. */
 function namedPeriod(text: string, asOf: string | undefined): { from: string; to: string } | "unreadable" | null {
   // "Depuis combien d'années ?" asks a duration, not over which period.
-  if (!PERIOD_WORD.test(fold(text).replace(RANKED_VISIT, " ").replace(/\b(?:depuis|il y a) combien (?:de |d')\w+/gu, " ").replace(/\b(?:depuis|a partir de) (?:la|le) (?:plus )?(?:recent\w*|derni\w*|premi\w*)\b/gu, " "))) return null;
+  if (!PERIOD_WORD.test(fold(text).replace(RANKED_VISIT, " ").replace(/\b(?:depuis|il y a) combien (?:de |d')\w+/gu, " ").replace(/\b(?:depuis|a partir de) (?:la|le|sa|son) (?:plus )?(?:recent\w*|derni\w*|premi\w*)\b/gu, " ")
+    // "Depuis qu'il vient", "depuis qu'on la suit", "depuis toujours": the whole follow-up, the record itself, not a calendar period.
+    .replace(/\bdepuis (?:toujours|(?:le|son|sa) (?:debut )?(?:du |de son |de sa )?(?:suivi|prise en charge)|qu'(?:il|elle|on)\s+(?:(?:le|la|l'|nous|me)\s*)?(?:vient|consulte\w*|suit|est (?:suivie?|la|ici|venue?)|a commence))\b/gu, " "))) return null;
   return namedFrenchPeriod(text, asOf) ?? "unreadable";
 }
 const shortDate = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;

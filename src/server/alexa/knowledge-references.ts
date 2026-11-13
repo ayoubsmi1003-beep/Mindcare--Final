@@ -18,7 +18,12 @@ const MAX_REFERENCES = 5;
  * The ingested chunk opens with its breadcrumb, which the reference already shows as its heading.
  * Only an exact leading prefix goes.
  */
-export function withoutSectionHeading(quote: string, section: string | null): string {
+export function withoutSectionHeading(text: string, section: string | null): string {
+  let quote = text;
+  // A label that is only the passage's own opening, cut ("■ Discontinuation … inad — ■ Discontinuation … inadvertent overdose"),
+  // shows the same words twice and is not the book's text: the passage alone stays.
+  const label = /^(.{12,}?)\s*—\s*/u.exec(quote);
+  if (label && quote.slice(label[0].length).startsWith(label[1]!)) quote = quote.slice(label[0].length);
   if (!section) return quote;
   const escaped = section.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
   const stripped = quote.replace(new RegExp(`^${escaped}\\s*(?:—|–|-)\\s*`, "u"), "").trim();
