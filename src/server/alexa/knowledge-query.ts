@@ -122,6 +122,14 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   metabolique: ["metabolique", "metabolic"], metaboliques: ["metaboliques", "metabolic"],
   cardiaque: ["cardiaque", "cardiac"], cardiaques: ["cardiaques", "cardiac"],
   regime: ["regime", "diet"], alimentaire: ["alimentaire", "dietary"], abus: ["abus", "abuse"],
+  // Everyday words of a side-effect or use question ("prendre du poids", "le sucre dans le sang", "arrêter de fumer"): without their
+  // English form a content word stays French and the English variant is refused. Each English word is in the books.
+  poids: ["poids", "weight"], sucre: ["sucre", "glucose"], sang: ["sang", "blood"], foie: ["foie", "liver"], coeur: ["coeur", "cardiac"],
+  croissance: ["croissance", "growth"], eruption: ["eruption", "rash"], peau: ["peau", "skin"], globules: ["globules", "cells"],
+  blancs: ["blancs", "white"], tension: ["tension", "pressure"], epilepsie: ["epilepsie", "seizures"], convulsions: ["convulsions", "seizures"],
+  fumer: ["fumer", "smoking"], tabac: ["tabac", "smoking"], cafe: ["cafe", "caffeine"], panique: ["panique", "panic"],
+  synthese: ["synthese", "synthetic"], pic: ["pic", "peak"], somnambulisme: ["somnambulisme", "sleepwalking"],
+  detournement: ["detournement", "misuse"], detournee: ["detournee", "misuse"], mesusage: ["mesusage", "misuse"],
   sanguin: ["sanguin", "blood"], sanguine: ["sanguine", "blood"],
   hematologique: ["hematologique", "haematological"], hematologiques: ["hematologiques", "haematological"],
   معايير: ["criteres", "criteria"], اكتياب: ["depression", "depression"], // hamza-normalized اكتئاب

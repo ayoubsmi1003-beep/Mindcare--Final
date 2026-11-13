@@ -24,3 +24,16 @@ describe("abuse and diet in English words of the books", () => {
     expect(queries("Sous tranylcypromine, faut-il suivre un régime ?").some((query) => /\bdiet\b/u.test(query))).toBe(true);
   });
 });
+
+describe("everyday words of a side-effect or use question get their English form", () => {
+  // Development wordings, never C270/H270: the English variant exists only when every content word has an English form.
+  it.each([
+    ["Le café aggrave-t-il l'insomnie sous fluvoxamine ?", "caffeine"],
+    ["Faut-il baisser la dose de clozapine chez un patient qui arrête de fumer ?", "smoking"],
+    ["Les opioïdes de synthèse posent-ils un risque particulier ?", "synthetic"],
+    ["La concentration de lithium atteint son pic en combien d'heures ?", "peak"],
+    ["La quétiapine fait-elle prendre du poids ?", "weight"],
+  ])("%s", (question, english) => {
+    expect(queries(question).some((query) => query.split(/\s+/u).includes(english)), queries(question).join(" | ")).toBe(true);
+  });
+});
