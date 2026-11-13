@@ -140,3 +140,11 @@ describe("French terms the English books don't use", () => {
     expect(planKnowledgeQuery(question)?.queries.join(" ")).toContain(term);
   });
 });
+
+describe("a label with no text after it", () => {
+  it("is never shown as a passage of the book", () => {
+    const fragment = proof("Section II › Troubles anxieux › Diagnostic différentiel", "trouble panique avec agoraphobie et anxiété généralisée — Diagnostic différentiel — » pour ce trouble).");
+    const real = proof("Section II › Troubles anxieux › Critères", "Trouble panique — A. Attaques de panique récurrentes et inattendues, suivies d'une inquiétude persistante.");
+    expect(sections("Comment poser un trouble panique ?", [fragment, real])).toEqual(["Section II › Troubles anxieux › Critères"]);
+  });
+});

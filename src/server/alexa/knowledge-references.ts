@@ -47,7 +47,9 @@ export function referencesToRead(question: string, proofs: readonly Proof[]): { 
     // Refused for naming a book, for instance: not a matter of length, so the notice must not say it is.
     if (excerpt === null) { unshown = true; return []; }
     if (hiddenControls.test(quote) || MARKUP.test(quote) || FORGED_FRAME.test(quote) || !safeHeading(proof.section)) { unshown = true; return []; }
-    const readableText = substantiveQuote(excerpt) && !headingOnlyEvidence(quote, proof.section)
+    // A label with nothing after it, or only the tail of a sentence cut in the middle ("… — Diagnostic différentiel — » pour ce
+    // trouble)."), shows no text of the book.
+    const readableText = substantiveQuote(excerpt) && !headingOnlyEvidence(quote, proof.section) && !/—\s*(?:$|[»)\],;:.][^—]{0,80}$)/u.test(excerpt.trim())
       && (!bibliographyEvidence(proof.section) || bibliographyRequested(question));
     return readableText ? [{ proof, excerpt }] : [];
   });
