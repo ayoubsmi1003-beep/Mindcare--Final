@@ -20,10 +20,12 @@ export const MONOGRAPH_ROOTS: readonly string[] = [
 ];
 
 const ROOTS: ReadonlySet<string> = new Set(MONOGRAPH_ROOTS);
+/** The one monograph titled in two words ("Sodium oxybate", read from the corpus on 2026-11-13): its own word names it, in French order too. */
+export const TWO_WORD_MONOGRAPHS: Readonly<Record<string, string>> = { oxybate: "sodium oxybate" };
 
 /** French accents fold onto these names; a French ending such as "prégabaline" is matched through the English stem. */
 export function requestedMonographNames(text: string): readonly string[] {
   const words = text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().match(/\p{L}+/gu) ?? [];
-  const names = words.flatMap(word => ROOTS.has(word) ? [word] : word.endsWith("e") && ROOTS.has(word.slice(0, -1)) ? [word.slice(0, -1)] : []);
+  const names = words.flatMap(word => ROOTS.has(word) ? [word] : TWO_WORD_MONOGRAPHS[word] ? [TWO_WORD_MONOGRAPHS[word]!] : word.endsWith("e") && ROOTS.has(word.slice(0, -1)) ? [word.slice(0, -1)] : []);
   return [...new Set(names)];
 }

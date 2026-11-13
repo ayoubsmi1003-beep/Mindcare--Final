@@ -53,7 +53,8 @@
 
 import { jetoniser } from "./rerank";
 import { medicationNames } from "@/shared/alexa/medications";
-import { MONOGRAPH_ROOTS } from "./monograph-roots";
+import { MONOGRAPH_ROOTS, TWO_WORD_MONOGRAPHS } from "./monograph-roots";
+import { BOOK_ENGLISH_WORDS } from "./book-english-words.generated";
 
 /** Noms de médicaments du référentiel fermé (comparaison en `string`). */
 const MEDICAMENTS_CONNUS: ReadonlySet<string> = new Set<string>(medicationNames);
@@ -694,7 +695,7 @@ export function planifierExpansionBilingue(
   // vaut « contre indications ») qui ne se comparent pas mot a mot.
   // A drug the Prescriber's Guide titles is named there in English: "disulfirame" is the "Disulfiram" monograph. Left French, the
   // rubric query ("how the drug works disulfirame") found nothing in the English book and the rubric of other drugs filled the places.
-  const monographie = (mot: string) => RACINES_MONOGRAPHIES.has(mot) ? mot : mot.endsWith("e") && RACINES_MONOGRAPHIES.has(mot.slice(0, -1)) ? mot.slice(0, -1) : null;
+  const monographie = (mot: string) => RACINES_MONOGRAPHIES.has(mot) ? mot : TWO_WORD_MONOGRAPHS[mot] ?? (mot.endsWith("e") && RACINES_MONOGRAPHIES.has(mot.slice(0, -1)) ? mot.slice(0, -1) : null);
   const contenu = [...new Set(reste.split(/[^\p{L}\p{N}]+/u).filter(Boolean).map((mot) => monographie(mot) ?? mot))]
     .filter((j) => j.length >= 2 || /^\d+$/u.test(j));
   // Les quantites exactes du planificateur (doses signees, decimales) sont
@@ -721,10 +722,16 @@ export function planifierExpansionBilingue(
     || /^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(jeton)
     || UNITES_INVARIANTES.has(jeton);
   const invariants = contenu.filter(invariant);
+  // One drug with its own monograph: its rubric, with the drug and every word of the question the English books hold (a
+  // restriction such as "bicarbonate" stays). Added after the full query, never instead of it: a French word left there
+  // ("expose", "utilise", "de") otherwise voids the AND of the gate. Three passages at least: a stray word is no vocabulary.
+  const monographies = contenu.filter(mot => RACINES_MONOGRAPHIES.has(mot) || Object.values(TWO_WORD_MONOGRAPHS).includes(mot));
+  const anglaisDuLivre = (mot: string) => (BOOK_ENGLISH_WORDS.get(mot) ?? 0) >= 3 || /^[+-]?\d/u.test(mot) || UNITES_INVARIANTES.has(mot);
   const variantes = (rubrique: string): string[] => {
     const pleine = [rubrique, ...contenu].join(" ");
     const minimale = [rubrique, ...invariants].join(" ");
-    return minimale === pleine || invariants.length === 0 ? [pleine] : [pleine, minimale];
+    const propre = monographies.length === 1 ? [rubrique, monographies[0], ...contenu.filter(mot => mot !== monographies[0] && anglaisDuLivre(mot))].join(" ") : pleine;
+    return [...new Set([pleine, ...(invariants.length ? [minimale] : []), propre])];
   };
   // A whole-topic heading never gets the drug-plus-quantity variants: that would drop the same restrictions.
   for (const r of [...rubriques, ...generiques].filter(entree => !autonomes.includes(entree))) {
