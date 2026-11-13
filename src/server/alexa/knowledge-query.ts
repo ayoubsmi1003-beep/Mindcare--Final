@@ -121,6 +121,7 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   mecanisme: ["mecanisme", "mechanism"], mecanismes: ["mecanismes", "mechanism"],
   metabolique: ["metabolique", "metabolic"], metaboliques: ["metaboliques", "metabolic"],
   cardiaque: ["cardiaque", "cardiac"], cardiaques: ["cardiaques", "cardiac"],
+  regime: ["regime", "diet"], alimentaire: ["alimentaire", "dietary"], abus: ["abus", "abuse"],
   sanguin: ["sanguin", "blood"], sanguine: ["sanguine", "blood"],
   hematologique: ["hematologique", "haematological"], hematologiques: ["hematologiques", "haematological"],
   معايير: ["criteres", "criteria"], اكتياب: ["depression", "depression"], // hamza-normalized اكتئاب

@@ -154,7 +154,8 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "posologie-generique",
-    fr: ["posologie", "dosage"],
+    // "dosage" stays English only: in French it is also a blood level ("dosage du lithium").
+    fr: ["posologie"],
     en: ["dose", "dosage"],
     rubriques: ["Dosing Tips", "How to Dose", "Usual Dosage Range", "Dosage Forms"],
     origine: "livre",
@@ -294,7 +295,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "indications",
-    fr: ["indications", "indication principale", "pour quoi est prescrit", "quelles indications", "dans quels cas prescrit on", "dans quels cas prescrire"],
+    fr: ["indications", "indication", "indication principale", "pour quoi est prescrit", "quelles indications", "quelle indication", "dans quelle indication", "dans quels cas prescrit on", "dans quels cas prescrire"],
     en: ["commonly prescribed for", "indications"],
     rubriques: ["Commonly Prescribed for"],
     origine: "livre",
@@ -402,8 +403,8 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "dependance",
-    fr: ["dependance", "risque de dependance", "addiction", "accoutumance", "risque d accoutumance"],
-    en: ["habit forming", "dependence", "addiction"],
+    fr: ["dependance", "risque de dependance", "addiction", "accoutumance", "risque d accoutumance", "abus", "risque d abus", "mesusage"],
+    en: ["habit forming", "dependence", "addiction", "abuse"],
     rubriques: ["Habit Forming"],
     origine: "livre",
     note: "rubrique « Habit Forming »",
@@ -589,7 +590,8 @@ function normaliserForme(forme: string): string {
 function motifForme(forme: string): RegExp {
   const mots = normaliserForme(forme).split(" ").filter(Boolean);
   const corps = mots.map((m) => echapper(m)).join("\\s+");
-  return new RegExp(`(^|[^\\p{L}\\p{N}])${corps}([^\\p{L}\\p{N}]|$)`, "u");
+  // "contre-indications" is another word than "indications".
+  return new RegExp(`(^|[^\\p{L}\\p{N}])(?<!contre[\\s-])${corps}([^\\p{L}\\p{N}]|$)`, "u");
 }
 
 /**
@@ -644,7 +646,8 @@ export function planifierExpansionBilingue(
     // (et pas seulement une forme voisine), la question est deja formulee
     // dans le vocabulaire du corpus : l'expansion n'ajouterait que du bruit.
     // Le test porte sur la forme CHOSE, jamais sur le concept entier.
-    if (c.en.includes(forme)) continue;
+    // A form that is French as well ("indications", "somnolence") is the doctor's own word: it chooses its rubric.
+    if (c.en.includes(forme) && !c.fr.includes(forme)) continue;
     // Si le planificateur a DEJA traduit le concept (alias FR→EN du
     // planificateur, ex. « contre-indications » → « contraindications »),
     // la requete de base est deja en anglais : l'expansion bilingue ne doit
