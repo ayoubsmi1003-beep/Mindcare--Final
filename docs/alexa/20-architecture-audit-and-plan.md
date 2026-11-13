@@ -334,3 +334,66 @@ visit: the patient frame took it for a name ("…dernière consultation de reçu
 Replayed (patients, context, agenda, variation; 155 turns) against `p6`: 3 gained (A019, V002 by the frames now; X011#2, runtime),
 none lost. Patients 36/55, context 30/45, agenda 22/40, variation 11/15. Note: during this session another process ran a unit
 suite from the main checkout on the same CPU; the local model's latencies measured then are not comparable with `p5`.
+
+## 26. Agenda and practice: the periods, states and follow-ups doctors use (`9e67262`)
+Failures of `p6`, each classified (rule 2), then fixed in the shared frames, never per question; every fix has tests written
+with other wordings than C270's.
+- **An impersonal « il »** ("il y a eu", "il me reste", "y a-t-il") was read as a pronoun for one patient, and the agenda frame
+  stood aside. The frame now ignores it; a personal « il » still leaves the turn to the patient routes.
+- **A part of the day silently dropped**: "vendredi matin" was counted over the whole day (the period list knew dayparts only
+  beside today/tomorrow). Dayparts beside a weekday, and "la matinée de jeudi", "demain dans la soirée", are kept and reach
+  the gate's existing time window.
+- **Words the agenda frame lacked**: "je finis / je commence à quelle heure" (last / first appointment), "qui avait annulé",
+  "un trou / un creux" (free time; the application has no opening hours, so the booked slots are shown), "du mercredi au
+  vendredi", "entre jeudi et lundi", "quels rendez-vous …".
+- **A confirmation state dropped**: "combien de rendez-vous confirmés" reached the meaning layer, which answered the day's
+  total (A025, passing before only by the local model's luck). `agendaStatusOf` writes "confirmés" / "à confirmer" in the
+  closed question, read by the gate's own status reader; the meaning layer's agenda render carries it too.
+- **Follow-ups**: "même question pour …", "remonte d'une semaine", "le premier de ce jour-là", "et en août", "parmi eux,
+  combien n'étaient pas encore confirmés" (the status follow-up also wrote "en attente", which the status reader refuses).
+- **One clock time** ("le rendez-vous de 10 h aujourd'hui") was refused for want of a range: it is the hour that starts then,
+  or the exact minute when minutes are said; "à partir de 14 h" stays open-ended (refused, as before).
+- **Practice periods**: the statistics and finance frames knew this week/month/year and named months only; "la semaine
+  dernière" and "depuis le début de l'année" are explicit days now (the statistics route admits "du … au …"). Two named
+  months compared were silently read as the first only: both are read now (the second as the previous period). "Quel jour de
+  la semaine …" is no period.
+- **Money words**: "a rapporté", "la caisse", a month beside "bénéfice". An admitted finance question with no finance view
+  ("Combien a-t-on encaissé en août ?") was left to the model (5 min, then no answer); the frame restates it. Expenses are the
+  period's charges total as the finance page computes it (recurring prorated + one-off, `charges_sur_periode`), not the
+  charge list, which never adds the two. Money follow-ups chain after a question kept in its own words.
+- **A week labelled as its month**: every partial-month finance answer began "En septembre 2026"; a partial month is named
+  by its dates.
+- **Routing**: a vignette's possessive ("une patiente obsédée par un défaut de son visage") asked for the selected patient;
+  "le traitement de la mère" read "mère" as a name. Both fixed (vignette rule in `requestsPatientScope`, family nouns in the
+  parser's stop set).
+
+Replayed (agenda, finance; 75 turns) against `p6`: **agenda 21 → 30/40, finance 17 → 28/35**; 21 gained, 1 lost (A025, fixed
+above). Remaining failures, classified:
+| Turn | Class |
+|---|---|
+| F024 ("séances faites hier") | evaluator: 0 consultations that day; "aucune consultation terminée" is right, the oracle only accepts the digit |
+| F027, F025#2 | ambiguous definition: "consultations" counted over all statuses (stated "enregistrées") vs the oracle's closed ones |
+| F004 ("dépenses depuis janvier") | ambiguous period: answered from 1 January to today; the oracle takes the whole calendar year |
+| A031 (week-end) | ambiguous: the oracle takes Saturday–Sunday; in Algeria the weekend is Friday–Saturday. Not implemented |
+| A009, A010 (web requests for a day) | unsupported tool: the reception board lists 60 days of requests, no period filter |
+| A029, F026#2 | Alexa failure, left: a named patient's appointment "cette semaine"; "mets ça en regard de septembre" |
+
+## 27. Books: a word spelled alike in French and English chose no rubric (`e7ebbfa`)
+The bilingual planner skips a form that is also English ("the question is already in the corpus's words"). Five concepts
+list the same form in both languages; for four of them ("indications", "somnolence", "rénal", "addiction") that skip meant
+the French question never chose its monograph rubric: "Quelles sont les indications de l'oxybate de sodium ?" read the
+side-effect rubrics. A French form now chooses its rubric; "contre-indications" no longer matches "indications"; "dosage"
+stays English only (in French it is also a blood level). Also read: "indication" (singular), "abus", "régime" ("diet").
+Structural test drug × rubric: **33 → 39/47 at rank 1, 38 → 43 in the top 5** (the baseline re-measured on the previous code
+in the same environment); DSM criteria 36/40 and French→English 7/18 unchanged.
+Remaining book failures of `p6` are retrieval inside the right monograph or chapter (the fact sits in a rubric no wording
+predicts, e.g. a liver test under "How Drug Causes Side Effects"), plus one question sent to the local model (L060).
+
+## 28. C270 `p7` (`e7ebbfa`, 2026-11-13)
+**201/270 turns** (patients 36/55, context 30/45, agenda 36/40, finance 30/35, books 58/80, variation 11/15; 1 blocked: the
+fixture's next patient changed since the oracle). Against `p6` (167): **33 gained, 0 lost**. Turns reaching the local model:
+48 (68 in `p6`, 86 in `p5`); median turn 0.6 s, p95 89 s. The PC ran nothing else during the campaign.
+Gains: agenda 16 (§26), finance 13 (§26), books 3 (the vignette and "la mère" routing of §26, "régime" of §27), context 1,
+variation 1 (V002, §25). Next, from the failures: two-part patient questions answered half (a silent partial answer), the
+history of a treatment asked in other words than "changé", typos ("traitemnt", "conslutations"), note sections ("le plan",
+"les observations"), books' rubric choice inside the right monograph.

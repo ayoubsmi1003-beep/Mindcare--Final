@@ -48,9 +48,14 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    livres 49 → 55/80, aucune perte ; test développement français→anglais 5 → 7/18 au rang 1. Doc 20 §22. Garde : une question sur une
    personne ne lit jamais toute la liste du cabinet (§23). **C270 `p6` : 167/270** (36/29/21/17/55/9), 22 gagnés, 4 perdus classés
    (3 lenteur du PC, 2 défaillances Alexa masquées en p5 par le modèle, corrigées §25). Doc 20 §24. « arrive », « reçu » (§25) : +3 sur 155 tours, aucune perte (`d0f7b70`).
-   REPRISE : livres (25 échecs : rubrique Stahl, Maudsley hors vocabulaire, cotes de score des voisins denses) ; agenda et
-   finance (≈18 échecs chacun, dont semaines non lues par les statistiques) ; puis campagne complète `p7` sur un PC sans autre
-   charge (une autre session lançait des tests depuis le dépôt principal pendant `p6`).
+   Agenda et pratique (`9e67262`, doc 20 §26) : « il y a » impersonnel, partie de journée d'un jour nommé (comptée en silence sur
+   la journée entière), état de confirmation jamais perdu, relances (« remonte d'une semaine », « ce jour-là », « et en août »),
+   une heure seule, semaine dernière et année en cours lues par les statistiques, deux mois comparés, dépenses = total des
+   charges de la période, semaine jamais nommée « En septembre ». Livres (`e7ebbfa`, §27) : un mot identique en français et en
+   anglais (« indications ») choisit enfin sa rubrique ; test médicament × rubrique 33 → 39/47. **C270 `p7` : 201/270**
+   (36/30/36/30/58/11), 33 gagnés, 0 perdu ; 48 tours au modèle local ; médiane 0,6 s. Doc 20 §28.
+   REPRISE : patients (questions en deux parties répondues à moitié, historique d'un traitement, fautes de frappe, sections de
+   note) ; livres (22 échecs : rubrique dans la bonne monographie) ; agenda/finance restants classés doc 20 §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Porte classée 215–221 mesurée sans gain (doc 20 §22) : non branchée. Réencodage des vecteurs (approuvé) : seule une
    expérience sur 2 questions faite, non concluante ; à mesurer sur le test français→anglais avant toute écriture.
