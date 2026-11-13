@@ -53,3 +53,12 @@ describe("« même question » follow-ups", () => {
     expect(periodFollowup("La même chose pour hier.", "Quels sont les rendez-vous annulés aujourd'hui ?", "2026-10-26", ASOF)).toBe("Quels sont les rendez-vous annulés hier ?");
   });
 });
+
+describe("patients who consulted are the activity statistics, not the appointments", () => {
+  it("leaves them to the activity frame", async () => {
+    const { activityQuestionFrame } = await import("@/shared/alexa/practice-frame");
+    expect(frame("Combien de patients ont consulté au moins une fois en septembre ?")).toBeNull();
+    expect(frame("Combien de personnes ont consulté ce mois-ci ?")).toBeNull();
+    expect(activityQuestionFrame("Combien de patients ont consulté au moins une fois en septembre ?", ASOF)).toBe("Montre-moi les statistiques de septembre 2026");
+  });
+});
