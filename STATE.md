@@ -54,8 +54,16 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    charges de la période, semaine jamais nommée « En septembre ». Livres (`e7ebbfa`, §27) : un mot identique en français et en
    anglais (« indications ») choisit enfin sa rubrique ; test médicament × rubrique 33 → 39/47. **C270 `p7` : 201/270**
    (36/30/36/30/58/11), 33 gagnés, 0 perdu ; 48 tours au modèle local ; médiane 0,6 s. Doc 20 §28.
-   REPRISE : patients (questions en deux parties répondues à moitié, historique d'un traitement, fautes de frappe, sections de
-   note) ; livres (22 échecs : rubrique dans la bonne monographie) ; agenda/finance restants classés doc 20 §26.
+   Patients (`d230a1a`, §29) : question en deux parties = deux lectures fermées (plus de réponse à moitié en silence), historique
+   d'un traitement en d'autres mots, une faute de frappe corrigée pour les cadres seulement (jamais le texte du médecin) ; 8 phrases
+   identiques à C270 retirées du code et des tests (règle A). Rejoué : patients 36 → 41, variation 11 → 13, contexte 30 ; 0 perdu.
+   Livres (`02d5c40`, §30) : la rubrique du médicament trouvée malgré un mot français resté (« expose », « utilise ») ; test
+   formulations parlées 37 → 42/47 ; livres 58 → 60 (L079 perdu, dépendant du modèle, cause corrigée `ae9a414`). Le modèle local
+   ne peut plus écrire au médecin en anglais (`ae9a414`). Contexte (`43ddcc8`) : « qui est en face de moi », « désistements »,
+   « et lequel est le premier ». **C270 `p8` (`43ddcc8`) : 213/270** (41/32/36/30/61/13), 12 gagnés, 0 perdu ; lancée deux fois par erreur en parallèle :
+   les deux passes donnent le même verdict sur les 270 tours (latences non comparables). Doc 20 §31.
+   REPRISE : sections de note (« le plan », « les observations »), note de la première consultation
+   (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Porte classée 215–221 mesurée sans gain (doc 20 §22) : non branchée. Réencodage des vecteurs (approuvé) : seule une
    expérience sur 2 questions faite, non concluante ; à mesurer sur le test français→anglais avant toute écriture.

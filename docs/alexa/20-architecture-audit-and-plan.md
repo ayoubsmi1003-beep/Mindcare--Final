@@ -435,3 +435,11 @@ Replayed (patients, context, variation; 115 turns) against `p7`: **patients 36 �
   general question with nobody in it ("faut-il", "peut-on", "si un…" and no possessive, no name, no "ce patient").
 Replayed (books, 80 turns) against `p7`: **books 58 → 60/80**; 3 gained (the three rubric cases), 1 lost (L079, model-dependent,
 root cause fixed in this commit; not yet replayed).
+
+## 31. C270 `p8` (`43ddcc8`, 2026-11-14)
+**213/270 turns** (patients 41/55, context 32/45, agenda 36/40, finance 30/35, books 61/80, variation 13/15; 1 blocked, the
+fixture's next patient). Against `p7` (201): **12 gained, 0 lost** (P003, P004, P008, P035, P037 of §29; X009#2, X011#1 of
+`43ddcc8` and §30; L041, L052, L055 of §30; V003, V014 typos). Process note, reported as it happened: the campaign was launched
+twice by mistake (a background launch thought dead was alive), so two complete runs shared the CPU and wrote to one results file.
+Separated turn by turn, **the two runs gave the same verdict on all 270 turns** (213 each), a reproducibility check of the
+deterministic routes; latencies of this campaign are not comparable (median turn 0.8 s under double load).
