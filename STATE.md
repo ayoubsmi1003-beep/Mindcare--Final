@@ -64,7 +64,10 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    les deux passes donnent le même verdict sur les 270 tours (latences non comparables). Doc 20 §31.
    Sections de note (« le plan », « observations cliniques ») et intitulé écrit par le modèle jamais montré (`554d1e5`, §32) :
    patients 41 → 43, 0 perdu ; **215/270** au total (`p8` + rejeu).
-   REPRISE : note de la première consultation
+   Note de la première séance, « ouvre-moi <nom> », relances (« celui-ci », « l'année d'avant »), mots courants des livres
+   (`bd0394c`, `f3199a2`, `7a481e1`, §33). **C270 `p9` : 225/270** (47/38/36/29/62/13), 13 gagnés, 1 perdu (F028, causé par
+   `bd0394c`, corrigé `ae9656b` : finance rejouée 30/35, 0 perdu → **226/270**). Doc 20 §34.
+   REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
 3. Porte classée 215–221 mesurée sans gain (doc 20 §22) : non branchée. Réencodage des vecteurs (approuvé) : seule une

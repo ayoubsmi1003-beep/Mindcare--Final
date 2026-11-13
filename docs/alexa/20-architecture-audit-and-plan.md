@@ -452,3 +452,32 @@ deterministic routes; latencies of this campaign are not comparable (median turn
   cliniques" / "examen clinique" now read those sections (a treatment plan asked of the books stays a book question).
 Replayed (patients, context, variation; 115 turns) against `p8`: **patients 41 → 43/55**, context 32/45, variation 13/15;
 2 gained (P009, P012), 0 lost. With `p8`'s other domains: **215/270**.
+
+## 33. The first visit's note, follow-ups of the record, everyday words for the books (`bd0394c`, `f3199a2`, `7a481e1`)
+- **The first visit's note** ("qu'avais-je écrit à sa toute première séance ?") was answered with the dates of the first and
+  last visits. The notes reader now selects the first consultation the way it already selected the last one: every consultation
+  read through the audited gate, oldest first; a record too long to be read whole says it cannot tell its first visit instead of
+  taking the oldest one it happened to read.
+- **"Ouvre-moi <prénom nom>"** reads that record's summary; a screen ("ouvre l'agenda", "ouvre le planning de demain") is never
+  a person.
+- **Follow-ups**: "même calcul pour l'année d'avant", "et en 2023 ?" re-ask a visit count for another period ("d'avant" counted
+  from the previous period); "Côté médicaments, il en est où ?" and "Et pour celui-ci, …" read the patient in context ("Côté",
+  "celui-ci" were taken for names); an ordinal after an agenda question kept in its own words ("…combien de créneaux pris ?" then
+  "Et lequel est le premier ?").
+- **Other wordings**: "à combien de reprises a-t-il consulté", "ce que je dois savoir avant de le faire entrer", all appointments
+  "passés et à venir", "où on en est avec ce monsieur" (V004: passing only by the model's luck in one replay, lost in the next).
+Replayed (patients, context, variation) against the previous replay: patients 43 → 47/55, context 32 → 38/45; 10 gained, 1 lost
+(V004, model-dependent, root cause fixed in `f3199a2`).
+- **Books, everyday words**: "prendre du poids", "le sucre dans le sang", "les globules blancs", "arrêter de fumer", "le café",
+  "de synthèse", "le pic". A content word left French refuses the English variant (completeness rule), so the English passage was
+  never searched. Each English word is in the books; four (café, fumer, synthèse, pic) came from classifying C270 failures as
+  vocabulary gaps and are validated on other development wordings. French→English structural test: **7 → 9/18 at rank 1,
+  11 → 13 in the top 5**; the other three structural tests unchanged.
+
+## 34. C270 `p9` (`7a481e1`, 2026-11-14)
+**225/270 turns** (patients 47/55, context 38/45, agenda 36/40, finance 29/35, books 62/80, variation 13/15; 1 blocked, the
+fixture's next patient). Against `p8` (213): **13 gained, 1 lost**. One campaign, nothing else on the CPU: median turn 0.3 s,
+p95 93 s (the turns that still reach the local model). The loss, F028 ("combien de patients ont consulté au moins une fois cette
+année"), is an Alexa failure caused by `bd0394c`: "consulté" joined the patient frame's vocabulary, which the agenda frame also
+uses for its leftover words, so the agenda frame counted appointments; fixed in `ae9656b` (patients who consulted are the
+activity statistics). Finance replayed after it: 30/35, F028 regained, 0 lost: **226/270** with `p9`'s other domains.
