@@ -113,11 +113,11 @@ const COUNT_PEOPLE = /\bcombien (?:de|d')\s*(?:patients?|monde|personnes?|consul
 const COUNT_ANY = /\bcombien\b|\bnombre (?:de|d')\s*(?:patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv)\b/u;
 const WHO = /\bqui (?:ai-je|avons-nous|a-t-on|est attendu|sont attendus|attends-je|vient|viennent|vais-je (?:voir|recevoir)|vois-je|reste|restent|avais-je|est (?:mon|le|ma) (?:premier|dernier|prochain)|etait (?:mon|le) (?:premier|dernier)|(?:est|etait|sont|etaient) (?:prevus?|prevues?|attendus?|au programme))\b/u;
 const HAVE_PEOPLE = /\b(?:j'ai|ai-je|on a|avons-nous|nous avons)\s+(?:du monde|des patients|beaucoup de patients|des consultations|des rendez-vous|des rdv|de la visite|du monde)\b/u;
-const CANCELLED = /\bqui (?:a|ont|avait|avaient)\s+(?:annule|reporte|decale)\w*\b|\b(?:annulations?|rendez-vous annules)\b/u;
+const CANCELLED = /\bqui (?:a|ont|avait|avaient)\s+(?:annule|reporte|decale)\w*\b|\b(?:annulations?|rendez-vous annules|desistements?|desiste\w*|decommande\w*)\b/u;
 // A patient who did not come: the gate's "non honoré" status. "Poser un lapin" is the everyday French for it.
 const ABSENT = /\b(?:absents?|absentes?|absences?|lapins?|no[- ]show|non (?:honore|excuse|venu)\w*|pas (?:venu|venue|venus|venues)\b|(?:ne|n') ?(?:s'est|se sont|est|sont) pas (?:presente|presentee|presentes|presentees|venu|venue|venus|venues))/u;
 const AGENDA_ITSELF = /\b(?:rendez-vous|rdv|absen\w*|annul\w*|lapins?|programme|prevu\w*|planning|agenda|presente\w*|venu\w*|honore\w*|excuse\w*)\b/u;
-const ABSENT_WORDS = /\b(?:annul\w*|absent\w*|absences?|lapins?|venu\w*|presente\w*|honore\w*|excuse\w*|pose\w*|ne|n|s|se|pas|non|show|no)\b/gu;
+const ABSENT_WORDS = /\b(?:annul\w*|desist\w*|decommande\w*|absent\w*|absences?|lapins?|venu\w*|presente\w*|honore\w*|excuse\w*|pose\w*|ne|n|s|se|pas|non|show|no)\b/gu;
 const OVERVIEW = /\b(?:apercu|a quoi ressemble|les rendez-vous|quels (?:rendez-vous|rdv)|les rdv|planning|ma journee|ma semaine|mon agenda|l'agenda|mes rendez-vous|mes rdv|le programme|mon programme|au programme|quelque chose de prevu)\b/u;
 const NEXT = /\b(?:prochain|prochaine)\s+(?:patient|rendez-vous|rdv|consultation)\b|\bqui est le prochain\b|\ba quelle heure est (?:mon|le|ma) prochain\w*\b/u;
 const FIRSTLAST = /\b(?:premier|premiere|dernier|derniere)\s+(?:patient|patiente|rendez-vous|rdv|consultation)\b|\ba quelle heure commence ma journee\b/u;
@@ -244,6 +244,12 @@ export function periodFollowup(text: string, previousRequest: string | undefined
     const ordinal = /^(?:(?:et|alors)\s+)?(?:le|la)\s+(premier|premiere|dernier|derniere)\b/u.exec(bare)?.[1];
     if (ordinal && bare.split(" ").length <= 8) return renderAgendaQuestion(ordinal.startsWith("premier") ? "first" : "last", named);
     return agendaQuestionFrame(bare.replace(that[0], named).replace(/^(?:et|alors)\s+/u, ""), asOf);
+  }
+  // "Et lequel est le premier ?" right after a question on the agenda: the first or last appointment of its period.
+  const ordinalOnly = /^(?:(?:et|alors)\s+)?(?:(?:lequel|laquelle|qui)\s+(?:est|etait)\s+)?(?:le|la)\s+(premier|premiere|dernier|derniere)(?:\s+(?:rendez-vous|rdv|patient|patiente))?\s*[?.!]?$/u.exec(bare)?.[1];
+  if (ordinalOnly && /\brendez-vous\b/u.test(previousRequest)) {
+    const bounds = previousBounds(previousRequest, asOf);
+    return bounds ? renderAgendaQuestion(ordinalOnly.startsWith("premier") ? "first" : "last", bounds.from === bounds.to ? explicitDay(bounds.from) : explicitRange(bounds.from, bounds.to)) : null;
   }
   // "Et en août ?": a month the period list does not hold, read by the civil reader.
   const month = new RegExp(`^(?:(?:et|alors|mais|pour)\\s+)*(?:(?:en|pour)\\s+)?(?:le mois d'|le mois de |au mois d'|au mois de )?(${MONTHS})(?: \\d{4})?\\s*[?.!]?$`, "u").exec(bare);

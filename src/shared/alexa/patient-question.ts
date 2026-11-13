@@ -40,7 +40,8 @@ const DIAG = /\bdiagnostics?\b/u;
 const NEXT = /\b(?:prochain\w*|revient|reviendra|reconvoqu\w*|reprogramm\w*|programme\w*|prevus?|prevues?|planifie\w*|a venir)\b/u;
 // A treatment's history in the doctor's words: "a bougé", "augmentée", "dose de départ", "l'historique de ses prescriptions".
 const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|precedemment|auparavant|bouge\w*|augment\w*|diminu\w*|baiss\w*|ajust\w*|initial\w*|de depart|au depart|au debut|depuis le debut|historiques?|evolu\w*|retrace\w*)\b/u;
-const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
+// The person in front of the doctor: "qui est en face de moi", "la personne que j'ai devant moi", "de qui s'agit-il".
+const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b|\bqui (?:j'ai|ai-je|est|se trouve) (?:en face|devant moi)\b|\b(?:la personne|le patient|la patiente) que j'ai (?:en face|devant moi)\b|\bde qui s'agit-il\b/u;
 
 // ── Who it is about ───────────────────────────────────────────────────────────
 const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b|\b(?:le|la) [a-z]+-(?:t-)?on\b|\bl'[a-z]+-(?:t-)?on\b/u;
