@@ -515,7 +515,7 @@ export function isClinicalKnowledgeQuestion(text:string):boolean{
  // "Risque de lithium pendant la grossesse": a drug and a clinical subject need no question word.
  if((mentionsMedication(plain)||mentionsBookTopic(plain))&&/\b(?:risques?|grossesse|allaitement|sujets? ages?|personnes? agees?|insuffisan\w*|interactions?|surdosage|intoxication)\b/u.test(plain))return true;
  const bookTopic=mentionsBookTopic(text);
- // "Donépézil, dose de départ ?": a topic the books treat, asked as a question, needs no question word.
+ // "Mémantine, dose initiale ?": a topic the books treat, asked as a question, needs no question word.
  if(!/\b(?:quel(?:le|s|les)?|comment|pourquoi|qu['’]?est[- ]ce|c['’]?est quoi|pour quoi|combien de temps|a partir de quelle|sur quelle|dans quel|quand|ou|que|peut-on)\b|-(?:t-)?(?:il|elle|ils|elles|on)\b|^(?:alexa\W+)?(?:localise|trouve|rappelle|cite|donne|indique|criteres?|definition)\b/u.test(plain)&&!(bookTopic&&/\?\s*$|\b(?:criteres?|definition)\b/u.test(plain)&&!/\b(?:il|elle|ils|elles)\b(?!\s+(?:y a|faut)\b)/u.test(plain)))return false;
  return CLINICAL_TOPIC.test(plain)||((CLINICAL_STEMS.test(plain)||bookTopic)&&!/\b(?:son|sa|ses|leur|leurs|mon|ma|mes)\b/u.test(plain));
 }

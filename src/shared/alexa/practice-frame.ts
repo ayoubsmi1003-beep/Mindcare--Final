@@ -153,7 +153,7 @@ export function financePeriodFollowup(text: string, previousRequest: string | un
   const moneyQuestion = (request: string) => /^(?:Quel montant représentent les paiements encaissés du |Quel est le chiffre d'affaires du |Quelles sont les recettes de )/u.test(request);
   if (!previousRequest || !(moneyQuestion(previousRequest) || moneyQuestion(financeQuestionFrame(previousRequest, asOf)?.text ?? ""))) return null;
   const bare = fold(text).replace(/[?!.\s]+$/u, "");
-  // "Et en juin ?", "Et sur le mois ?", "Élargis à toute la semaine.": only the period changes.
+  // "Et en juin ?", "Et sur le mois ?", "Étends à la semaine entière.": only the period changes.
   const match = new RegExp(`^(?:(?:et|alors|mais|maintenant)\\s+)?(?:(?:elargi\\w*|etend\\w*|passe)\\s+)?(?:(?:a|au|sur|pour|en)\\s+)?(?:tout(?:e|es)? (?:la |le |l')?|la |le |l')?(aujourd'hui|hier|demain|(?:cette )?semaine(?: (?:derniere|passee))?|(?:ce )?mois(?:-ci| (?:dernier|precedent))?|(?:cette )?annee|${MONTHS.join("|")})$`, "u").exec(bare);
   if (!match) return null;
   const word = match[1]!, phrase = MONTHS.includes(word) ? `en ${word}` : /^semaine (?:derniere|passee)$/u.test(word) ? "la semaine dernière" : word === "semaine" ? "cette semaine"

@@ -37,7 +37,7 @@ describe("a question about a book topic goes to the books, a question about a pe
     "Le patient a-t-il une trichotillomanie ?",
     "A-t-il déjà eu un trouble schizotypique ?",
     "Son traitement par lofexidine est-il efficace ?",
-    "Dans ses notes, est-ce qu'il est question de sommeil ?",
+    "Dans ses notes, parle-t-on de son sommeil ?",
   ])("not the books: %s", (text) => expect(isClinicalKnowledgeQuestion(text)).toBe(false));
   it("still reads a person as the subject of an inverted verb", () => {
     expect(questionConcernsAPerson("A-t-il une pyromanie ?")).toBe(true);

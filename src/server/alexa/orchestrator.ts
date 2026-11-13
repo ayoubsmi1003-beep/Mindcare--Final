@@ -13,7 +13,8 @@ import { ALEXA_GENERAL_SOURCE } from "@/i18n/alexa-general";
 import { resolvePatient } from "./patient-resolver";
 import { withConsultationPatient } from "./consultation-context";
 import { firstNameMatches } from "./first-name-search";
-import { patientPeriod, patientQuestionFrame, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
+import { patientPeriod, patientQuestionFrame, patientQuestionParts, patientSwitchFollowup, reaskForSelectedPatient, renderPatientQuestion } from "@/shared/alexa/patient-question";
+import { correctReadTypos } from "@/shared/alexa/read-typos";
 import { agendaQuestionFrame, algiersTimestamp, periodFollowup, previousAgendaPeriod } from "@/shared/alexa/agenda-frame";
 import { activityQuestionFrame, financePeriodFollowup, financeQuestionFrame } from "@/shared/alexa/practice-frame";
 import { buildClinicalContext } from "./clinical-context";
@@ -110,7 +111,7 @@ function agendaStatusFollowup(text:string,previous:WorkingReference|null,asOf:st
  if(previous?.intent!=='agenda'||requestsCabinetWideScope(text)||parsePatientMention(text).status!=='none')return null;
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/['']/gu,"'").trim();
  const direct=/^(?:et\s+)?combien\s+(?:(?:sont|restent)\s+)?(?:sont-ils\s+)?(?:confirmes?|en attente|annules?|arrives?|termines?)\s*[?!.]*$/u.test(plain);
- // "Parmi eux, combien n'étaient pas encore confirmés ?": the state may be said in the past or negated.
+ // "Et parmi elles, combien ne sont toujours pas confirmées ?": the state may be said in the past or negated.
  const grouped=/^(?:et\s+)?parmi\s+(?:eux|elles|ces rendez-vous|cette liste|ceux-ci|ceux-la)\s*,?\s*combien\s+(?:(?:en\s+)?(?:sont|restent|etaient|ont ete|n'etaient|ne sont|n'ont ete)\s+)?(?:(?:pas|toujours|encore|deja)\s+)*(?:confirmes?|en attente|annules?|arrives?|termines?)\s*[?!.]*$/u.test(plain);
  if(!direct&&!grouped)return null;
  if(direct)return previous.agendaDay?`${text.trim().replace(/[?!.]+$/u,'')} pour les rendez-vous du ${previous.agendaDay}.`:null;
@@ -364,6 +365,9 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
   // Splits when one goal has a known route and every other stands alone, so "puis vérifie la page" stays attached.
   const opensAScreen=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.includes('navigate'),admittedGoal=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.length,standsAlone=(goal:string)=>!/^(?:ne |n['’]|sans )/iu.test(goal)&&!/\b(?:sa|son|ses|leur|leurs|cette|celle|celui|cela)\b/iu.test(goal)&&(/\?\s*$/u.test(goal)||goal.split(/\s+/u).length>=4);
   if(sequence&&sequence.goals.some(admittedGoal)&&sequence.goals.every(goal=>!opensAScreen(goal)&&!deterministicActionRequest(goal,input.appContext.documentId)&&!frenchRequestAdmission(goal,false,dependencies.agentAsOf).preparationAction&&(admittedGoal(goal)||standsAlone(goal))))return runSequencedGoals(input,sequence,dependencies,emit,signal);
+  // "Son traitement actuel et sa prochaine consultation ?": two sections of one record, each its own closed read, in turn (never one answered in silence by the other's read).
+  const recordParts=dependencies.native&&!dependencies.resumeCursor&&!understanding.wantsChange?patientQuestionParts(correctReadTypos(input.text),{contextPatient:!!input.appContext.patientId,followup:false},dependencies.agentAsOf):null;
+  if(recordParts)return runSequencedGoals(input,{goals:recordParts.map(part=>part.text),dropped:[]},dependencies,emit,signal);
   if (dependencies.native) {
     // Courtesies use the same closed dialogue grammar as the established UI.
     // A greeting never needs patient lookup or a model inference slot.
@@ -395,23 +399,26 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     const patientFollowup=workingPatient&&!appliedToPatient?resolvePatientFollowup(input.text):{kind:'none' as const};
     // Everyday agenda questions ("Combien de patients aujourd'hui ?", "J'ai du monde ce matin ?"), read by meaning.
     // A frame only helps what the closed admission does not already understand: its own wording keeps its own routes (and follow-ups).
+    // One slip in a read word ("traitemnt", "conslutations") is corrected for the word frames only: they write a closed read question,
+    // so the doctor's text itself is never altered, stored or dictated corrected. A question asking a change keeps its own words.
+    const readText=dependencies.resumeCursor||understanding.wantsChange?agentInput.text:correctReadTypos(agentInput.text);
     const admission=dependencies.resumeCursor?undefined:frenchRequestAdmission(agentInput.text,false,asOf),admittedTools=admission?.tools;
     const admittedAs=(tool:string)=>admittedTools?.length===1&&admittedTools[0]===tool&&(tool!=='query_app'||admission?.applicationView==='statistics');
     // A finance question counts as understood only when the gate has everything it needs (a period, or the all-time balance): otherwise the model would be asked to finish it.
-    // Admitted is not enough: with no finance view chosen ("Combien a-t-on encaissé en août ?"), the model would still have to pick the call.
+    // Admitted is not enough: with no finance view chosen ("Combien a-t-on touché en juin ?"), the model would still have to pick the call.
     // An amount of expenses is the period's charges total, which the charge list never adds up: the frame restates it ("À combien s'élèvent nos dépenses ?").
     const expensesAmount=admission?.financeMode==='charges'&&!/\b(?:recurrent\w*|ponctuel\w*|mensuel\w*|liste\w*|lesquel\w*|quelles charges)\b/u.test(agentInput.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
     const financeClosed=admittedAs('query_finance')&&!!admission&&!!admission.financeMode&&!expensesAmount&&(!!(admission.from&&admission.to)||(admission.financeMode==='totals'&&(admission.financeState==='all'||admission.financeState==='pending')));
-    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(agentInput.text,asOf);
+    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(readText,asOf);
     // Any other everyday question about a patient: read by meaning, restated as the closed question the gates answer.
     // Money and activity of the practice: "Combien avons-nous gagné hier ?", "Quels sont les jours les plus chargés ?".
-    const practiceFrame=dependencies.resumeCursor||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=financeClosed?null:financeQuestionFrame(agentInput.text,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(agentInput.text,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
+    const practiceFrame=dependencies.resumeCursor||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=financeClosed?null:financeQuestionFrame(readText,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(readText,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
     let switchFollowup=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||knowledgeFollowup||selectedListedPatient?null:patientSwitchFollowup(agentInput.text,previous?.lastRequest);
     // Words no vocabulary knows are taken for a name only when the patient search agrees; otherwise they are vocabulary the lists lack.
     if(switchFollowup&&(await resolvePatient(dependencies.db,{name:switchFollowup.name},signal,asOf)).status==='absent')switchFollowup=null;
     const frameOptions={contextPatient:!!input.appContext.patientId,followup:!!previous?.selectedPatientId};
     let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
-      :patientQuestionFrame(agentInput.text,frameOptions,asOf);
+      :patientQuestionFrame(readText,frameOptions,asOf);
     // One word that may be a first name: one patient reads, several are a question for the doctor, none is vocabulary.
     if(patientFrame?.subject.kind==='named'&&!/\s/u.test(patientFrame.subject.name)){
       const found=await firstNameMatches(dependencies.db,patientFrame.subject.name,signal);

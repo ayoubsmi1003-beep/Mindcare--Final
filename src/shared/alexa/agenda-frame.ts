@@ -234,13 +234,13 @@ export function periodFollowup(text: string, previousRequest: string | undefined
     const bounds = previousBounds(previousRequest, asOf);
     return bounds ? replacePeriod(previousRequest, bounds.from === bounds.to ? explicitDay(addDays(bounds.from, shift)) : explicitRange(addDays(bounds.from, shift), addDays(bounds.to, shift))) : null;
   }
-  // "Le premier de ce jour-là ?", "Combien ce mois-là ?": the previous period, named again.
+  // "Et le dernier de ce jour-là ?", "Combien ce mois-là ?": the previous period, named again.
   const that = /\b(?:ce jour[- ]la|le meme jour|du meme jour|cette semaine[- ]la|ce mois[- ]la|le meme mois|du meme mois)\b/u.exec(bare);
   if (that) {
     const bounds = previousBounds(previousRequest, asOf);
     if (!bounds) return null;
     const named = bounds.from === bounds.to ? explicitDay(bounds.from) : explicitRange(bounds.from, bounds.to);
-    // "Le premier de ce jour-là ?": the ordinal alone names the first or the last appointment.
+    // "Et le dernier ce jour-là ?": the ordinal alone names the first or the last appointment.
     const ordinal = /^(?:(?:et|alors)\s+)?(?:le|la)\s+(premier|premiere|dernier|derniere)\b/u.exec(bare)?.[1];
     if (ordinal && bare.split(" ").length <= 8) return renderAgendaQuestion(ordinal.startsWith("premier") ? "first" : "last", named);
     return agendaQuestionFrame(bare.replace(that[0], named).replace(/^(?:et|alors)\s+/u, ""), asOf);

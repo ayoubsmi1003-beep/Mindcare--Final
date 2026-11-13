@@ -55,7 +55,8 @@ describe("the count says which period it covers", () => {
 
 describe("words that only look like a period", () => {
   it("a word containing a period word, or a duration, is no period", () => {
-    expect(patientQuestionFrame("La dose de son antidépresseur a-t-elle bougé depuis le début ?", onScreen, asOf)?.section).toBe("treatments");
-    expect(frame("Depuis combien d'années est-il suivi chez nous ?")).not.toBeNull();
+    // "depuis le début" is no period: the question is read, as the treatment's recorded changes. (Development wording, not C270's.)
+    expect(patientQuestionFrame("Sa posologie a-t-elle été ajustée depuis le début ?", onScreen, asOf)?.section).toBe("treatchanges");
+    expect(frame("Depuis combien d'années le suit-on au cabinet ?")).not.toBeNull();
   });
 });

@@ -57,7 +57,7 @@ describe("resolvePatientFollowup", () => {
   });
   it("never applies when someone is named", () => expect(resolvePatientFollowup("Et le traitement de Rania Autre ?").kind).toBe("none"));
   it("tells the record on screen from the patient discussed last", () => {
-    for (const yes of ["Revenons à mon patient : sa dernière note ?", "Retour au dossier, son traitement ?", "Et ma patiente, elle a quel âge ?", "Pour le patient ouvert, les rendez-vous ?", "La patiente de la consultation, son diagnostic ?"]) expect(namesTheOpenRecord(yes)).toBe(true);
+    for (const yes of ["Revenons à mon patient : sa note la plus récente ?", "Retour au dossier, son traitement ?", "Et ma patiente, elle a quel âge ?", "Pour le patient ouvert, les rendez-vous ?", "La patiente de la consultation, son diagnostic ?"]) expect(namesTheOpenRecord(yes)).toBe(true);
     for (const no of ["Et ce patient, son traitement ?", "Le patient suivant ?", "Sa dernière note ?", "Combien de patients aujourd'hui ?", "Le dossier de Lina Test ?"]) expect(namesTheOpenRecord(no)).toBe(false);
   });
 });

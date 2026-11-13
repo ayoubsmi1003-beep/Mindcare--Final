@@ -38,11 +38,12 @@ const DOCS = /\b(?:documents?|certificats?)\b/u;
 const SCALES = /\b(?:echelles?|scores?|phq|gad|questionnaires?)\b/u;
 const DIAG = /\bdiagnostics?\b/u;
 const NEXT = /\b(?:prochain\w*|revient|reviendra|reconvoqu\w*|reprogramm\w*|programme\w*|prevus?|prevues?|planifie\w*|a venir)\b/u;
-const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|precedemment|auparavant)\b/u;
+// A treatment's history in the doctor's words: "a bougé", "augmentée", "dose de départ", "l'historique de ses prescriptions".
+const CHANGED = /\b(?:avant|change\w*|modifi\w*|ancien\w*|prenait|prenaient|precedemment|auparavant|bouge\w*|augment\w*|diminu\w*|baiss\w*|ajust\w*|initial\w*|de depart|au depart|au debut|depuis le debut|historiques?|evolu\w*|retrace\w*)\b/u;
 const WHO =/\bqui est (?:ce|cette|le|la) (?:patient|patiente|malade)\b/u;
 
 // ── Who it is about ───────────────────────────────────────────────────────────
-const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b/u;
+const PRONOUN_CUE = /\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste|se\s+peut|vaut))|\blui\b|\b[a-z]+-(?:t-)?(?:il|elle)\b|\b(?:son|sa|ses)\b|\bce (?:patient|malade|monsieur|dernier)\b|\bcette (?:patiente|malade|dame|personne)\b|\b(?:le|la) (?:patient|patiente|malade)\b|\b(?:l'ai-je|l'ai je)\b|\bje l'ai\b|\bje (?:le|la) (?:ai|avais|vois|revois|suis|connais)\b|\bje (?:le|la|l') ?(?:suis|vois|revois|connais|ai vu|ai vue)\b|\b(?:le|la) (?:voir|revoir|suivre)\b|\b(?:le|la) [a-z]+-(?:t-)?on\b|\bl'[a-z]+-(?:t-)?on\b/u;
 const NOT_THE_PATIENT = /\b(?:mere|pere|frere|soeur|epoux|epouse|conjoint\w*|fils|fille|famille|parents?|enfants?|amis?|proches?)\b/u;
 const GROUP_SCOPE = /\b(?:patients|patientes|(?:du|de tout le|dans tout le|de l'ensemble du|pour tout le) cabinet|agenda|planning|tous|toutes|recettes?|impayes?)\b/u;
 const CALENDAR_SCOPE = /\b(?:aujourd'hui|demain|hier|semaine|semaines|mois|annee|matin|soir|midi|apres-midi)\b/u;
@@ -87,6 +88,8 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   // "son traitement précédent", "a-t-il changé de traitement", "il prenait quoi avant": the recorded changes, not the current state.
   if (TREAT.test(p) && (PREVIOUS.test(p) || CHANGED.test(p))) return { section: "treatchanges" };
   if (TREAT.test(p)) return { section: "treatments" };
+  // "Combien de fois en tout ?", once no treatment is in question, counts the visits.
+  if (/\bcombien de (?:fois|reprises)\b/u.test(p)) return { section: "count" };
   const before = BEFORE_LAST.exec(p);
   if (before && VISIT.test(p)) return { section: "prev", n: NUMBER_WORDS[before[1] ?? ""] ?? 2 };
   if (SINCE_HOW_LONG.test(p) && (VISIT.test(p) || /\bsui[st]?\w*\b/u.test(p))) return { section: "firstdate" };
@@ -225,6 +228,22 @@ export function patientQuestionFrame(text: string, options: { contextPatient: bo
   const subject = patientSubject(text, { ...options, periodRead: !!period }, question.section);
   if (!subject) return null;
   return { text: renderPatientQuestion(question, subject, period ?? undefined), subject, section: question.section };
+}
+
+/**
+ * "Son traitement actuel et sa prochaine consultation ?": two sections of one record asked together, each restated as its own
+ * closed question for the same patient, so neither is answered in silence by the other's read. Null unless two parts name
+ * different sections; a question naming a period keeps its single frame.
+ */
+export function patientQuestionParts(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }, asOf?: string): { text: string; subject: PatientSubject; section: PatientSectionKey }[] | null {
+  const pieces = text.split(/\s*[:;]\s+|,?\s+(?:et|puis|ainsi que)\s+/u).filter(piece => /\p{L}{3}/u.test(piece));
+  if (pieces.length < 2 || namedPeriod(text, asOf) !== null) return null;
+  const questions = pieces.map(piece => classifyPatientQuestion(piece)).filter((question): question is PatientQuestion => question !== null)
+    .filter((question, index, all) => all.findIndex(other => other.section === question.section) === index);
+  if (questions.length < 2) return null;
+  const subject = patientSubject(text, { ...options, periodRead: false }, questions[0]!.section);
+  if (!subject) return null;
+  return questions.map(question => ({ text: renderPatientQuestion(question, subject), subject, section: question.section }));
 }
 
 /**
