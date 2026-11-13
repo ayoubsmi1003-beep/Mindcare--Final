@@ -1,4 +1,4 @@
-import { agendaPeriodOf, renderAgendaQuestion } from "./agenda-frame";
+import { agendaPeriodOf, agendaStatusOf, renderAgendaQuestion } from "./agenda-frame";
 import type { CatalogueIntent } from "./intent-catalogue";
 import { patientPeriod, patientSubject, renderPatientQuestion } from "./patient-question";
 import { practiceQuestionFor } from "./practice-frame";
@@ -20,7 +20,7 @@ export function renderIntent(intent: CatalogueIntent, text: string, options: { c
       const question = renderPatientQuestion(target.section === "prev" ? { section: "prev", n: 3 } : { section: target.section }, subject, period ?? undefined);
       return subject.kind === "named" ? { text: question, contextPatient: false, name: subject.name } : { text: question, contextPatient: subject.kind === "context" };
     }
-    case "agenda": return plain(renderAgendaQuestion(target.intent, target.intent === "next" ? null : agendaPeriodOf(text, asOf)));
+    case "agenda": return plain(renderAgendaQuestion(target.intent, target.intent === "next" ? null : agendaPeriodOf(text, asOf), agendaStatusOf(text)));
     case "finance": return plain(practiceQuestionFor(target.measure, text, asOf));
     case "activity": return plain(practiceQuestionFor("activity", text, asOf));
   }

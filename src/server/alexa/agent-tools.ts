@@ -331,8 +331,13 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     let args:RpcArgs={p_query:'',p_limit:100,p_offset:0},previousArgs:RpcArgs|null=null;
     if(statistics){
      // The route only admits this month, this week, this year or a named month and year; none means this month.
-     const named=/\b(?:semaine|annee|\d{4})\b/u.test(plainRequest),period=named?patientQueryPeriod(exactSentence,asOf)??explicitAgentPeriod(exactSentence,asOf):null;
+     // "… de août 2026 par rapport à juillet 2026": the second month is the previous period, read over its own days.
+     const [ownText='',versusText]=plainRequest.replace(/[?.!\s]+$/u,'').split(/ par rapport a (?=\p{L}+ \d{4}$)/u);
+     const named=/\b(?:semaine|annee|\d{4})\b/u.test(ownText),period=named?patientQueryPeriod(ownText,asOf)??explicitAgentPeriod(ownText,asOf):null;
      if(named&&!period)return failure(call,'needs_input',practiceReadCopy.statistics.periodUnresolved,'unresolved-statistics-period');
+     const versus=versusText?patientQueryPeriod(`en ${versusText}`,asOf):null;
+     if(versusText&&!versus)return failure(call,'needs_input',practiceReadCopy.statistics.periodUnresolved,'unresolved-statistics-period');
+     if(versus)previousArgs={p_from:aujourdHuiCabinet(new Date(versus.from)),p_to:aujourdHuiCabinet(new Date(Date.parse(versus.to)-1))};
      const from=period?aujourdHuiCabinet(new Date(period.from)):`${today.slice(0,7)}-01`,end=period?aujourdHuiCabinet(new Date(Date.parse(period.to)-1)):today;
      // A complete answer, not a question: nothing is pending for the next turn.
      if(from>today)return {...result,status:'empty',complete:true,text:practiceReadCopy.statistics.periodFuture,data:{future:true},evidence:[]};

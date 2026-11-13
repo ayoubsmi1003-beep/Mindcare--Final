@@ -145,7 +145,10 @@ function isNumberWord(word: string): boolean { return numberWords.has(word) || (
 /** Possessive requests address the working patient, including attached Arabic pronouns. */
 export function requestsPatientScope(text: string): boolean {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
-  return /\b(?:son|ses|sa|ce dossier|ce patient|cette patiente|du patient|de la patiente|dossier (?:selectionne|courant|actuel)|prend[-\s]+(?:il|elle))\b|المريض|المريضة|تاعو|تاعها|(?:مواعيد|موعد|اجندت?)(?:ه|ها|هم|هن|و)(?!\p{L})/u.test(normalized);
+  if (/\b(?:ce dossier|ce patient|cette patiente|du patient|de la patiente|dossier (?:selectionne|courant|actuel))\b|المريض|المريضة|تاعو|تاعها|(?:مواعيد|موعد|اجندت?)(?:ه|ها|هم|هن|و)(?!\p{L})/u.test(normalized)) return true;
+  // "Une patiente obsédée par un défaut de son visage…": after a person the question introduces, the possessive is that person's.
+  const vignette = /\b(?:un|une)\s+(?:patiente?|homme|femme|enfant|adolescente?|jeune|personne|malade|mere|pere|sujet|bebe|nourrisson|etudiante?)\b/u.exec(normalized);
+  return /\b(?:son|ses|sa|prend[-\s]+(?:il|elle))\b/u.test(vignette ? normalized.slice(0, vignette.index) : normalized);
 }
 /** A cabinet-wide phrase opts out of the currently selected patient dossier. */
 function cabinetWideScopePattern(): RegExp {

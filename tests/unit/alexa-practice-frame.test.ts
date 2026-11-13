@@ -16,8 +16,8 @@ describe("finance frame: money questions in everyday words", () => {
     expect(money("Quel est le chiffre d'affaires de cette année ?")?.text).toBe("Quel est le chiffre d'affaires du 1 janvier 2026 au 31 décembre 2026 ?");
   });
   it("reads expenses and the net result for a month, not for a day", () => {
-    expect(money("Quelles sont les dépenses du cabinet ce mois-ci ?")?.text).toBe("Quelles sont les dépenses du cabinet ce mois-ci ?");
-    expect(money("Combien avons-nous dépensé en septembre ?")?.text).toBe("Quelles sont les dépenses du cabinet de septembre 2026 ?");
+    expect(money("Quelles sont les dépenses du cabinet ce mois-ci ?")?.text).toBe("Quelle est la répartition des charges de ce mois ?");
+    expect(money("Combien avons-nous dépensé en septembre ?")?.text).toBe("Quelle est la répartition des charges de septembre 2026 ?");
     expect(money("Quel est le résultat net de ce mois ?")?.text).toBe("Quel est le résultat net de ce mois ?");
     expect(money("Quelles sont les dépenses d'aujourd'hui ?")).toBeNull();
   });
@@ -115,10 +115,10 @@ describe("activity: patients who came at least once", () => {
     expect(activity("Combien de patients ont consulté en septembre ?")).toBe("Montre-moi les statistiques de septembre 2026");
     expect(frenchRequestAdmission(activity("Combien de patients sont passés ce mois-ci ?")!, false, ASOF)?.tools).toEqual(["query_app"]);
   });
-  it("never for one named person, and never over a week the statistics cannot read", () => {
+  it("never for one named person; last week is read as its explicit days", () => {
     expect(activity("Combien de patients ont consulté Karim Test ?")).toBeNull();
     expect(activity("Karim Test, combien de patients a-t-il vus ce mois-ci ?")).toBeNull();
     expect(activity("Le patient a consulté combien de fois cette année ?")).toBeNull();
-    expect(activity("Combien de patients ont consulté la semaine dernière ?")).toBeNull();
+    expect(activity("Combien de patients ont consulté la semaine dernière ?")).toBe("Montre-moi les statistiques du 19 octobre 2026 au 25 octobre 2026");
   });
 });

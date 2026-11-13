@@ -8,6 +8,20 @@ export function explicitAgendaClockWindow(text:string,asOf:string):{from:string;
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase();
  const time='(\\d{1,2})(?:\\s*h(?:\\s*(\\d{1,2}))?|:(\\d{2}))';
  const matches=[...plain.matchAll(new RegExp(`\\b(?:entre|de)\\s+${time}\\s*(?:et|a)\\s*${time}(?!\\d)`,'gu'))];
+ // One time ("le rendez-vous de 10 h", "qui vient à 14 h 30"): the hour that starts then, or that exact minute.
+ // "À partir de 14 h", "avant 10 h" are open-ended: not one slot.
+ const single=matches.length===0&&!/\b(?:a partir|apres|avant|depuis|jusqu\w*|des|passe|plus tard|plus tot)\s+(?:de\s+|d'|a\s+)?\d/u.test(plain)?[...plain.matchAll(new RegExp(`\\b(?:de|a|pour)\\s+${time}(?!\\d)(?!\\s*(?:et|a)\\s*\\d)`,'gu'))]:[];
+ if(single.length===1){
+  const match=single[0]!,rest=plain.slice(0,match.index)+plain.slice(match.index+match[0].length);
+  if(hasExplicitClockRestriction(rest))return null;
+  const day=patientQueryPeriod(rest,asOf)??explicitAgentPeriod(rest,asOf);
+  if(!day||Date.parse(day.to)-Date.parse(day.from)!==86400000)return null;
+  const hour=Number(match[1]),minutes=match[2]??match[3],minute=Number(minutes??0);
+  if(hour>23||minute>59)return null;
+  const civil=day.from.slice(0,10),start=Date.parse(`${civil}T${String(hour).padStart(2,'0')}:${String(minute).padStart(2,'0')}:00+01:00`),end=start+(minutes===undefined?3600000:60000);
+  const clock=(instant:number)=>{const local=new Date(instant+3600000).toISOString();return `${local.slice(0,19)}+01:00`;};
+  return {from:clock(start),to:clock(end),matchedText:match[0]};
+ }
  if(matches.length===0){
   const dayparts=[...plain.matchAll(/\b(?:avant\s+midi|matin(?:ee)?|apres[- ]?midi|aprem)\b/gu)];
   if(dayparts.length!==1)return null;

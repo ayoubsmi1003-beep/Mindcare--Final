@@ -9,8 +9,11 @@ function financePeriod(data:RecordValue):string{
  const first=new Date(`${from}T12:00:00+01:00`),last=new Date(`${to}T12:00:00+01:00`);
  if(Number.isNaN(first.getTime())||Number.isNaN(last.getTime()))return '';
  const month=new Intl.DateTimeFormat('fr-FR',{month:'long',year:'numeric',timeZone:'Africa/Algiers'});
- if(first.getFullYear()===last.getFullYear()&&first.getMonth()===last.getMonth())return `En ${month.format(first)}, `;
+ // "En septembre" only for the whole month: a week or a few days of it are named by their own dates.
+ const wholeMonth=first.getDate()===1&&last.getDate()===new Date(last.getFullYear(),last.getMonth()+1,0).getDate();
+ if(first.getFullYear()===last.getFullYear()&&first.getMonth()===last.getMonth()&&wholeMonth)return `En ${month.format(first)}, `;
  const date=new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'Africa/Algiers'});
+ if(from===to)return `Le ${date.format(first)}, `;
  return `Du ${date.format(first)} au ${date.format(last)}, `;
 }
 function financeParagraph(result:AgentResult,question:string,detailed:boolean):string|undefined{

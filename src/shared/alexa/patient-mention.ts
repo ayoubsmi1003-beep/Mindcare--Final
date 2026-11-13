@@ -3,6 +3,8 @@ import { mentionsBookTopic } from "./book-topics";
 
 const common = new Set([
   "secondaire", "secondaires", "cabinet", "rendez-vous", "rendez",
+  // People a clinical question speaks of ("le traitement de la mère", "passer au bébé"): never a patient's name.
+  "mere", "meres", "pere", "peres", "maman", "papa", "bebe", "bebes", "nourrisson", "nourrissons", "nouveau-ne", "nouveau-nes", "foetus", "femme", "femmes", "homme", "hommes", "enfant", "enfants", "adolescent", "adolescente", "adolescents", "adolescentes", "parents", "parent",
   "document", "documents", "certificat", "certificats", "justification", "justifications", "justificatif", "justificatifs", "brouillon", "brouillons", "emis", "emise", "emises", "delivre", "delivree", "delivres", "delivrees",
   "termine", "terminee", "termines", "terminees", "clos", "close", "closes", "cloture", "cloturee", "clotures", "cloturees", "ouvert", "ouverte", "ouverts", "ouvertes", "signe", "signee", "signes", "signees", "non",
   "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "suspendu", "suspendue", "suspendus", "suspendues", "documente", "documentee", "documentes", "documentees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",

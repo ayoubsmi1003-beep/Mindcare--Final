@@ -55,7 +55,9 @@ describe("practice reads keep the period that was asked", () => {
   });
   it("activity over a period its frame cannot write is not read as the current month", async () => {
     const { activityQuestionFrame } = await import("@/shared/alexa/practice-frame");
-    expect(activityQuestionFrame("Combien de patients différents avons-nous reçus la semaine passée ?", asOf)).toBeNull();
+    // Last week is read as its explicit days (Monday to Sunday), never as the current month.
+    expect(activityQuestionFrame("Combien de patients différents avons-nous reçus la semaine passée ?", asOf)).toMatch(/^Montre-moi les statistiques du \d+ \S+ \d{4} au \d+ \S+ \d{4}$/u);
+    expect(activityQuestionFrame("Combien de patients différents avons-nous reçus l'an passé ?", asOf)).toBeNull();
     expect(activityQuestionFrame("Combien de patients différents avons-nous reçus ce mois-ci ?", asOf)).toContain("ce mois");
   });
 });
