@@ -74,3 +74,9 @@ describe("« où on en est » with the patient", () => {
     for (const text of ["Rappelle-moi où on en est avec cette dame.", "On en est où avec ce patient ?"]) expect(patientQuestionFrame(text, { contextPatient: true, followup: false }, ASOF)?.section, text).toBe("summary");
   });
 });
+
+describe("a polite, roundabout request about the patient", () => {
+  it("reads the summary; the words of politeness are never a name", () => {
+    expect(patientQuestionFrame("Si ça ne te dérange pas, résume-moi en quelques mots le dossier de ce patient ?", { contextPatient: true, followup: false }, ASOF)?.section).toBe("summary");
+  });
+});

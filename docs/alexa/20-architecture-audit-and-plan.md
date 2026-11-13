@@ -505,3 +505,11 @@ question ("Une personne a appelé : quand est son rendez-vous ?") keeps the sele
 only when consultations are left unread (it also counted the treatment history's completeness). Not changed, older than the
 campaign and outside its scope: a lower-case first name after a question with a possessive still falls to the patient on screen
 (noted in STATE).
+
+## 36. C270 `p10` (`8b9cb9e`, after the security review's fixes)
+**226/270 turns** (patients 47/55, context 38/45, agenda 36/40, finance 30/35, books 63/80, variation 12/15; 1 blocked, the
+fixture's next patient). Against `p9`: 2 gained (F028, fixed in `ae9656b`; L024, the fragment no longer shown, `2caa2d4`),
+1 lost: V004, model-dependent in both runs. The `f3199a2` fix made its section right ("où on en est") but the frame still found
+no subject ("quelques mots", "embête pas" read as two-word names), so V004 had passed in `p9` only through the local model.
+Words of politeness are frame vocabulary now; V004 frames deterministically (unit test with another wording). Median turn
+0.26 s, p95 82 s, 36 turns still reach the local model. The review's routing changes (no frame on a change request) lost no turn.
