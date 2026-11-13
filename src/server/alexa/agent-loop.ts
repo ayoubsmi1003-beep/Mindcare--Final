@@ -337,11 +337,12 @@ function directPublicAnswerCall(text:string,clientTurnId:string):{part:RequestPa
  if(!agentSchemas.answer_general.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['answer_general'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'answer_general',args}};
 }
-/** A clarification the local model wrote, kept only when it is a French question: French words, no English ones. */
+/** A clarification the local model wrote, kept only when it is a French question: Latin script, a word only French uses, no English or Spanish one. */
 export function frenchClarification(question:string):string|null{
  const plain=question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().trim();
- if(!/\?\s*$/u.test(plain)||/\b(?:the|who|what|which|when|where|how|you|your|please|does|did|would|could|should|with|and|this|that|is|are)\b/u.test(plain))return null;
- return /\b(?:quel(?:le|s|les)?|vous|votre|souhaitez|voulez|pouvez|est-ce|lequel|laquelle|pour|de|du|des|la|le|les|une?)\b/u.test(plain)?question.trim():null;
+ if(!/\?\s*$/u.test(plain)||/[^\p{Script=Latin}\p{N}\p{P}\p{Z}\p{S}]/u.test(plain))return null;
+ if(/\b(?:the|who|what|which|when|where|how|you|your|please|does|did|would|could|should|with|and|this|that|is|are|for|name|date|time|el|los|las|necesita|fecha|cita|cual|cuando|donde|usted|por favor)\b/u.test(plain))return null;
+ return /\b(?:quel(?:le|s|les)?|lequel|laquelle|lesquel(?:le)?s|vous|votre|vos|souhaitez|voulez|pouvez|preferez|est-ce|s'agit-il|combien|quand|faut-il|dois-je)\b/u.test(plain)?question.trim():null;
 }
 function directFinanceReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null{
  const scope=frenchRequestAdmission(text,false,asOf);

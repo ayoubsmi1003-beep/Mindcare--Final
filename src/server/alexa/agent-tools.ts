@@ -462,7 +462,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     // cannot tell its first visit, and says so rather than take the oldest one it happened to read.
     if(!spec.consultationId&&!spec.from&&!spec.to&&firstConsultation&&!latestConsultation){
      const context=await buildClinicalContext(db,{patientId:patientId!},{count:100,all:true},signal);
-     if(!context.coverage.complete)return failure(call,'unsupported',narrativeCopy.oldestUnavailable,'first-consultation-beyond-read');
+     // Every consultation must have been read (none left after the last page); the treatment history's own completeness is not the question here.
+     if(context.coverage.hasMore)return failure(call,'unsupported',narrativeCopy.oldestUnavailable,'first-consultation-beyond-read');
      const first=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>a.startedAt.localeCompare(b.startedAt)||a.id.localeCompare(b.id))[0];
      if(!first)return {...result,status:'empty',complete:true,text:applicationReadCopy.extended.empty,evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context'}}]};
      spec={...spec,consultationId:first.id};

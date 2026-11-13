@@ -1,5 +1,5 @@
 import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
-import { unresolvedPartSentence } from "./unresolved-wording";
+import { shownGoal, unresolvedPartSentence } from "./unresolved-wording";
 import type { AgentCall } from "@/shared/alexa/agent";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
@@ -409,15 +409,16 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     // An amount of expenses is the period's charges total, which the charge list never adds up: the frame restates it ("À combien s'élèvent nos dépenses ?").
     const expensesAmount=admission?.financeMode==='charges'&&!/\b(?:recurrent\w*|ponctuel\w*|mensuel\w*|liste\w*|lesquel\w*|quelles charges)\b/u.test(agentInput.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
     const financeClosed=admittedAs('query_finance')&&!!admission&&!!admission.financeMode&&!expensesAmount&&(!!(admission.from&&admission.to)||(admission.financeMode==='totals'&&(admission.financeState==='all'||admission.financeState==='pending')));
-    const agendaFrame=dependencies.resumeCursor||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(readText,asOf);
+    // A request for a change keeps its own route (propose, confirm, write): no frame rewrites it into a read that could look carried out.
+    const agendaFrame=dependencies.resumeCursor||understanding.wantsChange||inheritedText||knowledgeFollowup||selectedListedPatient?null:agendaQuestionFrame(readText,asOf);
     // Any other everyday question about a patient: read by meaning, restated as the closed question the gates answer.
     // Money and activity of the practice: "Combien avons-nous gagné hier ?", "Quels sont les jours les plus chargés ?".
-    const practiceFrame=dependencies.resumeCursor||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=financeClosed?null:financeQuestionFrame(readText,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(readText,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
+    const practiceFrame=dependencies.resumeCursor||understanding.wantsChange||inheritedText||agendaFrame||knowledgeFollowup||selectedListedPatient?null:(()=>{const finance=financeClosed?null:financeQuestionFrame(readText,asOf);if(finance)return finance;const activity=admittedAs('query_app')?null:activityQuestionFrame(readText,asOf);return activity?{text:activity,cashOnlyNotice:false}:null;})();
     let switchFollowup=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||knowledgeFollowup||selectedListedPatient?null:patientSwitchFollowup(agentInput.text,previous?.lastRequest);
     // Words no vocabulary knows are taken for a name only when the patient search agrees; otherwise they are vocabulary the lists lack.
     if(switchFollowup&&(await resolvePatient(dependencies.db,{name:switchFollowup.name},signal,asOf)).status==='absent')switchFollowup=null;
     const frameOptions={contextPatient:!!input.appContext.patientId,followup:!!previous?.selectedPatientId};
-    let patientFrame=dependencies.resumeCursor||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
+    let patientFrame=dependencies.resumeCursor||understanding.wantsChange||inheritedText||agendaFrame||practiceFrame||switchFollowup||knowledgeFollowup||selectedListedPatient||appliedToPatient?null
       :patientQuestionFrame(readText,frameOptions,asOf);
     // One word that may be a first name: one patient reads, several are a question for the doctor, none is vocabulary.
     if(patientFrame?.subject.kind==='named'&&!/\s/u.test(patientFrame.subject.name)){
@@ -517,7 +518,7 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     if(newPatients)reference.patients=newPatients;else if(selectedListedPatient&&previous?.patients)reference.patients=previous.patients;else if(!inheritedText)delete reference.patients;
     if(selectedPatientId)reference.selectedPatientId=selectedPatientId;else delete reference.selectedPatientId;
     conversationState.finish(lease,reference);
-    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed:result.speechAllowed??result.status==="completed",...(result.navigation?{navigation:result.navigation}:{})});
+    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts.map(part=>({...part,goal:shownGoal(part.goal,input.text)})),tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed:result.speechAllowed??result.status==="completed",...(result.navigation?{navigation:result.navigation}:{})});
     return;
   }
   if (signal.aborted) { emit({ type: "error", code: "cancelled", message: dialogue(planRequest(input.text, null).language).stale }); return; }

@@ -174,6 +174,8 @@ export function classifyAgendaQuestion(text: string, otherPeriod?: string | null
 /** The closed agenda question for this utterance, or null when unsure. Asked-back names or pronouns leave it to the older route. */
 export function agendaQuestionFrame(text: string, asOf: string): string | null {
   const out = dayParts(foldWithMap(text).out);
+  // A command ("Confirme les rendez-vous de demain", "Décommande…") is never rewritten into a read that could look carried out.
+  if (/^(?:alexa\W+)?(?:confirm|annul|decommand|valid|decal|report|deplac|supprim|ajout|cre|marqu|pointe|enregistr)(?:e|ez|er)\b/u.test(out)) return null;
   // Over a month or a range, "consultations", "séances" or "patients vus" are the activity and money frames' figures: only
   // appointments, absences or cancellations named as such are the agenda's.
   const civil = PERIOD.test(out) || !AGENDA_ITSELF.test(out) || /\b(?:regl\w*|pay\w*|encaiss\w*|factur\w*)\b/u.test(out) ? null : civilPeriod(text, asOf);

@@ -1,4 +1,5 @@
 import { mayBeAName, mentionsClinicalTopic, namedFrenchPeriod } from "./request-contract";
+import { mentionsBookTopic } from "./book-topics";
 
 /**
  * A doctor asks about a patient in many ways ("Il prend quoi comme cachets ?", "Depuis quand je le suis ?",
@@ -114,7 +115,7 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   // "Ouvre-moi <prénom nom>": the record of a person named in full is read as its summary. A screen ("ouvre l'agenda", "ouvre le
   // planning") is never a person: only two to four words no screen name, then nothing else.
   const open = /^(?:alexa\W+)?(?:ouvre|ouvrez|ouvrir)(?:-moi| moi)?\s+(?:le dossier de\s+|la fiche de\s+)?(\p{L}+(?:[\s-]\p{L}+){1,3})\s*[.!?]*$/u.exec(p);
-  if (open && !/\b(?:le|la|les|l|un|une|mon|ma|mes|agenda|planning|finances?|comptabilite|documents?|parametres|reglages|jarvis|alexa|tableau|bord|dashboard|liste|patients?|accueil|consultations?|notes?)\b/u.test(open[1]!)) return { section: "summary" };
+  if (open && !/\b(?:celui|celle|ci|lui|elle|eux|ce|cet|cette|le|la|les|l|un|une|mon|ma|mes|agenda|planning|finances?|comptabilite|documents?|parametres|reglages|jarvis|alexa|tableau|bord|dashboard|liste|patients?|accueil|consultations?|notes?)\b/u.test(open[1]!)) return { section: "summary" };
   return null;
 }
 
@@ -265,11 +266,17 @@ export function patientCountPeriodFollowup(text: string, previousRequest: string
 export function patientQuestionParts(text: string, options: { contextPatient: boolean; followup: boolean; ignoreUnknownWords?: boolean }, asOf?: string): { text: string; subject: PatientSubject; section: PatientSectionKey }[] | null {
   const pieces = text.split(/\s*[:;]\s+|,?\s+(?:et|puis|ainsi que)\s+/u).filter(piece => /\p{L}{3}/u.test(piece));
   if (pieces.length < 2 || namedPeriod(text, asOf) !== null) return null;
-  const questions = pieces.map(piece => classifyPatientQuestion(piece)).filter((question): question is PatientQuestion => question !== null)
+  const classified = pieces.map(piece => ({ piece, question: classifyPatientQuestion(piece) }));
+  // A record section asked of a topic of the books ("le traitement de la schizophrénie") is a book question, never a record read.
+  if (classified.some(({ piece, question }) => question && COLLIDES_WITH_BOOKS.has(question.section) && mentionsBookTopic(piece))) return null;
+  const questions = classified.map(({ question }) => question).filter((question): question is PatientQuestion => question !== null)
     .filter((question, index, all) => all.findIndex(other => other.section === question.section) === index);
   if (questions.length < 2) return null;
   const subject = patientSubject(text, { ...options, periodRead: false }, questions[0]!.section);
   if (!subject) return null;
+  // A second person named anywhere ("… et le prochain rendez-vous de samia") is never dropped: the single route decides, or asks.
+  const own = subject.kind === "named" ? fold(subject.name) : "";
+  if (unknownRuns(text).some(run => fold(run.words.join(" ")) !== own && /^(?:de|d|du|pour|chez|a|sur|avec)$/u.test(run.before))) return null;
   return questions.map(question => ({ text: renderPatientQuestion(question, subject), subject, section: question.section }));
 }
 

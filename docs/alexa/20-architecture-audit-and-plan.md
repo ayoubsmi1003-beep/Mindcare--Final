@@ -481,3 +481,27 @@ p95 93 s (the turns that still reach the local model). The loss, F028 ("combien 
 année"), is an Alexa failure caused by `bd0394c`: "consulté" joined the patient frame's vocabulary, which the agenda frame also
 uses for its leftover words, so the agenda frame counted appointments; fixed in `ae9656b` (patients who consulted are the
 activity statistics). Finance replayed after it: 30/35, F028 regained, 0 lost: **226/270** with `p9`'s other domains.
+
+## 35. Security review of the campaign's diff (`aca5579..2caa2d4`), and its fixes
+An adversarial review (security-reviewer agent, read-only, probes against the real modules) found **no bypass of a SQL or RLS
+gate**: every read still goes through its audited gate under the doctor's rights. It found five defects in *which* patient or
+*which kind* of read a question gets, all reproduced by unit tests (`alexa-review-fixes.test.ts`, development wordings) and fixed:
+1. **Major: a second person dropped.** "Le traitement de Karim Benali et le prochain rendez-vous de samia ?" was split into
+   two reads of Karim Benali. A question that names a second person anywhere is never split (the single route decides, or
+   asks); a part asking a topic of the books ("le traitement de la schizophrénie") is never a record read either.
+2. **Major: typo correction touching a name.** "rendez-vous de amina combier" became "… amina combien", then the only Amina
+   was read. Words of a name run (two unknown words side by side), and a word right after a name introducer ("pour", "chez",
+   "le rendez-vous de"), are never corrected; the remaining limit is written in the code (`shortcut:` note).
+3. **Major: commands rewritten into reads.** "Confirme les rendez-vous de demain" became "Quels sont les rendez-vous confirmés
+   demain ?", an answer that could look carried out (nothing was written). The agenda frame refuses a leading command verb, and
+   no frame (agenda, practice, patient) rewrites a turn the understanding layer reads as a request for a change; this also
+   closes the older "Arrête son traitement actuel" rewrite.
+4. **Minor: model-written goals.** Besides the "goal — reason" line (§32), the parts list of the conversation panel showed the
+   model's goals; a goal is shown only in the doctor's own whole words (word boundaries, not a substring), else the question.
+5. **Minor: clarification language.** Spanish, mixed-script or English questions with one French article passed; a
+   clarification needs Latin script, a word only French uses, and no English or Spanish one.
+Also fixed from the review's other notes: "ouvre-moi celui-ci" is no named record; an indefinite person in an agenda or record
+question ("Une personne a appelé : quand est son rendez-vous ?") keeps the selected patient's scope; the first-note read refuses
+only when consultations are left unread (it also counted the treatment history's completeness). Not changed, older than the
+campaign and outside its scope: a lower-case first name after a question with a possessive still falls to the patient on screen
+(noted in STATE).
