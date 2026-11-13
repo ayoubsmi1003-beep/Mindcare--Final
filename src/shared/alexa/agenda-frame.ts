@@ -32,6 +32,8 @@ const PART_OF: Record<string, string> = { matinee: "matin", matin: "matin", soir
 function dayParts(folded: string): string {
   const part = (word: string) => PART_OF[word] ?? "apres-midi";
   return folded
+    // "Le premier patient de la journée", "dans la journée": today, unless another day follows ("la journée de jeudi").
+    .replace(/\b(?:de |dans )?la journee\b(?!\s+(?:de|d'))/gu, "aujourd'hui")
     .replace(new RegExp(`\\b(?:(?:ma|la|cette|dans la|en)\\s+|l')?(matinee|apres-midi|aprem|soiree)\\s+(?:de |d')(${DAY_SOURCE})\\b`, "gu"), (_, word: string, day: string) => `${day} ${part(word)}`)
     .replace(new RegExp(`\\b(${DAY_SOURCE})\\s+(?:dans la |dans l'|en )(matinee|apres-midi|aprem|soiree)\\b`, "gu"), (_, day: string, word: string) => `${day} ${part(word)}`);
 }
@@ -126,7 +128,7 @@ const FREE = /\b(?:suis-je libre|libre|disponible|creneaux? (?:libre|disponible)
 const CLOCK = /\b(?:a )?quelle heure\b/u, ENDS = /\b(?:termine|finis|finit|fini)\b/u, STARTS = /\b(?:commence|debute|demarre)\b/u;
 const BARE_PEOPLE = /^(?:les )?patients?\s*(?:attendus?\s*)?$/u;
 // Words that make it a question about the clinic's population or about one person, not about the agenda.
-// "Combien de patients ont consulté au moins une fois" counts people seen: the activity statistics, not the appointments.
+// "Combien de personnes différentes ont consulté" counts people seen: the activity statistics, not the appointments.
 const NOT_AGENDA = /\b(?:consulte|consultes|consultee|consultees|au moins une fois|son|sa|ses|leur|leurs|actifs?|inactifs?|archives?|inscrits?|nouveaux?|suivis?|enregistres?|au total|dossiers?|mineurs?|adultes?|differents?|impayes?|recettes?|paiements?|encaisse\w*|pay(?:e|ee|es|ees|er)s?|il|elle|lui|ce patient|cette patiente|ce malade|son dossier|traitement\w*|medicament\w*)\b/u;
 const AGENDA_WORDS = /\b(?:ressemble|quoi|ont|eu|lieu|ete|realisees|faites|terminees|passee|combien|de|d|patients?|monde|personnes?|consultations?|visites?|seances?|rendez-vous|rdv|qui|ai-je|avons-nous|a-t-on|est|sont|attendus?|vient|viennent|vais-je|voir|recevoir|vois-je|reste|restent|avais-je|etait|mon|ma|mes|le|la|les|l|un|une|j|ai|on|a|nous|avons|des|du|ou|et|annule\w*|reporte\w*|decale\w*|apercu|planning|journee|semaine|agenda|programme|premier|premiere|dernier|derniere|prochain|prochaine|heure|quelle|commence|libre|disponible|suis-je|donne|donne-moi|montre|montre-moi|affiche|dis|dis-moi|beaucoup|exactement|aujourd'hui|demain|hier|matin|soir|apres-midi|ce|cet|cette|cabinet|moi|me|quels|quel|quelles|y|il|en|dans|pour|sur|jour|jours|encore|deja|aussi|alors|bien|merci|stp|svp|plait|s'il|te|vous|tu|peux|pouvez|pourriez|pourrais|voudrais|indiquer|m'indiquer|nombre|chargee?|charge|quelque|chose|prevus?|prevues?|programme|etaient|arrive|arrivent|arriver|arrivera|arriveront|debute|debutent|termine|terminent|je|finis|finit|fini|commence|demarre|trous?|creux|dans|confirm\w*|attente|par|sans|jamais|pas|n)\b/gu;
 
@@ -150,7 +152,7 @@ export function classifyAgendaQuestion(text: string, otherPeriod?: string | null
   // "À quelle heure commence ma journée demain ?": the day named wins over "ma journée".
   const period = found.find(value => !/^ma (?:journee|semaine)$/u.test(value)) ?? found[0] ?? otherPeriod ?? null;
   const absent = ABSENT.test(out);
-  // "Qui n'est pas venu à son rendez-vous ?" asks the agenda; "il", "elle" or a record still make it one person's question.
+  // "Qui a manqué son rendez-vous hier ?" asks the agenda; "il", "elle" or a record still make it one person's question.
   const personal = out.replace(IMPERSONAL, " ");
   if (NOT_AGENDA.test(absent ? personal.replace(/\ba (?:son|leur|leurs|ses) (?:rendez-vous|rdv)\b/gu, " ") : personal) && !CANCELLED.test(out)) return null;
   const counted = /\bcombien\b|\bnombre (?:de|d')/u.test(out);
@@ -248,7 +250,7 @@ export function periodFollowup(text: string, previousRequest: string | undefined
     if (ordinal && bare.split(" ").length <= 8) return renderAgendaQuestion(ordinal.startsWith("premier") ? "first" : "last", named);
     return agendaQuestionFrame(bare.replace(that[0], named).replace(/^(?:et|alors)\s+/u, ""), asOf);
   }
-  // "Et lequel est le premier ?" right after a question on the agenda: the first or last appointment of its period.
+  // "Et le dernier ?" right after a question on the agenda: the first or last appointment of its period.
   const ordinalOnly = /^(?:(?:et|alors)\s+)?(?:(?:lequel|laquelle|qui)\s+(?:est|etait)\s+)?(?:le|la)\s+(premier|premiere|dernier|derniere)(?:\s+(?:rendez-vous|rdv|patient|patiente))?\s*[?.!]?$/u.exec(bare)?.[1];
   if (ordinalOnly && /\b(?:rendez-vous|rdv|planning|agenda|creneaux?)\b/u.test(foldWithMap(previousRequest).out)) {
     const bounds = previousBounds(previousRequest, asOf);

@@ -23,7 +23,7 @@ export type PatientSubject = { readonly kind: "context" } | { readonly kind: "na
 const fold = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/[’‘ʼ`]/gu, "'").replace(/\s+/gu, " ").trim();
 
 // ── Concepts ──────────────────────────────────────────────────────────────────
-const VISIT = /\b(?:la derniere fois|la premiere fois|venu\w*|revenu\w*|vu|vue|vus|voir|revoir|visites?|passe|passage|passages|consultations?|seances?|rendez-vous|rdv|vient|viens|viennent|suis|suit|suivi|consulte\w*)\b/u;
+const VISIT = /\b(?:la derniere fois|la premiere fois|venu\w*|revenu\w*|vu|vue|vus|voir|revoir|revoit|revoyons|revois|reverra|reverrons|revu|revus|visites?|passe|passage|passages|consultations?|seances?|rendez-vous|rdv|vient|viens|viennent|suis|suit|suivi|consulte\w*)\b/u;
 const PLURAL_VISIT = /\b(?:consultations|seances|visites|passages|rendez-vous|rdv)\b/u;
 const COUNT = /\b(?:combien|nombre|total)\b/u;
 const ALREADY = /\bdeja\b/u;
@@ -84,7 +84,7 @@ export function classifyPatientQuestion(text: string): PatientQuestion | null {
   if (DOCS.test(p)) return { section: "documents" };
   // Every appointment, past and to come, is the record's history, not only the next one.
   if (/\b(?:passe\w*|anterieur\w*) et (?:a venir|futur\w*|prevu\w*)\b|\b(?:tous|l'ensemble de) (?:ses|les) (?:rendez-vous|rdv)\b/u.test(p)) return { section: "history" };
-  // Any word of a visit ("la prochaine fois qu'il vient", "son prochain passage", "attendu quand") names the next appointment.
+  // Any word of a visit ("quand repasse-t-elle", "son prochain passage", "on l'attend quand") names the next appointment.
   if (NEXT.test(p) && (VISIT.test(p) || /\b(?:revien\w*|repass\w*|reconvoqu\w*|attendue?s?)\b/u.test(p))) return { section: "nextappt" };
   // "Il vient quand ?", "a-t-elle un rendez-vous ?": coming, or holding an appointment, in the present is the next one.
   if (!LAST.test(p) && !PREVIOUS.test(p) && !FIRST.test(p) && (/\b(?:vient|viennent|viendra|viendront|passera|repasse)\b[^?]*\bquand\b|\bquand\b[^?]*\b(?:vient|viennent|viendra|viendront|passera|repasse)\b/u.test(p)
@@ -242,7 +242,7 @@ export function patientQuestionFrame(text: string, options: { contextPatient: bo
 }
 
 /**
- * "Même calcul pour l'année d'avant", "Et en 2024 ?": a visit count asked again for another period, for the same patient.
+ * "Et pour l'année précédente ?", "Et en 2024 ?": a visit count asked again for another period, for the same patient.
  * "D'avant" is counted from the previous period, not from today. Null unless the previous question was such a count.
  */
 export function patientCountPeriodFollowup(text: string, previousRequest: string | undefined, asOf: string): string | null {
@@ -259,7 +259,7 @@ export function patientCountPeriodFollowup(text: string, previousRequest: string
 }
 
 /**
- * "Son traitement actuel et sa prochaine consultation ?": two sections of one record asked together, each restated as its own
+ * "Ses diagnostics et ses échelles ?": two sections of one record asked together, each restated as its own
  * closed question for the same patient, so neither is answered in silence by the other's read. Null unless two parts name
  * different sections; a question naming a period keeps its single frame.
  */

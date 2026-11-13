@@ -91,7 +91,7 @@ export const INTENT_CATALOGUE: readonly CatalogueIntent[] = [
     "Pour quoi est-il suivi, sur le plan diagnostique ?", "Son diagnostic principal, s'il te plaît.",
   ] },
   { id: "patient.identity", label: "identité ou profil administratif d'un patient", target: patient("identity"), examples: [
-    "C'est qui ce patient ?", "Je suis avec qui, là ?", "Son profil, s'il te plaît.", "Quel âge a-t-il et où habite-t-il ?",
+    "C'est qui ce patient ?", "Je suis avec qui, là ?", "Son profil, s'il te plaît.", "Il a quel âge et il habite où ?",
     "Ses coordonnées ?", "Il est né en quelle année ?", "Rappelle-moi l'identité de la personne en face.",
   ] },
   { id: "agenda.count", label: "nombre de rendez-vous sur une période", target: agenda("count"), examples: [

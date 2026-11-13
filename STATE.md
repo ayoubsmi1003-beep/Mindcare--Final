@@ -69,6 +69,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    `bd0394c`, corrigé `ae9656b` : finance rejouée 30/35, 0 perdu → **226/270**). Doc 20 §34.
    Revue de sécurité du diff de la campagne (§35) : aucune porte SQL/RLS contournée ; 5 défauts de routage corrigés (`8b9cb9e`).
    **C270 `p10` : 226/270** (47/38/36/30/63/12), 2 gagnés, 1 perdu (V004, dépendant du modèle, cause corrigée). Doc 20 §36.
+   Audit règle A (§37) : phrases de C270 retirées du code et des tests (commentaires, exemples de tests trop proches) ; trois
+   formulations nouvelles ont révélé de vrais défauts (dont « est-il passé au cabinet » qui lisait toute la liste), corrigés ;
+   un test bloque désormais toute phrase de C270 dans le code.
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.

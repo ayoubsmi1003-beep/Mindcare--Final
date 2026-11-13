@@ -365,7 +365,7 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
   // Splits when one goal has a known route and every other stands alone, so "puis vérifie la page" stays attached.
   const opensAScreen=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.includes('navigate'),admittedGoal=(goal:string)=>!!frenchRequestAdmission(goal,false,dependencies.agentAsOf).tools?.length,standsAlone=(goal:string)=>!/^(?:ne |n['’]|sans )/iu.test(goal)&&!/\b(?:sa|son|ses|leur|leurs|cette|celle|celui|cela)\b/iu.test(goal)&&(/\?\s*$/u.test(goal)||goal.split(/\s+/u).length>=4);
   if(sequence&&sequence.goals.some(admittedGoal)&&sequence.goals.every(goal=>!opensAScreen(goal)&&!deterministicActionRequest(goal,input.appContext.documentId)&&!frenchRequestAdmission(goal,false,dependencies.agentAsOf).preparationAction&&(admittedGoal(goal)||standsAlone(goal))))return runSequencedGoals(input,sequence,dependencies,emit,signal);
-  // "Son traitement actuel et sa prochaine consultation ?": two sections of one record, each its own closed read, in turn (never one answered in silence by the other's read).
+  // "Ses diagnostics et ses échelles ?": two sections of one record, each its own closed read, in turn (never one answered in silence by the other's read).
   const recordParts=dependencies.native&&!dependencies.resumeCursor&&!understanding.wantsChange?patientQuestionParts(correctReadTypos(input.text),{contextPatient:!!input.appContext.patientId,followup:false},dependencies.agentAsOf):null;
   if(recordParts)return runSequencedGoals(input,{goals:recordParts.map(part=>part.text),dropped:[]},dependencies,emit,signal);
   if (dependencies.native) {
@@ -406,7 +406,7 @@ export async function runAlexa(rawInput: TurnInput, dependencies: OrchestratorDe
     const admittedAs=(tool:string)=>admittedTools?.length===1&&admittedTools[0]===tool&&(tool!=='query_app'||admission?.applicationView==='statistics');
     // A finance question counts as understood only when the gate has everything it needs (a period, or the all-time balance): otherwise the model would be asked to finish it.
     // Admitted is not enough: with no finance view chosen ("Combien a-t-on touché en juin ?"), the model would still have to pick the call.
-    // An amount of expenses is the period's charges total, which the charge list never adds up: the frame restates it ("À combien s'élèvent nos dépenses ?").
+    // An amount of expenses is the period's charges total, which the charge list never adds up: the frame restates it ("Quel montant de charges ce trimestre ?").
     const expensesAmount=admission?.financeMode==='charges'&&!/\b(?:recurrent\w*|ponctuel\w*|mensuel\w*|liste\w*|lesquel\w*|quelles charges)\b/u.test(agentInput.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
     const financeClosed=admittedAs('query_finance')&&!!admission&&!!admission.financeMode&&!expensesAmount&&(!!(admission.from&&admission.to)||(admission.financeMode==='totals'&&(admission.financeState==='all'||admission.financeState==='pending')));
     // A request for a change keeps its own route (propose, confirm, write): no frame rewrites it into a read that could look carried out.

@@ -22,7 +22,7 @@ const NAMED_MONTH = new RegExp(`\\b(?:en|de|d'|du mois de|au mois de|celle de|ce
 const MONTH_WORD = new RegExp(`\\b(?:${MONTHS.join("|")})\\b`, "gu");
 const LAST_WEEK = /\b(?:la )?semaine (?:derniere|passee)\b/u;
 const YEAR_SO_FAR = /\bdepuis (?:le )?(?:debut de l'annee|(?:1er|premier) janvier|janvier)\b/u;
-// "Quel jour de la semaine…" speaks of weekdays, not of this week.
+// "les jours de la semaine" speaks of weekdays, not of this week.
 const withoutWeekdayWord = (p: string) => p.replace(/\bjours? de la semaine\b/gu, " jour ");
 
 // "reçu" is money only when no patient or session is the thing received.
@@ -153,7 +153,7 @@ export function financePeriodFollowup(text: string, previousRequest: string | un
   const moneyQuestion = (request: string) => /^(?:Quel montant représentent les paiements encaissés du |Quel est le chiffre d'affaires du |Quelles sont les recettes de )/u.test(request);
   if (!previousRequest || !(moneyQuestion(previousRequest) || moneyQuestion(financeQuestionFrame(previousRequest, asOf)?.text ?? ""))) return null;
   const bare = fold(text).replace(/[?!.\s]+$/u, "");
-  // "Et en juin ?", "Et sur le mois ?", "Étends à la semaine entière.": only the period changes.
+  // "Et en juin ?", "Et pour tout le mois ?", "Étends à la semaine entière.": only the period changes.
   const match = new RegExp(`^(?:(?:et|alors|mais|maintenant)\\s+)?(?:(?:elargi\\w*|etend\\w*|passe)\\s+)?(?:(?:a|au|sur|pour|en)\\s+)?(?:tout(?:e|es)? (?:la |le |l')?|la |le |l')?(aujourd'hui|hier|demain|(?:cette )?semaine(?: (?:derniere|passee))?|(?:ce )?mois(?:-ci| (?:dernier|precedent))?|(?:cette )?annee|${MONTHS.join("|")})$`, "u").exec(bare);
   if (!match) return null;
   const word = match[1]!, phrase = MONTHS.includes(word) ? `en ${word}` : /^semaine (?:derniere|passee)$/u.test(word) ? "la semaine dernière" : word === "semaine" ? "cette semaine"

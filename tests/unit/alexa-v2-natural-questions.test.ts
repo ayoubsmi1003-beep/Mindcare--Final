@@ -132,7 +132,7 @@ describe("ordinary multilingual Alexa questions", () => {
   it.each(["notes sur son anxiété", "score actuel", "diagnostic selon le DSM", "traitement actuel s'il te plaît"])("does not turn modifiers or courtesy into a name: %s", text => {
     expect(patientMention(text)).toBeUndefined();
   });
-  it.each(["Quels diagnostics sont enregistrés ?", "Quelles notes ont été enregistrées ?", "Le traitement est-il efficace ?", "Les notes indiquent-elles une amélioration ?", "Quel est le diagnostic retenu ?"])("keeps grammatical clinical questions out of identity extraction: %s", text => {
+  it.each(["Quels diagnostics sont enregistrés ?", "Quelles notes ont été enregistrées ?", "Le traitement est-il efficace ?", "Les notes indiquent-elles une amélioration ?", "Quel diagnostic a été posé ?"])("keeps grammatical clinical questions out of identity extraction: %s", text => {
     expect(patientMention(text)).toBeUndefined();
   });
   it("reads how the active patient is doing without interpreting va as a navigation command", () => {

@@ -28,7 +28,7 @@ const ASPECTS: readonly { rubric: string; ask: readonly ((drug: string) => strin
   { rubric: "how the drug works", ask: [(d) => `La ${d}, elle agit comment au juste ?`, (d) => `Explique-moi comment fonctionne la ${d}.`] },
   { rubric: "commonly prescribed for", ask: [(d) => `La ${d}, on l'utilise dans quelle indication ?`, (d) => `Pour quelle indication prescrit-on habituellement la ${d} ?`] },
   { rubric: "elderly", ask: [(d) => `Peut-on donner la ${d} à un sujet âgé sans risque ?`, (d) => `La ${d}, ça se manie comment chez le sujet âgé ?`] },
-  { rubric: "habit forming", ask: [(d) => `La ${d} expose-t-elle à un risque d'abus ?`, (d) => `Avec la ${d}, on craint une dépendance ?`] },
+  { rubric: "habit forming", ask: [(d) => `Avec la ${d}, faut-il craindre un abus ?`, (d) => `Avec la ${d}, on craint une dépendance ?`] },
   { rubric: "how long until it works", ask: [(d) => `La ${d} met combien de temps à agir chez un patient ?`, (d) => `Il faut attendre longtemps avant que la ${d} agisse ?`] },
 ];
 const fold = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();

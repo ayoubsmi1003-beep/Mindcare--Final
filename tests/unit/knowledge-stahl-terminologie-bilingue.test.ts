@@ -74,7 +74,7 @@ describe("couche de terminologie bilingue (Stahl 7e)", () => {
   it("nomme le medicament comme sa monographie anglaise, quelle que soit la graphie francaise", () => {
     // Development wordings, never C270/H270. "disulfirame" alone found nothing in the English book.
     for (const [question, mots, anglais] of [
-      ["Quel est le mecanisme d'action du disulfirame ?", ["mecanisme", "action", "disulfirame"], "disulfiram"],
+      ["Par quel mecanisme d'action agit le disulfirame chez l'alcoolique ?", ["mecanisme", "action", "agit", "disulfirame", "alcoolique"], "disulfiram"],
       ["Comment agit la gabapentine ?", ["comment", "agit", "gabapentine"], "gabapentin"],
       ["Delai d'action de la pregabaline ?", ["delai", "action", "pregabaline"], "pregabalin"],
     ] as const) {

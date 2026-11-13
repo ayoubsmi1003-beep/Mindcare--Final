@@ -11,7 +11,7 @@ const frame = (text: string) => patientQuestionFrame(text, onScreen, asOf)?.text
 describe("a patient's visit count keeps the period that was asked", () => {
   it.each([
     ["Il est venu combien de fois l'an passé ?", "Combien de consultations a le patient sélectionné du 01/01/2025 au 31/12/2025 ?"],
-    ["Combien de séances avec lui depuis le début de l'année ?", "Combien de consultations a le patient sélectionné du 01/01/2026 au 26/10/2026 ?"],
+    ["Depuis le début de l'année, il a eu combien de rendez-vous honorés ?", "Combien de consultations a le patient sélectionné du 01/01/2026 au 26/10/2026 ?"],
     ["Elle est venue combien de fois la semaine dernière ?", "Combien de consultations a le patient sélectionné du 19/10/2026 au 25/10/2026 ?"],
     ["Salim Ouared est venu combien de fois depuis mars ?", "Nombre de consultations pour Salim Ouared du 01/03/2026 au 26/10/2026."],
     ["Nombre de passages de Nadia Kerrouche en 2024 ?", "Nombre de consultations pour Nadia Kerrouche du 01/01/2024 au 31/12/2024."],

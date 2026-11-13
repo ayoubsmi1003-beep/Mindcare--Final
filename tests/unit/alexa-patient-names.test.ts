@@ -23,7 +23,7 @@ describe("a full name among words the lists do not know", () => {
 });
 
 describe("age is part of the profile", () => {
-  it.each(["Quel âge a-t-il ?", "Il a quel âge, ce monsieur ?", "Son âge exact ?"])("%s", (text) => expect(classifyPatientQuestion(text)?.section).toBe("identity"));
+  it.each(["Elle a quel âge maintenant ?", "Il a quel âge, ce monsieur ?", "Son âge exact ?"])("%s", (text) => expect(classifyPatientQuestion(text)?.section).toBe("identity"));
 });
 
 describe("the general model never answers about someone", () => {
@@ -71,7 +71,7 @@ describe("a name with an everyday word glued to it", () => {
 });
 
 describe("the next appointment, said with any word of a visit", () => {
-  it.each(["Elle repasse quand, la prochaine fois ?", "Son prochain passage, c'est pour quand ?", "Il est attendu quand la prochaine fois ?", "La prochaine visite de Salim Ouared ?"])("%s", (text) => expect(classifyPatientQuestion(text)?.section).toBe("nextappt"));
+  it.each(["Elle repasse quand, la prochaine fois ?", "Son prochain passage, c'est pour quand ?", "On la revoit quand, la prochaine fois ?", "La prochaine visite de Salim Ouared ?"])("%s", (text) => expect(classifyPatientQuestion(text)?.section).toBe("nextappt"));
 });
 
 describe("every closed question names the patient in a form the name parser reads", () => {

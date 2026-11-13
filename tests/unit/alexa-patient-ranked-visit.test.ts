@@ -25,7 +25,7 @@ describe("a visit ranked before the last one, and how long a patient has been fo
   });
   it("reads « depuis combien de temps est-il suivi » as the date of the first visit, never a count", () => {
     for (const text of ["Depuis combien de temps la suit-on ?", "Il vient au cabinet depuis combien d'années ?", "Depuis combien de mois est-elle suivie ici ?"]) expect(classifyPatientQuestion(text)?.section, text).toBe("firstdate");
-    expect(classifyPatientQuestion("Combien de séances depuis janvier ?")?.section).toBe("count");
+    expect(classifyPatientQuestion("Depuis le 1er janvier, il a eu combien de séances ?")?.section).toBe("count");
   });
 });
 

@@ -111,7 +111,7 @@ describe("sessions that were paid, and this month against last month", () => {
 describe("activity: patients who came at least once", () => {
   // Development wordings, never C270/H270.
   it("reads it as the practice's figures over a month or a year the statistics read", () => {
-    expect(activity("Combien de patients sont venus au moins une fois cette année ?")).toBe("Montre-moi les statistiques de cette année");
+    expect(activity("Cette année, combien de patients différents sont passés au cabinet ?")).toBe("Montre-moi les statistiques de cette année");
     expect(activity("Combien de patients ont consulté en septembre ?")).toBe("Montre-moi les statistiques de septembre 2026");
     expect(frenchRequestAdmission(activity("Combien de patients sont passés ce mois-ci ?")!, false, ASOF)?.tools).toEqual(["query_app"]);
   });

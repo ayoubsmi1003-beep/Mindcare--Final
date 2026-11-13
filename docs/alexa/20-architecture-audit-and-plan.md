@@ -513,3 +513,19 @@ fixture's next patient). Against `p9`: 2 gained (F028, fixed in `ae9656b`; L024,
 no subject ("quelques mots", "embête pas" read as two-word names), so V004 had passed in `p9` only through the local model.
 Words of politeness are frame vocabulary now; V004 frames deterministically (unit test with another wording). Median turn
 0.26 s, p95 82 s, 36 turns still reach the local model. The review's routing changes (no frame on a change request) lost no turn.
+
+## 37. Rule A audit: benchmark sentences out of the code and the tests, for good
+A scan of `src/` and the tests against the 270 C270 questions (verbatim, shared five-word sequences, and word-set similarity)
+found sentences that were too close: comments quoting C270 questions as examples (several written in this campaign: "une
+patiente obsédée par un défaut de son visage", "même calcul pour l'année d'avant", "quand on arrête la valbénazine"…), test
+examples that were C270 questions with one word changed (A019's "débute" variant, F028 with another period, L055 as the spoken
+harness's template), one test using a C270 typo sentence word for word, and one catalogue example containing a C270 question.
+Every one is reworded with a genuinely different formulation, keeping its purpose. Comments never changed behaviour; tests and
+the catalogue example did not either, except that three new formulations **failed**, and each showed a real, general gap, now
+fixed: "on la revoit quand" (forms of "revoir" were not visit words), "le premier patient de la journée" ("la journée" was not
+today), and "est-il déjà passé au cabinet ?" ("au cabinet", a place there, counted as the practice-wide scope, so the guard of
+§23 read the practice's whole consultation list instead of asking which patient: a real safety gap, fixed in `agent-tools.ts`).
+The meaning layer's catalogue already had its own guard (Jaccard ≥ 0.70 against C270 fails the build) and passes.
+A new test (`alexa-no-benchmark-sentences.test.ts`) fails the build if any C270 question of four words or more appears word for
+word anywhere in `src/` or the tests (it reads C270 only; the sealed holdout is never opened). The spoken book harness, with
+its reworded template, measures 42/47 at rank 1 as before.

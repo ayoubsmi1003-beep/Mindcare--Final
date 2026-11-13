@@ -19,7 +19,7 @@ const run = async (text: string) => {
 
 describe("a question about one person never reads the practice's whole list of consultations", () => {
   it("asks which patient when the person's name was not read", async () => {
-    for (const text of ["Xo vi a-t-il déjà été reçu en consultation ?", "Est-ce qu'elle est déjà venue en consultation ?"]) {
+    for (const text of ["Xo vi est-il déjà passé au cabinet ?", "Est-ce qu'elle est déjà venue en consultation ?"]) {
       const { result, read } = await run(text);
       expect(read, text).toBe(false);
       expect(result.status, text).toBe("needs_input");

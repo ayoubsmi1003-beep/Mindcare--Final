@@ -57,8 +57,8 @@ describe("« même question » follow-ups", () => {
 describe("patients who consulted are the activity statistics, not the appointments", () => {
   it("leaves them to the activity frame", async () => {
     const { activityQuestionFrame } = await import("@/shared/alexa/practice-frame");
-    expect(frame("Combien de patients ont consulté au moins une fois en septembre ?")).toBeNull();
+    expect(frame("Combien de patients différents ont consulté en septembre ?")).toBeNull();
     expect(frame("Combien de personnes ont consulté ce mois-ci ?")).toBeNull();
-    expect(activityQuestionFrame("Combien de patients ont consulté au moins une fois en septembre ?", ASOF)).toBe("Montre-moi les statistiques de septembre 2026");
+    expect(activityQuestionFrame("Combien de patients différents ont consulté en septembre ?", ASOF)).toBe("Montre-moi les statistiques de septembre 2026");
   });
 });

@@ -148,7 +148,7 @@ describe("agenda frame: absences, cancellations, and periods the frame's own lis
     expect(admitted("Combien de rendez-vous non excusés ce mois-ci ?")).toBe("Combien de rendez-vous non honorés ce mois-ci ?");
   });
   it("counts cancellations when the question counts", () => {
-    expect(admitted("Combien d'annulations depuis le début de la semaine ?")).toBe("Combien de rendez-vous annulés le 26 octobre 2026 ?");
+    expect(admitted("Depuis lundi, il y a eu combien d'annulations ?")).toBe("Combien de rendez-vous annulés le 26 octobre 2026 ?");
     expect(admitted("Qui a annulé hier ?")).toBe("Quels sont les rendez-vous annulés hier ?");
   });
   it("reads a month or an explicit day through the shared civil reader", () => {

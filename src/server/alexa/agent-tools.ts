@@ -401,9 +401,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    patientId=resolved.patientId; result.patientId=patientId;patientLabels.set(call.id,resolved.identityTokens.reduce((longest,token)=>token.length>longest.length?token:longest,""));
   }
-  // A question about one person ("a-t-il déjà été reçu ?") whose name was not read is never answered by the practice's whole list
+  // A question about one person ("est-elle déjà venue au cabinet ?") whose name was not read is never answered by the practice's whole list
   // of consultations: that list shows other patients' names and answers nothing. Ask which patient.
-  if(call.name==='query_consultations'&&!patientId&&!cabinetWideScope&&(questionConcernsAPerson(identityText)
+  // "Est-il déjà passé au cabinet ?": a person as the subject of the verb outweighs "au cabinet", which there names a place, not the scope.
+  const personSubject=/[a-z]-(?:t-)?(?:il|elle)\b/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/\by a-t-il\b/gu,' '));
+  if(call.name==='query_consultations'&&!patientId&&(!cabinetWideScope||personSubject)&&(questionConcernsAPerson(identityText)
     ||/\b(?:il|elle)\b(?!\s+(?:y\s+a|faut|existe|s'agit|suffit|reste))/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())))return failure(call,'needs_input',copy.patient,'one-person-question-practice-read');
   if(call.name==="query_app"&&a["view"]==="message_draft")return readMessageDraft(call.id,patientId!,String(a["motif"]),asOf,rpc,signal);
   if(call.name==="get_patient_context"){

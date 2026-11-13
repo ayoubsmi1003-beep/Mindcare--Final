@@ -28,7 +28,7 @@ describe("« reçu », like « vu » or « venu », is a word of the visit, neve
 
 describe("what the doctor wrote at a visit is the note", () => {
   it("reads « écrit », « consigné » with a visit word as the note, with its area", () => {
-    expect(frenchRequestAdmission("Pour Amina Kaci, qu'avais-je écrit dans l'évaluation à la dernière séance ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes", noteArea: "assessment" });
+    expect(frenchRequestAdmission("Pour Amina Kaci, qu'est-ce que j'avais consigné dans l'évaluation lors du précédent entretien ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes", noteArea: "assessment" });
     expect(frenchRequestAdmission("Qu'ai-je consigné lors de son dernier entretien ?", false, ASOF)).toMatchObject({ tools: ["get_patient_context"], patientSection: "notes" });
     expect(patientQuestionFrame("Amina Kaci, qu'avais-je écrit à sa dernière visite ?", named, ASOF)?.text).toBe("Résume la dernière consultation de Amina Kaci.");
   });

@@ -28,7 +28,7 @@ describe("typo correction never touches a name", () => {
     expect(correctReadTypos("les rendez-vous de charles")).toBe("les rendez-vous de charles");
   });
   it("still corrects a slip between known words", () => {
-    expect(correctReadTypos("traitemnt actuel du patiant")).toBe("traitement actuel du patient");
+    expect(correctReadTypos("le traitemnt en cours de la patiante")).toBe("le traitement en cours de la patiente");
   });
 });
 
