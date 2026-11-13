@@ -247,7 +247,7 @@ export function periodFollowup(text: string, previousRequest: string | undefined
   }
   // "Et lequel est le premier ?" right after a question on the agenda: the first or last appointment of its period.
   const ordinalOnly = /^(?:(?:et|alors)\s+)?(?:(?:lequel|laquelle|qui)\s+(?:est|etait)\s+)?(?:le|la)\s+(premier|premiere|dernier|derniere)(?:\s+(?:rendez-vous|rdv|patient|patiente))?\s*[?.!]?$/u.exec(bare)?.[1];
-  if (ordinalOnly && /\brendez-vous\b/u.test(previousRequest)) {
+  if (ordinalOnly && /\b(?:rendez-vous|rdv|planning|agenda|creneaux?)\b/u.test(foldWithMap(previousRequest).out)) {
     const bounds = previousBounds(previousRequest, asOf);
     return bounds ? renderAgendaQuestion(ordinalOnly.startsWith("premier") ? "first" : "last", bounds.from === bounds.to ? explicitDay(bounds.from) : explicitRange(bounds.from, bounds.to)) : null;
   }
@@ -274,7 +274,8 @@ const EXPLICIT_RANGE_SOURCE = `du \\d{1,2}(?:er)? (?:${MONTHS}) \\d{4} au \\d{1,
 const isoOf = (date: string, month: string, year: string) => `${year}-${String(MONTHS.split("|").indexOf(month) + 1).padStart(2, "0")}-${date.padStart(2, "0")}`;
 /** The first and last cabinet days of the one period a previous closed question names, or null. */
 function previousBounds(request: string, asOf: string): { from: string; to: string } | null {
-  const out = foldWithMap(request).out, today = cabinetDay(asOf);
+  // The one period the request names, as the period reader writes it ("pour jeudi" -> "le 29 octobre 2026"); else its own words.
+  const out = foldWithMap(agendaPeriodOf(request, asOf) ?? request).out, today = cabinetDay(asOf);
   const range = new RegExp(`du ${EXPLICIT_DAY} au ${EXPLICIT_DAY}`, "u").exec(out);
   if (range) return { from: isoOf(range[1]!, range[2]!, range[3]!), to: isoOf(range[4]!, range[5]!, range[6]!) };
   const days = [...out.matchAll(new RegExp(EXPLICIT_DAY, "gu"))];

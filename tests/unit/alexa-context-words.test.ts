@@ -45,3 +45,9 @@ describe("a section of the doctor's note, named in the doctor's words", () => {
     expect(frenchRequestAdmission("Quel est le plan de traitement recommandé dans la schizophrénie ?", false, ASOF).noteArea).toBeUndefined();
   });
 });
+
+describe("an ordinal after an agenda question kept in its own words", () => {
+  it("reads the previous question's day", () => {
+    expect(periodFollowup("Et lequel est le dernier ?", "Pour jeudi, le planning a combien de créneaux occupés ?", undefined, ASOF)).toBe("Quels sont les rendez-vous le 29 octobre 2026 ?");
+  });
+});

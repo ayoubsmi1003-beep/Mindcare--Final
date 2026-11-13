@@ -457,7 +457,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
       evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context',section:'sessionDetails',consultations:visits.length}},...visits.map(v=>({id:v.id,type:'consultation' as const,label:date(v.startedAt)}))],
       data:{patientId,sourceRevision:context.sourceRevision,coverage:context.coverage,measureEvolution:visits.map(v=>({consultationId:v.id,startedAt:v.startedAt,sessionDetails:v.sessionDetails??null}))}};
     }
-    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance|note)\b|\b(?:consultation|seance|note)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(requested);
+    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance|note)\b|\b(?:consultation|seance|note)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(requested),firstConsultation=/\b(?:toute\s+)?premiere\s+(?:consultation|seance|note|visite)\b/u.test(requested);
+    // The very first visit: every consultation is read through the audited gate, oldest first; a record too long to read whole
+    // cannot tell its first visit, and says so rather than take the oldest one it happened to read.
+    if(!spec.consultationId&&!spec.from&&!spec.to&&firstConsultation&&!latestConsultation){
+     const context=await buildClinicalContext(db,{patientId:patientId!},{count:100,all:true},signal);
+     if(!context.coverage.complete)return failure(call,'unsupported',narrativeCopy.oldestUnavailable,'first-consultation-beyond-read');
+     const first=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>a.startedAt.localeCompare(b.startedAt)||a.id.localeCompare(b.id))[0];
+     if(!first)return {...result,status:'empty',complete:true,text:applicationReadCopy.extended.empty,evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context'}}]};
+     spec={...spec,consultationId:first.id};
+    }
     if(!spec.consultationId&&!spec.from&&!spec.to&&(olderDifficulty||followUp||latestConsultation)){
      const context=await buildClinicalContext(db,{patientId:patientId!},{count:2},signal);
      const visits=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>b.startedAt.localeCompare(a.startedAt)||b.id.localeCompare(a.id));
