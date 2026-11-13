@@ -50,3 +50,12 @@ describe("typos in a read question", () => {
     expect(correctReadTypos("Quelles séances le mois dernier ?")).toBe("Quelles séances le mois dernier ?");
   });
 });
+
+describe("a clarification the local model wrote", () => {
+  it("reaches the doctor only when it reads as French", async () => {
+    const { frenchClarification } = await import("@/server/alexa/agent-loop");
+    expect(frenchClarification("Who is next to the patient?")).toBeNull();
+    expect(frenchClarification("Quelle posologie souhaitez-vous inscrire ?")).toBe("Quelle posologie souhaitez-vous inscrire ?");
+    expect(frenchClarification("Le patient")).toBeNull();
+  });
+});

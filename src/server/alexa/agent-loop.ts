@@ -337,6 +337,12 @@ function directPublicAnswerCall(text:string,clientTurnId:string):{part:RequestPa
  if(!agentSchemas.answer_general.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['answer_general'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'answer_general',args}};
 }
+/** A clarification the local model wrote, kept only when it is a French question: French words, no English ones. */
+export function frenchClarification(question:string):string|null{
+ const plain=question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().trim();
+ if(!/\?\s*$/u.test(plain)||/\b(?:the|who|what|which|when|where|how|you|your|please|does|did|would|could|should|with|and|this|that|is|are)\b/u.test(plain))return null;
+ return /\b(?:quel(?:le|s|les)?|vous|votre|souhaitez|voulez|pouvez|est-ce|lequel|laquelle|pour|de|du|des|la|le|les|une?)\b/u.test(plain)?question.trim():null;
+}
 function directFinanceReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null{
  const scope=frenchRequestAdmission(text,false,asOf);
  if(scope.tools?.length!==1||scope.tools[0]!=='query_finance')return null;
@@ -1433,7 +1439,8 @@ function directConsultationComparisonCall(text:string,clientTurnId:string,select
         const settled = await Promise.allSettled(group.map(async ({ call }) => {
           signal.throwIfAborted();
           deps.observeCall?.(structuredClone(call));
-          if (call.name === "ask_doctor") return { callId: call.id, status: "needs_input" as const, complete: false, data: null, text: String(call.args["question"]), evidence: [], conditionKeys: [] };
+          // The model's own clarification reaches the doctor only when it reads as French (an English "Who is next to the patient?" did).
+          if (call.name === "ask_doctor") return { callId: call.id, status: "needs_input" as const, complete: false, data: null, text: frenchClarification(String(call.args["question"]))??copy.rephrase, evidence: [], conditionKeys: [] };
           if (call.name === "prepare_action" && results.some(r => r.proposal)) throw new Error("OneProposalOnly");
           const selectedParts=parts.filter(p=>Array.isArray(call.args['partIds'])&&call.args['partIds'].includes(p.id));
           const exactGoal=selectedParts.length===1?requestedOutputs?.find(goal=>goal===selectedParts[0]!.goal):undefined;

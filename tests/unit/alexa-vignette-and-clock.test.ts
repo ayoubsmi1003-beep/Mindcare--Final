@@ -37,3 +37,15 @@ describe("one clock time in an agenda read", () => {
     expect(explicitAgendaClockWindow("Le rendez-vous de 15 h ?", ASOF)).toBeNull();
   });
 });
+
+describe("a general question about stopping a treatment belongs to the books", () => {
+  it("is not read from the record when nobody is in it", async () => {
+    const { frenchRequestAdmission } = await import("@/shared/alexa/request-contract");
+    expect(frenchRequestAdmission("Peut-on arrêter brutalement un traitement par lithium ?", false, ASOF).tools).toEqual(["search_knowledge"]);
+    expect(frenchRequestAdmission("Faut-il stopper le traitement d'une femme qui allaite si le médicament passe dans le lait ?", false, ASOF).tools).toEqual(["search_knowledge"]);
+  });
+  it("still reads a stopped treatment from the record for the patient", async () => {
+    const { frenchRequestAdmission } = await import("@/shared/alexa/request-contract");
+    expect(frenchRequestAdmission("Quels traitements arrêtés pour ce patient ?", false, ASOF).tools).toEqual(["get_patient_context"]);
+  });
+});

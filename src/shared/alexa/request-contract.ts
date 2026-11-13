@@ -541,7 +541,9 @@ const MEDICATION_TIMELINE_REQUEST=new RegExp(`^${SHOW_VERB}(?:la |sa )?(?:chrono
 const CASE_SUMMARY_STATUS_REQUEST=new RegExp(`^(?:alexa\\W+)?le resume du cas (?:de |du )${PATIENT_TAIL} est[- ]il (?:a jour|perime)$`,'u');
 function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  const plain=fold(text),anchor=patientAnchor(plain,text),targets:FrenchReadTarget[]=[];
- const documentedTreatmentRequest=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)&&/\b(?:documente\w*|note\w*|suspendu\w*|en pause|arrete\w*|stopp\w*|interrompu\w*|cesse\w*)\b/u.test(plain);
+ // A stopped treatment is the record's, except in a general question with nobody in it ("Peut-on arrêter un traitement…", "Si un médicament…").
+ const generalTreatmentQuestion=/\b(?:faut-il|faudrait-il|doit-on|peut-on|si un|si une|d'une?|en general|generalement)\b/u.test(plain)&&!/\b(?:son|sa|ses|leur|leurs|ce patient|cette patiente|patiente? selectionnee?|dossier)\b/u.test(plain)&&parsePatientMention(text).status!=='named';
+ const documentedTreatmentRequest=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)&&(/\b(?:documente\w*|note\w*)\b/u.test(plain)||/\b(?:suspendu\w*|en pause|arrete\w*|stopp\w*|interrompu\w*|cesse\w*)\b/u.test(plain)&&!generalTreatmentQuestion);
  const treatmentStateRequest=/\b(?:son|sa|ses)\s+(?:traitements?|medicaments?|prescriptions?)|\b(?:traitements?|medicaments?)\b[^.!?]{0,30}\b(?:actuel\w*|actuellement|actifs?|en cours|en pause|suspendu\w*|arrete\w*|stopp\w*|interrompu\w*|cesse\w*)\b/u.test(plain);
  const antecedentsRequest=/\b(?:antecedents?|histoire medicale)\b/u.test(plain);
  const consultationBounds=/\bpremi[eè]re\b[^.!?]*\bderni[eè]re\b[^.!?]*\bconsultations?\b/u.test(plain);

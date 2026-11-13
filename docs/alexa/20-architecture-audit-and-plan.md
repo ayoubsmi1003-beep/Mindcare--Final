@@ -397,3 +397,41 @@ Gains: agenda 16 (§26), finance 13 (§26), books 3 (the vignette and "la mère"
 variation 1 (V002, §25). Next, from the failures: two-part patient questions answered half (a silent partial answer), the
 history of a treatment asked in other words than "changé", typos ("traitemnt", "conslutations"), note sections ("le plan",
 "les observations"), books' rubric choice inside the right monograph.
+
+## 29. Two parts of one record, a treatment's history, typos (`d230a1a`)
+- **A silent partial answer**: "Son traitement actuel et la date de sa prochaine consultation ?" was answered with the
+  appointment only; the patient frame keeps the first section it recognises. `patientQuestionParts` splits a question whose
+  parts name two different sections of one record into two closed reads, run in turn for the same patient by the existing goal
+  sequencer ("Demande 1 sur 2 …"). One section named twice, a period, or a book question ("le traitement et le diagnostic de la
+  schizophrénie") keep the single frame.
+- **A treatment's history** asked in other words than "changé" ("a bougé", "posologie initiale", "historique de ses
+  prescriptions") read the current state; it reads the recorded changes. "Combien de fois en tout" counts the visits.
+- **Typos**: one slip in a word of the read vocabulary ("conslutations", "anulations") is corrected for the word frames only,
+  which write a closed read question: the doctor's text is never altered, stored or dictated corrected. Words with a capital,
+  words of four letters or less, quoted words and any word two vocabulary words are equally close to stay as typed (a name in
+  lower case is never "corrected": "rose" is not "dose"). Short or name-like words ("matin", "notes") are not in the vocabulary.
+- **Rule A**: a scan of `src/` and `tests/` for sentences identical to C270 turns found eight (four comments written in this
+  campaign, one older comment, three older unit tests); all reworded with other examples, each test keeping its purpose. One
+  reworded test exposed a real gap, fixed: an object pronoun before an inverted "-on" ("le suit-on") is the patient.
+Replayed (patients, context, variation; 115 turns) against `p7`: **patients 36 → 41/55, variation 11 → 13/15, context 30/45**;
+7 gained, 0 lost.
+
+## 30. Books: a drug's own rubric despite a French word left in the question; the model's clarification must be French
+- **Rubric queries voided by one French word**: "La tianeptine expose-t-elle à un risque d'abus ?" planned "Habit Forming
+  tianeptine expose"; the book gate requires every word, and "expose", "utilise" or "de" are in no English passage, so the drug's
+  own rubric was never found and other books filled the places. For one drug with its own monograph, a variant is added after the
+  full query (never instead of it): the rubric, the drug, and every word of the question the English books hold in at least three
+  passages. A real restriction stays ("surveiller le bicarbonate sous topiramate" keeps "bicarbonate": the p4 lesson, L043, kept
+  by its unit test). "Sodium oxybate", the one monograph titled in two words, is named by "oxybate" in French order too.
+  New structural test with spoken wordings (`alexa-book-aspects-spoken.live.test.ts`, development wordings, a verb or a word of
+  the question left beside the drug): **37 → 42/47 at rank 1, 44 → 47 in the top 5** (old and new code measured in the same
+  environment); the written-wording test 39/47, DSM 36/40 and French→English 7/18 unchanged.
+- **English text from the local model**: "Rappelle-moi qui j'ai en face." was answered "Who is next to the patient?", the model's
+  own `ask_doctor` question shown verbatim. A clarification the model writes reaches the doctor only when it reads as a French
+  question (French words, no English ones); otherwise one fixed French request to rephrase (ADR-008, i18n).
+- **A general question about stopping a treatment** ("Si un médicament est contre-indiqué pendant l'allaitement, faut-il…")
+  was admitted as a read of the patient's record because "arrêter" and "médicament" were both there; the local model then chose
+  a patient tool (L079, passing in `p7` only because the model chose nothing). A stopped treatment is the record's except in a
+  general question with nobody in it ("faut-il", "peut-on", "si un…" and no possessive, no name, no "ce patient").
+Replayed (books, 80 turns) against `p7`: **books 58 → 60/80**; 3 gained (the three rubric cases), 1 lost (L079, model-dependent,
+root cause fixed in this commit; not yet replayed).
