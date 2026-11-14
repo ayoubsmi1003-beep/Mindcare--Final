@@ -45,3 +45,11 @@ existantes contradictoires sont refusées, jamais remplacées silencieusement.
 **NOT RUN** : build, empaquetage, futur paquet, installation réelle, transfert sur le cabinet,
 suite complète non ciblée et essais matériels. Les sorties visuelles et PDF restent dans
 `.cache`, hors Git. Aucun document historique émis ni asset v1 modifié.
+
+## Complément : conservation lors du futur build
+
+Les scripts de préparation et de vérification contrôlent maintenant le contenu
+des assets documentaires et des migrations livrés ; l'identité approuvée est
+incluse dans la provenance et copiée dans les ressources du serveur.
+Voir `docs/contracts/document-package-final.md` : 14 contrôles ciblés supplémentaires
+PASS, lint et TypeScript des tests PASS, sans lancement d'un build ou du préparateur réel.

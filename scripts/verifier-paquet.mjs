@@ -51,6 +51,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {verifyAlexaPackage} from './lib/alexa-package-integrity.mjs';
+import {assertDocumentAssets} from './lib/document-package-assets.mjs';
 import { verifyKnowledgeAssets } from "./lib/stage-knowledge-assets.mjs";
 import { chargerPinsInventaireVoix } from "./lib/voix-inventory-pins.mjs";
 import { parcourirPaquet } from "./lib/paquet-inventaire.mjs";
@@ -118,6 +119,7 @@ try { await verifyKnowledgeAssets(RACINE, path.join(CIBLE, "resources", "serveur
 const erreursRuntime = auditServerDependencies(path.join(CIBLE, "resources", "serveur"));
 if (erreursRuntime.length > 0) refuser("dépendances du serveur non chargeables :", erreursRuntime);
 try{verifyAlexaPackage(RACINE,CIBLE);}catch{refuser("provenance Alexa, parcours natif ou fichiers MiniCPM non conformes :",["reconstruire le paquet depuis le code courant vérifié"]);}
+try{assertDocumentAssets(RACINE,path.join(CIBLE,'resources','serveur'));}catch{refuser('rendu documentaire final incomplet ou différent des sources :',['rendus v1/v2, fontes, illustrations, identité approuvée et migrations 222–225 requis']);}
 
 // ── 1. Ce qui NE DOIT PAS être là ───────────────────────────────────────────
 

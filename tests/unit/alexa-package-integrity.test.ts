@@ -28,6 +28,12 @@ it('records a missing tracked source file as absent instead of aborting packagin
  execFileSync('git',['-c','user.name=Synthetic test','-c','user.email=test@example.invalid','-c','core.hooksPath=absent-hooks','commit','-qm','tracked packaging fixture'],{cwd:source,windowsHide:true});
  rmSync(join(source,'package.json'));
  expect(snapshotAlexaBuildSources(source)).toMatchObject({sourceFiles:0});
+ const before=snapshotAlexaBuildSources(source);
+ mkdirSync(join(source,'resources/documents'),{recursive:true});
+ writeFileSync(join(source,'resources/documents/cabinet-letterhead.json'),'{}');
+ const after=snapshotAlexaBuildSources(source);
+ expect(after.sourceFiles).toBe(1);
+ expect(after.sourceSha256).not.toBe(before.sourceSha256);
 });
 it('activates the same native path in relocated CommonJS and ESM entries despite a conflicting inherited setting',()=>{
  const root=fixture();

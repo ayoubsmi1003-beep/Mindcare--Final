@@ -55,7 +55,7 @@ function packagedModelInventory(root,pin){
 }
 /** Source identity contains hashes only; it is not a claim of clinical qualification. */
 export function snapshotAlexaBuildSources(root){
- const paths=execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z','--','src','electron','scripts','supabase','public','build-ressources','resources/snapshot/purge-synthetic.sql','package.json','pnpm-lock.yaml','next.config.ts','next-env.d.ts','electron-builder.yml','tsconfig.json','tailwind.config.ts','postcss.config.js','postcss.config.cjs','postcss.config.mjs','tests/eval/alexa-fr-200-cases.json'],{cwd:root,encoding:'utf8',windowsHide:true}).split('\0').filter(Boolean);
+ const paths=execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z','--','src','electron','scripts','supabase','public','build-ressources','resources/snapshot/purge-synthetic.sql','resources/documents/cabinet-letterhead.json','package.json','pnpm-lock.yaml','next.config.ts','next-env.d.ts','electron-builder.yml','tsconfig.json','tailwind.config.ts','postcss.config.js','postcss.config.cjs','postcss.config.mjs','tests/eval/alexa-fr-200-cases.json'],{cwd:root,encoding:'utf8',windowsHide:true}).split('\0').filter(Boolean);
  const files=[...new Set(paths)].sort().filter(path=>existsSync(join(root,path))).map(path=>[path,fileHash(join(root,path))]);
  const commit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8',windowsHide:true}).trim();
  if(!/^[a-f0-9]{40}$/u.test(commit))throw Error('AlexaBuildCommitRequired');

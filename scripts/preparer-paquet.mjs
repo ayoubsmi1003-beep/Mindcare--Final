@@ -44,6 +44,7 @@ import { auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {snapshotAlexaBuildSources,enablePackagedNativeEntrypoints,finalizeAlexaBuild,isPlaywrightRuntimePath} from './lib/alexa-package-integrity.mjs';
 
 import { stageKnowledgeAssets } from "./lib/stage-knowledge-assets.mjs";
+import {stageDocumentAssets} from './lib/document-package-assets.mjs';
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const AUTONOME = path.join(RACINE, ".next", "standalone");
 const CIBLE = path.join(RACINE, "resources", "serveur");
@@ -501,5 +502,6 @@ etape("preuve de démarrage du serveur assemblé…");
   });
 }
 
+stageDocumentAssets(RACINE,CIBLE);
 finalizeAlexaBuild(RACINE,CIBLE,alexaBuildSource);
 etape(`prêt : ${path.relative(RACINE, CIBLE)}`);
