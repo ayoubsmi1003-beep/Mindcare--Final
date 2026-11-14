@@ -20,7 +20,7 @@ function executor(text:string,options:{treatments?:typeof treatment[];drafts?:ty
   if(name==="get_alexa_clinical_context")return {ok:true as const,data:[context(options.treatments??[treatment])]};
   if(name==="search_medications")return {ok:true as const,data:options.medicationCatalog??[{id:"99999999-9999-4999-8999-999999999999",raw_name:"Sertraline 25 mg",inn:"Sertraline",brand_name:"Zoloft",form:"comprimé",strength:"25 mg",source:"synthetic-catalogue"}]};
   if(name==="list_editable_document_drafts")return {ok:true as const,data:options.drafts??[draft]};
-  if(name==="list_patient_documents")return {ok:true as const,data:options.documents??[{document_id:issuedDocumentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued"}]};
+  if(name==="list_patient_documents")return {ok:true as const,data:options.documents??[{document_id:issuedDocumentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued",issued_at:new Date().toISOString()}]};
   throw Error("Unexpected gate: "+name);
  });
  return {rpc,run:agentExecutor(input(text,options.page),{rpc},{rpc:vi.fn()})};
@@ -35,10 +35,10 @@ it("routes a polite print request through the model tool and opens only the exac
  expect(result.evidence).toEqual(expect.arrayContaining([expect.objectContaining({id:issuedDocumentId,type:"document"})]));
 });
 
-it("asks for clarification instead of printing when there is no issued ordonnance",async()=>{
+it("never prints when no ordonnance is issued: it turns to the draft, which the doctor issues",async()=>{
  const f=executor("Peux-tu imprimer l'ordonnance du dossier courant ?",{documents:[]});
- const result=await f.run({id:"print",name:"prepare_action",args:{partIds:["p"],action:"print_issued_document",documentType:"ordonnance"}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal);
- expect(result.status).toBe("needs_input");expect(result.navigation).toBeUndefined();
+ // The draft resolver's first read is reached (this stub knows no workspace gate); no print navigation exists before it.
+ await expect(f.run({id:"print",name:"prepare_action",args:{partIds:["p"],action:"print_issued_document",documentType:"ordonnance"}},"2026-10-26T10:00:00+01:00",[],new AbortController().signal)).rejects.toThrow(/get_patient_workspace/u);
 });
 
 it("prepares only the requested, current treatment fields with its current version",async()=>{

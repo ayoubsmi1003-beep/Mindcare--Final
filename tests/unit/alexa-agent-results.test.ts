@@ -255,20 +255,20 @@ it.each([[5,'En octobre 2026, 5 patients actifs ont eu au moins 3 consultations 
  const execute=agentExecutor({text:question,conversationId:'natural-period-patient-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
  const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[condition],consultationPeriod,population:'active'}},asOf,[],new AbortController().signal);
  expect(result.text).toBe(expected);expect(result.text).not.toMatch(/patient\(s\)|visibles|valeur nulle|âge au jour/u);
- expect(result.data).toMatchObject({total,patientQuery:{mode:'count',filterGroups:[[condition]],consultationPeriod}});
+ expect(result.data).toMatchObject({total,patientQuery:{mode:'list',filterGroups:[[condition]],consultationPeriod}});
 });
 it.each([
  ['phone','Combien de patients sont sans téléphone ?','Parmi les patients actifs de votre périmètre, 25 n’ont pas de numéro de téléphone renseigné.'],
  ['identity_card','Combien de patients sont sans carte d’identité ?','Parmi les patients actifs de votre périmètre, 25 n’ont pas de numéro de carte d’identité renseigné.'],
-])('answers a verified missing-%s count in concise French without listing patient identities',async(field,question,expected)=>{
+])('answers a verified missing-%s count in concise French, read with its patient list',async(field,question,expected)=>{
  const asOf='2026-10-25T12:00:00.000Z',condition={field,op:'missing',value:null};
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:25,rows:[],metrics:{},unknownAge:0,revision:'b'.repeat(32),asOf,conditions:[condition],complete:true,offset:0}]});
  const execute=agentExecutor({text:question,conversationId:'missing-patient-field-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
  const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[condition],population:'active'}},asOf,[],new AbortController().signal);
- expect(result.text).toBe(expected);expect(result.data).toMatchObject({total:25,patientQuery:{mode:'count',filters:[condition]}});
+ expect(result.text).toBe(expected);expect(result.data).toMatchObject({total:25,patientQuery:{mode:'list',filters:[condition]}});
  expect(result.evidence).toHaveLength(1);expect(result.evidence[0]?.type).toBe('query');
  expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');
- expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'count',filters:[condition],population:'active'});
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'list',filters:[condition],population:'active'});
 });
 it.each(['empty','metric','next-page'])('resumes %s with exact prior predicates and no injected model narrowing',async variant=>{
  const filters=[{field:'identity_card',op:'missing',value:null}];

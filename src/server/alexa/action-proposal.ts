@@ -15,13 +15,16 @@ import { resolveDocumentDraftInputs } from "./document-draft";
 import { prepareInternalMessage } from "./internal-message";
 import { buildClinicalContext } from "./clinical-context";
 import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
+import { aujourdHuiCabinet } from "@/services/finance-calendrier";
 
 export type ProposalResult =
   | { state: "ready"; proposal: AlexaProposal; patientId: string | null }
   | { state: "print"; patientId: string; documentId: string; label: string }
   | { state: "missing"; slot: "patient" | "date" | "content" | "operation"; message?: string }
   | { state: "unavailable" };
-type PrintProposalResult = Extract<ProposalResult, { state: "print" } | { state: "missing" } | { state: "unavailable" }>;
+type PrintProposalResult = Extract<ProposalResult, { state: "print" } | { state: "missing" } | { state: "unavailable" }> | { state: "draft" };
+/** An ordonnance asked for without naming one: the one issued since `since` (this visit or today); else a draft, unless an older one was asked for. */
+export interface RecentPrint { readonly since: string; readonly older: boolean }
 
 function normalized(text: string): string {
   return text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().trim();
@@ -91,6 +94,17 @@ export function deterministicActionRequest(text: string, selectedDocumentId?:str
   return document || message || print || price || payment || arrival || appointment || close;
 }
 
+/** The consultation open on screen, read through its audited gate; null off a consultation page. */
+async function openConsultation(db: Pick<DbPort, "rpc">, page: string, signal: AbortSignal): Promise<{ patientId: string; startedAt: string } | null | "unavailable"> {
+  const id = /^\/consultation\/([0-9a-f-]{36})$/iu.exec(page)?.[1];
+  if (!id || !z.uuid().safeParse(id).success) return null;
+  const result = await db.rpc<unknown>("get_consultation", { p_id: id });
+  signal.throwIfAborted();
+  const parsed = result.ok ? z.object({ id: z.uuid(), patient_id: z.uuid(), started_at: z.union([z.string(), z.date()]) }).safeParse(result.data[0]) : null;
+  if (!parsed?.success || parsed.data.id !== id) return "unavailable";
+  return { patientId: parsed.data.patient_id, startedAt: new Date(parsed.data.started_at).toISOString() };
+}
+
 /** Re-read the patient-scoped list and select one already-issued document only. */
 export async function prepareIssuedDocumentPrint(
   db: Pick<DbPort, "rpc">,
@@ -99,6 +113,7 @@ export async function prepareIssuedDocumentPrint(
   signal: AbortSignal,
   selectedDocumentId?:string,
   expectedRevision?:string,
+  recent?:RecentPrint,
 ): Promise<PrintProposalResult> {
   let listed;
   try { listed = await db.rpc<unknown>("list_patient_documents", { p_patient_id: patientId }); }
@@ -107,7 +122,7 @@ export async function prepareIssuedDocumentPrint(
   if (!listed.ok) return { state: "unavailable" };
   const rows = z.object({
     document_id: z.uuid(), doc_type: z.string(), doc_number: z.string().min(1),
-    status: z.string().optional(),
+    status: z.string().optional(), issued_at: z.string().nullable().optional(),
   }).passthrough();
   const issued = listed.data.flatMap((row) => {
     const parsed = rows.safeParse(row);
@@ -134,6 +149,13 @@ export async function prepareIssuedDocumentPrint(
   if(!kind)return {state:"missing",slot:"content",message:alexaActions.printNoDocument("document")};
   const documents=issued.filter(document=>document.doc_type===kind);
   const label=documentLabels[kind].toLowerCase();
+  if (recent) {
+    const at=(row:typeof documents[number])=>Date.parse(row.issued_at??"");
+    const newestFirst=[...documents].filter(row=>Number.isFinite(at(row))).sort((a,b)=>at(b)-at(a));
+    const chosen=newestFirst.find(row=>at(row)>=Date.parse(recent.since))??(recent.older?newestFirst[0]:undefined);
+    if (!chosen) return { state: "draft" };
+    return { state: "print", patientId, documentId: chosen.document_id, label: `${documentLabels[kind]} ${chosen.doc_number}` };
+  }
   if (documents.length === 0) return { state: "missing", slot: "content", message: alexaActions.printNoDocument(label) };
   if (documents.length > 1) return { state: "missing", slot: "content", message: alexaActions.printMultiple(label) };
   const document = documents[0]!;
@@ -174,11 +196,22 @@ export async function prepareActionProposal(
   // Imprimer un document DÉJÀ ÉMIS ne crée rien. On ouvre la pièce exacte et
   // l'écran existant lance le dialogue d'impression ; aucun numéro n'est
   // consommé, aucune nouvelle version n'est fabriquée.
+  let draftForPrint=false;
   if (tool==="print_issued_document") {
     if (kind === null&&!input.appContext.documentId) return { state: "missing", slot: "content", message: alexaActions.printNoDocument("document") };
-    const patient = await resolvePatient(db, name ? { name } : input.appContext.patientId ? { patientId: input.appContext.patientId } : {}, signal);
+    // Inside a consultation, an unnamed ordonnance is that visit's patient, whoever the conversation was about.
+    const visit = name ? null : await openConsultation(db, input.appContext.page, signal);
+    if (visit === "unavailable") return { state: "unavailable" };
+    const patient = await resolvePatient(db, name ? { name } : visit ? { patientId: visit.patientId } : input.appContext.patientId ? { patientId: input.appContext.patientId } : {}, signal);
     if (patient.status !== "resolved") return { state: "missing", slot: "patient" };
-    return prepareIssuedDocumentPrint(db, patient.patientId, kind, signal,input.appContext.documentId??undefined,input.appContext.documentRevision??undefined);
+    const recent = kind === "ordonnance" && !input.appContext.documentId
+      ? { since: visit?.startedAt ?? `${aujourdHuiCabinet()}T00:00:00+01:00`, older: /\b(?:derniere|precedente|ancienne)\b/u.test(text) }
+      : undefined;
+    const printed = await prepareIssuedDocumentPrint(db, patient.patientId, kind, signal,input.appContext.documentId??undefined,input.appContext.documentRevision??undefined,recent);
+    if (printed.state !== "draft") return printed;
+    // No ordonnance issued for this visit: prepare the draft from active treatments; the doctor issues it.
+    tool = "create_editable_document_draft";
+    draftForPrint = true;
   }
 
   if (!tool || !capaciteEcriture(tool)) return { state: "missing", slot: "operation" };
@@ -209,7 +242,8 @@ export async function prepareActionProposal(
     return { state: "ready", proposal: { tool, args: { clientMsgId: randomUUID(), body: decision.body } }, patientId };
   }
 
-  const patient = await resolvePatient(db, name ? { name } : input.appContext.patientId ? { patientId: input.appContext.patientId } : {}, signal);
+  const draftVisit = draftForPrint && !name ? await openConsultation(db, input.appContext.page, signal) : null;
+  const patient = await resolvePatient(db, name ? { name } : draftVisit && draftVisit !== "unavailable" ? { patientId: draftVisit.patientId } : input.appContext.patientId ? { patientId: input.appContext.patientId } : {}, signal);
   if (patient.status !== "resolved") return { state: "missing", slot: "patient" };
 
   if (tool === "create_editable_document_draft") {

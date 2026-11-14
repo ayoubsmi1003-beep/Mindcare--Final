@@ -40,7 +40,7 @@ import type { DbPort, RpcArgs } from "@/services/db/port";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import type { TurnInput, AlexaSource, AlexaProposal } from "@/shared/alexa/turn";
 import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelineCursorSchema,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
-import { agentCopy, missingPatientFieldParagraph, patientListParagraph, patientListPageParagraph, patientPopulationCountParagraph } from "@/i18n/alexa-agent";
+import { agentCopy, countedListLead, missingPatientFieldParagraph, patientListParagraph, patientListPageParagraph, patientPopulationCountParagraph } from "@/i18n/alexa-agent";
 import { namesAnotherPatient, resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
 import { readPatientFinance, patientFinanceSentence } from "./patient-finance";
@@ -258,6 +258,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      if(contract.createdPeriod)spec.createdPeriod=contract.createdPeriod;
     }else if(spec.filterGroups||spec.consultationPeriod||spec.createdPeriod)return failure(call,'unsupported',copy.unsupported,'unrequested-query-constraint');
    }
+   // A filtered count is answered with its patients too: the list mode returns the exact total and the first page.
+   const listedCount=spec.mode==='count'&&!!(spec.filters?.length||spec.filterGroups||spec.consultationPeriod||spec.createdPeriod||spec.query||spec.patientIds);
+   if(listedCount)Object.assign(spec,{mode:'list',offset:0});
    const raw=await rpc("search_patients",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal);
    const value=patientResult.parse(raw);
    if(spec.filterGroups||spec.consultationPeriod||spec.createdPeriod){
@@ -272,19 +275,21 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.evidence=value.rows.map(p=>({id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}));
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.populations[spec.population??"active"]+" "+value.asOf,version:value.revision,provenance:{gate:"search_patients",asOf:value.asOf,total:value.total}});
    const labels:Record<string,string>={phone:recordsCopy.phone,identity_card:recordsCopy.id_document_number,birth_date:recordsCopy.birth_date,sex:recordsCopy.sex};
-   const simplePopulationCount=spec.mode==="count"&&!(spec.filters?.length)&&!spec.filterGroups&&!spec.consultationPeriod&&!spec.createdPeriod&&!spec.patientIds&&!spec.query;
+   const countMode=spec.mode==="count"||listedCount;
+   const simplePopulationCount=countMode&&!(spec.filters?.length)&&!spec.filterGroups&&!spec.consultationPeriod&&!spec.createdPeriod&&!spec.patientIds&&!spec.query;
    const countConditions=spec.filterGroups?.length===1?spec.filterGroups[0]:spec.filters;
    const countCondition=countConditions?.length===1?countConditions[0]:undefined;
-   const periodPatientCount=spec.mode==='count'&&(spec.population??'active')==='active'&&countCondition?.field==='completed_consultations'&&countCondition.op==='gte'&&typeof countCondition.value==='number'&&spec.consultationPeriod?completedConsultationCountParagraph(value.total,countCondition.value,spec.consultationPeriod):null;
-   const filteredPatientCount=spec.mode==='count'&&!simplePopulationCount?filteredPatientCountParagraph(value.total,spec.population??'active',countConditions??[]):null;
+   const periodPatientCount=countMode&&(spec.population??'active')==='active'&&countCondition?.field==='completed_consultations'&&countCondition.op==='gte'&&typeof countCondition.value==='number'&&spec.consultationPeriod?completedConsultationCountParagraph(value.total,countCondition.value,spec.consultationPeriod):null;
+   const filteredPatientCount=countMode&&!simplePopulationCount?filteredPatientCountParagraph(value.total,spec.population??'active',countConditions??[]):null;
    result.text=spec.mode==="metrics"?(spec.metrics??[]).map(metric=>`${copy.metrics[metric]??metric} : ${value.metrics[metric]}`).join("\n"):periodPatientCount??(simplePopulationCount
     ?patientPopulationCountParagraph(value.total,spec.population??"active")
     :filteredPatientCount??`${value.total} ${copy.count}`);
    if(phonePartition)result.text=phonePresencePartitionParagraph(value.metrics['with_phone']!,value.metrics['missing_phone']!);
    const missingField=(spec.mode==='count'||spec.mode==='list')&&spec.filters?.length===1&&spec.filters[0]!.op==='missing'?spec.filters[0]!.field:null;
-   const paragraphCount=spec.mode==='count'&&(missingField==='phone'||missingField==='identity_card');
+   const paragraphCount=countMode&&(missingField==='phone'||missingField==='identity_card');
    if(paragraphCount)result.text=missingPatientFieldParagraph(value.total,spec.population??'active',missingField);
-   if(spec.mode==='list')result.text=patientListParagraph(value.total,value.rows.length,spec.population??'active',missingField==='phone'||missingField==='identity_card'?missingField:undefined);
+   if(listedCount){if(value.rows.length)result.text+=` ${countedListLead(value.total,value.rows.length)}`;}
+   else if(spec.mode==='list')result.text=patientListParagraph(value.total,value.rows.length,spec.population??'active',missingField==='phone'||missingField==='identity_card'?missingField:undefined);
    for(const p of value.rows)appendLinkedAnswerLine(result,`${p.first_name} ${p.last_name}`,`${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`,{kind:'patient',id:p.id});
    if(spec.mode==="review")result.text+=`\n${copy.fields}`;
    if(spec.filters?.some(f=>f.field==="age"))result.text+=`\n${copy.unknownAge} : ${value.unknownAge}`;
@@ -643,7 +648,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      result.navigation={target:"document",patientId:prepared.patientId,documentId:prepared.documentId,print:true};
      return result;
     }
-    if(prepared.proposal.tool!==action)return failure(call,"needs_input",copy.missing,"action-classification-changed");
+    // An ordonnance with none issued for this visit becomes its draft; never the reverse.
+    const printDraft=action==="print_issued_document"&&prepared.proposal.tool==="create_editable_document_draft";
+    if(prepared.proposal.tool!==action&&!printDraft)return failure(call,"needs_input",copy.missing,"action-classification-changed");
     result.proposal={...prepared.proposal,actionId:input.clientTurnId};
     if(prepared.patientId)result.patientId=prepared.patientId;
     result.text="";
@@ -654,6 +661,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(!kind&&!input.appContext.documentId)return failure(call,"needs_input",copy.missing,"print-document-target-not-selected");
     if(kind&&slots.documentType!==kind)return failure(call,"needs_input",copy.missing,"print-document-kind-mismatch");
     const prepared=await prepareIssuedDocumentPrint(db,patientId!,kind??null,signal,input.appContext.documentId??undefined,input.appContext.documentRevision??undefined);
+    if(prepared.state==="draft")return failure(call,"needs_input",alexaActions.printUnavailable,"print-document-target-missing");
     if(prepared.state==="unavailable")return failure(call,"error",alexaActions.printUnavailable,"print-document-read-unavailable");
     if(prepared.state==="missing")return failure(call,"needs_input",prepared.message??alexaActions.printUnavailable,"print-document-target-missing");
     result.status="ok";result.complete=true;result.text=alexaActions.printOpening(prepared.label);

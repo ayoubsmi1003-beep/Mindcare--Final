@@ -24,11 +24,10 @@ export function buildConsultationNoteDetails(context: ClinicalContext, identitie
   for (const consultation of consultations) {
     const date = new Intl.DateTimeFormat(language === "fr" ? "fr-DZ" : "ar-DZ", { timeZone: "Africa/Algiers", dateStyle: "medium" }).format(new Date(consultation.startedAt));
     const selected = consultationExcerpts(consultation, undefined, 20000, 20, 4000);
-    for (const excerpt of selected.excerpts) {
-      const detail = excerpt.amendmentAt ? dialogue(language).addendum(excerpt.amendmentAt, excerpt.text)
-        : copy.noteProvenance(excerpt.area ? copy.noteAreas[excerpt.area] : copy.noteDetails, excerpt.text, !!excerpt.unsigned);
-      items.push({ texte: localDisplay(copy.noteDetail(date, detail, consultation.endedAt === null), identities), sources: [{ t: "consultation", id: consultation.id }] });
-    }
+    // One paragraph per visit, in the order the note was written, instead of one labelled line per field.
+    const parts = selected.excerpts.map(excerpt => excerpt.amendmentAt ? dialogue(language).addendum(excerpt.amendmentAt, excerpt.text)
+      : copy.noteProvenance(excerpt.area ? copy.noteAreas[excerpt.area] : copy.noteDetails, excerpt.text, !!excerpt.unsigned));
+    if (parts.length) items.push({ texte: localDisplay(copy.consultationNotes(date, consultation.endedAt === null, parts), identities), sources: [{ t: "consultation", id: consultation.id }] });
     if (selected.omitted) items.push({ texte: copy.noteLimits, sources: [{ t: "consultation", id: consultation.id }] });
   }
   return items;
@@ -71,7 +70,7 @@ export function buildStructuredSummaryNarrative(context: ClinicalContext, identi
     item(summary.narrativeLimits(completed.length, context.coverage.requested,
       !context.coverage.complete || context.coverage.hasMore, context.treatments.historyComplete),
       completed.map(c => ({ t: "consultation", id: c.id }))),
-  ];
+  ].filter(entry => entry.texte !== "");
 }
 
 export function buildCaseSummary(context: ClinicalContext, identities: readonly string[]) {

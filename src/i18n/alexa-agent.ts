@@ -19,6 +19,11 @@ export function patientListParagraph(total:number,shown:number,population:'activ
  const intro=missingField?missingPatientFieldParagraph(total,population,missingField):`J’ai trouvé ${formatted} ${noun}${plural} correspondant à votre demande.`;
  return `${intro} ${shown===1?'Voici le nom affiché sur cette page.':`Voici les ${new Intl.NumberFormat('fr-DZ').format(shown)} premiers noms.`}`;
 }
+/** Lead before the names of a counted population: all of them, or the first page. */
+export function countedListLead(total:number,shown:number):string {
+ if(total===1)return 'Il s’agit de :';
+ return shown>=total?'Les voici :':`Voici les ${new Intl.NumberFormat('fr-DZ').format(shown)} premiers :`;
+}
 export function patientListPageParagraph(from:number,to:number,total:number,hasMore:boolean):string {
  const format=(value:number)=>new Intl.NumberFormat('fr-DZ').format(value);
  return `Affichage des patients ${format(from)} à ${format(to)} sur ${format(total)}.${hasMore?' La suite est disponible sur la page suivante.':''}`;

@@ -59,10 +59,10 @@ it("answers a clear French summary locally with sourced structured sentences and
     infer: async () => { modelCalls++; return { ok: false, code: "unavailable", localFallback: true }; } }, event => events.push(event), new AbortController().signal);
   const sentences = events.filter((event): event is Extract<AlexaEvent, { type: "sentence" }> => event.type === "sentence");
   expect(modelCalls).toBe(0);
-  expect(sentences).toHaveLength(4);
+  expect(sentences).toHaveLength(3);
   expect(sentences[0]?.text).toContain("Trouble anxieux");
   expect(sentences[0]?.sources).toMatchObject([{ id: "33333333-3333-4333-8333-333333333333", type: "diagnostic" }]);
-  expect(sentences.at(-1)?.text).toContain("ne sont pas interprétées");
+  expect(sentences.map(sentence => sentence.text).join(" ")).not.toMatch(/ne sont pas interprétées|Subjectif|Objectif/u);
 });
 
 it.each(["ملخص الحالة", "حضر الاستشارة", "Prépare الاستشارة"])("uses the shared sourced summary for %s without external inference", async text => {

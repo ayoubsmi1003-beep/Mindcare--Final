@@ -702,6 +702,8 @@ function preparationTarget(text:string,selectedDocumentId?:string|null):Pick<Fre
  if(/[«“"][^»”"]{0,400}\b(?:cree|ajoute|enregistre|modifie|change|ajuste|arrete|cesse|suspends?|reprends?|annule|deplace|reporte|decale|imprime|fixe|encaisse|signe|cloture)\b[^»”"]*[»”"]/u.test(plain))return null;
  const requestedDocumentType=/\bbonne sante(?: mentale)?\b/u.test(plain)?'bonne_sante_mentale':/\bsuivis?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'suivi_medical':/\bcertificats?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|ons|f|fs)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
  const printCommand=/^(?:imprim\w*|lance\w*\s+l.impression)\b/u.test(command);
+ // « Alexa, ordonnance. » alone asks for the prescription itself; the plural stays a read of the treatments.
+ if(/^(?:(?:une|l.|la)\s*)?ordonnance\s*[.!?]*$/u.test(command))return {preparationAction:'print_issued_document',preparationDocumentType:'ordonnance'};
  if(requestedDocumentType&&printCommand)return {preparationAction:'print_issued_document',preparationDocumentType:requestedDocumentType};
  if(selectedDocumentId&&printCommand)return {preparationAction:'print_issued_document'};
  const politeDocumentRequest=/^(?:je voudrais|j.aimerais|je souhaite|je veux)\b/u.test(plain)&&!/^\s*(?:consulte\w*|voir\b|lire\b|affiche\w*|ouvre\w*|cherche\w*|liste\w*|retrouve\w*)\b/u.test(command);
