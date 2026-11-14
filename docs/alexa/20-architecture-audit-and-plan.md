@@ -595,3 +595,11 @@ patient-context turns, all **model variance**, measured:
 third option went from the last note to the history). It then chose otherwise than e5, and the layer, which needs both, abstained.
 This is the design's known cost: the 1B choice is sensitive to which options it sees, and the meaning layer's reach depends on it.
 Letting e5 decide alone above a calibrated margin is the next lever, to be measured leave-one-out on the development paraphrases only.
+
+**Lever measured and rejected: e5 alone.** Leave-one-out on the 168 development paraphrases (each example removed from its
+centroid before it is read; the in-sample 159/168 above flatters e5): **99/168** top-1. Accepting e5 alone above a margin never
+gets safe: at margin ≥ 0.15 it accepts 57, of which 7 wrong, and still accepts a non-record question ("Comment tu t'appelles ?" →
+the patient's identity, margin 0.32); at 0.04 and score ≥ 0.4, 21 wrong of 92. A wrong read of a record is worse than an
+abstention, so the two judges stay. The measured gap is the catalogue's size (about ten examples per intent): e5 generalises
+from it poorly. The lever that remains is more and more varied development paraphrases per intent, measured leave-one-out
+the same way, never with campaign questions.
