@@ -20,7 +20,8 @@ import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate, type ClinicalNarrative } from "./clinical-narrative";
-import { buildConsultationNoteDetails, buildStructuredSummaryNarrative } from "./case-summary";
+import { buildConsultationNoteDetails } from "./case-summary";
+import { buildCaseSynthesis } from "./case-synthesis";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsCurrentVisitConcern,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead,onlyTheRecordInContext,unknownWordRuns,questionConcernsAPerson} from "@/shared/alexa/request-contract";
@@ -580,7 +581,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
       // "Résume la dernière consultation": the recorded note areas of that visit, quoted with their date. No model either.
       const lastVisitItems=boundedSummary&&requestedSummaryCount===1&&singleVisitFocus==='visit_summary'&&!recurringThemeRequest&&!latestConsultationComparison&&process.env["ALEXA_SUMMARY_MODEL"]!=="1"?buildConsultationNoteDetails(context,[]):[];
       const plainLastVisit=lastVisitItems.length>0;
-      const structuredItems=plainWholeSummary?buildStructuredSummaryNarrative(context,[]):lastVisitItems;
+      // The whole record is told as the case story (how it began, evolved, stands, continues); still no model.
+      const structuredItems=plainWholeSummary?buildCaseSynthesis({context,histories:[],definitions:[]}).paragraphes:lastVisitItems;
       const narrative:ClinicalNarrative = plainWholeSummary||plainLastVisit
         ? {text:structuredItems.map(item=>item.texte).join(" "),complete:context.coverage.complete,generated:true,method:"structured",sourceIds:[...new Set(structuredItems.flatMap(item=>item.sources.map(source=>source.id)))]}
         : (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)

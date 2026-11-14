@@ -414,6 +414,7 @@ export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
     currentSources.push({ t: "consultation", id: latest.id });
   }
   const treatmentSentence = currentTreatmentSentence(input.context);
+  if (treatmentSentence === null && latest !== undefined) current.push("Aucun traitement en cours n’est enregistré.");
   if (treatmentSentence !== null) {
     current.push(treatmentSentence);
     currentSources.push(...input.context.treatments.current.filter((entry) => entry.status !== "stopped").map((entry) => ({ t: "treatment" as const, id: entry.id })));
