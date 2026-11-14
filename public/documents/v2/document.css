@@ -1,0 +1,37 @@
+@import url("/documents/v1/fonts.css");
+@page {size:148mm 210mm;margin:0}
+.doc2-page[data-renderer="v2"]{box-sizing:border-box;width:148mm;height:210mm;padding:6mm;position:relative;margin:0 auto 18px;isolation:isolate;background:var(--document-paper);color:var(--document-ink);font:10.5pt/1.4 Arial,DocumentSans,sans-serif;overflow-wrap:anywhere}
+.doc2-page[data-renderer="v2"] *{box-sizing:border-box}
+.doc2-page[data-renderer="v2"] p{margin:0 0 3mm;white-space:pre-wrap}
+.doc2-page[data-renderer="v2"] .doc2-header{position:relative;display:grid;grid-template-columns:55mm 1fr 41mm;gap:0;height:43mm;min-height:43mm;font-size:8.5pt;line-height:1.4;color:var(--document-brand)}
+.doc2-page[data-renderer="v2"] .doc2-identity{text-align:center;padding-top:2mm;font-weight:700}
+.doc2-page[data-renderer="v2"] .doc2-header p{margin:0 0 1.5mm}
+.doc2-page[data-renderer="v2"] .doc2-header hr{border:0;border-top:.25mm solid currentColor;margin:1mm 0}
+.doc2-page[data-renderer="v2"] .doc2-ar{font-family:"Traditional Arabic","Times New Roman",DocumentSans,serif;font-weight:700;font-size:16pt;line-height:.85}
+.doc2-page[data-renderer="v2"] .doc2-mark{position:absolute;left:60.5mm;top:27.5mm;width:15mm;height:15mm}
+.doc2-page[data-renderer="v2"] .doc2-mark img{display:block;width:100%;height:100%}
+.doc2-page[data-renderer="v2"] .doc2-patient{grid-column:3;padding-top:7mm;font-size:9pt;font-weight:700;line-height:1.4}
+.doc2-page[data-renderer="v2"] .doc2-title{text-align:center;font:bold 16.7pt/1.2 Arial,DocumentSans,sans-serif;color:var(--document-brand);text-decoration:underline;text-underline-offset:1mm;margin:10mm 0 12mm}
+.doc2-page[data-renderer="v2"] .doc2-body{display:flow-root;margin:0 6mm;position:relative;z-index:1}
+.doc2-page[data-renderer="v2"] .doc2-watermark{position:absolute;left:31mm;top:77mm;width:86mm;height:104mm;object-fit:contain;z-index:-1;pointer-events:none;user-select:none}
+.doc2-page[data-renderer="v2"] .doc2-letter-footer{position:absolute;left:4.5mm;right:4.5mm;top:195mm;border-top:.25mm solid var(--document-brand);padding-top:3mm;display:flex;gap:5mm;color:var(--document-brand);font:bold 7.5pt/1.35 Arial,DocumentSans,sans-serif}
+.doc2-page[data-renderer="v2"] .doc2-footer-address{flex:1;min-width:0;text-align:center;white-space:pre-line}
+.doc2-page[data-renderer="v2"] .doc2-social{display:flex;gap:1.5mm;align-items:flex-start;white-space:nowrap}
+.doc2-page[data-renderer="v2"] .doc2-social img{width:2.7mm;height:6.45mm;object-fit:fill}
+.doc2-page[data-renderer="v2"] .doc2-social span{display:block;line-height:3.8mm}
+.doc2-page[data-renderer="v2"] .doc2-signature{position:absolute;right:12mm;top:175mm;bottom:auto;width:40mm;text-align:center;font-size:8pt}
+.doc2-page[data-renderer="v2"] .doc2-page-number{position:absolute;top:190mm;left:12mm;right:12mm;bottom:auto;text-align:center;font-size:7pt}
+.doc2-page[data-renderer="v2"] .doc2-continuation{height:8mm;margin-bottom:4mm;font-size:8pt;border-bottom:.2mm solid currentColor}
+.doc2-page[data-renderer="v2"] .doc2-medication{white-space:pre-wrap;margin-bottom:4mm}
+.doc2-page[data-renderer="v2"] ul,.doc2-page[data-renderer="v2"] ol{margin:0 0 3mm;padding-inline-start:6mm}
+.doc2-page[data-renderer="v2"] .doc2-bottom-limit{position:absolute;bottom:36mm;height:0;pointer-events:none}
+.doc2-page[data-renderer="v2"].doc2-editor-sheet{height:auto;min-height:210mm;padding-bottom:36mm}
+.doc2-page[data-renderer="v2"] .doc2-editor{outline:none;min-height:90mm;margin:0 6mm;position:relative;z-index:1}
+@media print{.doc2-page[data-renderer="v2"]{margin:0;break-after:page;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}.doc2-page[data-renderer="v2"]:last-child{break-after:auto}.doc2-bound-field{text-decoration:none}.doc2-measure{display:none}}
+
+.doc2-page[data-renderer="v2"].doc2-editor-sheet .doc2-letter-footer{top:auto;bottom:6mm}
+@media print{html,body{margin:0;padding:0}}
+
+.doc2-page[data-renderer="v2"] .doc2-identity hr:last-of-type{width:35mm;margin-inline:auto}
+
+.doc2-page[data-renderer="v2"] .doc2-ar p{margin:0}

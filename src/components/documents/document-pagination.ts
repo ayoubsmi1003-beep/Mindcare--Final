@@ -1,3 +1,4 @@
+import {documentAssetPath} from "./document-renderer";
 import type {DocumentNode,DraftPreview,PageManifest,PageSlice} from "@/shared/documents/types";
 import {nodeText} from "@/shared/documents/content";
 import {codepointSlice,validatePageManifest,orderedListStart} from "@/shared/documents/pagination-contract";
@@ -17,30 +18,36 @@ function sliceNode(node:DocumentNode,from=0,to=Number.MAX_SAFE_INTEGER):Node|nul
  if(node.type==="paragraph"&&!element.childNodes.length)element.append(document.createElement("br"));
  return element;
 }
-function previewParts(preview:DraftPreview){const parsed=new DOMParser().parseFromString(preview.html,"text/html");return {header:parsed.querySelector(".doc2-header")?.outerHTML??parsed.querySelector("header")?.outerHTML??"",title:parsed.querySelector("h1")?.outerHTML??"",titleText:parsed.querySelector("h1")?.textContent??"",patient:Array.from(parsed.querySelectorAll(".doc2-patient p")).slice(1,3).map(p=>(p.textContent??"").split(":").slice(1).join(":").trim()).join(" ")};}
+function previewParts(preview:DraftPreview){const parsed=new DOMParser().parseFromString(preview.html,"text/html");return {header:parsed.querySelector(".doc2-header")?.outerHTML??parsed.querySelector("header")?.outerHTML??"",title:parsed.querySelector("h1")?.outerHTML??"",titleText:parsed.querySelector("h1")?.textContent??"",footer:parsed.querySelector(".doc2-letter-footer")?.outerHTML??"",watermark:parsed.querySelector(".doc2-watermark")?.outerHTML??"",patient:Array.from(parsed.querySelectorAll(".doc2-patient p")).slice(1,3).map(p=>(p.textContent??"").split(":").slice(1).join(":").trim()).join(" ")};}
 export function buildDocumentPages(preview:DraftPreview,manifest:PageManifest):string{
  validatePageManifest(preview.content,manifest,preview);const parts=previewParts(preview);const root=document.createElement("div");
- manifest.pages.forEach((slices,index)=>{const page=document.createElement("article");page.className="doc2-page";
+ manifest.pages.forEach((slices,index)=>{const page=document.createElement("article");page.className="doc2-page";if(preview.rendererVersion==="v2")page.dataset.renderer="v2";
  if(index===0)page.innerHTML=parts.header+parts.title;else {const continuation=document.createElement("div");continuation.className="doc2-continuation";continuation.textContent=parts.titleText+" · "+parts.patient;page.append(continuation);}
- const body=document.createElement("main");body.className="doc2-body";for(const slice of slices){const node=preview.content.content[slice.path[0]!];if(node){const fragment=sliceNode(node,slice.from,slice.to);if(fragment)body.append(fragment);}}page.append(body);
+ const body=document.createElement("main");body.className="doc2-body";for(const slice of slices){const node=preview.content.content[slice.path[0]!];if(node){const fragment=sliceNode(node,slice.from,slice.to);if(fragment)body.append(fragment);}}page.append(body);if(preview.rendererVersion==="v2")page.insertAdjacentHTML("beforeend",parts.watermark+parts.footer);
  if(index===manifest.pages.length-1){const signature=document.createElement("footer");signature.className="doc2-signature";signature.textContent="Signature et cachet";page.append(signature);}
  const number=document.createElement("div");number.className="doc2-page-number";number.textContent=(index+1)+" / "+manifest.pages.length;page.append(number);root.append(page);});
  return root.innerHTML;
 }
-export async function documentAssetsReady(doc:Document):Promise<void>{
- let link=doc.querySelector<HTMLLinkElement>('link[data-document-assets]');
- if(!link){link=doc.createElement("link");link.rel="stylesheet";link.href="/documents/v1/document.css";link.dataset.documentAssets="true";doc.head.append(link);}
+export async function documentAssetsReady(doc:Document,version="v1"):Promise<void>{
+ const href=documentAssetPath(version);
+ let link=doc.querySelector<HTMLLinkElement>(`link[data-document-assets="${version}"]`);
+ if(!link){link=doc.createElement("link");link.rel="stylesheet";link.href=href;link.dataset.documentAssets=version;doc.head.append(link);}
  if(!link.sheet)await new Promise<void>((resolve,reject)=>{link.addEventListener("load",()=>resolve(),{once:true});link.addEventListener("error",()=>reject(new Error("DocumentStylesMissing")),{once:true});});
+ if(version==="v2"){
+  const tokens=getComputedStyle(document.documentElement);
+  for(const name of ["--document-brand","--document-paper","--document-ink"])doc.documentElement.style.setProperty(name,tokens.getPropertyValue(name));
+ }
  await Promise.all([doc.fonts.load('400 10.5pt "DocumentSans"',"Texte عربي"),doc.fonts.load('600 10.5pt "DocumentSans"',"Texte عربي")]);await doc.fonts.ready;
  if(!doc.fonts.check('400 10.5pt "DocumentSans"',"Texte عربي"))throw new Error("DocumentFontsMissing");
+ await Promise.all(Array.from(doc.images).map(async image=>{if(!image.complete)await new Promise<void>((resolve,reject)=>{image.addEventListener("load",()=>resolve(),{once:true});image.addEventListener("error",()=>reject(new Error("DocumentImageMissing")),{once:true});});if(image.naturalWidth===0)throw new Error("DocumentImageMissing");}));
 }
 export async function paginateDocument(root:HTMLElement,preview:DraftPreview):Promise<PageManifest>{
- await documentAssetsReady(root.ownerDocument);
- const measure=document.createElement("article");measure.className="doc2-page doc2-measure";measure.setAttribute("aria-hidden","true");root.append(measure);
+ await documentAssetsReady(root.ownerDocument,preview.rendererVersion);
+ const measure=document.createElement("article");measure.className="doc2-page doc2-measure";if(preview.rendererVersion==="v2")measure.dataset.renderer="v2";measure.setAttribute("aria-hidden","true");root.append(measure);
  const parts=previewParts(preview),pages:PageSlice[][]=[[]];let pageIndex=0;
  const setup=()=>{measure.innerHTML=pageIndex===0?parts.header+parts.title:'<div class="doc2-continuation"></div>';const body=document.createElement("main");body.className="doc2-body";measure.append(body);return body;};
  let body=setup();
- const fits=(fragment:Node|null)=>{if(fragment)body.append(fragment);const bottom=body.getBoundingClientRect().bottom;const allowed=measure.getBoundingClientRect().bottom-24*96/25.4;const fit=bottom<=allowed+0.1;if(fragment)fragment.parentNode?.removeChild(fragment);return fit;};
+ const fits=(fragment:Node|null)=>{if(fragment)body.append(fragment);const bottom=body.getBoundingClientRect().bottom;const allowed=measure.getBoundingClientRect().bottom-(preview.rendererVersion==="v2"?36:24)*96/25.4;const fit=bottom<=allowed+0.1;if(fragment)fragment.parentNode?.removeChild(fragment);return fit;};
  const next=()=>{if(!pages[pageIndex]!.length)throw new Error("DocumentBlockCannotFit");pages.push([]);pageIndex++;if(pageIndex>=100)throw new Error("DocumentPageLimit");body=setup();};
  try{for(let index=0;index<preview.content.content.length;index++){const node=preview.content.content[index]!,len=Array.from(nodeText(node)).length;let from=0;
  if(node.type==="pageBreak"){pages[pageIndex]!.push({path:[index],from:0,to:0});if(index<preview.content.content.length-1&&pages[pageIndex]!.length>1)next();continue;}

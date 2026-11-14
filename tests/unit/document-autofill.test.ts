@@ -5,6 +5,7 @@ import {
   buildInitialContent,
   buildInitialVariables,
   parseExplicitDailyFrequency,
+  explicitDailyFrequency,
   treatmentValues,
   withTreatmentCount,
   type AutoFillSource,
@@ -82,7 +83,7 @@ describe("auto-remplissage des documents",()=>{
     expect(meds[0]?.attrs?.["designation"]).toBe("ZOLOFT 50 mg gél");
     expect(meds[0]?.attrs?.["posology"]).toBe("2 fois par jour");
     expect(meds[1]?.attrs?.["designation"]).toBe("LEXOMIL 6 mg");
-    expect(meds[1]?.attrs?.["posology"]).toBe("");
+    expect(meds[1]?.attrs?.["posology"]).toBe("2 fois par jour");
   });
 
   it("préfère la fréquence actuelle et conserve séparément force, dose et instructions",()=>{
@@ -93,13 +94,43 @@ describe("auto-remplissage des documents",()=>{
       ]},
     });
     const medication=buildInitialContent("ordonnance",baseContent,data).content.find(node=>node.type==="medication");
-    expect(medication?.attrs).toMatchObject({strength:"50 mg",posology:"1 fois par jour",instructions:"Dose prescrite : 25 mg\nÀ prendre le soir"});
+    expect(medication?.attrs).toMatchObject({strength:"",posology:"1 fois par jour",instructions:"Dose prescrite : 25 mg\nÀ prendre le soir"});
 
     const withoutCurrentFrequency=buildInitialContent("ordonnance",baseContent,source({
       activeTreatments:[treatment({medicationId:"m1",medicationRaw:"Sertraline 50 mg",inn:"sertraline",strength:"50 mg",frequency:null})],
       lastPrescription:data.lastPrescription,
     })).content.find(node=>node.type==="medication");
     expect(withoutCurrentFrequency?.attrs?.["posology"]).toBe("");
+  });
+
+  it("counts certain intake moments, but never infers a daily schedule from ambiguous instructions",()=>{
+    expect(explicitDailyFrequency(treatment({timing:["Matin","Soir"]}),null)).toBe(2);
+    expect(explicitDailyFrequency(treatment({timing:["Matin","Midi","Soir"]}),null)).toBe(3);
+    expect(explicitDailyFrequency(treatment({dose:"2",doseUnit:"comprimés",timing:["Matin"]}),null)).toBe(1);
+    for(const frequency of ["si besoin","une fois par semaine","un jour sur deux","diminution progressive"]){
+      expect(explicitDailyFrequency(treatment({frequency,timing:["Matin"]}),null)).toBeNull();
+    }
+    expect(explicitDailyFrequency(treatment({frequency:"3",timing:["Matin"]}),null)).toBe(3);
+    expect(explicitDailyFrequency(treatment({frequency:"matin",instructions:"Chaque dimanche"}),null)).toBeNull();
+  });
+
+  it("retains distinct regimens of the same product",()=>{
+    const data=source({activeTreatments:[treatment({frequency:"1 fois par jour"}),treatment({frequency:"2 fois par jour"})]});
+    expect(buildInitialContent("ordonnance",baseContent,data).content.filter(n=>n.type==="medication")).toHaveLength(2);
+  });
+
+  it("keeps known strengths and quantities distinct without repeating product strength",()=>{
+    const cases=[
+      treatment({medicationRaw:"Produit synthétique",strength:"50 mg",frequency:"2 fois par jour"}),
+      treatment({medicationId:"m2",medicationRaw:"Produit synthétique 50 mg",strength:"50 mg",dose:"0,5",doseUnit:"comprimé"}),
+      treatment({medicationId:"m3",medicationRaw:"Association 50 mg / 2 mg",strength:"50 mg"}),
+      treatment({medicationId:"m4",medicationRaw:"Solution 10 mg/ml",strength:"10 mg/ml"}),
+    ];
+    const rows=buildInitialContent("ordonnance",baseContent,source({activeTreatments:cases})).content.filter(n=>n.type==="medication");
+    expect(rows.map(n=>n.attrs?.["designation"])).toEqual(["Produit synthétique 50 mg","Produit synthétique 50 mg","Association 50 mg / 2 mg","Solution 10 mg/ml"]);
+    expect(rows.every(n=>n.attrs?.["strength"]==="")).toBe(true);
+    expect(rows[1]?.attrs?.["instructions"]).toContain("0,5 comprimé");
+    expect(rows[1]?.attrs?.["posology"]).toBe("");
   });
 
   it("permet de corriger la dose tout en préservant les instructions et le compte quotidien",()=>{
@@ -117,10 +148,27 @@ describe("auto-remplissage des documents",()=>{
       treatment({id:"t3",medicationId:"m3",medicationRaw:"C"}),
     ]});
     const variables=buildInitialVariables("certificat_medical",data);
-    expect(treatmentValues(variables)).toEqual(["A — 1 fois par jour","B","C"]);
+    expect(treatmentValues(variables)).toEqual(["A 50 mg — 1 fois par jour","B 50 mg","C 50 mg"]);
     const content=withTreatmentCount({type:"doc",content:[{type:"paragraph",content:[{type:"text",text:"Avant"}]},{type:"bulletList",content:[{type:"listItem",content:[{type:"paragraph",content:[{type:"field",attrs:{name:"vars_traitement_1",value:""}}]}]}]}]},3);
     expect(content.content[0]).toMatchObject({type:"paragraph"});
     expect(content.content[1]).toMatchObject({type:"bulletList"});
     expect(content.content[1]?.content).toHaveLength(3);
   });
+});
+
+it("does not attach a single strength to an ambiguous association",()=>{
+ const rows=buildInitialContent("ordonnance",baseContent,source({activeTreatments:[treatment({medicationRaw:"Produit A + produit B",strength:"50 mg"})]})).content.filter(n=>n.type==="medication");
+ expect(rows[0]?.attrs?.["designation"]).toBe("Produit A + produit B");
+});
+
+it("requires review when a numeric frequency conflicts with weekly instructions",()=>{
+ const row=buildInitialContent("ordonnance",baseContent,source({activeTreatments:[treatment({frequency:"1",timing:["matin"],instructions:"Chaque dimanche"})]})).content.find(n=>n.type==="medication");
+ expect(row?.attrs?.["posology"]).toBe("");
+ expect(row?.attrs?.["instructions"]).toContain("Chaque dimanche");
+});
+
+it("does not repeat a strength whose spacing differs from the designation",()=>{
+ const row=buildInitialContent("ordonnance",baseContent,source({activeTreatments:[treatment({medicationRaw:"Produit synthétique 50mg",strength:"50 mg"})]})).content.find(n=>n.type==="medication");
+ expect(row?.attrs?.["designation"]).toBe("Produit synthétique 50mg");
+ expect(row?.attrs?.["strength"]).toBe("");
 });

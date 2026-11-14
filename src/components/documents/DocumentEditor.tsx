@@ -1,4 +1,5 @@
 "use client";
+import {sanitizeDocumentPaste} from "./document-paste";
 
 import {useEffect,useRef} from "react";
 
@@ -14,12 +15,12 @@ import {documentsEditor as t} from "@/i18n/documents-editor";
 
 import {documentExtensions} from "./document-extensions";
 
-export function DocumentEditor({content,onChange,onError,headerHtml="",fieldValues={},invalid=false}:{readonly invalid?:boolean;readonly headerHtml?:string;readonly fieldValues?:Variables;readonly content:DocumentContent;readonly onChange:(c:DocumentContent)=>void;readonly onError:(message:string)=>void}){
+export function DocumentEditor({content,onChange,onError,headerHtml="",fieldValues={},invalid=false,rendererVersion="v1"}:{readonly rendererVersion?:string;readonly invalid?:boolean;readonly headerHtml?:string;readonly fieldValues?:Variables;readonly content:DocumentContent;readonly onChange:(c:DocumentContent)=>void;readonly onError:(message:string)=>void}){
 
  const displayed=resolveFields(content,fieldValues);
  const lastContent=useRef(content),lastFields=useRef(JSON.stringify(fieldValues));
 
- const editor=useEditor({extensions:documentExtensions,immediatelyRender:false,content:displayed as JSONContent,editorProps:{attributes:{class:"doc2-editor",role:"textbox","aria-label":t.edit},transformPastedHTML:html=>{const parsed=new DOMParser().parseFromString(html,"text/html");parsed.querySelectorAll("script,style,img,iframe,object,embed,svg").forEach(el=>el.remove());parsed.querySelectorAll("*").forEach(el=>{for(const attribute of Array.from(el.attributes))if(!["dir"].includes(attribute.name))el.removeAttribute(attribute.name);});return parsed.body.innerHTML;}},onUpdate:({editor:e})=>{try{onChange(parseDocumentContent(e.getJSON()));}catch{onError(t.invalidContent);}}});
+ const editor=useEditor({extensions:documentExtensions,immediatelyRender:false,content:displayed as JSONContent,editorProps:{attributes:{class:"doc2-editor",role:"textbox","aria-label":t.edit},transformPastedHTML:sanitizeDocumentPaste},onUpdate:({editor:e})=>{try{onChange(parseDocumentContent(e.getJSON()));}catch{onError(t.invalidContent);}}});
 
  useEffect(()=>{if(invalid)return;const fields=JSON.stringify(fieldValues);if(content===lastContent.current&&fields===lastFields.current)return;lastContent.current=content;lastFields.current=fields;if(editor&&JSON.stringify(editor.getJSON())!==JSON.stringify(displayed))editor.commands.setContent(displayed as JSONContent,{emitUpdate:false});},[content,fieldValues,displayed,editor,invalid]);
 
@@ -49,7 +50,7 @@ export function DocumentEditor({content,onChange,onError,headerHtml="",fieldValu
  {button(t.detachField,()=>{const node=editor.state.selection.$from.nodeAfter;if(node?.type.name==="field")editor.chain().focus().insertContent(String(node.attrs.value)).run();})}
 
 </div></details>
- </div><div className="doc2-page doc2-editor-sheet"><div contentEditable={false} dangerouslySetInnerHTML={{__html:headerHtml}}/><EditorContent editor={editor}/></div></div>;
+ </div><div className="doc2-page doc2-editor-sheet" data-renderer={rendererVersion}><div contentEditable={false} dangerouslySetInnerHTML={{__html:headerHtml}}/><EditorContent editor={editor}/></div></div>;
 
 }
 

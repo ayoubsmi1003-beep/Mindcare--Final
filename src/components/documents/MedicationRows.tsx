@@ -6,16 +6,17 @@ import { Icone } from "@/components/ui";
 import { ListeSuggestions, surligner } from "@/components/recherche/ListeSuggestions";
 import { useRechercheInstantane } from "@/components/recherche/use-recherche-instantanee";
 import { documentsEditor as t } from "@/i18n/documents-editor";
+import { prescriptionSimple as simple } from "@/i18n/prescription-simple";
 import { recherche } from "@/i18n/recherche";
 import { searchMedicationsPage, type MedicationCatalogItem } from "@/services/medications";
 import type { DocumentContent, DocumentNode } from "@/shared/documents/types";
 
 import {
   dailyFrequency,
-  prescribedDose,
+  confirmSpecialSchedule,
   setDailyFrequency,
   setMedicationName,
-  setPrescribedDose,
+  setMedicationInstructions,
 } from "./prescription-fields";
 
 function chercherMedicament(
@@ -109,20 +110,6 @@ function MedicationRow({
           />
         </label>
         <label>
-          {t.strength}
-          <input
-            value={String(attrs["strength"] ?? "")}
-            onChange={(event) => change({ ...attrs, strength: event.target.value })}
-          />
-        </label>
-        <label>
-          {t.prescribedDose}
-          <input
-            value={prescribedDose(attrs)}
-            onChange={(event) => change(setPrescribedDose(attrs, event.target.value))}
-          />
-        </label>
-        <label>
           {t.dailyCount}
           <input
             type="number"
@@ -131,13 +118,6 @@ function MedicationRow({
             inputMode="numeric"
             value={frequency}
             onChange={(event) => change(setDailyFrequency(attrs, event.target.value))}
-          />
-        </label>
-        <label>
-          {t.frequency}
-          <input
-            value={String(attrs["frequency"] ?? "")}
-            onChange={(event) => change({ ...attrs, frequency: event.target.value })}
           />
         </label>
         <button
@@ -151,7 +131,14 @@ function MedicationRow({
         </button>
       </div>
 
-      {frequency === "" ? <p className="doc2-hint is-warning">{t.frequencyMissing}</p> : null}
+      {frequency === "" ? <p role="alert" className="doc2-hint is-warning">{simple.review}</p> : null}
+        <details open={Boolean(["strength","quantity","frequency","duration","administration","instructions"].some(key=>String(attrs[key]??"").trim()) || (frequency==="" && attrs["posology"]))}>
+          <summary>{simple.details}</summary>
+          {attrs["source"]==="free-text" ? <p role="status">{simple.medicineChanged}</p> : null}
+          {(["strength","quantity","duration","administration","instructions"] as const).map(key=>attrs[key] || key==="instructions" ? <label key={key}>{t[key]}<textarea value={String(attrs[key]??"")} onChange={e=>change(key==="instructions"?setMedicationInstructions(attrs,e.target.value):{...attrs,[key]:e.target.value})}/></label> : null)}
+          {frequency==="" ? <label>{t.frequency}<input value={String(attrs["frequency"]||attrs["posology"]||"")} onChange={e=>change({...attrs,frequency:e.target.value,posology:""})}/></label> : null}
+          {frequency==="" && String(attrs["frequency"]||attrs["posology"]||"").trim() ? <label><input type="checkbox" checked={Boolean(attrs["posology"])} onChange={e=>change(confirmSpecialSchedule(attrs,e.target.checked))}/>{simple.confirm}</label> : null}
+        </details>
 
       {query.trim().length === 1 ? (
         <p className="doc2-hint">{recherche.minimum}</p>

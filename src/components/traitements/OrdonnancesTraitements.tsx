@@ -44,6 +44,9 @@ export function OrdonnancesTraitements({
 
   useEffect(() => {
     let vivant = true;
+    setDocuments(null);
+    setDrafts(null);
+    setLiens(null);
     setErreur(null);
     setErreurLiens(null);
     void Promise.all([

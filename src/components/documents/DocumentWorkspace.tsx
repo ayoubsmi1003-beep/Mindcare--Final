@@ -73,6 +73,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  useEffect(()=>{const fit=()=>{if(!issuedManualZoom.current)setIssuedZoom(fitIssuedZoom());};fit();window.addEventListener("resize",fit);return()=>window.removeEventListener("resize",fit);},[]);
 
+ const selectedPatient=useRef(patientId);selectedPatient.current=patientId;
  const loadedDraft=editing.draft;
  useEffect(()=>{if(!initialDraftId||loadedDraft?.id!==initialDraftId)return;setPatientId(loadedDraft.patientId);setPatientName(loadedDraft.patientName);setKind(loadedDraft.kind);setView("edit");},[initialDraftId,loadedDraft]);
  const isCurrent=editing.isCurrent;
@@ -86,7 +87,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  useEffect(()=>{let active=true;if(patientId)void getPatient(patientId).then(r=>{if(active&&r.ok&&r.data){setPatientName(r.data.lastName+" "+r.data.firstName);setPatientRecord(r.data.recordNumber);}});return()=>{active=false;};},[patientId]);
 
- useEffect(()=>{if(root.current)void documentAssetsReady(root.current.ownerDocument).catch(()=>setError(t.printFailed));},[]);
+ useEffect(()=>{if(root.current)void documentAssetsReady(root.current.ownerDocument,editing.draft?.rendererVersion??snapshot?.rendererVersion??"v1").catch(()=>setError(t.printFailed));},[editing.draft?.rendererVersion,snapshot?.rendererVersion]);
 
  useEffect(()=>{if(editing.dirty)setManifest(null);},[editing.dirty,editing.draft?.content,editing.draft?.variables,editing.draft?.documentDate]);
 
@@ -100,14 +101,18 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const chooseDraft=async(draft:Draft)=>{if(draft.issuedDocumentId){await openDocument(draft.issuedDocumentId);setLibraryTab("issued");return;}if(editing.dirty&&!await editing.flush())return;setOpened(null);setSnapshot(null);setPreview(null);setManifest(null);setView("preview");setLibraryTab("drafts");setHeaderHtml("");setFieldValues({});setDraftId(draft.id);setAlexaDocumentContext({documentId:null,draftId:draft.id,revision:String(draft.revision),patientId:draft.patientId});setPatientId(draft.patientId);setPatientName(draft.patientName);setKind(draft.kind);setError(null);};
 
- const newDocument=async()=>{if(!patientId)return;if(editing.dirty&&!await editing.flush())return;setBusy(true);setError(null);let warning:string|null=null;try{
+ const newDocument=async()=>{if(!patientId||busy)return;setBusy(true);setError(null);let warning:string|null=null;try{
+  if(editing.dirty&&!await editing.flush())return;
+  if(selectedPatient.current!==patientId)return;
   const [pResult,wResult]=await Promise.allSettled([getPatient(patientId),getPatientWorkspace(patientId)]);
+  if(selectedPatient.current!==patientId)return;
   const patient=pResult.status==="fulfilled"&&pResult.value.ok?pResult.value.data:null;
   const workspace=wResult.status==="fulfilled"&&wResult.value.ok?wResult.value.data:null;
   if(pResult.status==="rejected"||(pResult.status==="fulfilled"&&!pResult.value.ok)||wResult.status==="rejected"||(wResult.status==="fulfilled"&&!wResult.value.ok))warning=t.autoFillPartial;
   const source=buildAutoFillSource(patient,workspace);
   const variables=buildInitialVariables(kind,source);
   const created=await createDraft(patientId,kind,variables);
+  if(selectedPatient.current!==patientId)return;
   if(!created.ok){setError(created.error.message);return;}
   if(created.data===null){setError(t.saveFailure);return;}
   let draft=created.data;
@@ -117,6 +122,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
    if(saved.ok)draft=saved.data;
    else warning=t.autoFillPartial;
   }
+  if(selectedPatient.current!==patientId)return;
   await chooseDraft(draft);
   if(warning!==null)setError(warning);
   await refresh();
@@ -190,7 +196,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
     {editing.draft&&editing.draft.id===draftId?<>
      <header className="doc2-document-head"><div className="doc2-document-title"><div className="doc2-title-line"><h2>{documentLabels[editing.draft.kind]}</h2><Badge ton="neutre">{t.draft}</Badge></div><span role="status" className="doc2-save-status">{editing.saveLabel}</span><small className="doc2-number-note">{t.draftNumberPending}</small></div><div className="doc2-actions"><Bouton rang="secondaire" taille="compact" disabled={busy||!editing.dirty||editing.state.conflict} onClick={()=>{void editing.flush().then(saved=>{if(saved)void refresh();});}}>{t.save}</Bouton><details className="doc2-action-menu"><summary>{t.more}<Icone nom="chevron" taille={16}/></summary><div><button type="button" disabled={busy} onClick={()=>{void duplicate();}}>{t.duplicate}</button><button type="button" disabled={busy} onClick={()=>{void(async()=>{if(editing.dirty&&!await editing.flush())return;const r=await archiveDraft(editing.draft!.id,!editing.draft!.archivedAt);if(r.ok){setDraftId(null);await refresh();}else setError(r.error.message);})();}}>{editing.draft.archivedAt?t.restore:t.archive}</button><button type="button" disabled={busy||editing.dirty} onClick={()=>setRegenerate(true)}>{t.regenerate}</button><DocumentHistory id={editing.draft.id} onRestore={busy||editing.draft.issuedDocumentId||editing.draft.archivedAt?null:(content,variables,date)=>{editing.setContent(content);editing.setVariables(variables);editing.setDate(date);}}/></div></details><Bouton rang="principal" taille="compact" disabled={busy||!manifest||!preview?.readiness.canIssue||editing.dirty||Boolean(editing.draft.issuedDocumentId)||Boolean(editing.draft.archivedAt)} onClick={()=>{void printDraft();}}>{t.print}</Bouton></div></header>
      {!editing.draft.issuedDocumentId&&!editing.draft.archivedAt?<div className="doc2-compose" inert={busy}><aside className="doc2-fields">{editing.draft.kind==="ordonnance"?<MedicationRows content={editing.draft.content} onChange={editing.setContent}/>:<DocumentFields draft={editing.draft} onChange={editing.setVariables} onDate={editing.setDate} onTreatmentChange={editing.draft.kind==="certificat_medical"?editing.setContentAndVariables:null}/>}</aside><section className="doc2-paper-area"><div className="doc2-compose-bar">{editing.draft.kind!=="ordonnance"?<div className="doc2-view-switch"><button type="button" aria-pressed={view==="preview"} onClick={()=>{setView("preview");if(!preview)void prepare();}}>{t.preview}</button><button type="button" aria-pressed={view==="edit"} onClick={()=>setView("edit")}>{t.edit}</button></div>:<span className="doc2-eyebrow">{t.prescription}</span>}{manifest!==null?<span className="doc2-page-count">{manifest.pages.length} {t.page.toLowerCase()}</span>:null}</div>
-      {editing.draft.kind!=="ordonnance"?<div className={view==="edit"?undefined:"doc2-offscreen"}><DocumentEditor key={editing.draft.id} invalid={editing.invalidContent} headerHtml={headerHtml} fieldValues={{...fieldValues,...Object.fromEntries(Object.entries(editing.draft.variables).filter(([key])=>key!=="jours_lettres").map(([key,value])=>["vars_"+key,value]))}} content={editing.draft.content} onChange={editing.setContent} onError={editing.rejectContent}/></div>:null}
+      {editing.draft.kind!=="ordonnance"?<div className={view==="edit"?undefined:"doc2-offscreen"}><DocumentEditor rendererVersion={editing.draft.rendererVersion} key={editing.draft.id} invalid={editing.invalidContent} headerHtml={headerHtml} fieldValues={{...fieldValues,...Object.fromEntries(Object.entries(editing.draft.variables).filter(([key])=>key!=="jours_lettres").map(([key,value])=>["vars_"+key,value]))}} content={editing.draft.content} onChange={editing.setContent} onError={editing.rejectContent}/></div>:null}
       <div className={view==="preview"||editing.draft.kind==="ordonnance"?undefined:"doc2-offscreen"}>{editing.dirty?<p className="doc2-hint" role="status">{t.previewStale}</p>:null}{preview?<DocumentPreview preview={preview} onLayout={setManifest}/>:<p className="doc2-hint">{editing.dirty?t.previewStale:t.previewLoading}</p>}</div></section></div>:null}
      {editing.state.conflict?<div className="doc2-alert" role="alert"><Icone nom="alerte" taille={20}/><p>{t.recoveryConfirm}</p><button type="button" onClick={()=>{void editing.recover(false);}}>{t.reload}</button><button type="button" onClick={()=>{void editing.recover(true);}}>{t.keepLocal}</button></div>:null}
      {preview?.readiness.reasons.length?<div className="doc2-readiness">{preview.readiness.reasons.map(reason=><p key={reason}><Icone nom="alerte" taille={16}/>{documentReasons[reason]}</p>)}</div>:null}

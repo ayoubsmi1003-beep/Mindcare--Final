@@ -20,6 +20,7 @@ export interface AutoFillTreatment {
   readonly dose: string | null;
   readonly doseUnit: string | null;
   readonly frequency: string | null;
+  readonly timing?: readonly string[];
   readonly instructions?: string | null;
 }
 
@@ -64,7 +65,10 @@ function clean(value: string | null | undefined): string {
 
 /** Le nom réellement porté par le dossier, sans fabriquer de dosage. */
 function treatmentName(treatment: AutoFillTreatment): string {
-  return clean(treatment.medicationRaw) || clean(treatment.brandName) || clean(treatment.inn);
+  const name=clean(treatment.medicationRaw) || clean(treatment.brandName) || clean(treatment.inn);
+  const strength=clean(treatment.strength);
+  return name && !/[+/&]/u.test(name) && /^\d+(?:[.,]\d+)?\s*(?:mg|µg|mcg|g|ui)$/iu.test(strength) && !/\d\s*(?:mg|µg|mcg|g|ml|%|ui)\b/iu.test(name)
+    ? `${name} ${strength}` : name;
 }
 
 /** Normalisation destinée uniquement au rapprochement de deux libellés. */
@@ -79,31 +83,42 @@ function normalized(value: string): string {
 
 /**
  * Une fréquence quotidienne n'est reprise que si elle est EXPLICITE.
- * « matin et soir » n'est pas « 2 fois par jour » : on ne le convertit pas.
+ * Les horaires sont traités séparément, jamais comme un nombre de comprimés.
  */
 export function parseExplicitDailyFrequency(value: string | null | undefined): number | null {
   const text = clean(value).toLocaleLowerCase("fr");
-  const match = /^(\d{1,2})\s*(?:fois|prise|prises)\s*(?:par|\/)\s*jour$/u.exec(text)
-    ?? /^(\d{1,2})\s*\/\s*jour$/u.exec(text);
+  const match = /^(\d+)\s*(?:fois|prise|prises)\s*(?:par|\/)\s*jour$/u.exec(text)
+    ?? /^(\d+)\s*\/\s*jour$/u.exec(text)
+    ?? /^(\d+)$/u.exec(text);
   if (match === null) return null;
   const number = Number(match[1]);
-  return Number.isInteger(number) && number > 0 ? number : null;
+  return Number.isSafeInteger(number) && number > 0 ? number : null;
+}
+
+export function hasSpecialSchedule(instructions: string): boolean {
+  return /besoin|semaine|hebdo|altern|progress|dimin|sur deux|tous les \d+ jours|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|paliers?/iu.test(instructions);
 }
 
 export function explicitDailyFrequency(
   treatment: AutoFillTreatment,
   _lastPrescription: AutoFillPrescription | null,
 ): number | null {
-  return parseExplicitDailyFrequency(treatment.frequency);
+  if(hasSpecialSchedule(treatment.instructions??""))return null;
+  const numeric=parseExplicitDailyFrequency(treatment.frequency);
+  if(numeric!==null)return numeric;
+  const raw=clean(treatment.frequency);
+  const moments=raw ? raw.toLocaleLowerCase("fr").split(/\s*(?:\+|,|;|\bet\b)\s*/u) : (treatment.timing??[]).map(v=>v.toLocaleLowerCase("fr").trim());
+  if(!moments.length || moments.some(v=>!['matin','midi','soir','coucher'].includes(v)))return null;
+  return new Set(moments).size;
 }
 
-/** Une seule ligne par médicament, même si deux sources se recoupent. */
+/** Ne fusionner que deux sources qui décrivent exactement le même schéma. */
 export function uniqueActiveTreatments(source: AutoFillSource): readonly AutoFillTreatment[] {
   const seen = new Set<string>();
   const result: AutoFillTreatment[] = [];
   for (const treatment of source.activeTreatments) {
     if (treatment.status !== "active") continue;
-    const key = clean(treatment.medicationId) || normalized(treatmentName(treatment));
+    const key = JSON.stringify([clean(treatment.medicationId) || normalized(treatmentName(treatment)),treatmentName(treatment),treatment.dose,treatment.doseUnit,treatment.frequency,treatment.timing??[],treatment.instructions??null]);
     if (key === "" || seen.has(key)) continue;
     if (treatmentName(treatment) === "") continue;
     seen.add(key);
@@ -192,6 +207,12 @@ export function withTreatmentCount(content: DocumentContent, count: number): Doc
   return replaceIn(content) as DocumentContent;
 }
 
+function containsStrength(name: string, strength: string): boolean {
+  const compact = (value: string) => value.toLocaleLowerCase("fr").replace(/\s+/gu, "").replace(/,/gu, ".");
+  const token = compact(strength).replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+  return token !== "" && new RegExp(`(^|[^\\d.])${token}(?![\\p{L}\\d])`, "u").test(compact(name));
+}
+
 function medicationNode(treatment: AutoFillTreatment, frequency: number | null): DocumentNode {
   const name = treatmentName(treatment);
   const dose = [clean(treatment.dose), clean(treatment.doseUnit)].filter((part) => part !== "").join(" ");
@@ -206,10 +227,10 @@ function medicationNode(treatment: AutoFillTreatment, frequency: number | null):
       medicationId: clean(treatment.medicationId) || null,
       source: clean(treatment.medicationId) === "" ? "free-text" : "catalogue",
       designation: name,
-      strength: clean(treatment.strength),
+      strength: containsStrength(name, clean(treatment.strength)) ? "" : clean(treatment.strength),
       posology: frequency === null ? "" : `${String(frequency)} fois par jour`,
       quantity: "",
-      frequency: parseExplicitDailyFrequency(treatment.frequency) === null ? clean(treatment.frequency) : "",
+      frequency: frequency === null ? clean(treatment.frequency) || (treatment.timing??[]).join(" + ") : "",
       duration: "",
       administration: "",
       instructions,

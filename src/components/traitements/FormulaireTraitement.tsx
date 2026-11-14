@@ -2,15 +2,15 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
-import { Bouton, ChampSelection, ChampTexte, ChampZoneTexte, Dialogue, Icone } from "@/components/ui";
+import { Bouton, ChampTexte, ChampZoneTexte, Dialogue, Icone } from "@/components/ui";
 import { ListeSuggestions, surligner } from "@/components/recherche/ListeSuggestions";
 import { useRechercheInstantane } from "@/components/recherche/use-recherche-instantanee";
+import { prescriptionSimple as simple } from "@/i18n/prescription-simple";
+import { explicitDailyFrequency } from "@/shared/documents/autofill";
 import { traitements } from "@/i18n/traitements";
 import {
-  getMedicationVariants,
   searchMedicationsPage,
   type MedicationCatalogItem,
-  type MedicationVariant,
 } from "@/services/medications";
 import {
   startTreatment,
@@ -53,12 +53,12 @@ export function FormulaireTraitement({
   const [dose, setDose] = useState("");
   const [doseUnit, setDoseUnit] = useState("");
   const [frequence, setFrequence] = useState("");
+  const [prises,setPrises]=useState("");
+  const generation=useRef(0);
   const [timing, setTiming] = useState<readonly string[]>([]);
   const [instructions, setInstructions] = useState("");
   const [startDate, setStartDate] = useState(aujourdHuiAlger());
   const [endDate, setEndDate] = useState("");
-  const [variantes, setVariantes] = useState<readonly MedicationVariant[] | null>(null);
-  const [doseLibre, setDoseLibre] = useState(false);
   const [busy, setBusy] = useState(false);
   const [erreur, setErreur] = useState<string | null>(null);
   const idListe = useId();
@@ -82,51 +82,25 @@ export function FormulaireTraitement({
     setSelection(null);
     setDose(traitement?.dose ?? "");
     setDoseUnit(traitement?.doseUnit ?? "");
+    generation.current++;
     setFrequence(traitement?.frequency ?? "");
+    setPrises(traitement ? String(explicitDailyFrequency(traitement,null)??"") : "");
     setTiming(traitement?.timing ?? []);
     setInstructions(traitement?.instructions ?? "");
     setStartDate(traitement?.startDate ?? aujourdHuiAlger());
     setEndDate(traitement?.endDate ?? "");
-    setVariantes(null);
-    setDoseLibre(false);
     setErreur(null);
     setBusy(false);
     if (!edition) {
       window.setTimeout(() => inputRef.current?.focus(), 60);
     }
-  }, [ouvert, traitement, edition]);
-
-  useEffect(() => {
-    if (!ouvert || medicationId === null) {
-      setVariantes(null);
-      return;
-    }
-    let vivant = true;
-    setVariantes(null);
-    void getMedicationVariants(medicationId).then((r) => {
-      if (!vivant) return;
-      setVariantes(r.ok ? r.data : []);
-    });
-    return () => {
-      vivant = false;
-    };
-  }, [ouvert, medicationId]);
-
-  useEffect(() => {
-    if (variantes === null) return;
-    const correspond = variantes.some((v) => v.strength === dose);
-    setDoseLibre(!correspond);
-  }, [variantes, dose]);
+  }, [ouvert, traitement, edition,patientId]);
 
   const choisir = useCallback((item: MedicationCatalogItem) => {
     setSelection(item);
     setRecherche("");
     setIndexActif(0);
-    // Le catalogue porte le dosage complet (« 25 mg »). On le garde tel quel :
-    // le diviser en dose + unité ferait diverger le select des variantes, qui
-    // compare la chaîne du catalogue. L'unité reste libre pour une saisie hors
-    // catalogue.
-    setDose(item.strength ?? "");
+    setDose("");
     setDoseUnit("");
   }, []);
 
@@ -155,15 +129,6 @@ export function FormulaireTraitement({
     }
   }
 
-  function basculerTiming(valeur: string): void {
-    const cle = valeur.toLocaleLowerCase("fr");
-    setTiming((prev) =>
-      prev.some((v) => v.toLocaleLowerCase("fr") === cle)
-        ? prev.filter((v) => v.toLocaleLowerCase("fr") !== cle)
-        : [...prev, valeur],
-    );
-  }
-
   function enregistrer(): void {
     setErreur(null);
     if (medicationId === null) {
@@ -179,13 +144,20 @@ export function FormulaireTraitement({
       return;
     }
 
+    const numeric=/^[1-9][0-9]*$/.test(prises) && Number.isSafeInteger(Number(prises));
+    if ((prises!=="" && !numeric) || (!numeric && !frequence.trim())) { setErreur(simple.countRequired);return; }
+    const initialCount=traitement ? String(explicitDailyFrequency(traitement,null)??"") : "";
+    const countChanged=prises!==initialCount;
+    const savedFrequency=numeric && (!traitement || countChanged) ? `${prises} fois par jour` : frequence;
+    const savedTiming=countChanged ? [] : timing;
+    const requestGeneration=generation.current;
     setBusy(true);
     if (traitement !== null) {
       const changes: Record<string, unknown> = {};
       if (dose !== (traitement.dose ?? "")) changes["dose"] = dose.trim() === "" ? null : dose.trim();
       if (doseUnit !== (traitement.doseUnit ?? "")) changes["dose_unit"] = doseUnit.trim() === "" ? null : doseUnit.trim();
-      if (frequence !== (traitement.frequency ?? "")) changes["frequency"] = frequence.trim() === "" ? null : frequence.trim();
-      if (JSON.stringify(timing) !== JSON.stringify(traitement.timing)) changes["timing"] = timing;
+      if (savedFrequency !== (traitement.frequency ?? "")) changes["frequency"] = savedFrequency.trim() === "" ? null : savedFrequency.trim();
+      if (JSON.stringify(savedTiming) !== JSON.stringify(traitement.timing)) changes["timing"] = savedTiming;
       if (instructions !== (traitement.instructions ?? "")) changes["instructions"] = instructions.trim() === "" ? null : instructions.trim();
       if (startDate !== traitement.startDate) changes["start_date"] = startDate === "" ? null : startDate;
       if (endDate !== (traitement.endDate ?? "")) changes["end_date"] = endDate === "" ? null : endDate;
@@ -197,6 +169,7 @@ export function FormulaireTraitement({
       }
 
       void updateTreatment(traitement.id, traitement.currentVersion, changes, consultationId).then((r) => {
+        if(requestGeneration!==generation.current)return;
         setBusy(false);
         if (!r.ok) {
           setErreur(conflit(r.error.technical) ? traitements.formulaire.conflit : r.error.message);
@@ -213,13 +186,14 @@ export function FormulaireTraitement({
       medicationId,
       dose: dose.trim() === "" ? null : dose.trim(),
       doseUnit: doseUnit.trim() === "" ? null : doseUnit.trim(),
-      frequency: frequence.trim() === "" ? null : frequence.trim(),
-      timing: timing.length === 0 ? null : timing,
+      frequency: savedFrequency.trim() === "" ? null : savedFrequency.trim(),
+      timing: savedTiming.length === 0 ? null : savedTiming,
       instructions: instructions.trim() === "" ? null : instructions.trim(),
       startDate: startDate === "" ? null : startDate,
       endDate: endDate === "" ? null : endDate,
       consultationId,
     }).then((r) => {
+      if(requestGeneration!==generation.current)return;
       setBusy(false);
       if (!r.ok) {
         setErreur(conflit(r.error.technical) ? traitements.formulaire.conflit : r.error.message);
@@ -349,80 +323,15 @@ export function FormulaireTraitement({
 
         {medicationId === null ? null : (
           <>
-            <div className="grid grid-cols-1 gap-4 tablet:grid-cols-2">
-              {variantes === null ? (
-                <ChampTexte
-                  libelle={traitements.formulaire.dose}
-                  valeur={dose}
-                  onChange={setDose}
-                  disabled
-                  indication={traitements.formulaire.doseChargement}
-                />
-              ) : variantes.length > 1 && !doseLibre ? (
-                <ChampSelection
-                  libelle={traitements.formulaire.dose}
-                  valeur={dose}
-                  onChange={(v) => {
-                    if (v === "__libre__") {
-                      setDoseLibre(true);
-                      return;
-                    }
-                    setDose(v);
-                    const trouvee = variantes.find((x) => (x.strength ?? "") === v);
-                    if (trouvee?.strength) setDoseUnit("");
-                  }}
-                  options={[
-                    ...variantes.map((v) => ({
-                      valeur: v.strength ?? "",
-                      libelle: v.strength ?? v.rawName,
-                    })),
-                    { valeur: "__libre__", libelle: traitements.formulaire.doseAutre },
-                  ]}
-                />
-              ) : (
-                <ChampTexte
-                  libelle={traitements.formulaire.dose}
-                  valeur={dose}
-                  onChange={setDose}
-                  placeholder="50"
-                />
-              )}
-              <ChampTexte
-                libelle={traitements.formulaire.doseUnite}
-                valeur={doseUnit}
-                onChange={setDoseUnit}
-                placeholder="mg"
-              />
-              <ChampTexte
-                libelle={traitements.formulaire.frequence}
-                valeur={frequence}
-                onChange={setFrequence}
-                placeholder={traitements.formulaire.frequencePlaceholder}
-              />
-              <div className="flex flex-col gap-2">
-                <span className="font-ui text-label font-semibold tracking-label text-ink-700">
-                  {traitements.formulaire.horaires}
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    traitements.formulaire.matin,
-                    traitements.formulaire.midi,
-                    traitements.formulaire.soir,
-                  ].map((h) => (
-                    <Bouton
-                      key={h}
-                      type="button"
-                      taille="compact"
-                      rang="secondaire"
-                      sansFleches
-                      enfonce={timing.some((v) => v.toLocaleLowerCase("fr") === h.toLocaleLowerCase("fr"))}
-                      onClick={() => basculerTiming(h)}
-                    >
-                      {h}
-                    </Bouton>
-                  ))}
-                </div>
-              </div>
+            <ChampTexte libelle={simple.dailyCount} type="number" valeur={prises} onChange={setPrises}/>
+            <details open={Boolean(dose||doseUnit||instructions||endDate||(!prises&&frequence))}>
+              <summary>{simple.details}</summary>
+              {!prises ? <p role="alert">{simple.review}</p> : null}
+              {timing.length ? <p>{simple.previousTiming} : {timing.join(" + ")}</p> : null}
+              <ChampTexte libelle={traitements.formulaire.dose} valeur={dose} onChange={setDose}/>
+              <ChampTexte libelle={traitements.formulaire.doseUnite} valeur={doseUnit} onChange={setDoseUnit}/>
+              {!prises ? <ChampTexte libelle={traitements.formulaire.frequence} valeur={frequence} onChange={setFrequence}/> : null}
+              <div className="grid grid-cols-1 gap-4 tablet:grid-cols-2">
               <ChampTexte
                 libelle={traitements.formulaire.dateDebut}
                 type="date"
@@ -445,6 +354,7 @@ export function FormulaireTraitement({
               placeholder={traitements.formulaire.instructionsPlaceholder}
               lignes={3}
             />
+            </details>
           </>
         )}
 

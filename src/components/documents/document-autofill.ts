@@ -45,6 +45,8 @@ export function buildAutoFillSource(
   workspace: PatientWorkspace | null,
   now: Date = new Date(),
 ): AutoFillSource {
+  // Une réponse tardive du dossier précédent ne doit jamais alimenter ce patient.
+  if(patient && workspace && patient.id!==workspace.identite.id)workspace=null;
   return {
     idDocumentNumber: clean(workspace?.identification.idDocumentNumber) || clean(patient?.idDocumentNumber),
     idDocumentIssuer: clean(workspace?.identification.idDocumentIssuer) || clean(patient?.idDocumentIssuer),

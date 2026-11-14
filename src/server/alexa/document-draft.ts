@@ -34,6 +34,7 @@ const treatmentRow = z.object({
   dose: z.string().nullable(),
   dose_unit: z.string().nullable(),
   frequency: z.string().nullable(),
+  timing: z.array(z.string()).nullable().optional(),
 }).passthrough();
 
 const prescriptionLine = z.object({
@@ -95,6 +96,7 @@ function treatmentFromRow(row: z.infer<typeof treatmentRow>): AutoFillTreatment 
     dose: row.dose,
     doseUnit: row.dose_unit,
     frequency: row.frequency,
+    timing: row.timing ?? [],
   };
 }
 
