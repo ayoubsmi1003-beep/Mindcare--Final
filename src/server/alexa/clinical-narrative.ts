@@ -11,7 +11,7 @@ import {dialogue} from '@/i18n/alexa-dialogue';
 import {alexaRecordCopy} from '@/i18n/alexa-records';
 
 export const NARRATIVE_VERSION = SESSION_NARRATIVE_VERSION;
-export const NARRATIVE_HASH = createHash("sha256").update(ALEXA_CONVERSATION_MODEL + NARRATIVE_VERSION + copy.prompt + copy.sessionInstruction + copy.sessionRepairPrompt + copy.multiVisitPrompt + copy.multiVisitRetryPrompt + copy.chronologySelectionPrompt).digest("hex");
+export const NARRATIVE_HASH = createHash("sha256").update(ALEXA_CONVERSATION_MODEL + NARRATIVE_VERSION + copy.prompt + copy.sessionInstruction + copy.sessionRepairPrompt + copy.multiVisitPrompt + copy.multiVisitRetryPrompt + copy.chronologySelectionPrompt + copy.clausePrompt('')).digest("hex");
 export const CASE_NARRATIVE_VERSION='alexa-case-extractive-fr-v1';
 export const CASE_NARRATIVE_HASH=createHash('sha256').update(ALEXA_CONVERSATION_MODEL+CASE_NARRATIVE_VERSION+copy.caseSelectionPrompt).digest('hex');
 const NARRATIVE_BATCH_CHARACTER_LIMIT=12000;
@@ -304,6 +304,29 @@ function checkClinicalNarrative(value: unknown, sources: readonly NarrativeSourc
 }
 export function validateClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): string | null {
  return checkClinicalNarrative(value,sources).text;
+}
+
+export type NoteArea = keyof typeof copy.clauseAreas;
+const clauseSchema = z.object({ text: z.string().trim().min(10).max(600) }).strict();
+/**
+ * One recorded field told as one sentence by the local model. Each clause of the field is cited, so the
+ * checker holds the rewrite to the note's own words: a negation or an uncertainty must survive verbatim.
+ * Null whenever anything cannot be proven; the caller then shows the field as recorded.
+ */
+export async function rewriteNoteClause(area: NoteArea, text: string, signal: AbortSignal): Promise<string | null> {
+  const source = text.replace(/\s+/gu, " ").trim();
+  if (source.length < 10 || source.length > 380 || unsafe.test(source)) return null;
+  const evidence = source.split(/(?<=[.;!?])\s+/u).map(clause => clause.trim()).filter(clause => clause.length >= 10).map(quote => ({ id: "field", quote }));
+  if (!evidence.length) return null;
+  try {
+    const raw = await inferTextForTask("narrative", [{ role: "system", content: copy.clausePrompt(copy.clauseAreas[area]) }, { role: "user", content: source }],
+      { jsonSchema: z.toJSONSchema(clauseSchema), maxOutputTokens: 120, timeoutMs: 120000, signal });
+    const parsed = clauseSchema.safeParse(JSON.parse(raw));
+    return parsed.success ? validateClinicalNarrative({ sentences: [{ text: parsed.data.text, evidence }] }, [{ id: "field", text: source }]) : null;
+  } catch (error) {
+    if (signal.aborted) throw error;
+    return null;
+  }
 }
 
 /** A real model chooses the evidence; only whole recorded sentences reach this mode. */
