@@ -133,8 +133,11 @@ export function unknownNameRuns(text: string): Run[] { return unknownRuns(text);
  * reçu"), "practice" when it names nobody but a day, a period or the patients as a group, null when nothing tells.
  * "Le patient suivant" and "il nous reste" belong to the agenda and the till. "[X]" is the catalogue's own stand-in for a name.
  */
+// A complex inversion repeats its subject: in "Ma matinée de demain est-elle libre ?" the pronoun is the morning, nobody.
+const PRACTICE_SUBJECT_INVERSION = /^((?:mon|ma|mes|notre|nos|le|la|les|l'|ce|cet|cette|ces) ?(?:agenda|planning|programme|cabinet|caisse|recettes?|depenses?|charges?|journee|matinee|soiree|apres-midi|matin|soir|semaine|mois|annee|trimestre|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|creneaux?)\b(?:(?!\bqu|,)[^?])*?\b[a-z]+)-(?:t-)?(?:il|elle)s?\b/u;
+
 export function readFamily(text: string): "patient" | "practice" | null {
-  const p = fold(text).replace(/\b(?:le|la|mon|ma) (?:patient|patiente) (?:suivant|suivante|prochain|prochaine|d'apres|precedent|precedente)\b|\bil (?:nous|me|vous) reste\b|\bs'il (?:te|vous) plait\b|\by (?:en )?a-t-il\b/gu, " ");
+  const p = fold(text).replace(PRACTICE_SUBJECT_INVERSION, "$1").replace(/\b(?:le|la|mon|ma) (?:patient|patiente) (?:suivant|suivante|prochain|prochaine|d'apres|precedent|precedente)\b|\bil (?:nous|me|vous) reste\b|\bs'il (?:te|vous) plait\b|\by (?:en )?a-t-il\b/gu, " ");
   // Days and slots are not names, even typed in lower case next to an unknown verb ("viennent vendredi").
   const calendar = /\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|journ[ée]e|cr[ée]neaux?|programme)\b/giu;
   if (PRONOUN_CUE.test(p) || /\bon (?:le|la|l')|\b(?:le|la|l')(?: ?[a-z]+)-on\b|\[x\]/u.test(p) || unknownRuns(text.replace(calendar, " ")).some((run) => run.words.length >= 2 || run.upper)) return "patient";

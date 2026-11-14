@@ -77,7 +77,11 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    Vérificateur « mot pour mot » corrigé (filtre de candidats trop large, `a911bf8`). Ouverts : l'agenda ne lit ni « malades »
    ni un mois nommé ; « Il faut décaler… » non vu comme changement par la compréhension (les cadres le refusent) ; le choix du
    modèle 1B (température 0) dépend des huit options montrées, la couche de sens s'abstient quand il diverge d'e5 (levier suivant :
-   e5 seul au-delà d'une marge, mesuré en leave-one-out sur les paraphrases de dév.).
+   e5 seul : mesuré, rejeté, 99/168).
+   Catalogue d'intentions 168 → 316 paraphrases de dév. (doc 20 §39) : sur un jeu de dév. tenu à part (86 phrases), e5 top-1 68 → 75,
+   accord des deux juges 26 justes / 3 faux → 26 / 0, faux positifs 1 → 0. 22 exemples trop proches de C200–C202 reformulés,
+   le test garde toutes les campagnes. Inversion complexe (« Ma matinée de demain est-elle libre ? ») : plus lue comme une personne.
+   Levier suivant : le choix fermé du modèle 1B (il n'approuve e5 que 26 fois sur 75).
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.

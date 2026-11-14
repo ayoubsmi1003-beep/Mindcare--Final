@@ -603,3 +603,32 @@ the patient's identity, margin 0.32); at 0.04 and score ≥ 0.4, 21 wrong of 92.
 abstention, so the two judges stay. The measured gap is the catalogue's size (about ten examples per intent): e5 generalises
 from it poorly. The lever that remains is more and more varied development paraphrases per intent, measured leave-one-out
 the same way, never with campaign questions.
+
+## 39. A larger intent catalogue, measured on a held-out development set
+
+**Method.** Leave-one-out alone cannot compare two catalogues of different sizes, so a fixed **held-out development set** was
+written first: 86 new sentences (about three per intent: spoken, fragments, pronouns, named patients, periods), never in the
+catalogue, never a campaign question (each checked under Jaccard 0.7 against the 1,023 turns of C200, C201 and its holdout, C202
+and C270; H270 is never opened by this check), plus the 12 negatives. It stays outside the repository (scratchpad), so it cannot leak into the code.
+
+**Change.** The catalogue grew from 168 to 316 development paraphrases, the thin intents most (finance, activity, agenda ranks,
+identity, documents). The audit also found **22 existing examples** equal or close (Jaccard ≥ 0.7) to C200–C202 regression turns:
+the catalogue test only guarded C270. They were reworded, and the test now guards every campaign file (rule A). One new
+example exposed a general reading defect, fixed: in a complex inversion the pronoun repeats its subject ("Ma matinée de demain
+est-elle libre ?", "Les recettes ont-elles augmenté ?"), so a calendar or practice subject no longer makes the question about a
+person. A clinical subject ("La posologie a-t-elle évolué ?") still does.
+
+**Measured.**
+
+| | e5 top-1, held-out dev | shortlist holds it | two judges agree: right / wrong / abstain | false reads (12 negatives) |
+|---|---|---|---|---|
+| 168 examples | 68/86 | 85/86 | 26 / 3 / 57 | 1 ("Rédige un certificat…" → history) |
+| 316 examples | **75/86** | 85/86 | 26 / **0** / 60 | **0** |
+
+Leave-one-out top-1 went from 58.9 % (99/168) to 75.6 % (239/316). The larger catalogue removed every wrong read and the false
+read, but did not add right ones: **the binding constraint is now the 1B closed choice**, which agrees with e5 on 26 of the 75
+sentences e5 gets right. The next lever is that choice (what the model is shown: the labels, the options), measured on the same
+held-out set.
+
+Remaining gap noted, not fixed: two lower-case unknown words in a row are read as a name ("on gagne vraiment"), which the
+lower-case-name rule needs; changing it would put names typed in lower case at risk.

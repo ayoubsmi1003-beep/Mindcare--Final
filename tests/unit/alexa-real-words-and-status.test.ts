@@ -66,6 +66,14 @@ describe("a verb with its pronoun is never a name", () => {
   });
 });
 
+describe("a complex inversion repeats its subject", () => {
+  it("names nobody when the subject is the practice's calendar or money, and still a person otherwise", async () => {
+    const { readFamily } = await import("@/shared/alexa/patient-question");
+    for (const text of ["Mon agenda de jeudi est-il complet ?", "Ma soirée de vendredi est-elle chargée ?", "Les recettes ont-elles augmenté ce mois-ci ?"]) expect(readFamily(text), text).toBe("practice");
+    for (const text of ["La posologie a-t-elle évolué ?", "Son traitement a-t-il changé ce mois-ci ?", "La journée, a-t-il dit qu'il viendrait ?"]) expect(readFamily(text), text).toBe("patient");
+  });
+});
+
 describe("thanks with their acknowledgements", () => {
   it("are a courtesy, not a request", async () => {
     const { planRequest } = await import("@/shared/alexa/request-plan");

@@ -82,12 +82,13 @@ describe("the catalogue", () => {
       for (const example of entry.examples) expect(example).not.toMatch(/\b(?:annule|déplace|crée|prépare|envoie|modifie|supprime|enregistre)\b/iu);
     }
   });
-  it("never reuses an evaluation question (C270, and H270 when present)", () => {
+  it("never reuses an evaluation question (C200, C201, C202, C270, and H270 when present)", () => {
     const norm = (text: string) => new Set(text.toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "").replace(/\{[^}]+\}|\[x\]/giu, " ").replace(/[^\p{L}\p{N} ]/gu, " ").split(/\s+/u).filter((word) => word.length > 1));
     const jaccard = (a: Set<string>, b: Set<string>) => { let shared = 0; for (const word of a) if (b.has(word)) shared++; return shared / (a.size + b.size - shared); };
-    const base = join(process.cwd(), "tests", "eval", "alexa-clinical-conversational", "v4", "cases.json");
+    const campaigns = join(process.cwd(), "tests", "eval", "alexa-clinical-conversational");
+    const files = ["v1/cases.json", "v2/cases.json", "v2/holdout.json", "v3/cases.json", "v4/cases.json"].map((file) => join(campaigns, file));
     const holdout = join(process.cwd(), ".eval-out", "alexa-c270", "holdout.json");
-    const turns = [base, ...(existsSync(holdout) ? [holdout] : [])].flatMap((file) => (JSON.parse(readFileSync(file, "utf8")) as { cases: { turns: { say: string }[] }[] }).cases.flatMap((item) => item.turns.map((turn) => norm(turn.say))));
+    const turns = [...files, ...(existsSync(holdout) ? [holdout] : [])].flatMap((file) => (JSON.parse(readFileSync(file, "utf8")) as { cases: { turns: { say: string }[] }[] }).cases.flatMap((item) => item.turns.map((turn) => norm(turn.say))));
     const close: string[] = [];
     for (const entry of INTENT_CATALOGUE) for (const example of entry.examples) {
       const mine = norm(example);
