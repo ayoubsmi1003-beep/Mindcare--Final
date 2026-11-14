@@ -84,6 +84,9 @@ export function useRechercheInstantane<T>({
 } {
   const [etat, setEtat] = useState<EtatRecherche<T>>(VIDE as EtatRecherche<T>);
   const seq = useRef(0);
+  const resolvedQuery = useRef<string|null>(null);
+  const currentQuery = useRef(requete.trim());
+  currentQuery.current=requete.trim();
   const cache = useRef(new Map<string, PageRecherche<T>>());
   const chercherRef = useRef(chercher);
   chercherRef.current = chercher;
@@ -92,11 +95,13 @@ export function useRechercheInstantane<T>({
 
   const charger = useCallback(
     async (q: string, offset: number, ajouter: boolean) => {
+      if(q!==currentQuery.current)return;
       const id = ++seq.current;
       const cacheKey = `${offset}:${taille}:${q.toLocaleLowerCase("fr")}`;
       const connue = cache.current.get(cacheKey);
 
       if (connue !== undefined) {
+        resolvedQuery.current=q;
         setEtat((precedent) => ({
           resultats: ajouter
             ? fusionner(precedent.resultats, connue.rows, cleRef.current)
@@ -117,7 +122,7 @@ export function useRechercheInstantane<T>({
       }));
 
       const reponse = await chercherRef.current(q, taille, offset);
-      if (seq.current !== id) return;
+      if (seq.current !== id || q!==currentQuery.current) return;
 
       if (!reponse.ok) {
         setEtat((precedent) => ({
@@ -129,6 +134,7 @@ export function useRechercheInstantane<T>({
         return;
       }
 
+      resolvedQuery.current=q;
       cache.current.set(cacheKey, reponse.data);
       if (cache.current.size > 40) {
         const premiere = cache.current.keys().next();
@@ -151,10 +157,12 @@ export function useRechercheInstantane<T>({
   useEffect(() => {
     const q = requete.trim();
     seq.current += 1;
+    resolvedQuery.current=null;
     if (!actif || q.length < minimum) {
       setEtat(VIDE);
       return;
     }
+    setEtat({...VIDE,chargement:true});
     const minuteur = setTimeout(() => {
       void charger(q, 0, false);
     }, delai);
@@ -163,7 +171,7 @@ export function useRechercheInstantane<T>({
 
   const chargerPlus = useCallback(() => {
     const q = requete.trim();
-    if (!actif || q.length < minimum) return;
+    if (!actif || q.length < minimum || resolvedQuery.current!==q) return;
     if (etat.chargement || etat.chargementPlus) return;
     if (etat.resultats.length >= etat.total) return;
     void charger(q, etat.resultats.length, true);
@@ -171,6 +179,7 @@ export function useRechercheInstantane<T>({
 
   const reinitialiser = useCallback(() => {
     seq.current += 1;
+    resolvedQuery.current=null;
     setEtat(VIDE);
   }, []);
 

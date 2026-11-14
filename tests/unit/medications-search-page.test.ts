@@ -103,4 +103,17 @@ describe("paged medication catalogue search", () => {
       expect.objectContaining({ code: "indisponible" }),
     );
   });
+
+  it("keeps the total when a requested page is beyond the final match",async()=>{
+    mocked.rpc.mockResolvedValueOnce({ok:true,data:[]}).mockResolvedValueOnce({ok:true,data:[row]});
+    await expect(searchMedicationsPage('doli',10,40)).resolves.toMatchObject({ok:true,data:{rows:[],total:33,offset:40}});
+  });
+  it("distinguishes no matches, missing catalogue and unavailable metadata",async()=>{
+    mocked.rpc.mockResolvedValueOnce({ok:true,data:[]}).mockResolvedValueOnce({ok:true,data:[{available_count:15645}]});
+    await expect(searchMedicationsPage('unknown')).resolves.toMatchObject({ok:true,data:{rows:[],total:0}});
+    mocked.rpc.mockResolvedValueOnce({ok:true,data:[]}).mockResolvedValueOnce({ok:true,data:[{available_count:0}]});
+    await expect(searchMedicationsPage('unknown')).resolves.toMatchObject({ok:false,error:{context:'catalogue-absent'}});
+    mocked.rpc.mockResolvedValueOnce({ok:true,data:[]}).mockResolvedValueOnce({ok:false,error:{code:'indisponible',message:'Catalogue indisponible.'}});
+    await expect(searchMedicationsPage('unknown')).resolves.toMatchObject({ok:false,error:{code:'indisponible'}});
+  });
 });

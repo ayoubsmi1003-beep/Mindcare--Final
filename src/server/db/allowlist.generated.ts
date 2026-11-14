@@ -69,6 +69,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "get_finance_overview",
   "get_jarvis_history",
   "get_live_history",
+  "get_medication_catalog_status",
   "get_medication_variants",
   "get_my_cabinet",
   "get_my_profile",
@@ -170,4 +171,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 148;
+export const NB_RPC = 149;

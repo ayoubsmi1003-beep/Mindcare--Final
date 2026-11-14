@@ -5,6 +5,7 @@
  */
 
 import { z } from "zod";
+import {catalogueIdentite as messages} from "@/i18n/catalogue-identite";
 
 import { db } from "./db";
 import { logFieldsFor } from "./errors";
@@ -98,13 +99,26 @@ export async function searchMedicationsPage(
     });
     return err({
       code: "regle-metier",
-      message: "Réponse catalogue incohérente.",
+      message: messages.catalogueInvalid,
       technical: "schema",
       context: "rpc:search_medications_page",
     });
   }
 
-  const total = parsed.data[0]?.total_count ?? 0;
+  let total = parsed.data[0]?.total_count ?? 0;
+  if(parsed.data.length===0){
+    if(depart>0){
+      const first=await searchMedicationsPage(q,1,0);
+      if(!first.ok)return first;
+      total=first.data.total;
+    }else{
+      const status=await db().rpc<unknown>("get_medication_catalog_status",{});
+      if(!status.ok)return err(status.error);
+      const count=z.array(z.object({available_count:z.coerce.number().int().nonnegative()})).length(1).safeParse(status.data);
+      if(!count.success)return err({code:"regle-metier",message:messages.catalogueInvalid});
+      if(count.data[0]!.available_count===0)return err({code:"regle-metier",message:messages.catalogueAbsent,context:"catalogue-absent"});
+    }
+  }
   log.info("medications.recherche", { count: parsed.data.length });
   return ok({
     rows: parsed.data.map((row) => toItem(row)),
@@ -168,7 +182,7 @@ export async function getMedicationVariants(
     });
     return err({
       code: "regle-metier",
-      message: "Réponse catalogue incohérente.",
+      message: messages.catalogueInvalid,
       technical: "schema",
       context: "rpc:get_medication_variants",
     });
