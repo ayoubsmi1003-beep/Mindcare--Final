@@ -4,7 +4,8 @@
  * Two local steps, no network (rule 1), no new dependency:
  *  1. a SHORTLIST of the 8 closest catalogue intents under the e5 model already loaded for the books
  *     (centred vectors, nearest class centroid);
- *  2. ONE closed-choice call to the local model, whose output is constrained to those 8 ids or "none".
+ *  2. ONE closed-choice call to the local model on the CHOICES closest, each shown with one example, constrained to their ids
+ *     or "none".
  *
  * Why not e5 alone: measured on the catalogue's own paraphrases (leave-one-out, doc 20), nearest neighbours under e5-base pick
  * the right intent 53 % of the time at best; short French questions about one patient all embed close together. The right
@@ -19,7 +20,7 @@
 import { z } from "zod";
 import { INTENT_CATALOGUE, type CatalogueIntent } from "@/shared/alexa/intent-catalogue";
 import { readFamily, unknownNameRuns } from "@/shared/alexa/patient-question";
-import { isClinicalKnowledgeQuestion } from "@/shared/alexa/request-contract";
+import { asksForAChange, isClinicalKnowledgeQuestion } from "@/shared/alexa/request-contract";
 import { intentChoicePrompt } from "@/i18n/alexa-agent";
 import { inferTextForTask } from "./inference/registry";
 
@@ -27,6 +28,9 @@ export type Embed = (text: string) => Promise<readonly number[] | null>;
 export type Choose = (text: string, shortlist: readonly CatalogueIntent[], signal: AbortSignal) => Promise<string | null>;
 
 export const SHORTLIST = 8;
+/** How many of the shortlist the local model chooses from. Measured on a held-out development set (doc 20 §40): with 3
+ * options and an example each, 37 right of 86 instead of 26 with 8 bare labels; the 1B model reads few, concrete options better. */
+export const CHOICES = 3;
 /** Calibrated for intfloat/multilingual-e5-base (768d). Another space means another calibration: the layer stays off. */
 export const SEMANTIC_RECIPE = "e5-base";
 
@@ -84,7 +88,7 @@ export async function shortlistIntents(text: string, embed: Embed, size = SHORTL
 export const chooseWithLocalModel: Choose = async (text, shortlist, signal) => {
   const ids = shortlist.map((intent) => intent.id);
   const schema = z.object({ intent: z.enum(["none", ...ids]) }).strict();
-  const options = shortlist.map((intent) => `${intent.id} : ${intent.label}`).join("\n");
+  const options = shortlist.map((intent) => `${intent.id} : ${intent.label} (exemple : « ${intent.examples[0]} »)`).join("\n");
   const raw = await inferTextForTask("intent_choice", [{ role: "system", content: intentChoicePrompt(options) }, { role: "user", content: maskNames(text) }],
     { jsonSchema: z.toJSONSchema(schema), maxOutputTokens: 24, timeoutMs: 90_000, signal });
   const parsed = schema.safeParse(JSON.parse(raw));
@@ -95,17 +99,20 @@ export const chooseWithLocalModel: Choose = async (text, shortlist, signal) => {
  * The intent a request means, or null (then nothing changes for this turn).
  * Two independent judges must agree: the model's choice counts only when it is also e5's closest intent. Measured on the
  * development paraphrases (doc 20 §8): agreement gave 80 right and 1 wrong of 168; any of the 8 gave 85 right and 30 wrong.
- * The model sees all 8, so its choice is not steered by the order.
+ * A record is only read when the words say who or when (doc 20 §40): "J'ai faim" names neither, and no model choice is asked.
  */
 const PATIENT_MONEY = /\b(?:regl[ea]\w*|payee?s?|payer|paiements?|argent|montants?|dinars?|soldes?|dettes?|impaye\w*|encaiss\w*|factur\w*)\b/u;
 
 export async function intentByMeaning(text: string, embed: Embed, choose: Choose, signal: AbortSignal): Promise<CatalogueIntent | null> {
   // A question for the books is never a record read, whoever calls this (measured: "dose maximale de sertraline" → treatments).
   if (isClinicalKnowledgeQuestion(text)) return null;
+  // Nor is a change: "Ajoute un rendez-vous demain" must never be answered with the day's list.
+  if (asksForAChange(text)) return null;
+  if (readFamily(text) === null) return null;
   const shortlist = await shortlistIntents(text, embed);
   if (!shortlist?.length) return null;
   // No catalogue intent reads one patient's payments: "combien a-t-il réglé" must not become his consultation count (C270 p2).
   if (shortlist[0]!.target.family === "patient" && PATIENT_MONEY.test(text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase())) return null;
-  const id = await choose(text, shortlist, signal).catch(() => null);
+  const id = await choose(text, shortlist.slice(0, CHOICES), signal).catch(() => null);
   return id !== null && id === shortlist[0]!.id ? shortlist[0]! : null;
 }

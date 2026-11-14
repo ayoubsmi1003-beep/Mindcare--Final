@@ -66,6 +66,14 @@ describe("a verb with its pronoun is never a name", () => {
   });
 });
 
+describe("writing a document or scheduling is a change", () => {
+  it("whatever the verb, while the same words used for a read stay a read", async () => {
+    const { asksForAChange } = await import("@/shared/alexa/request-contract");
+    for (const text of ["Rédige un certificat de repos pour lui.", "Écris une lettre au confrère.", "Fais-moi une ordonnance.", "Peux-tu planifier une consultation jeudi ?", "Il faut décaler mes rdv de cet après-midi.", "Rajoute une séance vendredi.", "Avance son rendez-vous d'une heure."]) expect(asksForAChange(text), text).toBe(true);
+    for (const text of ["Le programme de la journée ?", "Prépare-moi une synthèse du dossier.", "Fais-moi la liste des certificats émis.", "Donne-moi les rendez-vous de demain.", "Avance la lecture."]) expect(asksForAChange(text), text).toBe(false);
+  });
+});
+
 describe("a complex inversion repeats its subject", () => {
   it("names nobody when the subject is the practice's calendar or money, and still a person otherwise", async () => {
     const { readFamily } = await import("@/shared/alexa/patient-question");

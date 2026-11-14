@@ -81,7 +81,9 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    Catalogue d'intentions 168 → 316 paraphrases de dév. (doc 20 §39) : sur un jeu de dév. tenu à part (86 phrases), e5 top-1 68 → 75,
    accord des deux juges 26 justes / 3 faux → 26 / 0, faux positifs 1 → 0. 22 exemples trop proches de C200–C202 reformulés,
    le test garde toutes les campagnes. Inversion complexe (« Ma matinée de demain est-elle libre ? ») : plus lue comme une personne.
-   Levier suivant : le choix fermé du modèle 1B (il n'approuve e5 que 26 fois sur 75).
+   Choix fermé du 1B (doc 20 §40) : 3 options avec un exemple chacune, la conversation = « none », rien lu sans « qui » ni
+   « quand » : jeu de dév. 26 → 35 justes, 1 faux, 0 faux positif sur 20. Rédiger un document / planifier = changement (général).
+   À faire : rejouer C202/C200/C201 avec ces changements.
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.

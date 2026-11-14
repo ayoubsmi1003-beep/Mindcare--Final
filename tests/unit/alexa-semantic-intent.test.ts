@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { INTENT_CATALOGUE } from "@/shared/alexa/intent-catalogue";
 import { renderIntent } from "@/shared/alexa/intent-render";
 import { readFamily } from "@/shared/alexa/patient-question";
-import { intentByMeaning, maskNames, shortlistIntents, SHORTLIST, type Choose, type Embed } from "@/server/alexa/semantic-intent";
+import { CHOICES, intentByMeaning, maskNames, shortlistIntents, SHORTLIST, type Choose, type Embed } from "@/server/alexa/semantic-intent";
 
 const ASOF = "2026-10-26T09:30:00+01:00";
 const byId = (id: string) => INTENT_CATALOGUE.find((entry) => entry.id === id)!;
@@ -36,6 +36,13 @@ describe("reading a request by meaning", () => {
     expect(await intentByMeaning(text, toyEmbed, pick(second), signal)).toBeNull();
     expect(await intentByMeaning(text, toyEmbed, async () => { throw new Error("LocalModelTimeout"); }, signal)).toBeNull();
     expect(await intentByMeaning(text, async () => null, pick("agenda.count"), signal)).toBeNull();
+  });
+  it("reads nothing for a change, or for words that say neither who nor when, and offers the model only the closest few", async () => {
+    let offered = 0;
+    const agreeing: Choose = async (_text, list) => { offered = list.length; return list[0]!.id; };
+    for (const text of ["J'ai faim.", "Ajoute un rendez-vous demain à 10 h.", "Rédige un certificat de repos pour lui."]) expect(await intentByMeaning(text, toyEmbed, agreeing, signal), text).toBeNull();
+    expect((await intentByMeaning(byId("agenda.count").examples[0]!, toyEmbed, agreeing, signal))?.id).toBe("agenda.count");
+    expect(offered).toBe(CHOICES);
   });
   it("never reads a question about a patient's money as another patient read", async () => {
     const money = "Combien de dinars nous a-t-elle donnés depuis le début ?";

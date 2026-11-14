@@ -632,3 +632,32 @@ held-out set.
 
 Remaining gap noted, not fixed: two lower-case unknown words in a row are read as a name ("on gagne vraiment"), which the
 lower-case-name rule needs; changing it would put names typed in lower case at risk.
+
+## 40. The 1B closed choice: what the model is shown, and when it is asked
+
+**Diagnosis** (held-out development set of §39, production code path). Of 86 sentences, the 1B model answered "none" to 38,
+mostly where e5's closest intent was right and the request plain ("Les recettes d'octobre ?"), and chose another option for 15.
+It was shown 8 bare labels and told to answer "none" unless one matched "exactly".
+
+**Variants measured** (same 86 sentences, 20 negatives: book questions, changes, small talk):
+
+| what the model is shown | right | wrong | false reads |
+|---|---|---|---|
+| 8 labels, "exactly" (before) | 26 | 0 | 0 of 12 |
+| 8 labels, "the best", none only for no read | 26 | 3 | 1 — rejected |
+| 3 closest labels | 37 | 2 | 4 — rejected |
+| 3 closest, one example each | 45 | 1 | 3 — rejected |
+| 3 closest, one example each, small talk is "none" | 37 | 1 | 1 ("J'ai faim") |
+| **the same, and nothing read when the words say neither who nor when** | **35** | **1** | **0** |
+
+**Kept:** the last line, measured end to end through `intentByMeaning` (4.1 s per turn on this PC). The remaining wrong read is
+"Il en est où, globalement ?" → the identity instead of the summary, of the same patient.
+
+**Found on the way, fixed in general:** creating a document or scheduling was not understood as a change. "Rédige un
+certificat…", "Écris une lettre…", "Peux-tu planifier une consultation…", "Rajoute une séance…" left `wantsChange` false, so the
+read frames and the meaning layer could answer them with a read (the 168-example catalogue read "Rédige un certificat d'arrêt de
+travail" as the patient's history). Two verb classes now count: writing a document, only with a document for object ("Prépare-moi
+une synthèse" stays a read), and scheduling, only with an object ("Le programme de la journée ?" stays a read; "avance" and
+"recule" only with an appointment). `intentByMeaning` also refuses a change itself, whoever calls it.
+
+Not yet measured: the regression campaigns with these changes (next).

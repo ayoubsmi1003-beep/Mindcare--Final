@@ -363,7 +363,13 @@ const NOT_A_SUBJECT=/^(?:quoi|quel|quelle|quels|quelles|comment|pourquoi|quand|o
  * Phrasings this misses, such as a lowercase first name, still get the opening sentence of a list of
  * references, which says the passages come from books and not from a record.
  */
-const WRITE_COMMAND=/^(?:(?:alexa|s'il (?:te|vous) plait|merci de|peux-tu|pouvez-vous|tu peux|vous pouvez|je veux que tu|je voudrais que tu|je veux|je voudrais|j'aimerais|je souhaite|je souhaiterais|il faut|il faudrait|est-ce que tu peux|est-ce que vous pouvez|pourrais-tu|pourriez-vous)[, ]+)*(?:marque[rzs]?|supprime[rzs]?|efface[rzs]?|archive[rzs]?|annule[rzs]?|cloture[rzs]?|modifie[rzs]?|change[rzs]?|ajoute[rzs]?|cree[rzs]?|enregistre[rzs]?|envoie|envoyer|envoyez|valide[rzs]?|signe[rzs]?|confirme[rzs]?|remplace[rzs]?|retire[rzs]?|desactive[rzs]?|reactive[rzs]?|met(?:s|tre|tez)? a jour|corrige[rzs]?|deplace[rzs]?|reporte[rzs]?|encaisse[rzs]?|renouvelle[rzs]?|arrete[rzs]?)\b/u;
+const ASKING="(?:(?:alexa|s'il (?:te|vous) plait|merci de|peux-tu|pouvez-vous|tu peux|vous pouvez|je veux que tu|je voudrais que tu|je veux|je voudrais|j'aimerais|je souhaite|je souhaiterais|il faut|il faudrait|est-ce que tu peux|est-ce que vous pouvez|pourrais-tu|pourriez-vous)[, ]+)*";
+// Writing a document is a change only with a document for object ("Prépare-moi une synthèse" stays a read).
+const WRITE_DOCUMENT=new RegExp(`^${ASKING}(?:redige[rzs]?|ecri[st]|ecrire|ecrivez|etabli[rst]?|etablissez|delivre[rzs]?|genere[rzs]?|prepare[rzs]?|fai[st]|faire|faites|emet[st]?|emettre)(?:-(?:moi|lui|nous|leur))? (?:un|une|le|la|l'|les|des|son|sa|ses|mon|ma|mes|nouvel|nouvelle) ?(?:nouvel(?:le)? )?(?:certificats?|ordonnances?|lettres?|courriers?|attestations?|arrets? de travail|justificatifs?|recus?|factures?)\\b`,"u");
+// Scheduling is a change only with an object ("Programme de demain ?" stays a read).
+// "avance" and "recule" only with an appointment for object ("Avance la lecture" is no change).
+const SCHEDULE_COMMAND=new RegExp(`^${ASKING}(?:(?:programme[rz]?|planifie[rzs]?|fixe[rzs]?|decale[rzs]?|reprogramme[rzs]?|inscri[st]|inscrire|cale[rzs]?)(?:-(?:le|la|les|lui|moi))? (?:un|une|le|la|l'|les|des|son|sa|ses|mon|ma|mes|ce|cet|cette|ces|tous|toutes)\\b|(?:avance[rzs]?|recule[rzs]?) (?:un|une|le|la|l'|les|son|sa|ses|mon|ma|mes|ce|cet|cette|ces) ?(?:rendez-vous|rdv|consultations?|seances?)\\b)`,"u");
+const WRITE_COMMAND=new RegExp(`^${ASKING}(?:rajoute[rzs]?|marque[rzs]?|supprime[rzs]?|efface[rzs]?|archive[rzs]?|annule[rzs]?|cloture[rzs]?|modifie[rzs]?|change[rzs]?|ajoute[rzs]?|cree[rzs]?|enregistre[rzs]?|envoie|envoyer|envoyez|valide[rzs]?|signe[rzs]?|confirme[rzs]?|remplace[rzs]?|retire[rzs]?|desactive[rzs]?|reactive[rzs]?|met(?:s|tre|tez)? a jour|corrige[rzs]?|deplace[rzs]?|reporte[rzs]?|encaisse[rzs]?|renouvelle[rzs]?|arrete[rzs]?)\\b`,"u");
 /** Changes no Alexa action exists for. Answered at once: the model can't reach an action that isn't there. */
 export function hasNoChangeAction(text:string):boolean{
  const plain=fold(text).trim();
@@ -374,7 +380,7 @@ export function hasNoChangeAction(text:string):boolean{
 export function asksForAChange(text:string):boolean{
  const plain=fold(text).trim();
  if(/^change d'avis\b/u.test(plain)||/\?\s*$/u.test(plain)&&/\b(?:quel(?:le|s|les)?|comment|pourquoi)\b/u.test(plain))return false;
- return WRITE_COMMAND.test(plain)&&!/\b(?:sans|ne pas|n'[a-z]+ pas)\s+(?:rien\s+)?(?:modifier|changer|supprimer|enregistrer)\b/u.test(plain);
+ return (WRITE_COMMAND.test(plain)||WRITE_DOCUMENT.test(plain)||SCHEDULE_COMMAND.test(plain))&&!/\b(?:sans|ne pas|n'[a-z]+ pas)\s+(?:rien\s+)?(?:modifier|changer|supprimer|enregistrer)\b/u.test(plain);
 }
 /**
  * Splits a request into goals only on explicit sequence words or a new sentence. "et" only splits in
