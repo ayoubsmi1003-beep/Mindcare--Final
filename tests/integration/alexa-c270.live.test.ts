@@ -128,7 +128,7 @@ async function checkQuote(admin: Client, quote: string, labels: string[]) {
   const neighbours = tokens.flatMap((word, index) => (long(word) && long(tokens[index + 1]) ? [[word, tokens[index + 1]!]] : []));
   const words = neighbours;
   const escape = (word: string) => word.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
-  const pairs = words.length >= 3 ? [words[0]!, words[Math.floor(words.length / 2)]!, words[words.length - 1]!] : words.slice(0, 1);
+  const pairs = words.length >= 3 ? [words[0]!, words[Math.floor(words.length / 2)]!, words[words.length - 1]!] : words; // Fewer than three pairs: all of them, since one common pair ("associated with") passes the row limit before the right chunk.
   const patterns = pairs.filter((pair) => pair.length === 2).map((pair) => `${escape(pair[0]!)}\\s+${escape(pair[1]!)}`);
   if (!patterns.length) patterns.push(escape(quote.slice(0, 30)));
   const candidates = (await admin.query(
