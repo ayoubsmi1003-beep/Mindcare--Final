@@ -76,7 +76,8 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    **C201 119/200** (darija hors périmètre). Pertes restantes classées : variance du modèle 1B (W004, W011, W192, W194).
    Vérificateur « mot pour mot » corrigé (filtre de candidats trop large, `a911bf8`). Ouverts : l'agenda ne lit ni « malades »
    ni un mois nommé ; « Il faut décaler… » non vu comme changement par la compréhension (les cadres le refusent) ; le choix du
-   modèle 1B n'est pas reproductible, la couche de sens s'abstient au hasard (levier suivant, mesuré sur les paraphrases de dév.).
+   modèle 1B (température 0) dépend des huit options montrées, la couche de sens s'abstient quand il diverge d'e5 (levier suivant :
+   e5 seul au-delà d'une marge, mesuré en leave-one-out sur les paraphrases de dév.).
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.

@@ -591,7 +591,7 @@ patient-context turns, all **model variance**, measured:
 - W004 and W192 were answered by the meaning layer in r2 and not in r3. The new masking changed six catalogue examples (real words
   such as "topo rapide" and "tests psychométriques" were masked as names before), so e5 was measured with and without it: e5's
   closest intent for both turns is the same (summary, first date) and the catalogue's own top-1 went from 158 to 159 of 168. The
-  local model's choice disagreed with e5 this time, and the layer, which needs both, abstained.
-This is the design's known cost: the meaning layer's reach depends on a non-deterministic 1B choice. Making the choice
-reproducible (fixed sampling) or letting e5 decide alone above a calibrated margin is the next lever, to be measured on the
-development paraphrases only.
+  local model (temperature 0) was shown a different list of eight: the moved centroids changed the lower-ranked options (W004's
+third option went from the last note to the history). It then chose otherwise than e5, and the layer, which needs both, abstained.
+This is the design's known cost: the 1B choice is sensitive to which options it sees, and the meaning layer's reach depends on it.
+Letting e5 decide alone above a calibrated margin is the next lever, to be measured leave-one-out on the development paraphrases only.
