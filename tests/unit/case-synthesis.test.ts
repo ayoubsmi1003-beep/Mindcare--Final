@@ -89,7 +89,7 @@ const definitions: readonly ScaleDefinitionLite[] = [
 
 describe("buildCaseSynthesis", () => {
   it("versions the saved case summary after its diagnosis projection changes", () => {
-    expect(CASE_SYNTHESIS_VERSION).toBe("case-synthesis-fr-v4");
+    expect(CASE_SYNTHESIS_VERSION).toBe("case-synthesis-fr-v5");
   });
 
   it("writes diagnosis and treatment facts as complete, human-readable sentences", () => {
@@ -97,7 +97,8 @@ describe("buildCaseSynthesis", () => {
     const text = result.paragraphes.map((item) => item.texte).join(" ");
 
     expect(text).toContain("Le suivi concerne le diagnostic principal « Trouble anxieux ».");
-    expect(text).toContain("Le traitement par « Sertraline » est actif (dose consignée : 50 mg ; fréquence consignée : « 1/j »).");
+    expect(text).toContain("Le traitement actuel comprend Sertraline 50 mg, 1/j.");
+    expect(text).not.toMatch(/consignée|SOAP|Subjectif/u);
     expect(result.paragraphes.every((item) => /[.!?…]\s*»?$/u.test(item.texte) && !item.texte.includes("\n") && !/^\s*[-*•]\s/mu.test(item.texte)), "every case summary item must be a complete paragraph").toBe(true);
     expect(text).not.toContain(" · ");
   });
@@ -114,9 +115,18 @@ describe("buildCaseSynthesis", () => {
     expect(text).toContain("différences relationnelles".replace("différences", "difficultés"));
     expect(text).not.toContain("Pour la consultation du");
     expect(text).not.toMatch(/\d{2}\/\d{2}\/\d{4}.*\d{2}\/\d{2}\/\d{4}/u);
-    expect(result.paragraphes).toHaveLength(1);
-    const sources = result.paragraphes[0]?.sources.map((source) => `${source.t}:${source.id}`) ?? [];
-    expect(new Set(sources).size).toBe(sources.length);
+    // The story: how it began, how it evolved, where it stands, what comes next — each paragraph with its own sources.
+    expect(result.paragraphes.map((item) => item.texte)).toEqual([
+      "Le suivi concerne le diagnostic principal « Trouble anxieux ». Le suivi a commencé le 15 mai 2026. Lors de cette première consultation, la patiente rapporte une anxiété persistante et des difficultés relationnelles.",
+      "Le PHQ-9 — dépression est passé de 10/27 (modéré) à 16/27 (modérément sévère).",
+      "Lors de la dernière consultation, le 25 octobre 2026, la patiente rapporte une anxiété persistante et des difficultés relationnelles, avec une humeur stable et un sommeil conservé. Le traitement actuel comprend Sertraline 50 mg, 1/j.",
+      "Pour la suite, poursuivre le traitement. Revoir dans un mois.",
+    ]);
+    for (const paragraph of result.paragraphes) {
+      const sources = paragraph.sources.map((source) => `${source.t}:${source.id}`);
+      expect(sources.length).toBeGreaterThan(0);
+      expect(new Set(sources).size).toBe(sources.length);
+    }
   });
 
   it("uses the curated human visit paragraph instead of the retained model notes", () => {
@@ -217,5 +227,42 @@ describe("buildCaseSynthesis", () => {
     const text = result.paragraphes.map((item) => item.texte).join(" ");
     expect(text).not.toContain("non renseigné");
     expect(result.paragraphes).toHaveLength(0);
+  });
+});
+
+describe("buildCaseSynthesis on long and sparse records", () => {
+  it("keeps the first and latest visits of a 25-visit history, counts the rest and stays short", () => {
+    const visits = Array.from({ length: 25 }, (_, index) => ({
+      id: `a1000000-0000-4000-8000-${String(100000000000 + index)}`,
+      startedAt: new Date(Date.UTC(2024, index, 10, 9)).toISOString(),
+      endedAt: new Date(Date.UTC(2024, index, 10, 10)).toISOString(),
+      rawNotes: null, notes: [],
+      analysis: { id: `b1000000-0000-4000-8000-${String(100000000000 + index)}`, version: 1, content: { resume: `Séance numéro ${index + 1} consacrée au sommeil.`, generated: true, complete: true, notesDigest: "d" } },
+    }));
+    const result = buildCaseSynthesis({ context: context({ consultations: visits, scales: [], coverage: { requested: 25, returned: 25, complete: true, hasMore: false } }), histories: [], definitions: [] });
+    const text = result.paragraphes.map((item) => item.texte).join(" ");
+    expect(text).toContain("Le suivi a commencé le 10 janvier 2024.");
+    expect(text).toContain("séance numéro 1 consacrée");
+    expect(text).toContain("Depuis, 24 consultations ont eu lieu.");
+    expect(text).toContain("le 10 janvier 2026, séance numéro 25 consacrée");
+    expect(text).not.toContain("numéro 12");
+    expect(text.length).toBeLessThan(1500);
+  });
+
+  it("says what is missing instead of inventing it, and notices an unsigned note and a missing dose", () => {
+    const sparse = context({
+      diagnoses: [],
+      consultations: [{ id: consultationB, startedAt: "2026-10-25T13:07:00Z", endedAt: "2026-10-25T13:37:00Z", rawNotes: null,
+        notes: [{ id: "a1000000-0000-4000-8000-000000004162", version: "1", status: "draft", subjective: null, objective: null, assessment: null, plan: null, amendments: [] }] }],
+      treatments: { current: [{ id: treatment, medication: "Sertraline", status: "active", dose: null, doseUnit: null, frequency: null, timing: [], instructions: null, startDate: "2025-01-01", endDate: null, version: 1 }], history: [], historyComplete: true },
+      scales: [],
+    });
+    const result = buildCaseSynthesis({ context: sparse, histories: [], definitions: [] });
+    const text = result.paragraphes.map((item) => item.texte).join(" ");
+    expect(text).toBe("Lors de la seule consultation terminée, le 25 octobre 2026, aucune note exploitable n’a été rédigée. Le traitement actuel comprend Sertraline.");
+    expect(result.vigilance.map((item) => item.texte)).toEqual([
+      "La note de la dernière consultation n’est pas encore signée.",
+      "Aucune dose n’est renseignée pour Sertraline.",
+    ]);
   });
 });
