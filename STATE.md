@@ -72,6 +72,11 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    Audit règle A (§37) : phrases de C270 retirées du code et des tests (commentaires, exemples de tests trop proches) ; trois
    formulations nouvelles ont révélé de vrais défauts (dont « est-il passé au cabinet » qui lisait toute la liste), corrigés ;
    un test bloque désormais toute phrase de C270 dans le code.
+   Rejeux de non-régression (doc 20 §38, `ba0deb7`, `a911bf8`, `3d0906f`) : **C202 `r3` 150/200** (base71 119), **C200 200/200**,
+   **C201 119/200** (darija hors périmètre). Pertes restantes classées : variance du modèle 1B (W004, W011, W192, W194).
+   Vérificateur « mot pour mot » corrigé (filtre de candidats trop large, `a911bf8`). Ouverts : l'agenda ne lit ni « malades »
+   ni un mois nommé ; « Il faut décaler… » non vu comme changement par la compréhension (les cadres le refusent) ; le choix du
+   modèle 1B n'est pas reproductible, la couche de sens s'abstient au hasard (levier suivant, mesuré sur les paraphrases de dév.).
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.
