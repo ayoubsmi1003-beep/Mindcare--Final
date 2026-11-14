@@ -529,3 +529,69 @@ The meaning layer's catalogue already had its own guard (Jaccard ≥ 0.70 agains
 A new test (`alexa-no-benchmark-sentences.test.ts`) fails the build if any C270 question of four words or more appears word for
 word anywhere in `src/` or the tests (it reads C270 only; the sealed holdout is never opened). The spoken book harness, with
 its reworded template, measures 42/47 at rank 1 as before.
+
+## 38. Regression runs on the earlier campaigns: C202 `r090` (`090769f`) and its fixes (`ba0deb7`)
+**C202: 145/200 cases** (base71, the starting point of this campaign: 119/200). Turn by turn against base71: **36 gained, 6
+lost.** Each lost turn traced to a general gap, fixed in shared code and tested with other wordings:
+- **Alexa failure: typo correction.** A real French word one letter from the read vocabulary was "corrected" ("récentes" →
+  "recettes"), which broke the frame. Real inflections and verb forms near the vocabulary are protected now (no dictionary is
+  installed; the list is derived from the vocabulary, not from questions).
+- **Alexa failure: agenda.** A cancellation said in the passive ("ont été annulés") was not read, so the overview frame listed
+  every appointment. Probing other wordings found a worse gap: "Il faut décaler mes rdv…" (no change detected by the
+  understanding layer) was rewritten into a read of those appointments. The frame now refuses any change verb in the infinitive;
+  "à confirmer" stays a status.
+- **Alexa failure: patient period.** "Depuis qu'il vient" counted as a calendar period the reader could not bound, so Alexa
+  asked for dates. The whole follow-up ("depuis qu'on le suit", "depuis le début du suivi", "depuis toujours") is the record
+  itself; a period bounded by an event ("depuis qu'on a changé son traitement") is still refused.
+- **Alexa failure (model luck in both runs): our own prescriptions.** "Quelles molécules a-t-on prescrites" reached the local model
+  in base71 too and passed by chance. "A-t-on / avons-nous / on lui a prescrit" now reads the record's treatment; "quelle molécule
+  prescrire" stays a book question.
+- **Alexa failure: books.** A "what causes it" question lost its aspect in the English variant ("cause" had no English form), so the
+  bare disorder drew every drug monograph naming it. Cause, origin, etiology and "d'où vient" now carry over; the DSM passages come
+  back first.
+- **Alexa failure: presentation.** A passage whose label was only its own cut opening was shown twice, not word for word. The label goes.
+The live book harnesses are unchanged (39/47, 42/47, 36/40, 9/18).
+
+**C200 `rba0`: 198/200** against books-reg (all passing). **C201 `rba1`: 117/200 cases**, French turns 122 pass / 39 fail (Darija
+turns are out of scope). Lost turns and their causes:
+- **Alexa failure: activity over a month (C200).** The agenda frame read "patients reçus ce mois-ci" as appointments booked. Over a
+  month or longer, patients seen or received are the activity statistics; a single day stays the agenda's.
+- **Alexa failure: impersonal "y a-t-il" (C200).** "Combien de consultations y a-t-il eu en <mois>" was taken for one person's
+  question ("a-t-il"), so Alexa asked which patient. Two gaps, both fixed: the impersonal names nobody (person guard,
+  `readFamily`, the activity frame's own person check), and an impersonal count of consultations or sessions over an explicit
+  period is the practice's activity count. Without a period it is left to the other routes (with a patient on screen it may mean
+  that patient).
+- **Alexa failure: a verb with its pronoun taken for a name (C201).** "Remets-moi …" was an unknown word, read as a first name, so
+  the patient on screen was never used. An imperative or an inversion is a verb whatever the verb. Removing it exposed a second
+  gap the old code hid by luck: a lower-case noun phrase after an article ("la phrase citée") was taken for a name and searched.
+  Lower-case words after an article or a possessive are never a name now.
+- **Alexa failure: thanks with an acknowledgement (C201).** "Ok parfait, merci beaucoup" was a request. Thanks with their
+  acknowledgements are a courtesy; a bare "Ok" is not (it may answer a question Alexa asked).
+- **Alexa failure: a chain of headings shown as a passage (C201).** Dropped; the medication catalogue's entries, which have that
+  shape, stay.
+- **Out of scope:** Darija and Arabic turns (V082, V094).
+
+**Re-run `r2`** (all of the above except the noun-phrase and impersonal-count fixes). C202: 3 lost vs base71, 2 vs r090; C200: 1
+lost vs books-reg; C201: 1 lost vs main1 (Darija), 0 vs booksfix.
+- **Alexa failure: a month rule too broad (C202 W130).** "Patients prévus ce mois-ci" are appointments booked: a scheduling word
+  (prévus, programmés, planifiés, attendus, inscrits, à venir) keeps a month count in the agenda.
+- **Harness failure, not Alexa (C202 W187).** The passage shown is word for word in the book. The verbatim checker selected its
+  candidate chunks with one common word pair ("associated with") under a 300-row limit, so the right chunk never reached the
+  exact test. With fewer than three pairs it now requires all of them (C200, C201, C202 and C270 harnesses). It only narrows the
+  candidates; the exact test is unchanged.
+- **Ambiguous request (C201 V193, "Visites ?").** The list of recent visits is a fair reading; the local model gave a count by
+  chance in `rba1`. Not patched.
+- **Still open (capability gap, noted):** the agenda frame reads neither "malades" for patients nor a named month ("rendez-vous
+  en décembre"); the understanding layer still does not flag "Il faut décaler…" as a change (the frames refuse it).
+
+**Re-run `r3`** (every fix above): **C202 150/200** (base71 119, r090 145), **C200 200/200**, **C201 119/200** (French turns
+only in scope). Against the baselines: C202 1 lost (W194), C200 0, C201 1 (Darija). Between r2 and r3, C202 lost four
+patient-context turns, all **model variance**, measured:
+- W011 and W194 reached the local model in both runs (tool selection); one run passed, the other did not.
+- W004 and W192 were answered by the meaning layer in r2 and not in r3. The new masking changed six catalogue examples (real words
+  such as "topo rapide" and "tests psychométriques" were masked as names before), so e5 was measured with and without it: e5's
+  closest intent for both turns is the same (summary, first date) and the catalogue's own top-1 went from 158 to 159 of 168. The
+  local model's choice disagreed with e5 this time, and the layer, which needs both, abstained.
+This is the design's known cost: the meaning layer's reach depends on a non-deterministic 1B choice. Making the choice
+reproducible (fixed sampling) or letting e5 decide alone above a calibrated margin is the next lever, to be measured on the
+development paraphrases only.

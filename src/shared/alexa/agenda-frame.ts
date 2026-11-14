@@ -185,6 +185,9 @@ export function agendaQuestionFrame(text: string, asOf: string): string | null {
   const civil = PERIOD.test(out) || !AGENDA_ITSELF.test(out) || /\b(?:regl\w*|pay\w*|encaiss\w*|factur\w*)\b/u.test(out) ? null : civilPeriod(text, asOf);
   const question = classifyAgendaQuestion(text, civil);
   if (!question) return null;
+  // Over a month or longer, the patients seen or received are the activity statistics, not the appointments booked.
+  if ((question.intent === "count" || question.intent === "list") && /\b(?:mois|annee|trimestre)\b|^du\b/u.test(question.period ?? "")
+    && !/\b(?:rendez-vous|rdv|agenda|planning|programme|prevu\w*|programme\w*|planifie\w*|attendu\w*|inscrit\w*|a venir)\b/u.test(out)) return null;
   // Anything left once the agenda vocabulary is removed would be a name, a topic or a second request.
   const status = question.intent.startsWith("absent") || question.intent.startsWith("cancelled");
   const rest = out.replace(PERIOD, " ").replace(civil ? CIVIL_WORDS : /$^/u, " ").replace(status ? ABSENT_WORDS : /$^/u, " ").replace(AGENDA_WORDS, " ").replace(/[^\p{L}\s]/gu, " ").replace(/\s+/gu, " ").trim();

@@ -426,7 +426,8 @@ export function questionConcernsAPerson(text:string):boolean{
  if(/\b(?:monsieur|madame|mademoiselle|mme|mlle)\s+\S/u.test(plain)||/(?:^|\s)m\.\s*\p{L}/u.test(plain)||/\bMr?\.?\s+\p{Lu}/u.test(text))return true;
  const mention=parsePatientMention(text);
  // "a-t-elle un trouble", "sa grossesse": a person is the subject even with no name.
- const inverted=/\b(?:a|prend|souffre|presente|suit)-t-(?:il|elle)\b|\b(?:est|prend|souffre|fait|suit)-(?:il|elle)\b/u.exec(plain);
+ // "Y a-t-il eu…" is impersonal: nobody is its subject.
+ const inverted=/(?<!\by )\b(?:a|prend|souffre|presente|suit)-t-(?:il|elle)\b|\b(?:est|prend|souffre|fait|suit)-(?:il|elle)\b/u.exec(plain);
  if(inverted&&!mentionsMedication(plain)&&!topicSubject(plain.slice(0,inverted.index)))return true;
  if(/\b(?:son|sa|ses|leur|leurs)\s+(?:grossesse|allaitement|maladie|depression|anxiete|trouble|diagnostic|etat|fonction|insuffisance|age|poids)\b/u.test(plain))return true;
  // "de durée et de symptômes" parses as two names. Two clinical measures are a topic; anything else stays two people.

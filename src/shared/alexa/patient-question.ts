@@ -134,7 +134,7 @@ export function unknownNameRuns(text: string): Run[] { return unknownRuns(text);
  * "Le patient suivant" and "il nous reste" belong to the agenda and the till. "[X]" is the catalogue's own stand-in for a name.
  */
 export function readFamily(text: string): "patient" | "practice" | null {
-  const p = fold(text).replace(/\b(?:le|la|mon|ma) (?:patient|patiente) (?:suivant|suivante|prochain|prochaine|d'apres|precedent|precedente)\b|\bil (?:nous|me|vous) reste\b|\bs'il (?:te|vous) plait\b/gu, " ");
+  const p = fold(text).replace(/\b(?:le|la|mon|ma) (?:patient|patiente) (?:suivant|suivante|prochain|prochaine|d'apres|precedent|precedente)\b|\bil (?:nous|me|vous) reste\b|\bs'il (?:te|vous) plait\b|\by (?:en )?a-t-il\b/gu, " ");
   // Days and slots are not names, even typed in lower case next to an unknown verb ("viennent vendredi").
   const calendar = /\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|journ[ée]e|cr[ée]neaux?|programme)\b/giu;
   if (PRONOUN_CUE.test(p) || /\bon (?:le|la|l')|\b(?:le|la|l')(?: ?[a-z]+)-on\b|\[x\]/u.test(p) || unknownRuns(text.replace(calendar, " ")).some((run) => run.words.length >= 2 || run.upper)) return "patient";
@@ -147,6 +147,8 @@ function unknownRuns(text: string): Run[] {
   });
   const unknown = (raw: string) => {
     // "Présente-moi", "Rappelle-lui", "prend-il": a verb with its pronoun is vocabulary, not a name.
+    // An imperative or an inversion ("Remets-moi", "rafraîchis-nous", "vient-il") is a verb whatever the verb: no name ends so.
+    if (/-(?:t-)?(?:il|elle|ils|elles|on|je|tu|vous|nous|moi|toi|lui|leur)$/iu.test(raw)) return false;
     const stripped = raw.replace(/-(?:t-)?(?:il|elle|ils|elles|on|je|tu|vous|nous|moi|toi|lui|le|la|les|leur)$/iu, "");
     const word = fold(stripped).replace(/^[-']+|[-']+$/gu, "");
     return !FRAME_WORDS.test(word) && mayBeAName(stripped);
@@ -161,7 +163,9 @@ function unknownRuns(text: string): Run[] {
     current = { words: [token.raw], upper: /^\p{Lu}/u.test(token.raw), before, end: token.index + token.raw.length };
     runs.push(current);
   });
-  return runs.map((run) => ({ words: run.words, upper: run.upper, before: run.before }));
+  // Lower-case words after an article or a possessive ("la phrase citée", "cette formule employée") are a noun phrase, never a name.
+  const determiner = /^(?:le|la|les|un|une|des|du|au|aux|ce|cet|cette|ces|mon|ma|mes|ton|ta|tes|son|sa|ses|notre|nos|votre|vos|leur|leurs)$/u;
+  return runs.filter((run) => run.upper || !determiner.test(run.before)).map((run) => ({ words: run.words, upper: run.upper, before: run.before }));
 }
 
 /**

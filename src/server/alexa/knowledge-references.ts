@@ -54,7 +54,11 @@ export function referencesToRead(question: string, proofs: readonly Proof[]): { 
     if (hiddenControls.test(quote) || MARKUP.test(quote) || FORGED_FRAME.test(quote) || !safeHeading(proof.section)) { unshown = true; return []; }
     // A label with nothing after it, or only the tail of a sentence cut in the middle ("… — Diagnostic différentiel — » pour ce
     // trouble)."), shows no text of the book.
-    const readableText = substantiveQuote(excerpt) && !headingOnlyEvidence(quote, proof.section) && !/—\s*(?:$|[»)\],;:.][^—]{0,80}$)/u.test(excerpt.trim())
+    // A chain of headings ("<Disorder> — Facteurs de risque et pronostiques — Génétiques et physiologiques.") is no text either.
+    const segments = excerpt.replace(/\[[^\]]*\]/gu, " ").split(/\s+—\s+/u).map(segment => segment.trim().split(/\s+/u).filter(Boolean).length);
+    // The medication catalogue's entries ("<Brand> — cp — 20 mg") are data in that very shape, and stay.
+    const headingChain = segments.length >= 3 && segments.slice(1).every(words => words < 6) && segments.at(-1)! < 5 && !/^Catalogue\b/u.test(proof.extrait);
+    const readableText = substantiveQuote(excerpt) && !headingChain && !headingOnlyEvidence(quote, proof.section) && !/—\s*(?:$|[»)\],;:.][^—]{0,80}$)/u.test(excerpt.trim())
       && (!bibliographyEvidence(proof.section) || bibliographyRequested(question));
     return readableText ? [{ proof, excerpt }] : [];
   });

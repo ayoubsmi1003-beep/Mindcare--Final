@@ -229,7 +229,9 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
   const courtesy = normalized.replace(/\balexa\b/gu, "").replace(/[?!؟!.,،:]/gu, "").replace(/\s+/gu, " ").trim();
   if ((/^\s*alexa\s*[?!؟!.,،:]*\s*$/u.test(normalized)) || /^(?:tu es (?:la|prete)|es[ -]tu (?:la|prete)|(?:واش |وش )?راكي? هنا|راك هنا)$/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "presence", count: 1, language };
   if (/^(?:bonjour|salut|bonsoir|hello|السلام عليكم|صباح الخير|مساء الخير|salam(?: alaykoum| aleykoum)?)$/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "hello", count: 1, language };
-  if (/^(?:merci(?: beaucoup| بزاف| bien)?(?: c[’']est(?: tres)? clair)?|شكرا|شكرا بزاف|يعطيك الصحة|صحا)$/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "thanks", count: 1, language };
+  // Thanks with the acknowledgements around them ("ok parfait, merci", "merci infiniment, c'est noté"); "merci" itself is required,
+  // since a bare "ok" may answer a question Alexa asked.
+  if (/^(?:(?:ok|okay|d[’']accord|parfait|super|tres bien|top|nickel|genial|impeccable|bien|oui|ah)\s+)*(?:merci(?:\s+(?:beaucoup|bien|infiniment|mille fois|bcp|a toi|a vous|بزاف))*(?:\s+(?:c[’']est(?: tres| bien)? (?:clair|note|parfait)|parfait|super|top))?|شكرا|شكرا بزاف|يعطيك الصحة|صحا)$/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "thanks", count: 1, language };
   if (/^(?:peux[- ]tu|tu peux) demander une precision\b.*\bambigu\w*\b/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "clarification", count: 1, language };
   if (/^(?:que peux[ -]tu faire|comment peux[ -]tu m['’]aider|aide|واش تقدري تديري|وش تقدري تديري)$/u.test(courtesy)) return { intent: "dialogue", dialogueAct: "help", count: 1, language };
   if (/^\s*(?:et )?(?:avant|avant elle|قبلها|قبل|زيد|زيد قبل|et avant)\s*[?؟!.]*\s*$/u.test(normalized)) {

@@ -86,14 +86,17 @@ export type PracticeFrame ={ readonly text: string; readonly cashOnlyNotice: boo
 /** Activity of the practice: sessions, patients seen, new records, busiest days. */
 const ACTIVITY = /\b(?:consultations?\b[^?]*\bont eu lieu|compar\w*[^?]*\b(?:consultations?|seances?|activite)|(?:consultations?|seances?)[^?]*\bcompar\w*|patients?\b[^?]*\b(?:vus?|recus?)|patients\b[^?]*\b(?:ont consulte|sont venus|sont passes|au moins une fois)|nouveaux (?:patients?|dossiers)|inscri\w*|activite|jours? (?:les )?plus (?:charges?|occupes?)|jours?\b[^?]*\b(?:le )?plus de (?:consultations?|seances?|patients?|monde)|plus charges?|frequentation|statistiques?|bilan d'activite|combien de patients sont suivis|patients suivis)\b/u;
 export function activityQuestionFrame(text: string, asOf: string): string | null {
-  const p = fold(text), q = withoutBusy(p);
+  // "Il y a eu", "y a-t-il": the impersonal names nobody.
+  const folded = fold(text), p = folded.replace(/\bil y (?:en )?a\b|\by (?:en )?a-t-il\b/gu, " y a "), q = withoutBusy(p);
   if (NOT_THE_CLINIC.test(p) || MONEY_VERB.test(p) || RECEIVED_MONEY(p) || SESSION_PAID.test(p) || EXPENSES.test(q) || /\bagenda|rendez-vous|rdv\b/u.test(p)) return null;
+  // How many sessions there were, said impersonally, is the practice's count; with a period only (alone it may mean the patient on screen).
+  const countedVisits = /\b(?:consultations?|seances?)\b[^?]*\by a\b|\by a\b[^?]*\b(?:consultations?|seances?)\b/u.test(p);
   // A name or a pronoun makes it one person's question, never the practice's figures. A capital that only opens the sentence is no name.
-  if (!ACTIVITY.test(p) || readFamily(text.charAt(0).toLowerCase() + text.slice(1)) === "patient") return null;
+  if (!(ACTIVITY.test(p) || countedVisits) || readFamily(text.charAt(0).toLowerCase() + text.slice(1)) === "patient") return null;
   // "Patients suivis" and "jours les plus chargés" with no period speak of the current month. A period this frame cannot write
   // ("la semaine dernière", "l'an passé") is never replaced by the current month: the turn keeps its other routes.
-  const read = period(p, asOf);
-  if (!read && relativeFrenchPeriod(p, asOf)) return null;
+  const read = period(folded, asOf);
+  if (!read && (relativeFrenchPeriod(folded, asOf) || !ACTIVITY.test(p))) return null;
   const found = read ?? { kind: "month" as const, phrase: "ce mois" };
   if (found.kind === "day") return null;
   // This month against the last one: two calendar months, each read over its own days.
