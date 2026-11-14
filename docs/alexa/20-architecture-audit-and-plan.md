@@ -660,4 +660,22 @@ travail" as the patient's history). Two verb classes now count: writing a docume
 une synthèse" stays a read), and scheduling, only with an object ("Le programme de la journée ?" stays a read; "avance" and
 "recule" only with an appointment). `intentByMeaning` also refuses a change itself, whoever calls it.
 
-Not yet measured: the regression campaigns with these changes (next).
+**Regression runs r4 (with cdeb63b and 2c4bf54):** C202 150 → **154**/200 (7 gained, 3 lost against r3), C200 **200**/200,
+C201 119 → 118/200 (2 lost, 0 gained). Each lost turn, classified:
+
+| Turn | Class | Cause |
+|---|---|---|
+| C202 W026 | Alexa | The 3-option choice disagreed with e5's closest intent; r3's 8 bare labels had agreed. The dev-set trade-off (26 → 35 right) is kept. |
+| C202 W064 t3 | Alexa | A follow-up with neither who nor when: the family gate now abstains, where r3's meaning layer read it. |
+| C202 W095 | Alexa (model variance) | Never reached the meaning layer, in either run: the 1B agent loop passed in r3 and failed in r4. |
+| C201 V066 | out of scope | Darija. |
+| C201 V194 | Alexa, **safety** | The meaning layer abstained; the agent loop then sent "Dis-moi … sur lui" to the general model, which wrote invented prose about a person. |
+
+**Fixed in general:** the general model's gate (`asksAboutSomeone`) only refused personal-data words (age, address…). A question
+whose object is a person named by a pronoun ("sur lui", "d'elle", "concernant lui") is now about someone, whatever is asked; the
+model is never called and the turn says the question is not admitted. Unit test with development wordings.
+
+**Tried and rejected:** taking the family from the conversation when a follow-up's words give none (patient in the previous turn
+→ patient intents only). Measured with the local models on the 10 null-family dev sentences and 20 chatter sentences, all read as
+a follow-up: 1 right, 5 wrong (practice questions forced into patient reads), and 3 false reads of 20 ("J'ai faim" → summary).
+Worse than abstaining; W064 t3 stays an open gap. A follow-up needs the PREVIOUS intent as prior, not only its family (Phase 3).

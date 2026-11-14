@@ -83,7 +83,10 @@ Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan 
    le test garde toutes les campagnes. Inversion complexe (« Ma matinée de demain est-elle libre ? ») : plus lue comme une personne.
    Choix fermé du 1B (doc 20 §40) : 3 options avec un exemple chacune, la conversation = « none », rien lu sans « qui » ni
    « quand » : jeu de dév. 26 → 35 justes, 1 faux, 0 faux positif sur 20. Rédiger un document / planifier = changement (général).
-   À faire : rejouer C202/C200/C201 avec ces changements.
+   Régression r4 (doc 20 §40) : C202 150 → 154, C200 200/200, C201 119 → 118 (V066 darija hors périmètre ; V194 : le modèle
+   général inventait un texte sur « lui » → corrigé en général, un pronom de personne n'est jamais une question générale).
+   Rejeté (mesuré) : la famille de la conversation pour une relance sans « qui »/« quand » (3 faux positifs sur 20).
+   Ouvert : relance qui dépend de l'intention précédente (C202 W064 t3) ; recall du choix 1B (50/86 « none »).
    REPRISE (ancienne liste, en partie faite) : note de la première consultation
    (lecture non prise en charge : le dire), « ouvre-moi <nom> » ; livres restants (rubrique imprévisible) ; agenda/finance classés §26.
 2. Calibrer le choix fermé du modèle (test `alexa-semantic-intent`, `MINDCARE_SEMANTIC_CALIBRATION=1`) — après les passes.

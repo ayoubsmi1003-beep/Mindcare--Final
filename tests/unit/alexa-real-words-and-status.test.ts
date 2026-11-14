@@ -82,6 +82,14 @@ describe("a complex inversion repeats its subject", () => {
   });
 });
 
+describe("the general model never talks about a person", () => {
+  it("refuses a question whose object is a pronoun for someone, and still answers a public one", async () => {
+    const { canAnswerGeneralAlexa } = await import("@/server/alexa/model-gateway");
+    for (const text of ["Parle-moi un peu d’elle.", "Dis-moi tout à propos d'elle.", "J'aimerais ton avis concernant lui."]) expect(canAnswerGeneralAlexa(text), text).toBe(false);
+    for (const text of ["Explique-moi comment fonctionne une imprimante.", "Dis-moi la capitale du Canada."]) expect(canAnswerGeneralAlexa(text), text).toBe(true);
+  });
+});
+
 describe("thanks with their acknowledgements", () => {
   it("are a courtesy, not a request", async () => {
     const { planRequest } = await import("@/shared/alexa/request-plan");

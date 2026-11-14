@@ -200,6 +200,8 @@ const GENERAL_ENGLISH_OUTPUT=/\b(?:the|and|with|because|without|through|lists?|c
 function asksAboutSomeone(text:string):boolean{
  // "y a-t-il" is impersonal: "Quelle différence y a-t-il entre la masse et le poids ?" asks about no one.
  const value=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().replace(/\by a-t-il\b/gu," ");
+ // "Dis-moi ce que tu sais sur lui": a person named by a pronoun is someone, whatever is asked about them.
+ if(/(?:\b(?:sur|de|pour|chez|avec|concernant) |\bd['’])(?:lui|elle|eux|elles)\b(?!-meme)/u.test(value))return true;
  if(!/\b(?:age|naissance|nee?s? le|anniversaire|adresse|habite\w*|domicile|telephone|poids|taille|allergi\w*)\b/u.test(value))return false;
  return unknownNameRuns(text).some(run=>run.words.length>=2)||/\b(?:il|elle|lui|son|sa|ses)\b|\b[a-z]+-(?:t-)?(?:il|elle)\b/u.test(value);
 }
