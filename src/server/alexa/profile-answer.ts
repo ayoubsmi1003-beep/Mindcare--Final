@@ -51,6 +51,8 @@ export function profileAnswer(p:z.infer<typeof patientProfileSchema>,question:st
  const name=p.first_name+' '+p.last_name;
  const labelFor=(field:Field)=>field==='age'?profileCopy.ageLabel:field==='name'?profileCopy.nameLabel:copy.profile[field];
  if(fields.length===1){const field=fields[0]!;return field==='name'?profileCopy.name(valueFor(field),copy.missing):profileCopy.singleField(name,field,labelFor(field),valueFor(field),copy.missing);}
- const values=fields.map(key=>`${labelFor(key)} : ${valueFor(key)}`);
- return profileCopy.one(name,values.map(value=>value.replace(/\s+/gu,' ').trim()));
+ // Filled fields first; the empty ones are named once at the end, not one « Non renseigné » per line.
+ const filled=fields.filter(key=>valueFor(key)!==copy.missing),empty=fields.filter(key=>valueFor(key)===copy.missing);
+ const values=filled.map(key=>`${labelFor(key)} : ${valueFor(key)}`);
+ return profileCopy.one(name,values.map(value=>value.replace(/\s+/gu,' ').trim()),empty.map(key=>labelFor(key).toLocaleLowerCase('fr')));
 }
