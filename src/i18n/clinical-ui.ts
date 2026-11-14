@@ -52,10 +52,10 @@ export const cliniqueUi = {
     consigner: "Consigner un diagnostic",
     saisieProfessionnelle:
       "Un diagnostic retenu, pas un symptôme isolé. Le libellé clinique reste la référence ; le code est une aide au classement, jamais un jugement automatique. Les éléments qui soutiennent le diagnostic restent dans la note de séance ; cette fiche garde le libellé, le code, le rôle et les dates.",
-    modele: "Diagnostic fréquent (aide à la saisie)",
+    modele: "Diagnostic",
     modeleAide:
-      "Choisir un libellé pré-remplit le code ICD-10. Vous pouvez ensuite tout modifier librement.",
-    modeleVide: "— Choisir un diagnostic fréquent —",
+      "Choisissez le diagnostic retenu.",
+    modeleVide: "— Choisir un diagnostic —",
     principal: "Diagnostic principal",
     principalAide:
       "Le principal est celui qui motive le suivi actuel. Les autres diagnostics actifs sont secondaires.",

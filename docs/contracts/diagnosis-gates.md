@@ -31,10 +31,9 @@ Deux gestes, deux portes, aucune écriture directe depuis le navigateur.
 `CarteDiagnostics` (dossier patient et onglet Clinique) :
 
 - liste des actifs, puis des résolus ;
-- formulaire avec libellé, code ICD-10/DSM-5/CIM-11, date de début, rôle
-  principal/secondaire ;
-- aide à la saisie par libellés fréquents — un choix pré-remplit le code,
-  jamais un diagnostic imposé ;
+- un seul sélecteur sans choix initial, puis Enregistrer ou Annuler ;
+- libellé, système et code dérivés de l’entrée choisie ; date clinique inconnue à null ;
+- principal par défaut si aucun principal actif n’existe, secondaire sinon ;
 - action « Marquer comme résolu » ;
 - aucun diagnostic n'est inventé par l'écran.
 

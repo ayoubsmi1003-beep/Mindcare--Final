@@ -20,3 +20,9 @@ describe("versioned document assets",()=>{
   expect(css).toContain('size:148mm 210mm');
  });
 });
+
+it("keeps the historical v1 ink fallback unchanged when loading shared tokens",()=>{
+ const tokens=readFileSync("src/styles/tokens.css","utf8");
+ const legacy=readFileSync("public/documents/v1/document.css","utf8");
+ expect(tokens.match(/--document-ink:([^;}]+)/u)?.[1]).toBe(legacy.match(/var\(--document-ink,([^)]+)\)/u)?.[1]);
+});

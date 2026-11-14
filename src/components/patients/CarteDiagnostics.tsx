@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
-import { Bouton, ChampSelection, ChampTexte, Icone, PastilleIcone } from "@/components/ui";
+import { Bouton, ChampSelection, Icone, PastilleIcone } from "@/components/ui";
 import { cliniqueUi } from "@/i18n/clinical-ui";
 import { DIAGNOSTICS_FREQUENTS } from "@/i18n/diagnostics-referentiel";
 import { enregistrerDiagnostic, resoudreDiagnostic } from "@/services/diagnoses";
+import { diagnosticSelection, addDiagnostic } from "./diagnostic-selection";
 import type { Diagnostic } from "@/services/patients";
 
 function dateCourte(value: string | null): string | null {
@@ -109,19 +110,22 @@ export function CarteDiagnostics({
   const [liste, setListe] = useState<readonly Diagnostic[]>(diagnostics);
   const [formulaire, setFormulaire] = useState(false);
   const [modele, setModele] = useState("");
-  const [libelle, setLibelle] = useState("");
-  const [codeSysteme, setCodeSysteme] = useState("ICD-10");
-  const [code, setCode] = useState("");
-  const [principal, setPrincipal] = useState(false);
-  const [debut, setDebut] = useState("");
   const [enregistrement, setEnregistrement] = useState(false);
   const [erreur, setErreur] = useState<string | undefined>(undefined);
   const [resolutionId, setResolutionId] = useState<string | null>(null);
   const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
 
+  const currentPatient = useRef(patientId);
+  currentPatient.current = patientId;
+  const generation = useRef(0);
   useEffect(() => {
-    setListe(diagnostics);
-  }, [diagnostics]);
+    const pending = generation;
+    pending.current++;
+    setModele(""); setFormulaire(false); setErreur(undefined); setConfirmation(undefined);
+    setEnregistrement(false); setResolutionId(null);
+    return () => { pending.current++; };
+  }, [patientId]);
+  useEffect(() => { setListe(diagnostics); }, [diagnostics, patientId]);
 
   const actifs = liste.filter((diagnostic) => diagnostic.resolvedAt === null);
   const resolus = liste.filter((diagnostic) => diagnostic.resolvedAt !== null);
@@ -130,66 +134,26 @@ export function CarteDiagnostics({
     setErreur(undefined);
     setConfirmation(undefined);
     setFormulaire(true);
-    // Le premier diagnostic actif est principal par défaut : un dossier ne
-    // doit pas commencer par une comorbidité sans diagnostic de référence.
-    // S'il en existe déjà un, le nouveau est secondaire par défaut.
-    setPrincipal(!actifs.some((diagnostic) => diagnostic.isPrimary));
-  }
-
-  function appliquerModele(valeur: string): void {
-    setModele(valeur);
-    const trouve = DIAGNOSTICS_FREQUENTS.find((entry) => entry.code === valeur);
-    if (trouve === undefined) return;
-    setLibelle(trouve.label);
-    setCode(trouve.code);
-    setCodeSysteme("ICD-10");
+    setModele("");
   }
 
   function enregistrer(): void {
+    const input = diagnosticSelection(patientId, modele, liste);
+    if (!input || enregistrement) return;
     setErreur(undefined);
     setConfirmation(undefined);
-    if (debut !== "") {
-      const aujourdhui = new Date().toLocaleDateString("fr-CA", { timeZone: "Africa/Algiers" });
-      if (debut > aujourdhui) {
-        setErreur(cliniqueUi.diagnostics.dateFuture);
-        return;
-      }
-    }
     setEnregistrement(true);
-    void enregistrerDiagnostic({
-      patientId,
-      label: libelle,
-      codeSystem: codeSysteme,
-      code: code === "" ? null : code,
-      isPrimary: principal,
-      onsetDate: debut === "" ? null : debut,
-    }).then((resultat) => {
+    const requestGeneration = generation.current;
+    void enregistrerDiagnostic(input).then((resultat) => {
+      if (currentPatient.current !== input.patientId || generation.current !== requestGeneration) return;
       setEnregistrement(false);
-      if (!resultat.ok) {
-        setErreur(resultat.error.code === "regle-metier" ? resultat.error.message : cliniqueUi.diagnostics.erreur);
-        return;
-      }
-      if (resultat.data === null) {
-        setErreur(cliniqueUi.diagnostics.erreur);
+      if (!resultat.ok || resultat.data === null) {
+        setErreur(!resultat.ok && resultat.error.code === "regle-metier" ? resultat.error.message : cliniqueUi.diagnostics.erreur);
         return;
       }
       const ajoute = resultat.data;
-      setListe((courant) => {
-        const suivant = [
-          ...(principal ? courant.map((item) => ({ ...item, isPrimary: false })) : courant),
-          ajoute,
-        ];
-        return suivant.sort(
-          (a, b) =>
-            Number(b.isPrimary) - Number(a.isPrimary)
-            || a.label.localeCompare(b.label, "fr"),
-        );
-      });
+      setListe(courant => addDiagnostic(courant, ajoute));
       setModele("");
-      setLibelle("");
-      setCode("");
-      setDebut("");
-      setPrincipal(false);
       setFormulaire(false);
       setConfirmation(cliniqueUi.diagnostics.enregistre);
       onMisAJour?.();
@@ -201,7 +165,9 @@ export function CarteDiagnostics({
     setErreur(undefined);
     setConfirmation(undefined);
     setResolutionId(diagnostic.id);
+    const requestPatient = patientId, requestGeneration = generation.current;
     void resoudreDiagnostic(diagnostic.id).then((resultat) => {
+      if (currentPatient.current !== requestPatient || generation.current !== requestGeneration) return;
       setResolutionId(null);
       if (!resultat.ok || resultat.data === null) {
         setErreur(cliniqueUi.diagnostics.erreurResolution);
@@ -245,6 +211,7 @@ export function CarteDiagnostics({
           <Bouton
             rang={formulaire ? "secondaire" : "principal"}
             taille="compact"
+            disabled={enregistrement}
             onClick={() => {
               if (formulaire) {
                 setFormulaire(false);
@@ -272,91 +239,20 @@ export function CarteDiagnostics({
 
       {formulaire ? (
         <div className="flex flex-col gap-4 rounded-2xl border border-action-100 bg-action-50 p-4">
-          <div className="flex items-start gap-2 rounded-xl border border-action-100 bg-card px-3 py-2.5">
-            <Icone nom="diagnostic" taille={16} className="mt-0.5 shrink-0 text-action-700" />
-            <p className="m-0 font-ui text-label leading-relaxed text-ink-700">{cliniqueUi.diagnostics.saisieProfessionnelle}</p>
-          </div>
-          <div className="grid gap-4">
-            <div>
-              <ChampSelection
-                libelle={cliniqueUi.diagnostics.modele}
-                valeur={modele}
-                onChange={appliquerModele}
-                indication={cliniqueUi.diagnostics.modeleAide}
-                options={[
-                  { valeur: "", libelle: cliniqueUi.diagnostics.modeleVide },
-                  ...DIAGNOSTICS_FREQUENTS.map((entry) => ({
-                    valeur: entry.code,
-                    libelle: `${entry.code} — ${entry.label}`,
-                  })),
-                ]}
-              />
-            </div>
-            <div>
-              <ChampTexte
-                libelle={cliniqueUi.diagnostics.libelle}
-                valeur={libelle}
-                onChange={setLibelle}
-                indication={cliniqueUi.diagnostics.libelleAide}
-                requis
-              />
-            </div>
-            <ChampSelection
-              libelle={cliniqueUi.diagnostics.codeSysteme}
-              valeur={codeSysteme}
-              onChange={setCodeSysteme}
-              options={[
-                { valeur: "ICD-10", libelle: "ICD-10" },
-                { valeur: "DSM-5", libelle: "DSM-5" },
-                { valeur: "CIM-11", libelle: "CIM-11" },
-              ]}
-            />
-            <ChampTexte
-              libelle={cliniqueUi.diagnostics.codeValeur}
-              valeur={code}
-              onChange={setCode}
-              indication={cliniqueUi.diagnostics.codeAide}
-              placeholder="F41.1"
-            />
-            <ChampTexte
-              libelle={cliniqueUi.diagnostics.dateDebut}
-              valeur={debut}
-              onChange={setDebut}
-              indication={cliniqueUi.diagnostics.dateDebutAide}
-              type="date"
-            />
-            <fieldset className="flex min-w-0 flex-col gap-2 rounded-xl border border-rule bg-card px-4 py-3">
-              <legend className="px-1 font-ui text-label font-semibold tracking-label text-ink-700">
-                {cliniqueUi.diagnostics.role}
-              </legend>
-              <div className="flex flex-wrap gap-2">
-                <Bouton
-                  rang="secondaire"
-                  taille="compact"
-                  enfonce={!principal}
-                  onClick={() => setPrincipal(false)}
-                >
-                  {cliniqueUi.diagnostics.secondaire}
-                </Bouton>
-                <Bouton
-                  rang="secondaire"
-                  taille="compact"
-                  enfonce={principal}
-                  onClick={() => setPrincipal(true)}
-                >
-                  {cliniqueUi.diagnostics.principal}
-                </Bouton>
-              </div>
-              <p className="m-0 font-ui text-label leading-relaxed text-ink-500">
-                {cliniqueUi.diagnostics.principalAide} {cliniqueUi.diagnostics.statutAide}
-              </p>
-            </fieldset>
-          </div>
+          <ChampSelection
+            libelle={cliniqueUi.diagnostics.modele}
+            valeur={modele}
+            onChange={setModele}
+            options={[
+              { valeur: "", libelle: cliniqueUi.diagnostics.modeleVide },
+              ...DIAGNOSTICS_FREQUENTS.map(entry => ({valeur: entry.code, libelle: `${entry.label} — ${entry.code}`})),
+            ]}
+          />
           <div className="flex flex-wrap items-center gap-3">
             <Bouton
               rang="principal"
               onClick={enregistrer}
-              disabled={enregistrement || libelle.trim() === ""}
+              disabled={enregistrement || diagnosticSelection(patientId, modele, liste) === null}
             >
               {enregistrement ? cliniqueUi.commun.chargement : cliniqueUi.diagnostics.enregistrer}
             </Bouton>
