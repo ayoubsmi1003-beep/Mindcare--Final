@@ -1,0 +1,31 @@
+# Implementation roadmap — review draft
+
+**Status: PROPOSED / AUDIT INCOMPLETE / DO NOT IMPLEMENT YET.** Order and estimates are relative, not calendar promises. The user must review the completed audit and target architecture before product changes. The first step below is investigation and verification only.
+
+| Phase | Work and likely ownership | Dependencies / complexity | Exit evidence |
+|---|---|---|---|
+| 0 — finish forensic audit | Trace all screens, API routes, last SQL definitions, active installed artifact and feature flags; complete 12 requested documents and the screen/field/role matrix. Key paths: `src/app/`, `src/services/`, `src/server/alexa/`, `supabase/migrations/`, `electron/`. | Large; preserve current dirty tree and do not read secrets or patient content | Every claim linked to code or clearly NOT VERIFIED; source/build identity explicit; contradictions recorded as required by repository authority rules. |
+| 1 — establish baseline | Identify a disposable synthetic environment without applying migrations during the audit; review existing golden fixtures and approved non-identifying knowledge evaluation; measure routing, app, RAG, conversation and voice. | Large; environment identity/isolation, corpus permissions, actual hardware | Reproducible baseline with sample counts, skips and reviewed oracles; no real patient data leaves local machine. |
+| 2 — repair integrity defects | Following separate review, correct unavailable-treatment UI (20), action transport ambiguity (22), and communications state/reconciliation (21) under their existing boundaries. | Medium–large; payment and communication require role, crash and transactional tests; exact patch scope to be established | Synthetic negative/positive tests, no false “none”, no false definite action failure, no unconfirmed write or uncontrolled resend. |
+| 3 — canonical capability contracts | Reconcile `src/shared/alexa/agent.ts`, `agent-tools.ts`, existing service/SQL read models and rights; add only missing descriptors/gates justified by examples. | Large; phase 0 inventory and business definitions. Any new schema element requires human decision. | Screen → service → gate → tool → role → evidence matrix; no advertised unsupported capability; numeric oracle tests. |
+| 4 — conversation and mixed plans | Evolve existing `conversation-state.ts`, `agent-continuation.ts`, `agent-loop.ts` for measured follow-up/cohort gaps; keep actor/patient/version bindings and bounded plans. | Large; phase 3 contracts and baseline | Multi-turn synthetic tests across restart, patient switch, changes and incomplete datasets; no scope broadening. |
+| 5 — RAG quality | Audit import and source metadata, verify matching recipe/index/coverage, compare lexical, current E5 and reranker on held-out questions; address segmentation, context and evidence generation based on measurements. | Large; approved source and clinical review; no production data writes during audit | Per-language recall/ranking and faithfulness; provenance and dosage/negation checks; reranker only promoted if measured benefit meets approved threshold. |
+| 6 — model routing | Keep deterministic app reads and local patient context; qualify task-specific local models. Evaluate any future external provider only under explicit privacy/security approval and separately scoped synthetic data. | Medium–large; privacy decision, eval suites and exact platform model availability | Provider-independent interface only if multiple qualified implementations justify it; model failures cannot bypass gates or fabricate answers. |
+| 7 — voice and performance | Measure the two voice paths, STT language selection, interruption, TTS, stage timings and cold/warm start on target hardware; improve only measured bottlenecks. | Medium–large; physical device, consented synthetic recordings, phase 4/5 correctness | FR/AR/Darija and interruption results, end-to-end p50/p95/p99, no unvalidated content spoken for speed. |
+| 8 — release qualification | Re-run targeted/full tests, SQL gates and role isolation, package provenance, migration compatibility, restore/startup, second PC and actual voice as applicable. | Large; all previous gates and human clinical acceptance | Explicit PASS/FAIL/NOT RUN per gate on exact artifact; user reviews unresolved risk before deployment. |
+
+## Critical dependencies and ordering
+
+1. Decide which checkout and installed artifact are authoritative; the path named as canonical in AGENTS.md was absent in this session and the open tree is dirty.
+2. Preserve real patient data and existing changes. Isolate any future fixture writes and verify the synthetic target before every write.
+3. Establish metric definitions and authorization for existing data before adding an Alexa tool; `nouveaux` records created are not automatically the subset of patients seen.
+4. Repair or explicitly gate confirmed integrity problems before expanding autonomous-seeming workflows. Changes to messaging require real provider idempotency and crash-state evidence, not merely a new retry.
+5. Measure current RAG and voice before selecting models or claiming speed. Keep internal provenance and clinical review.
+
+## First task for the implementing engineer, after audit/design review
+
+Perform a **read-only source and artifact identity checkpoint**, not a refactor: record `git status`, HEAD and source/build provenance; compare the selected build's native-path and knowledge asset manifests without printing protected configuration; identify an existing disposable synthetic test target or propose its creation. Return the exact test plan and PASS/FAIL/NOT RUN evidence. Do not apply migrations, start a production database, modify source or export data. Only after the user has reviewed the completed architecture and the synthetic target is verified should a subsequent implementation task be selected.
+
+## Human decisions still required
+
+Approve the chosen build/checkout, clinical and operational metric definitions, privacy boundary for any prospective external provider, scope and safeguards for external messaging, acceptable performance/accuracy thresholds and clinical review process, and any schema additions or other changes requiring an ADR. These decisions are not assumed to have been granted by the audit request.

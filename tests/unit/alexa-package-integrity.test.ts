@@ -21,6 +21,14 @@ it('identifies Playwright package and pnpm store paths as development-only runti
  ]) expect(isPlaywrightRuntimePath(path)).toBe(true);
  for(const path of ['node_modules/next/server.js','node_modules/react/index.js','node_modules/some-playwright-reporter/index.js'])expect(isPlaywrightRuntimePath(path)).toBe(false);
 });
+it('records a missing tracked source file as absent instead of aborting packaging',()=>{
+ const source=fixture();writeFileSync(join(source,'package.json'),'{}');
+ execFileSync('git',['init','-q'],{cwd:source,windowsHide:true});
+ execFileSync('git',['add','package.json'],{cwd:source,windowsHide:true});
+ execFileSync('git',['-c','user.name=Synthetic test','-c','user.email=test@example.invalid','-c','core.hooksPath=absent-hooks','commit','-qm','tracked packaging fixture'],{cwd:source,windowsHide:true});
+ rmSync(join(source,'package.json'));
+ expect(snapshotAlexaBuildSources(source)).toMatchObject({sourceFiles:0});
+});
 it('activates the same native path in relocated CommonJS and ESM entries despite a conflicting inherited setting',()=>{
  const root=fixture();
  for(const suffix of ['cjs','mjs']){

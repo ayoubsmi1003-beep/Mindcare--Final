@@ -151,7 +151,7 @@ function finish(reasons, notes) {
 
 /** « … » quotations of a published answer, in order. */
 export function extractQuotes(answer, minChars = 25) {
-  return [...String(answer).matchAll(/«\s*([^»]+?)\s*»/gu)].map((match) => match[1]).filter((quote) => quote.length >= minChars);
+  return [...String(answer).matchAll(/«\s*([^»]+?)\s*»/gu)].map((match) => match[1] ?? "").filter((quote) => quote.length >= minChars);
 }
 
 /** Rolls turn verdicts up to a case: one FAIL fails the case; NOT VERIFIED beats PASS. */

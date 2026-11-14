@@ -31,6 +31,21 @@ describe("protected clinic host configuration", () => {
     expect(() => lireVariablesServeur("GEMINI_API_KEY=first\nGEMINI_API_KEY=second")).toThrow();
     try { lireVariablesServeur("UNKNOWN=do-not-print-test-value"); } catch (error) { expect(String(error)).not.toContain("do-not-print-test-value"); }
   });
+  it("enables the packaged book vector index by default but preserves explicit protected overrides", () => {
+    expect(lireVariablesServeur("", { paquet: true })).toEqual({
+      KNOWLEDGE_VECTOR: "1",
+      KNOWLEDGE_VECTOR_RECETTE: "e5-base",
+    });
+    expect(lireVariablesServeur("KNOWLEDGE_VECTOR=0", { paquet: true })).toEqual({
+      KNOWLEDGE_VECTOR: "0",
+      KNOWLEDGE_VECTOR_RECETTE: "e5-base",
+    });
+    expect(lireVariablesServeur("", { paquet: false })).toEqual({});
+  });
+  it("allows only the measured local reranker as an explicit opt-in", () => {
+    expect(lireVariablesServeur("KNOWLEDGE_RERANK=mmarco")).toEqual({ KNOWLEDGE_RERANK: "mmarco" });
+    expect(() => lireVariablesServeur("KNOWLEDGE_RERANK=unknown")).toThrow(/CONFIGURATION/);
+  });
   it.skipIf(process.platform !== "win32")("decrypts a real machine-scoped DPAPI TLS secret and refuses corrupt ciphertext", async () => {
     const dir = mkdtempSync(path.join(tmpdir(), "mindcare-dpapi-"));
     const file = path.join(dir, "clinic-pfx-password.dpapi");

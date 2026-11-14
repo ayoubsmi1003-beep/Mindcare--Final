@@ -51,6 +51,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {verifyAlexaPackage} from './lib/alexa-package-integrity.mjs';
+import { verifyKnowledgeAssets } from "./lib/stage-knowledge-assets.mjs";
 import { chargerPinsInventaireVoix } from "./lib/voix-inventory-pins.mjs";
 import { parcourirPaquet } from "./lib/paquet-inventaire.mjs";
 
@@ -113,6 +114,7 @@ if (existsSync(cheminAsar)) {
     refuser("archive Electron illisible :", ["resources/app.asar"]);
   }
 }
+try { await verifyKnowledgeAssets(RACINE, path.join(CIBLE, "resources", "serveur")); } catch { refuser("modeles de connaissances absents ou invalides :", ["e5-base / mmarco-rerank"]); }
 const erreursRuntime = auditServerDependencies(path.join(CIBLE, "resources", "serveur"));
 if (erreursRuntime.length > 0) refuser("dépendances du serveur non chargeables :", erreursRuntime);
 try{verifyAlexaPackage(RACINE,CIBLE);}catch{refuser("provenance Alexa, parcours natif ou fichiers MiniCPM non conformes :",["reconstruire le paquet depuis le code courant vérifié"]);}
@@ -245,6 +247,7 @@ const REQUIS = [
   ["resources/serveur/scripts/garde-origine.mjs", "la garde de port"],
   ["resources/serveur/scripts/sauvegarde.mjs", "la sauvegarde"],
   ["resources/serveur/scripts/lib/pg-env.mjs", "la configuration libpq sans identifiants en arguments"],
+  ["resources/serveur/public/wake-ack-fr.wav", "l'accusé vocal local du mot de réveil"],
   ["resources/serveur/supabase/bootstrap/010_app_role.sql", "le bootstrap du rôle applicatif"],
   ["resources/pgsql/bin/initdb.exe", "les binaires PostgreSQL empaquetés"],
   ["resources/pgsql/lib/vector.dll", "l'extension pgvector (M07, RAG)"],

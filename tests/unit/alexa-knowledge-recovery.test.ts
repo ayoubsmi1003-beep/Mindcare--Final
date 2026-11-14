@@ -51,7 +51,7 @@ describe("mixed patient and knowledge reads", () => {
       ? { callId: call.id, status: "ok" as const, complete: true, text: "Fait du dossier.", data: { patientId: patient, treatments: { current: medications.map((medication, index) => ({ id: `t${index}`, medication, status: "active" })), history: [], historyComplete: true } }, evidence: [{ id: patient, type: "patient" as const, label: "Dossier" }], conditionKeys: [], patientId: patient }
       : { callId: call.id, status: "partial" as const, complete: false, text: `Passage ${String(call.args["query"])}`, data: {}, evidence: [{ id: String(call.args["query"]), type: "knowledge" as const, label: "Source" }], conditionKeys: [] });
     const result = await runAgentLoop({ text, conversationId: `m-${randomUUID()}`, clientTurnId: randomUUID(), appContext: { patientId: patient, page: `/patients/${patient}` } },
-      { actor: `m-${randomUUID()}`, asOf: "2026-11-05T12:00:00+01:00", infer: (() => { throw new Error("no model"); }) as never, execute: execute as never }, new AbortController().signal);
+      { actor: `m-${randomUUID()}`, asOf: "2026-11-05T12:00:00+01:00", infer: (() => { throw new Error("no model"); }), execute: execute }, new AbortController().signal);
     return { result, queries: execute.mock.calls.map(call => call[0]).filter(call => call.name === "search_knowledge").map(call => String(call.args["query"])) };
   }
   const question = "Quels effets indésirables des traitements du patient sont documentés ?";

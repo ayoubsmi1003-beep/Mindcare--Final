@@ -15,7 +15,7 @@ const llmRequest = { purpose: "jarvis" as const, promptVersion: "v", promptHash:
 beforeEach(() => {
   process.env.MINDCARE_DATABASE_URL = "postgresql://essai:essai@127.0.0.1:1/essai";
   process.env.OPENROUTER_API_KEY = "synthetic-key"; reinitialiserEnv();
-  globalThis.fetch = vi.fn(async () => Response.json({ choices: [{ message: { content: "Bonjour" } }], data: [] })) as never;
+  globalThis.fetch = vi.fn(async () => Response.json({ choices: [{ message: { content: "Bonjour" } }], data: [] }));
   deployment.read.mockReset();
 });
 afterEach(() => { globalThis.fetch = originalFetch; delete process.env.OPENROUTER_API_KEY; reinitialiserEnv(); });

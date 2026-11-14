@@ -73,6 +73,19 @@ export const IMAGE_DEV = "pgvector/pgvector:0.8.6-pg16";
 export const PORT_HOTE = 55441;
 export const HOTE = "127.0.0.1";
 
+/** Pure classification; callers and tests can identify this dev target without probing it. */
+export function viseConteneurDev(url) {
+  try {
+    const parsed = new URL(url);
+    return (
+      (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost") &&
+      parsed.port === String(PORT_HOTE)
+    );
+  } catch {
+    return false;
+  }
+}
+
 /** Budgets — bornés pour échouer vite et explicite. */
 const BUDGET_DEMON_MS = 45_000; // Docker Desktop qui démarre au boot
 const BUDGET_PRET_MS = 30_000; // startup PostgreSQL d'un conteneur froid

@@ -1,4 +1,4 @@
-﻿[CmdletBinding(SupportsShouldProcess = $true)]
+[CmdletBinding(SupportsShouldProcess = $true)]
 param(
     [Parameter(Mandatory = $true)][ValidateSet('Host', 'Client')][string]$Mode,
     [Parameter(Mandatory = $true)][string]$InstallDir,
@@ -120,6 +120,24 @@ function Trust-PublicCertificate([byte[]]$Bytes) {
     try { $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite); $store.Add($cert) } finally { $store.Close(); $cert.Dispose() }
 }
 
+function Assert-DoctorSnapshotManifest($Manifest, [string]$ActualHash) {
+    try {
+        if ($Manifest.sha256 -notmatch '^[0-9a-fA-F]{64}$' -or $ActualHash -ine $Manifest.sha256) { throw 'hash' }
+        if (($Manifest.patient_count -isnot [int] -and $Manifest.patient_count -isnot [long]) -or $Manifest.patient_count -lt 0) { throw 'patient count' }
+        if ($Manifest.patients_total_source -ne $Manifest.patient_count -or $Manifest.fixtures_exclues -ne 0 -or $Manifest.counts.'app.patients' -ne $Manifest.patient_count) { throw 'patient counts' }
+        if ($Manifest.patient_count -eq 0) {
+            $inactive = 0
+            if ($null -ne $Manifest.inactive_approval_count) {
+                if (($Manifest.inactive_approval_count -isnot [int] -and $Manifest.inactive_approval_count -isnot [long]) -or $Manifest.inactive_approval_count -lt 0 -or $Manifest.inactive_approval_count -gt 16 -or $Manifest.active_account_count -ne 2) { throw 'historical accounts' }
+                $inactive = $Manifest.inactive_approval_count
+            }
+            foreach ($entry in @(@('app.consultations',0),@('app.documents',0),@('app.profiles',(2+$inactive)),@('auth.users',(2+$inactive)))) {
+                $property=$Manifest.counts.PSObject.Properties[$entry[0]]
+                if ($null -eq $property -or ($property.Value -isnot [int] -and $property.Value -isnot [long]) -or $property.Value -ne $entry[1]) { throw 'empty cabinet counts' }
+            }
+        }
+    } catch { throw 'Dossier médecin incomplet : instantané invalide.' }
+}
 $install = (Resolve-Path -LiteralPath $InstallDir).ProviderPath
 $resources = Join-Path $install 'resources'
 if ($RequireSnapshot) {
@@ -129,7 +147,7 @@ if ($RequireSnapshot) {
         if (-not (Test-Path -LiteralPath (Join-Path $snapshot $name) -PathType Leaf)) { throw 'Dossier médecin incomplet : instantané absent.' }
     }
     $manifest = Get-Content -Raw -LiteralPath (Join-Path $snapshot 'manifest.json') | ConvertFrom-Json
-    if ($manifest.sha256 -notmatch '^[0-9a-fA-F]{64}$' -or $manifest.patient_count -lt 1 -or (Get-FileHash -LiteralPath (Join-Path $snapshot 'base.dump') -Algorithm SHA256).Hash -ne $manifest.sha256) { throw 'Dossier médecin incomplet : instantané invalide.' }
+    Assert-DoctorSnapshotManifest $manifest (Get-FileHash -LiteralPath (Join-Path $snapshot 'base.dump') -Algorithm SHA256).Hash
 }
 $exeName = 'MindCare OS.exe'
 $exe = Join-Path $install $exeName

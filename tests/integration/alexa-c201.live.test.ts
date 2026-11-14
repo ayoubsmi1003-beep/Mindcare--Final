@@ -88,10 +88,10 @@ let networkViolation = false;
 const realFetch = globalThis.fetch;
 if (ready) {
   globalThis.fetch = ((input: Parameters<typeof fetch>[0], init?: Parameters<typeof fetch>[1]) => {
-    const target = typeof input === "string" ? input : input instanceof URL ? input.href : (input as Request).url;
+    const target = typeof input === "string" ? input : input instanceof URL ? input.href : (input).url;
     if (!/^https?:\/\/(?:127\.0\.0\.1|localhost|\[::1\])(?::\d+)?\//u.test(target)) { networkViolation = true; return Promise.reject(new Error("C201: external network call blocked")); }
     return realFetch(input, init);
-  }) as typeof fetch;
+  });
 }
 
 const MARKER_PAGE = /\[[^\]]*?\bp\.(\d+)[^\]]*\]/u;
@@ -178,7 +178,7 @@ describe.skipIf(!ready)(`C201 ${which}`, () => {
           const stopped = new Promise<never>((_resolve, reject) => { stopTimer = setTimeout(() => reject(new Error("C201 hard stop: the turn did not finish")), TURN_HARD_STOP_MS + 5_000); });
           await Promise.race([
             withTurnTrace(recorder, () => runAlexa({ text: say, conversationId, clientTurnId: crypto.randomUUID(), appContext },
-              { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, trace: recorder, agentAsOf: item.asOf ?? DEFAULT_AS_OF, agentObserve: (call) => calls.push({ name: call.name, args: call.args as Record<string, unknown> }) },
+              { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, trace: recorder, agentAsOf: item.asOf ?? DEFAULT_AS_OF, agentObserve: (call) => calls.push({ name: call.name, args: call.args }) },
               (event) => events.push(event), controller.signal)),
             stopped,
           ]);
@@ -191,7 +191,7 @@ describe.skipIf(!ready)(`C201 ${which}`, () => {
         const sources = sentences.flatMap((event) => event.sources ?? []);
         const labels = sources.filter((source) => source.type === "knowledge").map((source) => source.label);
         const quoteChecks = (oracle as { book?: unknown }).book ? await Promise.all(extractQuotes(answer).map((quote) => checkQuote(admin, quote, labels))) : [];
-        const verdict = evaluateTurn(oracle as never, {
+        const verdict = evaluateTurn(oracle, {
           answer, status: final?.status ?? null, patientId: final?.patientId ?? null, calls, sources, quoteChecks,
           error: error ?? (streamError ? `stream:${(streamError as { code?: string }).code}` : undefined), network: networkViolation,
         });

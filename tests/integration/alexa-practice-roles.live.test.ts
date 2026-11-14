@@ -71,7 +71,7 @@ describe.skipIf(!ready)("practice reads by role", () => {
       { actor, db: alexaDb(actor), knowledge: clientSql(actor), native: true, agentObserve: call => calls.push({ name: call.name, patientId: call.args["patientId"] }), agentObserveResult: result => observed.push(result) },
       event => events.push(event), new AbortController().signal).catch(() => undefined);
     const sentences = events.filter((event): event is Extract<AlexaEvent, { type: "sentence" }> => event.type === "sentence");
-    const done = events.find(event => event.type === "done") as Extract<AlexaEvent, { type: "done" }> | undefined;
+    const done = events.find(event => event.type === "done");
     return { answer: sentences.map(event => event.text).join(" "), status: done?.status ?? null, tools: calls.map(call => call.name), observed };
   };
 

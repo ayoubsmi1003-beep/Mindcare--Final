@@ -85,7 +85,7 @@ export function canonicalPeriod(folded: string, asOf: string): string | null {
   if (/^(?:la )?semaine prochaine$/u.test(folded)) { const monday = addDays(mondayOf(today), 7); return explicitRange(monday, addDays(monday, 6)); }
   if (/^le mois (?:dernier|precedent)$/u.test(folded)) {
     const [year, month] = today.split("-").map(Number); const previous = month === 1 ? [year! - 1, 12] : [year!, month! - 1];
-    const last = new Date(Date.UTC(previous[0]!, previous[1]!, 0)).getUTCDate();
+    const last = new Date(Date.UTC(previous[0]!, previous[1], 0)).getUTCDate();
     return explicitRange(`${previous[0]}-${String(previous[1]).padStart(2, "0")}-01`, `${previous[0]}-${String(previous[1]).padStart(2, "0")}-${last}`);
   }
   const weekdayDate = (name: string, which?: string) => {
@@ -310,7 +310,7 @@ function replacePeriod(request: string, replacement: string): string | null {
   const matches = [...out.matchAll(global)];
   // A day part ("demain après-midi") is one period; two separate periods are ambiguous.
   if (matches.length !== 1) return null;
-  const match = matches[0]!, start = map[match.index!]!, end = (map[match.index! + match[0].length - 1] ?? request.length - 1) + 1;
+  const match = matches[0]!, start = map[match.index]!, end = (map[match.index + match[0].length - 1] ?? request.length - 1) + 1;
   // "recettes de ce mois" -> "recettes du 1 septembre au 30 septembre": no doubled "de du".
   const before = /\bde\s+$/u.test(request.slice(0, start)) && /^du\s/u.test(replacement) ? request.slice(0, start).replace(/\bde\s+$/u, "") : request.slice(0, start);
   return `${before}${replacement}${request.slice(end)}`;

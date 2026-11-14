@@ -24,7 +24,7 @@ function consultationRow(data: readonly unknown[]): { id?: unknown; patient_id?:
   const first = data[0];
   if (typeof first !== "object" || first === null) return null;
   const wrapped = "get_consultation" in first ? (first as { get_consultation?: unknown }).get_consultation : first;
-  return typeof wrapped === "object" && wrapped !== null ? wrapped as { id?: unknown; patient_id?: unknown } : null;
+  return typeof wrapped === "object" && wrapped !== null ? wrapped : null;
 }
 
 export async function verifyConsultationContext(

@@ -33,6 +33,15 @@ export function creerSessionSondeCabinet<T extends { fetch: SondeFetch }>(
   return fromPartition("mindcare-clinic-health", { cache: false });
 }
 
+/** The Doctor app renders from loopback; health checks must monitor that same backend. */
+export function origineSondeCabinet(
+  mode: "host" | "client",
+  origineEpinglee: string,
+  origineLocale: string,
+): string {
+  return mode === "host" ? origineLocale : origineEpinglee;
+}
+
 /** A single transient timeout must not bounce the application to its reconnect window. */
 export function creerStabiliteSondeCabinet(): { echec(): boolean; succes(): boolean } {
   let echecs = 0;

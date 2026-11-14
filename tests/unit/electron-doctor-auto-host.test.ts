@@ -9,4 +9,11 @@ describe('doctor delivery first launch', () => {
     expect(initialiserHoteDocteur(true, false, true, false)).toBe(false);
     expect(initialiserHoteDocteur(true, false, false, true)).toBe(false);
   });
+
+  it('repairs a missing task only for an already trusted doctor host with its data cluster present', () => {
+    expect(initialiserHoteDocteur(true, true, true, true, false)).toBe(true);
+    expect(initialiserHoteDocteur(true, true, true, true, true)).toBe(false);
+    expect(initialiserHoteDocteur(true, true, false, true, false)).toBe(false);
+    expect(initialiserHoteDocteur(true, true, true, false, false)).toBe(false);
+  });
 });

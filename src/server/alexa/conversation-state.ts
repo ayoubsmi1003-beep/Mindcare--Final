@@ -52,8 +52,7 @@ export class ConversationState {
       if(Date.now()-current.at>REFERENCE_IDLE_TTL_MS)this.entries.delete(key);
       else this.scheduleExpiry(key,current.at);
     },Math.max(0,at+REFERENCE_IDLE_TTL_MS+1-now));
-    const unref=(timer as unknown as {unref?:()=>void}).unref;
-    if(typeof unref==="function")unref.call(timer);
+    timer.unref?.();
     this.expiryTimers.set(key,timer);
   }
   private sweep(now: number): void {

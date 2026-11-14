@@ -25,7 +25,7 @@ function fakeDb(table: Record<string, Rows | "fail">) {
 const input = (appContext: Partial<TurnInput["appContext"]>): TurnInput => ({
   text: "Quel est son traitement actuel ?", conversationId: "c", clientTurnId: "t",
   appContext: { patientId: null, page: `/consultation/${CONSULTATION}`, ...appContext },
-} as TurnInput);
+});
 const patientRow = (id: string) => [{ id, first_name: "Prénom", last_name: "Nom" }];
 
 describe("consultation context", () => {

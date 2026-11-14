@@ -14,8 +14,8 @@ import {
   type ConfianceCabinet,
 } from './decouverte-cabinet.js';
 import { demarrerRemappage, type Remappage } from './remappage-cabinet.js';
-import { configurerOrigineCabinet } from './config.js';
-import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, validerOrigineCabinet, ErreurConnexionCabinet, appareilRevoque } from './connexion-cabinet.js';
+import { configurerOrigineCabinet, urlDepart } from './config.js';
+import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, origineSondeCabinet, validerOrigineCabinet, ErreurConnexionCabinet, appareilRevoque } from './connexion-cabinet.js';
 import { verifierCertificatCabinet } from './confiance-cabinet.js';
 import {
   ecrireConfianceStockee,
@@ -432,8 +432,13 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
     {label:messages.diagnosticMenu!,click:()=>{void diagnosticDecouverte();}},
     {role:'quit',label:messages.quit!}]}]));
   const marqueurDocteur = app.isPackaged && existsSync(path.join(process.resourcesPath, 'cabinet', 'doctor-host.json'));
-  if (initialiserHoteDocteur(marqueurDocteur, existsSync(path.join(RACINE, 'desktop.json')), existsSync(path.join(RACINE, 'data', 'PG_VERSION')), confiance !== undefined)) {
+  const configurationExistante = existsSync(path.join(RACINE, 'desktop.json'));
+  const baseExistante = existsSync(path.join(RACINE, 'data', 'PG_VERSION'));
+  const verifierTacheHote = marqueurDocteur && posteHote() && configurationExistante && baseExistante && confiance !== undefined;
+  const tacheHotePresente = verifierTacheHote ? await tacheHoteInstallee() : true;
+  if (initialiserHoteDocteur(marqueurDocteur, configurationExistante, baseExistante, confiance !== undefined, tacheHotePresente)) {
     try {
+      journalDesktop(app.getPath('userData'), verifierTacheHote ? 'HOST_TASK_REPAIR_REQUESTED' : 'HOST_FIRST_RUN_SETUP_REQUESTED');
       await executerInstallation('Host', '-RequireSnapshot');
       confiance = lireConfiance();
       if (!confiance) throw new Error('CONFIGURATION_CABINET');
@@ -599,7 +604,8 @@ export function surveillerCabinet(fenetre: BrowserWindow): void {
     if (busy || arret || fenetre.isDestroyed() || !confiance) return;
     busy = true;
     try {
-      await attendreCabinet(confiance.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),3000);
+      const origin = origineSondeCabinet(posteHote() ? 'host' : 'client', confiance.origin, urlDepart());
+      await attendreCabinet(origin,(url,options)=>obtenirSessionSonde().fetch(url,options),3000);
       journalDesktop(app.getPath('userData'), 'HEALTH_OK');
       echecsConsecutifs = 0;
       if (stabilite.succes()) fenetre.setTitle(titre);
@@ -648,15 +654,17 @@ export async function attendreConnexionCabinet(
 ): Promise<void> {
   if (!confiance) throw new Error('CONFIGURATION_CABINET');
   const budget = options.budgetMs ?? 120_000;
-  if (posteHote()) {
+  const hote = posteHote();
+  const origin = origineSondeCabinet(hote ? 'host' : 'client', confiance.origin, urlDepart());
+  if (hote) {
     try {
-      await attendreCabinet(confiance.origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), 1500, signal);
+      await attendreCabinet(origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), 1500, signal);
       return;
     } catch { signal?.throwIfAborted(); }
     // Start the existing, protected host task only; never provision another database.
     await demanderDemarrageTache();
   }
-  await attendreCabinet(confiance.origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), budget, signal);
+  await attendreCabinet(origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), budget, signal);
 }
 
 let tacheDemandee = false;
@@ -667,6 +675,10 @@ function demanderDemarrageTache(): Promise<void> {
     journalDesktop(app.getPath('userData'), error ? 'HOST_TASK_START_FAILED' : 'HOST_TASK_START_REQUESTED');
     resolve();
   }));
+}
+
+function tacheHoteInstallee(): Promise<boolean> {
+  return new Promise(resolve => execFile(path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'schtasks.exe'), ['/Query', '/TN', 'MindCare-Clinic-Server'], { windowsHide: true, timeout: 5000 }, error => resolve(error === null || typeof error.code !== 'number')));
 }
 
 /**

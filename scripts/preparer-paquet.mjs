@@ -43,6 +43,7 @@ import { createRequire } from "node:module";
 import { auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {snapshotAlexaBuildSources,enablePackagedNativeEntrypoints,finalizeAlexaBuild,isPlaywrightRuntimePath} from './lib/alexa-package-integrity.mjs';
 
+import { stageKnowledgeAssets } from "./lib/stage-knowledge-assets.mjs";
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const AUTONOME = path.join(RACINE, ".next", "standalone");
 const CIBLE = path.join(RACINE, "resources", "serveur");
@@ -366,6 +367,10 @@ console.log(`[paquet]   ${elagues} fichiers élagués`);
 
 // ── 5. Le SQL — source unique, jamais dupliquée dans le code ─────────────────
 etape("copie de supabase/{bootstrap,migrations}…");
+// Package the pinned local knowledge models in the backend working directory.
+if (!process.env.LOCALAPPDATA) throw new Error("KNOWLEDGE_MODEL_CACHE_MISSING");
+await stageKnowledgeAssets(RACINE, path.join(process.env.LOCALAPPDATA, "MindCare", "modeles"), CIBLE);
+etape("modeles de connaissances epingles copies et verifies");
 cpSync(path.join(RACINE, "supabase", "bootstrap"), path.join(CIBLE, "supabase", "bootstrap"), {
   recursive: true,
 });
