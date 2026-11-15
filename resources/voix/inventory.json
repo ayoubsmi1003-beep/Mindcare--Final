@@ -131,8 +131,8 @@
   },
   {
     "path": "native-voice-worker.py",
-    "bytes": 8245,
-    "sha256": "b272b263bd00382dd81d63fba2be5b2a6748c6161b656432c26baefaefc32ae1"
+    "bytes": 9393,
+    "sha256": "178469d6cac3049519ce623ac52f1fa72a79861a62325844996d53d6e6e896a6"
   },
   {
     "path": "packages/_cffi_backend.cp312-win_amd64.pyd",
@@ -21771,7 +21771,7 @@
   },
   {
     "path": "wake-voice-worker.py",
-    "bytes": 3702,
-    "sha256": "3259be2acea9e1e31578fe31ed9211ad2b43263e47dda6879fcd5f5fdb985930"
+    "bytes": 5695,
+    "sha256": "130c70c738941a07ac2088b9d78f20c687ba17ec64ab38fbadd6df04d6f69634"
   }
 ]

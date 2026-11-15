@@ -18,10 +18,11 @@ import { alexa } from "@/i18n/alexa";
 import { cn } from "@/lib/utils";
 import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
 import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
-import { annulerSuivi, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
+import { annulerSuivi, estVoixActive, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
+import { BoutonStopParole } from "./BoutonStopParole";
 import { Icone } from "./ui/Icones";
 
 interface AutoResizeOptions {
@@ -82,7 +83,7 @@ export function SaisieAlexaLune({
   const [mainsLibres, setMainsLibres] = useState(mainsLibresActif());
   useEffect(() => abonnerMainsLibres(setMainsLibres), []);
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier.
-  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const actif = estVoixActive(voix.etat);
   // La fenêtre de suivi ouvre le micro SANS redire « Alexa » : la machine
   // porte ce fait dans `raison` (voir `declencherEcoute`), et l'écran le dit.
   const suivi = voix.etat === "ecoute" && voix.raison === fr.jarvis.voix.reveil.voixSuivi;
@@ -97,7 +98,9 @@ export function SaisieAlexaLune({
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
-  const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
+  // Typing stays open while the voice conversation listens or speaks: a typed
+  // follow-up is answered aloud by the same conversation.
+  const bloque = fluxEnCours || etat.carteEcriture !== null || (actif && voix.etat !== "ecoute" && voix.etat !== "parole");
 
   // ⚠️ UN ENVOI TAPÉ N'HÉRITE JAMAIS DE LA FENÊTRE DE SUIVI. `annulerSuivi()`
   // retire le démarrage FUTUR ; `interrompreVoix()` referme la capture déjà
@@ -116,6 +119,7 @@ export function SaisieAlexaLune({
 
   return (
     <div className="grid min-w-0 gap-2">
+      <BoutonStopParole className="justify-self-end" />
       <div className="lune-alexa-boite min-w-0 rounded-xl">
         <textarea
           ref={textareaRef}

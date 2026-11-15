@@ -29,6 +29,7 @@
 import { useEffect, useState } from "react";
 
 import { AvatarAlexa } from "./ui/avatar-alexa";
+import { BoutonStopParole } from "./BoutonStopParole";
 import { fr } from "@/i18n/fr";
 import { abonnerConversation } from "@/services/conversation";
 
@@ -61,6 +62,9 @@ export function BulleAlexa({
   if (ouvert) return null;
 
   return (
+    <>
+    {/* STOP floats just above the launcher, only while Alexa's voice is heard. */}
+    <BoutonStopParole className="fixed bottom-24 right-5 z-panneau" />
     <button
       type="button"
       onClick={onOuvrir}
@@ -103,5 +107,6 @@ export function BulleAlexa({
         />
       ) : null}
     </button>
+    </>
   );
 }

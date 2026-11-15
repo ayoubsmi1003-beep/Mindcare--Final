@@ -4,7 +4,7 @@ const boundary = vi.hoisted(() => ({ acquire: vi.fn(), invoke: vi.fn(), cut: vi.
 vi.mock("@/services/micro-partage", () => ({ prendreMicro: boundary.acquire }));
 vi.mock("@/services/db", () => ({ db: () => ({ invokeFunction: boundary.invoke }) }));
 vi.mock("@/services/jarvis-voix", () => ({
-  arreterLecture: boundary.cut, lireTexte: vi.fn(),
+  arreterLecture: boundary.cut, lireTexte: vi.fn(), enveloppeLecture: () => null,
   abonnerLecture: (subscriber: (active: boolean, source: null) => void) => { subscriber(false, null); return () => {}; },
 }));
 vi.mock("@/services/alexa-turn", () => ({ envoyerTourAlexa: vi.fn() }));

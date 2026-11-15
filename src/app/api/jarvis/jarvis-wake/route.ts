@@ -12,13 +12,17 @@ const Schema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("start") }).strict(),
   z.object({ action: z.literal("audio"), pcmBase64: z.string().min(4).max(128_000) }).strict(),
   z.object({ action: z.literal("reset") }).strict(),
+  z.object({ action: z.literal("partial"), pcmBase64: z.string().min(4).max(128_000) }).strict(),
+  z.object({ action: z.literal("partial-reset") }).strict(),
   z.object({ action: z.literal("ping") }).strict(),
   z.object({ action: z.literal("stop") }).strict(),
 ]);
 
 /**
  * Wake-word boundary. The renderer sends bounded 16 kHz PCM chunks; the
- * server answers only `{ detected }`. No transcript crosses this route.
+ * server answers only `{ detected }` for the wake word. During an open
+ * conversation, `partial` returns the live local transcript to the same
+ * authenticated renderer (same origin, never logged), like `jarvis-voice-in`.
  */
 export async function POST(request: Request): Promise<Response> {
   if (!isSameOriginRequest(request)) return new Response(null, { status: 403 });
@@ -51,9 +55,10 @@ export async function POST(request: Request): Promise<Response> {
     const resultat = await demanderReveil(
       session,
       input.data.action,
-      input.data.action === "audio" ? input.data.pcmBase64 : undefined,
+      input.data.action === "audio" || input.data.action === "partial" ? input.data.pcmBase64 : undefined,
       request.signal,
     );
+    if (input.data.action === "partial" || input.data.action === "partial-reset") return succes({ texte: resultat.texte ?? "" });
     return succes({ detected: resultat.detected });
   } catch {
     return echec("configuration", alexa.voixLocale);

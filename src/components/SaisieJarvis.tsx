@@ -8,10 +8,11 @@ import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
 import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
 import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
-import { annulerSuivi, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
+import { annulerSuivi, estVoixActive, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
+import { BoutonStopParole } from "./BoutonStopParole";
 import { Icone } from "./ui/Icones";
 
 export function SaisieJarvis({
@@ -31,7 +32,7 @@ export function SaisieJarvis({
   useEffect(() => abonnerMainsLibres(setMainsLibres), []);
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier : seule
   // une voix engagée (réveil entendu, écoute, traitement, parole) le fait.
-  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const actif = estVoixActive(voix.etat);
   // La fenêtre de suivi ouvre le micro SANS redire « Alexa » : la machine
   // porte ce fait dans `raison` (voir `declencherEcoute`), et l'écran le dit.
   const suivi = voix.etat === "ecoute" && voix.raison === fr.jarvis.voix.reveil.voixSuivi;
@@ -46,7 +47,9 @@ export function SaisieJarvis({
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
-  const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
+  // Typing stays open while the voice conversation listens or speaks: a typed
+  // follow-up is answered aloud by the same conversation.
+  const bloque = fluxEnCours || etat.carteEcriture !== null || (actif && voix.etat !== "ecoute" && voix.etat !== "parole");
 
   // ⚠️ UN ENVOI TAPÉ N'HÉRITE JAMAIS DE LA FENÊTRE DE SUIVI. `annulerSuivi()`
   // retire le démarrage FUTUR ; `interrompreVoix()` referme la capture déjà
@@ -73,6 +76,7 @@ export function SaisieJarvis({
       dans `AppShell`. C'est le même piège, sur l'autre axe.
     */
     <div className="grid min-w-0 gap-2">
+      <BoutonStopParole className="justify-self-end" />
       <div className="flex min-w-0 gap-2">
         <input
           ref={champRef}

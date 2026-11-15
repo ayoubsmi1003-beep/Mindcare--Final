@@ -111,44 +111,67 @@ La première préparation à froid charge le modèle : compter environ 40 s mesu
 sur le PC de développement i3 ; à revalider sur le laptop, ainsi que 80–120 s
 pour le premier essai réel complet. Les démarrages suivants sont plus courts.
 
-Comportement à vérifier :
+Comportement à vérifier (refonte voix du 2026-11-12) :
 
-- **Accusé avant capture** : sur « Alexa », l'accusé « Oui docteur, je vous
-  écoute. » est prononcé **entièrement avant** l'ouverture du micro de commande.
-  Il n'est donc jamais enregistré ni transcrit, et la transcription qui suit ne
-  contient pas l'accusé.
-- **Suivi à 8 s** : après une réponse, une fenêtre de suivi accueille une
-  question sans redire « Alexa », avec **8 s** de patience et **sans** rejouer
-  l'accusé. Le détecteur de réveil est suspendu pendant la lecture (pas de
-  barge-in vocal) ; le bouton Stop/orbe coupe la parole et réarme.
-- **Réarmement** : après chaque réponse ou arrêt, le réveil revient en veille et
-  un nouveau « Alexa » fonctionne. La préférence Mains-libres active s'auto-répare
-  après redémarrage de l'application.
+- **« Alexa » ouvre une conversation.** L'accusé « Oui Docteur, je vous
+  écoute. » est joué **depuis un cache** (synthétisé une fois à l'armement du
+  mains-libres) : il doit partir sans délai perceptible. Le micro est déjà
+  ouvert ; on peut parler par-dessus l'accusé, il s'arrête.
+- **Texte en direct.** Pendant qu'on parle, une bulle provisoire (pointillés,
+  italique) affiche les mots reconnus (Vosk, en flux). À la pause, elle est
+  remplacée par le texte final (Faster-Whisper) ; les mots ne doivent ni se
+  dupliquer ni disparaître.
+- **Toute réponse est dite par Kokoro**, qu'elle ait été dite ou **tapée**,
+  phrase par phrase (la suivante se synthétise pendant que la première joue).
+- **STOP.** Un bouton « Arrêter la voix d'Alexa » est visible **exactement**
+  pendant que le son sort (panneau ouvert : sous la saisie ; fermé : au-dessus
+  du lanceur). Un clic coupe tout ; le texte de la réponse reste affiché.
+- **Relance sans clic.** Après la réponse, la conversation écoute de nouveau ;
+  « Et les doses ? » est pris sans redire « Alexa ». Après **20 s** sans parole,
+  retour en veille du mot de réveil.
+- **Interruption à la voix (barge-in).** Parler nettement pendant une réponse
+  la coupe et capture la nouvelle question. La voix d'Alexa seule (écho du
+  haut-parleur) ne doit **jamais** la couper ni déclencher une question.
+- **Veille permanente.** Le mains-libres ne s'éteint plus après 15 min : il
+  reste armé jusqu'à ce qu'on le coupe.
+- **Diagnostic des latences** : dans la console développeur,
+  `window.__mindcareVoiceTraces.rapport()` donne P50/P95/max par étape
+  (premiers mots, texte final, Alexa, premier son Kokoro, interruption).
+  Aucun texte n'y figure.
 
-### Checklist manuelle 10 étapes — statut : **NOT RUN**
+### Premier test réel au micro — checklist 12 étapes — statut : **NOT RUN**
 
 Aucun microphone n'est disponible sur ce PC de développement : cette checklist
-n'a **pas** été exécutée et ne doit jamais être présentée comme PASS.
+n'a **pas** été exécutée et ne doit jamais être présentée comme PASS. Faire
+d'abord le test **au casque** (aucun écho possible), puis **sur haut-parleurs**.
 
-| # | Étape | Statut |
-|---|---|---|
-| 1 | Démarrer l'app sur le laptop, se connecter, cliquer **Mains-libres**, autoriser le micro | **NOT RUN** |
-| 2 | Dire « Alexa » dix fois en dix minutes : attendre « Oui docteur, je vous écoute », parler ; bulle humaine, réponse Kokoro, réarmement ; l'accusé n'est pas transcrit | **NOT RUN** |
-| 3 | Après chaque réponse, enchaîner une question **sans** dire « Alexa » dans les 8 s (≤ 8 s) : capture sans rejouer l'accusé | **NOT RUN** |
-| 4 | Attendre 8 s en silence, dire « Alexa » : le réveil doit fonctionner | **NOT RUN** |
-| 5 | Taper une question et l'envoyer : la réponse doit être lue à voix haute | **NOT RUN** |
-| 6 | Cliquer Stop/orbe pendant la lecture : la parole s'arrête et l'app se réarme (pas de barge-in vocal, hors périmètre) | **NOT RUN** |
-| 7 | Débrancher le micro pendant le suivi : erreur visible, flux libéré, réarmement au retour du périphérique | **NOT RUN** |
-| 8 | Naviguer vers un autre écran puis revenir : Mains-libres reste armé | **NOT RUN** |
-| 9 | Redémarrer l'app : Mains-libres s'arme automatiquement car la préférence est ON | **NOT RUN** |
-| 10 | Ouvrir une consultation, utiliser le micro de champ : le texte s'insère au curseur mémorisé et n'écrase jamais l'existant | **NOT RUN** |
+| # | Étape | Attendu | Statut |
+|---|---|---|---|
+| 1 | Démarrer l'app, se connecter, cliquer **Mains-libres**, autoriser le micro ; attendre ~1 min | Statut « Mains-libres en veille » | **NOT RUN** |
+| 2 | Dire « Alexa » | Accusé immédiat (< 0,5 s ressenti), état « Oui Docteur… » puis « Je vous écoute » | **NOT RUN** |
+| 3 | Dire « Quels sont les rendez-vous de demain ? » lentement | Mots visibles **pendant** la phrase ; bulle finale juste ; aucun doublon | **NOT RUN** |
+| 4 | Écouter la réponse | Kokoro la lit ; STOP visible pendant le son seulement | **NOT RUN** |
+| 5 | Juste après, dire « Et les doses ? » sans « Alexa » | Capturée, réponse dans le même contexte | **NOT RUN** |
+| 6 | Poser une question longue, cliquer STOP au milieu de la réponse | Silence immédiat, texte complet visible, retour à l'écoute | **NOT RUN** |
+| 7 | Pendant une longue réponse, parler fort et nettement | La réponse se coupe, la nouvelle question est prise | **NOT RUN** |
+| 8 | **Sur haut-parleurs**, laisser une longue réponse aller au bout sans parler | Aucune auto-interruption, aucune question fantôme | **NOT RUN** |
+| 9 | Rester 20 s silencieuse | Retour en veille ; « Alexa » fonctionne de nouveau | **NOT RUN** |
+| 10 | Taper une question dans le panneau | Réponse affichée **et** lue | **NOT RUN** |
+| 11 | Débrancher puis rebrancher le micro | Erreur visible, puis réarmement | **NOT RUN** |
+| 12 | Une heure plus tard, sans avoir touché l'app : « Alexa » | Répond toujours | **NOT RUN** |
+| 13 | Consultation : ouvrir un dossier, cliquer le micro d'un champ de note, dicter **plus de 30 s** puis arrêter | Texte complet inséré au curseur, dans l'ordre, sans écraser l'existant | **NOT RUN** |
+| 14 | Consultation : première dictée juste après l'ouverture de l'écran | Pas d'attente de chargement du modèle (Whisper préparé à l'ouverture) | **NOT RUN** |
 
-État de la preuve : `pnpm voix:preuve` est **PASS** (STT/TTS/Vosk, sans
-microphone) ; la checklist micro ci-dessus est **NOT RUN**. L'installateur
-final sera produit plus tard, une fois le travail applicatif terminé ;
-l'artefact de build actuel est une preuve non signée, pas une release et pas une
-installation. La pile vocale est prête pour l'installateur une fois le travail
-applicatif finalisé ; installateur différé.
+Relever ensuite `window.__mindcareVoiceTraces.rapport()` et le consigner dans
+`ALEXA_STT_BENCHMARK.md`. Si l'étape 8 échoue (écho qui coupe Alexa), noter
+le type de haut-parleur : le seuil d'interruption (2,5× l'écho) est le premier
+réglage à calibrer, dans `src/shared/alexa/voice-loop.ts`.
+
+État de la preuve : `pnpm voix:preuve` et
+`tests/integration/alexa-voice-pipeline-real.test.ts` (moteurs réels, micro et
+haut-parleur simulés) ne remplacent pas cette réception. L'installateur
+final sera produit plus tard ; l'artefact de build actuel est une preuve non
+signée, pas une release.
 
 ## 5. Pannes connues
 

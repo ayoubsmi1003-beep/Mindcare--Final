@@ -8,6 +8,7 @@ afterAll(() => vi.unstubAllGlobals());
 vi.mock("next/navigation", () => ({ usePathname: () => "/patients" }));
 vi.mock("@/components/BandeauSeanceEnCours", () => ({ BandeauSeanceEnCours: () => null }));
 vi.mock("@/components/BootVoix", () => ({ BootVoix: () => null }));
+vi.mock("@/components/BoutonStopParole", () => ({ BoutonStopParole: () => null }));
 vi.mock("@/components/PaletteCommande", () => ({ PaletteCommande: () => null }));
 vi.mock("@/components/PanneauJarvis", () => ({ PanneauJarvis: () => null }));
 vi.mock("@/components/coquille/Rail", () => ({ Rail: () => null }));

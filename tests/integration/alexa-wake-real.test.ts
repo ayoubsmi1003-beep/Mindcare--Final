@@ -326,4 +326,24 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
     expect(worker.vivant()).toBe(true);
     preuve.malformedJsonSurvived = true;
   }, 120_000);
+
+  it("streams a growing live transcript in 200 ms chunks, and a reset starts a clean utterance", async () => {
+    const pcm = pcm16(join(FIXTURES, "commande.wav"));
+    const vus: string[] = [];
+    for (let tour = 0; tour < 2; tour += 1) {
+      expect(await worker.envoyer("partial-reset")).toMatchObject({ ok: true, texte: "" });
+      for (let debut = 0; debut < pcm.length; debut += 6_400) {
+        const r = (await worker.envoyer("partial", { pcmBase64: pcm.subarray(debut, debut + 6_400).toString("base64") })) as Reponse & { texte?: string };
+        expect(r.ok).toBe(true);
+        if (tour === 0 && r.texte && r.texte !== vus.at(-1)) vus.push(r.texte);
+        if (tour === 1 && debut === 0) expect(r.texte ?? "").not.toContain("patient"); // nothing leaked from the previous utterance
+      }
+    }
+    // Words appear before the end of the audio and only grow: no duplicate, no reorder.
+    expect(vus.length).toBeGreaterThan(1);
+    for (let i = 1; i < vus.length; i += 1) expect(vus[i]!.startsWith(vus[i - 1]!.split(" ").slice(0, -1).join(" "))).toBe(true);
+    expect(vus.at(-1)).toMatch(/prochain patient/);
+    // The wake recognizer is a separate object: dictation never fires the wake word.
+    expect(await worker.envoyer("ping")).toMatchObject({ ok: true, pong: true });
+  }, 120_000);
 });

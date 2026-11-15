@@ -65,7 +65,6 @@ interface DicteeEnCours {
   /** Horodatage de départ — sert la seule métrique de durée, jamais l'audio. */
   debut: number;
   runId: string;
-  utteranceId: string;
 }
 
 let dictee: DicteeEnCours | null = null;
@@ -134,7 +133,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   };
   recorder.start(250); // fragment toutes les 250 ms — stop net, pas de queue perdue
 
-  dictee = { recorder, prise, fragments, debut: Date.now(), runId: crypto.randomUUID(), utteranceId: crypto.randomUUID() };
+  dictee = { recorder, prise, fragments, debut: Date.now(), runId: crypto.randomUUID() };
 
   // ⚠️ DIAGNOSTIC : DES MÉTADONNÉES, JAMAIS UN ÉCHANTILLON.
   // Ce qui a manqué le 2026-08-27 n'était pas l'audio — c'était de savoir si
@@ -205,30 +204,72 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
 
 
   const controle = new AbortController(); controleTranscription = controle;
-  let pcmBase64: string;
+  let morceaux: string[];
   try {
     const contexte = new OfflineAudioContext(1, 1, 16000);
     const tampon = await contexte.decodeAudioData(await blob.arrayBuffer());
-    const channels = Array.from({ length: Math.min(2, tampon.numberOfChannels) }, (_, i) => tampon.getChannelData(i));
-    const bytes = encoderPCM16(channels, tampon.sampleRate);
-    let binary = ""; for (const byte of bytes) binary += String.fromCharCode(byte);
-    pcmBase64 = btoa(binary);
+    const mono = tampon.getChannelData(0).slice();
+    if (tampon.numberOfChannels > 1) { const droite = tampon.getChannelData(1); for (let i = 0; i < mono.length; i++) mono[i] = (mono[i]! + droite[i]!) / 2; }
+    morceaux = decouperDictee(mono, tampon.sampleRate).map((partie) => {
+      let binary = ""; for (const byte of encoderPCM16([partie], tampon.sampleRate)) binary += String.fromCharCode(byte);
+      return btoa(binary);
+    });
   } catch {
     return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
   }
-  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-  const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
-    pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "fr",
-  }, controle.signal);
-  if (controleTranscription === controle) controleTranscription = null;
-  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-
-  if (!resultat.ok) {
-    log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
-    return err(resultat.error);
+  // A note longer than Whisper's 30 s window is transcribed piece by piece, in order.
+  const textes: string[] = [];
+  let incompris: AppError | null = null;
+  for (const pcmBase64 of morceaux) {
+    if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    const utteranceId = crypto.randomUUID();
+    const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
+      pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId, langue: "fr",
+    }, controle.signal);
+    if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    if (!resultat.ok) {
+      // A silent or unintelligible piece (a pause) is skipped, never the whole note.
+      if (resultat.error.code === "regle-metier") { incompris = resultat.error; continue; }
+      log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
+      return err(resultat.error);
+    }
+    if (resultat.data.runId !== enCours.runId || resultat.data.utteranceId !== utteranceId) return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
+    if (resultat.data.texte.trim()) textes.push(resultat.data.texte.trim());
   }
-  if (resultat.data.runId !== enCours.runId || resultat.data.utteranceId !== enCours.utteranceId) return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
-  return ok(resultat.data.texte);
+  if (controleTranscription === controle) controleTranscription = null;
+  if (textes.length === 0 && incompris !== null) return err(incompris);
+  return ok(textes.join(" "));
+}
+
+/**
+ * Whisper hears at most 30 s per request. A longer dictation is cut at the
+ * quietest 100 ms between 20 and 28 s, so a cut falls between words.
+ */
+export function decouperDictee(samples: Float32Array, taux: number): Float32Array[] {
+  const max = Math.floor(28 * taux), min = Math.floor(20 * taux), fenetre = Math.max(1, Math.floor(taux / 10));
+  const parties: Float32Array[] = [];
+  let debut = 0;
+  while (samples.length - debut > max) {
+    let coupe = debut + max, plusBas = Infinity;
+    for (let o = debut + min; o + fenetre <= debut + max; o += fenetre) {
+      let p = 0;
+      for (let i = o; i < o + fenetre; i++) p += samples[i]! * samples[i]!;
+      if (p < plusBas) { plusBas = p; coupe = o + Math.floor(fenetre / 2); }
+    }
+    parties.push(samples.subarray(debut, coupe));
+    debut = coupe;
+  }
+  parties.push(samples.subarray(debut));
+  // A sliver under 100 ms carries no word.
+  return parties.filter((p) => p.length >= fenetre);
+}
+
+/**
+ * Loads Whisper (and Kokoro) as soon as a dictation screen opens, so the first
+ * note does not wait for a cold model load. Failures surface on the dictation itself.
+ */
+export function preparerTranscription(): void {
+  void db().invokeFunction("jarvis-voice-session", { action: "prepare" }).catch(() => {});
 }
 
 /** Annule sans envoyer : le fragment jeté, le micro rendu. */
@@ -269,7 +310,35 @@ export function annulerDicteeSi(gen: number): boolean {
  */
 const DELAI_PREMIER_SON_MS = 5_000;
 
-let lectureEnCours: { audio: HTMLAudioElement; url: string } | null = null;
+let lectureEnCours: { audio: HTMLAudioElement; url: string; enveloppe?: Float32Array | undefined } | null = null;
+
+/** RMS of each 20 ms block of a canonical PCM16 mono WAV: what the speaker is about to emit. */
+export function enveloppeWav(tampon: ArrayBuffer): Float32Array | undefined {
+  if (tampon.byteLength <= 44) return undefined;
+  const vue = new DataView(tampon);
+  const taux = vue.getUint32(24, true), bloc = Math.max(1, Math.round(taux / 50)), n = Math.floor((tampon.byteLength - 44) / 2);
+  const sortie = new Float32Array(Math.ceil(n / bloc));
+  for (let b = 0; b < sortie.length; b++) {
+    let p = 0, k = 0;
+    for (let i = b * bloc; i < Math.min(n, (b + 1) * bloc); i++, k++) { const v = vue.getInt16(44 + i * 2, true) / 32768; p += v * v; }
+    sortie[b] = k ? Math.sqrt(p / k) : 0;
+  }
+  return sortie;
+}
+
+/**
+ * The loudest block Alexa's speaker emitted over the last 300 ms (reverberation
+ * and output latency included), at the real playback clock; `null` when
+ * nothing plays. Lets the microphone tell the doctor's voice from Alexa's echo.
+ */
+export function enveloppeLecture(): number | null {
+  const l = lectureEnCours;
+  if (l === null || !enLecture || l.enveloppe === undefined || !Number.isFinite(l.audio.currentTime)) return null;
+  const fin = Math.min(l.enveloppe.length - 1, Math.floor(l.audio.currentTime * 50) + 3);
+  let max = 0;
+  for (let b = Math.max(0, fin - 18); b <= fin; b++) max = Math.max(max, l.enveloppe[b] ?? 0);
+  return max;
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // L'ÉTAT DE LECTURE — CE QUE LE NAVIGATEUR FAIT, PAS CE QU'ON LUI A DEMANDÉ
@@ -448,39 +517,177 @@ export function decouperTexteLecture(texte: string, limite = LIMITE_LECTURE): st
 }
 
 /**
- * Lit une réponse longue en morceaux successifs.
- *
- * `lireTexte` résout au PREMIER son ; enchaîner deux morceaux sans attendre la
- * fin du précédent ferait couper le premier par le second. On attend donc la
- * fin réelle entre deux morceaux — jamais pendant le dernier.
+ * Segments for sentence-level synthesis. A decimal dot belongs to its dosage:
+ * split only at a line break or at punctuation followed by whitespace and the
+ * next sentence's text. Fragments under 24 characters join the next one, so a
+ * "Oui." does not cost a synthesis round trip of its own; every segment stays
+ * under the synthesizer's cap.
  */
+export function segmenterPhrases(texte: string, limite = LIMITE_LECTURE): string[] {
+  const brutes = texte.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«\d])/u).map((s) => s.trim()).filter((s) => s !== "");
+  const segments: string[] = [];
+  let tampon = "";
+  for (const phrase of brutes) {
+    tampon = tampon === "" ? phrase : `${tampon} ${phrase}`;
+    if (tampon.length >= 24) { segments.push(...decouperTexteLecture(tampon, limite)); tampon = ""; }
+  }
+  if (tampon !== "") segments.push(...decouperTexteLecture(tampon, limite));
+  return segments;
+}
+
+/** A RIFF/WAVE body with at least one sample. Anything else is not audio. */
+export function estWavValide(tampon: ArrayBuffer): boolean {
+  if (tampon.byteLength <= 44) return false;
+  const tete = new Uint8Array(tampon, 0, 12);
+  const ascii = (debut: number) => String.fromCharCode(...tete.subarray(debut, debut + 4));
+  return ascii(0) === "RIFF" && ascii(8) === "WAVE";
+}
+
+/** Kokoro synthesis of one segment, in RAM. Never rejects: failures are named. */
+async function synthetiser(texte: string, signal: AbortSignal): Promise<Result<ArrayBuffer>> {
+  try {
+    const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
+    const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, signal);
+    if (signal.aborted) return err(erreurLectureInterrompue());
+    if (!flux.ok) return err(flux.error);
+    const tampon = await new Response(flux.data).arrayBuffer();
+    if (signal.aborted) return err(erreurLectureInterrompue());
+    // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE.
+    if (!estWavValide(tampon)) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    return ok(tampon);
+  } catch {
+    return err(signal.aborted ? erreurLectureInterrompue() : { code: "indisponible", message: fr.jarvis.voix.indisponible });
+  }
+}
+
+type FinSegment = "fini" | "interrompu" | "echec" | "bloque";
+
+/**
+ * Plays one synthesized segment to its END. "Alexa parle" is published on the
+ * first real sound only, and stays published across segments (no flicker).
+ */
+function jouerSegment(tampon: ArrayBuffer, generation: number, controle: AbortController): Promise<FinSegment> {
+  return new Promise((resolve) => {
+    if (generation !== generationLecture || controle.signal.aborted) { resolve("interrompu"); return; }
+    if (lectureEnCours !== null) URL.revokeObjectURL(lectureEnCours.url);
+    const url = URL.createObjectURL(new Blob([tampon], { type: "audio/wav" }));
+    const audio = new Audio(url);
+    // The local worker normalizes its PCM; keep the player at unity.
+    audio.volume = 1;
+    audio.muted = false;
+    lectureEnCours = { audio, url, enveloppe: enveloppeWav(tampon) };
+    let demarre = false;
+    const fin = (valeur: FinSegment) => {
+      clearTimeout(premierSon);
+      audio.onplaying = audio.onended = audio.onerror = null;
+      controle.signal.removeEventListener("abort", abandon);
+      resolve(valeur);
+    };
+    const abandon = () => fin("interrompu");
+    // A `playing` that never comes (no output device) must not hang the queue.
+    const premierSon = setTimeout(() => { if (!demarre) fin("echec"); }, DELAI_PREMIER_SON_MS);
+    controle.signal.addEventListener("abort", abandon, { once: true });
+    audio.onplaying = () => {
+      demarre = true;
+      if (generation === generationLecture && !controle.signal.aborted) publierLecture(true, "local");
+    };
+    audio.onended = () => fin("fini");
+    audio.onerror = () => fin("echec");
+    audio.play().catch((cause: unknown) => {
+      fin(cause instanceof DOMException && cause.name === "NotAllowedError" ? "bloque" : "echec");
+    });
+  });
+}
+
+/**
+ * ═══ LA SEULE SORTIE VOCALE D'UNE RÉPONSE — tapée ou dite ═══
+ *
+ * Kokoro, phrase par phrase : la première phrase joue dès qu'elle est
+ * synthétisée, la suivante se synthétise PENDANT qu'elle joue (une d'avance,
+ * jamais plus), et l'ordre est strict. Une seule réponse à la fois : démarrer
+ * une lecture coupe la précédente. `arreterLecture()` (bouton STOP) coupe le
+ * son ET abandonne les synthèses en attente ; le texte affiché n'est jamais
+ * touché. Résout à la FIN réelle de la dernière phrase.
+ */
+export async function lireReponse(texte: string, annulee?: () => boolean): Promise<Result<true>> {
+  arreterLecture();
+  const segments = segmenterPhrases(texte);
+  if (segments.length === 0) return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
+  const generation = generationLecture;
+  const controle = new AbortController();
+  controleLecture = controle;
+  const vivant = () => generation === generationLecture && !controle.signal.aborted && annulee?.() !== true;
+  const interrompre = (): Result<true> => {
+    // Une capture (ou un mute) a pris la main : on coupe le son en cours.
+    if (generation === generationLecture) arreterLecture();
+    return err(erreurLectureInterrompue());
+  };
+  let suivant: Promise<Result<ArrayBuffer>> | null = synthetiser(segments[0]!, controle.signal);
+  for (let index = 0; index < segments.length; index += 1) {
+    const tampon: Result<ArrayBuffer> = await suivant!;
+    if (!vivant()) return interrompre();
+    if (!tampon.ok) {
+      arreterLecture();
+      if (!estLectureInterrompue(tampon.error)) log.warn("jarvis.voix.lecture", logFieldsFor(tampon.error));
+      return tampon;
+    }
+    suivant = index + 1 < segments.length ? synthetiser(segments[index + 1]!, controle.signal) : null;
+    const fin = await jouerSegment(tampon.data, generation, controle);
+    if (fin === "interrompu" || !vivant()) return interrompre();
+    if (fin !== "fini") {
+      arreterLecture();
+      if (fin === "bloque") return err({ code: "interdit", message: fr.jarvis.voix.lectureBloquee });
+      log.warn("jarvis.voix.jamaisDemarree", { code: "indisponible" });
+      return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    }
+  }
+  arreterLecture();
+  return ok(true);
+}
+
+/**
+ * The wake acknowledgement, synthesized ONCE by Kokoro and kept in RAM as a
+ * validated WAV: on "Alexa" it plays at once, without a synthesis round trip.
+ */
+let accuseEnCache: { readonly texte: string; readonly tampon: ArrayBuffer } | null = null;
+
+export async function prechargerAccuse(texte: string): Promise<boolean> {
+  if (accuseEnCache?.texte === texte) return true;
+  const synthese = await synthetiser(texte, AbortSignal.timeout(180_000));
+  if (!synthese.ok) return false;
+  accuseEnCache = { texte, tampon: synthese.data };
+  return true;
+}
+
+export function accuseEnCachePret(texte: string): boolean {
+  return accuseEnCache?.texte === texte;
+}
+
+/** Plays the cached acknowledgement; synthesizes it on the spot only if the cache is missing. */
+export async function lireAccuse(texte: string, annulee?: () => boolean): Promise<Result<true>> {
+  const cache = accuseEnCache;
+  if (cache?.texte !== texte) return lireReponse(texte, annulee);
+  arreterLecture();
+  const generation = generationLecture;
+  const controle = new AbortController();
+  controleLecture = controle;
+  const fin = await jouerSegment(cache.tampon.slice(0), generation, controle);
+  if (generation === generationLecture) arreterLecture();
+  if (fin === "fini") return ok(true);
+  if (fin === "interrompu" || annulee?.() === true) return err(erreurLectureInterrompue());
+  return err(fin === "bloque" ? { code: "interdit", message: fr.jarvis.voix.lectureBloquee } : { code: "indisponible", message: fr.jarvis.voix.indisponible });
+}
+
+/** Historical entry point (bubble replay, global reader): same single queue. */
 export async function lireTexteLong(
   texte: string,
   porteUneIdentite = false,
   annulee?: () => boolean,
 ): Promise<Result<true>> {
-  const morceaux = decouperTexteLecture(texte);
-  if (morceaux.length === 0) {
-    return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
-  }
-  for (let index = 0; index < morceaux.length; index += 1) {
-    if (annulee?.() === true) {
-      // Une capture (ou un mute) a pris la main : on coupe le son en cours
-      // avant de rendre la main, jamais seulement le morceau suivant.
-      arreterLecture();
-      return err(erreurLectureInterrompue());
-    }
-    const resultat = await lireTexte(morceaux[index]!, porteUneIdentite);
-    if (!resultat.ok) return resultat;
-    if (index < morceaux.length - 1) {
-      await attendreFinLecture(120_000);
-      if (annulee?.() === true) {
-        arreterLecture();
-        return err(erreurLectureInterrompue());
-      }
-    }
-  }
-  return ok(true);
+  // TTS is local: a patient-named answer is spoken like any other.
+  void porteUneIdentite;
+  if (annulee?.() === true) return err(erreurLectureInterrompue());
+  return lireReponse(texte, annulee);
 }
 
 /**
@@ -531,19 +738,12 @@ export async function lireTexte(
 
   const generation = generationLecture;
   const controle = new AbortController(); controleLecture = controle;
-  const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
-  const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, controle.signal);
+  const synthese = await synthetiser(texte, controle.signal);
   if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
-  if (!flux.ok) return err(flux.error);
+  if (!synthese.ok) return synthese;
 
   try {
-    const tampon = await new Response(flux.data).arrayBuffer();
-    if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
-    if (tampon.byteLength === 0) {
-      // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE. Le déclarer tel quel
-      // ferait dire à l'orbe que Jarvis parle alors que rien ne sortira jamais.
-      return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
-    }
+    const tampon = synthese.data;
     try {
       const contexte = new OfflineAudioContext(1, 1, 16000);
       const ref = await contexte.decodeAudioData(tampon.slice(0));

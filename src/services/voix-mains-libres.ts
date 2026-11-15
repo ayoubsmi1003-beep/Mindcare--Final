@@ -9,7 +9,7 @@ import {
 } from "./jarvis-reveil";
 import { envoyer } from "./conversation";
 import { fr } from "@/i18n/fr";
-import { abonnerLecture } from "./jarvis-voix";
+import { preparerVoixReveil } from "./alexa-local";
 import { err, ok, type Result } from "./result";
 
 /**
@@ -18,20 +18,19 @@ import { err, ok, type Result } from "./result";
  * ON : le détecteur Vosk local écoute le mot « Alexa ». Au réveil, la machine
  * à états joue elle-même l'accusé AVANT d'ouvrir le micro de commande (voir
  * `declencherEcoute` dans `jarvis-reveil.ts`), puis capture → STT local → le
- * texte part aussitôt. Après chaque tour le détecteur reste armé ; 15 min sans
- * rien → arrêt.
+ * texte part aussitôt. Après chaque tour le détecteur reste armé, jusqu'à ce
+ * que la praticienne coupe le mains-libres : « Alexa » doit répondre à toute
+ * heure de la journée (aucun arrêt sur inactivité — l'armement est déjà
+ * restauré à chaque démarrage). La veille n'envoie l'audio qu'au repéreur
+ * local de mot de réveil ; Whisper n'écoute qu'une conversation ouverte.
  *
  * ⚠️ LE BOUTON NE PASSE PAS À « ACTIF » AVANT LE DÉTECTEUR. On attend le
  * résultat réel de l'armement ; un micro refusé ou un modèle absent reste une
  * erreur visible, jamais un faux voyant vert.
  */
 
-const INACTIVITE_MS = 15 * 60_000;
-
 let actif = false;
 let liberation: (() => void) | null = null;
-let minuteur: ReturnType<typeof setTimeout> | null = null;
-let stopLecture: (() => void) | null = null;
 /**
  * ⚠️ CHAQUE DÉMARRAGE APPARTIENT À UNE ÉPOQUE. L'armement du détecteur attend
  * un import dynamique puis le chargement du modèle ; un arrêt pendant cette
@@ -44,13 +43,6 @@ const abonnes = new Set<(actif: boolean) => void>();
 
 function publier(): void {
   for (const a of abonnes) a(actif);
-}
-
-function toucher(): void {
-  if (minuteur !== null) clearTimeout(minuteur);
-  minuteur = setTimeout(() => {
-    arreterMainsLibres();
-  }, INACTIVITE_MS);
 }
 
 export function abonnerMainsLibres(abonne: (actif: boolean) => void): () => void {
@@ -80,23 +72,15 @@ export async function demarrerMainsLibres(
 
   const eteint = (): boolean => generation !== demarrageGeneration || !actif;
 
-  stopLecture?.();
-  const mienStopLecture = abonnerLecture(() => {
-    if (actif) toucher();
-  });
-  stopLecture = mienStopLecture;
 
   const mienLiberation = tenir({
     onCommande: async (texte: string) => {
       if (!actif) return;
-      toucher();
       await envoyer(texte);
     },
   });
   liberation = mienLiberation;
   actif = true;
-  toucher();
-  const mienMinuteur = minuteur;
   publier();
 
   /** Ne rendre que CE démarrage — jamais les ressources d'un successeur. */
@@ -107,14 +91,6 @@ export async function demarrerMainsLibres(
       } finally {
         liberation = null;
       }
-    }
-    if (stopLecture === mienStopLecture) {
-      mienStopLecture();
-      stopLecture = null;
-    }
-    if (minuteur !== null && minuteur === mienMinuteur) {
-      clearTimeout(minuteur);
-      minuteur = null;
     }
   };
 
@@ -153,6 +129,8 @@ export async function demarrerMainsLibres(
   if (eteint()) return annuler();
 
   definirVoixSouhaitee(true);
+  // Models and the cached acknowledgement load in the background, before the first "Alexa".
+  void preparerVoixReveil();
   return ok(true);
 }
 
@@ -168,12 +146,6 @@ export function arreterMainsLibres(): void {
     }
     liberation = null;
   }
-  if (minuteur !== null) {
-    clearTimeout(minuteur);
-    minuteur = null;
-  }
-  stopLecture?.();
-  stopLecture = null;
   if (actif) {
     actif = false;
     publier();

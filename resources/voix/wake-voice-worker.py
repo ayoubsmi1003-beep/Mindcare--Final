@@ -28,9 +28,24 @@ if not model_dir.is_dir():
 
 # The grammar keeps the decoder inside a closed vocabulary. The model is
 # French; "alexa" is the configured wake word and the brand is spoken as-is.
-GRAMMAR = '["alexa", "alexia", "eh lexa", "[unk]"]'
+# Decoys: with only "alexa" in a closed grammar, the decoder forces every
+# similar-sounding word onto it — measured 2026-11-12: "Alexandre", "Alexis",
+# "à la caisse" woke Alexa every time (18 false wakes / 24 negatives). Giving
+# those sounds their own words removes them (0 / 36) with unchanged recall
+# (12 / 12) and latency. Words absent from the model's vocabulary are ignored.
+WAKE_WORDS = ["alexa", "alexia", "eh lexa"]
+DECOYS = ["alexandre", "alexandra", "alexis", "alex", "alexandrie", "la caisse", "à la caisse",
+          "caisse", "taxe", "la taxe", "taxi", "lexique", "excès", "à l'excès", "elle a", "elle",
+          "bonjour", "patient"]
+GRAMMAR = json.dumps(WAKE_WORDS + DECOYS + ["[unk]"], ensure_ascii=False)
 model = Model(str(model_dir))
 recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
+# Live transcript during a conversation: the same French model, free
+# vocabulary, true streaming. Whisper still writes the final text; this only
+# shows the doctor her words while she speaks. Text goes back to the local
+# server only, never to a log.
+dictation = KaldiRecognizer(model, 16000)
+committed = []
 last = 0.0
 REFRACTORY_S = 2.0
 sys.stdout.write(json.dumps({"id": "ready", "ready": True}) + "\n")
@@ -40,6 +55,12 @@ sys.stdout.flush()
 def reset():
     global recognizer
     recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
+
+
+def reset_dictation():
+    global dictation, committed
+    dictation = KaldiRecognizer(model, 16000)
+    committed = []
 
 
 def heard(text):
@@ -81,6 +102,21 @@ for line in sys.stdin:
                 last = now
                 reset()
             result["detected"] = detected
+        elif action == "partial":
+            raw = base64.b64decode(req["pcmBase64"], validate=True)
+            if len(raw) == 0 or len(raw) > 64_000 or len(raw) % 2:
+                raise ValueError("volume")
+            if dictation.AcceptWaveform(raw):
+                done = json.loads(dictation.Result()).get("text", "").strip()
+                if done:
+                    committed.append(done)
+                pending = ""
+            else:
+                pending = json.loads(dictation.PartialResult()).get("partial", "").strip()
+            result["texte"] = " ".join(committed + ([pending] if pending else []))[:4000]
+        elif action == "partial-reset":
+            reset_dictation()
+            result["texte"] = ""
         elif action == "reset":
             reset()
             result["detected"] = False

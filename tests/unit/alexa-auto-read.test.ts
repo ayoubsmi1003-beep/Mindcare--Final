@@ -104,15 +104,30 @@ describe("le lecteur automatique global", () => {
       .toMatchObject({ action: "lire", tour: { id: "long" } });
   });
 
-  it("marque la réponse de la boucle directe comme lue, sans la rejouer", () => {
-    const decision = choisirActionLectureAuto([BASE], new Set(), new Set(), {
-      ...OPTS,
-      lectureAuto: false,
-      etatVoix: "parole",
-      boucleActive: true,
-      captureActive: true,
-    });
-    expect(decision).toMatchObject({ action: "marquer", tour: { id: "t1" } });
+  it("ne rejoue jamais une réponse que la boucle directe a déjà prononcée", () => {
+    expect(choisirActionLectureAuto([{ ...BASE, dejaParlee: true }], new Set(), new Set(), {
+      ...OPTS, etatVoix: "ecoute", boucleActive: true, captureActive: true,
+    })).toBeNull();
+    expect(choisirActionLectureAuto([{ ...BASE, dejaParlee: true }], new Set(), new Set(), OPTS)).toBeNull();
+  });
+
+  it("fait prononcer par la boucle une réponse TAPÉE pendant une conversation vocale ouverte", () => {
+    expect(choisirActionLectureAuto([BASE], new Set(), new Set(), {
+      ...OPTS, etatVoix: "ecoute", boucleActive: true, captureActive: true,
+    })).toMatchObject({ action: "lire", voie: "boucle", tour: { id: "t1" } });
+  });
+
+  it("attend que la boucle ait fini de traiter ou de parler avant de prononcer la réponse tapée", () => {
+    for (const etatVoix of ["traitement", "parole", "reveille"] as const) {
+      expect(choisirActionLectureAuto([BASE], new Set(), new Set(), {
+        ...OPTS, etatVoix, boucleActive: true, captureActive: true,
+      })).toBeNull();
+    }
+  });
+
+  it("lit une réponse tapée par le lecteur global hors conversation vocale", () => {
+    expect(choisirActionLectureAuto([BASE], new Set(), new Set(), OPTS))
+      .toMatchObject({ action: "lire", voie: "lecteur" });
   });
 
   it("ne marque pas un tour vide pendant que la boucle directe écoute encore", () => {

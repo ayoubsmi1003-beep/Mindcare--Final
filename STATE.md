@@ -134,6 +134,59 @@ Branche claude/alexa-intelligence-transformation-9fc1d1, commits locaux non pous
 - Revue de sécurité : 9 tours en échec, tour 10 sans constat grave (publiable avec réserves). 
 - Campagne finale sur f644b0e : 172 PASS (136 règle d’origine, référence 158). Rapport : docs/alexa/09-final-evaluation-report.md.
 - En attente : écriture « absent » (docs/alexa/12, accord requis), relecture clinique de docs/alexa/evaluation/practitioner-gold-worksheet.md, vérification de la migration 211 sur le poste du cabinet.
+## ▶ 2026-11-12 — REFONTE VOIX D'ALEXA (branche `claude/mindcare-alexa-voice-redesign-df62a2`)
+
+Périmètre décidé par l'utilisatrice : **français seulement** (Darija/arabe : évaluation écrite, pas
+d'implémentation) ; livraison en commits par phase. Aucune migration, aucune dépendance, aucun modèle
+téléchargé, aucun appel externe.
+
+### Causes racines trouvées (toutes confirmées par expérience)
+| # | Cause | Effet ressenti |
+|---|---|---|
+| 1 | Un abandon de requête (`protocole.ts`) **tuait** le worker Whisper+Kokoro ; or parler pendant une réponse, STOP, une nouvelle dictée abandonnent | « Alexa ne marche plus » 15–40 s (rechargement) |
+| 2 | La VAD entendait la voix d'Alexa elle-même → coupure → cause 1 | Alexa s'interrompt et casse le moteur |
+| 3 | Arrêt du worker après 60 s d'inactivité ; fermer la boucle le déchargeait | démarrages à froid répétés |
+| 4 | STT et TTS dans **un** processus à une place → « occupé » | pas d'interruption ni de préchargement possible |
+| 5 | Réponse tapée pendant une conversation : **marquée lue, jamais prononcée** (`AlexaAutoRead`) | réponses tapées muettes |
+| 6 | Accusé de réveil resynthétisé à chaque « Alexa » | réveil lent |
+| 7 | Grammaire Vosk fermée : « Alexandre », « à la caisse » réveillaient Alexa à chaque fois | faux réveils |
+| 8 | Mains-libres éteint après 15 min sans commande | « Alexa » ne répond plus en milieu de matinée |
+| 9 | Un énoncé incompris (toux, fragment : `silence`/`confiance`) était traité comme une panne STT → micro fermé | la conversation s'arrête d'elle-même |
+
+Deux défauts de MA première version, trouvés par le test de bout en bout sur moteurs réels et corrigés :
+l'estimation d'écho apprenait sur le silence initial de la lecture (Alexa s'interrompait elle-même),
+puis absorbait les syllabes de la praticienne (gain 0,15 → 5 : impossible de l'interrompre). La porte
+compare désormais le micro à l'enveloppe réelle du haut-parleur (`enveloppeLecture`). Et l'aperçu
+n'était jamais affiché sur un poste lent : il était annulé à la fin de la phrase, alors que Whisper
+travaille encore ~16 s — il reste désormais visible jusqu'au texte final.
+
+### Livré (4 commits + mesures)
+Workers résidents par rôle sans mort à l'abandon · file Kokoro unique phrase par phrase avec
+préchargement, pour toute réponse tapée ou dite · aperçu en direct par Vosk en flux (Whisper écrit le
+final) · « Alexa » ouvre une conversation (accusé en cache, relances sans réveil, retour en veille
+après 20 s) · interruption à la voix fondée sur l'**enveloppe réelle du haut-parleur** · garde
+anti-écho · bouton STOP réel · traces de latence sans texte (`window.__mindcareVoiceTraces`) ·
+leurres de grammaire (faux réveils 12/30 → 0/40).
+
+### Mesuré sur l'i3 de développement (parole synthétique — voir `ALEXA_STT_BENCHMARK.md`)
+Aperçu Vosk ≈ 100 ms par morceau de 200 ms ✅ · texte final Whisper `small` **P50 16,6 s** ❌ · première
+phrase Kokoro `fp16` **P50 17,6 s** ❌. Les deux derniers ne tiennent pas les objectifs de la mission sur
+ce poste ; l'i7 n'est pas mesuré. Levier : changer de modèle (Whisper `base`, Kokoro `int8`/`fp32`) —
+**décision praticienne/utilisatrice en attente** (règle 9/10 : nouveaux actifs).
+
+### Dictée en consultation (2026-11-13)
+Une note de plus de 30 s échouait (« voix indisponible ») : fenêtre Whisper de 30 s. Elle est
+désormais découpée dans ses pauses (20–28 s), transcrite morceau par morceau, dans l'ordre ; un morceau
+silencieux est ignoré, pas la note. Whisper se prépare à l'ouverture de l'écran de consultation.
+Prouvé sur moteurs réels (note de 40 s, scénario H). `inventory.json`/`manifest.json` mis à jour pour
+les deux workers modifiés (sinon `voix:preparer --check` et la vérification de paquet échouent).
+
+**Tâche voix CLOSE (2026-11-13)** — évaluation de modèles plus rapides (Whisper `base`, Kokoro
+`int8`) arrêtée à la demande de l'utilisatrice, non faite.
+
+### Non prouvé ici
+Voix humaine, acoustique de la pièce, écho réel des haut-parleurs (seuils non calibrés), latence sur
+l'i7, rendu des écrans dans le navigateur : `docs/TEST-LAPTOP-VOIX.md`, checklist 14 étapes, **NOT RUN**.
 
 ---
 

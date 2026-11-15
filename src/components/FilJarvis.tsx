@@ -32,6 +32,7 @@ import {
   estLectureInterrompue,
   lireTexteLong,
 } from "@/services/jarvis-voix";
+import { abonnerApercuVoix } from "@/services/alexa-local";
 import { abonnerActivite, abonnerCapture, captureActive } from "@/services/voice-activity";
 
 import { Icone } from "./ui/Icones";
@@ -63,6 +64,8 @@ export function FilJarvis({
   } | null>(null);
 
   useEffect(() => abonnerActivite(() => setCapture(captureActive())), []);
+  const [apercuVoix, setApercuVoix] = useState<string | null>(null);
+  useEffect(() => abonnerApercuVoix(setApercuVoix), []);
   // Une capture qui commence coupe la lecture manuelle en cours. La lecture
   // elle-même ne notifie pas `abonnerCapture` : pas d'auto-interruption.
   useEffect(() => abonnerCapture(() => {
@@ -293,6 +296,20 @@ export function FilJarvis({
           </div>
         );
       })}
+
+      {apercuVoix !== null && (
+        /* Live transcript while she speaks: provisional (dashed, muted, italic),
+           replaced by the user's message once Whisper writes the final text. */
+        <div className="flex justify-end" data-testid="apercu-voix">
+          <p
+            aria-label={fr.jarvis.voix.reveil.etats.voixDetectee}
+            className="m-0 whitespace-pre-wrap rounded-lg rounded-br-sm border border-dashed border-action-600 bg-transparent px-4 py-3 font-ui text-body italic text-ink-700"
+            style={{ maxWidth: compact ? "var(--bulle-humain-max)" : "42rem" }}
+          >
+            {apercuVoix}
+          </p>
+        </div>
+      )}
 
       {fluxEnCours && (
         /* Trois points qui respirent — §4 règle 5 : opacité seule, rien ne bouge.

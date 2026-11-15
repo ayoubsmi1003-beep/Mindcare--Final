@@ -22,18 +22,22 @@ def no_network(*args, **kwargs):
 
 
 socket.socket.connect = no_network
-os.environ["OMP_NUM_THREADS"] = "2"
+# One process per role: STT and TTS never block each other (barge-in, prefetch).
+ROLE = os.environ.get("ALEXA_VOICE_ROLE", "both")
+if ROLE not in ("stt", "tts", "both"):
+    raise RuntimeError("configuration:role")
+STT_THREADS = int(os.environ.get("ALEXA_STT_THREADS", "2"))
+if not 1 <= STT_THREADS <= 16:
+    raise RuntimeError("configuration:threads")
+os.environ["OMP_NUM_THREADS"] = str(STT_THREADS)
 
 import numpy as np
 from importlib.metadata import version
 
-if version("faster-whisper") != "1.2.1":
+if ROLE != "tts" and version("faster-whisper") != "1.2.1":
     raise RuntimeError("runtime:faster-whisper")
-if version("kokoro-onnx") != "0.6.1":
+if ROLE != "stt" and version("kokoro-onnx") != "0.6.1":
     raise RuntimeError("runtime:kokoro-onnx")
-
-from faster_whisper import WhisperModel
-from kokoro_onnx import Kokoro
 
 assets = Path(sys.argv[2]).resolve()
 whisper_path = Path(os.environ.get("ALEXA_VOICE_STT_MODEL", assets / "faster-whisper-small"))
@@ -56,15 +60,23 @@ TTS_LANG = os.environ.get("ALEXA_TTS_LANG", "fr-fr")
 HEALTH = os.environ.get("ALEXA_VOICE_HEALTH", "1") == "1"
 
 # The directory is pinned locally; local_files_only forbids any Hub download.
-whisper = WhisperModel(
-    str(whisper_path),
-    device="cpu",
-    compute_type="int8",
-    cpu_threads=2,
-    num_workers=1,
-    local_files_only=True,
-)
-kokoro = Kokoro(str(kokoro_path), str(voices_path))
+whisper = None
+kokoro = None
+if ROLE != "tts":
+    from faster_whisper import WhisperModel
+
+    whisper = WhisperModel(
+        str(whisper_path),
+        device="cpu",
+        compute_type="int8",
+        cpu_threads=STT_THREADS,
+        num_workers=1,
+        local_files_only=True,
+    )
+if ROLE != "stt":
+    from kokoro_onnx import Kokoro
+
+    kokoro = Kokoro(str(kokoro_path), str(voices_path))
 
 FR_PROMPT = (
     "Alexa. Prochain patient. Dernière séance. Agenda. Ordonnance. "
@@ -101,6 +113,8 @@ def wav_base64(samples: np.ndarray, rate: int) -> str:
 
 
 def synth(text: str, langue: str):
+    if kokoro is None:
+        raise ValueError("role")
     if langue != "fr":
         raise ValueError("langue-non-supportee")
     if not text.strip() or len(text) > 2000:
@@ -110,6 +124,8 @@ def synth(text: str, langue: str):
 
 
 def stt_from_samples(samples: np.ndarray, langue: str):
+    if whisper is None:
+        raise ValueError("role")
     if samples.size == 0 or samples.size > 960_000:
         raise ValueError("volume")
     rms = float(np.sqrt(np.mean(samples * samples)))
@@ -141,6 +157,11 @@ def stt_from_samples(samples: np.ndarray, langue: str):
 def health() -> None:
     if not HEALTH:
         return
+    if ROLE == "tts":
+        audio, rate = synth("Bonjour. La voix locale est prête.", "fr")
+        if len(audio) < 44 or rate != 24000:
+            raise RuntimeError("health:tts")
+        return
     health_path = assets.parent / "health" / "fr-bonjour.wav"
     if not health_path.is_file():
         raise RuntimeError("assets:health")
@@ -152,6 +173,8 @@ def health() -> None:
     text = stt_from_samples(samples, "fr")
     if "bonjour" not in text.lower():
         raise RuntimeError("health:stt")
+    if ROLE == "stt":
+        return
     audio, rate = synth("Bonjour. La voix locale est prête.", "fr")
     if len(audio) < 44 or rate != 24000:
         raise RuntimeError("health:tts")
@@ -163,6 +186,7 @@ try:
         json.dumps(
             {
                 "ready": True,
+                "role": ROLE,
                 "stt": "faster-whisper-small-int8",
                 "tts": "kokoro-82m-v1.0-ff_siwis",
                 "voice": TTS_VOICE,

@@ -74,11 +74,18 @@ export type EtatVoix =
   | "veille"
   | "reveille"
   | "ecoute"
+  | "voixDetectee"
+  | "transcription"
   | "traitement"
   | "parole"
   | "interrompu"
   | "erreur"
   | "desactive";
+
+/** A voice interaction is under way (anything but standby, error or off). */
+export function estVoixActive(etat: EtatVoix): boolean {
+  return etat !== "veille" && etat !== "erreur" && etat !== "desactive";
+}
 
 export interface VueVoix {
   readonly etat: EtatVoix;
@@ -762,8 +769,45 @@ export function desarmerReveil(): void {
  * dire « arrête-toi, j'ai autre chose à demander ». Le laisser finir sa phrase
  * ferait répéter le mot de réveil dans le vide.
  */
+/**
+ * ═══ « ALEXA » OUVRE UNE CONVERSATION, PAS UNE COMMANDE ═══
+ *
+ * La conversation vocale (`alexa-local`) prend tout après le mot de réveil :
+ * accusé en cache, écoute continue, transcription en direct, réponses, relances
+ * sans redire « Alexa ». La promesse se résout quand elle se termine ; le
+ * détecteur reprend alors. Injectée pour que ce module n'importe pas la boucle.
+ */
+type ConversationVoix = () => Promise<void>;
+let conversationVoix: ConversationVoix | null = null;
+let conversationEnCours = false;
+
+export function installerConversationVoix(ouvrir: ConversationVoix | null): void {
+  conversationVoix = ouvrir;
+}
+
+/** A wake-word conversation owns the microphone and the speaker (diagnostics and tests). */
+export function conversationVoixEnCours(): boolean {
+  return conversationEnCours;
+}
+
 async function surReveil(): Promise<void> {
-  await declencherEcoute();
+  if (conversationEnCours) return;
+  const ouvrir = conversationVoix;
+  if (ouvrir === null || etat !== "veille") {
+    await declencherEcoute();
+    return;
+  }
+  conversationEnCours = true;
+  detecteur?.suspendre();
+  try {
+    await ouvrir();
+  } catch {
+    log.warn("jarvis.reveil.conversation", { code: "indisponible" });
+  } finally {
+    conversationEnCours = false;
+    // La dictée d'un champ garde la main si elle l'a prise entre-temps.
+    if (!suspensionDictee && !fieldBusy()) detecteur?.reprendre();
+  }
 }
 
 /**
@@ -1043,6 +1087,8 @@ export async function simulerTranscription(texte: string): Promise<boolean> {
  */
 export function signalerParole(): void {
   if (etat === "desactive") return;
+  // The open conversation owns the speaker and keeps the detector suspended.
+  if (conversationEnCours) return;
 
   // ⚠️ LA PAROLE DE L'ACCUSÉ N'EST PAS UNE RÉPONSE. Elle précède l'ouverture
   // du micro ; la prendre pour un tour de parole ferait basculer l'orbe en
@@ -1092,7 +1138,7 @@ export function signalerFinParole(): void {
     chienDeGardeParole = null;
   }
   effacerAttenteParole();
-  if (etat !== "parole") return;
+  if (etat !== "parole" || conversationEnCours) return;
   detecteur?.reprendre();
   aller("veille");
   // Une reprise de détecteur épuisée pendant la réponse devient visible ici,

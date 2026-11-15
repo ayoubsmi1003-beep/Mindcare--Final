@@ -187,3 +187,182 @@ describe("continuous local Alexa voice loop", () => {
     expect(h.loop.active()).toBe(false); expect(h.calls).toContain("state:erreur"); expect(h.calls).not.toContain("stt");
   });
 });
+
+describe("one speech path for typed and spoken answers", () => {
+  it("speaks a typed answer through the open conversation, then listens again", async () => {
+    const h = harness({ lire: async (text, _signal, playing) => { h.calls.push(`tts:${text}`); playing(); } });
+    await h.loop.demarrer(); h.calls.length = 0;
+    expect(await h.loop.parler("Vous avez trois rendez-vous demain.")).toBe("fini");
+    expect(h.calls).toEqual(["tts:Vous avez trois rendez-vous demain.", "state:parole", "state:ecoute"]);
+    expect(h.loop.active()).toBe(true);
+  });
+
+  it("refuses a typed answer while a voice turn owns the speaker", async () => {
+    const gate = deferred<{ texte: string }>();
+    const h = harness({ repondre: () => gate.promise });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush();
+    expect(await h.loop.parler("Réponse tapée.")).toBe("occupe");
+    gate.resolve({ texte: "Fin." }); await flush();
+  });
+
+  it("STOP during a spoken answer returns to listening: not an error, the loop stays open", async () => {
+    const h = harness({ lire: async () => { throw new Error("cancelled"); } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).not.toContain("state:erreur");
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+    expect(h.loop.active()).toBe(true);
+  });
+
+  it("a real synthesis failure is reported, never hidden", async () => {
+    const h = harness({ lire: async () => { throw new Error("tts"); } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("state:erreur");
+  });
+
+  it("a typed answer stopped by STOP is reported as interrupted, and listening resumes", async () => {
+    const h = harness({ lire: async () => { throw new Error("cancelled"); } });
+    await h.loop.demarrer();
+    expect(await h.loop.parler("Une longue réponse tapée.")).toBe("interrompu");
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+});
+
+describe("live transcript while the doctor speaks", () => {
+  it("streams partials in order, one request at a time, then the final text replaces them", async () => {
+    const sent: { n: number; reset: boolean }[] = [], shown: (string | null)[] = [];
+    let inflight = 0, maxInflight = 0;
+    const gates: (() => void)[] = [];
+    const h = harness({
+      partiel: async (samples, _rate, reset) => {
+        inflight++; maxInflight = Math.max(maxInflight, inflight); sent.push({ n: samples.length, reset });
+        await new Promise<void>((r) => gates.push(r)); inflight--;
+        return `mot${sent.length}`;
+      },
+      apercu: (texte) => { shown.push(texte); },
+      transcrire: async () => { h.calls.push("stt"); return "Quels sont les rendez-vous de demain ?"; },
+    });
+    await h.loop.demarrer();
+    h.frames(30, .05); // 600 ms of speech
+    expect(sent).toHaveLength(1); expect(sent[0]!.reset).toBe(true);
+    gates.shift()!(); await flush();
+    expect(sent).toHaveLength(2); expect(sent[1]!.reset).toBe(false); // the audio accumulated meanwhile, nothing skipped
+    h.frames(20, .05);
+    expect(maxInflight).toBe(1);
+    gates.shift()!(); await flush(); gates.shift()?.(); await flush();
+    expect(shown.filter((t) => t !== null)).toEqual(expect.arrayContaining(["mot1", "mot2"]));
+    expect(h.calls).toContain("state:voixDetectee");
+    h.frames(40, 0); // pause → end of utterance
+    while (gates.length) { gates.shift()!(); await flush(); }
+    await flush(); await flush();
+    expect(h.calls).toContain("state:transcription");
+    // The preview is withdrawn before the final user message enters the thread.
+    expect(shown.at(-1)).toBeNull();
+    expect(h.calls.indexOf("state:transcription")).toBeLessThan(h.calls.indexOf("state:traitement"));
+    // Every captured sample went to the streaming recognizer exactly once, in order.
+    expect(sent.reduce((n, s) => n + s.n, 0)).toBeLessThanOrEqual((10 + 50 + 40) * 320);
+  });
+
+  it("a failed live partial never blocks the final transcript", async () => {
+    const h = harness({ partiel: async () => { throw new Error("partial"); }, apercu: () => {} });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+    expect(h.calls).toContain("answer");
+  });
+
+  it("a breath too short to be speech withdraws the preview and keeps listening", async () => {
+    const shown: (string | null)[] = [];
+    const h = harness({ partiel: async () => "euh", apercu: (t) => { shown.push(t); } });
+    await h.loop.demarrer(); h.frames(5, .05); h.frames(40, 0); await flush();
+    expect(h.calls).not.toContain("stt");
+    expect(shown.at(-1)).toBeNull();
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+
+  it("finalizes a dictation longer than 20 s instead of closing the microphone", async () => {
+    const h = harness();
+    await h.loop.demarrer(); h.frames(1_010, .05); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+    expect(h.calls).not.toContain("state:erreur");
+  });
+});
+
+describe("wake-word conversation, barge-in and self-echo", () => {
+  it("plays the cached acknowledgement after the microphone opens, then listens, without announcing it as an answer", async () => {
+    const h = harness({ accuse: async (_signal, playing) => { h.calls.push("ack"); playing(); } });
+    await h.loop.demarrer({ conversation: true });
+    expect(h.calls).toEqual(["state:reveille", "capture", "ack", "state:ecoute"]);
+  });
+
+  it("the doctor can talk over the acknowledgement: it stops and her words are captured", async () => {
+    let stopped = false;
+    const h = harness({
+      accuse: (signal, playing) => new Promise<void>((_, reject) => { playing(); signal.addEventListener("abort", () => { stopped = true; reject(new Error("cancelled")); }); }),
+    });
+    const start = h.loop.demarrer({ conversation: true }); await flush();
+    h.frames(20, .01); // the acknowledgement heard faintly: the echo is learned
+    h.frames(15, .2);   // loud, sustained speech over the acknowledgement
+    await start; await flush();
+    expect(stopped).toBe(true);
+    expect(h.calls).toContain("state:voixDetectee");
+    h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("stt");
+  });
+
+  it("Alexa's own voice at the speaker level never interrupts her", async () => {
+    const gate = deferred<void>();
+    const h = harness({ lire: async (_text, _signal, playing) => { playing(); await gate.promise; } });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls).toContain("state:parole");
+    h.calls.length = 0;
+    h.frames(100, .06); // two seconds of steady echo, louder than the 0.02 speech threshold
+    expect(h.calls).not.toContain("stop-playback");
+    expect(h.calls).not.toContain("state:voixDetectee");
+    gate.resolve(); await flush();
+  });
+
+  it("a doctor clearly louder than the echo interrupts the answer at once (barge-in)", async () => {
+    const h = harness({ lire: (_text, signal, playing) => new Promise<void>((_, reject) => { playing(); signal.addEventListener("abort", () => reject(new Error("cancelled"))); }) });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    h.frames(20, .04); // echo
+    h.calls.length = 0;
+    h.frames(12, .3);  // 240 ms of speech well above it
+    expect(h.calls).toContain("stop-playback");
+    expect(h.calls).toContain("state:voixDetectee");
+  });
+
+  it("drops a transcript that repeats what Alexa just said, and keeps listening", async () => {
+    let turns = 0;
+    const h = harness({
+      transcrire: async () => (turns++ === 0 ? "Quels sont les rendez-vous de demain ?" : "vous avez trois rendez-vous demain matin"),
+      repondre: async () => ({ texte: "Vous avez trois rendez-vous demain matin." }),
+    });
+    await h.loop.demarrer(); h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    const answers = h.calls.filter((c) => c === "answer").length;
+    h.frames(25, .05); h.frames(40, 0); await flush(); await flush();
+    expect(h.calls.filter((c) => c === "answer").length).toBe(answers);
+    expect(h.calls.at(-1)).toBe("state:ecoute");
+  });
+
+  it("self-echo detection ignores short follow-ups and unrelated questions", async () => {
+    const { ressembleEcho } = await import("@/shared/alexa/voice-loop");
+    expect(ressembleEcho("Et les doses ?", "Les doses sont de 50 mg.")).toBe(false);
+    expect(ressembleEcho("quels sont les antécédents familiaux", "Vous avez trois rendez-vous demain.")).toBe(false);
+    expect(ressembleEcho("vous avez trois rendez vous demain", "Vous avez trois rendez-vous demain matin.")).toBe(true);
+  });
+
+  it("a wake-word conversation closes itself after the quiet follow-up window; a click-opened one does not", async () => {
+    const { vi } = await import("vitest");
+    vi.useFakeTimers();
+    try {
+      const { CONVERSATION_SILENCE_MS } = await import("@/shared/alexa/voice-loop");
+      const h = harness({ accuse: async () => {} });
+      await h.loop.demarrer({ conversation: true });
+      vi.advanceTimersByTime(CONVERSATION_SILENCE_MS - 1); expect(h.loop.active()).toBe(true);
+      vi.advanceTimersByTime(1); expect(h.loop.active()).toBe(false);
+      const manual = harness();
+      await manual.loop.demarrer();
+      vi.advanceTimersByTime(CONVERSATION_SILENCE_MS * 2); expect(manual.loop.active()).toBe(true);
+      manual.loop.arreter();
+    } finally { vi.useRealTimers(); }
+  });
+});

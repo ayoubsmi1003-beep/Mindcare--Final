@@ -160,7 +160,7 @@ describe("mains-libres serialized cycle", () => {
     expect(etats).not.toContain("erreur");
     // One acknowledgement per real wake; never on the five follow-up captures.
     expect(faux.lireTexte).toHaveBeenCalledTimes(5);
-    expect(faux.lireTexte).toHaveBeenCalledWith("Oui docteur, je vous écoute.");
+    expect(faux.lireTexte).toHaveBeenCalledWith("Oui Docteur, je vous écoute.");
     expect(faux.finLecture).toHaveBeenCalledTimes(5);
     // The acknowledgement precedes the first command capture: never recorded.
     expect(faux.lireTexte.mock.invocationCallOrder[0]).toBeLessThan(

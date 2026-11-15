@@ -132,7 +132,7 @@ describe("local voice API boundary", () => {
   });
 
   it("serves the packaged Kokoro wake acknowledgement without waiting for the voice worker", async () => {
-    const response = await tts(request({ ...ids, texte: "Oui docteur, je vous écoute." }));
+    const response = await tts(request({ ...ids, texte: "Oui Docteur, je vous écoute." }));
     const audio = Buffer.from(await response.arrayBuffer());
 
     expect(response.status).toBe(200);

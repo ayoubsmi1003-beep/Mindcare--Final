@@ -18,9 +18,18 @@ const Reponse = z.object({
  code: z.string().max(40).optional(), model: z.string().max(100).optional(), durationMs: z.number().min(0).optional(),
 }).strict();
 export type ReponseVoix = z.infer<typeof Reponse>;
-/** A single resident worker; no concurrent session audio or unbounded queue. */
+/**
+ * A single resident worker; no concurrent session audio or unbounded queue.
+ * A caller abort never kills the worker: reloading Whisper/Kokoro costs 15-40 s,
+ * and aborts are routine (barge-in, STOP, new utterance). The aborted request
+ * stays an orphan until the worker answers (its result is dropped). Whatever
+ * holds the slot (running or orphaned), at most ONE next request waits for it —
+ * e.g. the wake acknowledgement being cached while an answer is synthesized —
+ * and a third is refused. Only a timeout or a dead process destroys the worker.
+ */
 export class CanalVoixNative {
  private courante: { entree: EntreeVoix; recevoir: (r: ReponseVoix) => void; rejeter: (e: Error) => void } | null = null;
+ private attente: { liberer: () => void; rejeter: (e: Error) => void } | null = null;
  constructor(private readonly ecrire: (ligne: string) => void, private readonly detruire: () => void) {}
  recevoir(brut: unknown): void {
   const r = Reponse.safeParse(brut), c = this.courante;
@@ -30,18 +39,34 @@ export class CanalVoixNative {
   if (c.entree.action === "tts" && (r.data.audioBase64 === undefined || r.data.mimeType === undefined)) { c.rejeter(new Error("format")); return; }
   c.recevoir(r.data);
  }
- echouer(): void { this.courante?.rejeter(new Error("runtime")); }
- demander(brut: unknown, signal?: AbortSignal, timeoutMs = 90_000): Promise<ReponseVoix> {
-  if (this.courante !== null) return Promise.reject(new Error("occupe"));
-  const entree = validerEntreeVoix(brut);
-  if (entree === null) return Promise.reject(new Error("format"));
-  if (signal?.aborted) return Promise.reject(new Error("annulee"));
+ echouer(): void {
+  const a = this.attente; this.attente = null; a?.rejeter(new Error("runtime"));
+  this.courante?.rejeter(new Error("runtime"));
+ }
+ private liberer(): void { this.courante = null; const a = this.attente; this.attente = null; a?.liberer(); }
+ private attendreLibre(signal?: AbortSignal): Promise<void> {
+  if (this.attente !== null) return Promise.reject(new Error("occupe"));
   return new Promise((resolve, reject) => {
+   const annuler = () => { if (this.attente === moi) this.attente = null; reject(new Error("annulee")); };
+   const moi = { liberer: () => { signal?.removeEventListener("abort", annuler); resolve(); }, rejeter: (e: Error) => { signal?.removeEventListener("abort", annuler); reject(e); } };
+   this.attente = moi; signal?.addEventListener("abort", annuler, { once: true });
+  });
+ }
+ async demander(brut: unknown, signal?: AbortSignal, timeoutMs = 90_000): Promise<ReponseVoix> {
+  const entree = validerEntreeVoix(brut);
+  if (entree === null) throw new Error("format");
+  if (signal?.aborted) throw new Error("annulee");
+  if (this.courante !== null) await this.attendreLibre(signal);
+  if (this.courante !== null) throw new Error("occupe");
+  return new Promise((resolve, reject) => {
+   let fini = false;
    const terminer = (valeur: ReponseVoix | Error) => {
-    clearTimeout(minuteur); signal?.removeEventListener("abort", annuler); this.courante = null;
+    clearTimeout(minuteur); signal?.removeEventListener("abort", annuler); if (this.courante?.entree === entree) this.liberer();
+    if (fini) return; fini = true;
     if (valeur instanceof Error) reject(valeur); else resolve(valeur);
    };
-   const annuler = () => { this.detruire(); terminer(new Error("annulee")); };
+   // The request stays in the slot as an orphan: the worker answers anyway and the answer is dropped.
+   const annuler = () => { if (!fini) { fini = true; reject(new Error("annulee")); } };
    const minuteur = setTimeout(() => { this.detruire(); terminer(new Error("timeout")); }, Math.min(300_000, timeoutMs));
    this.courante = { entree, recevoir: (r) => terminer(r), rejeter: (e) => terminer(e) };
    signal?.addEventListener("abort", annuler, { once: true });

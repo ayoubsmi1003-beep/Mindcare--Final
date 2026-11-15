@@ -113,3 +113,20 @@ describe("wake-word boundary", () => {
     expect(demand).not.toHaveBeenCalled();
   });
 });
+
+describe("live transcript boundary (open conversation only)", () => {
+  it("returns the streaming transcript for a bounded chunk, for the authenticated session", async () => {
+    demand.mockResolvedValue({ detected: false, texte: "quel est le prochain" });
+    expect(await (await POST(request({ action: "partial", pcmBase64: "AAAA" }))).json())
+      .toMatchObject({ ok: true, data: { texte: "quel est le prochain" } });
+    expect(demand).toHaveBeenCalledWith("a".repeat(64), "partial", "AAAA", expect.any(AbortSignal));
+  });
+  it("opens a new utterance without audio, and refuses a chunk without audio, an oversized one or a foreign origin", async () => {
+    demand.mockResolvedValue({ detected: false, texte: "" });
+    expect(await (await POST(request({ action: "partial-reset" }))).json()).toMatchObject({ ok: true, data: { texte: "" } });
+    expect(demand).toHaveBeenCalledWith("a".repeat(64), "partial-reset", undefined, expect.any(AbortSignal));
+    expect(await (await POST(request({ action: "partial" }))).json()).toMatchObject({ ok: false });
+    expect(await (await POST(request({ action: "partial", pcmBase64: "A".repeat(128_004) }))).json()).toMatchObject({ ok: false });
+    expect((await POST(request({ action: "partial", pcmBase64: "AAAA" }, "https://evil.test"))).status).toBe(403);
+  });
+});
