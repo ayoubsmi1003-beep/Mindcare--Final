@@ -36,8 +36,15 @@ const messages = {
     unspecified: "non renseigné",
     lastChange: (date: string, medication: string, before: string, after: string) => `${date} · ${medication}. Avant : ${before}. Après : ${after}.`,
     appointment: (time: string, status: "confirmed" | "arrived" | "in_session" | "completed" | "no_show") => `Rendez-vous à ${time} : ${{ confirmed: "attendu", arrived: "arrivé", in_session: "en consultation", completed: "terminé", no_show: "absent" }[status]}.`,
-    consultations: (n: number, requested: number) => `${n} consultation(s) terminée(s) lue(s) sur ${requested} demandée(s).`,
-    treatment: (n: number) => n === 0 ? "Je ne trouve aucun traitement correspondant dans le dossier consulté." : `${n} traitement(s) enregistré(s), avec leur état actuel.`,
+    consultations: (n: number, requested: number) => n >= requested ? (n === 1 ? "Voici la dernière consultation terminée." : `Voici les ${n} dernières consultations terminées.`) : `Je n’ai trouvé que ${n} consultation${n > 1 ? "s" : ""} terminée${n > 1 ? "s" : ""} sur les ${requested} demandées.`,
+    treatment: (n: number) => n === 0 ? "Je ne trouve aucun traitement correspondant dans le dossier consulté." : n === 1 ? "Un traitement est enregistré :" : `${n} traitements sont enregistrés :`,
+    /** One treatment told as a sentence: what, how much, how often, since when, and its state. */
+    treatmentSentence: (t: { medication: string; dose: string | null; doseUnit: string | null; frequency: string | null; timing: readonly string[]; instructions: string | null; status: "active" | "paused" | "stopped"; startDate: string; endDate: string | null }, longDate: (iso: string) => string) => {
+      const dose = [t.dose, t.doseUnit].filter((part): part is string => !!part && part.trim() !== "").join(" ");
+      const how = [dose, t.frequency ?? "", t.timing.length ? `le ${t.timing.join(" et le ")}` : ""].filter(Boolean).join(", ");
+      const state = t.status === "active" ? `depuis le ${longDate(t.startDate)}` : t.status === "paused" ? `en pause (débuté le ${longDate(t.startDate)})` : `arrêté${t.endDate ? ` le ${longDate(t.endDate)}` : ""} (débuté le ${longDate(t.startDate)})`;
+      return `${t.medication}${how ? ` : ${how}` : ""}, ${state}${t.instructions ? ` ; consigne : « ${t.instructions} »` : ""}.`;
+    },
     states: { active: "actif", paused: "en pause", stopped: "arrêté" },
     emptyDiagnoses: "Aucun diagnostic enregistré n’est disponible dans le dossier lu.",
     emptyScales: "Aucune échelle enregistrée n’est disponible dans le dossier lu.",
@@ -97,6 +104,8 @@ const messages = {
     appointment: (time: string, status: "confirmed" | "arrived" | "in_session" | "completed" | "no_show") => `موعد ${time}: ${{ confirmed: "منتظر", arrived: "وصل", in_session: "في الاستشارة", completed: "مكتمل", no_show: "غائب" }[status]}.`,
     consultations: (n: number, requested: number) => `قريت ${n} استشارة مكتملة من ${requested} المطلوبة.`,
     treatment: (n: number) => `كاين ${n} علاج مسجّل مع حالته الحالية.`,
+    // Arabic keeps its earlier field form; the French sentence form is the delivered scope.
+    treatmentSentence: (t: { medication: string; dose: string | null; doseUnit: string | null; frequency: string | null; timing: readonly string[]; instructions: string | null; status: "active" | "paused" | "stopped"; startDate: string; endDate: string | null }, _longDate: (iso: string) => string) => [t.medication, t.dose, t.doseUnit, t.frequency, t.startDate, ...t.timing, t.instructions ?? ""].filter(Boolean).join(" · "),
     states: { active: "نشط", paused: "موقوف مؤقتاً", stopped: "متوقف" },
     emptyDiagnoses: "ما كاين حتى تشخيص مسجّل ومتاح في الملف المقروء.",
     emptyScales: "ما كاين حتى مقياس مسجّل ومتاح في الملف المقروء.",

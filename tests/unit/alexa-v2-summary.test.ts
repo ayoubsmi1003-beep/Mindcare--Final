@@ -28,7 +28,7 @@ it("uses current treatment states and real treatment sources instead of latest p
   const summary = buildCaseSummary(context, []);
   expect(summary.apercu.traitements[0]).toMatchObject({ sources: [{ t: "treatment", id: "t" }] });
   expect(summary.apercu.traitements[0]?.texte).toContain("en pause");
-  expect(summary.apercu.contexte.map(s => s.texte).join(" ")).toContain("partielle");
+  expect(summary.apercu.contexte.map(s => s.texte).join(" ")).toContain("Je n’ai lu que 1 des 5 consultations");
   expect(JSON.stringify(summary)).not.toContain('"prescription"');
 });
 it("redacts complete identity words without corrupting drug names", () => {
@@ -115,11 +115,8 @@ it("declares incomplete consultation and treatment-history coverage while withho
   context.treatments.historyComplete = false;
   const summary = buildCaseSummary(context, []);
   const text = summary.apercu.contexte.map(s => s.texte).join(" ");
-  expect(text).toContain("partielle");
-  expect(text).toContain("2");
-  expect(text).toContain("5");
-  expect(text).toContain("historique des traitements est incomplet");
-  expect(text).toContain("ne sont pas interprétées");
+  // Coverage gaps are said plainly; a complete reading carries no disclaimer.
+  expect(text).toContain("Je n’ai lu que 2 des 5 consultations demandées et l’historique des traitements est incomplet.");
   expect(text).toContain("« Le patient va beaucoup mieux »");
   expect(text).not.toContain("Guérison");
   expect(summary.schema).toBe(2);

@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import type { ClinicalContext, ClinicalConsultation, ClinicalTreatment } from "@/shared/alexa/clinical";
 import { localDisplay } from "./local-response";
 
-export const CASE_SYNTHESIS_VERSION = "case-synthesis-fr-v4";
+export const CASE_SYNTHESIS_VERSION = "case-synthesis-fr-v5";
 export const CASE_SYNTHESIS_HASH = createHash("sha256").update(CASE_SYNTHESIS_VERSION).digest("hex");
 
 /**
@@ -262,37 +262,6 @@ function riskFor(group: ScaleGroup): { readonly itemId: string; readonly itemTex
   return null;
 }
 
-function scaleSentence(group: ScaleGroup): string | null {
-  const score = group.latest.total;
-  if (score === null) return null;
-  const max = maxScore(group);
-  const value = max === null ? `${String(score)}` : `${String(score)}/${String(max)}`;
-  const interpretation = group.latest.interpretation === null ? "" : ` (${group.latest.interpretation})`;
-  const previousScore = group.previous?.total ?? null;
-  const previous = previousScore === null ? "" : `, contre ${String(previousScore)}${max === null ? "" : `/${String(max)}`} à la mesure précédente`;
-  return `${group.name} : ${value}${interpretation}${previous}.`;
-}
-
-function treatmentChange(context: ClinicalContext): CaseItem | null {
-  const change = [...context.treatments.history]
-    .sort((a, b) => b.occurredAt.localeCompare(a.occurredAt) || b.id.localeCompare(a.id))[0];
-  if (change === undefined) return null;
-  const treatment = context.treatments.current.find((item) => item.id === change.treatmentId);
-  const medication = treatment?.medication ?? "le traitement documenté";
-  const beforeDose = [change.previous?.dose, change.previous?.doseUnit].filter((part): part is string => part !== null && part !== undefined && part !== "").join(" ");
-  const afterDose = [change.next?.dose, change.next?.doseUnit].filter((part): part is string => part !== null && part !== undefined && part !== "").join(" ");
-  if (beforeDose !== "" && afterDose !== "" && beforeDose !== afterDose) {
-    return { texte: `La dose de ${medication} est passée de ${beforeDose} à ${afterDose}.`, sources: [{ t: "treatment", id: change.treatmentId }] };
-  }
-  const beforeState = change.previous?.status ?? null;
-  const afterState = change.next?.status ?? null;
-  if (beforeState !== null && afterState !== null && beforeState !== afterState) {
-    const label = (state: string): string => state === "active" ? "actif" : state === "paused" ? "en pause" : "arrêté";
-    return { texte: `Le traitement ${medication} est passé de « ${label(beforeState)} » à « ${label(afterState)} ».`, sources: [{ t: "treatment", id: change.treatmentId }] };
-  }
-  return null;
-}
-
 function recurringFocus(context: ClinicalContext): CaseItem | null {
   const ignored = new Set(["traitement", "événement récent", "evenement recent"]);
   const counts = new Map<string, { readonly label: string; readonly ids: Set<string> }>();
@@ -313,6 +282,60 @@ function recurringFocus(context: ClinicalContext): CaseItem | null {
   };
 }
 
+function longDate(value: string): string {
+  return new Intl.DateTimeFormat("fr-DZ", { timeZone: "Africa/Algiers", day: "numeric", month: "long", year: "numeric" }).format(new Date(value));
+}
+
+function monthOf(value: string): string {
+  return new Intl.DateTimeFormat("fr-DZ", { timeZone: "Africa/Algiers", month: "long", year: "numeric" }).format(new Date(value));
+}
+
+function lowerFirst(value: string): string {
+  return value === "" ? value : value.charAt(0).toLocaleLowerCase("fr") + value.slice(1);
+}
+
+/** What a visit was about: its saved sub-summary, else the first recorded sentence of its note. */
+function visitStory(consultation: ClinicalConsultation): string {
+  const saved = savedSessionResume(consultation);
+  if (saved !== null) return firstSentences(saved);
+  const excerpt = noteExcerpt(consultation);
+  return excerpt === null ? "" : `la note rapporte ${quote(excerpt)}`;
+}
+
+function treatmentEvent(context: ClinicalContext, change: ClinicalContext["treatments"]["history"][number]): string | null {
+  const medication = context.treatments.current.find((entry) => entry.id === change.treatmentId)?.medication ?? "le traitement documenté";
+  const when = `En ${monthOf(change.occurredAt)}`;
+  const dose = (state: typeof change.previous) => [state?.dose, state?.doseUnit].filter((part): part is string => part !== null && part !== undefined && part !== "").join(" ");
+  if (change.previous === null) return `${when}, ${medication} a été introduit${dose(change.next) ? ` à ${dose(change.next)}` : ""}.`;
+  if (dose(change.previous) !== "" && dose(change.next) !== "" && dose(change.previous) !== dose(change.next)) return `${when}, la dose de ${medication} est passée de ${dose(change.previous)} à ${dose(change.next)}.`;
+  const before = change.previous?.status ?? null, after = change.next?.status ?? null;
+  if (before !== after && after !== null) return `${when}, ${medication} a été ${after === "active" ? "repris" : after === "paused" ? "mis en pause" : "arrêté"}.`;
+  return null;
+}
+
+function scaleTrajectory(group: ScaleGroup): string | null {
+  const score = group.latest.total;
+  if (score === null) return null;
+  const max = maxScore(group);
+  const value = (total: number, interpretation: string | null) => `${String(total)}${max === null ? "" : `/${String(max)}`}${interpretation === null ? "" : ` (${interpretation})`}`;
+  const previous = group.previous?.total ?? null;
+  return previous === null
+    ? `Le ${group.name} est à ${value(score, group.latest.interpretation)}.`
+    : `Le ${group.name} est passé de ${value(previous, group.previous!.interpretation)} à ${value(score, group.latest.interpretation)}.`;
+}
+
+function currentTreatmentSentence(context: ClinicalContext): string | null {
+  const told = (treatment: ClinicalTreatment) => {
+    const dose = [treatment.dose, treatment.doseUnit].filter((part): part is string => part !== null && clean(part) !== "").map(clean).join(" ");
+    const frequency = treatment.frequency === null ? "" : clean(treatment.frequency);
+    return `${clean(treatment.medication)}${dose ? ` ${dose}` : ""}${frequency ? `, ${frequency}` : ""}`;
+  };
+  const active = context.treatments.current.filter((treatment) => treatment.status === "active").map(told);
+  const paused = context.treatments.current.filter((treatment) => treatment.status === "paused").map((treatment) => clean(treatment.medication));
+  const parts = [active.length ? `Le traitement actuel comprend ${joinFrench(active)}.` : "", paused.length ? `${joinFrench(paused)} ${paused.length === 1 ? "est" : "sont"} en pause.` : ""].filter(Boolean);
+  return parts.length ? parts.join(" ") : null;
+}
+
 export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
   const identities = input.identities ?? [];
   const item = (texte: string, sources: readonly CaseSource[]): CaseItem => ({
@@ -325,74 +348,84 @@ export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
   const groups = scaleGroups(input);
   const risk = groups.map((group) => ({ group, finding: riskFor(group) })).find((entry) => entry.finding !== null) ?? null;
 
-  const situation: string[] = [];
-  const situationSources: CaseSource[] = [];
+  // The patient's story in up to four paragraphs: how the follow-up began, how it evolved, where it stands, what comes next.
+  const completed = [...input.context.consultations].filter((consultation) => consultation.endedAt !== null)
+    .sort((a, b) => a.startedAt.localeCompare(b.startedAt) || a.id.localeCompare(b.id));
+  const first = completed[0];
+  const latest = completed.at(-1);
+  const paragraphes: CaseItem[] = [];
+  const paragraph = (parts: readonly string[], sources: readonly CaseSource[]) => {
+    const texte = parts.filter(Boolean).join(" ").trim();
+    if (texte === "") return;
+    const unique = new Map(sources.map((source) => [`${source.t}:${source.id}`, source]));
+    paragraphes.push(item(texte, [...unique.values()]));
+  };
+
+  const beginning: string[] = [];
+  const beginningSources: CaseSource[] = [];
   if (active.length > 0) {
     const principal = input.context.diagnoses.find((entry) => entry.resolvedAt === null && entry.primary);
     const labels = active.map((entry) => quotedLabel(entry.texte));
     if (labels.length === 1) {
-      situation.push(principal === undefined
-        ? `Le suivi concerne le diagnostic actif ${labels[0]}.`
-        : `Le suivi concerne le diagnostic principal ${labels[0]}.`);
+      beginning.push(principal === undefined ? `Le suivi concerne le diagnostic actif ${labels[0]}.` : `Le suivi concerne le diagnostic principal ${labels[0]}.`);
     } else {
-      situation.push(`Le suivi concerne les diagnostics actifs ${joinFrench(labels)}.`);
-      if (principal !== undefined) situation.push(`Le diagnostic principal est ${quotedLabel(principal.label)}.`);
+      beginning.push(`Le suivi concerne les diagnostics actifs ${joinFrench(labels)}.`);
+      if (principal !== undefined) beginning.push(`Le diagnostic principal est ${quotedLabel(principal.label)}.`);
     }
-    situationSources.push(...active.flatMap((entry) => entry.sources));
+    beginningSources.push(...active.flatMap((entry) => entry.sources));
   }
-  if (treatments.length > 0) {
-    situation.push(...treatments.map((entry) => entry.texte));
-    situationSources.push(...treatments.flatMap((entry) => entry.sources));
+  if (first !== undefined && completed.length > 1) {
+    const story = visitStory(first);
+    beginning.push(`Le suivi a commencé le ${longDate(first.startedAt)}.`);
+    if (story !== "") beginning.push(`Lors de cette première consultation, ${lowerFirst(story)}`);
+    beginningSources.push({ t: "consultation", id: first.id });
   }
-  const latest = latestCompleted(input.context);
-  if (latest !== undefined) {
-    const saved = savedSessionResume(latest);
-    const excerpt = saved ?? noteExcerpt(latest);
-    if (excerpt !== null) {
-      const documented = saved === null ? "" : firstSentences(saved);
-      situation.push(saved === null
-        ? `La dernière note consignée rapporte : ${quote(excerpt)}`
-        : `La dernière consultation documente : ${documented.charAt(0).toLocaleLowerCase("fr")}${documented.slice(1)}`);
-      situationSources.push({ t: "consultation", id: latest.id });
-    }
-  }
+  paragraph(beginning, beginningSources);
 
-  const trajectory: string[] = [];
-  const trajectorySources: CaseSource[] = [];
-  const scaleSentences = groups.map(scaleSentence).filter((value): value is string => value !== null);
-  if (scaleSentences.length > 0) {
-    trajectory.push(`${scaleSentences.length === 1 ? "L'évaluation disponible montre" : "Les évaluations disponibles montrent"} ${scaleSentences.join(" ")}`);
-    for (const group of groups) {
-      if (group.latest.total !== null) trajectorySources.push({ t: "echelle", id: group.latest.id });
-    }
+  const evolution: string[] = [];
+  const evolutionSources: CaseSource[] = [];
+  if (completed.length > 2) evolution.push(`Depuis, ${completed.length - 1} consultations ont eu lieu.`);
+  const events = [...input.context.treatments.history].sort((a, b) => a.occurredAt.localeCompare(b.occurredAt) || a.id.localeCompare(b.id))
+    .map((change) => ({ change, texte: treatmentEvent(input.context, change) })).filter((entry) => entry.texte !== null);
+  if (events.length > 5) evolution.push("Plusieurs ajustements de traitement plus anciens figurent au dossier.");
+  for (const entry of events.slice(-5)) {
+    evolution.push(entry.texte!);
+    evolutionSources.push({ t: "treatment", id: entry.change.treatmentId });
   }
-  const change = treatmentChange(input.context);
-  if (change !== null) {
-    trajectory.push(change.texte);
-    trajectorySources.push(...change.sources);
+  for (const group of groups) {
+    const told = scaleTrajectory(group);
+    if (told === null) continue;
+    evolution.push(told);
+    evolutionSources.push({ t: "echelle", id: group.latest.id });
   }
   const focus = recurringFocus(input.context);
   if (focus !== null) {
-    trajectory.push(focus.texte);
-    trajectorySources.push(...focus.sources);
+    evolution.push(focus.texte);
+    evolutionSources.push(...focus.sources);
   }
+  paragraph(evolution, evolutionSources);
 
-  const plan: string[] = [];
-  const planSources: CaseSource[] = [];
+  const current: string[] = [];
+  const currentSources: CaseSource[] = [];
+  if (latest !== undefined) {
+    const story = visitStory(latest);
+    const when = completed.length === 1 ? `Lors de la seule consultation terminée, le ${longDate(latest.startedAt)}` : `Lors de la dernière consultation, le ${longDate(latest.startedAt)}`;
+    current.push(story !== "" ? `${when}, ${lowerFirst(story)}` : `${when}, aucune note exploitable n’a été rédigée.`);
+    currentSources.push({ t: "consultation", id: latest.id });
+  }
+  const treatmentSentence = currentTreatmentSentence(input.context);
+  if (treatmentSentence === null && latest !== undefined) current.push("Aucun traitement en cours n’est enregistré.");
+  if (treatmentSentence !== null) {
+    current.push(treatmentSentence);
+    currentSources.push(...input.context.treatments.current.filter((entry) => entry.status !== "stopped").map((entry) => ({ t: "treatment" as const, id: entry.id })));
+  }
+  paragraph(current, currentSources);
+
   if (latest !== undefined && latest.notes[0]?.plan !== null && latest.notes[0]?.plan !== undefined) {
     const planText = clean(latest.notes[0].plan);
-    const alreadyInSummary = savedSessionResume(latest)?.toLocaleLowerCase("fr").includes(planText.toLocaleLowerCase("fr").slice(0, 40)) ?? false;
-    if (planText !== "" && !alreadyInSummary) {
-      plan.push(`Le plan consigné prévoit : ${quote(planText)}`);
-      planSources.push({ t: "consultation", id: latest.id });
-    }
+    const alreadyTold = visitStory(latest).toLocaleLowerCase("fr").includes(planText.toLocaleLowerCase("fr").slice(0, 40));
+    if (planText !== "" && !alreadyTold) paragraph([`Pour la suite, ${lowerFirst(firstSentences(planText, 400, 3))}`], [{ t: "consultation", id: latest.id }]);
   }
-
-  const texte = [...situation, ...trajectory, ...plan].join(" ").trim();
-  const sources = [...situationSources, ...trajectorySources, ...planSources];
-  const dedoublonnees = new Map<string, CaseSource>();
-  for (const source of sources) dedoublonnees.set(`${source.t}:${source.id}`, source);
-  const paragraphes: CaseItem[] = texte === "" ? [] : [item(texte, [...dedoublonnees.values()])];
 
   const vigilance: CaseItem[] = [];
   if (risk !== null && risk.finding !== null) {
@@ -413,6 +446,13 @@ export function buildCaseSynthesis(input: CaseSynthesisInput): CaseSynthesis {
       "La définition des échelles n'a pas pu être relue ; l'item de risque doit être vérifié dans le dossier.",
       [],
     ));
+  }
+  // Points noticed in the record itself, never a clinical judgement.
+  if (latest?.notes[0]?.status === "draft") {
+    vigilance.push(item("La note de la dernière consultation n’est pas encore signée.", [{ t: "consultation", id: latest.id }]));
+  }
+  for (const treatment of input.context.treatments.current.filter((entry) => entry.status === "active" && (entry.dose === null || clean(entry.dose) === ""))) {
+    vigilance.push(item(`Aucune dose n’est renseignée pour ${clean(treatment.medication)}.`, [{ t: "treatment", id: treatment.id }]));
   }
   if (!input.context.coverage.complete || input.context.coverage.hasMore) {
     vigilance.push(item(

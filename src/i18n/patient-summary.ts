@@ -19,7 +19,7 @@ export const patientSummary = {
   reessayer: "Réessayer",
   modifieDepuis: "Le dossier a changé depuis cette synthèse.",
   aJour: "À jour",
-  vigilance: "Points de vigilance",
+  vigilance: "Points d’attention relevés automatiquement dans le dossier",
   diagnosticIntro: "Le dossier mentionne notamment le diagnostic suivant :",
   diagnosticsIntro: "Le dossier mentionne notamment les diagnostics suivants :",
   sources: "Sources de la synthèse",

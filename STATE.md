@@ -4,6 +4,32 @@ Dernière mise à jour : 2026-09-08 (session « transformation V9 »)
 
 ---
 
+## ▶ 2026-11-15 — ALEXA : communication clinique (réponses, résumés, ordonnance)
+
+Branche `claude/alexa-clinical-communication-126602` (sur `46a9d91`), commits locaux non poussés. Français seulement ;
+MiniCPM 1B seul modèle (décision du 2026-11-14 ; PC de la médecin i7/16 Go).
+
+**Fait**
+- Comptes de patients avec leur liste : total exact, puis les 20 premiers noms, « la suite » pour le reste (une lecture).
+- « Alexa, ordonnance » / « imprimer ordonnance » : en consultation, le patient de la séance (jamais celui de la conversation).
+  Imprime l'ordonnance émise depuis le début de la séance (ou aujourd'hui) ; une ancienne seulement si demandée (« la dernière ») ;
+  sinon brouillon prérempli des traitements actifs, que la médecin émet. Rien n'est émis ni numéroté par la voix. Autres documents inchangés.
+- Réponses du dossier : plus d'intitulés SOAP (« à l'entretien », « à l'examen »…), traitements et profil en phrases, limites dites
+  seulement quand il manque quelque chose. « Résume le dossier » = l'histoire du cas ; « la dernière consultation » = son sous-résumé.
+- Sous-résumé de séance : chaque champ réécrit en une phrase par le 1B, prouvé clause par clause par le vérificateur existant
+  (négations et incertitudes mot pour mot) ; sinon le champ tel qu'écrit derrière une amorce simple. Version narrative v34.
+- Résumé du cas : jusqu'à quatre paragraphes sourcés (début du suivi, évolution datée, situation, suite) ; points d'attention
+  relevés automatiquement (note non signée, traitement sans dose). Toujours sans modèle. Version v5.
+- Mesures : C200 200/200 · C202 154 · C201 118 · C270 220 (`comm3`). Chaque tour de C270 qui diffère a été rejoué sur `46a9d91`
+  ou classé variance du modèle / délai. Réponses « raw-template » de C270 : 33 → 13.
+
+**Constaté hors périmètre** : C270 n'avait pas été rejouée après `2c4bf54` ; sur `46a9d91` elle tombe à ~223 (P021, X007#2, X019,
+F005, F006 : la couche de sens s'abstient sans « qui »/« quand »). `run-c270.sh` ne pose pas `ALEXA_MEANING=1`.
+
+**Non fait / reporté** : campagne C-COMM dédiée au texte final (règle « communication » qui pèse sur le verdict) ; porte SQL de
+fraîcheur par consultation (migration 222, non nécessaire : les visites anciennes sont racontées depuis leur note) ;
+`lastIntent` comme prior des relances ; arabe et darija (prochaine étape demandée) ; régénération en masse des anciens sous-résumés.
+
 ## ▶ 2026-11-11 — ALEXA C270 (EN COURS) — journal de reprise
 
 Branche `claude/alexa-conversational-intelligence-e9e6f8` (sur `71bb162`). Plan : `docs/alexa/20-architecture-audit-and-plan.md`.

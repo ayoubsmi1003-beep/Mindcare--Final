@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import type { DbPort } from "@/services/db/port";
 import type { ClinicalConsultation, ClinicalContext } from "@/shared/alexa/clinical";
-import { consultationNotesDigest, consultationNotesSnapshot, consultationNarrativeSources, NARRATIVE_HASH, NARRATIVE_VERSION, synthesizeClinicalNarrative } from "./clinical-narrative";
+import { consultationNotesDigest, consultationNotesSnapshot, consultationNarrativeSources, NARRATIVE_HASH, NARRATIVE_VERSION, rewriteNoteClause, synthesizeClinicalNarrative, type NoteArea } from "./clinical-narrative";
 import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
 import { sessionDetailsSchema,measureChanges } from '@/shared/alexa/session-details';
 import { narrativeCopy } from '@/i18n/alexa-narrative';
@@ -152,54 +152,60 @@ function assemblerLignes(value: string | null | undefined): string {
   return texte.replace(/\s{2,}/gu, " ").trim();
 }
 
-function premierGroupe(value: string | null | undefined, max = 380): string {
+/** A recorded field whole, or cut at a sentence end within `max`; never an ellipsis inside a sentence. */
+function champEntier(value: string | null | undefined, max = 600): { text: string; cut: boolean } {
   const text = assemblerLignes(value);
-  if (text === "") return "";
-  const first = text.split(/(?<=[.!?…])\s+/u)[0] ?? text;
-  const cut = first.length <= max ? first : `${first.slice(0, max).replace(/[;,:\s]+$/u, "")}…`;
-  return /[.!?…]$/u.test(cut) ? cut : `${cut}.`;
+  if (text.length <= max) return { text: text === "" || /[.!?…]$/u.test(text) ? text : `${text}.`, cut: false };
+  const sentences = text.split(/(?<=[.!?…])\s+/u);
+  let kept = "";
+  for (const sentence of sentences) { if ((kept + " " + sentence).trim().length > max) break; kept = (kept + " " + sentence).trim(); }
+  return { text: kept, cut: true };
 }
 
-/** Builds one human-readable paragraph from recorded consultation fields. */
-function buildSeanceResume(
+type SeanceArea = "subjective" | "objective" | "assessment" | "plan";
+export type ClauseRewriter = (area: NoteArea, text: string, signal: AbortSignal) => Promise<string | null>;
+
+/**
+ * The consultation told as one paragraph, in clinical order. Each note field is one sentence: the local
+ * model's rewrite when the checker proves it, otherwise the field as recorded behind a plain lead.
+ * Scales and treatment changes come from structured data; corrections are quoted, never rewritten.
+ */
+export async function composeSeanceResume(
   consultation: ClinicalConsultation,
   scaleParagraph: string | null,
   changes: readonly { readonly text: string; readonly resume?: string }[],
-): string {
+  signal: AbortSignal,
+  rewrite: ClauseRewriter = rewriteNoteClause,
+): Promise<{ text: string; rewritten: number; cut: boolean }> {
   const note = consultation.notes[0];
   const parties: string[] = [];
-  const focus = [
-    ...(consultation.sessionDetails?.focus ?? []),
-    consultation.sessionDetails?.focusLibre ?? "",
-  ].map((entry) => entry.trim()).filter((entry) => entry !== "");
-  if (focus.length > 0) {
-    const themes = [...new Set(focus)].map((theme) => {
-      const bas = theme.toLocaleLowerCase("fr");
-      if (bas === "traitement") return "au traitement";
-      if (bas === "travail") return "au travail";
-      if (bas === "relations") return "aux relations";
-      if (bas === "événement récent") return "à l’événement récent";
-      return `à ${bas}`;
-    });
-    parties.push(`Séance consacrée ${themes.join(", ")}.`);
-  }
-
-  const subjective = premierGroupe(note?.subjective);
-  if (subjective !== "") parties.push(`La séance documente : ${minusculeInitiale(subjective)}`);
-  const objective = premierGroupe(note?.objective);
-  if (objective !== "") parties.push(`L’examen retrouve : ${minusculeInitiale(objective)}`);
-  const assessment = premierGroupe(note?.assessment);
-  if (assessment !== "") parties.push(`L’évaluation clinique retient : ${minusculeInitiale(assessment)}`);
+  let rewritten = 0, cut = false;
+  const focus = [...new Set([...(consultation.sessionDetails?.focus ?? []), consultation.sessionDetails?.focusLibre ?? ""]
+    .map((entry) => entry.trim()).filter((entry) => entry !== ""))];
+  if (focus.length > 0) parties.push(narrativeCopy.seanceFocus(focus.map((theme) => theme.toLocaleLowerCase("fr")).join(", ")));
+  const field = async (area: SeanceArea) => {
+    const recorded = champEntier(note?.[area]);
+    if (recorded.text === "") return;
+    const told = recorded.cut ? null : await rewrite(area, recorded.text, signal);
+    if (told) { rewritten++; parties.push(told); return; }
+    cut ||= recorded.cut;
+    parties.push(`${narrativeCopy.seanceLeads[area]}${minusculeInitiale(recorded.text)}`);
+  };
+  await field("subjective");
+  await field("objective");
+  await field("assessment");
   if (scaleParagraph !== null && scaleParagraph.trim() !== "") parties.push(scaleParagraph.trim());
-  if (changes.length > 0) {
-    const changement = changes[changes.length - 1];
-    const dernier = changement?.resume ?? premierGroupe(changement?.text, 260);
-    if (dernier !== "") parties.push(`Un changement de traitement a été documenté : ${minusculeInitiale(dernier)}`);
+  const changement = changes.at(-1);
+  if (changement) {
+    const told = champEntier(changement.resume ?? changement.text, 260).text;
+    if (told !== "") parties.push(told.charAt(0).toLocaleUpperCase("fr") + told.slice(1));
   }
-  const plan = premierGroupe(note?.plan);
-  if (plan !== "") parties.push(`La conduite retenue est : ${minusculeInitiale(plan)}`);
-
-  return parties.join(" ").replace(/\s{2,}/gu, " ").trim();
+  await field("plan");
+  for (const amendment of note?.amendments ?? []) {
+    const body = champEntier(amendment.body, 300);
+    if (body.text !== "") { parties.push(narrativeCopy.seanceAmendment(body.text)); cut ||= body.cut; }
+  }
+  return { text: parties.join(" ").replace(/\s{2,}/gu, " ").trim(), rewritten, cut };
 }
 
 async function readSession(db: Pick<DbPort, "rpc">, consultationId: string, signal: AbortSignal): Promise<ClinicalConsultation> {
@@ -262,13 +268,19 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   // Put historical context before the current visit, with explicit temporal scope.
   input.sources=[...comparison.map(s=>({...s,scope:'previous' as const})),...input.sources.map(s=>({...s,scope:'current' as const})),...trends.map(s=>({...s,scope:'change' as const})),...medications.map(s=>({...s,scope:'current' as const})),...changes.map(s=>({...s,scope:'change' as const}))];
   input.complete&&=context.treatments.historyComplete;
-  let narrative = input.sources.length === 0
-    ? { text: "", complete: true, generated: true as const, method: "structured" as const, sourceIds: [] as string[] }
-    : await synthesizeClinicalNarrative(input.sources, signal);
+  const soap = consultation.notes[0];
+  const recordedFields = !!soap && [soap.subjective, soap.objective, soap.assessment, soap.plan].some((value) => (value ?? "").trim() !== "");
+  // A note with fields is told field by field; the whole-note pass only serves visits with raw notes alone.
+  const composed = recordedFields ? await composeSeanceResume(consultation, scaleData.paragraph, changes, signal) : null;
+  let narrative = composed
+    ? { text: composed.text, complete: !composed.cut, generated: true as const, method: composed.rewritten > 0 ? "reformulated" as const : "structured" as const, sourceIds: [] as string[] }
+    : input.sources.length === 0
+      ? { text: "", complete: true, generated: true as const, method: "structured" as const, sourceIds: [] as string[] }
+      : await synthesizeClinicalNarrative(input.sources, signal);
   diagnostic('model-return',{generated:narrative.generated,complete:narrative.complete,method:narrative.method,words:narrative.text.trim().split(/\s+/u).length});
   let structuredFallback = narrative.method === "structured";
-  if (!narrative.generated || narrative.method === "source_selection") {
-    if (buildSeanceResume(consultation, scaleData.paragraph, changes) === "") throw new SessionSummaryError("unavailable");
+  if (!composed && (!narrative.generated || narrative.method === "source_selection")) {
+    if (scaleData.paragraph === null) throw new SessionSummaryError("unavailable");
     narrative = { text: "", complete: false, generated: true, method: "structured", sourceIds: [] };
     structuredFallback = true;
   }
@@ -280,12 +292,8 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   if(currentScales.sourceDigest!==scaleDigest)throw new SessionSummaryError('changed');
   diagnostic('verify-context');
   if((await buildClinicalContext(db,{patientId},{count:1},signal)).sourceRevision!==context.sourceRevision)throw new SessionSummaryError('changed');
-  const soap = consultation.notes[0];
-  const resumeStructure = buildSeanceResume(consultation, scaleData.paragraph, changes);
-  const resume = resumeStructure !== ""
-    ? resumeStructure
-    : [narrative.text.trim(), scaleData.paragraph ?? ""].filter((part) => part !== "").join(" ").trim();
-  const content = { resume, resumeNotes: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
+  const resume = composed ? composed.text : [narrative.text.trim(), scaleData.paragraph ?? ""].filter((part) => part !== "").join(" ").trim();
+  const content = { resume, resumeNarratif: resume, resumeNotes: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
     evaluations: scaleData.evaluations,
     noteStructuree: { subjective: soap?.subjective ?? "", objective: soap?.objective ?? "", assessment: soap?.assessment ?? "", plan: soap?.plan ?? "" }, evolution: [], pointsNonExplores: [] };
   diagnostic('persist');

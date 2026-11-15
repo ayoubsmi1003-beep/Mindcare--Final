@@ -45,13 +45,15 @@ describe("all five recorded consultation note areas", () => {
     const summary = buildCaseSummary(record(), ["Nadia"]);
     const details = summary.etat_actuel;
     for (const field of fields) expect(details.map(item => item.texte).join("\n")).toContain(field.replace("Nadia ", ""));
-    expect(details.filter(item => item.sources.some(source => source.id === visitId))).toHaveLength(5);
-    expect(details.map(item => item.texte).join(" ")).toMatch(/notes de travail|Subjectif|Objectif|[ée]valuation|Plan/iu);
+    // One paragraph per visit; the five areas are told in plain words, never by their SOAP headings.
+    expect(details.filter(item => item.sources.some(source => source.id === visitId))).toHaveLength(1);
+    expect(details.map(item => item.texte).join(" ")).toMatch(/notes de travail.*à l’entretien.*à l’examen.*dans votre évaluation.*pour la suite/u);
+    expect(details.map(item => item.texte).join(" ")).not.toMatch(/Subjectif|Objectif|Évaluation :|Plan :/u);
   });
   it.each(["fr", "ar"] as const)("preserves working-note unsigned provenance in the %s overview", language => {
     const context = record(); context.consultations[0]!.notes = [];
     const overview = buildStructuredSummaryNarrative(context, [], language)[2]!.texte;
-    expect(overview).toMatch(language === "fr" ? /Notes de travail.*non signé/u : /ملاحظات العمل.*غير موقّعة/u);
+    expect(overview).toMatch(language === "fr" ? /notes de travail \(note non signée\)/u : /ملاحظات العمل.*غير موقّعة/u);
   });
   it("does not describe saved draft SOAP notes as signed in chronology or overview fallback", () => {
     const context = record(); context.consultations[0]!.rawNotes = null;
@@ -60,7 +62,7 @@ describe("all five recorded consultation note areas", () => {
     note.objective = ""; note.assessment = ""; note.plan = "";
     const summary = buildCaseSummary(context, []);
     expect(summary.chronologie[0]!.entrees[0]!.texte).toContain("SOAP enregistrée");
-    expect(summary.apercu.contexte[2]!.texte).toContain("SOAP enregistrée");
+    expect(summary.apercu.contexte[2]!.texte).toContain("La dernière consultation terminée date du");
     expect(summary.chronologie[0]!.entrees[0]!.texte).not.toContain("signée");
     expect(summary.apercu.contexte[2]!.texte).not.toContain("signée");
   });
@@ -85,7 +87,7 @@ describe("all five recorded consultation note areas", () => {
     context.consultations[0]!.rawNotes = text;
     const summary = buildCaseSummary(context, []);
     expect(summary.etat_actuel[0]!.texte).toContain(text);
-    expect(summary.etat_actuel).toHaveLength(5);
+    expect(summary.etat_actuel).toHaveLength(1);
   });
   it("discloses a summary field above its bound without quoting an unsafe prefix", () => {
     const context = record(); context.consultations[0]!.rawNotes = "Contexte familial. ".repeat(300) + "La sœur est concernée, pas le patient.";

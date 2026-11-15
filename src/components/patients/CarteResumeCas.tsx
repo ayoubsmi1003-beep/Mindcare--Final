@@ -41,7 +41,7 @@ const SOURCE_ORDER: readonly TypeSourceResume[] = [
 ];
 
 function isVigilance(item: ItemResume): boolean {
-  return /^(Item de risque|Les évaluations|La définition|Certaines séances)/iu.test(item.texte.trim());
+  return /^(Item de risque|Les évaluations|La définition|Certaines séances|La note de la dernière consultation|Aucune dose)/iu.test(item.texte.trim());
 }
 
 function sourceGroups(items: readonly ItemResume[]): { type: TypeSourceResume; count: number; first: SourceResume }[] {

@@ -12,6 +12,7 @@
  * listes ne doivent pas arriver telles quelles dans la carte.
  */
 
+import { narrativeCopy } from "@/i18n/alexa-narrative";
 import type { AnalyseSeance } from "@/services/jarvis";
 import type { Consultation } from "@/services/consultations";
 
@@ -91,17 +92,17 @@ export function resumeDeSeance(
   const plan = note === null ? "" : phrase(note.soap.plan);
 
   const parties: string[] = [];
-  if (subjective !== "") parties.push(`La séance documente : ${minusculeInitiale(subjective)}`);
-  if (objective !== "") parties.push(`L’examen retrouve : ${minusculeInitiale(objective)}`);
-  if (assessment !== "") parties.push(`L’évaluation clinique retient : ${minusculeInitiale(assessment)}`);
-  if (plan !== "") parties.push(`La conduite retenue est : ${minusculeInitiale(plan)}`);
+  if (subjective !== "") parties.push(`${narrativeCopy.seanceLeads.subjective}${minusculeInitiale(subjective)}`);
+  if (objective !== "") parties.push(`${narrativeCopy.seanceLeads.objective}${minusculeInitiale(objective)}`);
+  if (assessment !== "") parties.push(`${narrativeCopy.seanceLeads.assessment}${minusculeInitiale(assessment)}`);
+  if (plan !== "") parties.push(`${narrativeCopy.seanceLeads.plan}${minusculeInitiale(plan)}`);
 
   if (parties.length === 0 && analyse !== null) {
     const structuree = analyse.noteStructuree;
-    if (propre(structuree.subjective) !== "") parties.push(`La séance documente : ${minusculeInitiale(phrase(structuree.subjective))}`);
-    if (propre(structuree.objective) !== "") parties.push(`L’examen retrouve : ${minusculeInitiale(phrase(structuree.objective))}`);
-    if (propre(structuree.assessment) !== "") parties.push(`L’évaluation clinique retient : ${minusculeInitiale(phrase(structuree.assessment))}`);
-    if (propre(structuree.plan) !== "") parties.push(`La conduite retenue est : ${minusculeInitiale(phrase(structuree.plan))}`);
+    if (propre(structuree.subjective) !== "") parties.push(`${narrativeCopy.seanceLeads.subjective}${minusculeInitiale(phrase(structuree.subjective))}`);
+    if (propre(structuree.objective) !== "") parties.push(`${narrativeCopy.seanceLeads.objective}${minusculeInitiale(phrase(structuree.objective))}`);
+    if (propre(structuree.assessment) !== "") parties.push(`${narrativeCopy.seanceLeads.assessment}${minusculeInitiale(phrase(structuree.assessment))}`);
+    if (propre(structuree.plan) !== "") parties.push(`${narrativeCopy.seanceLeads.plan}${minusculeInitiale(phrase(structuree.plan))}`);
   }
 
   const texte = paragraphe(parties);
