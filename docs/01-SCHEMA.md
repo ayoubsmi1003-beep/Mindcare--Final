@@ -955,3 +955,31 @@ le trigger inerte.
 
 ## Documents éditables — décision du 7 octobre 2026
 Schéma approuvé : document_drafts et document_draft_revisions (migration 129), colonnes additives content_json, renderer_version, page_manifest, source_draft_id et prescription_id sur documents. Enum ordonnance (128). Les contraintes, portes et droits exécutables figurent dans les migrations ; détails de la décision dans docs/ADR-DOCUMENTS-EDITOR.md. Aucun historique clinique réécrit.
+
+## Aftercare — décision approuvée du 16 novembre 2026
+
+Migration additive `227_aftercare_master.sql`, autorisée par
+`docs/aftercare/ADR-aftercare-master.md` et le MASTER-CONTRACT du portail :
+
+- `app.aftercare_bindings` : identité locale/portail vérifiée par une médecin,
+  relation self/guardian, preuve locale, version de consentement, auteur/date de
+  vérification, révocation irréversible de cette liaison. Un contact ne crée aucun droit.
+- `app.aftercare_objects` : objets typés, source mindcare/sanad, UUID wire/version,
+  état partagé/révoqué, approbation humaine et lecture humaine distinctes. Unicité
+  `(binding_id,source,object_id)`. Les soumissions restent hors dossier officiel.
+- `app.aftercare_events` : événement UUID, request_id/digest pour idempotence,
+  enveloppe V2, direction, résultat et accusé purement technique. L'outbox est créée
+  dans la transaction d'approbation. Une révocation masque le corps courant ; seule
+  une version supérieure explicitement repartagée peut le rétablir.
+
+Les trois tables portent cabinet/praticien/patient, FORCE RLS et `audit.track()`.
+Aucun accès table n'est accordé au navigateur. Les portes cliniques appartiennent
+à `app_gatekeeper` et passent par `app.get_patient` pour l'audit de lecture ;
+praticienne hors périmètre, réception et profil inactif sont refusés par RLS.
+Les portes techniques appartiennent à `aftercare_transport`, NOLOGIN sans
+BYPASSRLS ni accès EMR ; seul le rôle serveur local reçoit EXECUTE. L'accusé
+technique ne marque jamais « lu ». Revue/réponse référence la version effectivement
+ouverte par la médecin. Aucune écriture de note officielle ou de prescription.
+
+Ce candidat autorise uniquement les liaisons de patients marqués synthétiques.
+Transport, interface et activation réelle restent des livrables séparés.
