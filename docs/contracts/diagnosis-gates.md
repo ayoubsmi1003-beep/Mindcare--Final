@@ -39,6 +39,11 @@ Deux gestes, deux portes, aucune écriture directe depuis le navigateur.
 
 ## Vérifications
 
+- Les portes renvoient la ligne SQL complète (`SETOF app.diagnoses`). Le service
+  valide les champs cliniques nécessaires et ignore les métadonnées supplémentaires ;
+  elles ne doivent pas transformer une sauvegarde réussie en alerte d'échec.
+- `tests/unit/diagnoses-response.test.ts` : ligne SQL complète, réponse invalide,
+  vraie erreur et résultat hors périmètre ; navigateur : absence de fausse alerte.
 - `tests/unit/diagnoses-gates.test.ts` (contrat SQL statique) ;
 - lecture RPC dans le navigateur avec un compte synthétique ;
 - audit : une ligne `audit.log` par INSERT/UPDATE.

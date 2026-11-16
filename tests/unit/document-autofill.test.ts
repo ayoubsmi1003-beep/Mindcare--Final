@@ -172,3 +172,23 @@ it("does not repeat a strength whose spacing differs from the designation",()=>{
  expect(row?.attrs?.["designation"]).toBe("Produit synthétique 50mg");
  expect(row?.attrs?.["strength"]).toBe("");
 });
+
+it("omits the two redundant strength lines while keeping a distinct prescribed dose",()=>{
+ const rows=buildInitialContent("ordonnance",baseContent,source({activeTreatments:[
+  treatment({medicationRaw:"Produit synthétique 7,5 mg cp",strength:"7.5 mg",dose:"7.5",doseUnit:"mg",frequency:"2",instructions:"Avec le repas"}),
+  treatment({medicationRaw:"Produit synthétique 25 mg gél",strength:"25 mg",dose:"25",doseUnit:"mg",frequency:"2"}),
+  treatment({medicationRaw:"Produit synthétique 50 mg",strength:"50 mg",dose:"0,5",doseUnit:"comprimé",instructions:"Le soir"}),
+ ]})).content.filter(n=>n.type==="medication");
+ expect(rows[0]?.attrs).toMatchObject({strength:"",instructions:"Avec le repas",posology:"2 fois par jour"});
+ expect(rows[1]?.attrs).toMatchObject({strength:"",instructions:"",posology:"2 fois par jour"});
+ expect(rows[2]?.attrs?.["instructions"]).toBe("Dose prescrite : 0,5 comprimé\nLe soir");
+});
+
+it("keeps unitless doses and doses of solutions or associations",()=>{
+ const rows=buildInitialContent("ordonnance",baseContent,source({activeTreatments:[
+  treatment({medicationRaw:"Gel synthétique 2 %",strength:"2 %",dose:"2",doseUnit:null}),
+  treatment({medicationRaw:"Solution synthétique 10 mg/ml",strength:"10 mg/ml",dose:"10",doseUnit:"mg"}),
+  treatment({medicationRaw:"Association synthétique 50 mg / 2 mg",strength:"50 mg",dose:"50",doseUnit:"mg"}),
+ ]})).content.filter(n=>n.type==="medication");
+ expect(rows.map(n=>n.attrs?.["instructions"])).toEqual(["Dose prescrite : 2","Dose prescrite : 10 mg","Dose prescrite : 50 mg"]);
+});

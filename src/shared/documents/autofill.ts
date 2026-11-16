@@ -209,15 +209,17 @@ export function withTreatmentCount(content: DocumentContent, count: number): Doc
 
 function containsStrength(name: string, strength: string): boolean {
   const compact = (value: string) => value.toLocaleLowerCase("fr").replace(/\s+/gu, "").replace(/,/gu, ".");
+  if(!/^\d+(?:\.\d+)?(?:mg|µg|mcg|g|ui|ml|%)(?:\/\d*(?:\.\d+)?(?:ml|g))?$/u.test(compact(strength)))return false;
   const token = compact(strength).replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
-  return token !== "" && new RegExp(`(^|[^\\d.])${token}(?![\\p{L}\\d])`, "u").test(compact(name));
+  const designation=name.toLocaleLowerCase("fr").replace(/,/gu,".").replace(/(\d)\s+(?=mg|µg|mcg|g|ui|ml|%)/gu,"$1");
+  return token !== "" && new RegExp(`(^|[^\\d.])${token}(?![\\p{L}\\d])`, "u").test(designation);
 }
 
 function medicationNode(treatment: AutoFillTreatment, frequency: number | null): DocumentNode {
   const name = treatmentName(treatment);
   const dose = [clean(treatment.dose), clean(treatment.doseUnit)].filter((part) => part !== "").join(" ");
   const instructions = [
-    dose === "" ? "" : `${documentsEditor.prescribedDose} : ${dose}`,
+    dose === "" || (!/[+/&]/u.test(name) && containsStrength(name,dose)) ? "" : `${documentsEditor.prescribedDose} : ${dose}`,
     clean(treatment.instructions),
   ].filter((value) => value !== "").join("\n");
   return {

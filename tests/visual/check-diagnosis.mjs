@@ -15,7 +15,7 @@ try{
  let fail=false;
  await page.route('**/api/db/rpc',async route=>{
   requests.push(route.request().postDataJSON());
-  await route.fulfill({status:fail?503:200,contentType:'application/json',body:JSON.stringify(fail?{ok:false,code:'indisponible'}:{ok:true,data:[{id:'d9000000-0000-4000-8000-000000000001',label:'Trouble anxieux généralisé',code_system:'ICD-10',code:'F41.1',is_primary:true,onset_date:null,resolved_at:null}]})});
+  await route.fulfill({status:fail?503:200,contentType:'application/json',body:JSON.stringify(fail?{ok:false,code:'indisponible'}:{ok:true,data:[{id:'d9000000-0000-4000-8000-000000000001',label:'Trouble anxieux généralisé',code_system:'ICD-10',code:'F41.1',is_primary:true,onset_date:null,resolved_at:null,cabinet_id:'d1000000-0000-4000-8000-000000000001',practitioner_id:'d1000000-0000-4000-8000-000000000001',patient_id:'d2000000-0000-4000-8000-000000000001',created_at:'2026-11-16T08:00:00Z',updated_at:null,is_synthetic:true}]})});
  });
  page.setDefaultTimeout(120000);page.setDefaultNavigationTimeout(120000);
  console.log('Diagnosis: navigating isolated dev server');
@@ -26,7 +26,7 @@ try{
  await open();const select=page.getByRole('combobox');await select.waitFor();assert.equal(await select.count(),1);assert.equal(await page.locator('input,textarea').count(),0);assert.equal(await select.inputValue(),'');
  const save=page.getByRole('button',{name:/Enregistrer le diagnostic/});assert(await save.isDisabled());
  await select.focus();await page.keyboard.press('ArrowDown');await page.keyboard.press('Enter');assert.notEqual(await select.inputValue(),'');
- await select.selectOption('F41.1');await save.click();await page.getByRole('status').waitFor();assert.equal(requests.length,1);
+ await select.selectOption('F41.1');await save.click();await page.getByRole('status').waitFor();assert.equal(requests.length,1);assert.equal(await page.getByRole('alert').count(),0);
  const args=requests[0].args;assert(args,'RPC arguments');assert.equal(args.p_label,'Trouble anxieux généralisé');assert.equal(args.p_code_system,'ICD-10');assert.equal(args.p_code,'F41.1');assert.equal(args.p_onset_date,null);assert.equal(args.p_is_primary,true);
  await open();await page.getByRole('combobox').selectOption('F32.0');await page.getByRole('button',{name:/Annuler/}).last().click();assert.equal(await page.getByRole('combobox').count(),0);assert.equal(requests.length,1);
  await open();await page.getByRole('combobox').selectOption('F41.1');await page.getByRole('button',{name:'Changer le patient synthétique'}).click();assert.equal(await page.getByRole('combobox').count(),0);

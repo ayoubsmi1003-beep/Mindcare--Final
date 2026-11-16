@@ -19,7 +19,7 @@ function Harness(){
   const manifest=await paginateDocument(root,next);root.innerHTML=buildDocumentPages(next,manifest);await documentAssetsReady(document,"v2");
   return {manifest,pages:Array.from(root.querySelectorAll("article")).map(page=>{
    const rect=(selector:string)=>{const r=page.querySelector(selector)?.getBoundingClientRect();return r?{top:r.top,bottom:r.bottom,left:r.left,right:r.right}:null;};
-   return {body:rect(".doc2-body"),footer:rect(".doc2-letter-footer"),signature:rect(".doc2-signature"),watermark:rect(".doc2-watermark"),number:rect(".doc2-page-number")};
+   return {bottom:page.getBoundingClientRect().bottom,body:rect(".doc2-body"),footer:rect(".doc2-letter-footer"),signature:rect(".doc2-signature"),watermark:rect(".doc2-watermark"),number:rect(".doc2-page-number")};
   })};
  }}});
  return <><DocumentEditor rendererVersion="v2" content={content} fieldValues={fields} headerHtml={preview.html.split('<main class="doc2-body">')[0]??""} onChange={setContent} onError={message=>{throw new Error(message);}}/><div id="pages"/></>;

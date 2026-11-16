@@ -24,7 +24,7 @@ export function buildDocumentPages(preview:DraftPreview,manifest:PageManifest):s
  manifest.pages.forEach((slices,index)=>{const page=document.createElement("article");page.className="doc2-page";if(preview.rendererVersion==="v2")page.dataset.renderer="v2";
  if(index===0)page.innerHTML=parts.header+parts.title;else {const continuation=document.createElement("div");continuation.className="doc2-continuation";continuation.textContent=parts.titleText+" · "+parts.patient;page.append(continuation);}
  const body=document.createElement("main");body.className="doc2-body";for(const slice of slices){const node=preview.content.content[slice.path[0]!];if(node){const fragment=sliceNode(node,slice.from,slice.to);if(fragment)body.append(fragment);}}page.append(body);if(preview.rendererVersion==="v2")page.insertAdjacentHTML("beforeend",parts.watermark+parts.footer);
- if(index===manifest.pages.length-1){const signature=document.createElement("footer");signature.className="doc2-signature";signature.textContent="Signature et cachet";page.append(signature);}
+ if(preview.rendererVersion==="v1"&&index===manifest.pages.length-1){const signature=document.createElement("footer");signature.className="doc2-signature";signature.textContent="Signature et cachet";page.append(signature);}
  const number=document.createElement("div");number.className="doc2-page-number";number.textContent=(index+1)+" / "+manifest.pages.length;page.append(number);root.append(page);});
  return root.innerHTML;
 }

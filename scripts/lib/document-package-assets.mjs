@@ -10,7 +10,8 @@ const required=[
  'supabase/migrations/222_document_renderer_v2.sql',
  'supabase/migrations/223_medication_search_paging.sql',
  'supabase/migrations/224_reference_medication_catalog.sql',
- 'supabase/migrations/225_controlled_identity_transfer.sql',reference,
+ 'supabase/migrations/225_controlled_identity_transfer.sql',
+ 'supabase/migrations/226_document_print_corrections.sql',reference,
 ];
 function regularFile(root,relative){
  let current=root;

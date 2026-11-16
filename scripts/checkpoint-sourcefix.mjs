@@ -43,7 +43,10 @@ try {
   console.log(`PASS ${file}${legacy?' (historical v1)':''}`);
  }
  const prelude=read('scripts/checkpoint-document-editor.sql').split('SELECT app.create_editable_document_draft')[0];
- sql(prelude+read('scripts/checkpoint-sourcefix-documents-v2.sql'));
+ const documents=sql(prelude+read('scripts/checkpoint-sourcefix-documents-v2.sql'));
+ const prescriptionPreview=JSON.parse(documents.split(/\r?\n/).find(l=>l.startsWith('PRESCRIPTION_PREVIEW:')).slice('PRESCRIPTION_PREVIEW:'.length));
+ const cache=path.join(root,'.cache');mkdirSync(cache,{recursive:true});
+ writeFileSync(path.join(cache,'document-prescription-preview.json'),JSON.stringify({synthetic:true,preview:prescriptionPreview}));
  console.log('PASS v2 document issuance, professional identity and immutable snapshot');
  sql(prelude+read('scripts/checkpoint-sourcefix-diagnoses.sql'));
  console.log('PASS diagnosis gates and historical metadata');
@@ -53,7 +56,7 @@ try {
  const previewSql=prelude+`SELECT app.create_editable_document_draft('d2000000-0000-4000-8000-000000000001','justification','{"date_consultation":"14/11/2026"}') AS created \\gset\nSELECT 'PREVIEW:'||app.preview_editable_document_draft((:'created'::jsonb->>'id')::uuid,1)::text;\nROLLBACK;`;
  const preview=JSON.parse(sql(previewSql).split(/\r?\n/).find(l=>l.startsWith('PREVIEW:')).slice(8));
  assert.equal(preview.rendererVersion,'v2');
- const cache=path.join(root,'.cache');mkdirSync(cache,{recursive:true});writeFileSync(path.join(cache,'document-visual-preview.json'),JSON.stringify({synthetic:true,preview}));
+ writeFileSync(path.join(cache,'document-visual-preview.json'),JSON.stringify({synthetic:true,preview}));
  console.log('PASS v2 SQL preview; fixtures rolled back');
 } finally {
  if(requested){

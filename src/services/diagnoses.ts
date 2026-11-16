@@ -23,8 +23,7 @@ const LIGNE = z
     is_primary: z.boolean(),
     onset_date: z.string().nullable(),
     resolved_at: z.string().nullable(),
-  })
-  .strict();
+  }); // SQL returns the full row; validate and project the clinical fields only.
 
 function versDiagnostic(row: z.infer<typeof LIGNE>): Diagnostic {
   return {

@@ -14,7 +14,7 @@ aucun paquet et ne configure aucune installation.
   professionnelle publique `resources/documents/cabinet-letterhead.json`.
 - Le préparateur puis le vérificateur du paquet comparent les octets des
   ressources livrées aux sources : rendus v1 et v2, CSS, fontes, trois SVG,
-  référence d'identité et migrations 222–225. Fichier manquant ou différent :
+  référence d'identité et migrations 222–226. Fichier manquant ou différent :
   refus, sans accepter silencieusement une ancienne version.
 - Le dossier serveur complet est livré par `electron-builder.yml`. Les
   ressources ne dépendent ni de Downloads ni d'un chemin du poste de développement.
@@ -27,8 +27,11 @@ aucun paquet et ne configure aucune installation.
 2. Vérifier le paquet réellement produit et décompressé. Les tests synthétiques
    du contrôle d'intégrité ne constituent pas cette vérification.
 3. Préparer la base cible par la procédure contrôlée : schéma compatible et
-   identité de la praticienne complète, avec les deux libellés sociaux. Le
-   fichier de référence livré n'est pas un remplacement automatique de la base.
+   identité de la praticienne complète. La migration 226 fige le pied de page
+   public approuvé (adresse, Facebook, Instagram) dans le contexte des prochains
+   aperçus v2, sans réécrire les paramètres du cabinet ni les documents émis.
+   Son contenu est comparé au JSON de référence par un test. Le fichier de
+   référence livré ne remplace pas automatiquement les autres champs en base.
    Utiliser `document-identity-transfer.md` avec les UUID explicitement vérifiés ;
    un conflit est refusé. Ne jamais restaurer une base sur un cabinet existant.
 4. Vérifier après décompression et relancement : identité exacte, remplissage
