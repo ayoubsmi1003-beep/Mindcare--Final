@@ -63,6 +63,8 @@ import {
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { patientSummary } from "@/i18n/patient-summary";
+import { aftercare } from "@/i18n/aftercare";
+import { AftercareWorkspace } from "@/components/patients/AftercareWorkspace";
 import { cliniqueUi } from "@/i18n/clinical-ui";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
@@ -82,6 +84,7 @@ import {
 } from "@/services/patients";
 
 type CleOnglet =
+  | "aftercare"
   | "vueDEnsemble"
   | "chronologie"
   | "clinique"
@@ -106,6 +109,7 @@ export default function PageFichePatient(): React.JSX.Element {
     const valeur = new URLSearchParams(window.location.search).get("onglet");
     switch (valeur) {
       case "chronologie":
+      case "aftercare":
       case "clinique":
       case "traitements":
       case "rendezVous":
@@ -410,6 +414,7 @@ export default function PageFichePatient(): React.JSX.Element {
         : ([
             { cle: "chronologie", libelle: fr.patients.onglets.chronologie, icone: "suivi" },
             { cle: "clinique", libelle: fr.patients.onglets.clinique, icone: "statistiques" },
+            { cle: "aftercare", libelle: aftercare.title, icone: "suivi" },
           ] as const)),
       ...((espace.traitements === null && (espace.traitementsV2 === null || espace.traitementsV2 === undefined))
         ? []
@@ -456,6 +461,7 @@ export default function PageFichePatient(): React.JSX.Element {
           {/* UN SEUL panneau monté à la fois — chaque lecture doit avoir été
               demandée (règle 6). */}
           <PanneauOnglet cle={actif}>
+            {actif === "aftercare" && espace.clinique !== null ? <AftercareWorkspace key={espace.identite.id} patientId={espace.identite.id} /> : null}
             {actif === "vueDEnsemble" ? (
               /* ⚠️ UN SEUL FIL DE LECTURE, ET C'EST TOUT L'ENJEU DE L'ÉCRAN.
                  La colonne de droite mettait l'identité et la prochaine

@@ -52,3 +52,18 @@ export async function revokeAftercareBinding(bindingId: string, confirmed: true)
     return result.ok ? ok(undefined) : result;
   } catch (cause) { return err(toAppError(cause, "aftercare")); }
 }
+
+const ClinicalSource = z.object({ id: uuid, kind: z.enum(["treatment", "appointment"]), sourceVersion: z.string().min(1), publicationVersion: z.number().int().nonnegative(), body: z.record(z.string(), z.unknown()) }).strict();
+export type AftercareClinicalSource = z.infer<typeof ClinicalSource>;
+export async function listAftercareClinicalSources(patientId: string): Promise<Result<AftercareClinicalSource[]>> {
+  if (!uuid.safeParse(patientId).success) return invalid();
+  // DbPort unwraps one scalar row; SETOF jsonb with several rows keeps the SQL column.
+  const response = z.union([ClinicalSource, z.object({ list_aftercare_clinical_sources: ClinicalSource }).transform(row => row.list_aftercare_clinical_sources)]);
+  return checked(() => db().rpc("list_aftercare_clinical_sources", { p_patient: patientId }), response);
+}
+export async function publishAftercareClinicalSnapshot(input: { bindingId: string; kind: "treatment" | "appointment"; sourceId: string; sourceVersion: string; expectedVersion: number; schedule: string[]; asNeeded: boolean; requestId: string; confirmed: true }): Promise<Result<AftercareEvent[]>> {
+  const parsed = z.object({ bindingId: uuid, kind: z.enum(["treatment", "appointment"]), sourceId: uuid, sourceVersion: z.string().min(1).max(80), expectedVersion: z.number().int().nonnegative(), schedule: z.array(z.string().regex(/^(?:[01]\d|2[0-3]):[0-5]\d$/)).max(24), asNeeded: z.boolean(), requestId: uuid, confirmed: z.literal(true) }).strict().safeParse(input);
+  if (!parsed.success) return invalid();
+  const p = parsed.data;
+  return checked(() => db().rpc("publish_aftercare_clinical_snapshot", { p_binding: p.bindingId, p_kind: p.kind, p_source: p.sourceId, p_source_version: p.sourceVersion, p_expected_version: p.expectedVersion, p_schedule: JSON.stringify(p.schedule), p_as_needed: p.asNeeded, p_request: p.requestId, p_confirmed: p.confirmed }), AftercareEventSchema, true);
+}

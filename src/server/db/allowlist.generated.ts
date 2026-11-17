@@ -91,6 +91,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "legacy_resolve_review",
   "link_prescription_renewal",
   "list_aftercare_bindings",
+  "list_aftercare_clinical_sources",
   "list_aftercare_objects",
   "list_agenda",
   "list_amendments",
@@ -125,6 +126,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "preview_editable_document_draft",
   "preview_scale_score",
   "propose_jarvis_action",
+  "publish_aftercare_clinical_snapshot",
   "publish_aftercare_object",
   "read_aftercare_object",
   "reception_board",
@@ -177,4 +179,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 155;
+export const NB_RPC = 157;

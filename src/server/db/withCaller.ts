@@ -254,6 +254,9 @@ export async function withAuthGate<T>(fn: (q: Querier) => Promise<T>): Promise<T
  */
 export const withEgressGate = withAuthGate;
 
+// Only fixed Aftercare technical SQL gates; never an impersonated clinical caller.
+export const withAftercareTransport = withAuthGate;
+
 /**
  * Variante pour les réponses en flux (SSE du chat, octets audio de la voix).
  *

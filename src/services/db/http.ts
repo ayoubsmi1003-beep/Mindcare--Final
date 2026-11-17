@@ -499,3 +499,27 @@ export function revoquerPosteAppaire(deviceId: string): Promise<Result<boolean>>
 export function demanderInvitationAppairage(): Promise<Result<InvitationCabinet>> {
   return poster<InvitationCabinet>("/api/cabinet/invitation", {}, "http.cabinet.invitation");
 }
+
+export function transmettreAftercare(patientId: string): Promise<Result<{ delivered: number; pending: number }>> {
+  return poster("/api/aftercare/dispatch", { patientId }, "http.aftercare.dispatch");
+}
+export function qualificationAftercareRpc<T>(name: string, args: import("./port").RpcArgs): Promise<Result<readonly T[]>> {
+  return poster("/api/aftercare/qualification/rpc", { name, args }, "http.aftercare.qualification");
+}
+export function synchroniserAftercare(input: { patientId: string; bindingId: string; objectId?: string; version?: number }): Promise<Result<boolean>> {
+  return poster("/api/aftercare/control", input, "http.aftercare.control");
+}
+export interface AftercareSupportRelationship { id: string; recipientName: string; relationship: string; acceptedAt: string | null; verifiedAt: string | null; verifiedScopes: string[] }
+export function gererSoutienAftercare(input: { patientId: string; bindingId: string; action: "list" } | { patientId: string; bindingId: string; action: "verify"; relationshipId: string; evidenceRef: string; scopes: string[]; requestId: string; confirmed: true }): Promise<Result<{ relationships?: AftercareSupportRelationship[] }>> {
+  return poster("/api/aftercare/support", input, "http.aftercare.support");
+}
+export async function lireMediaAftercare(input: { bindingId: string; objectId: string; version: number; mediaId: string }): Promise<Result<Blob>> {
+  try {
+    const response = await fetch("/api/aftercare/media", { method: "POST", headers: { "Content-Type": "application/json" }, credentials: "same-origin", cache: "no-store", body: JSON.stringify(input) });
+    if (!response.ok) return err(toAppError(new Error("AftercareUnavailable"), "http.aftercare.media"));
+    return ok(await response.blob());
+  } catch (cause) { return err(toAppError(cause, "http.aftercare.media")); }
+}
+export function lireSourceAftercare(input: { bindingId: string; reportId: string; reportVersion: number; recordId: string; version: number }): Promise<Result<{ id: string; kind: string; version: number; body: Record<string, unknown> }>> {
+  return poster("/api/aftercare/sources", input, "http.aftercare.sources");
+}

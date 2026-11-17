@@ -958,6 +958,17 @@ Schéma approuvé : document_drafts et document_draft_revisions (migration 129),
 
 ## Aftercare — décision approuvée du 16 novembre 2026
 
+Extension additive228 (17 novembre, ADR-aftercare-master): aucune nouvelle table.
+Deux portes cliniques listent/publient des instantanés vérifiés depuis les traitements
+et rendez-vous existants, sans mutation du dossier; version source et confirmation
+explicite requises. Les enveloppes immuables conservent l’historique publié.
+Une projection technique bornée permet l’enregistrement signé des seules liaisons.
+Les champs journal emotionTag et préparation réflexive sont bornés et optionnels.
+Extension229 approuvée: `app.aftercare_authority_decisions` conserve les décisions
+humaines immuables de vérification d’un destinataire (liaison, relation portail,
+référence de preuve locale, périmètres explicites, médecin/date, idempotence).
+Porte confirmée/RLS clinique/audit atomique, sans accès patient automatique.
+
 Migration additive `227_aftercare_master.sql`, autorisée par
 `docs/aftercare/ADR-aftercare-master.md` et le MASTER-CONTRACT du portail :
 

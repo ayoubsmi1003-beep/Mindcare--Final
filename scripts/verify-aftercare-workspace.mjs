@@ -1,0 +1,41 @@
+// Real browser -> existing auth070 -> qualification adapter -> real SQL. No mocked requests.
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+const origin = process.env.AFTERCARE_WORKSPACE_TEST_ORIGIN ?? 'http://127.0.0.1:3297';
+assert.equal(new URL(origin).hostname, '127.0.0.1');
+const browser = await chromium.launch({ headless: true });
+try {
+  const context = await browser.newContext();
+  await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+  const page = await context.newPage();
+  page.setDefaultTimeout(120000); page.setDefaultNavigationTimeout(120000);
+  const errors = []; page.on('pageerror', error => errors.push(error.message));
+  const url = `${origin}/aftercare/qualification?patientId=b2000000-0000-4000-8000-000000000001`;
+  await page.goto(url); await page.getByText('Connectez-vous avec le compte synthétique', { exact: false }).waitFor();
+  const login = async email => { const response = await context.request.post(`${origin}/api/auth/sign-in`, { data: { email, password: 'Synthetic-Aftercare-Only-2026!' } }); assert.equal(response.status(), 200); };
+  await login('synthetic-doctor@aftercare.invalid');
+  await page.goto(url); await page.getByRole('heading', { name: 'Aftercare', exact: true }).waitFor();
+  await page.getByText('Vérifier une liaison', { exact: true }).click();
+  await page.getByLabel('Identifiant du compte Sanad', { exact: true }).fill('b4000000-0000-4000-8000-000000000001');
+  await page.getByLabel('Référence locale des preuves d’identité et d’autorité', { exact: true }).fill('SYNTHETIC/identity/001');
+  await page.getByLabel('Je confirme avoir vérifié l’identité, l’autorité et le consentement.', { exact: true }).check();
+  await page.getByRole('button', { name: 'Confirmer la liaison', exact: true }).click();
+  await page.getByRole('button', { name: 'Révoquer cette liaison', exact: true }).waitFor();
+  await page.getByLabel('Type', { exact: true }).first().selectOption('doctorNote');
+  await page.getByLabel('Texte', { exact: true }).fill('Synthetic doctor note from the actual workspace');
+  await page.getByLabel('Je confirme le contenu exact à transmettre au patient.', { exact: true }).check();
+  await page.getByRole('button', { name: 'Publier après confirmation', exact: true }).first().click();
+  await page.getByText('Synthetic doctor note from the actual workspace', { exact: true }).waitFor();
+  await page.getByLabel('Type', { exact: true }).last().selectOption('b8000000-0000-4000-8000-000000000001');
+  await page.getByText('Synthetic medication', { exact: true }).waitFor();
+  await page.getByLabel('Heures explicitement confirmées (HH:mm, séparées par des virgules)', { exact: true }).fill('08:00,20:00');
+  await page.getByLabel('Je confirme cette version du dossier et les modalités exactes à transmettre.', { exact: true }).check();
+  await page.getByRole('button', { name: 'Publier après confirmation', exact: true }).last().click();
+  await page.getByText('08:00', { exact: true }).waitFor();
+  assert.deepEqual(errors, []);
+  await context.request.post(`${origin}/api/auth/sign-out`);
+  await login('synthetic-reception@aftercare.invalid');
+  await page.goto(url); await page.getByText('Le canal est indisponible ou cette action n’est pas autorisée.', { exact: true }).waitFor();
+  assert.equal(await page.getByRole('heading', { name: 'Aftercare', exact: true }).count(), 0);
+  console.log('PASS actual browser doctor binding/note/trusted treatment publication; reception SQL capability hides workspace; no page errors');
+} finally { await browser.close(); }

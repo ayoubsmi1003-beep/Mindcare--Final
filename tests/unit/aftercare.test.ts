@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { AftercareEnvelopeSchema, AftercarePublicationSchema, AftercareSubmissionSchema } from "@/services/aftercare-contracts";
-import { listAftercareObjects, publishAftercareObject, verifyAftercareBinding } from "@/services/aftercare";
+import { listAftercareClinicalSources, listAftercareObjects, publishAftercareClinicalSnapshot, publishAftercareObject, verifyAftercareBinding } from "@/services/aftercare";
 import { db, setDbPort } from "@/services/db";
 import { ok } from "@/services/result";
 
@@ -35,6 +35,20 @@ describe("Aftercare authority contracts", () => {
 });
 
 describe("Aftercare service trust boundaries", () => {
+  it("accepts multiple native SETOF jsonb rows through DbPort without losing source versions", async () => {
+    const source = { id, kind: "treatment", sourceVersion: "1", publicationVersion: 0, body: { name: "Synthetic medication" } };
+    setDbPort({ ...db(), rpc: vi.fn().mockResolvedValue(ok([{ list_aftercare_clinical_sources: source }, { list_aftercare_clinical_sources: { ...source, id: "b1000000-0000-4000-8000-000000000002" } }])) });
+    const result = await listAftercareClinicalSources(id);
+    expect(result.ok && result.data[0]).toEqual(source);
+    expect(result.ok && result.data.length).toBe(2);
+  });
+  it("rejects inferred clock times and caller-supplied clinical text for trusted snapshots", async () => {
+    const rpc = vi.fn(() => { throw new Error("Must not reach SQL"); }); setDbPort({ ...db(), rpc });
+    const base = { bindingId: id, kind: "treatment", sourceId: id, sourceVersion: "1", expectedVersion: 0, schedule: ["matin"], asNeeded: false, requestId: id, confirmed: true };
+    expect(await Reflect.apply(publishAftercareClinicalSnapshot, undefined, [base])).toMatchObject({ ok: false });
+    expect(await Reflect.apply(publishAftercareClinicalSnapshot, undefined, [{ ...base, schedule: ["08:00"], dose: "Forged dose" }])).toMatchObject({ ok: false });
+    expect(rpc).not.toHaveBeenCalled();
+  });
   it("refuses unconfirmed identity and oversized pages before reaching DbPort", async () => {
     setDbPort({ ...db(), rpc: vi.fn(() => { throw new Error("Must not reach database"); }) });
     const result: unknown = await Reflect.apply(verifyAftercareBinding, undefined, [{ bindingId: id, patientId: id, portalPatientId: id, relationship: "guardian", evidence: "Doctor verified authority", consentVersion: 1, confirmed: false }]);

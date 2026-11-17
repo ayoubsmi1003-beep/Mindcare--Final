@@ -49,6 +49,13 @@ import { validateAlexaResponse } from "@/server/alexa/response-validator";
 import { knowledgeAnswerJsonSchema, type LlmOutputContract } from "@/shared/alexa/knowledge-answer";
 import { localAssetLayout } from "@/server/alexa/local-model-assets";
 
+/** Synthetic qualification only; redirect refusal keeps the loopback boundary. */
+export async function postAftercareEnvelope(url: string, body: string, headers: Record<string, string>): Promise<Response> {
+  const target = new URL(url);
+  if (target.protocol !== "http:" || !["127.0.0.1", "[::1]"].includes(target.hostname) || target.username || target.password || target.search || target.hash || !["/api/sanad/bridge", "/api/sanad/bridge/sources", "/api/sanad/bridge/binding", "/api/sanad/bridge/read", "/api/sanad/bridge/media", "/api/sanad/bridge/support"].includes(target.pathname)) throw new Error("AFTERCARE_NOT_CONFIGURED");
+  return fetch(target, { method: "POST", body, headers, redirect: "error", signal: AbortSignal.timeout(10000), cache: "no-store" });
+}
+
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
 /**
