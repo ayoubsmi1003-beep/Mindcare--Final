@@ -968,6 +968,9 @@ Extension229 approuvée: `app.aftercare_authority_decisions` conserve les décis
 humaines immuables de vérification d’un destinataire (liaison, relation portail,
 référence de preuve locale, périmètres explicites, médecin/date, idempotence).
 Porte confirmée/RLS clinique/audit atomique, sans accès patient automatique.
+Extension230: porte clinique de lecture auditée `get_aftercare_read_receipt`.
+Elle exige une lecture humaine déjà enregistrée et la version partagée exacte;
+le retry HTTP ne crée ni ne modifie une lecture et conserve son horodatage.
 
 Migration additive `227_aftercare_master.sql`, autorisée par
 `docs/aftercare/ADR-aftercare-master.md` et le MASTER-CONTRACT du portail :

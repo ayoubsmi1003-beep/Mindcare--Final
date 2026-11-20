@@ -100,3 +100,14 @@ changed payload conflicts. No recipient access is granted locally or implicitly.
 Portal SQL separately verifies binding/patient/accepted recipient relationship;
 the patient still grants each exact record revision. No inferred age or guardianship.
 Browser receives no table privileges. Updates/deletes of decisions are forbidden.
+
+## Forward230 — read-only retry of a genuine human-read receipt
+
+Real two-app acceptance found that the HTTP read callback did not reach canonical
+portal delivery state, while the local object was genuinely read. Its retry also
+called the mutating read gate again. `get_aftercare_read_receipt(binding,object,
+version)` is an audited clinical read-only gate: active binding/RLS/current shared
+Sanad revision and existing read_by/read_at are required. It returns only the
+bounded wire receipt and preserves the recorded human-read timestamp. No technical
+retry or polling call can create a read. The HTTP route sends that SQL-derived
+receipt and reports bounded phase/HTTP error codes without exposing content or keys.

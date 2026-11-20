@@ -25,10 +25,18 @@ export function verifyAftercareSignature(request: Request, raw: string, config: 
   return timingSafeEqual(Buffer.from(signature, "hex"), Buffer.from(aftercareSignature(config.key, timestamp, new URL(request.url).pathname, raw), "hex"));
 }
 type Transaction = <T>(fn: (q: Querier) => Promise<T>) => Promise<T>;
+export class AftercareControlError extends Error {
+  constructor(readonly status: number, readonly remoteCode: string) { super("AftercareControlRejected"); }
+}
 export async function postAftercareControl(path: "/binding" | "/read", body: unknown, config: AftercareTransportConfig): Promise<boolean> {
   const url = new URL(`/api/sanad/bridge${path}`, config.url), raw = JSON.stringify(body), timestamp = String(Math.floor(Date.now() / 1000));
   const response = await postAftercareEnvelope(url.href, raw, { "Content-Type": "application/json", "X-Sanad-Clinic": config.clinic, "X-Sanad-Timestamp": timestamp, "X-Sanad-Signature": aftercareSignature(config.key, timestamp, url.pathname, raw) });
-  return response.ok;
+  if (!response.ok) {
+    let remoteCode = "UNAVAILABLE";
+    try { const parsed = z.object({ error: z.enum(["UNAUTHENTICATED", "FORBIDDEN", "INVALID_INPUT", "CONFLICT", "UNAVAILABLE"]) }).parse(await response.json()); remoteCode = parsed.error; } catch { /* Never return raw remote response content. */ }
+    throw new AftercareControlError(response.status, remoteCode);
+  }
+  return true;
 }
 export async function registerAftercareBinding(binding: string, config: AftercareTransportConfig, transaction: Transaction = withAftercareTransport): Promise<boolean> {
   const rows = await transaction(q => q.query<{ registration: unknown }>("SELECT app.aftercare_binding_registration($1::uuid,$2::uuid) AS registration", [config.clinic, binding]));
