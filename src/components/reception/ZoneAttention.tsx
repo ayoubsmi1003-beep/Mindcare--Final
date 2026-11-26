@@ -128,18 +128,21 @@ function CarteAttention({
           </Bouton>
         </div>
       );
-    case "demande":
+    case "demande": {
+      // 235 — a web/WhatsApp request has no patient file yet: it is treated (link + time), not confirmed in one click.
+      const externe = item.rdv.patientId === null;
       return (
         <div className={base}>
-          <Badge ton="neutre">{fr.reception.pulse.demandes}</Badge>
+          <Badge ton={externe ? "information" : "neutre"}>{externe ? fr.agenda.origines[item.rdv.source] : fr.reception.pulse.demandes}</Badge>
           <button type="button" onClick={() => onSelectRdv(item.rdv.id)} className="min-w-0 flex-1 truncate text-left font-ui text-body text-ink-700 focus-visible:outline focus-visible:outline-action-600">
             {identite(item.rdv)}
           </button>
           <Bouton rang="secondaire" onClick={() => onConfirmationDemande(item.rdv)}>
-            {fr.actions.confirmer}
+            {externe ? fr.reception.demandesExternes.traiter : fr.actions.confirmer}
           </Bouton>
         </div>
       );
+    }
   }
 }
 

@@ -535,6 +535,14 @@ if [ -f "$GARDE" ]; then
     echo "🔴 phase 3 : withAuthGate appelée hors du chemin d'authentification :"; echo "$out"
     echo "   Cette enveloppe n'endosse aucun rôle : la RLS ne filtrerait sur rien."; fail=1; }
 
+  # 12b — 235 : l'alias `withIntakeTransport` (même enveloppe sans rôle) ne sert qu'au point
+  # d'entrée des demandes de rendez-vous. Un alias échappe au grep littéral ci-dessus.
+  out=$(grep -rln "withIntakeTransport" --include="*.ts" --include="*.tsx" src/ 2>/dev/null \
+        | grep -v "^src/server/db/withCaller\.ts$" \
+        | grep -v "^src/server/integrations/appointment-intake\.ts$")
+  [ -n "$out" ] && {
+    echo "🔴 235 : withIntakeTransport utilisée hors de appointment-intake.ts :"; echo "$out"; fail=1; }
+
   # Le cookie de session ne doit jamais quitter le pot de cookies. `signIn` rend
   # `{ userId }` et rien d'autre — c'est ce qui permet à DbPort de garder la
   # signature qu'il avait du temps de Supabase.

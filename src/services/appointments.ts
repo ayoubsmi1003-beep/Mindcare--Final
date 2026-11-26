@@ -50,7 +50,7 @@ export type AppointmentStatus =
   | "cancelled";
 
 /** Canal d'entrée du rendez-vous (`app.appt_source`). PAS le type de consultation. */
-export type AppointmentSource = "phone" | "walk_in" | "web" | "assistant" | "doctor";
+export type AppointmentSource = "phone" | "walk_in" | "web" | "whatsapp" | "assistant" | "doctor";
 
 /**
  * Type de consultation (`app.consult_kind`, migration 024).
