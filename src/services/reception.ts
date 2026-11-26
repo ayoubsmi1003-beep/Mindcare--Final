@@ -47,6 +47,11 @@ export interface RdvAccueil {
   readonly lastName: string | null;
   readonly practitionerId: string;
   readonly practitionerName: string | null;
+  /** 235 — `demandes` only: contact and the stated preference of a web/WhatsApp request. */
+  readonly phone?: string | null;
+  readonly preferredDay?: string | null;
+  readonly preferredPeriod?: "morning" | "afternoon" | null;
+  readonly preferredTime?: string | null;
 }
 
 /** Un paiement vu de l'accueil : dû ou encaissé des dernières 24 h. */
@@ -92,6 +97,10 @@ interface RdvRow {
   readonly last_name: string | null;
   readonly practitioner_id: string;
   readonly practitioner_name: string | null;
+  readonly phone?: string | null;
+  readonly preferred_day?: string | null;
+  readonly preferred_period?: "morning" | "afternoon" | null;
+  readonly preferred_time?: string | null;
 }
 
 interface PaiementRow {
@@ -144,6 +153,10 @@ function versRdvs(valeur: unknown): readonly RdvAccueil[] {
       lastName: r.last_name ?? null,
       practitionerId: r.practitioner_id,
       practitionerName: r.practitioner_name ?? null,
+      phone: r.phone ?? null,
+      preferredDay: r.preferred_day ?? null,
+      preferredPeriod: r.preferred_period ?? null,
+      preferredTime: r.preferred_time ?? null,
     };
   });
 }

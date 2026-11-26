@@ -257,6 +257,9 @@ export const withEgressGate = withAuthGate;
 // Only fixed Aftercare technical SQL gates; never an impersonated clinical caller.
 export const withAftercareTransport = withAuthGate;
 
+// Only `app.ingest_appointment_request` (235, owned by NOLOGIN integration_intake); never a clinical caller.
+export const withIntakeTransport = withAuthGate;
+
 /**
  * Variante pour les réponses en flux (SSE du chat, octets audio de la voix).
  *

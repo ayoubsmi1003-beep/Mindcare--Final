@@ -13,6 +13,7 @@
  */
 
 export const RPC_AUTORISES: ReadonlySet<string> = new Set([
+  "accept_appointment_request",
   "acknowledge_assistant_call",
   "amend_note",
   "archive_editable_document_draft",
@@ -138,6 +139,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "record_patient_allergy",
   "record_payment_collected",
   "record_scale_administration",
+  "reject_appointment_request",
   "reject_jarvis_action",
   "renew_treatment",
   "resolve_diagnosis",
@@ -179,4 +181,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 157;
+export const NB_RPC = 159;

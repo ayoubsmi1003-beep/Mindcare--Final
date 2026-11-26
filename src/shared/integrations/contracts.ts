@@ -20,6 +20,8 @@ export function phoneCanonical(value: string): string {
   let digits = value.replace(/[ ()-]/g, "");
   if (/^0\d{9}$/.test(digits)) digits = "+213" + digits.slice(1);
   if (!/^\+[1-9]\d{8,14}$/.test(digits)) throw new Error("INVALID_INPUT");
+  // One Algerian number, one form: +213 and 9 digits, never +2130… (the rate-limit key).
+  if (digits.startsWith("+213") && !/^\+213[1-9]\d{8}$/.test(digits)) throw new Error("INVALID_INPUT");
   return digits;
 }
 
@@ -27,7 +29,8 @@ export const civilDate = z.string().regex(/^20\d{2}-\d{2}-\d{2}$/).refine(value 
   const parsed = new Date(value + "T00:00:00Z");
   return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
 });
-const personName = z.string().trim().min(1).max(80).refine(value => !/[\u0000-\u001f\u007f]/.test(value));
+// No control, invisible or bidi-override character; no spreadsheet-formula prefix (same rule as gate 235).
+const personName = z.string().trim().min(1).max(80).refine(value => !/[\u0000-\u001f\u007f​-‏‪-‮⁠-⁤﻿]/.test(value) && !/^[=+@]/.test(value));
 const phone = z.string().refine(value => { try { phoneCanonical(value); return true; } catch { return false; } }).transform(phoneCanonical);
 const sha256Hex = z.string().regex(/^[a-f0-9]{64}$/);
 
@@ -54,10 +57,14 @@ export const appointmentRequestV1 = z.object({
 }).strict().refine(input => input.preferredTime === undefined || (input.preferredTime < "12:00" ? "morning" : "afternoon") === input.preferredPeriod, { message: "PERIOD_MISMATCH" });
 export type AppointmentRequestV1 = z.infer<typeof appointmentRequestV1>;
 
-/** What an intake caller gets back. The external reference is the caller's own submissionId. */
+/**
+ * What an intake caller gets back: the clinic committed the request ("RECEIVED", the
+ * website relay's delivery state). The external reference is the caller's own
+ * submissionId; no internal row id leaves. Review status is a separate, later query.
+ */
 export const appointmentRequestReceiptV1 = z.object({
   submissionId: z.uuid(),
-  state: z.literal("PENDING"),
+  delivery: z.literal("RECEIVED"),
   duplicate: z.boolean(),
 }).strict();
 export type AppointmentRequestReceiptV1 = z.infer<typeof appointmentRequestReceiptV1>;

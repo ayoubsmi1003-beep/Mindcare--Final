@@ -15,7 +15,7 @@ describe("phoneCanonical (mirror of the website relay)", () => {
   it.each([["0554 00 00 01", "+213554000001"], ["+33 6 12 34 56 78", "+33612345678"], ["(0554) 00-00-01", "+213554000001"]])("%s → %s", (input, out) => {
     expect(phoneCanonical(input)).toBe(out);
   });
-  it.each(["12345", "abc", "00213554000001", "+0554000001", "0554 00 00 01 ext 2"])("rejects %s", input => {
+  it.each(["12345", "abc", "00213554000001", "+0554000001", "0554 00 00 01 ext 2", "+2130554000001"])("rejects %s", input => {
     expect(() => phoneCanonical(input)).toThrow("INVALID_INPUT");
   });
 });
@@ -29,6 +29,9 @@ describe("appointmentRequestV1", () => {
   it.each([
     ["missing name", { ...request, firstName: undefined }],
     ["blank name", { ...request, lastName: "   " }],
+    ["invisible character in a name", { ...request, firstName: "Ali​" }],
+    ["bidi override in a name", { ...request, lastName: "‮Demande" }],
+    ["spreadsheet formula as a name", { ...request, lastName: "=HYPERLINK(1)" }],
     ["invalid phone", { ...request, phone: "12" }],
     ["impossible date", { ...request, preferredDay: "2026-02-30" }],
     ["time outside opening window", { ...request, preferredTime: "18:00" }],
