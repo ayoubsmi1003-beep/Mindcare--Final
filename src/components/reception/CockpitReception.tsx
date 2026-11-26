@@ -35,6 +35,7 @@ import { PaiementsZone } from "./PaiementsZone";
 import { ModalEncaissement } from "./ModalEncaissement";
 import { CentreNotifications } from "./CentreNotifications";
 import { TiroirDeplacement } from "./TiroirDeplacement";
+import { DialogueDemande } from "./DialogueDemande";
 import { ResultatsRecherche } from "./RechercheEclair";
 import { TopbarReception } from "./TopbarReception";
 import { PulseReception } from "./PulseReception";
@@ -124,6 +125,7 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
   const [selectionId, setSelectionId] = useState<string | null>(null);
   const [encaissementCible, setEncaissementCible] = useState<PaiementAccueil | null>(null);
   const [deplacementOuvert, setDeplacementOuvert] = useState(false);
+  const [demandeATraiter, setDemandeATraiter] = useState<RdvAccueil | null>(null);
   const [feedback, setFeedback] = useState<string | undefined>(undefined);
   const [appel, setAppel] = useState<AppelActif | null>(null);
   const [derniereSynchro, setDerniereSynchro] = useState<string | null>(null);
@@ -327,6 +329,8 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
     apresMutation();
   }
   async function confirmerDemande(rdv: RdvAccueil): Promise<void> {
+    // 235 — a web/WhatsApp request has no patient file: confirmation goes through the dialog (link + time).
+    if (rdv.patientId === null) { setDemandeATraiter(rdv); return; }
     if (refuserHorsLigne()) return;
     setFeedback(undefined);
     const result = await confirmAppointment(rdv.id);
@@ -704,6 +708,16 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
           ) : null}
         </>
       )}
+      <DialogueDemande
+        rdv={demandeATraiter}
+        horsLigne={degrade}
+        onFermer={() => setDemandeATraiter(null)}
+        onTraitee={(message) => {
+          setDemandeATraiter(null);
+          setFeedback(message);
+          apresMutation();
+        }}
+      />
     </div>
   );
 }
